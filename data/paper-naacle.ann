@@ -1,0 +1,47 @@
+T1	Concept 15 19	asma
+E1	Concept:T1 
+T2	Action 20 26	afecta
+E2	Action:T2 Subject:E1 Target:E3
+T3	Concept 31 49	vías respiratorias
+E3	Concept:T3 
+T4	Action 54 60	afecta
+E4	Action:T4 Target:E6
+T5	Concept 67 75	personas
+E5	Concept:T5 
+T6	Predicate 76 83	mayores
+E6	Predicate:T6 Arg:E7 Domain:E5
+T7	Concept 87 94	60 años
+E7	Concept:T7 
+T8	Concept 102 111	empleados
+E8	Concept:T8 
+T9	Action 125 132	cuidado
+E9	Action:T9 Subject:E8 Target:E10
+T10	Concept 139 144	salud
+E10	Concept:T10 
+T11	Action 151 160	expuestos
+E11	Action:T11 Subject:E9 Target:E12
+T12	Concept 163 180	riesgos laborales
+E12	Concept:T12 
+T13	Concept 185 189	asma
+E13	Concept:T13 
+T14	Concept 206 224	vías respiratorias
+E14	Concept:T14 
+T15	Action 228 236	inflamen
+E15	Action:T15 Subject:E14 Target:E14
+R1	causes Arg1:E13 Arg2:E15	
+T16	Concept 242 249	ampolla
+E16	Concept:T16 
+T17	Concept 256 260	piel
+E17	Concept:T17 
+T18	Action 265 270	cubre
+E18	Action:T18 Subject:E17 Target:E19
+T19	Concept 275 281	herida
+E19	Concept:T19 
+*	same-as E16 E18
+T20	Concept 286 292	dengue
+E20	Concept:T20 in-context:E21
+T21	Concept 303 311	avanzado
+E21	Concept:T21 
+T22	Concept 315 324	peligroso
+E22	Concept:T22 
+R2	has-property Arg1:E20 Arg2:E22	
