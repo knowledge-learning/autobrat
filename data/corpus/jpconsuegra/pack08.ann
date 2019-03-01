@@ -455,15 +455,14 @@ E201	Concept:T198
 T199	Action 2876 2882	forman
 E202	Action:T199 Target:E201
 T200	Concept 2894 2903;2904 2911	folículos pilosos
-E203	Concept:T200 
+E203	Concept:T200 in-place:E204
 T201	Predicate 2930 2936	debajo
-E204	Predicate:T201 Arg:E205 Domain:E203
+E204	Predicate:T201 Arg:E205
 T202	Concept 2943 2947	piel
 E205	Concept:T202 
 T203	Action 2951 2956	tapan
-E206	Action:T203 Target:E204
+E206	Action:T203 Target:E203
 R34	causes Arg1:E206 Arg2:E202	
-#1	AnnotatorNotes E204	La verdad me gusta más "folículos pilosos" -in-place-> "debajo" -arg-> "piel", pero (1) en el trial está de la otra forma, (2) para que sea consistente la regla de predicate vs in-context
 T204	Reference 2958 2962	Esto
 E207	Reference:T204 
 T205	Action 2977 2987	estresante
