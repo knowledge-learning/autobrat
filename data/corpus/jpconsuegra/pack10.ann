@@ -535,7 +535,7 @@ T220	Predicate 3350 3358	estatura
 E227	Predicate:T220 Arg:E224
 R60	has-property Arg1:E227 Arg2:E226	
 T221	Concept 3365 3372	ovarios
-E228	Concept:T221 
+E228	Concept:T221 in-place:E224
 T222	Action 3376 3385	funcionan
 E229	Action:T222 in-context:E230 Target:E228
 T223	Concept 3395 3403	adecuada
