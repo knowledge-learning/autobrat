@@ -21,3 +21,22 @@
 | 12 | ✔ |   |   |   |   |
 | 13 | ✔ |   |   |   |   |
 | 14 | ✔ |   |   |   |   |
+
+## Contributors
+
+| **Packs** | **Name** | **Received** |
+|--|--|--|
+|  1 | Sadan | ✔ |
+|  2 | Daniel |   |
+|  3 | Rocío | ✔ |
+|  4 | Loraine | ✔ |
+|  5 | Tony | ✔ |
+|  6 | Enmanuel | ✔ |
+|  7 | Carmen | ✔ |
+|  8 | Carlos | ✔ |
+|  9 | Alexander | ✔ |
+| 10 | Dayani | ✔ |
+| 11 | Marcos |   |
+| 12 | Rocio |   |
+| 13 | Jorge |   |
+| 14 | Loraine |   |
