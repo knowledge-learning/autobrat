@@ -224,7 +224,7 @@ E96	Concept:T94
 T95	Action 2558 2565	hacerse
 E97	Action:T95 Target:E98
 T96	Concept 2566 2575	enjuagues
-E98	Concept:T96 in-context:E99
+E98	Concept:T96 in-place:E99
 T97	Concept 2576 2583	nasales
 E99	Concept:T97 
 T98	Action 2603 2607	usar
@@ -408,7 +408,7 @@ E182	Concept:T179 in-context:E183
 T180	Concept 4745 4753	grasosas
 E183	Concept:T180 
 T181	Action 4642 4647	tener
-E184	Action:T181 Target:E175 in-context:E185
+E184	Action:T181 Target:E175 in-context:E185 Subject:E264
 T182	Concept 4624 4638	probabilidades
 E185	Concept:T182 
 R32	entails Arg1:E178 Arg2:E184
@@ -456,12 +456,10 @@ T200	Concept 5344 5349	setas
 E203	Concept:T200 
 T201	Concept 5355 5359	moho
 E204	Concept:T201 
-T202	Predicate 5372 5377	tipos
-E205	Predicate:T202 Domain:E206
 T203	Concept 5381 5387	hongos
 E206	Concept:T203 
-R36	is-a Arg1:E203 Arg2:E205
-R37	is-a Arg1:E204 Arg2:E205
+R36	is-a Arg1:E203 Arg2:E206
+R37	is-a Arg1:E204 Arg2:E206
 T204	Concept 5441 5448	reflujo
 E207	Concept:T204 in-place:E209
 T205	Concept 5456 5461	común
@@ -884,7 +882,7 @@ E1132	Action:T1131 Target:E1131
 T1132	Concept 4509 4514	bebés
 E1133	Concept:T1132 
 T1133	Action 4525 4532	limpiar
-E1134	Action:T1133 in-context2:E1139 Target:E1135 in-context:E1136 in-place:E1133
+E1134	Action:T1133 Target:E1135 in-place:E1133 Subject:E1136 Subject2:E1139
 A1015	Uncertain E1134
 T1134	Concept 4537 4544	dientes
 E1135	Concept:T1134 
@@ -934,7 +932,7 @@ E1156	Concept:T1155
 A1016	Uncertain E1151
 R1020	entails Arg1:E1155 Arg2:E1151
 T1156	Concept 6680 6689	violación
-E1157	Concept:T1156 in-context:E1160
+E1157	Concept:T1156 
 T1157	Concept 6703 6712;6713 6719	actividad sexual
 E1158	Concept:T1157 
 T1158	Concept 6730 6735	usted
@@ -1141,3 +1139,9 @@ T1237	Action 3140 3148	tomarlas
 E1239	Action:T1237 
 A1033	Negated E1239
 A1034	Uncertain E1239
+R46	entails Arg1:E3 Arg2:E6	
+A22	Emphasized E182
+T261	Concept 4612 4617	Usted
+E264	Concept:T261 
+A23	Uncertain E237
+R47	entails Arg1:E1160 Arg2:E1157	
