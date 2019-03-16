@@ -7,7 +7,7 @@
 
 | **Pack** | **1st** | **2nd** | **Merged** | **Revised** | **Final** | **2nd Annotator** |
 |--|--|--|--|--|--|--|
-|  1 | ✔ | ✔ |   |   |   |  Sadan     |
+|  1 | ✔ | ✔ | ✔ |   |   |  Sadan     |
 |  2 | ✔ |   |   |   |   |  Daniel    |
 |  3 | ✔ | ✔ |   |   |   |  Rocío     |
 |  4 | ✔ | ✔ |   |   |   |  Loraine   |
