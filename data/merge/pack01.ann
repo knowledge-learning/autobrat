@@ -41,12 +41,9 @@ T19	Concept 436 439	tos
 E19	Concept:T19 in-context:E20
 T20	Concept 440 444	seca
 E20	Concept:T20 
-T21	Predicate 446 454	síntomas
-E21	Predicate:T21 Arg:E22
 T22	Concept 458 462	asma
 E22	Concept:T22 
 R3	is-a Arg1:E19 Arg2:E17
-R4	is-a Arg1:E21 Arg2:E17
 T18	Action 480 486	tragar
 E18	Action:T18 
 T23	Concept 465 474	problemas
@@ -54,17 +51,17 @@ E23	Concept:T23 in-time:E18
 T24	Concept 576 582;583 585;586 594	asilos de ancianos
 E24	Concept:T24 
 T26	Concept 644 652	personas
-E26	Concept:T26 in-context:E28
+E26	Concept:T26 
 T25	Concept 607 615	unidades
 E25	Concept:T25 
 T27	Action 619 627	cuidados
-E27	Action:T27 Subject:E25 Target:E26
+E27	Action:T27 Subject:E25 Target:E28 in-context:E21
 T29	Concept 667 673	serios
 E29	Concept:T29 
 T30	Concept 677 684	memoria
 E30	Concept:T30 
 T28	Predicate 657 666	problemas
-E28	Predicate:T28 in-context:E29 Arg:E30
+E28	Predicate:T28 in-context:E29 Arg:E30 Domain:E26
 T31	Predicate 568 575	Algunos
 E31	Predicate:T31 Domain:E24
 R5	part-of Arg1:E27 Arg2:E31
@@ -97,23 +94,19 @@ T43	Concept 1066 1071;1072 1077	gripe aviar
 E43	Concept:T43 in-place:E40
 R7	has-property Arg1:E43 Arg2:E41
 R8	has-property Arg1:E43 Arg2:E42
-T44	Predicate 1211 1215	tipo
-E44	Predicate:T44 Domain:E45
 T45	Concept 1219 1229	esteroides
 E45	Concept:T45 
 T46	Concept 1248 1259	corticoides
 E46	Concept:T46 
-R9	is-a Arg1:E46 Arg2:E44
+R9	is-a Arg1:E46 Arg2:E45
 T47	Action 1265 1270	trata
-E47	Action:T47 Subject:E46 Target:E49
+E47	Action:T47 Subject:E46 Target:E48
 T48	Concept 1287 1296	problemas
 E48	Concept:T48 
-T49	Predicate 1275 1283	variedad
-E49	Predicate:T49 Domain:E48
 T50	Concept 1412 1419	insecto
 E50	Concept:T50 
 T51	Action 1423 1427	pica
-E51	Action:T51 Subject:E50
+E51	Action:T51 Subject:E50 in-place:E52
 T52	Concept 1448 1454	rostro
 E52	Concept:T52 
 T53	Action 1456 1460	deja
@@ -190,8 +183,8 @@ E84	Concept:T84
 T85	Action 2121 2125	fume
 E85	Action:T85 
 A5	Negated E85
-T86	Action 2066 2070	rica
-E86	Action:T86 Subject:E80 Target:E82 Target2:E83
+T86	Predicate 2066 2070	rica
+E86	Predicate:T86 Domain:E80 Arg:E82 Arg2:E83
 R16	causes Arg1:E79 Arg2:E76
 R17	causes Arg1:E81 Arg2:E76
 R18	causes Arg1:E85 Arg2:E76
@@ -322,17 +315,14 @@ T141	Action 3760 3768	prevenir
 E141	Action:T141 Target:E142
 T143	Concept 3798 3803	virus
 E143	Concept:T143 
-T144	Concept 3815 3823;3824 3833	verrugas genitales
-E144	Concept:T144 
+T144	Concept 3815 3823	verrugas
+E144	Concept:T144 in-place:E147
 T145	Concept 3740 3743	VPH
 E145	Concept:T145 
 T146	Predicate 3730 3736	contra
 E146	Predicate:T146 Domain:E139 Arg:E145
 T142	Action 3777 3788	infecciones
-E142	Action:T142 Subject:E147
-T147	Reference 3793 3797	este
-E147	Reference:T147 
-R28	is-a Arg1:E147 Arg2:E143
+E142	Action:T142 Subject:E49
 R29	causes Arg1:E142 Arg2:E144
 T148	Action 3983 3992	inyección
 E148	Action:T148 Target:E150
@@ -439,8 +429,8 @@ T190	Concept 5220 5228	medicina
 E192	Concept:T190 
 T191	Concept 5242 5250	atropina
 E193	Concept:T191 
-T192	Predicate 5257 5260	ojo
-E194	Predicate:T192 in-context:E195 Arg:E196
+T192	Concept 5257 5260	ojo
+E194	Concept:T192 in-context:E195 in-place:E196
 T193	Concept 5262 5267	bueno
 E195	Concept:T193 
 T194	Concept 5273 5277	niño
@@ -474,11 +464,9 @@ E208	Action:T206 Target:E207
 T207	Concept 5679 5684;5685 5691;5692 5694;5695 5702	abuso sexual de menores
 E209	Concept:T207 
 T208	Action 5719 5727	maltrato
-E210	Action:T208 Subject:E212 Target:E211
+E210	Action:T208 Target:E211
 T209	Concept 5731 5736	menor
 E211	Concept:T209 
-T210	Concept 5710 5715	forma
-E212	Concept:T210 
 R38	is-a Arg1:E209 Arg2:E210
 T211	Concept 5804 5812	personas
 E213	Concept:T211 in-context:E214
@@ -519,8 +507,8 @@ E228	Concept:T226
 R41	has-property Arg1:E226 Arg2:E227
 T227	Concept 6250 6262	tratamientos
 E229	Concept:T227 
-T228	Predicate 6278 6285;6286 6292	terapia física
-E230	Predicate:T228 Arg:E237
+T228	Concept 6278 6285	terapia
+E230	Concept:T228 in-place:E237 in-context:E212
 T229	Concept 6308 6316	terapias
 E231	Concept:T229 in-context:E232
 T230	Concept 6317 6330	nutricionales
@@ -855,7 +843,7 @@ E1105	Concept:T1105
 T1106	Concept 3212 3220	fármacos
 E1106	Concept:T1106 
 T1107	Action 3204 3211	utiliza
-E1107	Action:T1107 Subject:E1105 Target:E1106
+E1107	Action:T1107 Target:E1106 Subject:E44
 T1109	Action 3225 3231	atacan
 E1109	Action:T1109 Subject:E1106 Target:E1108
 T1108	Concept 3238 3245	células
@@ -1031,30 +1019,29 @@ E1182	Concept:T1182 in-context:E1183
 T1183	Concept 5576 5584	asistida
 E1183	Concept:T1183 
 T1184	Action 5593 5597	usan
-E1184	Action:T1184 Target2:E1180 Target3:E1187 Target:E1185
+E1184	Action:T1184 Target:E1185 Target4:E1189 Subject:E1180 Target3:E1188
 T1185	Concept 5598 5604	óvulos
 E1185	Concept:T1185 
 T1186	Concept 5608 5616	donantes
 E1186	Concept:T1186 
 R1030	part-of Arg1:E1185 Arg2:E1186
 T1187	Concept 5621 5628	donante
-E1187	Concept:T1187 in-context:E1188 in-context2:E1189
+E1187	Concept:T1187 
 T1188	Concept 5632 5639	esperma
 E1188	Concept:T1188 
 R1031	part-of Arg1:E1188 Arg2:E1187
 T1189	Concept 5642 5651	embriones
 E1189	Concept:T1189 in-context:E1190
-R1032	part-of Arg1:E1189 Arg2:E1187
 T1190	Concept 5664 5674	congelados
 E1190	Concept:T1190 
-T1191	Concept 5741 5746	abuso
-E1191	Concept:T1191 in-context:E1192 in-context2:E1193
+T1191	Action 5741 5746	abuso
+E1191	Action:T1191 in-context:E1192 Target:E1193
 T1192	Concept 5747 5753	sexual
 E1192	Concept:T1192 
 T1193	Concept 5757 5764	menores
 E1193	Concept:T1193 
-T1194	Concept 5781 5789	maltrato
-E1194	Concept:T1194 in-context:E1195
+T1194	Action 5781 5789	maltrato
+E1194	Action:T1194 Target:E1195
 T1195	Concept 5793 5798	menor
 E1195	Concept:T1195 
 R1033	is-a Arg1:E1191 Arg2:E1194
@@ -1147,8 +1134,8 @@ E1233	Concept:T1233
 T1234	Action 6799 6807	continúa
 E1234	Action:T1234 Target:E1233
 R1039	causes Arg1:E1234 Arg2:E1232
-T1235	Concept 6938 6942	daño
-E1235	Concept:T1235 in-place:E1236
+T1235	Action 6938 6942	daño
+E1235	Action:T1235 Target:E1236
 T1236	Concept 6949 6954	vaina
 E1236	Concept:T1236 
 T1237	Concept 6964 6970	lentos
@@ -1161,12 +1148,10 @@ E1240	Concept:T1240 in-context:E1237 in-place:E1239 in-place2:E1241
 R1040	causes Arg1:E1235 Arg2:E1240
 T1239	Concept 7003 7010	cerebro
 E1239	Concept:T1239 
-T1241	Concept 7016 7032	resto del cuerpo
+T1241	Concept 7026 7032	cuerpo
 E1241	Concept:T1241 
-T1242	Concept 7130 7137	sistema
-E1242	Concept:T1242 in-context:E1243
-T1243	Concept 7138 7147	linfático
-E1243	Concept:T1243 
+T1242	Concept 7130 7137;7138 7147	sistema linfático
+E1242	Concept:T1242 
 T1244	Action 7148 7155	elimina
 E1244	Action:T1244 Subject:E1242 Target:E1245
 T1245	Concept 7160 7171	infecciones
@@ -1194,3 +1179,19 @@ T1254	Concept 7354 7362	músculos
 E1254	Concept:T1254 
 R1044	is-a Arg1:E1120 Arg2:E1121
 A1030	Negated E1001
+R4	is-a Arg1:E22 Arg2:E17	
+R55	is-a Arg1:E23 Arg2:E17	
+T21	Concept 628 638	especiales
+E21	Concept:T21 
+R56	is-a Arg1:E108 Arg2:E107	
+T44	Reference 3184 3188	Esta
+E44	Reference:T44 
+R57	is-a Arg1:E44 Arg2:E1105	
+T49	Reference 3793 3797	este
+E49	Reference:T49 
+*	same-as E49 E145
+R28	is-a Arg1:E49 Arg2:E143	
+T147	Concept 3824 3833	genitales
+E147	Concept:T147 
+T210	Concept 6286 6292	física
+E212	Concept:T210 
