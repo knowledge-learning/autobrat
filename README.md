@@ -10,7 +10,7 @@
 |  1 | ✔ | ✔ | ✔ |   |   |  Sadan     |
 |  2 | ✔ |   |   |   |   |  Daniel    |
 |  3 | ✔ | ✔ | ✔ |   |   |  Rocío     |
-|  4 | ✔ | ✔ |   |   |   |  Loraine   |
+|  4 | ✔ | ✔ | ✔ |   |   |  Loraine   |
 |  5 | ✔ | ✔ |   |   |   |  Tony      |
 |  6 | ✔ | ✔ |   |   |   |  Enmanuel  |
 |  7 | ✔ | ✔ |   |   |   |  Carmen    |
