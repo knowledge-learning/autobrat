@@ -12,7 +12,7 @@
 |  3 | ✔ | ✔ | ✔ |   |   |  Rocío     |
 |  4 | ✔ | ✔ | ✔ |   |   |  Loraine   |
 |  5 | ✔ | ✔ | ✔ |   |   |  Tony      |
-|  6 | ✔ | ✔ |   |   |   |  Enmanuel  |
+|  6 | ✔ | ✔ | ✔ |   |   |  Enmanuel  |
 |  7 | ✔ | ✔ |   |   |   |  Carmen    |
 |  8 | ✔ | ✔ |   |   |   |  Carlos    |
 |  9 | ✔ | ✔ |   |   |   |  Alexander |

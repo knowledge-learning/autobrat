@@ -152,7 +152,7 @@ E61	Concept:T59 in-context:E68
 T66	Concept 1797 1808	intimidados
 E68	Concept:T66 
 T67	Action 1816 1822	sentir
-E69	Action:T67 Subject:E61 Target:E70 in-time:E77
+E69	Action:T67 Subject:E61 Target:E70 in-context:E77
 T68	Action 1826 1835	necesidad
 E70	Action:T68 Target:E71
 T69	Action 1839 1844	tomar
@@ -162,7 +162,7 @@ E72	Concept:T70 in-context:E73
 T71	Concept 1853 1862	drásticas
 E73	Concept:T71 
 T72	Action 1865 1875	reaccionar
-E74	Action:T72 in-context:E75 Subject:E61 in-time:E77
+E74	Action:T72 in-context:E75 Subject:E61 in-context2:E77
 T73	Concept 1880 1889	violencia
 E75	Concept:T73 
 T74	Concept 1761 1766	casos
@@ -313,16 +313,16 @@ E139	Concept:T133
 T134	Concept 3521 3532	prediabetes
 E140	Concept:T134 
 T135	Action 3515 3520	tiene
-E141	Action:T135 Target:E140
+E141	Action:T135 Target:E140 Subject:E270
 T137	Concept 3544 3557	posibilidades
 E143	Concept:T137 
 A11	Emphasized E143
 T138	Action 3561 3567	sufrir
-E144	Action:T138 in-context:E143 Target3:E147 Target:E145 Target2:E146
+E144	Action:T138 in-context:E143 Target3:E147 Target:E145 Target2:E146 Subject:E270
 T139	Concept 3571 3579;3580 3584;3585 3586	diabetes tipo 2
 E145	Concept:T139 
-T140	Concept 3588 3600;3601 3604;3605 3612	enfermedades del corazón
-E146	Concept:T140 
+T140	Concept 3588 3600	enfermedades
+E146	Concept:T140 in-place:E271
 T141	Concept 3615 3622;3623 3631	derrame cerebral
 E147	Concept:T141 
 R28	entails Arg1:E141 Arg2:E144
@@ -330,8 +330,8 @@ T142	Reference 3766 3771	estas
 E148	Reference:T142 
 T143	Concept 3772 3783	actividades
 E149	Concept:T143 
-T145	Concept 3796 3807;3808 3811;3812 3818	metabolismo del cuerpo
-E151	Concept:T145 
+T145	Concept 3796 3807	metabolismo
+E151	Concept:T145 in-place:E272
 R29	is-a Arg1:E148 Arg2:E149
 R30	part-of Arg1:E148 Arg2:E151
 T136	Concept 3883 3891;3892 3894;3895 3899	síndrome de Reye
@@ -420,14 +420,12 @@ T179	Action 4965 4970	tener
 E189	Action:T179 Subject:E188 Target:E190
 T180	Concept 4971 4981;4982 4990	relaciones sexuales
 E190	Concept:T180 
-T181	Concept 4995 5000;5001 5007	abuso sexual
-E191	Concept:T181 
-T182	Action 5008 5014	contra
-E192	Action:T182 Subject:E191 Target:E193
+T181	Action 4995 5000;5001 5007	abuso sexual
+E191	Action:T181 Target:E193
 T183	Concept 5018 5023	menor
 E193	Concept:T183 
-R38	is-a Arg1:E184 Arg2:E192
-R39	is-a Arg1:E187 Arg2:E192
+R38	is-a Arg1:E184 Arg2:E191
+R39	is-a Arg1:E187 Arg2:E191
 T184	Action 5155 5167	intolerancia
 E194	Action:T184 Target:E195
 T185	Concept 5173 5180	lactosa
@@ -435,7 +433,6 @@ E195	Concept:T185
 T187	Concept 5197 5202	serio
 E197	Concept:T187 
 A13	Negated E197
-R41	has-property Arg1:E194 Arg2:E197
 T188	Action 5271 5278	delirio
 E198	Action:T188 
 T189	Concept 5288 5300	medicamentos
@@ -625,14 +622,14 @@ T1013	Concept 497 502	tumor
 E1013	Concept:T1013 
 T1014	Concept 600 608	tiroides
 E1014	Concept:T1014 
-T1015	Concept 618 626;627 629;630 636	análisis de sangre
-E1015	Concept:T1015 
-T1016	Concept 639 646;647 649;650 656	pruebas de imagen
-E1016	Concept:T1016 
-T1017	Predicate 585 593	exámenes
-E1017	Predicate:T1017 Arg:E1014
-R1006	part-of Arg1:E1015 Arg2:E1017
-R1007	part-of Arg1:E1016 Arg2:E1017
+T1015	Action 618 626	análisis
+E1015	Action:T1015 Target:E267
+T1016	Action 639 646	pruebas
+E1016	Action:T1016 Target:E268
+T1017	Action 585 593	exámenes
+E1017	Action:T1017 Target:E1014
+R1006	is-a Arg1:E1015 Arg2:E1017
+R1007	is-a Arg1:E1016 Arg2:E1017
 T1018	Concept 724 732	próstata
 E1018	Concept:T1018 
 T1019	Concept 760 765	orina
@@ -686,7 +683,7 @@ E1041	Action:T1041 Subject:E1039 Target:E1042
 T1044	Action 1497 1501	usan
 E1044	Action:T1044 Target3:E1046 Subject:E1039 Target:E1041 Target2:E1045
 T1045	Action 1507 1520	multiplicarse
-E1045	Action:T1045 Target:E1040
+E1045	Action:T1045 
 T1046	Action 1523 1531	producir
 E1046	Action:T1046 Target:E1040
 T1047	Action 1655 1660	Bajar
@@ -714,8 +711,8 @@ T1055	Concept 1934 1945	intimidados
 E1055	Concept:T1055 
 T1056	Action 2002 2012	reaccionar
 E1056	Action:T1056 Target2:E1058
-T1057	Concept 1982 1989;1990 1999	medidas drásticas
-E1057	Concept:T1057 
+T1057	Concept 1982 1989	medidas
+E1057	Concept:T1057 in-context:E269
 T1058	Concept 2017 2026	violencia
 E1058	Concept:T1058 
 T1059	Concept 2194 2201	talones
@@ -793,8 +790,8 @@ T1093	Action 2848 2855	ocurrir
 E1093	Action:T1093 Subject:E1237 Target:E1089 in-time:E1240
 T1094	Concept 3013 3022;3023 3033	trastorno metabólico
 E1094	Concept:T1094 
-T1096	Predicate 3044 3052	problema
-E1096	Predicate:T1096 in-place:E1097
+T1096	Action 3044 3052	problema
+E1096	Action:T1096 Target:E1097
 T1098	Concept 3187 3195	garganta
 E1098	Concept:T1098 
 T1099	Concept 3206 3216	orofaringe
@@ -820,7 +817,7 @@ E1105	Concept:T1105
 T1106	Concept 3492 3504	osteoporosis
 E1106	Concept:T1106 
 T1107	Concept 3436 3443	mujeres
-E1107	Concept:T1107 in-time:E1108
+E1107	Concept:T1107 in-context:E1108
 T1108	Concept 3444 3451	mayores
 E1108	Concept:T1108 
 T1109	Concept 3468 3474	calcio
@@ -1026,7 +1023,7 @@ E1205	Reference:T1205
 T1206	Concept 6593 6600	cesárea
 E1206	Concept:T1206 
 T1207	Action 6583 6588	nacer
-E1207	Action:T1207 in-context:E1209 Subject:E1208 Target:E1206
+E1207	Action:T1207 Subject2:E1206 Target:E1208
 T1208	Concept 6569 6573	bebé
 E1208	Concept:T1208 
 T1209	Concept 6534 6548	complicaciones
@@ -1088,7 +1085,6 @@ E1232	Concept:T1030
 E1233	Concept:T1031 
 A1009	Emphasized E1232
 A1010	Emphasized E1233
-R1003	entails Arg1:E1032 Arg2:E1038
 A1011	Uncertain E1035
 T1004	Action 2208 2215	incluir
 E1004	Action:T1004 Target4:E1067 Target3:E1064 Subject:E1061 Target:E1062 Target2:E1063
@@ -1096,10 +1092,10 @@ A1004	Uncertain E1004
 A1008	Uncertain E1069
 A1014	Uncertain E1085
 A1027	Uncertain E1093
-R1014	causes Arg1:E1094 Arg2:E1096
+R1014	entails Arg1:E1094 Arg2:E1096
 R1015	entails Arg1:E1111 Arg2:E1110
 T1079	Action 1953 1959	sentir
-E1079	Action:T1079 Subject:E1054 Target:E1087 Target2:E1056 in-place:E1236
+E1079	Action:T1079 Subject:E1054 Target:E1087 Target2:E1056 in-context:E1236
 T1087	Action 1963 1972	necesidad
 E1087	Action:T1087 Target:E1095
 T1095	Action 1976 1981	tomar
@@ -1145,11 +1141,30 @@ E1245	Predicate:T1241
 A1013	Uncertain E1139
 T1143	Concept 4686 4694	infantil
 E1143	Concept:T1143 
-T1242	Predicate 4675 4685	vacunación
-E1246	Predicate:T1242 Domain:E1143
+T1242	Action 4675 4685	vacunación
+E1246	Action:T1242 in-context:E1143
 R1005	is-a Arg1:E1205 Arg2:E1209
 A1015	Uncertain E1217
 A1016	Uncertain E1223
 T1152	Predicate 7116 7126	importante
 E1152	Predicate:T1152 
 R1017	has-property Arg1:E1224 Arg2:E1152
+A18	Uncertain E1011
+R63	causes Arg1:E1013 Arg2:E1011	
+T253	Concept 630 636	sangre
+E267	Concept:T253 
+T254	Concept 650 656	imagen
+E268	Concept:T254 
+R64	causes Arg1:E1033 Arg2:E1038	
+T255	Concept 1990 1999	drásticas
+E269	Concept:T255 
+T256	Concept 3509 3514	usted
+E270	Concept:T256 
+T257	Concept 3605 3612	corazón
+E271	Concept:T257 
+T258	Concept 3812 3818	cuerpo
+E272	Concept:T258 
+T182	Concept 5190 5196	cuadro
+E192	Concept:T182 in-context:E197
+R41	is-a Arg1:E194 Arg2:E192	
+R65	causes Arg1:E1205 Arg2:E1207	
