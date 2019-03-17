@@ -144,7 +144,7 @@ E63	Concept:T62
 T63	Concept 1711 1719	ampollas
 E64	Concept:T63 
 T64	Action 1720 1728	aparecen
-E65	Action:T64 in-time:E66 Target3:E63 Target2:E64
+E65	Action:T64 in-time:E66 Target3:E63 Target:E64 Subject:E64 Subject2:E63
 T65	Predicate 1729 1734	entre
 E66	Predicate:T65 Arg2:E68 Arg:E67
 T66	Concept 1735 1738;1744 1748	uno días
@@ -193,7 +193,7 @@ E86	Concept:T85
 T86	Concept 2229 2232	día
 E87	Concept:T86 
 T87	Predicate 2233 2242	siguiente
-E88	Predicate:T87 Domain:E87 Arg:E83
+E88	Predicate:T87 Domain:E87 Arg:E82
 T88	Action 2260 2268	trabajar
 E89	Action:T88 
 T89	Concept 2272 2278	semana
@@ -240,10 +240,10 @@ E109	Concept:T108
 R18	is-a Arg1:E108 Arg2:E109
 T109	Reference 2867 2871	este
 E110	Reference:T109 
-T110	Predicate 2872 2878	riesgo
-E111	Predicate:T110 
+T110	Concept 2872 2878	riesgo
+E111	Concept:T110 
 T111	Action 2814 2820	afecta
-E112	Action:T111 Target2:E110 Target:E114
+E112	Action:T111 in-time:E114 Subject:E110 Target:E255
 T112	Concept 2842 2846;2847 2852	tres meses
 E113	Concept:T112 
 T113	Predicate 2833 2841	primeros
@@ -273,7 +273,7 @@ R23	causes Arg1:E120 Arg2:E119
 T122	Concept 3270 3276	piojos
 E123	Concept:T122 
 T123	Action 3280 3288	propagan
-E124	Action:T123 Target2:E126 Target:E123 Subject:E125
+E124	Action:T123 Target2:E126 Target3:E125 Subject:E123
 T124	Concept 3292 3299	persona
 E125	Concept:T124 
 T125	Concept 3302 3309	persona
@@ -289,13 +289,11 @@ T129	Concept 3407 3412	niños
 E130	Concept:T129 
 T130	Concept 3416 3427	pornografía
 E131	Concept:T130 
-T131	Concept 3439 3444;3445 3451	abuso sexual
-E132	Concept:T131 
-T132	Action 3452 3458	contra
-E133	Action:T132 Target:E134 Subject:E132
+T131	Action 3439 3444;3445 3451	abuso sexual
+E132	Action:T131 Target:E134
 T133	Concept 3463 3470	menores
 E134	Concept:T133 
-R25	is-a Arg1:E129 Arg2:E133
+R25	is-a Arg1:E129 Arg2:E132
 T134	Concept 3564 3570;3571 3577	hernia hiatal
 E135	Concept:T134 
 T136	Action 3605 3609	suba
@@ -312,14 +310,10 @@ E140	Concept:T139
 T140	Concept 3711 3722	infecciones
 E141	Concept:T140 
 T141	Action 3745 3751	tratar
-E142	Action:T141 in-context:E144 Target:E141
+E142	Action:T141 Target:E141 in-context:E143
 T142	Concept 3732 3741	difíciles
 E143	Concept:T142 
-T143	Predicate 3728 3731	más
-E144	Predicate:T143 Arg:E143
 R27	causes Arg1:E140 Arg2:E142
-E145	Action:T141 in-context:E140 Target:E141
-R28	has-property Arg1:E145 Arg2:E143
 T144	Concept 3833 3844	tratamiento
 E146	Concept:T144 
 T145	Concept 3853 3864	supervisión
@@ -353,16 +347,12 @@ E158	Concept:T156
 R33	is-a Arg1:E156 Arg2:E151
 R34	is-a Arg1:E155 Arg2:E151
 R35	is-a Arg1:E158 Arg2:E151
-T157	Reference 4300 4302	La
-E159	Reference:T157 
-T158	Concept 4303 4312	infección
-E160	Concept:T158 
+T158	Action 4303 4312	infección
+E160	Action:T158 Target:E162
 T159	Concept 4320 4325	común
-E161	Concept:T159 in-place:E162
+E161	Concept:T159 
 T160	Concept 4329 4334	niños
 E162	Concept:T160 
-R36	is-a Arg1:E159 Arg2:E160
-R37	has-property Arg1:E159 Arg2:E161
 T161	Action 4375 4380	falta
 E163	Action:T161 Target2:E164 Target:E165
 T162	Concept 4388 4397;4398 4401	vitaminas B12
@@ -549,13 +539,13 @@ R50	has-property Arg1:E245 Arg2:E239
 T242	Concept 6619 6623	piel
 E248	Concept:T242 
 T243	Action 6644 6651	delgada
-E249	Action:T243 Target:E248
+E249	Action:T243 Target:E248 Subject:E248
 T244	Action 6654 6660	pierde
 E250	Action:T244 Target:E251 Subject:E248
 T245	Concept 6661 6666	grasa
 E251	Concept:T245 
 T246	Action 6668 6678	tornándose
-E252	Action:T246 Target2:E254 Target:E253 Subject:E248
+E252	Action:T246 Subject:E248 Target:E253 Target2:E254
 T247	Concept 6685 6690	suave
 E253	Concept:T247 
 T248	Concept 6693 6697	lisa
@@ -694,7 +684,6 @@ E1064	Concept:T1063
 T1064	Concept 6449 6456	mujeres
 E1065	Concept:T1064 
 A1003	Uncertain E1013
-A1004	Emphasized E1042
 T1059	Action 6357 6364	infecta
 E1060	Action:T1059 Target:E1059 Subject:E1031
 R1005	causes Arg1:E1060 Arg2:E1061
@@ -784,10 +773,10 @@ T1105	Concept 1649 1655	étnico
 E1107	Concept:T1105 
 T1107	Concept 1762 1772	erupciones
 E1109	Concept:T1107 
-T1108	Concept 1777 1778	p
+T1108	Concept 1775 1783	ampollas
 E1110	Concept:T1108 
 T1109	Action 1784 1792	aparecen
-E1111	Action:T1109 in-time:E1108 Subject2:E1110 Subject:E1109
+E1111	Action:T1109 in-time:E1108 Subject2:E1110 Subject:E1109 Target:E1110 Target2:E1109
 T1110	Concept 1799 1802	uno
 E1112	Concept:T1110 
 T1112	Concept 1931 1940;1941 1945	bronceado base
@@ -869,7 +858,7 @@ R1021	causes Arg1:E1149 Arg2:E1144
 T1148	Concept 3336 3342	piojos
 E1150	Concept:T1148 
 T1149	Action 3346 3354	propagan
-E1151	Action:T1149 in-context:E1153 Target2:E1226 Target:E1150 Subject:E1225
+E1151	Action:T1149 in-context:E1153 Target2:E1226 Subject2:E1150 Target:E1225
 T1150	Concept 3380 3388	contacto
 E1152	Concept:T1150 
 T1151	Predicate 3389 3396	cercano
@@ -991,7 +980,7 @@ E1205	Action:T1203
 T1204	Action 1520 1526	quemar
 E1206	Action:T1204 Target:E1207
 T1205	Predicate 1527 1530	más
-E1207	Predicate:T1205 Domain:E1209 Arg:E1208 Domain2:E1210
+E1207	Predicate:T1205 Domain3:E1208 Arg:E1209 Arg2:E1210
 T1206	Concept 1531 1539	calorías
 E1208	Concept:T1206 
 T1207	Action 1551 1555	come
@@ -1168,3 +1157,9 @@ E1269	Concept:T1264 in-context2:E1268 in-context:E1071
 R1051	is-a Arg1:E1236 Arg2:E1270
 T1265	Predicate 6578 6583	mejor
 E1270	Predicate:T1265 Domain:E1269
+A13	Uncertain E1042
+T249	Reference 2811 2813	la
+E255	Reference:T249 
+A14	Emphasized E143
+A15	Emphasized E161
+R28	has-property Arg1:E160 Arg2:E161	

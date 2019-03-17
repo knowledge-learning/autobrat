@@ -13,7 +13,7 @@
 |  4 | ✔ | ✔ | ✔ |   |   |  Loraine   |
 |  5 | ✔ | ✔ | ✔ |   |   |  Tony      |
 |  6 | ✔ | ✔ | ✔ |   |   |  Enmanuel  |
-|  7 | ✔ | ✔ |   |   |   |  Carmen    |
+|  7 | ✔ | ✔ | ✔ |   |   |  Carmen    |
 |  8 | ✔ | ✔ |   |   |   |  Carlos    |
 |  9 | ✔ | ✔ |   |   |   |  Alexander |
 | 10 | ✔ | ✔ |   |   |   |  Dayani    |
