@@ -11,8 +11,8 @@ T5	Predicate 74 79	entre
 E6	Predicate:T5 Arg:E3
 T6	Concept 116 126;127 135	relaciones sexuales
 E7	Concept:T6 
-R1	entails Arg1:E1 Arg2:E4
-R2	entails Arg1:E1 Arg2:E2
+R1	causes Arg1:E1 Arg2:E4
+R2	causes Arg1:E1 Arg2:E2
 T7	Predicate 278 284	signos
 E8	Predicate:T7 Arg:E9 in-context:E10
 T8	Concept 299 308;309 317	parálisis cerebral
@@ -20,7 +20,7 @@ E9	Concept:T8
 T9	Concept 285 295	prematuros
 E10	Concept:T9 
 T10	Action 325 333	aparecer
-E11	Action:T10 Target:E12 Subject:E8
+E11	Action:T10 Subject:E8 in-time:E12
 A1	Uncertain E11
 T11	Predicate 334 339	antes
 E12	Predicate:T11 Arg:E13
@@ -55,9 +55,7 @@ T26	Action 714 719	fumar
 E27	Action:T26 
 A3	Negated E27
 T25	Action 724 729	beber
-E26	Action:T25 in-context:E28
-T27	Concept 730 739	demasiado
-E28	Concept:T27 
+E26	Action:T25 
 A4	Negated E26
 T28	Action 741 746	comer
 E29	Action:T28 Target:E30
@@ -97,8 +95,8 @@ T42	Concept 1052 1060	melanina
 E43	Concept:T42 
 R8	causes Arg1:E39 Arg2:E41
 R9	causes Arg1:E40 Arg2:E41
-T43	Predicate 1163 1172	problemas
-E44	Predicate:T43 Arg:E45
+T43	Action 1163 1172	problemas
+E44	Action:T43 Target:E45
 T44	Action 1178 1186	respirar
 E45	Action:T44 
 T45	Concept 1191 1197	cuesta
@@ -157,8 +155,8 @@ E68	Concept:T66
 *	same-as E67 E68
 T67	Concept 1857 1861	moho
 E69	Concept:T67 
-T68	Predicate 1877 1886	problemas
-E70	Predicate:T68 Arg:E71
+T68	Action 1877 1886	problemas
+E70	Action:T68 Target:E71
 T69	Concept 1890 1895	salud
 E71	Concept:T69 
 R17	causes Arg1:E69 Arg2:E70
@@ -180,7 +178,7 @@ E78	Concept:T76 in-context:E79
 T77	Concept 2027 2034	muertos
 E79	Concept:T77 
 T78	Action 2039 2050	encontrados
-E80	Action:T78 Target:E78 in-place:E81 in-context:E72
+E80	Action:T78 Target:E78 in-place:E81
 T79	Concept 2058 2063	cunas
 E81	Concept:T79 
 A6	Emphasized E80
@@ -307,17 +305,17 @@ T133	Concept 3746 3750	piel
 E135	Concept:T133 
 T134	Action 3755 3760	clara
 E136	Action:T134 Target:E134
-R26	causes Arg1:E126 Arg2:E134
-R27	causes Arg1:E132 Arg2:E134
-R28	causes Arg1:E133 Arg2:E134
+R26	causes Arg1:E126 Arg2:E136
+R27	causes Arg1:E132 Arg2:E136
+R28	causes Arg1:E133 Arg2:E136
 T135	Action 3878 3888	preocupado
-E137	Action:T135 Target:E138
+E137	Action:T135 Target:E138 Subject:E28
 T136	Action 3902 3913	respiración
 E138	Action:T136 Target:E139
 T137	Concept 3920 3924	hijo
 E139	Concept:T137 
 T138	Action 3926 3931	llame
-E140	Action:T138 Target:E141 in-context:E137 in-time:E142
+E140	Action:T138 Target:E141 in-context:E137 in-time:E142 Subject:E28
 T139	Concept 3937 3946;3947 3949;3950 3958;3959 3965	proveedor de atención médica
 E141	Concept:T139 
 T140	Concept 3969 3978	inmediato
@@ -326,10 +324,8 @@ T141	Action 4099 4104	dolor
 E143	Action:T141 Target:E144
 T142	Concept 4108 4115	espalda
 E144	Concept:T142 
-T143	Predicate 4130 4139	problemas
-E145	Predicate:T143 Arg:E146
-T144	Concept 4140 4147	médicos
-E146	Concept:T144 
+T143	Concept 4130 4139;4140 4147	problemas médicos
+E145	Concept:T143 
 T145	Predicate 4148 4151	más
 E147	Predicate:T145 Domain:E145 Arg:E148
 T146	Concept 4152 4159	comunes
@@ -380,7 +376,7 @@ E168	Concept:T166
 T167	Concept 4640 4648;4649 4654	primeros meses
 E169	Concept:T167 
 T168	Action 4686 4690	sepa
-E170	Action:T168 Target:E171
+E170	Action:T168 Target:E171 Subject:E146
 A14	Negated E170
 A15	Uncertain E170
 T169	Concept 4700 4710	embarazada
@@ -413,7 +409,6 @@ T180	Concept 5106 5115	aberturas
 E183	Concept:T180 
 T181	Concept 5125 5131	ductos
 E184	Concept:T181 
-R32	is-a Arg1:E184 Arg2:E183
 T182	Concept 5252 5262;5263 5271	trastornos mentales
 E185	Concept:T182 
 T183	Concept 5276 5283	comunes
@@ -481,9 +476,6 @@ T210	Action 6114 6120	afecta
 E213	Action:T210 Subject:E212 Target:E214
 T211	Concept 6124 6128	feto
 E214	Concept:T211 
-T212	Concept 6102 6107	raras
-E215	Concept:T212 
-R35	has-property Arg1:E213 Arg2:E215
 T213	Action 6139 6151	tratamientos
 E216	Action:T213 Target:E212
 T214	Predicate 6131 6138	algunos
@@ -1128,3 +1120,14 @@ T1219	Concept 7146 7151	mejor
 E1229	Concept:T1219 
 A1020	Uncertain E1098
 A1022	Uncertain E1094
+A27	Emphasized E26
+R41	causes Arg1:E80 Arg2:E77	
+A28	Uncertain E95
+A29	Uncertain E1110
+T27	Concept 3867 3872	usted
+E28	Concept:T27 
+T144	Concept 4662 4667	usted
+E146	Concept:T144 
+A30	Emphasized E174
+*	same-as E183 E184
+A31	Diminished E213
