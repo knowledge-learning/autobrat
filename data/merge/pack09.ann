@@ -3,7 +3,7 @@ E1	Concept:T1
 T2	Concept 22 28	tejido
 E2	Concept:T2 
 T3	Action 29 34	crece
-E3	Action:T3 Target:E2 in-place:E4
+E3	Action:T3 Target:E2 in-place:E4 Subject:E2
 T4	Concept 42 49	paredes
 E4	Concept:T4 in-context:E5 in-place:E6
 T5	Concept 50 58	externas
@@ -11,14 +11,11 @@ E5	Concept:T5
 T6	Concept 63 68	útero
 E6	Concept:T6 
 R1	entails Arg1:E1 Arg2:E3
-T7	Reference 147 152	estas
-E7	Reference:T7 
 T8	Concept 153 160	pruebas
 E8	Concept:T8 
-R2	is-a Arg1:E7 Arg2:E8
 T9	Concept 173 179;167 172	rectal tacto
 E9	Concept:T9 
-R3	is-a Arg1:E9 Arg2:E7
+R3	is-a Arg1:E9 Arg2:E8
 T10	Concept 226 238;239 249	enfermedades hormonales
 E10	Concept:T10 
 T11	Concept 272 278	cuerpo
@@ -96,8 +93,8 @@ T44	Action 1190 1196	causan
 E45	Action:T44 Subject:E44 Target:E46
 T45	Concept 1197 1205	enanismo
 E46	Concept:T45 
-T46	Predicate 1234 1243	problemas
-E47	Predicate:T46 Arg:E48
+T46	Action 1234 1243	problemas
+E47	Action:T46 Target:E48
 T47	Concept 1247 1252	salud
 E48	Concept:T47 
 R5	causes Arg1:E45 Arg2:E47
@@ -112,7 +109,7 @@ E52	Concept:T51
 R6	is-a Arg1:E50 Arg2:E52
 T52	Concept 1482 1497	Prehipertensión
 E53	Concept:T52 
-T53	Action 1515 1523	probable
+T53	Action 1541 1546	tenga
 E54	Action:T53 Target:E55 in-context:E58
 T54	Concept 1547 1554;1555 1563	presión arterial
 E55	Concept:T54 in-context:E56 in-time:E57
@@ -202,7 +199,7 @@ E92	Action:T91 Subject:E90 Target:E94 Target2:E95
 T92	Concept 2593 2599	cuerpo
 E93	Concept:T92 
 T93	Action 2602 2608	crecer
-E94	Action:T93 Target:E93
+E94	Action:T93 Target:E93 in-context:E96
 T94	Action 2611 2624	desarrollarse
 E95	Action:T94 in-context:E96 Target:E93
 T95	Concept 2634 2640	normal
@@ -229,8 +226,8 @@ T104	Concept 2988 2996	síntomas
 E105	Concept:T104 
 T105	Action 3012 3021	temblores
 E106	Action:T105 
-T106	Predicate 3023 3032	problemas
-E107	Predicate:T106 Arg:E108
+T106	Action 3023 3032	problemas
+E107	Action:T106 Target:E108
 T107	Concept 3039 3042	voz
 E108	Concept:T107 
 T108	Action 3045 3054	arrastrar
@@ -247,8 +244,8 @@ E112	Action:T111 Subject:E111 in-place:E114
 A5	Uncertain E112
 T112	Concept 3192 3201	cristales
 E113	Concept:T112 
-T113	Action 3206 3211	forma
-E114	Action:T113 Subject:E113 Target:E115
+T113	Predicate 3206 3211	forma
+E114	Predicate:T113 Domain:E113 Arg:E115
 T114	Concept 3215 3220	aguja
 E115	Concept:T114 
 T115	Action 3306 3314	lesiones
@@ -257,8 +254,8 @@ T116	Concept 3322 3332	ligamentos
 E117	Concept:T116 
 T117	Concept 3335 3343	tendones
 E118	Concept:T117 
-T118	Predicate 3359 3368	problemas
-E119	Predicate:T118 Arg:E120
+T118	Action 3359 3368	problemas
+E119	Action:T118 Target:E120
 T119	Concept 3376 3383	rodilla
 E120	Concept:T119 
 R15	causes Arg1:E116 Arg2:E119
@@ -306,7 +303,7 @@ R23	is-a Arg1:E136 Arg2:E128
 T136	Concept 3825 3832	cirugía
 E137	Concept:T136 
 T137	Action 3833 3837	crea
-E138	Action:T137 Subject:E137 Target:E139 Target2:E142
+E138	Action:T137 Subject:E137 Target:E139
 T138	Concept 3847 3853	camino
 E139	Concept:T138 in-context:E140
 T139	Concept 3841 3846	nuevo
@@ -318,7 +315,7 @@ E142	Action:T141 Subject:E141 Target:E143 in-place:E139
 T142	Concept 3883 3890	corazón
 E143	Concept:T142 
 T143	Action 3966 3975	picaduras
-E144	Action:T143 Target:E145 Target2:E146
+E144	Action:T143 Subject:E145 Subject2:E146
 T144	Concept 3979 3988	mosquitos
 E145	Concept:T144 
 T145	Concept 3995 4001	pulgas
@@ -349,10 +346,10 @@ T155	Concept 4330 4339	esteroide
 E157	Concept:T155 
 R27	is-a Arg1:E156 Arg2:E157
 T156	Concept 4347 4358	tratamiento
-E158	Concept:T156 
+E158	Concept:T156 in-context:E7
 R28	is-a Arg1:E156 Arg2:E158
 T157	Action 4294 4305	necesitarlo
-E159	Action:T157 
+E159	Action:T157 Target:E158
 T158	Action 4466 4474	formadas
 E160	Action:T158 Target:E161
 T159	Predicate 4479 4484	capas
@@ -364,21 +361,18 @@ E163	Concept:T161
 T162	Concept 4520 4529	queratina
 E164	Concept:T162 
 R29	is-a Arg1:E164 Arg2:E162
-T163	Action 4546 4555	encuentra
-E165	Action:T163 Target:E164 in-place2:E167 in-place:E166
 T164	Concept 4562 4566	pelo
 E166	Concept:T164 
 T165	Concept 4572 4576	piel
 E167	Concept:T165 
-T166	Concept 4701 4708	período
-E168	Concept:T166 in-context:E169 in-place:E170
+T166	Predicate 4701 4708	período
+E168	Predicate:T166 Arg:E169 in-time:E170
 T167	Concept 4712 4716;4717 4722	tres meses
 E169	Concept:T167 
 T168	Concept 4727 4735	embarazo
 E170	Concept:T168 
 T169	Concept 4747 4756	trimestre
 E171	Concept:T169 
-R30	is-a Arg1:E168 Arg2:E171
 T170	Concept 4820 4828	Alergias
 E172	Concept:T170 
 T171	Predicate 4830 4839	problemas
@@ -422,18 +416,18 @@ R38	is-a Arg1:E185 Arg2:E186
 T186	Concept 5244 5250	fobias
 E188	Concept:T186 
 T187	Action 5251 5260	comienzan
-E189	Action:T187 in-context:E194 Target:E188 in-time:E190
+E189	Action:T187 in-context:E194 Target:E188 in-time:E190 Subject:E188
 T188	Concept 5267 5272	niñez
 E190	Concept:T188 
 T189	Concept 5281 5293	adolescencia
 E191	Concept:T189 
 T190	Action 5296 5305	continúan
-E192	Action:T190 Target:E188 in-time:E193
+E192	Action:T190 Target:E188 in-time:E193 Subject:E188
 T191	Concept 5317 5321;5322 5328	edad adulta
 E193	Concept:T191 
 T192	Concept 5231 5238	general
 E194	Concept:T192 
-E195	Action:T187 Target:E188 in-context:E194 in-time:E191
+E195	Action:T187 Target:E188 in-context:E194 in-time:E191 Subject:E188
 T193	Reference 5432 5437	Estos
 E196	Reference:T193 
 T194	Concept 5438 5447	problemas
@@ -449,7 +443,7 @@ A7	Uncertain E198
 T198	Action 5519 5525	buscar
 E201	Action:T198 Target:E202 in-time:E203
 T199	Action 5526 5531	ayuda
-E202	Action:T199 Target:E196
+E202	Action:T199 
 T200	Predicate 5535 5540;5541 5548	antes posible
 E203	Predicate:T200 
 T201	Concept 5508 5518	importante
@@ -513,7 +507,7 @@ E229	Concept:T226
 T227	Action 6395 6404	infectada
 E230	Action:T227 Target:E229 Subject:E227 Subject2:E228
 T228	Action 6349 6357	contraer
-E231	Action:T228 Target:E227 Target3:E230 Target2:E228
+E231	Action:T228 Target:E246
 A10	Uncertain E231
 T229	Action 6532 6543	tratamiento
 E232	Action:T229 Target:E234 in-context:E233
@@ -1074,7 +1068,7 @@ E1249	Predicate:T1247 in-context:E1254 Arg:E1256
 T1252	Concept 6834 6845	principales
 E1254	Concept:T1252 
 T1253	Predicate 6820 6826	Muchos
-E1255	Predicate:T1253 Arg:E1249
+E1255	Predicate:T1253 Domain:E1249
 T1254	Concept 6857 6862	salud
 E1256	Concept:T1254 
 T1255	Concept 6881 6888	hombres
@@ -1092,8 +1086,8 @@ A1020	Uncertain E1261
 T1260	Action 6964 6972	tratarse
 E1262	Action:T1260 Target:E1258 Subject:E1263
 A1021	Uncertain E1262
-T1261	Concept 6980 6991	diagnóstico
-E1263	Concept:T1261 in-context:E1264
+T1261	Action 6980 6991	diagnóstico
+E1263	Action:T1261 in-context:E1264
 T1262	Concept 6992 7002	anticipado
 E1264	Concept:T1262 
 T1263	Concept 6920 6932	enfermedades
@@ -1133,3 +1127,15 @@ E1086	Action:T1204 Subject:E1195 in-context:E1209 in-time:E1196
 T1085	Action 6415 6423	contraer
 E1108	Action:T1085 Target:E1248 Target3:E1246 Target2:E1245
 A1002	Uncertain E1108
+R2	causes Arg1:E138 Arg2:E142	
+T7	Concept 4359 4368	principal
+E7	Concept:T7 
+A13	Uncertain E159
+T163	Action 4546 4555	encuentra
+E165	Action:T163 in-place:E166 in-place2:E167 Subject:E164
+*	same-as E168 E171
+A14	Uncertain E179
+R30	entails Arg1:E198 Arg2:E201	
+R46	causes Arg1:E230 Arg2:E231	
+T243	Reference 6340 6342	Se
+E246	Reference:T243 

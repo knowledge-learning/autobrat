@@ -15,7 +15,7 @@
 |  6 | ✔ | ✔ | ✔ |   |   |  Enmanuel  |
 |  7 | ✔ | ✔ | ✔ |   |   |  Carmen    |
 |  8 | ✔ | ✔ | ✔ |   |   |  Carlos    |
-|  9 | ✔ | ✔ |   |   |   |  Alexander |
+|  9 | ✔ | ✔ | ✔ |   |   |  Alexander |
 | 10 | ✔ | ✔ |   |   |   |  Dayani    |
 | 11 | ✔ |   |   |   |   |  Marcos    |
 | 12 | ✔ |   |   |   |   |  Rocio     |
