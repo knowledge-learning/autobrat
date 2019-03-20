@@ -17,7 +17,7 @@
 |  8 | ✔ | ✔ | ✔ |   |   |  Carlos    |
 |  9 | ✔ | ✔ | ✔ |   |   |  Alexander |
 | 10 | ✔ | ✔ | ✔ |   |   |  Dayani    |
-| 11 | ✔ | ✔ |   |   |   |  Marcos    |
+| 11 | ✔ | ✔ | ✔ |   |   |  Marcos    |
 | 12 | ✔ |   |   |   |   |  Rocio     |
 | 13 | ✔ |   |   |   |   |  Jorge     |
 | 14 | ✔ | ✔ |   |   |   |  Loraine   |
