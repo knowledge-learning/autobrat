@@ -1,0 +1,676 @@
+T1	Concept 12 22;3 11	reumatoide artritis
+E1	Concept:T1 
+T2	Action 26 35	diferente
+E2	Action:T2 Subject:E1 Target:E3
+T3	Concept 41 54	osteoartritis
+E3	Concept:T3 
+T4	Concept 74 82	artritis
+E4	Concept:T4 in-context:E5 in-time:E6
+T5	Concept 65 70	común
+E5	Concept:T5 
+T6	Concept 85 89	edad
+E6	Concept:T6 in-context:E7
+T7	Concept 90 98	avanzada
+E7	Concept:T7 
+*	same-as E3 E4
+R1	is-a Arg1:E3 Arg2:E4	
+E8	Concept:T5 in-time:E6
+R2	has-property Arg1:E3 Arg2:E8	
+T8	Concept 103 109;110 112;113 121	cáncer de estómago
+E9	Concept:T8 
+T9	Action 122 128	afecta
+E10	Action:T9 Subject:E9 Target:E11
+A1	Emphasized E10
+T10	Concept 150 158;159 166	personas mayores
+E11	Concept:T10 
+T11	Predicate 168 171;172 179	dos tercios
+E12	Predicate:T11 Domain:E13
+T12	Concept 187 195	personas
+E13	Concept:T12 in-context:E9
+T13	Predicate 205 209	tipo
+E14	Predicate:T13 Domain:E15
+T14	Concept 213 219	cáncer
+E15	Concept:T14 
+R3	is-a Arg1:E9 Arg2:E14	
+T15	Predicate 223 228	mayor
+E16	Predicate:T15 Arg:E17
+T16	Concept 232 234;235 239	65 años
+E17	Concept:T16 
+R4	has-property Arg1:E12 Arg2:E16	
+T17	Concept 244 255	congelación
+E18	Concept:T17 
+T18	Concept 263 269	herida
+E19	Concept:T18 in-place:E20
+T19	Concept 276 282	cuerpo
+E20	Concept:T19 
+T20	Concept 298 302	frío
+E21	Concept:T20 in-context:E22
+T21	Concept 303 310	extremo
+E22	Concept:T21 
+R5	is-a Arg1:E18 Arg2:E19	
+R6	causes Arg1:E21 Arg2:E18	
+T22	Action 312 320	Respirar
+E23	Action:T22 Target:E24
+T23	Concept 321 325	aire
+E24	Concept:T23 in-context:E33
+T24	Action 327 332	tomar
+E25	Action:T24 Target:E26
+T25	Concept 333 337	agua
+E26	Concept:T25 in-context:E27 in-context2:E33
+T26	Concept 338 345	potable
+E27	Concept:T26 
+T27	Action 347 352	comer
+E28	Action:T27 Target:E29
+T28	Concept 353 362	alimentos
+E29	Concept:T28 in-context:E33
+T29	Action 365 371	tragar
+E30	Action:T29 Target:E32
+T30	Action 374 379	tocar
+E31	Action:T30 Target:E32
+T31	Concept 380 385	cosas
+E32	Concept:T31 in-context:E33
+T32	Concept 386 398	contaminadas
+E33	Concept:T32 in-context:E34
+T33	Concept 403 408	plomo
+E34	Concept:T33 
+T34	Predicate 429 438	problemas
+E35	Predicate:T34 Arg:E36
+T35	Concept 442 447	salud
+E36	Concept:T35 
+A2	Emphasized E35
+R7	causes Arg1:E23 Arg2:E35	
+R8	causes Arg1:E25 Arg2:E35	
+R9	causes Arg1:E28 Arg2:E35	
+R10	causes Arg1:E30 Arg2:E35	
+R11	causes Arg1:E31 Arg2:E35	
+T36	Concept 457 467	embarazada
+E37	Concept:T36 
+T37	Action 469 474	hable
+E38	Action:T37 Target:E39 in-time:E40 in-context:E37
+T38	Concept 482 488	médico
+E39	Concept:T38 
+T39	Predicate 489 494	antes
+E40	Predicate:T39 Arg:E41
+T40	Action 498 503	tomar
+E41	Action:T40 Target:E43
+T41	Concept 514 522	medicina
+E42	Concept:T41 
+T42	Predicate 504 513	cualquier
+E43	Predicate:T42 Domain:E42
+T43	Concept 524 533	Sinusitis
+E44	Concept:T43 
+T44	Action 549 560	inflamación
+E45	Action:T44 Target:E46
+T45	Concept 568 573;574 585	senos paranasales
+E46	Concept:T45 
+*	same-as E44 E45
+T46	Concept 594 599	niños
+E47	Concept:T46 
+T47	Predicate 587 593	Muchos
+E48	Predicate:T47 Arg:E53
+T48	Reference 614 619	estos
+E49	Reference:T48 
+T49	Concept 620 628	defectos
+E50	Concept:T49 
+T50	Action 632 641	necesitan
+E51	Action:T50 Subject:E48 Target:E52
+A3	Negated E51
+T51	Concept 642 653	tratamiento
+E52	Concept:T51 
+T52	Action 604 610	sufren
+E53	Action:T52 Subject:E47 Target:E49
+R12	is-a Arg1:E49 Arg2:E50	
+E55	Action:T50 Subject:E53 Target:E52
+A4	Uncertain E55
+T53	Concept 678 690	traumatismos
+E54	Concept:T53 
+T54	Concept 700 709	hematomas
+E56	Concept:T54 
+T55	Action 712 722	distensión
+E57	Action:T55 Target:E58
+T56	Concept 730 740	ligamentos
+E58	Concept:T56 
+R13	causes Arg1:E54 Arg2:E56	
+R14	causes Arg1:E54 Arg2:E57	
+T57	Concept 745 754;755 763	distrofia muscular
+E59	Concept:T57 
+T58	Predicate 770 775	grupo
+E60	Predicate:T58 Domain:E61
+T59	Predicate 779 782	más
+E61	Predicate:T59 Arg:E63 Domain:E62
+T60	Concept 789 801;802 814	enfermedades hereditarias
+E62	Concept:T60 
+T61	Concept 786 788	30
+E63	Concept:T61 
+R15	is-a Arg1:E59 Arg2:E60	
+T62	Action 826 835	debilidad
+E64	Action:T62 Target:E65
+T63	Concept 836 844	muscular
+E65	Concept:T63 
+T64	Action 847 854	pérdida
+E66	Action:T64 Target:E67
+T65	Concept 861 865;866 874	masa muscular
+E67	Concept:T65 
+R16	causes Arg1:E59 Arg2:E64	
+R17	causes Arg1:E59 Arg2:E66	
+T66	Concept 889 896	defecto
+E68	Concept:T66 in-place:E69
+T67	Concept 901 905;906 912	tubo neural
+E69	Concept:T67 
+T68	Predicate 881 885	tipo
+E70	Predicate:T68 Arg:E68
+T69	Concept 921 935;936 938;939 945	malformaciones de Chiari
+E71	Concept:T69 
+R18	is-a Arg1:E71 Arg2:E70	
+T70	Concept 964 970	tejido
+E72	Concept:T70 in-place:E73
+T71	Concept 971 979	cerebral
+E73	Concept:T71 
+T72	Action 983 991	extienda
+E74	Action:T72 Target:E72 in-place:E75
+T73	Concept 1001 1008;995 1000	espinal canal
+E75	Concept:T73 
+R19	causes Arg1:E71 Arg2:E74	
+T76	Action 1043 1048	dolor
+E78	Action:T76 Target:E79
+T77	Concept 1056 1070	articulaciones
+E79	Concept:T77 
+T74	Action 1077 1082	durar
+E76	Action:T74 Subject:E78 Target:E77
+A5	Uncertain E76
+T75	Concept 1083 1088	meses
+E77	Concept:T75 
+T78	Reference 1090 1095	Estos
+E80	Reference:T78 
+T79	Concept 1096 1104	gérmenes
+E81	Concept:T79 
+T80	Concept 1134 1144	naturaleza
+E82	Concept:T80 
+R20	is-a Arg1:E80 Arg2:E81	
+R21	part-of Arg1:E80 Arg2:E82	
+T81	Action 1158 1163	bajar
+E83	Action:T81 Target:E84
+T82	Concept 1167 1177	colesterol
+E84	Concept:T82 
+T83	Action 1191 1200	ejercicio
+E85	Action:T83 
+T84	Action 1203 1211	comiendo
+E86	Action:T84 Target:E87 Target2:E88
+T85	Concept 1217 1223	frutas
+E87	Concept:T85 
+T86	Concept 1226 1234	verduras
+E88	Concept:T86 
+A6	Emphasized E85
+A7	Emphasized E87
+A8	Emphasized E88
+R22	causes Arg1:E85 Arg2:E83	
+R23	causes Arg1:E86 Arg2:E83	
+T87	Concept 1252 1262;1263 1271	enfermedad cardiaca
+E89	Concept:T87 
+T88	Concept 1278 1285	asesina
+E90	Concept:T88 in-context:E91 in-place:E92
+T89	Concept 1286 1292;1293 1296	número uno
+E91	Concept:T89 
+T90	Concept 1304 1311;1312 1318	Estados Unidos
+E92	Concept:T90 
+T91	Reference 1249 1251	la
+E93	Reference:T91 
+R24	is-a Arg1:E93 Arg2:E89	
+*	same-as E93 E90
+T92	Reference 1342 1346	esta
+E94	Reference:T92 
+T93	Concept 1347 1357	enfermedad
+E95	Concept:T93 
+R25	is-a Arg1:E94 Arg2:E95	
+T94	Action 1364 1374	exposición
+E96	Action:T94 in-context:E97 Target:E99 Target2:E100 Target3:E102
+T95	Concept 1375 1385	prolongada
+E97	Concept:T95 
+T96	Concept 1388 1398	sustancias
+E98	Concept:T96 
+T97	Action 1403 1410	irritan
+E99	Action:T97 Subject:E98 Target:E101
+T98	Action 1413 1418	dañan
+E100	Action:T98 Subject:E98 Target:E101
+T99	Concept 1423 1431	pulmones
+E101	Concept:T99 
+T100	Concept 1448 1452	humo
+E102	Concept:T100 in-context:E103
+T101	Concept 1456 1466	cigarrillo
+E103	Concept:T101 
+R26	is-a Arg1:E102 Arg2:E99	
+R27	is-a Arg1:E102 Arg2:E100	
+R28	causes Arg1:E96 Arg2:E94	
+T102	Action 1323 1328	causa
+E104	Action:T102 Target:E94 in-context:E105
+T103	Concept 1329 1338	principal
+E105	Concept:T103 
+*	same-as E104 E96
+#1	AnnotatorNotes E104	Esto es algo extra
+T104	Concept 1472 1482;1483 1491	dentaduras postizas
+E106	Concept:T104 
+T105	Concept 1496 1503	dientes
+E107	Concept:T105 in-context:E108
+T106	Concept 1504 1510	falsos
+E108	Concept:T106 
+T107	Action 1529 1539	reemplazar
+E109	Action:T107 Target:E110 Subject:E106
+T108	Concept 1544 1551	dientes
+E110	Concept:T108 in-context:E111
+T109	Action 1559 1566	pierden
+E111	Action:T109 
+R29	is-a Arg1:E106 Arg2:E107	
+T110	Predicate 1572 1577	serie
+E112	Predicate:T110 Arg:E113
+T111	Concept 1581 1588	vacunas
+E113	Concept:T111 
+T112	Action 1595 1603	prevenir
+E114	Action:T112 Subject:E112 Target:E115
+A9	Uncertain E114
+T113	Concept 1607 1612	rabia
+E115	Concept:T113 in-place:E117
+T114	Concept 1620 1628	personas
+E116	Concept:T114 
+T115	Action 1629 1638	expuestas
+E117	Action:T115 Subject:E116 Target:E119
+T116	Concept 1642 1647	virus
+E118	Concept:T116 
+E119	Concept:T113 
+R30	is-a Arg1:E119 Arg2:E118	
+T117	Action 1669 1676	drenaje
+E120	Action:T117 Target:E121 in-place:E122
+T118	Concept 1680 1689	mucosidad
+E121	Concept:T118 
+T119	Predicate 1696 1701	parte
+E122	Predicate:T119 Domain:E124 Arg:E123
+T120	Concept 1702 1711	posterior
+E123	Concept:T120 
+T121	Concept 1718 1726	garganta
+E124	Concept:T121 
+T122	Concept 1736 1741;1742 1752	goteo retronasal
+E125	Concept:T122 
+*	same-as E120 E125
+T123	Concept 1758 1770	convulsiones
+E126	Concept:T123 
+T124	Concept 1825 1834	medicinas
+E127	Concept:T124 
+T125	Concept 1836 1842	fiebre
+E128	Concept:T125 in-context:E129
+T126	Concept 1843 1847	alta
+E129	Concept:T126 
+T127	Action 1849 1857	lesiones
+E130	Action:T127 Target:E131
+T128	Concept 1864 1870	cabeza
+E131	Concept:T128 
+T129	Predicate 1873 1880	ciertas
+E132	Predicate:T129 Domain:E133
+T130	Concept 1881 1893	enfermedades
+E133	Concept:T130 
+R31	causes Arg1:E127 Arg2:E126	
+R32	causes Arg1:E128 Arg2:E126	
+R33	causes Arg1:E130 Arg2:E126	
+R34	causes Arg1:E132 Arg2:E126	
+T131	Action 1954 1960	pausas
+E134	Action:T131 Target:E135 Target2:E136 in-context:E140
+T132	Action 1966 1973	caminar
+E135	Action:T132 
+T133	Action 1976 1983	estirar
+E136	Action:T133 Target:E137
+T134	Concept 1988 1995	piernas
+E137	Concept:T134 
+T135	Action 1998 2005	ingiera
+E138	Action:T135 Target:E139 in-context:E140
+T136	Concept 2012 2019	líquido
+E139	Concept:T136 
+A10	Emphasized E139
+T137	Action 1903 1911	realizar
+E140	Action:T137 Target:E141 Target2:E145
+T138	Action 1915 1920	viaje
+E141	Action:T138 in-context:E142 in-context2:E143
+T139	Concept 1921 1926	largo
+E142	Concept:T139 
+T140	Concept 1930 1939	automóvil
+E143	Concept:T140 
+T141	Concept 1942 1947	avión
+E144	Concept:T141 
+E145	Action:T138 in-context:E142 in-context2:E144
+T142	Concept 2036 2047	medicamento
+E146	Concept:T142 
+T143	Concept 2056 2064	naloxona
+E147	Concept:T143 
+T144	Action 2075 2083	revertir
+E148	Action:T144 Target:E149 Subject:E147
+A11	Uncertain E148
+T145	Predicate 2088 2095	efectos
+E149	Predicate:T145 Arg:E150
+T146	Concept 2103 2113	sobredosis
+E150	Concept:T146 in-context:E151
+T147	Concept 2117 2125	opioides
+E151	Concept:T147 
+T148	Action 2128 2136	prevenir
+E152	Action:T148 Target:E153 in-context:E154 Subject:E147
+A12	Uncertain E152
+T149	Concept 2140 2146	muerte
+E153	Concept:T149 
+T150	Action 2153 2159	aplica
+E154	Action:T150 in-context:E155
+T151	Concept 2160 2173	oportunamente
+E155	Concept:T151 
+R35	is-a Arg1:E147 Arg2:E146	
+T152	Concept 2179 2190;2191 2201	conmociones cerebrales
+E156	Concept:T152 
+T153	Action 2223 2229	lesión
+E157	Action:T153 in-context:E158
+T154	Concept 2230 2239	deportiva
+E158	Concept:T154 
+T155	Concept 2214 2219	común
+E159	Concept:T155 
+T156	Predicate 2209 2213	tipo
+E160	Predicate:T156 Domain:E157
+R36	is-a Arg1:E156 Arg2:E160	
+R37	has-property Arg1:E156 Arg2:E159	
+E161	Action:T157 in-place:E162
+T158	Concept 2272 2279	granjas
+E162	Concept:T158 
+T159	Predicate 2294 2297	más
+E163	Predicate:T159 Domain:E164 Arg:E165 in-place:E166
+T160	Concept 2257 2264	trabajo
+E164	Concept:T160 
+T157	Action 2257 2264	trabajo
+T161	Concept 2298 2308	peligrosos
+E165	Concept:T161 
+T162	Concept 2312 2319;2320 2326	Estados Unidos
+E166	Concept:T162 
+R38	is-a Arg1:E161 Arg2:E163	
+T163	Concept 2332 2340	personas
+E167	Concept:T163 in-context:E168
+T164	Concept 2345 2353	VIH/SIDA
+E168	Concept:T164 
+T166	Action 2390 2396	sufrir
+E170	Action:T166 Subject:E167 Target:E171
+T167	Concept 2397 2411	complicaciones
+E171	Concept:T167 in-context:E172
+T168	Concept 2415 2427	enfermedades
+E172	Concept:T168 in-context:E173
+T169	Concept 2428 2435	comunes
+E173	Concept:T169 
+T170	Concept 2445 2450	gripe
+E174	Concept:T170 
+R39	is-a Arg1:E174 Arg2:E172	
+T165	Concept 2373 2386	posibilidades
+E169	Concept:T165 
+T171	Predicate 2369 2372	más
+E175	Predicate:T171 Arg:E169
+R40	has-property Arg1:E170 Arg2:E175	
+T172	Concept 2459 2467	gérmenes
+E176	Concept:T172 
+T173	Action 2468 2478	permanecen
+E177	Action:T173 Subject:E176 Target:E178 Target2:E179
+T174	Concept 2485 2490	nariz
+E178	Concept:T174 in-place:E180
+T175	Concept 2499 2507	garganta
+E179	Concept:T175 in-place:E180
+T176	Concept 2512 2516	niño
+E180	Concept:T176 
+T177	Action 2538 2545	enferme
+E181	Action:T177 in-context:E182 Target:E180
+A13	Negated E181
+T178	Concept 2518 2531	probablemente
+E182	Concept:T178 
+R41	entails Arg1:E177 Arg2:E181	
+T179	Predicate 2550 2556	examen
+E183	Predicate:T179 Arg:E184
+T180	Concept 2560 2568;2569 2576;2577 2581	densidad mineral ósea
+E184	Concept:T180 
+T181	Concept 2588 2593	mejor
+E185	Concept:T181 
+T182	Concept 2594 2600	manera
+E186	Concept:T182 
+T183	Action 2604 2613	controlar
+E187	Action:T183 Target:E188 Subject:E186 in-context:E185
+T184	Concept 2617 2622	salud
+E188	Concept:T184 in-context:E189
+T185	Concept 2630 2636	huesos
+E189	Concept:T185 
+*	same-as E183 E187
+T186	Concept 2683 2689	azúcar
+E190	Concept:T186 in-place:E192
+T187	Action 2690 2694	baja
+E191	Action:T187 Target:E190 in-place:E193
+T188	Concept 2701 2707	sangre
+E192	Concept:T188 
+T189	Concept 2645 2653	personas
+E193	Concept:T189 in-context:E194
+T190	Concept 2657 2667	diabéticas
+E194	Concept:T190 
+A14	Negated E194
+T191	Concept 2717 2729	medicamentos
+E195	Concept:T191 
+T192	Concept 2732 2744	enfermedades
+E196	Concept:T192 
+T193	Predicate 2746 2755	problemas
+E197	Predicate:T193 Arg:E198
+T194	Concept 2764 2772	hormonas
+E198	Concept:T194 
+T195	Concept 2775 2782	enzimas
+E199	Concept:T195 
+T196	Concept 2785 2792	tumores
+E200	Concept:T196 
+E201	Predicate:T193 Arg:E199
+R42	causes Arg1:E195 Arg2:E191	
+R43	causes Arg1:E196 Arg2:E191	
+R44	causes Arg1:E197 Arg2:E191	
+R45	causes Arg1:E201 Arg2:E191	
+R46	causes Arg1:E200 Arg2:E191	
+#2	AnnotatorNotes E191	Ponerlo como in-context fue mi primera idea, pero me gustó más esta
+T197	Concept 2797 2805	estómago
+E202	Concept:T197 
+T198	Concept 2812 2818	órgano
+E203	Concept:T198 
+T199	Action 2826 2835	encuentra
+E204	Action:T199 Target:E202 in-place:E206
+T200	Concept 2845 2852	esófago
+E205	Concept:T200 
+T201	Predicate 2836 2841	entre
+E206	Predicate:T201 Arg:E205 Arg2:E207
+T202	Concept 2858 2867;2868 2875	intestino delgado
+E207	Concept:T202 
+R47	is-a Arg1:E202 Arg2:E203	
+R48	part-of Arg1:E202 Arg2:E206	
+#3	AnnotatorNotes R48	Esto es extra
+T203	Action 2883 2889	conoce
+E208	Action:T203 Target:E209
+T204	Action 2893 2898	causa
+E209	Action:T204 Target:E210
+A15	Negated E208
+T205	Concept 2905 2913;2914 2924	artritis reumatoide
+E210	Concept:T205 
+T206	Concept 2934 2945	operaciones
+E211	Concept:T206 
+T207	Concept 2955 2962;2963 2965;2966 2973	cirugía de corazón
+E212	Concept:T207 
+T208	Action 2982 2990	salvarle
+E213	Action:T208 Subject:E212 Target:E214 Subject2:E215
+T209	Concept 2994 2998	vida
+E214	Concept:T209 
+A16	Uncertain E213
+T210	Predicate 2926 2933	Algunas
+E215	Predicate:T210 Domain:E211
+T211	Predicate 3003 3010	mayoría
+E216	Predicate:T211 Domain:E217
+T212	Concept 3018 3027	arritmias
+E217	Concept:T212 
+T214	Predicate 3048 3057	problemas
+E219	Predicate:T214 Arg:E220
+T215	Concept 3064 3071;3072 3081	sistema eléctrico
+E220	Concept:T215 in-context:E221
+T216	Concept 3086 3093	corazón
+E221	Concept:T216 
+R49	causes Arg1:E219 Arg2:E216	
+R50	entails Arg1:E216 Arg2:E219	
+T213	Concept 3099 3107	arterias
+E218	Concept:T213 
+T217	Action 3108 3114	llevan
+E222	Action:T217 Subject:E218 Target:E223 in-place:E224 in-place2:E226
+T218	Concept 3115 3121	sangre
+E223	Concept:T218 
+T219	Predicate 3122 3127	desde
+E224	Predicate:T219 Arg:E225
+T220	Concept 3131 3138	corazón
+E225	Concept:T220 
+T221	Predicate 3139 3144	hasta
+E226	Predicate:T221 Arg:E227
+T222	Predicate 3145 3150	otros
+E227	Predicate:T222 Domain:E228 Arg:E225
+T223	Concept 3151 3158	órganos
+E228	Concept:T223 
+T224	Concept 3165 3170	venas
+E229	Concept:T224 
+T225	Action 3171 3177	llevan
+E230	Action:T225 Subject:E229 Target:E231 in-place:E233
+T226	Concept 3181 3187	sangre
+E231	Concept:T226 
+T227	Concept 3200 3207	corazón
+E232	Concept:T227 
+T228	Predicate 3197 3199	al
+E233	Predicate:T228 Arg:E232
+T229	Concept 3212 3221	organismo
+E234	Concept:T229 
+T230	Action 3222 3225	usa
+E235	Action:T230 Subject:E234 Target:E236 Target2:E237 Target3:E239
+T231	Concept 3230 3239	minerales
+E236	Concept:T231 
+T232	Concept 3252 3261	funciones
+E237	Concept:T232 in-context:E238
+T233	Concept 3262 3271	distintas
+E238	Concept:T233 
+A17	Emphasized E237
+T234	Action 3287 3295	mantener
+E239	Action:T234 Target:E243
+T235	Concept 3300 3306	huesos
+E240	Concept:T235 
+T236	Concept 3308 3315	corazón
+E241	Concept:T236 
+T237	Concept 3318 3325	cerebro
+E242	Concept:T237 
+T238	Action 3326 3337	funcionando
+E243	Action:T238 Target:E240 Target2:E241 Target3:E242 in-context:E244
+T239	Concept 3338 3342	bien
+E244	Concept:T239 
+E245	Concept:T232 in-context:E234
+R51	is-a Arg1:E239 Arg2:E245	
+T240	Reference 3344 3349	Estas
+E246	Reference:T240 
+T241	Concept 3350 3356	drogas
+E247	Concept:T241 
+T242	Action 3368 3376	abusadas
+E248	Action:T242 Subject:E249 Target:E246 in-place:E252 in-place2:E255 in-place3:E256 in-place4:E257
+T243	Concept 3381 3388	adultos
+E249	Concept:T243 in-context:E250
+T244	Concept 3389 3396	jóvenes
+E250	Concept:T244 
+R52	is-a Arg1:E246 Arg2:E247	
+T245	Concept 3400 3407;3408 3417	fiestas bailables
+E251	Concept:T245 
+T246	Action 3422 3427	duran
+E252	Action:T246 Subject:E251 Target:E253
+T247	Predicate 3428 3432	toda
+E253	Predicate:T247 Domain:E254
+T248	Concept 3436 3441	noche
+E254	Concept:T248 
+T249	Concept 3443 3449;3450 3459	clubes nocturnos
+E255	Concept:T249 
+T250	Concept 3461 3467	discos
+E256	Concept:T250 
+T251	Concept 3470 3475	bares
+E257	Concept:T251 
+T252	Predicate 3480 3491	combinación
+E258	Predicate:T252 Arg:E259 Arg2:E261
+T253	Reference 3495 3499	este
+E259	Reference:T253 
+T254	Concept 3500 3511	medicamento
+E260	Concept:T254 
+T255	Concept 3519 3527	varicela
+E261	Concept:T255 
+T256	Concept 3544 3552;3553 3555;3556 3560	síndrome de Reye
+E262	Concept:T256 
+R53	is-a Arg1:E259 Arg2:E260	
+R54	causes Arg1:E258 Arg2:E262	
+T257	Reference 3562 3567	Estos
+E263	Reference:T257 
+T258	Concept 3576 3584	músculos
+E264	Concept:T258 in-context:E265
+T259	Action 3601 3610	controlar
+E265	Action:T259 
+*	same-as E263 E264
+T260	Action 3635 3642	cocinar
+E266	Action:T260 
+T261	Concept 3649 3658	principal
+E267	Concept:T261 
+T262	Action 3659 3664	causa
+E268	Action:T262 in-context:E267 Target:E269 in-place:E271
+T263	Concept 3672 3681	incendios
+E269	Concept:T263 in-context:E270
+T264	Concept 3682 3692	domésticos
+E270	Concept:T264 
+T265	Concept 3619 3626;3627 3633	Estados Unidos
+E271	Concept:T265 
+*	same-as E267 E266
+T266	Concept 3697 3703;3704 3712;3713 3723	lesión cerebral traumática
+E272	Concept:T266 
+T267	Concept 3741 3746	golpe
+E273	Concept:T267 in-place:E277
+T268	Concept 3748 3755	impacto
+E274	Concept:T268 in-place:E277
+T269	Concept 3757 3765	sacudida
+E275	Concept:T269 in-place:E277
+T270	Concept 3773 3779	lesión
+E276	Concept:T270 in-place:E277
+T271	Concept 3786 3792	cabeza
+E277	Concept:T271 
+T272	Action 3799 3803	daño
+E278	Action:T272 Subject:E273 Target:E279
+T273	Concept 3807 3814	cerebro
+E279	Concept:T273 
+E280	Action:T272 Target:E279 Subject:E274
+E281	Action:T272 Subject:E275 Target:E279
+E282	Action:T272 Subject:E276 Target:E279
+R55	is-a Arg1:E273 Arg2:E276	
+R56	is-a Arg1:E274 Arg2:E276	
+R57	is-a Arg1:E275 Arg2:E276	
+R58	causes Arg1:E278 Arg2:E272	
+R59	causes Arg1:E280 Arg2:E272	
+R60	causes Arg1:E281 Arg2:E272	
+R61	causes Arg1:E282 Arg2:E272	
+T274	Reference 3826 3831	estos
+E283	Reference:T274 
+T275	Action 3833 3839	graban
+E284	Action:T275 Target:E285 Subject:E290 in-context:E287
+T276	Predicate 3843 3848	ritmo
+E285	Predicate:T276 Arg:E286
+T277	Concept 3853 3860	corazón
+E286	Concept:T277 
+T278	Action 3868 3875	detecta
+E287	Action:T278 Target:E288
+T279	Action 3888 3896	latiendo
+E288	Action:T279 Target:E286 in-context:E289
+T280	Concept 3897 3908	normalmente
+E289	Concept:T280 
+A18	Negated E288
+T281	Predicate 3816 3822	Muchos
+E290	Predicate:T281 Domain:E283
+T282	Concept 3921 3927	vacuna
+E291	Concept:T282 
+T283	Action 3933 3941	prevenir
+E292	Action:T283 Subject:E291 Target:E293 Target2:E294 Target3:E296
+T284	Concept 3945 3951	ántrax
+E293	Concept:T284 
+T285	Concept 3962 3970	personas
+E294	Concept:T285 in-context:E295
+T286	Concept 3977 3985;3986 3993	servicio militar
+E295	Concept:T286 
+T287	Predicate 4002 4008	grupos
+E296	Predicate:T287 Arg:E297
+T288	Concept 4012 4016;4017 4023	alto riesgo
+E297	Concept:T288 in-context:E293
+R62	is-a Arg1:E294 Arg2:E296	
