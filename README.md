@@ -20,7 +20,7 @@
 | 11 | ✔ | ✔ | ✔ |   |   |  Marcos    |
 | 12 | ✔ |   |   |   |   |  Rocio     |
 | 13 | ✔ |   |   |   |   |  Jorge     |
-| 14 | ✔ | ✔ |   |   |   |  Loraine   |
+| 14 | ✔ | ✔ | ✔ |   |   |  Loraine   |
 | 15 | ✔ | ✔ |   |   |   |  Dayani    |
 | 16 | ✔ |   |   |   |   |  Loraine   |
 | 17 | ✔ |   |   |   |   |  Dayani    |
