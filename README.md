@@ -22,8 +22,8 @@
 | 13 | ✔ | ✔ |   |   |   |  Jorge     |
 | 14 | ✔ | ✔ |   |   |   |  Loraine   |
 | 15 | ✔ | ✔ |   |   |   |  Dayani    |
-| 16 | ✔ |   |   |   |   |  Loraine   |
-| 17 | ✔ |   |   |   |   |  Dayani    |
+| 16 | ✔ | ✔ |   |   |   |  Loraine   |
+| 17 | ✔ | ✔ |   |   |   |  Dayani    |
 | 18 | ✔ |   |   |   |   |  Rocio     |
 | 19 | ✔ |   |   |   |   |  Carlos    |
 | 20 | ✔ |   |   |   |   |  Tony      |
