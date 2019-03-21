@@ -1,0 +1,603 @@
+T1	Concept 62 69;70 76	Estados Unidos
+E1	Concept:T1 
+T2	Concept 105 113	personas
+E2	Concept:T2 
+T4	Concept 124 132	lesiones
+E4	Concept:T4 
+T3	Action 114 120	sufren
+E3	Action:T3 Target:E4 in-place:E1 Subject:E7 in-time:E6
+T5	Concept 88 92	años
+E5	Concept:T5 
+T6	Predicate 78 83	todos
+E6	Predicate:T6 Arg:E5
+T7	Predicate 93 101	millones
+E7	Predicate:T7 Arg:E2
+T8	Concept 141 149;150 154;155 156	diabetes tipo 2
+E8	Concept:T8 in-context:E14
+T9	Concept 175 181	cuerpo
+E9	Concept:T9 
+T10	Action 185 192	produce
+E10	Action:T10 Subject:E9 Target:E12 in-context:E8
+A1	Negated E10
+T11	Action 198 201	usa
+E11	Action:T11 in-context:E13 Target:E12 Subject:E9 in-context2:E8
+A2	Negated E11
+T12	Concept 210 218	insulina
+E12	Concept:T12 
+T13	Concept 202 206	bien
+E13	Concept:T13 
+T14	Concept 165 170	común
+E14	Concept:T14 
+A3	Emphasized E14
+T15	Predicate 229 234	tipos
+E15	Predicate:T15 Domain:E16 Arg:E17
+T16	Concept 238 244	piojos
+E16	Concept:T16 
+T17	Concept 224 228	tres
+E17	Concept:T17 
+T18	Action 249 254	viven
+E18	Action:T18 in-place:E19 Subject:E15
+T19	Concept 262 269	humanos
+E19	Concept:T19 
+T20	Concept 392 399	corazón
+E20	Concept:T20 
+T21	Concept 405 410;411 421	vasos sanguíneos
+E21	Concept:T21 
+T22	Concept 427 434	riñones
+E22	Concept:T22 
+T23	Concept 439 445	hígado
+E23	Concept:T23 
+T24	Concept 454 461	órganos
+E24	Concept:T24 
+T25	Concept 345 358	profesionales
+E25	Concept:T25 in-context:E26
+T26	Concept 365 370	salud
+E26	Concept:T26 
+T27	Action 375 379	usan
+E27	Action:T27 Subject:E25 in-context:E28 Target:E260
+T28	Action 385 388	ver
+E28	Action:T28 Target:E20 Target2:E21 Target3:E22 Target5:E23 Target4:E261
+T29	Concept 631 636;637 645	medio ambiente
+E29	Concept:T29 
+T30	Action 601 610	encontrar
+E30	Action:T30 in-place:E31
+A4	Uncertain E30
+T31	Predicate 620 626	partes
+E31	Predicate:T31 Arg:E32 Domain:E29
+T32	Concept 614 619	todas
+E32	Concept:T32 
+T33	Concept 650 654	crup
+E33	Concept:T33 
+T34	Concept 662 673	inflamación
+E34	Concept:T34 in-context:E35 in-context2:E37
+R1	is-a Arg1:E33 Arg2:E34	
+T35	Concept 681 688;689 696	cuerdas vocales
+E35	Concept:T35 
+T36	Concept 698 705	laringe
+E36	Concept:T36 
+*	same-as E35 E36
+T37	Concept 712 719	tráquea
+E37	Concept:T37 
+T38	Concept 900 905	niños
+E38	Concept:T38 
+T39	Concept 913 920;921 927	Estados Unidos
+E39	Concept:T39 
+T40	Predicate 890 895	todos
+E40	Predicate:T40 Domain:E38 in-place:E39
+A5	Uncertain E40
+T41	Action 931 938	padecen
+E41	Action:T41 Target:E42 Subject:E40 in-time:E43
+T42	Reference 928 930	la
+E42	Reference:T42 
+T43	Concept 948 951;952 955	una vez
+E43	Concept:T43 
+T44	Concept 975 984	melanomas
+E44	Concept:T44 
+T45	Concept 995 999	área
+E45	Concept:T45 
+T46	Concept 1000 1005	negra
+E46	Concept:T46 
+T47	Concept 1008 1013	negra
+E47	Concept:T47 
+T48	Concept 1014 1021	azulada
+E48	Concept:T48 
+R2	has-property Arg1:E47 Arg2:E48	
+R3	has-property Arg1:E45 Arg2:E46	
+T49	Predicate 960 967	mayoría
+E49	Predicate:T49 Domain:E44
+R4	has-property Arg1:E49 Arg2:E45	
+R5	has-property Arg1:E49 Arg2:E47	
+T50	Reference 1023 1028	Éstas
+E50	Reference:T50 
+T51	Concept 1046 1054	ampollas
+E51	Concept:T51 
+T52	Concept 1066 1073	picazón
+E52	Concept:T52 
+T53	Concept 1076 1081	dolor
+E53	Concept:T53 
+T54	Action 1032 1042	convierten
+E54	Action:T54 Subject:E50 Target:E51
+R6	causes Arg1:E51 Arg2:E52	
+R7	causes Arg1:E51 Arg2:E53	
+T55	Action 1102 1107	curan
+E55	Action:T55 in-time:E56
+T56	Concept 1084 1098	posteriormente
+E56	Concept:T56 
+R8	entails Arg1:E55 Arg2:E54	
+T57	Concept 1113 1123	sustancias
+E57	Concept:T57 in-context:E58
+T58	Concept 1124 1131	tóxicas
+E58	Concept:T58 in-place:E59
+T59	Concept 1141 1150	productos
+E59	Concept:T59 
+T60	Reference 1135 1140	estos
+E60	Reference:T60 
+*	same-as E60 E59
+T61	Action 1158 1164	causar
+E61	Action:T61 Target:E62 in-context:E63 in-context2:E64 in-context3:E65 Subject:E57
+A6	Uncertain E61
+T62	Concept 1165 1169	daño
+E62	Concept:T62 
+T63	Action 1176 1183	inhalan
+E63	Action:T63 
+T64	Action 1188 1196	ingieren
+E64	Action:T64 
+T65	Action 1199 1207	absorben
+E65	Action:T65 in-place:E66
+T66	Concept 1223 1227	piel
+E66	Concept:T66 
+T67	Concept 1388 1396	personas
+E67	Concept:T67 
+T68	Predicate 1373 1380	mayoría
+E68	Predicate:T68 Arg:E67
+T70	Action 1404 1410	padece
+E70	Action:T70 Subject:E68 Target:E244
+T69	Action 1414 1423	trabajado
+E69	Action:T69 in-place:E73
+T71	Action 1448 1457	inhalaron
+E71	Action:T71 Target:E72
+A7	Uncertain E71
+T72	Concept 1458 1468;1469 1471;1472 1479	partículas de asbesto
+E72	Concept:T72 
+T73	Concept 1427 1434	lugares
+E73	Concept:T73 in-context:E71
+R9	entails Arg1:E70 Arg2:E69	
+T74	Concept 2279 2287;2288 2295	delirium tremens
+E74	Concept:T74 
+T75	Concept 2316 2324;2325 2327;2328 2339;2340 2350	síndrome de abstinencia alcohólica
+E75	Concept:T75 in-context:E77
+R10	is-a Arg1:E74 Arg2:E75	
+T77	Concept 2307 2312	grave
+E77	Concept:T77 
+T79	Concept 2475 2483;2484 2486;2487 2493	análisis de sangre
+E79	Concept:T79 
+T80	Concept 2475 2483;2484 2486;2496 2501	análisis de orina
+E80	Concept:T80 
+T81	Concept 2546 2556;2557 2562	enfermedad renal
+E81	Concept:T81 
+T82	Concept 2534 2539	usted
+E82	Concept:T82 
+T76	Action 2525 2530	saber
+E76	Action:T76 Target:E78
+T78	Action 2540 2545	tiene
+E78	Action:T78 Subject:E82 Target:E81
+T83	Concept 2568 2580	antibióticos
+E83	Concept:T83 
+T84	Action 2584 2593	funcionan
+E84	Action:T84 Subject:E83 in-context:E85
+A8	Negated E84
+T85	Concept 2603 2614;2615 2622	infecciones virales
+E85	Concept:T85 
+T86	Concept 2892 2901	Salmonela
+E86	Concept:T86 
+T88	Predicate 2921 2926	grupo
+E88	Predicate:T88 Domain:E89
+T89	Concept 2930 2939	bacterias
+E89	Concept:T89 
+T90	Concept 3166 3174	animales
+E90	Concept:T90 in-context:E91
+T91	Concept 3175 3183	salvajes
+E91	Concept:T91 
+T92	Concept 3188 3198;3199 3201;3202 3207	portadores de rabia
+E92	Concept:T92 
+R12	is-a Arg1:E90 Arg2:E92	
+A9	Diminished E90
+T93	Concept 3360 3369	depresión
+E93	Concept:T93 
+T94	Concept 3377 3387;3388 3395	enfermedad clínica
+E94	Concept:T94 in-context:E95
+T95	Concept 3396 3402	severa
+E95	Concept:T95 
+R13	is-a Arg1:E93 Arg2:E94	
+T96	Concept 3407 3416	psoriasis
+E96	Concept:T96 
+T97	Concept 3424 3434;3435 3437;3441 3445	enfermedad de piel
+E97	Concept:T97 
+R14	is-a Arg1:E96 Arg2:E97	
+T98	Concept 3551 3557	cuerpo
+E98	Concept:T98 
+T99	Action 3558 3566	necesita
+E99	Action:T99 Subject:E98 Target:E100
+T100	Predicate 3567 3571	algo
+E100	Predicate:T100 Domain:E101
+T101	Concept 3575 3585	colesterol
+E101	Concept:T101 
+T102	Action 3591 3600	funcionar
+E102	Action:T102 
+T103	Concept 3601 3605	bien
+E103	Concept:T103 
+R15	has-property Arg1:E102 Arg2:E103	
+R16	entails Arg1:E102 Arg2:E99	
+T104	Concept 3212 3222;3223 3225;3226 3233	enfermedad de Addison
+E104	Concept:T104 
+T106	Concept 3252 3261;3262 3275	glándulas suprarrenales
+E106	Concept:T106 
+T107	Action 3279 3287	producen
+E107	Action:T107 Target:E108 Subject:E106
+A10	Negated E107
+T108	Concept 3300 3308	hormonas
+E108	Concept:T108 in-context:E109
+T109	Concept 3288 3299	suficientes
+E109	Concept:T109 
+R17	entails Arg1:E104 Arg2:E107	
+T105	Concept 2952 2966	rehabilitación
+E105	Concept:T105 in-context:E110
+T110	Concept 2967 2975	pulmonar
+E110	Concept:T110 
+T111	Concept 2977 2982	usted
+E111	Concept:T111 
+T112	Reference 3310 3315	Estos
+E112	Reference:T112 
+T113	Action 3323 3330	afectar
+E113	Action:T113 Subject:E112 Target:E114 Target2:E115
+A11	Uncertain E113
+T114	Predicate 3333 3336	uno
+E114	Predicate:T114 Domain:E116
+T115	Predicate 3341 3347	muchos
+E115	Predicate:T115 Domain:E116
+T116	Concept 3348 3355	nervios
+E116	Concept:T116 
+T117	Concept 3104 3113	hematomas
+E117	Concept:T117 in-context:E118
+T118	Concept 3118 3124	motivo
+E118	Concept:T118 
+A12	Negated E118
+T119	Action 3137 3142	haber
+E119	Action:T119 Target:E120
+A13	Uncertain E119
+T120	Concept 3147 3156	infección
+E120	Concept:T120 
+T121	Action 3098 3103	tiene
+E121	Action:T121 Target:E117
+A14	Uncertain E121
+T122	Action 3060 3068	Consulte
+E122	Action:T122 Target:E123 in-context:E121 in-context2:E119
+T123	Concept 3074 3080	médico
+E123	Concept:T123 
+T124	Concept 11 20	productos
+E124	Concept:T124 in-context:E253
+T125	Action 38 47	contienen
+E125	Action:T125 Target:E126 Subject:E127
+T126	Concept 48 53	látex
+E126	Concept:T126 
+T127	Predicate 0 7	Cientos
+E127	Predicate:T127 Arg:E124
+T128	Concept 274 280;281 283;287 293	piojos de cabeza
+E128	Concept:T128 
+T129	Concept 295 301;302 305;306 312	piojos del cuerpo
+E129	Concept:T129 
+T130	Concept 315 322	ladilla
+E130	Concept:T130 
+T131	Concept 324 330;331 338	piojos púbicos
+E131	Concept:T131 
+*	same-as E130 E131
+T132	Predicate 1233 1242	problemas
+E132	Predicate:T132 Arg:E133
+T133	Concept 1250 1257;1258 1270	sistema nasolagrimal
+E133	Concept:T133 
+T134	Concept 1348 1357;1358 1368	conductos lagrimales
+E134	Concept:T134 
+T135	Predicate 1330 1339	problemas
+E135	Predicate:T135 Arg:E134
+R18	is-a Arg1:E135 Arg2:E132	
+T136	Predicate 2712 2717	nivel
+E136	Predicate:T136 Arg:E137 Arg2:E139
+T137	Concept 2721 2731;2732 2737	colesterol bueno
+E137	Concept:T137 
+T138	Concept 2739 2742	HDL
+E138	Concept:T138 
+*	same-as E137 E138
+T139	Concept 2766 2776;2777 2781	colesterol malo
+E139	Concept:T139 
+T140	Concept 2783 2786	LDL
+E140	Concept:T140 
+*	same-as E139 E140
+T141	Action 2755 2762	reducir
+E141	Action:T141 Target:E136
+T142	Action 2702 2708	elevar
+E142	Action:T142 Target:E136
+T143	Predicate 2624 2631	Algunos
+E143	Predicate:T143 Domain:E144
+T144	Concept 2632 2644;2645 2649;2653 2663	medicamentos para colesterol
+E144	Concept:T144 
+R19	causes Arg1:E143 Arg2:E142	
+R20	causes Arg1:E143 Arg2:E141	
+T145	Concept 2684 2693	estatinas
+E145	Concept:T145 
+A15	Uncertain E145
+R21	is-a Arg1:E145 Arg2:E144	
+T146	Concept 467 472	tubos
+E146	Concept:T146 in-place:E154
+T147	Action 507 514	filtran
+E147	Action:T147 Target:E149 Subject:E146
+T148	Action 517 524	limpian
+E148	Action:T148 Target:E149
+T149	Concept 528 534	sangre
+E149	Concept:T149 
+T150	Action 535 545	eliminando
+E150	Action:T150 Target:E151
+T151	Concept 550 559;560 562;563 570	productos de desecho
+E151	Concept:T151 
+T152	Action 573 584	produciendo
+E152	Action:T152 Target:E153
+T153	Concept 585 590	orina
+E153	Concept:T153 
+R22	causes Arg1:E147 Arg2:E150	
+R23	causes Arg1:E147 Arg2:E152	
+R24	causes Arg1:E148 Arg2:E150	
+R25	causes Arg1:E148 Arg2:E152	
+T154	Predicate 491 497	dentro
+E154	Predicate:T154 Arg:E155
+T155	Reference 501 506	ellos
+E155	Reference:T155 
+T156	Concept 1487 1495	tiroides
+E156	Concept:T156 in-context:E157
+T157	Concept 1511 1517	activa
+E157	Concept:T157 
+A16	Emphasized E157
+R26	causes Arg1:E156 Arg2:E250	
+T159	Concept 1587 1593	hongos
+E159	Concept:T159 
+T160	Action 1594 1599	viven
+E160	Action:T160 in-place:E161 Subject:E159
+T161	Concept 1606 1611	suelo
+E161	Concept:T161 in-context:E162
+T162	Concept 1619 1624;1625 1631	zonas áridas
+E162	Concept:T162 
+T163	Concept 1640 1648;1649 1651;1656 1661	suroeste de EE.UU
+E163	Concept:T163 
+R27	is-a Arg1:E163 Arg2:E162	
+R28	is-a Arg1:E128 Arg2:E15	
+R29	is-a Arg1:E129 Arg2:E15	
+R30	is-a Arg1:E130 Arg2:E15	
+T164	Concept 1667 1674;1675 1685	tumores cerebrales
+E164	Concept:T164 
+T165	Action 1702 1711	presionar
+E165	Action:T165 Target:E168 Subject:E164
+A18	Uncertain E165
+T166	Action 1730 1737	afectar
+E166	Action:T166 Target:E167 Subject:E164
+T167	Concept 1741 1748;1749 1757	función cerebral
+E167	Concept:T167 
+A19	Uncertain E166
+T168	Predicate 1712 1719	algunos
+E168	Predicate:T168 Domain:E169
+T169	Concept 1720 1727	nervios
+E169	Concept:T169 
+T170	Reference 1825 1830	Otros
+E170	Reference:T170 
+T171	Concept 1840 1848;1849 1851;1852 1866	síndrome de Guillain-Barre
+E171	Concept:T171 
+T172	Action 1868 1875	ocurren
+E172	Action:T172 in-time:E175 Subject:E170
+T173	Concept 1891 1900	infección
+E173	Concept:T173 in-context:E174
+T174	Concept 1901 1906	viral
+E174	Concept:T174 
+T175	Predicate 1876 1883	después
+E175	Predicate:T175 Arg:E173
+R31	is-a Arg1:E171 Arg2:E170	
+T176	Concept 1959 1969;1970 1972;1973 1980	enfermedad de Hodgkin
+E176	Concept:T176 
+T177	Predicate 1987 1991	tipo
+E177	Predicate:T177 Domain:E178
+T178	Concept 1995 2002	linfoma
+E178	Concept:T178 
+T179	Concept 2007 2013	cáncer
+E179	Concept:T179 in-context:E180
+T180	Predicate 2021 2026	parte
+E180	Predicate:T180 Domain:E181 in-context:E182
+T181	Concept 2031 2038;2039 2050	sistema inmunitario
+E181	Concept:T181 
+T182	Concept 2059 2066;2067 2076	sistema linfático
+E182	Concept:T182 
+R32	is-a Arg1:E176 Arg2:E177	
+T183	Concept 2793 2800	humanos
+E183	Concept:T183 
+T184	Action 2808 2816	contraer
+E184	Action:T184 Subject:E183 Target:E185
+A20	Uncertain E184
+T185	Concept 2817 2823	ántrax
+E185	Concept:T185 
+T186	Concept 2850 2858	animales
+E186	Concept:T186 in-context:E190
+T187	Concept 2860 2864	lana
+E187	Concept:T187 in-context:E190
+T188	Concept 2866 2871	carne
+E188	Concept:T188 in-context:E190
+T189	Concept 2874 2879	cuero
+E189	Concept:T189 in-context:E190
+T190	Concept 2880 2890	infectados
+E190	Concept:T190 
+T191	Concept 3456 3463	picazón
+E191	Concept:T191 
+T192	Concept 3466 3473	parches
+E192	Concept:T192 in-place:E198
+T193	Concept 3474 3483	dolorosos
+E193	Concept:T193 
+R34	causes Arg1:E96 Arg2:E191	
+R35	causes Arg1:E96 Arg2:E192	
+T194	Action 3502 3511	engrosado
+E194	Action:T194 Subject:E198
+T195	Action 3514 3524	enrojecido
+E195	Action:T195 Subject:E198 in-context:E196
+T196	Concept 3529 3536	escamas
+E196	Concept:T196 
+T197	Concept 3537 3546	plateadas
+E197	Concept:T197 
+R33	has-property Arg1:E196 Arg2:E197	
+T198	Concept 3487 3491	piel
+E198	Concept:T198 
+R36	has-property Arg1:E192 Arg2:E193	
+T199	Action 2986 2995	entrenará
+E199	Action:T199 in-context:E203 Subject:E111 in-time:E204 in-context2:E201
+T200	Concept 3007 3016;3017 3023	ejercicio físico
+E200	Concept:T200 
+T201	Action 3026 3034	aprender
+E201	Action:T201 Target:E202
+T202	Concept 3035 3043;3044 3046;3047 3058	técnicas de respiración
+E202	Concept:T202 
+T203	Action 3001 3006	hacer
+E203	Action:T203 Target:E200
+T204	Predicate 2941 2948	Durante
+E204	Predicate:T204 Arg:E105
+R11	is-a Arg1:E86 Arg2:E88	
+T205	Concept 2418 2426	embarazo
+E205	Concept:T205 
+T206	Predicate 2446 2453	últimos
+E206	Predicate:T206 Arg:E207 Arg2:E208
+T207	Concept 2454 2459	meses
+E207	Concept:T207 
+T208	Concept 2462 2469	semanas
+E208	Concept:T208 
+T210	Predicate 2081 2088	mayoría
+E210	Predicate:T210 Domain:E211
+T211	Concept 2096 2104	personas
+E211	Concept:T211 
+T212	Concept 2124 2129	savia
+E212	Concept:T212 in-context:E213
+T213	Concept 2130 2138	aceitosa
+E213	Concept:T213 
+T214	Reference 2157 2167	Cualquiera
+E214	Reference:T214 
+T215	Action 2174 2179	tener
+E215	Action:T215 Subject:E214 Target:E216
+A22	Uncertain E215
+T216	Concept 2180 2183;2184 2190	tos ferina
+E216	Concept:T216 
+T217	Predicate 2204 2209	común
+E217	Predicate:T217 in-place:E218 in-place2:E219 Domain:E221
+T218	Concept 2220 2225	niños
+E218	Concept:T218 
+T219	Concept 2232 2238;2239 2246	recién nacidos
+E219	Concept:T219 
+A23	Emphasized E217
+T220	Concept 2265 2274	peligrosa
+E220	Concept:T220 
+A24	Emphasized E220
+T221	Concept 2180 2183;2184 2190	tos ferina
+E221	Concept:T221 in-context:E220
+T222	Concept 2109 2118	sensibles
+E222	Concept:T222 in-context:E212
+R37	has-property Arg1:E210 Arg2:E222	
+T223	Action 1908 1916	Tratarse
+E223	Action:T223 in-time:E224 Target:E225 in-context:E226
+T224	Concept 1917 1928	rápidamente
+E224	Concept:T224 
+T225	Concept 1932 1940	difteria
+E225	Concept:T225 
+T226	Concept 1944 1954	importante
+E226	Concept:T226 
+T227	Concept 796 803;804 806;807 812	trabajo de parto
+E227	Concept:T227 in-context:E228
+T228	Concept 813 822	prematuro
+E228	Concept:T228 
+T229	Action 829 837	comenzar
+E229	Action:T229 Target:E227 in-time:E230
+A25	Uncertain E229
+T230	Predicate 838 843	antes
+E230	Predicate:T230 Arg:E232
+T231	Concept 861 863;864 871;872 874;875 883	37 semanas de embarazo
+E231	Concept:T231 
+T232	Action 847 856	completar
+E232	Action:T232 Target:E231
+T233	Predicate 721 725	Cada
+E233	Predicate:T233 Domain:E234
+T234	Concept 726 732	ovario
+E234	Concept:T234 
+T235	Predicate 758 764	tamaño
+E235	Predicate:T235 Arg:E237
+T236	Predicate 770 775	forma
+E236	Predicate:T236 Arg:E237
+A26	Uncertain E235
+A27	Uncertain E236
+R38	has-property Arg1:E233 Arg2:E235	
+R39	has-property Arg1:E233 Arg2:E236	
+T237	Concept 783 791	almendra
+E237	Concept:T237 
+T239	Predicate 2515 2521	manera
+E239	Predicate:T239 in-context:E238 Arg:E76
+T245	Action 1283 1293	producción
+E245	Action:T245 Target:E246 Target2:E248
+T246	Predicate 1297 1307	demasiadas
+E246	Predicate:T246 Domain:E247
+T247	Concept 1319 1327	lágrimas
+E247	Concept:T247 
+T248	Predicate 1313 1318	pocas
+E248	Predicate:T248 Domain:E247
+T242	Predicate 1527 1530	más
+E242	Predicate:T242 Arg:E249
+T243	Concept 1564 1570	cuerpo
+E243	Concept:T243 
+T249	Action 1571 1579	necesita
+E249	Action:T249 Subject:E243 Target:E262
+T250	Concept 1531 1539;1540 1549	hormonas tiroideas
+E250	Concept:T250 in-context:E242
+T158	Concept 1762 1769;1770 1773;1774 1780	consumo del tabaco
+E158	Concept:T158 
+T240	Action 1797 1802	causa
+E240	Action:T240 Target:E241 in-context:E251
+T241	Concept 1806 1812	muerte
+E241	Concept:T241 in-context:E252
+T251	Concept 1787 1796	principal
+E251	Concept:T251 
+T252	Concept 1813 1823	prevenible
+E252	Concept:T252 
+T254	Concept 2355 2366;2391 2394;2395 2399	crecimiento del bebé
+E254	Concept:T254 in-time:E209
+T87	Concept 2369 2379;2391 2394;2395 2399	desarrollo del bebé
+E87	Concept:T87 in-time:E209
+T209	Predicate 2407 2414	durante
+E209	Predicate:T209 Arg:E205
+T255	Concept 2380 2390	importante
+E255	Concept:T255 
+T256	Concept 2355 2366;2391 2394;2395 2399	crecimiento del bebé
+E256	Concept:T256 in-place:E206
+E258	Concept:T255 
+A17	Emphasized E258
+T257	Concept 2369 2379;2391 2394;2395 2399	desarrollo del bebé
+E259	Concept:T257 in-place:E206
+R40	has-property Arg1:E254 Arg2:E255	
+R41	has-property Arg1:E87 Arg2:E255	
+R42	has-property Arg1:E256 Arg2:E258	
+R43	has-property Arg1:E259 Arg2:E258	
+*	same-as E158 E240
+T258	Action 2837 2845	contacto
+E257	Action:T258 Target:E186 Target2:E187 Target3:E189
+R44	causes Arg1:E257 Arg2:E184	
+T253	Concept 24 27;28 37	uso cotidiano
+E253	Concept:T253 
+T259	Reference 371 374	los
+E260	Reference:T259 
+T260	Predicate 448 453	otros
+E261	Predicate:T260 Arg:E24
+R45	is-a Arg1:E245 Arg2:E132	
+T244	Reference 1401 1403	lo
+E244	Reference:T244 
+T261	Concept 1531 1539;1540 1549	hormonas tiroideas
+E262	Concept:T261 
+*	same-as E176 E179
+R46	is-a Arg1:E80 Arg2:E239	
+R47	is-a Arg1:E79 Arg2:E239	
+T238	Concept 2509 2514	única
+E238	Concept:T238 
