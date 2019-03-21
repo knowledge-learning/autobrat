@@ -43,27 +43,23 @@ R4	causes Arg1:E14 Arg2:E18
 T19	Concept 535 543	diabetes
 E19	Concept:T19 
 T20	Action 561 567	examen
-E20	Action:T20 in-time:E22 Target:E21 in-context:E19
+E20	Action:T20 in-time:E22 Target:E21
 T21	Concept 575 579	ojos
 E21	Concept:T21 
-T22	Predicate 580 583;584 587;588 590;591 594	una vez al año
-E22	Predicate:T22 
+T22	Predicate 580 583;584 587	una vez
+E22	Predicate:T22 Arg:E241
 T23	Concept 675 680	útero
 E23	Concept:T23 
 T24	Concept 684 690	matriz
 E24	Concept:T24 
-*	same-as E23 E24 E26
-T25	Concept 698 703	lugar
-E25	Concept:T25 
 T26	Action 713 723	desarrolla
-E26	Action:T26 in-place:E25 Target:E27 in-time:E29
 T27	Concept 727 731	bebé
 E27	Concept:T27 
 T28	Concept 743 748	mujer
 E28	Concept:T28 
 T29	Action 754 764	embarazada
 E29	Action:T29 Target:E28
-E30	Action:T26 in-time:E29 Target:E27 in-place:E23
+E30	Action:T26 in-time:E29 Target:E27 in-place:E23 Subject:E27
 T30	Concept 872 881;882 885;886 896	trastorno del movimiento
 E31	Concept:T30 
 T31	Action 904 915	experimenta
@@ -118,8 +114,8 @@ T52	Concept 1550 1559	anormales
 E53	Concept:T52 
 T53	Concept 1569 1577	hormonas
 E54	Concept:T53 
-T54	Predicate 1579 1588	problemas
-E55	Predicate:T54 Arg:E56
+T54	Action 1579 1588	problemas
+E55	Action:T54 Target:E56
 T55	Concept 1589 1598	tiroideos
 E56	Concept:T55 
 T56	Concept 1600 1608	fibromas
@@ -153,8 +149,8 @@ E66	Concept:T65
 R17	is-a Arg1:E62 Arg2:E64
 T66	Concept 1974 1985;1964 1973	metabólicos trastorno
 E67	Concept:T66 
-T67	Predicate 1994 2002	problema
-E68	Predicate:T67 Arg:E69
+T67	Action 1994 2002	problema
+E68	Action:T67 Target:E69
 T68	Reference 2006 2010	este
 E69	Reference:T68 
 T69	Concept 2011 2018	proceso
@@ -233,15 +229,14 @@ A4	Uncertain E99
 A5	Uncertain E100
 T98	Reference 2974 2977	Eso
 E101	Reference:T98 
-T99	Predicate 2995 3004	problemas
-E102	Predicate:T99 in-context:E104 Arg:E103
+E102	Action:T25 in-context:E104 Target:E103
 T100	Concept 3008 3013	salud
 E103	Concept:T100 
 T101	Concept 3014 3020	graves
 E104	Concept:T101 
 T102	Concept 3031 3039	mortales
 E105	Concept:T102 
-E106	Predicate:T99 in-context:E105 Arg:E103
+E106	Action:T25 in-context:E105 Target:E103
 R28	causes Arg1:E101 Arg2:E106
 R29	causes Arg1:E101 Arg2:E102
 T103	Concept 3114 3126	tratamientos
@@ -360,7 +355,6 @@ R41	part-of Arg1:E153 Arg2:E152
 T150	Concept 4519 4527;4528 4536	material genético
 E154	Concept:T150 
 R42	part-of Arg1:E154 Arg2:E152
-A12	Uncertain E150
 T152	Concept 4632 4637;4638 4641;4642 4647	fases del sueño
 E156	Concept:T152 
 T153	Action 4655 4663	ayudarle
@@ -404,19 +398,16 @@ R44	is-a Arg1:E170 Arg2:E171
 T169	Concept 5042 5047	serio
 E173	Concept:T169 
 T170	Concept 5062 5068	cabeza
-E174	Concept:T170 in-place:E175 in-context:E176
+E174	Concept:T170 
 T171	Concept 5076 5083	persona
 E175	Concept:T171 
-T172	Predicate 5093 5096	más
-E176	Predicate:T172 Arg2:E178 Arg:E177
-T173	Concept 5097 5104	pequeña
-E177	Concept:T173 
+T172	Predicate 5093 5096;5097 5104	más pequeña
+E176	Predicate:T172 Arg2:E178 Domain:E174
 T174	Concept 5111 5117	normal
 E178	Concept:T174 
-A15	Emphasized E176
-R45	entails Arg1:E170 Arg2:E174
-T175	Predicate 5127 5136	problemas
-E179	Predicate:T175 in-place:E180
+R45	entails Arg1:E170 Arg2:E176
+T175	Action 5127 5136	problemas
+E179	Action:T175 Target:E180
 T176	Concept 5140 5145	bebés
 E180	Concept:T176 in-context:E182
 T177	Concept 5152 5158	madres
@@ -507,8 +498,8 @@ T209	Predicate 6385 6392	algunas
 E216	Predicate:T209 Domain:E218
 T211	Predicate 6393 6399	partes
 E218	Predicate:T211 Domain:E217
-T212	Predicate 6467 6476	problemas
-E219	Predicate:T212 Arg:E220
+T212	Action 6467 6476	problemas
+E219	Action:T212 Target:E220
 T213	Concept 6480 6485	salud
 E220	Concept:T213 
 R56	causes Arg1:E215 Arg2:E219
@@ -648,8 +639,8 @@ E1040	Concept:T1040
 T1041	Concept 1457 1463	cuello
 E1041	Concept:T1041 
 R1011	is-a Arg1:E1037 Arg2:E1038
-T1042	Concept 1485 1495	distensión
-E1042	Concept:T1042 
+T1042	Action 1485 1495	distensión
+E1042	Action:T1042 Target:E1044
 T1043	Action 1498 1507	torcedura
 E1043	Action:T1043 Target:E1044
 T1044	Concept 1512 1518	cuello
@@ -933,9 +924,9 @@ T1161	Concept 5580 5587;5588 5596	músculo cardíaco
 E1164	Concept:T1161 
 *	same-as E1162 E1163
 T1162	Concept 5673 5680	tétanos
-E1165	Concept:T1162 
+E1165	Concept:T1162 in-context:E1169
 T1163	Concept 5688 5698	enfermedad
-E1166	Concept:T1163 in-context:E1169
+E1166	Concept:T1163 
 T1164	Concept 5729 5740	clostridium
 E1167	Concept:T1164 
 T1165	Concept 5720 5728	bacteria
@@ -971,14 +962,14 @@ E1179	Concept:T1176
 T1177	Concept 4794 4801	energía
 E1180	Concept:T1177 
 A1014	Emphasized E1179
-T1178	Concept 4364 4374	trastornos
-E1181	Concept:T1178 in-context:E1182
+T1178	Action 4364 4374	trastornos
+E1181	Action:T1178 Target:E1182
 T1179	Concept 4379 4390;4391 4393;4394 4397;4398 4411	metabolismo de los carbohidratos
 E1182	Concept:T1179 
 T1180	Predicate 4419 4424	grupo
 E1183	Predicate:T1180 Domain:E1184
-T1181	Concept 4428 4438	trastornos
-E1184	Concept:T1181 in-context:E1185
+T1181	Action 4428 4438	trastornos
+E1184	Action:T1181 Target:E1185
 T1182	Concept 4439 4450	metabólicos
 E1185	Concept:T1182 
 R1040	is-a Arg1:E1181 Arg2:E1183
@@ -1054,9 +1045,9 @@ E1216	Concept:T1211
 T1212	Action 6733 6742	presentan
 E1217	Action:T1212 Target:E1140 Subject:E1216
 T1213	Concept 6755 6763	estatura
-E1218	Concept:T1213 in-context:E1219
-T1214	Concept 6750 6754	baja
-E1219	Concept:T1214 
+E1218	Concept:T1213 
+T1214	Predicate 6750 6754	baja
+E1219	Predicate:T1214 Arg:E1218
 T1215	Action 6781 6790	funcionan
 E1220	Action:T1215 in-context:E1222 Subject:E1221
 T1216	Concept 6770 6777	ovarios
@@ -1064,7 +1055,7 @@ E1221	Concept:T1216
 T1217	Concept 6800 6808	adecuada
 E1222	Concept:T1217 
 A1018	Negated E1220
-R1048	entails Arg1:E1217 Arg2:E1218
+R1048	entails Arg1:E1217 Arg2:E1219
 R1049	entails Arg1:E1217 Arg2:E1220
 T1218	Concept 6920 6927;6928 6936	terapia hormonal
 E1223	Concept:T1218 
@@ -1113,3 +1104,12 @@ A1011	Uncertain E1141
 R1056	causes Arg1:E1186 Arg2:E1196
 T1137	Reference 6730 6732	lo
 E1140	Reference:T1137 
+T232	Action 529 534	tiene
+E240	Action:T232 Target:E19
+R65	entails Arg1:E240 Arg2:E20	
+T233	Concept 591 594	año
+E241	Concept:T233 
+*	same-as E23 E24
+T25	Action 2995 3004	problemas
+R66	part-of Arg1:E174 Arg2:E175	
+A12	Uncertain E1203
