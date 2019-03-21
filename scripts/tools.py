@@ -1,5 +1,6 @@
 # coding: utf8
 
+import fire
 import sys
 import bisect
 
@@ -123,16 +124,23 @@ class AnnFile:
             if isinstance(e, type):
                 yield e
 
+    def filter_sentences(self, sentences, order):
+        skip = 0
+        sentence = 0
+        sentences_offset = self._compute_sentence_offset(sentences)
+
+        print(sentences_offset)
+
+        while order:
+            next_sentence = order.pop(0) - 1
+
+            while sentence != next_sentence:
+                skip += len(sentences.pop(0)) + 1
+
+            current_length = sentences[0]
+
     def offset_spans(self, sentences, first):
-        sentences_offset = [-1]
-
-        for s in sentences:
-            prev = sentences_offset[-1]
-            start = prev + 1
-            end = start + len(s)
-            sentences_offset.append(end)
-
-        sentences_offset.pop(0)
+        sentences_offset = self._compute_sentence_offset(sentences)
 
         for ann in self.annotations_of(EntityAnnotation):
             locations = list(set([bisect.bisect_left(sentences_offset, int(s)) for span in ann.spans for s in span]))
@@ -147,6 +155,18 @@ class AnnFile:
                 offset = sentences_offset[location - 1] + 1 if location > 0 else 0
 
             ann.spans = [ (str(int(span[0]) + offset), str(int(span[1]) + offset)) for span in ann.spans ]
+
+    def _compute_sentence_offset(self, sentences):
+        sentences_offset = [-1]
+
+        for s in sentences:
+            prev = sentences_offset[-1]
+            start = prev + 1
+            end = start + len(s)
+            sentences_offset.append(end)
+
+        sentences_offset.pop(0)
+        return sentences_offset
 
     def offset_ids(self):
         for ann in self.annotations:
@@ -174,10 +194,12 @@ class AnnFile:
         raise ValueError("Unknown annotation: %s" % line)
 
 
-def main():
-    file1 = AnnFile().load(sys.argv[1])
-    file2 = AnnFile().load(sys.argv[2])
-    sents = open(sys.argv[3]).read().split('\n')
+def merge(ann1:str, ann2:str, text:str):
+    """Merge annotations of two different versions of the same file.
+    """
+    file1 = AnnFile().load(ann1)
+    file2 = AnnFile().load(ann2)
+    sents = open(text).read().split('\n')
 
     file1.offset_spans(sents, first=True)
     file2.offset_spans(sents, first=False)
@@ -190,5 +212,16 @@ def main():
         print(ann.as_brat())
 
 
+def review(ann:str, text:str, order:str):
+    """Process a merged annotation file and outputs the selected sentences.
+    """
+    file1 = AnnFile().load(ann)
+    sents = open(text).read().split('\n')
+    order = open(order).read().split('\n')
+    order = [ int(line.strip('*')) for line in order if line ]
+
+    file1.filter_sentences(sents, order)
+
+
 if __name__ == "__main__":
-    main()
+    fire.Fire()

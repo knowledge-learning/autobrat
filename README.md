@@ -5,7 +5,7 @@
 
 ## Current annotation status
 
-| **Pack** | **1st** | **2nd** | **Merged** | **Revised** | **Final** | **2nd Annotator** |
+| **Pack**      | **1st** | **2nd** | **Merged** | **Revised** | **Final** | **2nd Annotator** |
 |--|--|--|--|--|--|--|
 |  1 | ✔ | ✔ | ✔ |   |   |  Sadan     |
 |  2 | ✔ |   |   |   |   |  Daniel    |
@@ -16,11 +16,11 @@
 |  7 | ✔ | ✔ | ✔ |   |   |  Carmen    |
 |  8 | ✔ | ✔ | ✔ |   |   |  Carlos    |
 |  9 | ✔ | ✔ | ✔ |   |   |  Alexander |
-| 10 | ✔ | ✔ |   |   |   |  Dayani    |
-| 11 | ✔ | ✔ |   |   |   |  Marcos    |
+| 10 | ✔ | ✔ | ✔ |   |   |  Dayani    |
+| 11 | ✔ | ✔ | ✔ |   |   |  Marcos    |
 | 12 | ✔ | ✔ |   |   |   |  Rocio     |
 | 13 | ✔ | ✔ |   |   |   |  Jorge     |
-| 14 | ✔ | ✔ |   |   |   |  Loraine   |
+| 14 | ✔ | ✔ | ✔ |   |   |  Loraine   |
 | 15 | ✔ | ✔ |   |   |   |  Dayani    |
 | 16 | ✔ | ✔ |   |   |   |  Loraine   |
 | 17 | ✔ | ✔ |   |   |   |  Dayani    |
@@ -30,3 +30,4 @@
 | 21 | ✔ |   |   |   |   |  Sadan     |
 | 22 | ✔ |   |   |   |   |            |
 | 23 | ✔ |   |   |   |   |            |
+| **Sentences** | 920 | 640 | 439 | 0 | 0 | - |
