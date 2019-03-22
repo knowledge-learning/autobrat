@@ -686,8 +686,8 @@ T1003	Concept 182 190;191 198	medicina nuclear
 E1003	Concept:T1003 
 T1004	Concept 115 121	imagen
 E1004	Concept:T1004 
-T1005	Predicate 104 111	pruebas
-E1005	Predicate:T1005 Arg:E1004
+T1005	Action 104 111	pruebas
+E1005	Action:T1005 Target:E1004
 T1006	Concept 326 336;337 347;348 360	enfermedad intestinal inflamatoria
 E1006	Concept:T1006 
 T1007	Concept 512 520	diabetes
@@ -836,8 +836,8 @@ E1074	Concept:T1074
 T1075	Action 2740 2748	detectar
 E1075	Action:T1075 Subject:E1071 Target2:E1072 Target3:E1074 Target:E1073
 R1007	is-a Arg1:E1067 Arg2:E1071
-T1076	Predicate 171 178	pruebas
-E1076	Predicate:T1076 Arg:E1003
+T1076	Action 171 178	pruebas
+E1076	Action:T1076 Target:E1003
 R1011	is-a Arg1:E1001 Arg2:E1005
 R1012	is-a Arg1:E1002 Arg2:E1005
 R1013	is-a Arg1:E1076 Arg2:E1005

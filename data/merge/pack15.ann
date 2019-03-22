@@ -46,7 +46,7 @@ E20	Reference:T20
 T21	Concept 496 503	quistes
 E21	Concept:T21 
 T22	Action 504 510	crecen
-E22	Action:T22 Target:E21 in-place:E23
+E22	Action:T22 Target:E21 in-place:E23 Subject:E21
 T23	Concept 518 525	riñones
 E23	Concept:T23 
 R4	entails Arg1:E20 Arg2:E22
@@ -102,21 +102,21 @@ T45	Concept 1037 1045	internet
 E46	Concept:T45 
 E47	Action:T40 Subject:E39 Target:E42 in-place:E46
 E48	Action:T40 Subject:E39 Target:E42 in-place:E45
-T46	Predicate 1214 1221	miembro
-E49	Predicate:T46 Domain:E51 in-context:E50
+T46	Action 1214 1221	miembro
+E49	Action:T46 in-context:E50 Target:E51 Subject:E269
 T47	Concept 1222 1228	activo
 E50	Concept:T47 
 T48	Concept 1235 1241;1242 1244;1245 1253;1254 1260	equipo de atención médica
 E51	Concept:T48 
 T49	Action 1166 1172	ayudar
-E52	Action:T49 Target:E53 Subject:E49
+E52	Action:T49 Target:E53 Subject:E269
 T50	Action 1175 1183	prevenir
 E53	Action:T50 Target:E54
 T51	Concept 1188 1195;1196 1203	errores médicos
 E54	Concept:T51 
 A5	Uncertain E52
 T52	Action 1382 1389	obtiene
-E55	Action:T52 Target:E56
+E55	Action:T52 Target:E56 Subject:E270
 T54	Concept 1402 1412	nutrientes
 E57	Concept:T54 
 T53	Predicate 1390 1401	suficientes
@@ -153,9 +153,9 @@ E68	Concept:T65
 R13	is-a Arg1:E64 Arg2:E65
 R14	causes Arg1:E64 Arg2:E67
 T66	Concept 1830 1838	personas
-E69	Concept:T66 in-context:E70
-T67	Predicate 1843 1852	trastorno
-E70	Predicate:T67 Arg:E71
+E69	Concept:T66 
+T67	Action 1843 1852	trastorno
+E70	Action:T67 Subject:E71 Target:E69
 T68	Action 1857 1864	consumo
 E71	Action:T68 Target:E72
 T69	Concept 1868 1875	alcohol
@@ -166,7 +166,7 @@ A7	Uncertain E73
 T71	Action 1893 1898	ayuda
 E74	Action:T71 Subject:E76
 T72	Predicate 1815 1822	mayoría
-E75	Predicate:T72 Domain:E69
+E75	Predicate:T72 Domain:E70
 T73	Concept 1919 1930	tratamiento
 E76	Concept:T73 
 T74	Concept 2055 2063	diabetes
@@ -242,8 +242,8 @@ E109	Concept:T106
 A9	Diminished E108
 T104	Action 3001 3007	alivio
 E107	Action:T104 in-time:E110
-T107	Concept 3010 3015;3016 3021	largo plazo
-E110	Concept:T107 
+T107	Concept 3016 3021	plazo
+E110	Concept:T107 in-context:E271
 R20	causes Arg1:E105 Arg2:E108
 R21	causes Arg1:E105 Arg2:E107
 T108	Concept 3139 3147;3148 3150;3151 3157	factores de riesgo
@@ -252,17 +252,13 @@ T109	Reference 3129 3132	les
 E112	Reference:T109 
 *	same-as E112 E111
 T110	Concept 3196 3204	personas
-E113	Concept:T110 in-context:E114
+E113	Concept:T110 
 T111	Action 3209 3216	delirio
-E114	Action:T111 in-time:E115
-T112	Concept 3219 3225	menudo
-E115	Concept:T112 
+E114	Action:T111 Subject:E113
 T113	Action 3249 3258	recuperan
-E116	Action:T113 Target:E113 in-context:E118
+E116	Action:T113 in-context:E118 Target:E114 Subject:E114
 T115	Concept 3263 3271	completo
 E118	Concept:T115 
-T116	Predicate 3272 3279	después
-E119	Predicate:T116 
 T117	Concept 3290 3300	enfermedad
 E120	Concept:T117 in-context:E121 in-place:E113
 T118	Concept 3301 3311	subyacente
@@ -305,11 +301,11 @@ R26	is-a Arg1:E134 Arg2:E132
 R27	is-a Arg1:E133 Arg2:E135
 R28	is-a Arg1:E134 Arg2:E135
 T132	Concept 3803 3815;3816 3828	espondilitis anquilosante
-E136	Concept:T132 
+E136	Concept:T132 in-place:E139
 T133	Concept 3836 3841	común
-E137	Concept:T133 in-place:E139
+E137	Concept:T133 
 T134	Concept 3848 3853	grave
-E138	Concept:T134 in-place:E139
+E138	Concept:T134 
 T135	Concept 3864 3871	hombres
 E139	Concept:T135 
 A11	Emphasized E137
@@ -447,9 +443,9 @@ T190	Concept 5447 5457	importante
 E197	Concept:T190 in-place:E198
 T191	Concept 5465 5473;5474 5482	sistemas nervioso
 E198	Concept:T191 
-T192	Concept 5484 5492	muscular
+T192	Concept 5465 5473;5484 5492	sistemas muscular
 E199	Concept:T192 
-T193	Concept 5495 5506	inmunitario
+T193	Concept 5465 5473;5495 5506	sistemas inmunitario
 E200	Concept:T193 
 R44	has-property Arg1:E196 Arg2:E197
 E201	Concept:T190 in-place:E199
@@ -639,8 +635,8 @@ T1012	Predicate 411 418	algunos
 E1012	Predicate:T1012 Domain:E1015
 T1015	Predicate 419 424	tipos
 E1015	Predicate:T1015 Domain:E1016
-T1016	Concept 428 438	trastornos
-E1016	Concept:T1016 in-context:E1017
+T1016	Action 428 438	trastornos
+E1016	Action:T1016 Target:E1017
 T1017	Action 442 452	movimiento
 E1017	Action:T1017 in-place:E1018
 T1018	Concept 457 460	ojo
@@ -670,12 +666,10 @@ E1027	Action:T1027 Target:E1028 Subject:E1026 in-time:E1029 in-context:E1258
 A1002	Uncertain E1027
 T1028	Concept 698 706	fibromas
 E1028	Concept:T1028 
-T1029	Concept 718 724	examen
-E1029	Concept:T1029 in-context:E1030
-T1030	Concept 725 737	ginecológico
-E1030	Concept:T1030 
-T1032	Concept 751 758	pruebas
-E1032	Concept:T1032 in-context:E1033
+T1029	Concept 718 724;725 737	examen ginecológico
+E1029	Concept:T1029 
+T1032	Action 751 758	pruebas
+E1032	Action:T1032 Target:E1033
 T1033	Concept 762 768	imagen
 E1033	Concept:T1033 
 T1031	Predicate 855 860	Ambos
@@ -955,18 +949,14 @@ T1158	Action 4371 4378	aumenta
 E1158	Action:T1158 Target:E1159 Target2:E1268 Target3:E1269
 T1159	Predicate 4382 4388	riesgo
 E1159	Predicate:T1159 Arg:E1160
-T1160	Predicate 4392 4401	problemas
-E1160	Predicate:T1160 Arg:E1161
+T1160	Action 4392 4401	problemas
+E1160	Action:T1160 Target:E1161
 T1161	Concept 4405 4410	salud
 E1161	Concept:T1161 
 T1162	Concept 4416 4424	melanoma
 E1162	Concept:T1162 
-T1163	Predicate 4433 4438	tipos
-E1163	Predicate:T1163 Domain:E1164
 T1164	Concept 4442 4448;4449 4451;4452 4456	cáncer de piel
 E1164	Concept:T1164 
-T1165	Predicate 4427 4432	otros
-E1165	Predicate:T1165 Domain:E1163
 T1166	Reference 4343 4345	Lo
 E1166	Reference:T1166 
 T1167	Action 4649 4655	picado
@@ -987,7 +977,7 @@ E1176	Concept:T1176 in-place:E1177
 T1177	Concept 4796 4804	picadura
 E1177	Concept:T1177 
 T1178	Action 7393 7400	agranda
-E1178	Action:T1178 
+E1178	Action:T1178 Target:E115
 A1016	Emphasized E1178
 T1179	Concept 7425 7434	problemas
 E1179	Concept:T1179 
@@ -1057,11 +1047,11 @@ E1206	Concept:T1206
 T1207	Reference 6446 6450	Este
 E1207	Reference:T1207 
 T1208	Action 6493 6501	mantener
-E1208	Action:T1208 Target:E1209 Subject:E1270
+E1208	Action:T1208 Target:E1209 Subject:E1270 in-context:E1249
 T1209	Concept 6505 6512	trabajo
 E1209	Concept:T1209 
 T1210	Action 6515 6521	cuidar
-E1210	Action:T1210 Subject:E1270 Target:E1270
+E1210	Action:T1210 Subject:E1270 Target:E1270 in-context:E1249
 T1211	Concept 5064 5072	obesidad
 E1211	Concept:T1211 
 T1212	Action 5073 5080	aumenta
@@ -1162,7 +1152,7 @@ A1024	Negated E1256
 R1036	causes Arg1:E1178 Arg2:E1179
 R1002	has-property Arg1:E1003 Arg2:E1004
 T1257	Action 740 750	utilizando
-E1258	Action:T1257 Target:E1032
+E1258	Action:T1257 Target:E1032 Subject:E1026
 R1014	causes Arg1:E1106 Arg2:E1108
 A1014	Diminished E1127
 A1025	Diminished E1128
@@ -1209,8 +1199,6 @@ E1266	Concept:T1263
 R1050	entails Arg1:E1250 Arg2:E1264
 T1249	Concept 6474 6481	difícil
 E1249	Concept:T1249 
-R1051	has-property Arg1:E1208 Arg2:E1249
-R1052	has-property Arg1:E1210 Arg2:E1249
 R1053	causes Arg1:E1207 Arg2:E1208
 R1054	causes Arg1:E1207 Arg2:E1210
 T1265	Predicate 7224 7227	más
@@ -1218,6 +1206,17 @@ E1267	Predicate:T1265 Arg:E1192
 R1055	causes Arg1:E1064 Arg2:E1069
 R1008	is-a Arg1:E1064 Arg2:E1066
 E1268	Predicate:T1159 Arg:E1162
-E1269	Predicate:T1159 Arg:E1165
+E1269	Predicate:T1159 Arg:E1164
 T1266	Reference 6487 6492	ellos
 E1270	Reference:T1266 
+R58	entails Arg1:E49 Arg2:E52	
+T259	Concept 1154 1159	Usted
+E269	Concept:T259 
+T260	Concept 1373 1378	usted
+E270	Concept:T260 
+T261	Concept 3010 3015	largo
+E271	Concept:T261 
+A21	Emphasized E116
+R59	causes Arg1:E1166 Arg2:E1158	
+T112	Reference 7390 7392	se
+E115	Reference:T112 
