@@ -21,36 +21,30 @@ E9	Concept:T9
 T10	Concept 321 326	plomo
 E10	Concept:T10 
 T11	Action 333 340	afectar
-E11	Action:T11 Subject:E10 Target:E12 Target2:E16 in-context:E19
+E11	Action:T11 Target:E12 Target2:E16 Subject:E17
 T12	Action 344 355	crecimiento
-E12	Action:T12 in-context:E13 Target:E15
+E12	Action:T12 in-context:E13 Target:E15 Subject:E15
 T13	Concept 356 362	físico
 E13	Concept:T13 
 T14	Concept 365 371	mental
 E14	Concept:T14 
 T15	Concept 378 382	niño
 E15	Concept:T15 
-E16	Action:T12 in-context:E14 Target:E15
+E16	Action:T12 in-context:E14 Target:E15 Subject:E15
 T16	Predicate 303 310	niveles
 E17	Predicate:T16 in-context:E18 Arg:E10
 T17	Concept 311 316	bajos
 E18	Concept:T17 
-T18	Predicate 292 299	Incluso
-E19	Predicate:T18 Arg:E17
-T19	Predicate 476 483	Algunas
-E20	Predicate:T19 Domain:E21
 T20	Concept 484 496	enfermedades
 E21	Concept:T20 in-place:E22
 T21	Concept 501 505	oído
 E22	Concept:T21 
-T22	Predicate 525 534	problemas
-E23	Predicate:T22 Arg:E24
+T22	Action 525 534	problemas
+E23	Action:T22 Target:E24
 T23	Concept 541 549	audición
 E24	Concept:T23 
 T24	Concept 552 559	sordera
 E25	Concept:T24 
-R2	causes Arg1:E20 Arg2:E23
-R3	causes Arg1:E20 Arg2:E25
 T25	Concept 650 657	médicos
 E26	Concept:T25 
 T26	Action 658 670	diagnostican
@@ -79,18 +73,18 @@ T35	Concept 938 947	instantes
 E36	Concept:T35 
 R7	causes Arg1:E34 Arg2:E32
 T36	Concept 1058 1066	personas
-E37	Concept:T36 in-context:E38
-T37	Predicate 1071 1081	trastornos
-E38	Predicate:T37 Arg:E39
+E37	Concept:T36 
+T37	Action 1071 1081	trastornos
+E38	Action:T37 Target:E39 Subject:E37
 T38	Concept 1086 1092	olfato
 E39	Concept:T38 
 T39	Action 1100 1106	perder
-E40	Action:T39 Target:E41 Subject:E37
+E40	Action:T39 Target:E41 Subject:E38
 A2	Uncertain E40
 T40	Concept 1110 1117;1118 1121;1122 1128	sentido del olfato
 E41	Concept:T40 
 T41	Action 1131 1137	sentir
-E42	Action:T41 Target:E43 Subject:E37
+E42	Action:T41 Target:E43 Subject:E38
 T42	Concept 1138 1144	olores
 E43	Concept:T42 in-context:E44 in-place:E45
 T43	Concept 1145 1154	distintos
@@ -148,13 +142,13 @@ E65	Action:T64 Subject:E63 Target:E67
 T65	Concept 1722 1729	médicos
 E66	Concept:T65 
 T66	Action 1730 1738	observar
-E67	Action:T66 Subject:E66 Target:E68 Target2:E70
+E67	Action:T66 Subject:E66 Target:E68
 T67	Predicate 1742 1750	interior
 E68	Predicate:T67 Domain:E69
 T68	Concept 1755 1761	cuerpo
 E69	Concept:T68 
 T69	Action 1767 1773	buscar
-E70	Action:T69 Target:E71
+E70	Action:T69 Target:E71 Subject:E67
 T70	Predicate 1774 1782	indicios
 E71	Predicate:T70 Arg:E72
 T71	Concept 1793 1802;1803 1809	condición médica
@@ -191,7 +185,7 @@ E85	Predicate:T84 Domain:E87
 T85	Concept 2276 2284	personas
 E86	Concept:T85 
 T86	Action 2295 2305	infectadas
-E87	Action:T86 Subject:E86 Target:E88
+E87	Action:T86 Target2:E86 Subject:E88
 T87	Concept 2310 2319;2320 2321	hepatitis C
 E88	Concept:T87 
 T88	Action 2325 2331	tienen
@@ -205,14 +199,14 @@ A10	Emphasized E91
 T91	Reference 2469 2472	esa
 E92	Reference:T91 
 T92	Action 2487 2493	evitar
-E93	Action:T92 Target:E94 Subject:E92 Target2:E95
+E93	Action:T92 Target:E94 Subject:E92 Target2:E96
 A11	Uncertain E93
 T93	Concept 2506 2516	sobredosis
 E94	Concept:T93 
 T94	Concept 2523 2534	interacción
-E95	Concept:T94 in-context:E96
+E95	Concept:T94 
 T95	Action 2538 2545	deseada
-E96	Action:T95 
+E96	Action:T95 Target:E95
 A12	Negated E96
 T96	Concept 2631 2636	ozono
 E97	Concept:T96 in-context:E98
@@ -279,15 +273,15 @@ T122	Predicate 3366 3373	niveles
 E123	Predicate:T122 Arg:E124
 T123	Concept 3377 3387	colesterol
 E124	Concept:T123 
-T124	Predicate 3484 3493	problemas
-E125	Predicate:T124 Arg:E126
+T124	Action 3484 3493	problemas
+E125	Action:T124 Target:E126
 T125	Concept 3501 3510;3511 3520	glándulas salivales
 E126	Concept:T125 
 T126	Action 3528 3538	irritarlas
-E127	Action:T126 Target:E126 Subject:E125
+E127	Action:T126 Target:E126
 A14	Uncertain E127
 T127	Action 3541 3552	inflamarlas
-E128	Action:T127 Target:E126 Subject:E125
+E128	Action:T127 Target:E126
 A15	Uncertain E128
 T128	Concept 3631 3644	osteoartritis
 E129	Concept:T128 
@@ -404,8 +398,7 @@ T175	Concept 4875 4883	artritis
 E176	Concept:T175 
 T176	Predicate 4858 4865	Algunos
 E177	Predicate:T176 Domain:E175
-T177	Predicate 4899 4908	problemas
-E178	Predicate:T177 Arg:E179
+E178	Action:T19 Target:E179
 T178	Concept 4916 4923	órganos
 E179	Concept:T178 
 T179	Concept 4934 4938	ojos
@@ -415,8 +408,8 @@ E181	Concept:T180
 R32	is-a Arg1:E180 Arg2:E179
 R33	is-a Arg1:E181 Arg2:E179
 R34	causes Arg1:E177 Arg2:E178
-E182	Predicate:T177 Arg:E180
-E183	Predicate:T177 Arg:E181
+E182	Action:T239 Target:E180
+E183	Action:T19 Target:E181
 R35	causes Arg1:E177 Arg2:E182
 R36	causes Arg1:E177 Arg2:E183
 T181	Concept 5045 5052	rubéola
@@ -427,8 +420,8 @@ R37	is-a Arg1:E184 Arg2:E185
 T183	Concept 5085 5090	virus
 E186	Concept:T183 
 R38	causes Arg1:E186 Arg2:E184
-T184	Concept 5146 5157;5158 5161;5162 5165	infecciones por VPH
-E187	Concept:T184 
+T184	Action 5146 5157	infecciones
+E187	Action:T184 Subject:E20
 T185	Concept 5174 5185;5186 5188;5189 5200;5201 5207	infecciones de transmisión sexual
 E188	Concept:T185 
 T186	Predicate 5208 5211	más
@@ -504,11 +497,11 @@ R45	is-a Arg1:E193 Arg2:E218
 T216	Concept 6070 6077	desafío
 E219	Concept:T216 
 T217	Predicate 6078 6081	más
-E220	Predicate:T217 Arg:E221 Domain:E219 Arg2:E222 in-context:E213
+E220	Predicate:T217 Arg:E221 Domain:E219 Arg2:E222
 T218	Concept 6082 6088	grande
 E221	Concept:T218 
 T219	Action 6103 6113	enfrentado
-E222	Action:T219 in-time:E223
+E222	Action:T219 in-time:E223 Subject:E213
 T220	Predicate 6093 6098	jamás
 E223	Predicate:T220 
 *	same-as E216 E220
@@ -600,7 +593,7 @@ E1021	Action:T1021 Subject:E1020 Target:E1022 in-time:E1023
 A1001	Negated E1021
 T1022	Concept 1026 1033	cerebro
 E1022	Concept:T1022 
-R1004	entails Arg1:E1021 Arg2:E1019
+R1004	causes Arg1:E1021 Arg2:E1019
 T1023	Concept 1043 1052	instantes
 E1023	Concept:T1023 
 T1024	Concept 1177 1185	personas
@@ -949,15 +942,11 @@ T1176	Concept 2249 2256	período
 E1176	Concept:T1176 
 T1177	Concept 2775 2785	naturaleza
 E1177	Concept:T1177 in-place:E1178
-T1178	Concept 2804 2806;2812 2818	10 millas
-E1178	Concept:T1178 in-context:E1180
-T1179	Concept 2809 2811;2812 2818	30 millas
-E1179	Concept:T1179 in-context:E1180
+T1178	Concept 2804 2806;2807 2808;2809 2811;2812 2818	10 a 30 millas
+E1178	Concept:T1178 in-context:E19
 T1180	Concept 2828 2838;2839 2848	superficie terrestre
 E1180	Concept:T1180 
 R1040	part-of Arg1:E1065 Arg2:E1177
-E1181	Concept:T1177 in-place:E1179
-R1041	part-of Arg1:E1065 Arg2:E1181
 T1181	Action 3082 3086	dura
 E1182	Action:T1181 Subject:E1159 Target:E1183 Target2:E1184
 T1182	Concept 3093 3097;3106 3110	tres días
@@ -985,3 +974,29 @@ T1191	Concept 6650 6652;6658 6662	20 años
 E1192	Concept:T1191 
 T1192	Concept 6655 6657;6658 6662	39 años
 E1193	Concept:T1192 
+A23	Uncertain E11
+R2	causes Arg1:E21 Arg2:E23	
+R3	causes Arg1:E21 Arg2:E25	
+A24	Emphasized E1038
+A25	Emphasized E1039
+A26	Emphasized E1040
+A27	Emphasized E1041
+A28	Uncertain E80
+T18	Predicate 2819 2824	sobre
+E19	Predicate:T18 Arg:E1180
+R48	causes Arg1:E125 Arg2:E127	
+R49	causes Arg1:E125 Arg2:E128	
+T19	Action 4899 4908	problemas
+T239	Action 4899 4908	problemas
+T177	Concept 5162 5165	VPH
+E20	Concept:T177 
+T240	Action 5624 5635	identificar
+E242	Action:T240 Target:E1136 in-time:E244
+T241	Action 5638 5644	tratar
+E243	Action:T241 Target:E1136 in-time:E244
+T242	Concept 5667 5672;5673 5680	antes posible
+E244	Concept:T242 
+T243	Concept 5613 5623	importante
+E245	Concept:T243 
+R50	has-property Arg1:E242 Arg2:E245	
+R51	has-property Arg1:E243 Arg2:E245	
