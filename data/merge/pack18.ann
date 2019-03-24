@@ -12,8 +12,8 @@ T5	Action 136 143	aumento
 E5	Action:T5 Target:E6
 T6	Concept 150 157	presión
 E6	Concept:T6 
-T7	Predicate 159 168	problemas
-E7	Predicate:T7 Domain:E8
+T7	Action 159 168	problemas
+E7	Action:T7 Target:E8
 T8	Action 176 181	flujo
 E8	Action:T8 Target:E9
 T9	Concept 188 194	sangre
@@ -164,9 +164,9 @@ T73	Concept 1679 1685	herpes
 E73	Concept:T73 
 E74	Predicate:T70 Arg:E72
 T74	Reference 1809 1811	se
-E75	Reference:T74 in-context:E76
-T75	Concept 1812 1820	calienta
-E76	Concept:T75 
+E75	Reference:T74 
+T75	Action 1812 1820	calienta
+E76	Action:T75 Target:E75
 T76	Concept 1828 1831	gas
 E77	Concept:T76 in-context:E78 in-context2:E79
 T77	Concept 1836 1840	olor
@@ -175,7 +175,6 @@ T78	Concept 1844 1849	color
 E79	Concept:T78 
 A7	Negated E78
 A8	Negated E79
-R12	is-a Arg1:E75 Arg2:E77
 T79	Reference 1900 1904	Este
 E80	Reference:T79 
 T80	Concept 1905 1910	tinte
@@ -214,11 +213,7 @@ E95	Concept:T93
 A11	Negated E95
 E96	Concept:T91 
 T94	Concept 2203 2207	niño
-E97	Concept:T94 in-context:E98
-T95	Concept 2223 2232;2233 2241	trastorno genético
-E98	Concept:T95 
-R15	causes Arg1:E94 Arg2:E97
-R16	causes Arg1:E91 Arg2:E97
+E97	Concept:T94 
 T96	Concept 2367 2375;2376 2378;2379 2385	análisis de sangre
 E99	Concept:T96 
 T97	Concept 2394 2397	A1c
@@ -316,8 +311,7 @@ E139	Reference:T136
 T137	Concept 3644 3651	células
 E140	Concept:T137 
 T138	Action 3655 3660	duran
-E141	Action:T138 Target:E139 in-context:E145
-A18	Negated E141
+E141	Action:T138 Target:E139
 T139	Concept 3676 3684	normales
 E142	Concept:T139 
 R22	is-a Arg1:E139 Arg2:E140
@@ -325,20 +319,16 @@ T140	Concept 3690 3698;3699 3704	glóbulos rojos
 E143	Concept:T140 in-context:E144
 T141	Concept 3705 3713	redondos
 E144	Concept:T141 
-R23	has-property Arg1:E143 Arg2:E142
-A19	Emphasized E141
-E145	Action:T138 Target:E143
+E145	Action:T138 Target:E249
 T142	Concept 3795 3806	indigestión
 E146	Concept:T142 
 T143	Action 3833 3838	comer
 E147	Action:T143 in-context:E148
 T144	Concept 3839 3848	demasiado
 E148	Concept:T144 
-T145	Predicate 3851 3860	demasiado
-E149	Predicate:T145 Arg:E150
 T146	Concept 3861 3867	rápido
 E150	Concept:T146 
-E151	Action:T143 in-context:E149
+E151	Action:T143 in-context:E150
 T147	Action 3869 3876	ingerir
 E152	Action:T147 Target:E153
 T148	Concept 3877 3886	alimentos
@@ -346,7 +336,7 @@ E153	Concept:T148 in-context:E154
 T149	Concept 3887 3895	grasosos
 E154	Concept:T149 
 T150	Action 3898 3903	comer
-E155	Action:T150 in-time:E156
+E155	Action:T150 in-context:E156
 T151	Concept 3919 3925	estrés
 E156	Concept:T151 
 R24	causes Arg1:E147 Arg2:E146
@@ -384,14 +374,14 @@ T164	Concept 4395 4400	humos
 E170	Concept:T164 
 R30	is-a Arg1:E169 Arg2:E170
 T162	Action 4407 4417	acumularse
-E168	Action:T162 in-place:E171 Target:E167
+E168	Action:T162 Target:E167 in-place:E173
 A22	Uncertain E168
 T165	Concept 4421 4428	lugares
-E171	Concept:T165 in-context:E173
+E171	Concept:T165 
 T166	Concept 4447 4452	buena
 E172	Concept:T166 
 T167	Action 4453 4464	circulación
-E173	Action:T167 in-context:E172 Target:E174
+E173	Action:T167 in-context:E172 Target:E174 Subject:E171
 T168	Concept 4468 4472	aire
 E174	Concept:T168 in-context:E175
 T169	Concept 4473 4479	fresco
@@ -417,7 +407,7 @@ T177	Concept 4778 4785	benigno
 E183	Concept:T177 
 R33	is-a Arg1:E181 Arg2:E182
 T178	Action 4793 4803	desarrolla
-E184	Action:T178 Target:E181 in-place:E186
+E184	Action:T178 Target:E181 in-place:E186 Subject:E181
 T179	Concept 4810 4816	nervio
 E185	Concept:T179 
 T180	Action 4821 4828	conecta
@@ -442,7 +432,7 @@ T189	Action 5045 5053	asistido
 E195	Action:T189 Target:E196
 T190	Concept 5058 5070	medicamentos
 E196	Concept:T190 
-R34	is-a Arg1:E190 Arg2:E194
+R34	is-a Arg1:E194 Arg2:E190
 T191	Concept 5194 5198	área
 E197	Concept:T191 
 T192	Action 5202 5209	infecta
@@ -473,16 +463,16 @@ T203	Action 5446 5451	evite
 E209	Action:T203 Target:E210 in-place:E208 Target2:E212 Target3:E214
 T204	Concept 5452 5457	latas
 E210	Concept:T204 in-context:E211
-T205	Action 5468 5477	abolladas
-E211	Action:T205 
+T205	Concept 5468 5477	abolladas
+E211	Concept:T205 
 T206	Concept 5480 5487	frascos
 E212	Concept:T206 in-context:E213
-T207	Action 5499 5506	grietas
-E213	Action:T207 
+T207	Concept 5499 5506	grietas
+E213	Concept:T207 
 T208	Concept 5509 5514	tapas
 E214	Concept:T208 in-context:E215
-T209	Action 5515 5522	sueltas
-E215	Action:T209 
+T209	Concept 5515 5522	sueltas
+E215	Concept:T209 
 T210	Concept 5620 5632	tratamientos
 E216	Concept:T210 
 T211	Concept 5642 5651	ejercicio
@@ -500,8 +490,8 @@ T215	Concept 5778 5784	hombro
 E221	Concept:T215 
 T216	Action 5788 5795	compone
 E222	Action:T216 Target:E220 Subject:E223
-T217	Concept 5799 5803;5804 5810	tres huesos
-E223	Concept:T217 
+T217	Predicate 5799 5803	tres
+E223	Predicate:T217 Domain:E149
 E224	Action:T216 Target:E220 Subject:E225 Subject2:E226 Subject3:E227
 T218	Concept 5815 5824	clavícula
 E225	Concept:T218 
@@ -604,7 +594,7 @@ E1020	Concept:T1020
 T1021	Concept 656 663;664 672	mieloma múltiple
 E1021	Concept:T1021 
 T1022	Predicate 686 691	común
-E1022	Predicate:T1022 Domain:E1021 in-place:E1019 in-place2:E1020
+E1022	Predicate:T1022 in-place2:E1020 in-place:E1024
 A1003	Emphasized E1022
 T1023	Predicate 639 644	causa
 E1023	Predicate:T1023 in-context:E1018 Domain:E1017
@@ -641,11 +631,11 @@ T1037	Concept 1050 1057	corazón
 E1037	Concept:T1037 in-context:E1038
 T1038	Concept 1058 1062	sano
 E1038	Concept:T1038 
-T1040	Concept 1090 1098	falleció
-E1040	Concept:T1040 
+T1040	Action 1090 1098	falleció
+E1040	Action:T1040 Target:E1041
 T1041	Concept 1078 1085	donante
-E1041	Concept:T1041 in-context:E1040
-R1004	part-of Arg1:E1037 Arg2:E1041
+E1041	Concept:T1041 
+R1004	part-of Arg1:E1037 Arg2:E1040
 T1039	Predicate 1150 1157	mayoría
 E1039	Predicate:T1039 Domain:E1042
 T1042	Concept 1165 1166;1168 1172	E coli
@@ -684,9 +674,9 @@ T1056	Concept 1553 1560;1561 1563;1564 1570	pruebas de sangre
 E1056	Concept:T1056 
 R1005	causes Arg1:E1056 Arg2:E1054
 T1057	Action 1690 1693	uso
-E1057	Action:T1057 in-context:E1058
+E1057	Action:T1057 in-context:E1058 Target:E1059
 T1058	Concept 1694 1702	correcto
-E1058	Concept:T1058 in-context:E1059
+E1058	Concept:T1058 
 T1059	Concept 1706 1714;1715 1717;1718 1723	condones de látex
 E1059	Concept:T1059 
 T1060	Action 1730 1737	reducir
@@ -1082,3 +1072,18 @@ T1226	Concept 2520 2528	diabetes
 E1229	Concept:T1226 
 T1227	Predicate 3744 3748	como
 E1230	Predicate:T1227 Arg:E1133
+R47	has-property Arg1:E1021 Arg2:E1022	
+R12	has-property Arg1:E76 Arg2:E77	
+T95	Action 2223 2232	trastorno
+E98	Action:T95 Target:E97 in-context:E247
+T239	Concept 2233 2241	genético
+E247	Concept:T239 
+R15	causes Arg1:E94 Arg2:E98	
+R16	causes Arg1:E91 Arg2:E98	
+T240	Predicate 3661 3666	tanto
+E248	Predicate:T240 Domain:E141 Arg:E145
+A26	Negated E248
+E249	Concept:T137 in-context:E142
+*	same-as E143 E249
+A18	Emphasized E150
+E149	Concept:T221 
