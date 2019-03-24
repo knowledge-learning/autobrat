@@ -138,7 +138,7 @@ R15	has-property Arg1:E58 Arg2:E59
 T59	Concept 1752 1757;1758 1763	ácido úrico
 E60	Concept:T59 
 T60	Action 1767 1775	disuelve
-E61	Action:T60 in-context:E68 in-place:E62 Target:E60
+E61	Action:T60 in-context:E68 in-place:E62 Target:E60 Subject:E60
 T61	Concept 1782 1788	sangre
 E62	Concept:T61 
 T62	Action 1790 1794	pasa
@@ -230,8 +230,8 @@ T99	Predicate 2862 2868	riesgo
 E101	Predicate:T99 Arg:E103
 T101	Reference 2882 2887	estos
 E103	Reference:T101 
-T102	Concept 2888 2897	problemas
-E104	Concept:T102 
+T102	Action 2888 2897	problemas
+E104	Action:T102 
 R25	is-a Arg1:E103 Arg2:E104
 A6	Uncertain E100
 T100	Concept 2987 2994	mujeres
@@ -315,8 +315,8 @@ T135	Action 3944 3952	ocuparse
 E138	Action:T135 Target:E139 in-time:E142
 T136	Predicate 3956 3965	cualquier
 E139	Predicate:T136 Domain:E140
-T137	Predicate 3966 3974	problema
-E140	Predicate:T137 Arg:E141
+T137	Action 3966 3974	problema
+E140	Action:T137 Target:E141
 T138	Concept 3978 3983	salud
 E141	Concept:T138 
 T139	Concept 4005 4013	embarazo
@@ -371,10 +371,10 @@ T159	Concept 4676 4684;4685 4694	hormonas tiroideas
 E162	Concept:T159 
 T160	Action 4695 4704	controlan
 E163	Action:T160 Subject:E162 Target:E164
-T161	Concept 4708 4713	ritmo
-E164	Concept:T161 in-place:E165
-T162	Predicate 4724 4735	actividades
-E165	Predicate:T162 Arg:E166
+T161	Predicate 4708 4713	ritmo
+E164	Predicate:T161 Arg:E165
+T162	Action 4724 4735	actividades
+E165	Action:T162 Subject:E166
 T163	Concept 4740 4746	cuerpo
 E166	Concept:T163 
 A12	Emphasized E165
@@ -699,7 +699,7 @@ E1023	Action:T1023 Target:E1024 Subject:E1022
 T1024	Concept 733 738	dolor
 E1024	Concept:T1024 
 T1025	Action 821 833	diagnosticar
-E1025	Action:T1025 Target:E1026 in-place:E1029
+E1025	Action:T1025 Target:E1026 in-time:E1029
 T1026	Concept 837 843;844 846;847 855	cáncer de estómago
 E1026	Concept:T1026 
 T1027	Action 652 657	tener
@@ -1046,18 +1046,17 @@ T1184	Concept 5256 5260	paro
 E1187	Concept:T1184 
 T1185	Action 5269 5276	recibir
 E1188	Action:T1185 Subject:E1186 Target:E1189 in-time:E1191
-A1010	Uncertain E1188
 T1186	Concept 5277 5289;5290 5304	resucitación cardiopulmonar
 E1189	Concept:T1186 
 T1187	Concept 5306 5309	RCP
 E1190	Concept:T1187 
 *	same-as E1189 E1190
 T1188	Predicate 5311 5316	hasta
-E1191	Predicate:T1188 Arg:E1192
+E1191	Predicate:T1188 Arg:E1193
 T1189	Concept 5324 5338	desfibrilación
-E1192	Concept:T1189 in-context:E1193
-T1190	Concept 5344 5354	disponible
-E1193	Concept:T1190 
+E1192	Concept:T1189 
+T1190	Action 5344 5354	disponible
+E1193	Action:T1190 Target:E1192
 T1191	Concept 5871 5878	mujeres
 E1194	Concept:T1191 in-context:E1196
 T1193	Concept 5883 5891	fibromas
@@ -1079,7 +1078,7 @@ T1200	Predicate 6518 6528	suficiente
 E1203	Predicate:T1200 Domain:E1204
 T1201	Concept 6529 6536	energía
 E1204	Concept:T1201 
-R1032	causes Arg1:E1199 Arg2:E1202
+R1032	entails Arg1:E1199 Arg2:E1202
 T1202	Concept 6855 6863;6864 6870	atención médica
 E1205	Concept:T1202 
 T1203	Action 6800 6807	picazón
@@ -1169,8 +1168,6 @@ E1245	Concept:T1242
 T1243	Concept 6364 6370	vagina
 E1246	Concept:T1243 
 E1247	Predicate:T1241 
-T1244	Predicate 5589 5595	alguno
-E1248	Predicate:T1244 Domain:E1249
 T1245	Reference 5599 5604	estos
 E1249	Reference:T1245 
 T1246	Concept 5605 5615	trastornos
@@ -1211,9 +1208,6 @@ R1037	causes Arg1:E1122 Arg2:E1123
 A1018	Uncertain E1126
 E1127	Concept:T1122 
 R1038	has-property Arg1:E1122 Arg2:E1126
-R1039	causes Arg1:E1248 Arg2:E1251
-R1041	causes Arg1:E1248 Arg2:E1256
-R1042	causes Arg1:E1248 Arg2:E1259
 R1040	causes Arg1:E1240 Arg2:E1234
 T1036	Action 6773 6780	vuelven
 E1128	Action:T1036 Target:E1262 Subject:E1212
@@ -1275,6 +1269,15 @@ A1022	Emphasized E1277
 A1023	Uncertain E1277
 A1024	Negated E1207
 E1135	Action:T1128 Target:E1205 in-context:E1128
-E1195	Action:T1128 in-context:E1209 Target:E1205
+E1195	Action:T1128 Target:E1205 in-context:E283
 A1025	Uncertain E1135
 A1026	Uncertain E1195
+R59	entails Arg1:E1186 Arg2:E1188	
+R60	causes Arg1:E1249 Arg2:E1251	
+R61	causes Arg1:E1249 Arg2:E1256	
+R62	causes Arg1:E1249 Arg2:E1259	
+A26	Uncertain E1197
+T277	Action 6721 6727	siente
+E283	Action:T277 Target:E1209
+R63	causes Arg1:E275 Arg2:E271	
+R64	causes Arg1:E274 Arg2:E271	
