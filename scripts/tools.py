@@ -47,7 +47,7 @@ class RelationAnnotation:
     def as_brat(self):
         return "%s\t%s Arg1:%s Arg2:%s" % (self.id, self.type, self.arg1, self.arg2)
 
-class SameAsAnnotation(RelationAnnotation):
+class SameAsAnnotation:
     def __init__(self, line):
         typ, args = line[1:].strip().split(' ', 1)
         self.id = '*'
@@ -127,17 +127,49 @@ class AnnFile:
     def filter_sentences(self, sentences, order):
         skip = 0
         sentence = 0
-        sentences_offset = self._compute_sentence_offset(sentences)
+        free_space = 0
 
-        print(sentences_offset)
-
+        skipped_space = []
+        selected_sentence_spans = []
         while order:
             next_sentence = order.pop(0) - 1
 
+            skip_backup = skip
             while sentence != next_sentence:
                 skip += len(sentences.pop(0)) + 1
+                sentence += 1
 
-            current_length = sentences[0]
+            free_space += skip - skip_backup
+
+            current_length = len(sentences[0])
+            selected_sentence_spans.append((skip, skip + current_length))
+            skipped_space.append(free_space)
+            free_space -= current_length + 1
+
+        selected_annotations = {}
+        for entity in self.annotations_of(EntityAnnotation):
+            min_start = min(int(start) for start, _ in entity.spans)
+            max_end = max(int(end) for _, end in entity.spans)
+            try:
+                sentence = next(i for i,(start,end) in enumerate(selected_sentence_spans) if (start <= min_start and max_end <= end))
+            except StopIteration:
+                continue
+
+            entity.spans = [ tuple(str(int(x)-skipped_space[sentence]) for x in span) for span in entity.spans ]
+            selected_annotations[entity.id] = entity
+
+        for ann in self.annotations_of(EventAnnotation):
+            if ann.ref in selected_annotations:
+                selected_annotations[ann.id] = ann
+
+        for ann in self.annotations:
+            add = isinstance(ann, SameAsAnnotation) and ann.args[0] in selected_annotations
+            add |= isinstance(ann, RelationAnnotation) and ann.arg1 in selected_annotations
+            add |= isinstance(ann, AttributeAnnotation) and ann.ref in selected_annotations
+            if add:
+                selected_annotations[ann.id] = ann
+
+        self.annotations = list(selected_annotations.values())
 
     def offset_spans(self, sentences, first):
         sentences_offset = self._compute_sentence_offset(sentences)
@@ -213,7 +245,7 @@ def merge(ann1:str, ann2:str, text:str):
 
 
 def review(ann:str, text:str, order:str):
-    """Process a merged annotation file and outputs the selected sentences.
+    """Process a merged annotation file and outputs the selected annotations.
     """
     file1 = AnnFile().load(ann)
     sents = open(text).read().split('\n')
@@ -221,6 +253,19 @@ def review(ann:str, text:str, order:str):
     order = [ int(line.strip('*')) for line in order if line ]
 
     file1.filter_sentences(sents, order)
+    for ann in file1.annotations:
+        print(ann.as_brat())
+
+def review_text(text:str, order:str):
+    """Process a merged annotation file and outputs the selected sentences.
+    """
+    sents = open(text).read().split('\n')
+    order = open(order).read().split('\n')
+    order = [ int(line.strip('*')) for line in order if line ]
+
+    selected = [ sents[i-1] for i in order ]
+    for sent in selected:
+        print(sent)
 
 
 if __name__ == "__main__":
