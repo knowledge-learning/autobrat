@@ -48,9 +48,12 @@ class RelationAnnotation:
         return "%s\t%s Arg1:%s Arg2:%s" % (self.id, self.type, self.arg1, self.arg2)
 
 class SameAsAnnotation:
+    total = 0
+
     def __init__(self, line):
+        SameAsAnnotation.total += 1
         typ, args = line[1:].strip().split(' ', 1)
-        self.id = '*'
+        self.id = '*%d' % SameAsAnnotation.total
         self.type = typ
         self.args = args.split()
 
