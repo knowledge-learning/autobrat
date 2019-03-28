@@ -526,7 +526,7 @@ E270	Concept:T256
 E271	Concept:T257 
 E272	Concept:T258 
 E192	Concept:T182 in-context:E197
-*	same-as E1013 E1230
+*	same-as E1 E2
 R1	is-a Arg1:E1 Arg2:E3
 R2	has-property Arg1:E7 Arg2:E8
 A1	Emphasized E12
@@ -548,6 +548,7 @@ R18	is-a Arg1:E104 Arg2:E103
 R19	is-a Arg1:E105 Arg2:E103
 A7	Uncertain E109
 R20	is-a Arg1:E111 Arg2:E110
+*	same-as E129 E130
 R22	part-of Arg1:E126 Arg2:E125
 R23	part-of Arg1:E127 Arg2:E125
 R24	part-of Arg1:E128 Arg2:E125
@@ -601,6 +602,7 @@ R1011	is-a Arg1:E1039 Arg2:E1040
 A1012	Uncertain E1033
 A1024	Uncertain E1207
 R1058	causes Arg1:E1012 Arg2:E1011
+*	same-as E1013 E1230
 A1011	Uncertain E1035
 A1027	Uncertain E1093
 R1014	entails Arg1:E1094 Arg2:E1096

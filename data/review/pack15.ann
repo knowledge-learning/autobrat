@@ -525,7 +525,7 @@ E271	Concept:T261
 E115	Reference:T112 
 R1	is-a Arg1:E1 Arg2:E2
 R2	has-property Arg1:E3 Arg2:E4
-*	same-as E1080 E1081 E1079
+*	same-as E5 E12
 A2	Negated E15
 R3	is-a Arg1:E19 Arg2:E17
 R4	entails Arg1:E20 Arg2:E22
@@ -548,6 +548,7 @@ R19	entails Arg1:E92 Arg2:E94
 A9	Diminished E108
 R20	causes Arg1:E105 Arg2:E108
 R21	causes Arg1:E105 Arg2:E107
+*	same-as E112 E111
 R22	causes Arg1:E122 Arg2:E116
 A10	Uncertain E116
 R23	causes Arg1:E124 Arg2:E117
@@ -569,10 +570,13 @@ R39	causes Arg1:E164 Arg2:E172
 R40	causes Arg1:E174 Arg2:E170
 R41	causes Arg1:E174 Arg2:E171
 R42	causes Arg1:E174 Arg2:E172
+*	same-as E175 E176
 R43	is-a Arg1:E175 Arg2:E177
+*	same-as E190 E191
 R44	has-property Arg1:E196 Arg2:E197
 R45	has-property Arg1:E196 Arg2:E201
 R46	has-property Arg1:E196 Arg2:E202
+*	same-as E203 E204
 R47	is-a Arg1:E203 Arg2:E205
 A14	Negated E211
 A15	Negated E213
@@ -581,6 +585,7 @@ A16	Negated E227
 R49	is-a Arg1:E230 Arg2:E231
 R50	causes Arg1:E230 Arg2:E232
 R53	causes Arg1:E248 Arg2:E247
+*	same-as E248 E251
 A18	Uncertain E259
 A19	Emphasized E260
 R54	is-a Arg1:E256 Arg2:E255
@@ -588,6 +593,7 @@ R55	is-a Arg1:E257 Arg2:E255
 R56	is-a Arg1:E258 Arg2:E255
 A20	Uncertain E262
 A1002	Uncertain E1027
+*	same-as E1080 E1081 E1079
 A1007	Emphasized E1083
 R1015	has-property Arg1:E1080 Arg2:E1083
 A1008	Emphasized E1085

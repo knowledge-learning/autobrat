@@ -529,9 +529,10 @@ A1	Negated E3
 A2	Negated E4
 R1	has-property Arg1:E5 Arg2:E6
 R2	has-property Arg1:E5 Arg2:E7
-*	same-as E49 E145
+*	same-as E14 E16
 R3	is-a Arg1:E19 Arg2:E17
 R5	part-of Arg1:E27 Arg2:E31
+*	same-as E32 E28
 R9	is-a Arg1:E46 Arg2:E45
 R10	entails Arg1:E51 Arg2:E53
 R12	entails Arg1:E65 Arg2:E67
@@ -545,6 +546,7 @@ R18	causes Arg1:E85 Arg2:E76
 R19	is-a Arg1:E89 Arg2:E90
 A6	Negated E96
 A7	Negated E98
+*	same-as E87 E100
 R20	is-a Arg1:E109 Arg2:E107
 R21	is-a Arg1:E110 Arg2:E107
 R22	is-a Arg1:E111 Arg2:E112
@@ -552,15 +554,19 @@ R24	causes Arg1:E126 Arg2:E127
 R25	is-a Arg1:E128 Arg2:E127
 R26	causes Arg1:E126 Arg2:E131
 R27	is-a Arg1:E131 Arg2:E128
+*	same-as E132 E138
 A9	Uncertain E140
 R29	causes Arg1:E142 Arg2:E144
 R30	is-a Arg1:E148 Arg2:E154
 A10	Negated E149
 R31	has-property Arg1:E155 Arg2:E149
+*	same-as E157 E158 E159
 R32	is-a Arg1:E157 Arg2:E160
 A11	Negated E163
+*	same-as E166 E167 E168
 R33	is-a Arg1:E166 Arg2:E165
 A12	Negated E181
+*	same-as E178 E183
 R34	entails Arg1:E157 Arg2:E163
 R37	is-a Arg1:E193 Arg2:E192
 A16	Uncertain E224
@@ -599,4 +605,5 @@ R4	is-a Arg1:E22 Arg2:E17
 R55	is-a Arg1:E23 Arg2:E17
 R56	is-a Arg1:E108 Arg2:E107
 R57	is-a Arg1:E44 Arg2:E1105
+*	same-as E49 E145
 R28	is-a Arg1:E49 Arg2:E143

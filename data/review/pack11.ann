@@ -532,7 +532,7 @@ R28	is-a Arg1:E100 Arg2:E96
 R29	is-a Arg1:E102 Arg2:E96
 R30	is-a Arg1:E103 Arg2:E96
 A4	Negated E106
-*	same-as E33 E38
+*	same-as E109 E110
 R34	entails Arg1:E109 Arg2:E116
 R35	entails Arg1:E109 Arg2:E117
 R36	has-property Arg1:E126 Arg2:E130
@@ -557,6 +557,7 @@ R48	has-property Arg1:E186 Arg2:E190
 R49	entails Arg1:E196 Arg2:E192
 R50	entails Arg1:E196 Arg2:E194
 A13	Uncertain E200
+*	same-as E202 E200
 R51	has-property Arg1:E203 Arg2:E205
 A15	Uncertain E207
 A16	Emphasized E214
@@ -575,7 +576,9 @@ A21	Uncertain E255
 R1006	part-of Arg1:E1030 Arg2:E1028
 R1007	part-of Arg1:E1031 Arg2:E1028
 R1008	part-of Arg1:E1032 Arg2:E1028
+*	same-as E1066 E1068
 A22	Uncertain E5
+*	same-as E33 E38
 R61	entails Arg1:E84 Arg2:E79
 R62	entails Arg1:E85 Arg2:E79
 R31	entails Arg1:E146 Arg2:E148

@@ -469,7 +469,7 @@ E243	Action:T241 Target:E1136 in-time:E244
 E244	Concept:T242 
 E245	Concept:T243 
 R1	is-a Arg1:E2 Arg2:E1
-*	same-as E216 E220
+*	same-as E8 E9
 R4	entails Arg1:E27 Arg2:E29
 R5	entails Arg1:E27 Arg2:E30
 R6	entails Arg1:E27 Arg2:E31
@@ -477,6 +477,7 @@ A2	Uncertain E40
 A3	Uncertain E42
 R8	causes Arg1:E48 Arg2:E47
 A4	Uncertain E47
+*	same-as E52 E55
 R9	causes Arg1:E75 Arg2:E73
 R10	causes Arg1:E76 Arg2:E73
 R11	causes Arg1:E77 Arg2:E73
@@ -518,9 +519,12 @@ R36	causes Arg1:E177 Arg2:E183
 R37	is-a Arg1:E184 Arg2:E185
 R38	causes Arg1:E186 Arg2:E184
 R39	is-a Arg1:E187 Arg2:E188
+*	same-as E187 E189
 R42	is-a Arg1:E202 Arg2:E203
+*	same-as E202 E205
 R43	entails Arg1:E207 Arg2:E212
 R44	is-a Arg1:E215 Arg2:E217
+*	same-as E216 E220
 R46	is-a Arg1:E225 Arg2:E224
 A22	Uncertain E229
 R47	causes Arg1:E230 Arg2:E233

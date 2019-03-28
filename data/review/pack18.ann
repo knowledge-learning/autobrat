@@ -480,7 +480,7 @@ E247	Concept:T239
 E248	Predicate:T240 Domain:E141 Arg:E145
 E249	Concept:T137 in-context:E142
 E149	Concept:T221 
-*	same-as E143 E249
+*	same-as E1 E2
 R1	is-a Arg1:E3 Arg2:E4
 R2	causes Arg1:E3 Arg2:E5
 R3	causes Arg1:E3 Arg2:E7
@@ -501,6 +501,7 @@ A10	Negated E91
 A11	Negated E95
 R17	is-a Arg1:E100 Arg2:E99
 A12	Uncertain E106
+*	same-as E111 E112
 R18	entails Arg1:E109 Arg2:E110
 A13	Uncertain E120
 R19	is-a Arg1:E122 Arg2:E123
@@ -546,9 +547,11 @@ A1004	Emphasized E1030
 R1003	has-property Arg1:E1026 Arg2:E1030
 R1004	part-of Arg1:E1037 Arg2:E1040
 A1005	Negated E1043
+*	same-as E1203 E1200
 R47	has-property Arg1:E1021 Arg2:E1022
 R12	has-property Arg1:E76 Arg2:E77
 R15	causes Arg1:E94 Arg2:E98
 R16	causes Arg1:E91 Arg2:E98
 A26	Negated E248
+*	same-as E143 E249
 A18	Emphasized E150

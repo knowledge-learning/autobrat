@@ -584,7 +584,7 @@ R18	has-property Arg1:E92 Arg2:E95
 R19	is-a Arg1:E99 Arg2:E93
 R20	has-property Arg1:E99 Arg2:E95
 R21	is-a Arg1:E122 Arg2:E123
-*	same-as E1281 E1142
+*	same-as E124 E125
 A2	Negated E130
 R24	entails Arg1:E136 Arg2:E141
 A4	Uncertain E145
@@ -604,7 +604,9 @@ R44	is-a Arg1:E257 Arg2:E253
 A10	Uncertain E304
 A1001	Emphasized E1043
 R1008	is-a Arg1:E1043 Arg2:E1044
+*	same-as E1046 E1047
 R1009	is-a Arg1:E1045 Arg2:E1046
+*	same-as E1049 E1050
 R1011	is-a Arg1:E1001 Arg2:E1005
 R1012	is-a Arg1:E1002 Arg2:E1005
 R1013	is-a Arg1:E1076 Arg2:E1005
@@ -624,6 +626,7 @@ R1041	is-a Arg1:E1250 Arg2:E1251
 R1014	is-a Arg1:E1006 Arg2:E1077
 R1001	causes Arg1:E1083 Arg2:E1013
 A1016	Emphasized E1242
+*	same-as E1201 E1202
 R1019	entails Arg1:E1042 Arg2:E1043
 R1022	part-of Arg1:E1053 Arg2:E1054
 R1023	causes Arg1:E1286 Arg2:E1149
@@ -644,4 +647,5 @@ R1050	causes Arg1:E1284 Arg2:E1273
 R1051	causes Arg1:E1092 Arg2:E1273
 R1052	causes Arg1:E1085 Arg2:E1273
 R1053	causes Arg1:E1285 Arg2:E1273
+*	same-as E1281 E1142
 A11	Emphasized E31

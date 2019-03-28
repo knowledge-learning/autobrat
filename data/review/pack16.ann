@@ -506,7 +506,7 @@ E1270	Predicate:T1269 Arg:E1222 Arg2:E1223 Domain:E1224
 E1269	Reference:T1268 
 E1054	Reference:T1053 
 E255	Predicate:T248 Arg:E1043
-*	same-as E1114 E1108 E1111
+*	same-as E2 E4
 A1	Negated E9
 R3	has-property Arg1:E16 Arg2:E28
 R4	has-property Arg1:E24 Arg2:E28
@@ -531,10 +531,12 @@ A6	Negated E87
 R22	has-property Arg1:E86 Arg2:E89
 R23	causes Arg1:E94 Arg2:E93
 R24	causes Arg1:E94 Arg2:E90
+*	same-as E119 E120 E121
 R36	entails Arg1:E114 Arg2:E117
 A9	Negated E129
 R37	is-a Arg1:E127 Arg2:E128
 R38	has-property Arg1:E127 Arg2:E129
+*	same-as E136 E130
 R39	causes Arg1:E138 Arg2:E137
 A10	Negated E149
 R40	is-a Arg1:E153 Arg2:E151
@@ -545,6 +547,8 @@ R44	causes Arg1:E172 Arg2:E175
 R45	causes Arg1:E172 Arg2:E176
 A12	Negated E185
 R46	causes Arg1:E181 Arg2:E179
+*	same-as E186 E188
+*	same-as E191 E192
 R47	is-a Arg1:E190 Arg2:E191
 R48	entails Arg1:E202 Arg2:E206
 R49	is-a Arg1:E218 Arg2:E217
@@ -565,9 +569,11 @@ A1005	Uncertain E1048
 A1006	Negated E1057
 A1007	Negated E1061
 R1010	causes Arg1:E1061 Arg2:E1057
+*	same-as E1095 E1098
 R1018	is-a Arg1:E1097 Arg2:E1096
 A1010	Negated E1111
 A1011	Negated E1108
+*	same-as E1114 E1108 E1111
 A1015	Emphasized E1175
 R1027	has-property Arg1:E1172 Arg2:E1176
 A1024	Uncertain E1221

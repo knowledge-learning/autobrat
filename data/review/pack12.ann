@@ -522,7 +522,7 @@ E28	Concept:T28
 E154	Action:T216 Subject:E271
 E271	Concept:T150 
 R1	part-of Arg1:E5 Arg2:E1
-*	same-as E209 E210
+*	same-as E26 E27
 R5	is-a Arg1:E24 Arg2:E21
 R6	is-a Arg1:E25 Arg2:E21
 R7	is-a Arg1:E26 Arg2:E21
@@ -530,6 +530,7 @@ R8	is-a Arg1:E34 Arg2:E38
 R9	is-a Arg1:E35 Arg2:E38
 R10	is-a Arg1:E36 Arg2:E38
 R11	is-a Arg1:E37 Arg2:E38
+*	same-as E56 E57
 R17	is-a Arg1:E54 Arg2:E55
 A3	Uncertain E67
 R20	part-of Arg1:E84 Arg2:E79
@@ -547,9 +548,11 @@ R33	is-a Arg1:E127 Arg2:E128
 R34	is-a Arg1:E132 Arg2:E131
 A5	Uncertain E135
 A6	Uncertain E137
+*	same-as E139 E142
 R36	has-property Arg1:E149 Arg2:E152
 R37	is-a Arg1:E153 Arg2:E155
 R38	part-of Arg1:E159 Arg2:E158
+*	same-as E155 E156
 R40	is-a Arg1:E165 Arg2:E164
 A7	Uncertain E167
 A8	Emphasized E170
@@ -566,6 +569,8 @@ R49	entails Arg1:E192 Arg2:E195
 A11	Negated E198
 R50	is-a Arg1:E203 Arg2:E201
 A12	Uncertain E204
+*	same-as E206 E207
+*	same-as E209 E210
 A13	Uncertain E212
 R51	causes Arg1:E214 Arg2:E212
 R52	is-a Arg1:E220 Arg2:E221
