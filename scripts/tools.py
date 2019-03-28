@@ -267,6 +267,12 @@ def review_text(text:str, order:str):
     for sent in selected:
         print(sent)
 
+def to_review(order:str):
+    order = open(order).read().split("\n")
+    for i, o in enumerate(order):
+        if o.endswith('*'):
+            print(i+1)
+
 
 if __name__ == "__main__":
     fire.Fire()
