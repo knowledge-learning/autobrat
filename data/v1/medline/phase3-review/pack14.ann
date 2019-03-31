@@ -507,4 +507,4 @@ R25	is-a Arg1:E1137 Arg2:E1138
 T64	Concept 79 89	diferentes
 E65	Concept:T64 
 R21	part-of Arg1:E60 Arg2:E59	
-R27	has-property Arg1:E86 Arg2:E94	
+*	same-as E94 E86

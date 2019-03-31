@@ -261,7 +261,7 @@ E26	Predicate:T26 Arg:E27
 E27	Concept:T27 
 E28	Concept:T28 
 E29	Action:T29 Subject:E30
-E30	Concept:T30 
+E30	Concept:T30 in-place:E31
 E31	Concept:T31 
 E32	Concept:T32 
 E33	Concept:T33 
@@ -270,8 +270,8 @@ E35	Concept:T35
 E36	Concept:T36 
 E37	Action:T29 Subject:E42
 E39	Action:T29 Subject:E40
-E40	Concept:T30 
-E42	Concept:T30 
+E40	Concept:T30 in-place:E32
+E42	Concept:T30 in-place:E33
 E38	Reference:T37 
 E41	Action:T38 Subject:E38 Target:E44
 E43	Concept:T39 
@@ -330,7 +330,7 @@ E97	Concept:T93
 E98	Concept:T94 
 E99	Concept:T95 
 E106	Concept:T102 
-E107	Action:T103 in-context:E10
+E107	Action:T103 
 E108	Concept:T104 
 E109	Concept:T105 
 E110	Concept:T106 
@@ -358,7 +358,7 @@ E138	Concept:T134
 E139	Concept:T135 in-context:E138
 E146	Concept:T142 
 E147	Concept:T143 in-place:E148
-E148	Concept:T144 
+E148	Concept:T144 in-place:E149
 E149	Concept:T145 
 E150	Concept:T146 
 E151	Concept:T147 
@@ -367,7 +367,7 @@ E153	Concept:T149
 E154	Concept:T150 
 E155	Concept:T151 
 E156	Action:T152 Subject:E155 Target:E157
-E157	Concept:T153 
+E157	Concept:T153 in-place:E158
 E158	Concept:T154 
 E159	Action:T155 Target:E160 Subject:E49
 E160	Concept:T156 
@@ -376,7 +376,7 @@ E162	Concept:T158
 E163	Predicate:T159 Domain:E162
 E164	Action:T160 Subject:E161 Target:E167
 E165	Concept:T161 
-E166	Action:T162 Subject:E161 Target:E160 Subject2:E49
+E166	Action:T162 Subject:E161 Target:E160
 E167	Predicate:T163 Domain:E165
 E168	Concept:T164 
 E169	Concept:T165 
@@ -401,7 +401,7 @@ E187	Concept:T183 in-context2:E189 in-context:E188
 E188	Concept:T184 
 E189	Concept:T185 
 E190	Concept:T186 
-E191	Action:T187 Subject2:E186 Target:E194 Subject:E190
+E191	Action:T187 Subject2:E186 Target:E194 Subject:E11
 E192	Concept:T188 
 E193	Concept:T189 
 E194	Action:T190 Subject:E192 Target:E193
@@ -534,7 +534,7 @@ R43	is-a Arg1:E176 Arg2:E172
 R44	has-property Arg1:E177 Arg2:E180
 A8	Negated E183
 R45	has-property Arg1:E179 Arg2:E185
-R46	causes Arg1:E191 Arg2:E199
+R46	entails Arg1:E191 Arg2:E199
 R49	is-a Arg1:E218 Arg2:E219
 A11	Uncertain E233
 R50	is-a Arg1:E237 Arg2:E236
@@ -559,17 +559,10 @@ R21	has-property Arg1:E241 Arg2:E242
 R47	has-property Arg1:E241 Arg2:E243
 A16	Uncertain E242
 A17	Uncertain E243
-R2	part-of Arg1:E30 Arg2:E31	
-R3	part-of Arg1:E40 Arg2:E32	
-R23	part-of Arg1:E42 Arg2:E33	
 T9	Predicate 809 814	Todos
 E9	Predicate:T9 Domain:E62 Arg:E63
 A1	Uncertain E89
-T10	Concept 1477 1486	tremendos
-E10	Concept:T10 
-R29	part-of Arg1:E148 Arg2:E149	
-R30	part-of Arg1:E157 Arg2:E158	
-T11	Action 2765 2768	sus
-E11	Action:T11 Target:E190 Subject:E187
+T11	Predicate 2765 2768	sus
+E11	Predicate:T11 Domain:E190 Arg:E187
 R32	causes Arg1:E1211 Arg2:E1213	
 R48	part-of Arg1:E219 Arg2:E220	

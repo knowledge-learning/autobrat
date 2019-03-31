@@ -145,7 +145,7 @@ T161	Concept 2320 2325;2326 2333	látex natural
 T162	Action 2340 2348	aumentar
 T163	Predicate 2353 2367	probabilidades
 T164	Action 2371 2382	desarrollar
-T165	Concept 2387 2394	alergia
+T165	Action 2387 2394	alergia
 T166	Reference 2397 2401	este
 T167	Concept 2402 2410	producto
 T168	Reference 2412 2414	La
@@ -288,7 +288,7 @@ E41	Action:T40
 E42	Concept:T41 
 E43	Concept:T42 
 E44	Concept:T43 
-E45	Action:T44 Subject:E44 Target:E46 Target2:E48 in-time:E32
+E45	Action:T44 Subject:E44 Target:E46 Target2:E48 in-time:E50
 E46	Concept:T45 in-context:E47
 E47	Concept:T46 
 E48	Action:T47 Target:E49
@@ -397,7 +397,7 @@ E165	Concept:T161
 E166	Action:T162 Target:E167 Subject:E162
 E167	Predicate:T163 Arg:E168
 E168	Action:T164 Target:E169
-E169	Concept:T165 
+E169	Action:T165 Target:E170
 E170	Reference:T166 
 E171	Concept:T167 
 E172	Reference:T168 
@@ -587,12 +587,8 @@ R33	entails Arg1:E152 Arg2:E156
 R63	entails Arg1:E1180 Arg2:E1179
 A8	Emphasized E203
 A14	Emphasized E215
-T31	Predicate 598 605	Durante
-E32	Predicate:T31 Arg:E50
 A2	Uncertain E91
+A27	Emphasized E208
 A23	Uncertain E93
 A24	Uncertain E94
 A25	Uncertain E95
-R10	causes Arg1:E170 Arg2:E168	
-A26	Negated E179
-A27	Emphasized E208

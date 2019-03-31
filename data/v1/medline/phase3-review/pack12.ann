@@ -277,7 +277,7 @@ E26	Concept:T26
 E27	Concept:T27 
 E29	Concept:T29 in-context:E30
 E30	Concept:T30 
-E31	Action:T31 Subject:E29 Target:E32
+E31	Action:T31 Subject:E29 Target:E32 Target2:E33
 E32	Reference:T32 
 E33	Action:T33 Target:E34 Target2:E35 Target3:E36 Target4:E37
 E34	Concept:T34 
@@ -338,7 +338,7 @@ E111	Reference:T108
 E112	Action:T109 in-place:E114 Subject:E108
 E113	Concept:T110 
 E114	Action:T111 Target:E115 in-place:E113
-E115	Concept:T112 
+E115	Concept:T112 in-context:E116
 E116	Concept:T113 
 E117	Concept:T114 in-context:E118
 E118	Predicate:T115 Arg:E119
@@ -402,12 +402,12 @@ E181	Action:T177 Target:E183
 E182	Concept:T178 
 E183	Concept:T179 
 E184	Concept:T180 
-E185	Predicate:T181 Arg:E186 Domain:E16
+E185	Predicate:T181 Arg:E186 Domain:E184
 E186	Concept:T182 
 E187	Concept:T183 
-E188	Predicate:T181 Arg:E187 Domain:E16
+E188	Predicate:T181 Arg:E187 Domain:E184
 E189	Concept:T178 
-E190	Action:T184 Target:E180 Target2:E181 in-time:E16
+E190	Action:T184 Target:E180 Target2:E181 in-time:E184
 E191	Action:T184 in-time:E185 in-time2:E188 Target:E180 Target2:E181
 E192	Action:T185 Target:E193
 E193	Action:T186 Target:E194
@@ -446,7 +446,7 @@ E225	Action:T218 Target:E226
 E226	Concept:T219 in-context:E227
 E227	Concept:T220 
 E228	Concept:T221 
-E229	Action:T222 Target:E230 in-time:E231
+E229	Action:T222 Target:E230 in-context:E231
 E230	Concept:T223 
 E231	Action:T224 Target:E232
 E232	Action:T225 Target:E233 in-context:E234
@@ -603,13 +603,8 @@ R65	has-property Arg1:E1234 Arg2:E1235
 R66	has-property Arg1:E1234 Arg2:E1236
 A18	Uncertain E114
 R24	causes Arg1:E135 Arg2:E137
-T13	Predicate 380 384	para
-E13	Predicate:T13 Arg:E33 Domain:E32
 T14	Predicate 939 947	al menos
 E14	Predicate:T14 Arg:E1043
-T15	Predicate 1208 1219	a través de
+T15	Predicate 1210 1216	través
 E15	Predicate:T15 Arg:E99
-R2	part-of Arg1:E115 Arg2:E116	
-R3	has-property Arg1:E139 Arg2:E142	
-T16	Predicate 2407 2414	durante
-E16	Predicate:T16 Arg:E184
+*	same-as E142 E139

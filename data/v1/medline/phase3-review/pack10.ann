@@ -306,7 +306,7 @@ E109	Action:T105 Target:E110
 E110	Concept:T106 in-context:E111
 E111	Concept:T107 
 E112	Concept:T108 
-E113	Concept:T109 in-time:E1
+E113	Concept:T109 
 E114	Concept:T110 
 E115	Concept:T111 in-context:E116 in-place:E117
 E116	Concept:T112 
@@ -316,7 +316,7 @@ E119	Action:T115
 E120	Concept:T116 
 E121	Concept:T117 
 E122	Action:T118 Target:E123
-E123	Concept:T119 
+E123	Concept:T119 in-place:E124
 E124	Concept:T120 
 E125	Reference:T121 in-place:E126
 E126	Predicate:T122 Arg:E127
@@ -560,8 +560,3 @@ R65	entails Arg1:E240 Arg2:E20
 *	same-as E23 E24
 R66	part-of Arg1:E174 Arg2:E175
 A12	Uncertain E1203
-T1	Predicate 1653 1660	algunas
-E1	Predicate:T1 Arg:E2
-T2	Concept 1661 1666	veces
-E2	Concept:T2 
-R1	part-of Arg1:E123 Arg2:E124	

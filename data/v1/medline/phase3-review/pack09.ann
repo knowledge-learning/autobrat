@@ -246,7 +246,7 @@ T243	Reference 3170 3172	Se
 E1	Concept:T1 
 E2	Concept:T2 
 E3	Action:T3 Target:E2 in-place:E4 Subject:E2
-E4	Concept:T4 in-context:E5
+E4	Concept:T4 in-context:E5 in-place:E6
 E5	Concept:T5 
 E6	Concept:T6 
 E8	Concept:T8 
@@ -272,7 +272,6 @@ E50	Action:T49 Subject:E49 Target:E51
 E51	Concept:T50 
 E52	Concept:T51 
 E53	Concept:T52 
-E54	Action:T53 Target:E55 in-time:E57
 E55	Concept:T54 in-context:E56
 E56	Concept:T55 
 E57	Predicate:T56 
@@ -496,7 +495,7 @@ R3	is-a Arg1:E9 Arg2:E8
 *	same-as E32 E33
 R5	causes Arg1:E45 Arg2:E47
 R6	is-a Arg1:E50 Arg2:E52
-R7	entails Arg1:E53 Arg2:E54
+R7	entails Arg1:E53 Arg2:E11
 A1	Negated E58
 A2	Emphasized E65
 A3	Emphasized E67
@@ -561,12 +560,8 @@ A13	Uncertain E159
 A14	Uncertain E179
 R30	entails Arg1:E198 Arg2:E201
 R46	causes Arg1:E230 Arg2:E231
-R9	part-of Arg1:E4 Arg2:E6	
 *	same-as E1016 E1021
-T10	Predicate 829 840	a menos que
-E10	Predicate:T10 Arg:E58
-A11	Uncertain E54
-E11	Action:T53 Target:E55 in-context:E10
+E11	Action:T53 Target:E55 in-time:E57 in-context:E58
 A12	Negated E11
 T11	Concept 3062 3069	proceso
 E12	Concept:T11 

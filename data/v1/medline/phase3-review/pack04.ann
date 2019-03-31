@@ -39,7 +39,6 @@ T54	Predicate 739 742	más
 T55	Concept 770 777	persona
 T56	Concept 782 793	diagnóstico
 T57	Concept 794 799	doble
-T59	Concept 818 824	mental
 T61	Concept 830 837	alcohol
 T62	Concept 840 846	drogas
 T63	Predicate 850 855	mismo
@@ -171,8 +170,7 @@ T1061	Concept 1200 1211	candelabros
 T1062	Concept 1213 1220	estufas
 T1063	Concept 1222 1229	fogones
 T1064	Concept 1233 1236	gas
-T1065	Concept 1239 1247	sistemas
-T1066	Concept 1251 1262	calefacción
+T1065	Concept 1239 1247;1248 1250;1251 1262	sistemas de calefacción
 T1076	Concept 71 98	pruebas de medicina nuclear
 T1077	Predicate 115 120	grupo
 T1078	Concept 124 136	enfermedades
@@ -200,7 +198,7 @@ T1148	Action 2152 2161	hormigueo
 T1149	Action 2164 2178	entumecimiento
 T1164	Concept 2343 2350;2351 2359;2360 2369	defecto cardíaco congénito
 T1165	Concept 2376 2384	problema
-T1166	Concept 2392 2402	estructura
+T1166	Predicate 2392 2402	estructura
 T1167	Concept 2407 2414	corazón
 T1180	Concept 2694 2697	paz
 T1181	Concept 2699 2710	comodidades
@@ -313,7 +311,7 @@ E46	Concept:T46
 E47	Concept:T47 
 E48	Concept:T48 
 E49	Predicate:T49 Arg:E50 Domain:E48
-E50	Concept:T50 
+E50	Concept:T50 in-place:E51
 E51	Concept:T51 
 E52	Action:T52 
 E53	Concept:T53 in-context:E52
@@ -321,14 +319,12 @@ E54	Predicate:T54 Domain:E53
 E55	Concept:T55 in-context:E56
 E56	Concept:T56 in-context:E57
 E57	Concept:T57 
-E58	Concept:T2 in-context:E59 in-context2:E61
-E59	Concept:T59 
-E60	Concept:T2 in-context:E62
+E60	Action:T2 Target:E62 Target2:E61 in-context:E5
 E61	Concept:T61 
 E62	Concept:T62 
 E63	Predicate:T63 Arg:E64
 E64	Concept:T64 
-E65	Action:T65 Subject:E55 Target2:E60 in-time:E63 Target:E58
+E65	Action:T65 Subject:E55 Target2:E60 in-time:E63
 E92	Predicate:T92 Domain:E93
 E93	Reference:T93 
 E94	Concept:T94 
@@ -446,7 +442,7 @@ E1050	Concept:T1050 in-context:E1051 in-place:E1052
 E1051	Concept:T1051 
 E1052	Concept:T1052 
 E1053	Concept:T1053 
-E1054	Concept:T1054 
+E1054	Concept:T1054 in-context:E1057
 E1057	Concept:T1057 
 E1058	Action:T1058 Subject:E1059 Subject3:E1061 Subject2:E1060 Subject4:E1062 Subject6:E1065 Target:E1054 Subject5:E1063
 E1059	Concept:T1059 
@@ -455,8 +451,7 @@ E1061	Concept:T1061
 E1062	Concept:T1062 
 E1063	Concept:T1063 in-context:E1064
 E1064	Concept:T1064 
-E1065	Concept:T1065 in-context:E1066
-E1066	Concept:T1066 
+E1065	Concept:T1065 
 E1076	Concept:T1076 
 E1077	Predicate:T1077 Domain:E1078
 E1078	Concept:T1078 
@@ -474,7 +469,7 @@ E1137	Concept:T1137
 E1138	Action:T1138 Subject:E1135 in-time:E1141 Target:E1136
 E1139	Concept:T1139 
 E1140	Concept:T1140 
-E1141	Predicate:T1141 Arg:E1140 Arg2:E3
+E1141	Predicate:T1141 Arg:E1140 Domain:E3
 E1143	Action:T1143 Target:E1144
 E1144	Concept:T1144 
 E1145	Concept:T1145 in-context:E1146
@@ -484,7 +479,7 @@ E1148	Action:T1148
 E1149	Action:T1149 
 E1164	Concept:T1164 
 E1165	Concept:T1165 in-place:E1166
-E1166	Concept:T1166 
+E1166	Predicate:T1166 Arg:E1167
 E1167	Concept:T1167 
 E1180	Concept:T1180 
 E1181	Concept:T1181 
@@ -649,13 +644,12 @@ R1	part-of Arg1:E34 Arg2:E1
 R2	part-of Arg1:E41 Arg2:E43	
 R3	part-of Arg1:E44 Arg2:E45	
 R4	part-of Arg1:E46 Arg2:E47	
-R12	part-of Arg1:E50 Arg2:E51	
-T2	Concept 809 817	problema
-R13	causes Arg1:E1057 Arg2:E1054	
+T2	Action 809 817	problema
 T3	Reference 1918 1922	éste
 E2	Reference:T3 
-T4	Concept 2065 2072	una vez
+T4	Concept 2065 2068;2069 2072	una vez
 E3	Concept:T4 
-R14	part-of Arg1:E1166 Arg2:E1167	
 T5	Action 3180 3188	utilizan
-E4	Action:T5 Target:E1226 Subject:E1201 Subject2:E1203
+E4	Action:T5 Subject:E1201 Subject2:E1203 Target:E1227
+T6	Concept 818 824	mental
+E5	Concept:T6 

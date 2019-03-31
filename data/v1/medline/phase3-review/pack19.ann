@@ -9,7 +9,6 @@ T10	Concept 92 102	subyacente
 T11	Action 109 117	ayudarle
 T12	Action 120 125	subir
 T13	Concept 129 133	peso
-T14	Concept 146 163	partes del cuerpo
 T15	Concept 169 177	párpados
 T16	Action 185 195	infectarse
 T17	Action 197 207	inflamarse
@@ -267,7 +266,6 @@ E10	Concept:T10
 E11	Action:T11 Target:E12 Subject:E1 Subject2:E7
 E12	Action:T12 Target:E13
 E13	Concept:T13 
-E14	Concept:T14 
 E15	Concept:T15 
 E16	Action:T16 Target:E15 Subject:E15
 E17	Action:T17 Target:E15 Subject:E15
@@ -293,7 +291,7 @@ E36	Predicate:T28 Arg:E33
 E37	Predicate:T28 Arg:E32
 E38	Reference:T33 
 E39	Action:T34 Target:E38
-E40	Action:T35 Target:E41 Target2:E42 in-context:E39
+E40	Action:T35 Target:E41 in-context:E39
 E41	Action:T36 Subject:E42
 E42	Concept:T37 
 E43	Concept:T38 in-place:E44
@@ -337,7 +335,7 @@ E88	Predicate:T82 Domain:E89
 E89	Predicate:T83 Domain:E91 in-context:E90
 E90	Concept:T84 
 E91	Concept:T85 
-E92	Action:T86 Subject:E88 Target:E97
+E92	Action:T86 Subject:E88 in-context:E61
 E93	Concept:T87 
 E94	Action:T88 Subject:E93 Target:E95
 E95	Predicate:T89 Arg:E96
@@ -396,15 +394,15 @@ E171	Concept:T163
 E172	Concept:T164 
 E173	Action:T165 Target:E174
 E174	Concept:T166 
-E175	Action:T167 Target:E177
+E175	Action:T167 Target:E177 in-time:E57
 E176	Concept:T168 
 E177	Predicate:T169 Domain:E178 Arg:E176
 E178	Concept:T170 
 E179	Concept:T171 
-E180	Action:T167 Target:E179
+E180	Action:T167 Target:E179 in-time:E57
 E181	Predicate:T172 Domain:E182
 E182	Concept:T173 
-E183	Predicate:T174 Domain:E184
+E183	Predicate:T174 Arg:E184
 E184	Concept:T175 
 E185	Action:T176 Target:E186
 E186	Concept:T177 
@@ -423,9 +421,9 @@ E209	Concept:T200 in-context:E210
 E210	Concept:T201 
 E211	Concept:T202 in-context:E212
 E212	Concept:T203 
-E213	Action:T204 in-context:E214 Subject:E211 Target:E210
+E213	Action:T204 in-context:E214 Subject:E211
 E214	Concept:T205 
-E215	Action:T206 in-time:E219 Subject:E211 Target:E210
+E215	Action:T206 in-time:E219 Subject:E211
 E216	Concept:T207 
 E217	Concept:T208 
 E219	Predicate:T210 Domain:E216 Arg:E217
@@ -453,7 +451,7 @@ E240	Predicate:T231 Domain:E238 Arg:E234 in-context:E239
 E249	Action:T240 Target:E250 in-context:E251 Subject:E58
 E250	Concept:T241 
 E251	Concept:T242 
-E252	Action:T243 Target:E249 in-time:E253
+E252	Action:T243 Target:E249 in-time:E253 Subject:E58
 E253	Concept:T244 
 E254	Concept:T245 
 E255	Action:T246 Target:E256 Target2:E257 Target3:E258 in-place:E259
@@ -522,7 +520,6 @@ E1273	Concept:T1258
 E1014	Predicate:T1260 Domain:E1052 Domain2:E1056
 E5	Action:T5 Target:E28 Target2:E36 Target3:E37 Subject:E26 Subject2:E25
 A1	Uncertain E11
-R1	is-a Arg1:E15 Arg2:E14
 A2	Uncertain E16
 A3	Uncertain E17
 A4	Uncertain E18
@@ -550,7 +547,6 @@ R32	is-a Arg1:E142 Arg2:E143
 R33	is-a Arg1:E145 Arg2:E146
 R34	is-a Arg1:E153 Arg2:E154
 R36	causes Arg1:E162 Arg2:E167
-R37	is-a Arg1:E168 Arg2:E170
 A14	Uncertain E180
 R38	entails Arg1:E173 Arg2:E180
 R39	entails Arg1:E173 Arg2:E175
@@ -568,7 +564,6 @@ A20	Uncertain E233
 R46	is-a Arg1:E234 Arg2:E235
 R49	causes Arg1:E252 Arg2:E254
 R50	entails Arg1:E255 Arg2:E260
-R51	is-a Arg1:E263 Arg2:E265
 A1002	Uncertain E1093
 A1007	Emphasized E1095
 A1010	Emphasized E1127
@@ -591,15 +586,22 @@ R7	entails Arg1:E151 Arg2:E155
 A27	Uncertain E1184
 R8	causes Arg1:E1237 Arg2:E1239
 T9	Predicate 817 824	Algunas
-E9	Predicate:T9 Domain:E73 in-context:E74
-T52	Predicate 2173 2178	Antes
-E57	Predicate:T52 Arg:E173
+E9	Predicate:T9 Domain:E73 Arg:E74
 R5	is-a Arg1:E213 Arg2:E209	
 R6	is-a Arg1:E215 Arg2:E209	
 T53	Reference 3236 3241	usted
 E58	Reference:T53 
-T54	Concept 3476 3483	segunda
-E59	Concept:T54 
-R11	has-property Arg1:E266 Arg2:E59	
+T54	Predicate 3476 3483	segunda
+E59	Predicate:T54 Domain:E266
 T55	Predicate 3528 3542	Frecuentemente
 E60	Predicate:T55 Domain:E1272
+T14	Concept 157 163	cuerpo
+E14	Concept:T14 
+R1	part-of Arg1:E15 Arg2:E14	
+T56	Predicate 1096 1101	según
+E61	Predicate:T56 Arg:E94
+*	same-as E168 E170
+T52	Concept 2173 2178	Antes
+E57	Concept:T52 
+*	same-as E263 E59
+R11	is-a Arg1:E263 Arg2:E265	

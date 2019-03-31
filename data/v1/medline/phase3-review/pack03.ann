@@ -83,9 +83,9 @@ T106	Concept 1441 1450	posterior
 T107	Concept 1459 1462	ojo
 T108	Concept 1467 1473	retina
 T109	Concept 1478 1485	cerebro
-T125	Predicate 1714 1723	problemas
+T125	Action 1714 1723	problemas
 T126	Concept 1730 1736	sangre
-T127	Predicate 1752 1761	problemas
+T127	Action 1752 1761	problemas
 T128	Action 1765 1776	coagulación
 T129	Concept 1778 1786;1787 1797	coágulos sanguíneos
 T131	Concept 1800 1810	desórdenes
@@ -157,7 +157,7 @@ T217	Concept 2942 2950;2951 2958	historia clínica
 T218	Concept 2960 2967	pruebas
 T219	Concept 2972 2980	imágenes
 T220	Concept 2986 2993	biopsia
-T221	Predicate 2998 3005	pruebas
+T221	Action 2998 3005	pruebas
 T222	Action 3012 3019	función
 T223	Concept 3027 3035	pulmones
 T224	Concept 2921 2927	doctor
@@ -344,9 +344,9 @@ E109	Concept:T106
 E110	Concept:T107 
 E111	Concept:T108 
 E112	Concept:T109 
-E128	Predicate:T125 Arg:E129
+E128	Action:T125 Target:E129
 E129	Concept:T126 
-E130	Predicate:T127 Arg:E131
+E130	Action:T127 Target:E131
 E131	Action:T128 
 E132	Concept:T129 
 E134	Concept:T131 in-context:E135
@@ -418,7 +418,7 @@ E220	Concept:T217
 E221	Concept:T218 in-context:E222
 E222	Concept:T219 
 E223	Concept:T220 
-E224	Predicate:T221 Arg:E225
+E224	Action:T221 Target:E225
 E225	Action:T222 Target:E226
 E226	Concept:T223 
 E227	Concept:T224 

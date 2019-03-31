@@ -266,7 +266,7 @@ E21	Concept:T21 in-context:E22
 E22	Concept:T22 in-context:E23
 E23	Concept:T23 
 E27	Concept:T24 
-E28	Predicate:T25 Arg:E27 Domain:E16
+E28	Predicate:T25 Arg:E27
 E29	Action:T26 in-context:E34 Target:E30
 E30	Concept:T27 
 E31	Action:T28 Target:E35
@@ -584,3 +584,4 @@ T13	Concept 1872 1877	horas
 E13	Concept:T13 
 T14	Reference 3483 3488	usted
 E14	Reference:T14 in-context:E247
+R3	has-property Arg1:E16 Arg2:E28	

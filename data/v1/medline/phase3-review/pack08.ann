@@ -160,9 +160,6 @@ T182	Concept 2628 2638;2639 2647	trastornos mentales
 T183	Concept 2652 2659	comunes
 T184	Action 2674 2686	tratamientos
 T185	Concept 2687 2698	disponibles
-T186	Concept 2708 2716;2717 2719;2720 2722;2723 2727;2728 2732	problema de la boca seca
-T187	Action 2743 2751	masticar
-T188	Concept 2752 2756;2757 2759;2760 2766	goma de mascar
 T189	Concept 2771 2777	azúcar
 T190	Action 2780 2786	chupar
 T191	Concept 2790 2798	caramelo
@@ -318,7 +315,7 @@ E79	Concept:T77
 E80	Action:T78 Target:E78 in-place:E81
 E81	Concept:T79 
 E82	Concept:T80 
-E83	Concept:T81 
+E83	Concept:T81 in-place:E84
 E84	Concept:T82 
 E85	Action:T83 Target:E83
 E86	Action:T84 Subject:E89 Target:E83
@@ -414,15 +411,12 @@ E185	Concept:T182
 E186	Concept:T183 
 E187	Action:T184 Target:E185 in-context:E188
 E188	Concept:T185 
-E189	Concept:T186 
-E190	Action:T187 Target:E191
-E191	Concept:T188 in-context:E192
 E192	Concept:T189 
 E193	Action:T190 Target:E194
 E194	Concept:T191 in-context:E195
 E195	Concept:T192 
 E196	Action:T193 Target:E197
-E197	Action:T194 Target:E198 Target2:E200 in-context:E199
+E197	Action:T194 Target2:E200 Target:E198 in-context:E199
 E198	Concept:T195 
 E199	Concept:T196 
 E200	Concept:T197 
@@ -548,7 +542,6 @@ A16	Uncertain E172
 R31	entails Arg1:E174 Arg2:E176
 *	same-as E179 E180
 R33	has-property Arg1:E185 Arg2:E186
-A17	Uncertain E190
 A18	Negated E192
 A19	Negated E195
 R34	causes Arg1:E206 Arg2:E202
@@ -576,13 +569,23 @@ A29	Uncertain E1110
 A30	Emphasized E174
 *	same-as E183 E184
 A31	Diminished E213
-R14	part-of Arg1:E83 Arg2:E84	
 T19	Predicate 2571 2576	hacia
 E20	Predicate:T19 Arg:E182 in-place:E21
-T20	Predicate 2585 2596	a través de
+T20	Predicate 2587 2593	través
 E21	Predicate:T20 Arg:E183
-T21	Predicate 2700 2704	Para
-E22	Predicate:T21 Domain:E189 Arg:E190 Arg2:E193 Arg3:E196
-A2	Negated E1235
-T22	Predicate 3441 3452	a través de
+T22	Predicate 3443 3449	través
 E23	Predicate:T22 Arg:E242
+T21	Action 2743 2751	masticar
+E22	Action:T21 Target:E24
+T23	Concept 2752 2756;2757 2759;2760 2766	goma de mascar
+E24	Concept:T23 in-context:E192
+T58	Action 2708 2716	problema
+E60	Action:T58 Target:E61
+T59	Concept 2723 2727	boca
+E61	Concept:T59 in-context:E62
+T60	Concept 2728 2732	seca
+E62	Concept:T60 
+A9	Negated E60
+R14	causes Arg1:E22 Arg2:E60	
+R15	causes Arg1:E193 Arg2:E60	
+R16	causes Arg1:E196 Arg2:E60	

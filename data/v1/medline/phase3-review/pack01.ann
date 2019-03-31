@@ -155,7 +155,7 @@ T212	Concept 2917 2925	psicosis
 T213	Action 2926 2933	pierden
 T214	Action 2937 2945	contacto
 T215	Concept 2953 2961	realidad
-T216	Concept 2974 2983	prácticas
+T216	Predicate 2974 2983	prácticas
 T217	Concept 2987 2994	higiene
 T218	Concept 2967 2973	buenas
 T219	Action 3007 3014	lavarse
@@ -299,8 +299,8 @@ E52	Concept:T52
 E53	Action:T53 Subject:E50 Target:E54
 E54	Concept:T54 in-context:E55
 E55	Concept:T55 
-E65	Action:T65 
-E66	Action:T66 
+E65	Action:T65 Subject:E34
+E66	Action:T66 Subject:E34
 E67	Action:T67 Target:E68 Subject:E34
 E68	Reference:T68 
 E69	Predicate:T69 Domain:E70
@@ -322,18 +322,18 @@ E84	Concept:T84
 E85	Action:T85 
 E86	Predicate:T86 Domain:E80 Arg:E82 Arg2:E83
 E87	Concept:T87 
-E88	Predicate:T88 in-place:E92 Arg:E93 Arg2:E89
+E88	Predicate:T88 in-place:E92 Arg2:E89
 E89	Concept:T89 
 E91	Concept:T91 
 E92	Concept:T92 
-E93	Predicate:T93 Arg2:E95 Arg:E94
+E93	Predicate:T93 Arg2:E95 Arg:E94 Domain:E88
 E94	Concept:T94 
 E95	Concept:T95 
-E96	Predicate:T96 Domain:E88 Arg:E97 Domain2:E35 Domain3:E89
+E96	Predicate:T96 Arg:E97 Domain:E88
 E97	Concept:T97 
 E98	Action:T98 Subject:E96 Target:E99
 E99	Concept:T99 
-E100	Action:T100 Target2:E96 Target:E88
+E100	Action:T100 Subject:E36 Target3:E87
 E101	Action:T101 in-context:E103 Target:E102
 E102	Concept:T102 
 E103	Concept:T103 in-context:E104
@@ -358,7 +358,7 @@ E132	Concept:T132
 E133	Predicate:T133 Domain:E134 Arg:E135
 E134	Concept:T134 
 E135	Concept:T135 
-E136	Predicate:T136 Arg:E137 Domain:E133
+E136	Predicate:T136 Arg:E137
 E137	Concept:T137 
 E138	Concept:T138 in-place:E133 in-place2:E136
 E139	Concept:T139 
@@ -369,12 +369,12 @@ E144	Concept:T144 in-place:E147
 E145	Concept:T145 
 E146	Predicate:T146 Domain:E139 Arg:E145
 E142	Action:T142 Subject:E49
-E148	Action:T148 Target:E150
-E150	Concept:T150 in-context:E152
-E152	Action:T152 in-place:E153
+E148	Action:T148 Target:E152
+E150	Concept:T150 
+E152	Action:T152 in-place:E153 Subject:E150
 E153	Concept:T153 
 E154	Concept:T154 
-E149	Action:T149 Subject:E37
+E149	Action:T149 
 E156	Concept:T156 
 E155	Predicate:T155 Arg:E156
 E157	Concept:T157 
@@ -417,7 +417,7 @@ E214	Concept:T212
 E215	Action:T213 Subject:E213 Target:E216
 E216	Action:T214 Target:E217
 E217	Concept:T215 
-E218	Concept:T216 Domain:E219 in-context:E220
+E218	Predicate:T216 Domain:E219 in-context:E220
 E219	Concept:T217 
 E220	Concept:T218 
 E221	Action:T219 in-context:E223 Target:E222
@@ -538,9 +538,6 @@ R16	causes Arg1:E79 Arg2:E76
 R17	causes Arg1:E81 Arg2:E76
 R18	causes Arg1:E85 Arg2:E76
 R19	is-a Arg1:E89 Arg2:E91
-A6	Negated E96
-A7	Negated E98
-*	same-as E87 E100
 R20	is-a Arg1:E109 Arg2:E107
 R21	is-a Arg1:E110 Arg2:E107
 R22	is-a Arg1:E111 Arg2:E112
@@ -602,14 +599,15 @@ R57	is-a Arg1:E44 Arg2:E1105
 *	same-as E49 E145
 R28	is-a Arg1:E49 Arg2:E143
 R6	is-a Arg1:E32 Arg2:E28	
-*	same-as E46 E45
 T33	Reference 719 721	lo
 E33	Reference:T33 
 T34	Reference 886 891	Usted
 E34	Reference:T34 
-T35	Reference 1252 1254	lo
-E35	Reference:T35 
 T36	Reference 1123 1128	usted
 E36	Reference:T36 
-T37	Concept 2078 2083	Nadie
-E37	Concept:T37 
+R7	is-a Arg1:E46 Arg2:E45	
+E38	Action:T100 Subject:E36 Target:E98
+E39	Action:T100 Subject:E36 Target:E88
+A3	Negated E38
+R8	entails Arg1:E100 Arg2:E39	
+R9	entails Arg1:E100 Arg2:E38	

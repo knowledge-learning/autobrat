@@ -256,7 +256,7 @@ E4	Concept:T4
 E5	Concept:T5 
 E6	Concept:T6 
 E7	Reference:T7 
-E8	Action:T8 in-place2:E10 Target:E7 Subject:E6 in-place:E15
+E8	Action:T8 Target:E7 Subject:E6 in-place:E15
 E9	Concept:T9 in-place:E11
 E10	Concept:T10 in-place:E11
 E11	Concept:T11 
@@ -571,5 +571,5 @@ A14	Emphasized E143
 A15	Emphasized E161
 R28	has-property Arg1:E160 Arg2:E161
 T15	Predicate 87 95	a través
-E15	Predicate:T15 Arg:E9
+E15	Predicate:T15 Arg:E9 Arg2:E10
 R4	part-of Arg1:E1257 Arg2:E1258	

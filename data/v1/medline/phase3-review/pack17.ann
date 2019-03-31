@@ -292,7 +292,7 @@ E30	Predicate:T29 Arg:E31 Domain:E32
 E31	Concept:T30 
 E32	Concept:T31 in-place:E33
 E33	Concept:T32 
-E28	Concept:T27 
+E28	Concept:T27 in-place:E34
 E34	Concept:T33 
 E35	Action:T34 Subject:E28 Subject2:E30 Target:E36
 E36	Concept:T35 
@@ -637,8 +637,6 @@ R62	causes Arg1:E1249 Arg2:E1259
 A26	Uncertain E1197
 R63	causes Arg1:E275 Arg2:E271
 R64	causes Arg1:E274 Arg2:E271
-R6	part-of Arg1:E28 Arg2:E34	
-A7	Negated E1109
 T12	Reference 1837 1842	usted
 E12	Reference:T12 in-context:E1130
 T15	Predicate 2047 2054	durante

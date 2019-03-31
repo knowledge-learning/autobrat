@@ -340,7 +340,7 @@ E125	Concept:T127
 E131	Concept:T128 in-time:E132
 E132	Concept:T129 
 E133	Concept:T130 
-E134	Action:T131 Subject:E133 Target:E135
+E134	Action:T131 Subject:E133 Target:E19
 E135	Concept:T132 
 E136	Action:T133 Target:E137
 E137	Concept:T134 
@@ -409,7 +409,7 @@ E200	Action:T194 Subject:E199 Target:E201
 E201	Action:T195 Target:E202
 E202	Concept:T196 
 E203	Reference:T197 
-E204	Predicate:T198 in-context:E205 Domain:E203 Arg:E206
+E204	Predicate:T198 in-context:E205 Arg:E203
 E205	Concept:T199 
 E206	Action:T200 Target:E207
 E207	Concept:T201 
@@ -477,7 +477,7 @@ E1203	Action:T1200 Target:E1201 in-place:E1202 in-context:E1204
 E1204	Concept:T1201 
 E98	Action:T95 Target:E97 in-context:E247
 E247	Concept:T239 
-E248	Predicate:T240 Domain:E141
+E248	Predicate:T240 Domain:E141 Arg:E145
 E249	Concept:T137 in-context:E142
 E149	Concept:T221 
 *	same-as E1 E2
@@ -557,5 +557,5 @@ T18	Reference 1731 1736	usted
 E18	Reference:T18 
 T19	Action 1737 1742	tiene
 E19	Action:T19 Subject:E18 Target:E135
-T20	Action 3156 3159	son
-E20	Action:T20 Target:E1203 Subject:E1200
+*	same-as E204 E206
+*	same-as E1200 E1203

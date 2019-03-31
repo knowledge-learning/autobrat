@@ -124,7 +124,6 @@ T163	Predicate 2290 2297	similar
 T164	Action 2341 2355	enrojecimiento
 T165	Action 2357 2362	dolor
 T166	Action 2365 2374	hinchazón
-T167	Concept 2381 2386	lugar
 T168	Concept 2406 2413	desmayo
 T169	Concept 2417 2424	síncope
 T170	Action 2433 2440	pérdida
@@ -266,7 +265,7 @@ E8	Predicate:T8 Domain:E9
 E9	Concept:T9 
 E10	Action:T10 Target:E11
 E11	Concept:T11 
-E12	Predicate:T12 Domain:E10 Arg:E5
+E12	Predicate:T12 Domain:E10
 E14	Action:T14 Target:E16 Target2:E19
 E15	Action:T15 Target:E14
 E16	Predicate:T16 Domain:E17
@@ -381,10 +380,9 @@ E166	Action:T160 Target:E168 Subject:E174
 E167	Concept:T161 
 E168	Concept:T162 
 E169	Predicate:T163 Arg:E166 in-context:E168
-E170	Action:T164 Target:E173
-E171	Action:T165 in-place:E173
-E172	Action:T166 in-place:E173
-E173	Concept:T167 
+E170	Action:T164 in-place:E24
+E171	Action:T165 in-place:E24
+E172	Action:T166 in-place:E24
 E174	Action:T158 Subject:E167 in-place:E13
 E175	Concept:T168 
 E176	Concept:T169 
@@ -469,7 +467,7 @@ E1029	Concept:T1029
 E1032	Action:T1032 Target:E1033
 E1033	Concept:T1033 
 E1079	Concept:T1079 
-E1080	Concept:T1080 in-place:E1082
+E1080	Concept:T1080 
 E1081	Concept:T1081 in-place:E1082
 E1082	Concept:T1082 
 E1083	Concept:T1083 
@@ -608,9 +606,8 @@ R58	entails Arg1:E49 Arg2:E52
 A21	Emphasized E116
 R59	causes Arg1:E1166 Arg2:E1158
 A1	Uncertain E67
-R15	has-property Arg1:E1081 Arg2:E1083	
 T13	Reference 2234 2239	usted
 E13	Reference:T13 
 T24	Concept 2393 2401	picadura
 E24	Concept:T24 
-R16	has-property Arg1:E173 Arg2:E24	
+*	same-as E5 E12

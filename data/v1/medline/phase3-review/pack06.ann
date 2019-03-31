@@ -335,7 +335,7 @@ E146	Concept:T140 in-place:E271
 E147	Concept:T141 
 E148	Reference:T142 
 E149	Concept:T143 
-E151	Concept:T145 
+E151	Concept:T145 in-place:E272
 E142	Concept:T136 
 E150	Concept:T144 
 E152	Concept:T146 
@@ -502,7 +502,7 @@ E1206	Concept:T1206
 E1207	Action:T1207 Subject2:E1206 Target:E1208
 E1208	Concept:T1208 
 E1209	Concept:T1209 
-E1229	Action:T1227 
+E1229	Action:T1227 Target:E1011
 E1230	Predicate:T1228 Domain:E1229 Arg:E1231
 E1231	Concept:T1229 
 E1079	Action:T1079 Subject:E1054 Target:E1087 Target2:E1056 in-context:E1236
@@ -613,7 +613,7 @@ A18	Uncertain E1011
 R63	causes Arg1:E1013 Arg2:E1011
 R41	is-a Arg1:E194 Arg2:E192
 R65	causes Arg1:E1205 Arg2:E1207
-R4	part-of Arg1:E151 Arg2:E272	
 T11	Predicate 2479 2483	ante
 E13	Predicate:T11 Arg:E186
 A8	Negated E192
+R5	entails Arg1:E1033 Arg2:E1038	

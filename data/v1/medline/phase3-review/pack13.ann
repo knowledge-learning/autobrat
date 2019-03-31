@@ -275,7 +275,7 @@ E47	Action:T46
 E48	Action:T47 Target:E49 Target2:E50
 E49	Concept:T48 
 E50	Concept:T49 
-E51	Concept:T50 
+E51	Concept:T50 in-context:E54
 E52	Predicate:T51 Domain:E51 Arg:E53
 E53	Concept:T52 
 E54	Concept:T53 
@@ -418,7 +418,7 @@ E217	Concept:T214
 E219	Concept:T216 
 E220	Predicate:T217 Arg:E221 Domain:E219 Arg2:E222
 E221	Concept:T218 
-E222	Action:T219 in-time:E223 Subject:E213 Target:E216
+E222	Action:T219 in-time:E223 Subject:E213
 E223	Predicate:T220 
 E224	Concept:T221 
 E225	Concept:T222 
@@ -443,7 +443,7 @@ E1020	Concept:T1020
 E1021	Action:T1021 Subject:E1020 Target:E1022 in-time:E1023
 E1022	Concept:T1022 
 E1023	Concept:T1023 
-E1037	Action:T1037 Target:E1038 Target2:E1039 Target3:E1040 Target4:E1041 in-time:E32 Subject:E33
+E1037	Action:T1037 Target:E1038 Target2:E1039 Target3:E1040 Target4:E1041 Subject:E33 in-time:E1042
 E1038	Concept:T1038 
 E1039	Concept:T1039 
 E1040	Concept:T1040 
@@ -541,12 +541,11 @@ R48	causes Arg1:E125 Arg2:E127
 R49	causes Arg1:E125 Arg2:E128
 R50	has-property Arg1:E242 Arg2:E245
 R51	has-property Arg1:E243 Arg2:E245
-R7	is-a Arg1:E55 Arg2:E52	
-R18	has-property Arg1:E54 Arg2:E52	
-T31	Predicate 816 829	que antes del
-E32	Predicate:T31 Arg:E1042
 T32	Reference 756 761	Usted
 E33	Reference:T32 
 T33	Predicate 1363 1378	aproximadamente
 E34	Predicate:T33 Arg:E1178 in-context:E19
 R12	has-property Arg1:E202 Arg2:E205	
+*	same-as E55 E52
+*	same-as E187 E189
+*	same-as E216 E220
