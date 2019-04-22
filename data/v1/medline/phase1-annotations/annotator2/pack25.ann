@@ -381,3 +381,199 @@ R33	is-a Arg1:E161 Arg2:E155
 R34	is-a Arg1:E162 Arg2:E155	
 R35	is-a Arg1:E168 Arg2:E155	
 R36	is-a Arg1:E165 Arg2:E155	
+T163	Concept 1914 1952	enfermedad por reflujo gastroesofágico
+E169	Concept:T163 
+T164	Concept 1954 1958	ERGE
+E170	Concept:T164 
+*	same-as E169 E170
+T166	Action 2012 2018	cierra
+E172	Action:T166 Subject:E173 in-context:E176
+A15	Negated E172
+T167	Concept 1977 1984	músculo
+E173	Concept:T167 in-place:E174
+T168	Predicate 1988 1993	final
+E174	Predicate:T168 Arg:E175
+T169	Concept 1998 2005	esófago
+E175	Concept:T169 
+T170	Concept 2019 2032	adecuadamente
+E176	Concept:T170 
+R37	causes Arg1:E172 Arg2:E170	
+T165	Action 2037 2047	exposición
+E171	Action:T165 Target:E177 Target2:E178
+T171	Concept 2058 2068	sustancias
+E177	Concept:T171 
+T172	Concept 2071 2078	agentes
+E178	Concept:T172 
+T173	Action 2092 2101	problemas
+E179	Action:T173 Target:E180
+T174	Concept 2105 2125	sistema reproductivo
+E180	Concept:T174 
+T175	Action 2135 2142	afectar
+E181	Action:T175 Target:E182
+T176	Concept 2146 2156	fertilidad
+E182	Concept:T176 
+T177	Action 2162 2173	posibilidad
+E183	Action:T177 Target:E184
+T178	Action 2177 2182	tener
+E184	Action:T178 Target:E185
+T179	Concept 2186 2190	bebé
+E185	Concept:T179 
+A16	Uncertain E181
+A17	Uncertain E183
+A18	Uncertain E179
+R38	causes Arg1:E171 Arg2:E179	
+R39	causes Arg1:E171 Arg2:E186	
+E186	Action:T175 Target:E183
+A19	Uncertain E186
+R40	causes Arg1:E171 Arg2:E181	
+T180	Concept 2196 2212	ensayos clínicos
+E187	Concept:T180 
+T181	Concept 2217 2242	estudios de investigación
+E188	Concept:T181 
+T182	Action 2247 2254	prueban
+E189	Action:T182 Target:E190 Subject:E188
+T183	Action 2275 2284	aplicarse
+E190	Action:T183 Subject:E191 Target:E192
+T184	Concept 2289 2312	descubrimientos médicos
+E191	Concept:T184 
+T185	Concept 2319 2328	pacientes
+E192	Concept:T185 
+*	same-as E187 E189
+R41	is-a Arg1:E187 Arg2:E188	
+T186	Action 2361 2366	sufra
+E193	Action:T186 in-context:E201
+T187	Reference 2370 2375	usted
+E194	Reference:T187 
+T188	Predicate 2378 2386	miembros
+E195	Predicate:T188 Domain:E196
+T189	Concept 2393 2400	familia
+E196	Concept:T189 
+T190	Action 2401 2407	tienen
+E197	Action:T190 Subject:E195 Target:E198
+T191	Concept 2408 2417	depresión
+E198	Concept:T191 
+E199	Action:T190 Target:E198 Subject:E194
+T192	Concept 2345 2353	probable
+E200	Concept:T192 
+T193	Predicate 2341 2344	más
+E201	Predicate:T193 Domain:E200
+R42	entails Arg1:E199 Arg2:E193	
+R43	entails Arg1:E197 Arg2:E193	
+T194	Concept 2428 2434	causas
+E202	Concept:T194 
+T195	Predicate 2435 2446	principales
+E203	Predicate:T195 Domain:E202 in-context:E205
+T197	Concept 2450 2456	anemia
+E205	Concept:T197 
+T196	Action 2462 2469	pérdida
+E204	Action:T196 Target:E206
+T198	Concept 2473 2479	sangre
+E206	Concept:T198 
+T199	Action 2484 2492	producir
+E207	Action:T199 Target:E208
+A20	Negated E207
+T200	Concept 2493 2507	glóbulos rojos
+E208	Concept:T200 
+T201	Action 2510 2521	destrucción
+E209	Action:T201 in-context:E210 Target:E211
+T202	Concept 2538 2547	velocidad
+E210	Concept:T202 
+A21	Emphasized E210
+T203	Reference 2525 2530	estos
+E211	Reference:T203 
+*	same-as E211 E208
+R44	is-a Arg1:E204 Arg2:E203	
+R45	is-a Arg1:E207 Arg2:E203	
+R46	is-a Arg1:E209 Arg2:E203	
+T204	Concept 2852 2861	vitaminas
+E212	Concept:T204 
+T205	Concept 2866 2876	sustancias
+E213	Concept:T205 
+T206	Action 2905 2911	crecer
+E214	Action:T206 in-context:E216 Subject:E218
+T207	Action 2914 2923	funcionar
+E215	Action:T207 in-context:E216 Subject:E218
+T208	Concept 2933 2939	normal
+E216	Concept:T208 
+T209	Action 2891 2899	necesita
+E217	Action:T209 Target2:E213 Subject:E218
+T210	Concept 2884 2890	cuerpo
+E218	Concept:T210 
+R47	is-a Arg1:E212 Arg2:E213	
+R48	entails Arg1:E214 Arg2:E217	
+R49	entails Arg1:E215 Arg2:E217	
+T211	Concept 2958 2985	enfermedades de los nervios
+E219	Concept:T211 
+T212	Concept 2995 3018	neuralgia del trigémino
+E220	Concept:T212 
+T213	Concept 3024 3041	parálisis de Bell
+E221	Concept:T213 
+R50	is-a Arg1:E220 Arg2:E219	
+R51	is-a Arg1:E221 Arg2:E219	
+T214	Action 3050 3056	causan
+E222	Action:T214 Target:E223 Target2:E225 Target3:E226 Subject:E219
+A22	Uncertain E222
+T215	Action 3057 3062	dolor
+E223	Action:T215 Target:E224
+T216	Concept 3063 3069	facial
+E224	Concept:T216 
+T217	Concept 3071 3079	espasmos
+E225	Concept:T217 
+T218	Action 3082 3091	problemas
+E226	Action:T218 Target:E228 Target2:E227
+T219	Action 3100 3111	movimientos
+E227	Action:T219 Target:E229
+E228	Action:T219 Target:E230
+T220	Concept 3116 3119	ojo
+E229	Concept:T220 
+T221	Concept 3122 3130	faciales
+E230	Concept:T221 
+T222	Concept 3136 3143	pólipos
+E231	Concept:T222 
+T223	Action 3155 3165	extirpados
+E232	Action:T223 Target:E231
+A23	Uncertain E232
+T224	Action 3183 3190	examina
+E233	Action:T224 Subject:E234 Target:E235 in-time:E237
+T225	Concept 3176 3182	médico
+E234	Concept:T225 
+T226	Predicate 3194 3202	interior
+E235	Predicate:T226 Domain:E236
+T227	Concept 3207 3223	intestino grueso
+E236	Concept:T227 
+T228	Action 3224 3231	durante
+E237	Action:T228 Target:E238
+T229	Concept 3236 3248	colonoscopía
+E238	Concept:T229 
+R52	entails Arg1:E233 Arg2:E232	
+T230	Concept 3253 3256	VIH
+E239	Concept:T230 
+T231	Action 3263 3274	contagiarse
+E240	Action:T231 Subject:E239 in-context:E241
+T232	Action 3291 3310	relaciones sexuales
+E241	Action:T232 Target:E245
+T233	Predicate 3311 3314	sin
+E242	Predicate:T233 Domain:E241 Arg:E243
+T234	Concept 3315 3325	protección
+E243	Concept:T234 
+T235	Concept 3334 3341	persona
+E244	Concept:T235 
+T236	Action 3342 3351	infectada
+E245	Action:T236 Target:E244 Subject:E239
+T237	Concept 3356 3369	examen físico
+E246	Concept:T237 
+T238	Action 3458 3463	sufre
+E247	Action:T238 Target:E249 Subject:E248
+T239	Concept 3449 3454	usted
+E248	Concept:T239 
+T240	Reference 3455 3457	la
+E249	Reference:T240 
+T241	Action 3438 3445	revelar
+E250	Action:T241 Target:E247 Subject:E251
+A24	Uncertain E250
+T242	Concept 3411 3431	pruebas diagnósticas
+E251	Concept:T242 
+T243	Concept 3371 3395	diagnóstico por imágenes
+E252	Concept:T243 
+R53	is-a Arg1:E246 Arg2:E251	
+R54	is-a Arg1:E252 Arg2:E251	
