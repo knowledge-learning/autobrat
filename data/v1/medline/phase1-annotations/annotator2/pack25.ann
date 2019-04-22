@@ -351,9 +351,33 @@ E154	Predicate:T151 Arg:E152 Arg2:E153
 T152	Reference 3465 3470	Estos
 E155	Reference:T152 
 T153	Action 3480 3485	dolor
-E156	Action:T153 
+E156	Action:T153 Target:E158
 T154	Concept 3492 3498	cuello
 E157	Concept:T154 
 T155	Concept 3504 3511	espalda
 E158	Concept:T155 
-E159	Action:T153 
+E159	Action:T153 Target:E157
+T156	Action 3513 3527	entumecimiento
+E160	Action:T156 
+T157	Action 3529 3538	debilidad
+E161	Action:T157 Target:E163
+T158	Action 3541 3546	dolor
+E162	Action:T158 Target:E164
+T159	Concept 3554 3560	brazos
+E163	Concept:T159 
+T160	Concept 3567 3574	piernas
+E164	Concept:T160 
+T161	Action 3577 3586	problemas
+E165	Action:T161 Target:E166
+T162	Concept 3594 3598	pies
+E166	Concept:T162 
+E167	Action:T157 Target:E164
+E168	Action:T158 Target:E163
+R29	is-a Arg1:E156 Arg2:E155	
+R30	is-a Arg1:E159 Arg2:E155	
+R31	is-a Arg1:E160 Arg2:E155	
+R32	is-a Arg1:E167 Arg2:E155	
+R33	is-a Arg1:E161 Arg2:E155	
+R34	is-a Arg1:E162 Arg2:E155	
+R35	is-a Arg1:E168 Arg2:E155	
+R36	is-a Arg1:E165 Arg2:E155	

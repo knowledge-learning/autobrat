@@ -452,3 +452,135 @@ E198	Concept:T197
 T198	Predicate 2697 2703	Varios
 E199	Predicate:T198 Domain:E198
 R40	is-a Arg1:E197 Arg2:E195	
+T199	Concept 2783 2793	terrorismo
+E200	Concept:T199 
+T200	Action 2808 2811	uso
+E201	Action:T200 Target:E204
+T201	Action 2817 2824	amenaza
+E202	Action:T201 Target:E203
+T202	Concept 2831 2837	fuerza
+E203	Concept:T202 
+T203	Concept 2843 2852	violencia
+E204	Concept:T203 
+T204	Concept 2860 2868	personas
+E205	Concept:T204 
+T205	Concept 2871 2882	propiedades
+E206	Concept:T205 
+T206	Action 2853 2859	contra
+E207	Action:T206 Subject:E202 Subject2:E201 Target:E205 Target2:E206
+*	same-as E200 E207
+T207	Concept 2887 2895;2896 2898;2899 2905	análisis de sangre
+E208	Concept:T207 
+T208	Action 2912 2921	demostrar
+E209	Action:T208 Target:E210 Subject:E208
+T209	Action 2925 2930	tiene
+E210	Action:T209 Target:E211
+T210	Concept 2931 2944	mononucleosis
+E211	Concept:T210 
+T211	Concept 2953 2961	personas
+E212	Concept:T211 
+T212	Predicate 2946 2952	Muchas
+E213	Predicate:T212 Domain:E216
+T213	Action 2966 2972	mascan
+E214	Action:T213 Target:E215 Subject:E212
+T214	Concept 2973 2979	tabaco
+E215	Concept:T214 
+T215	Action 2982 2990	consumen
+E216	Action:T215 Subject:E212 Target:E217
+T216	Concept 2991 2995	rapé
+E217	Concept:T216 
+T217	Action 2996 3003	piensan
+E218	Action:T217 Subject:E213 Target:E219
+T218	Predicate 3011 3014	más
+E219	Predicate:T218 Arg:E220 Arg2:E221 Domain2:E215 Domain:E217
+T219	Concept 3015 3019	sano
+E220	Concept:T219 
+T220	Action 3024 3029	fumar
+E221	Action:T220 
+T221	Action 3034 3043;3044 3046;3047 3053	reemplazo de cadera
+E222	Action:T221 Target:E227
+T222	Concept 3061 3068	cirugía
+E223	Concept:T222 
+T223	Concept 3074 3082	personas
+E224	Concept:T223 
+T224	Concept 3093 3100	severos
+E225	Concept:T224 
+T225	Concept 3107 3113	cadera
+E226	Concept:T225 
+T226	Predicate 3087 3092	daños
+E227	Predicate:T226 Domain:E224 Arg:E226 in-context:E225
+R41	is-a Arg1:E222 Arg2:E223	
+T227	Action 3124 3135	experimenta
+E228	Action:T227 Subject:E230 Target:E229
+T228	Concept 3139 3147	desastre
+E229	Concept:T228 
+T229	Reference 3118 3123	usted
+E230	Reference:T229 
+T230	Action 3159 3167	sentirse
+E231	Action:T230 Target:E232 Subject:E230
+T231	Concept 3168 3177	estresado
+E232	Concept:T231 
+R42	entails Arg1:E228 Arg2:E231	
+T232	Action 3206 3215	problemas
+E233	Action:T232 Target:E234
+T233	Concept 3223 3230	dientes
+E234	Concept:T233 
+T234	Action 3231 3234	vea
+E235	Action:T234 Target:E236
+T235	Concept 3240 3248	dentista
+E236	Concept:T235 
+R43	entails Arg1:E233 Arg2:E235	
+T236	Reference 3250 3255	Estos
+E237	Reference:T236 
+T237	Concept 3256 3264	aparatos
+E238	Concept:T237 
+R44	is-a Arg1:E237 Arg2:E238	
+T238	Action 3272 3280	mantener
+E239	Action:T238 Target:E240 Subject:E237 in-context:E241
+T239	Concept 3296 3303	persona
+E240	Concept:T239 
+T240	Concept 3285 3289	vida
+E241	Concept:T240 
+T241	Action 3318 3326	aumentan
+E242	Action:T241 Target:E243 Subject:E237
+T242	Predicate 3330 3336	riesgo
+E243	Predicate:T242 Arg:E244
+T243	Action 3340 3351	infecciones
+E244	Action:T243 
+T244	Concept 3356 3364;3365 3367;3368 3371;3372 3379;3380 3389	síndrome de las piernas inquietas
+E245	Concept:T244 
+T245	Action 3421 3426	mover
+E246	Action:T245 Target:E247
+T246	Concept 3431 3438	piernas
+E247	Concept:T246 
+T247	Action 3399 3404	deseo
+E248	Action:T247 Target:E246
+A12	Emphasized E248
+R45	causes Arg1:E245 Arg2:E248	
+T248	Concept 3443 3450;3451 3460	columna vertebral
+E249	Concept:T248 
+T249	Predicate 3478 3480	26
+E250	Predicate:T249 Domain:E251
+T250	Concept 3481 3487	huesos
+E251	Concept:T250 
+T251	Concept 3497 3506	vértebras
+E252	Concept:T251 
+*	same-as E250 E252
+R46	part-of Arg1:E250 Arg2:E249	
+T252	Reference 3514 3519	estos
+E253	Reference:T252 
+T253	Concept 3536 3548;3549 3559	enfermedades pulmonares
+E254	Concept:T253 
+T254	Concept 3536 3548;3561 3570	enfermedades cardiacas
+E255	Concept:T254 
+T255	Concept 3536 3548;3572 3582	enfermedades vasculares
+E256	Concept:T255 
+T256	Concept 3584 3592;3593 3603	derrames cerebrales
+E257	Concept:T256 
+T257	Concept 3606 3615	cataratas
+E258	Concept:T257 
+R47	is-a Arg1:E254 Arg2:E253	
+R48	is-a Arg1:E255 Arg2:E253	
+R49	is-a Arg1:E256 Arg2:E253	
+R50	is-a Arg1:E257 Arg2:E253	
+R51	is-a Arg1:E258 Arg2:E253	
