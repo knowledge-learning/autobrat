@@ -2,7 +2,7 @@ version: "3"
 
 services:
   brat:
-    image: "matcom/brat"
+    image: "matcomuh/satr:latest"
     build: ./build
     container_name: "brat"
     ports:
