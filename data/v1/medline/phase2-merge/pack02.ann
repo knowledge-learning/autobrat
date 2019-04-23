@@ -106,10 +106,10 @@ T51	Concept 1243 1254	tratamiento
 E51	Concept:T51 
 T52	Action 1255 1262	depende
 E52	Action:T52 Subject:E51 Target:E48 Target2:E49 Target3:E53 Target4:E54
-T53	Predicate 1312 1321	infectado
-E53	Predicate:T53 Arg:E50
-T54	Predicate 1333 1337	roto
-E54	Predicate:T54 Arg:E50
+T53	Action 1312 1321	infectado
+E53	Action:T53 Target:E50
+T54	Action 1333 1337	roto
+E54	Action:T54 Target:E50 Subject:E50
 T55	Action 1444 1450	conoce
 E55	Action:T55 Target:E56
 A3	Negated E55
@@ -361,7 +361,7 @@ E156	Concept:T156 in-context:E157
 T157	Concept 4267 4273	sólida
 E157	Concept:T157 
 T158	Action 4293 4298	forma
-E158	Action:T158 Target:E154 Target2:E155 in-place:E159
+E158	Action:T158 Target:E154 in-place:E159
 T159	Concept 4305 4310	riñón
 E159	Concept:T159 
 T160	Concept 4320 4330	sustancias
@@ -369,8 +369,6 @@ E160	Concept:T160 in-place:E161
 T161	Concept 4347 4352	orina
 E161	Concept:T161 
 *	same-as E154 E155
-R45	is-a Arg1:E154 Arg2:E156
-R46	is-a Arg1:E155 Arg2:E156
 R47	causes Arg1:E160 Arg2:E158
 T162	Action 4495 4501	hablar
 E162	Action:T162 Target:E163 in-time:E164
@@ -451,7 +449,7 @@ T197	Concept 5442 5449;5450 5458	sistema nervioso
 E198	Concept:T197 
 R52	causes Arg1:E197 Arg2:E196
 T198	Action 5537 5541	sabe
-E199	Action:T198 Target:E200
+E199	Action:T198 Target:E200 Target2:E204
 A6	Diminished E199
 T199	Action 5558 5565	riesgos
 E200	Action:T199 Target:E201 Subject:E202
@@ -608,10 +606,9 @@ R1003	is-a Arg1:E1032 Arg2:E1030
 T1033	Concept 899 913;914 922	discapacidades mentales
 E1033	Concept:T1033 
 T1034	Concept 864 873	problemas
-E1034	Concept:T1034 
+E1034	Concept:T1034 in-context:E1035
 T1035	Concept 874 881	físicos
 E1035	Concept:T1035 
-R1004	is-a Arg1:E1034 Arg2:E1035
 T1036	Action 858 863	tener
 E1036	Action:T1036 Subject:E1031 Target:E1034 Target2:E1033
 A1003	Uncertain E1036
@@ -709,9 +706,9 @@ R1011	causes Arg1:E1073 Arg2:E1076
 T1074	Concept 1948 1954;1955 1957;1958 1962	drogas de club
 E1074	Concept:T1074 
 T1078	Action 1982 1988	usadas
-E1078	Action:T1078 Subject:E1074 Target:E1079 in-time:E1080
+E1078	Action:T1078 Target2:E1074
 T1079	Action 1994 2005	violaciones
-E1079	Action:T1079 
+E1079	Action:T1079 in-place:E1080
 T1080	Concept 2009 2014	citas
 E1080	Concept:T1080 
 T1081	Concept 2179 2186	Cándida
@@ -719,17 +716,14 @@ E1081	Concept:T1081
 T1082	Concept 2218 2226	levadura
 E1082	Concept:T1082 
 R1012	is-a Arg1:E1081 Arg2:E1082
-T1083	Concept 2073 2080	Catorce
-E1083	Concept:T1083 
-T1084	Concept 2088 2090	26
-E1084	Concept:T1084 
-T1085	Concept 2091 2097	huesos
+T1083	Predicate 2073 2080	Catorce
+E1083	Predicate:T1083 Domain:E1085
+T1085	Concept 2088 2090;2091 2097	26 huesos
 E1085	Concept:T1085 in-place:E1086
 T1086	Concept 2105 2109	pies
 E1086	Concept:T1086 
 T1087	Concept 2123 2128	dedos
 E1087	Concept:T1087 
-R1013	is-a Arg1:E1083 Arg2:E1085
 R1014	part-of Arg1:E1083 Arg2:E1087
 T1088	Concept 2538 2546	síntomas
 E1088	Concept:T1088 
@@ -807,7 +801,7 @@ E1117	Concept:T1117
 T1118	Predicate 3100 3107	algunas
 E1118	Predicate:T1118 Domain:E1117
 T1119	Concept 3134 3140	acidez
-E1119	Concept:T1119 in-place:E1120
+E1119	Concept:T1119 
 A1009	Uncertain E1119
 R1027	causes Arg1:E1118 Arg2:E1119
 R1028	causes Arg1:E1116 Arg2:E1119
@@ -817,7 +811,7 @@ E1120	Concept:T1120
 T1121	Action 3291 3300	infección
 E1121	Action:T1121 
 T1122	Action 3310 3317	espasmo
-E1122	Action:T1122 Target:E1124 in-place:E1125
+E1122	Action:T1122 Target:E1124 in-place:E1125 in-context:E1123
 T1123	Concept 3318 3326	doloroso
 E1123	Concept:T1123 
 T1124	Concept 3334 3342	músculos
@@ -826,12 +820,11 @@ T1125	Predicate 3362 3366	todo
 E1125	Predicate:T1125 Domain:E1126
 T1126	Concept 3370 3376	cuerpo
 E1126	Concept:T1126 
-R1030	is-a Arg1:E1122 Arg2:E1123
 A1010	Emphasized E1125
 A1011	Uncertain E1125
 R1031	causes Arg1:E1121 Arg2:E1122
 T1127	Action 6354 6359	abuso
-E1127	Action:T1127 Target:E1129
+E1127	Action:T1127 Target:E1128
 T1128	Predicate 6363 6370	algunos
 E1128	Predicate:T1128 Domain:E1129
 T1129	Action 6384 6393	recetados
@@ -1013,8 +1006,8 @@ T1205	Concept 4641 4652	alternativo
 E1205	Concept:T1205 
 T1206	Predicate 4601 4606	antes
 E1206	Predicate:T1206 Arg:E1201
-T1207	Concept 4569 4574	Usted
-E1207	Concept:T1207 
+T1207	Reference 4569 4574	Usted
+E1207	Reference:T1207 
 T1208	Action 4580 4586	hablar
 E1208	Action:T1208 Subject:E1207 Target:E1209 in-time:E1206
 T1209	Concept 4594 4600	médico
@@ -1078,3 +1071,6 @@ T1233	Action 5299 5307	recibirá
 E1233	Action:T1233 Target:E1237 Subject:E1228 in-time:E1236
 T1237	Predicate 5321 5327	contra
 E1237	Predicate:T1237 Domain:E1229 Arg:E1230
+R59	causes Arg1:E1078 Arg2:E1079	
+R60	causes Arg1:E1119 Arg2:E1120	
+R45	is-a Arg1:E154 Arg2:E156	
