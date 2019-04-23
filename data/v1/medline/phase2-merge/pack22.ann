@@ -73,8 +73,8 @@ T32	Concept 698 710	contaminadas
 E33	Concept:T32 in-context:E34
 T33	Concept 715 720	plomo
 E34	Concept:T33 
-T34	Predicate 741 750	problemas
-E35	Predicate:T34 Arg:E36
+T34	Action 741 750	problemas
+E35	Action:T34 Target:E36
 T35	Concept 754 759	salud
 E36	Concept:T35 
 A2	Emphasized E35
@@ -189,7 +189,7 @@ E82	Concept:T80
 R20	is-a Arg1:E80 Arg2:E81
 R21	part-of Arg1:E80 Arg2:E82
 T81	Action 2304 2309	bajar
-E83	Action:T81 Target:E84
+E83	Action:T81 Target:E84 Subject:E298
 T82	Concept 2313 2323	colesterol
 E84	Concept:T82 
 T83	Action 2337 2346	ejercicio
@@ -347,12 +347,12 @@ E150	Concept:T146 in-context:E151
 T147	Concept 4138 4146	opioides
 E151	Concept:T147 
 T148	Action 4149 4157	prevenir
-E152	Action:T148 Target:E153 in-context:E154 Subject:E147
+E152	Action:T148 Target:E153 Subject:E147
 A12	Uncertain E152
 T149	Concept 4161 4167	muerte
 E153	Concept:T149 
 T150	Action 4174 4180	aplica
-E154	Action:T150 in-context:E155
+E154	Action:T150 in-context:E155 Subject:E147
 T151	Concept 4181 4194	oportunamente
 E155	Concept:T151 
 R35	is-a Arg1:E147 Arg2:E146
@@ -364,17 +364,13 @@ T154	Concept 4405 4414	deportiva
 E158	Concept:T154 
 T155	Concept 4389 4394	común
 E159	Concept:T155 
-T156	Predicate 4384 4388	tipo
-E160	Predicate:T156 Domain:E157
-R36	is-a Arg1:E156 Arg2:E160
 R37	has-property Arg1:E156 Arg2:E159
 E161	Action:T157 in-place:E162
 T158	Concept 4513 4520	granjas
 E162	Concept:T158 
 T159	Predicate 4535 4538	más
 E163	Predicate:T159 Domain:E164 Arg:E165 in-place:E166
-T160	Concept 4498 4505	trabajo
-E164	Concept:T160 
+E164	Action:T157 
 T157	Action 4498 4505	trabajo
 T161	Concept 4539 4549	peligrosos
 E165	Concept:T161 
@@ -404,21 +400,19 @@ R40	has-property Arg1:E170 Arg2:E175
 T172	Concept 4911 4919	gérmenes
 E176	Concept:T172 
 T173	Action 4920 4930	permanecen
-E177	Action:T173 Subject:E176 Target:E178 Target2:E179
+E177	Action:T173 Subject:E176 in-place:E178 in-place2:E179
 T174	Concept 4937 4942	nariz
-E178	Concept:T174 in-place:E180
+E178	Concept:T174 in-context:E180
 T175	Concept 4951 4959	garganta
-E179	Concept:T175 in-place:E180
+E179	Concept:T175 in-context:E180
 T176	Concept 4964 4968	niño
 E180	Concept:T176 
 T177	Action 4990 4997	enferme
-E181	Action:T177 in-context:E182 Target:E180
+E181	Action:T177 Target:E180
 A13	Negated E181
-T178	Concept 4970 4983	probablemente
-E182	Concept:T178 
 R41	entails Arg1:E177 Arg2:E181
-T179	Predicate 5097 5103	examen
-E183	Predicate:T179 Arg:E184
+T179	Action 5097 5103	examen
+E183	Action:T179 Target:E184
 T180	Concept 5107 5115;5116 5123;5124 5128	densidad mineral ósea
 E184	Concept:T180 
 T181	Concept 5135 5140	mejor
@@ -447,15 +441,14 @@ T191	Concept 5355 5367	medicamentos
 E195	Concept:T191 
 T192	Concept 5370 5382	enfermedades
 E196	Concept:T192 
-T193	Predicate 5384 5393	problemas
-E197	Predicate:T193 Arg:E198
+E197	Action:T156 Target:E198
 T194	Concept 5402 5410	hormonas
 E198	Concept:T194 
 T195	Concept 5413 5420	enzimas
 E199	Concept:T195 
 T196	Concept 5423 5430	tumores
 E200	Concept:T196 
-E201	Predicate:T193 Arg:E199
+E201	Action:T156 Target:E199
 R42	causes Arg1:E195 Arg2:E191
 R43	causes Arg1:E196 Arg2:E191
 R44	causes Arg1:E197 Arg2:E191
@@ -465,8 +458,6 @@ T197	Concept 5591 5599	estómago
 E202	Concept:T197 
 T198	Concept 5606 5612	órgano
 E203	Concept:T198 
-T199	Action 5620 5629	encuentra
-E204	Action:T199 Target:E202 in-place:E206
 T200	Concept 5639 5646	esófago
 E205	Concept:T200 
 T201	Predicate 5630 5635	entre
@@ -1198,8 +1189,8 @@ T1225	Concept 6159 6166;6167 6176	sistema eléctrico
 E1233	Concept:T1225 in-context:E1234
 T1226	Concept 6181 6188	corazón
 E1234	Concept:T1226 
-T1227	Concept 6143 6152	problemas
-E1235	Concept:T1227 in-place:E1233
+T1227	Action 6143 6152	problemas
+E1235	Action:T1227 Target:E1233
 R1046	causes Arg1:E1235 Arg2:E1231
 T1228	Action 6317 6323	llevan
 E1236	Action:T1228 Target:E1237 Subject:E1238 in-place:E1298 in-place2:E1300
@@ -1218,7 +1209,7 @@ E1242	Concept:T1234
 T1235	Concept 6556 6565	organismo
 E1243	Concept:T1235 
 T1236	Action 6566 6569	usa
-E1244	Action:T1236 Subject:E1243 Target:E1245 Target2:E1246
+E1244	Action:T1236 Subject:E1243 Target:E1245 in-context:E1246
 T1237	Concept 6574 6583	minerales
 E1245	Concept:T1237 
 T1238	Concept 6596 6605	funciones
@@ -1301,18 +1292,18 @@ E1280	Action:T1272 Target:E1281 Subject:E1282 Subject2:E1283 Subject3:E1284 Subj
 T1273	Concept 7623 7630	cerebro
 E1281	Concept:T1273 
 T1274	Concept 7557 7562	golpe
-E1282	Concept:T1274 
+E1282	Concept:T1274 in-place:E1286
 T1275	Concept 7564 7571	impacto
-E1283	Concept:T1275 
+E1283	Concept:T1275 in-place:E1286
 T1276	Concept 7573 7581	sacudida
-E1284	Concept:T1276 
+E1284	Concept:T1276 in-place:E1286
 T1277	Concept 7589 7595	lesión
 E1285	Concept:T1277 in-place:E1286
 T1278	Concept 7602 7608	cabeza
 E1286	Concept:T1278 
 T1279	Concept 7513 7519;7520 7528;7529 7539	lesión cerebral traumática
 E1287	Concept:T1279 
-R1053	entails Arg1:E1280 Arg2:E1287
+R1053	causes Arg1:E1280 Arg2:E1287
 T1280	Reference 7736 7741	estos
 E1288	Reference:T1280 
 T1281	Predicate 7726 7732	Muchos
@@ -1358,10 +1349,20 @@ T1298	Concept 7987 7995	personas
 E1306	Concept:T1298 in-place:E1307
 T1299	Concept 8002 8010;8011 8018	servicio militar
 E1307	Concept:T1299 
-T1300	Predicate 8027 8033	grupos
-E1308	Predicate:T1300 Domain:E1309
+T1300	Concept 8027 8033	grupos
+E1308	Concept:T1300 Domain:E1309
 T1301	Predicate 8042 8048	riesgo
 E1309	Predicate:T1301 Arg:E1304 in-context:E1310
 T1302	Concept 8037 8041	alto
 E1310	Concept:T1302 
 R1055	is-a Arg1:E1306 Arg2:E1308
+T289	Reference 2292 2297	Usted
+E298	Reference:T289 
+R63	entails Arg1:E154 Arg2:E152	
+R64	entails Arg1:E154 Arg2:E148	
+R36	is-a Arg1:E156 Arg2:E157	
+A19	Emphasized E181
+A20	Uncertain E181
+T156	Action 5384 5393	problemas
+R65	is-a Arg1:E212 Arg2:E211	
+R66	entails Arg1:E1252 Arg2:E1244	
