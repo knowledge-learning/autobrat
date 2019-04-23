@@ -480,8 +480,8 @@ T206	Concept 5998 6003;6004 6010	dolor facial
 E210	Concept:T206 
 T207	Concept 6012 6020	espasmos
 E211	Concept:T207 
-T208	Predicate 6023 6032	problemas
-E212	Predicate:T208 Arg:E213
+T208	Action 6023 6032	problemas
+E212	Action:T208 Target:E213
 T209	Action 6041 6052	movimientos
 E213	Action:T209 Target:E214 Target2:E215
 T211	Concept 6063 6071	faciales
@@ -668,8 +668,6 @@ E1042	Action:T1042 Subject:E1039 Target:E1043
 T1043	Concept 1242 1246	gota
 E1043	Concept:T1043 
 A1003	Uncertain E1042
-T1044	Action 1188 1193	tiene
-E1044	Action:T1044 Subject:E1039 Subject2:E1040
 T1045	Reference 1303 1307	Esto
 E1045	Reference:T1045 
 T1046	Concept 1320 1324	bebé
@@ -712,7 +710,7 @@ E1061	Action:T1061 Target:E1062 in-time:E1060 in-context:E1063
 T1062	Concept 1738 1744	huesos
 E1062	Concept:T1062 
 T1063	Predicate 1745 1748	más
-E1063	Predicate:T1063 Domain:E1067 Arg:E1066
+E1063	Predicate:T1063 Arg:E1066 Arg2:E1067
 T1064	Concept 1708 1715	20 años
 E1064	Concept:T1064 
 T1065	Concept 1719 1723	edad
@@ -860,8 +858,6 @@ T1123	Concept 3431 3436	dolor
 E1126	Concept:T1123 
 T1124	Concept 3512 3535	glándulas suprarrenales
 E1127	Concept:T1124 
-T1125	Action 3539 3548	localizan
-E1128	Action:T1125 Target:E1129 Subject:E1127
 T1126	Predicate 3555 3561	arriba
 E1129	Predicate:T1126 Arg:E1130
 T1127	Concept 3569 3576	riñones
@@ -980,7 +976,7 @@ E1179	Action:T1173 Target:E1180
 T1174	Concept 4297 4317	sistema reproductivo
 E1180	Concept:T1174 
 T1175	Action 4327 4334	afectar
-E1181	Action:T1175 Target:E1182
+E1181	Action:T1175 Target:E1182 Subject:E1171
 T1176	Concept 4338 4348	fertilidad
 E1182	Concept:T1176 
 T1177	Action 4354 4365	posibilidad
@@ -993,10 +989,8 @@ A1016	Uncertain E1181
 A1017	Uncertain E1183
 A1018	Uncertain E1179
 R1038	causes Arg1:E1171 Arg2:E1179
-R1039	causes Arg1:E1171 Arg2:E1186
-E1186	Action:T1175 Target:E1183
+E1186	Action:T1175 Target:E1183 Subject:E1171
 A1019	Uncertain E1186
-R1040	causes Arg1:E1171 Arg2:E1181
 T1180	Concept 4526 4542	ensayos clínicos
 E1187	Concept:T1180 
 T1181	Concept 4547 4572	estudios de investigación
@@ -1067,7 +1061,7 @@ E1215	Action:T1207 in-context:E1216 Subject:E1218
 T1208	Concept 5874 5880	normal
 E1216	Concept:T1208 
 T1209	Action 5832 5840	necesita
-E1217	Action:T1209 Target2:E1213 Subject:E1218
+E1217	Action:T1209 Subject:E1218 Target2:E1212
 T1210	Concept 5825 5831	cuerpo
 E1218	Concept:T1210 
 R1047	is-a Arg1:E1212 Arg2:E1213
@@ -1120,7 +1114,7 @@ R1052	entails Arg1:E1233 Arg2:E1232
 T1230	Concept 6606 6609	VIH
 E1239	Concept:T1230 
 T1231	Action 6616 6627	contagiarse
-E1240	Action:T1231 Subject:E1239 in-context:E1241
+E1240	Action:T1231 Subject:E1239 in-context:E1242
 T1232	Action 6644 6663	relaciones sexuales
 E1241	Action:T1232 Target:E1245
 T1233	Predicate 6664 6667	sin
@@ -1148,3 +1142,5 @@ T1243	Concept 6836 6860	diagnóstico por imágenes
 E1252	Concept:T1243 
 R1053	is-a Arg1:E1246 Arg2:E1251
 R1054	is-a Arg1:E1252 Arg2:E1251
+R56	has-property Arg1:E1039 Arg2:E1041	
+R57	part-of Arg1:E1127 Arg2:E1129	
