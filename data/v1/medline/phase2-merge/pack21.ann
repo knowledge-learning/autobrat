@@ -307,14 +307,11 @@ T130	Concept 3773 3776;3777 3783	206 huesos
 E133	Concept:T130 
 T131	Concept 3790 3796	cuerpo
 E134	Concept:T131 
-R33	has-property Arg1:E134 Arg2:E133
 R34	part-of Arg1:E133 Arg2:E134
 T132	Concept 3832 3837	brazo
 E135	Concept:T132 
-T133	Concept 3777 3783	huesos
-E136	Concept:T133 
 T134	Predicate 3798 3802	tres
-E137	Predicate:T134 Domain:E136
+E137	Predicate:T134 Domain:E133
 T135	Concept 3842 3848	húmero
 E138	Concept:T135 
 T136	Concept 3853 3859	cúbito
@@ -322,13 +319,9 @@ E139	Concept:T136
 T137	Concept 3865 3870	radio
 E140	Concept:T137 
 R35	part-of Arg1:E137 Arg2:E135
-R36	has-property Arg1:E135 Arg2:E137
 R37	part-of Arg1:E138 Arg2:E135
 R38	part-of Arg1:E139 Arg2:E135
 R39	part-of Arg1:E140 Arg2:E135
-R41	part-of Arg1:E138 Arg2:E134
-R42	part-of Arg1:E139 Arg2:E134
-R43	part-of Arg1:E140 Arg2:E134
 T138	Reference 3987 3989	se
 E141	Reference:T138 
 T139	Action 3990 3999	relaciona
@@ -749,7 +742,7 @@ E1037	Concept:T1037
 T1038	Concept 574 586	radiografías
 E1038	Concept:T1038 
 T1039	Action 592 600	observar
-E1039	Action:T1039 Target:E1040 Subject:E1032
+E1039	Action:T1039 Target:E1040
 T1040	Predicate 604 612	interior
 E1040	Predicate:T1040 Arg:E1041
 T1041	Concept 620 628	arterias
@@ -842,14 +835,10 @@ T1076	Concept 1745 1752	mujeres
 E1076	Concept:T1076 
 T1077	Concept 1759 1771	adolescentes
 E1077	Concept:T1077 
-T1078	Action 1772 1778	tienen
-E1078	Action:T1078 Subject:E1077 Subject2:E1076 Target:E1081
 T1079	Action 1800 1808	intentos
-E1079	Action:T1079 Target:E1080
+E1079	Action:T1079 Target:E1080 Subject:E1077 Subject2:E1076
 T1080	Concept 1812 1820	suicidio
 E1080	Concept:T1080 
-T1081	Predicate 1788 1796	cantidad
-E1081	Predicate:T1081 Arg:E1079
 T1082	Concept 1952 1959	mujeres
 E1082	Concept:T1082 
 T1083	Concept 1965 1972;1973 1975;1976 1988	pruebas de Papanicolaou
@@ -879,7 +868,7 @@ E1094	Concept:T1094
 T1095	Action 2354 2363	registren
 E1095	Action:T1095 Target:E1096 Subject:E1094
 T1096	Action 2364 2370	brotes
-E1096	Action:T1096 Target:E1097
+E1096	Action:T1096 Subject:E1097
 T1097	Concept 2374 2378	Zika
 E1097	Concept:T1097 
 A1012	Negated E1093
@@ -898,15 +887,13 @@ E1102	Action:T1102 Target:E1103 in-time:E1104 in-context:E1106
 T1103	Concept 2661 2665	piel
 E1103	Concept:T1103 
 T1104	Predicate 2674 2683	cualquier
-E1104	Predicate:T1104 Domain:E1105 Arg:E1108
-T1105	Concept 2684 2692	estación
+E1104	Predicate:T1104 Domain:E1105
+T1105	Concept 2684 2692;2693 2696;2697 2700	estación del año
 E1105	Concept:T1105 
 T1106	Predicate 2705 2714	cualquier
 E1106	Predicate:T1106 Domain:E1107
 T1107	Concept 2715 2726	temperatura
 E1107	Concept:T1107 
-T1108	Concept 2697 2700	año
-E1108	Concept:T1108 
 R1026	causes Arg1:E1101 Arg2:E1102
 T1109	Concept 2895 2901	cuerpo
 E1109	Concept:T1109 
@@ -955,7 +942,7 @@ R1028	causes Arg1:E1127 Arg2:E1122
 R1029	causes Arg1:E1119 Arg2:E1122
 R1030	entails Arg1:E1126 Arg2:E1122
 T1129	Action 3613 3627	rehabilitación
-E1129	Action:T1129 in-place:E1137
+E1129	Action:T1129 in-time:E1137
 T1130	Concept 3637 3646;3647 3662	accidente cerebrovascular
 E1130	Concept:T1130 
 T1131	Concept 3705 3719	discapacidades
@@ -1039,7 +1026,7 @@ T1166	Concept 4651 4658	comunes
 E1166	Concept:T1166 
 R1037	is-a Arg1:E1160 Arg2:E1165
 T1167	Action 4795 4805	desarrolla
-E1167	Action:T1167 Subject:E1168 in-place:E1169
+E1167	Action:T1167 Subject:E1168 in-time:E1169
 T1168	Reference 4792 4794	se
 E1168	Reference:T1168 
 T1169	Predicate 4806 4813	después
@@ -1079,8 +1066,8 @@ T1182	Concept 5352 5361;5362 5372	problemas valvulares
 E1182	Concept:T1182 
 T1183	Action 5380 5388	aparecer
 E1183	Action:T1183 Subject:E1182 in-time:E1184
-T1184	Concept 5404 5414	nacimiento
-E1184	Concept:T1184 
+T1184	Action 5404 5414	nacimiento
+E1184	Action:T1184 
 T1185	Action 5437 5448	infecciones
 E1185	Action:T1185 
 T1186	Concept 5450 5458	infartos
@@ -1102,9 +1089,9 @@ E1191	Concept:T1191
 T1192	Action 5645 5656	necesitarán
 E1192	Action:T1192 Target:E1193 Target2:E1194 Subject:E1191
 T1193	Action 5657 5664	ajustes
-E1193	Action:T1193 
+E1193	Action:T1193 Target:E1191
 T1194	Action 5667 5674	cambios
-E1194	Action:T1194 
+E1194	Action:T1194 Target:E1191
 T1195	Concept 5774 5783;5784 5787;5788 5795;5796 5798;5799 5806	trastorno por consumo de alcohol
 E1195	Concept:T1195 
 T1196	Action 5822 5830	angustia
@@ -1233,3 +1220,6 @@ E1250	Concept:T1250
 A1021	Uncertain E1250
 *	same-as E1247 E1249
 R1055	has-property Arg1:E1247 Arg2:E1250
+A25	Emphasized E1079
+A26	Uncertain E1183
+R33	entails Arg1:E1190 Arg2:E1192	
