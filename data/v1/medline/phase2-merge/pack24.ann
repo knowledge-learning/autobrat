@@ -668,7 +668,7 @@ E1023	Concept:T1023
 R1007	is-a Arg1:E1022 Arg2:E1021
 R1008	is-a Arg1:E1023 Arg2:E1021
 T1024	Action 538 541	dar
-E1024	Action:T1024 Subject:E1015 Target:E1017 Target2:E1016
+E1024	Action:T1024 Subject:E1015 Target:E1017 in-context:E1016
 T1025	Concept 760 766	acidez
 E1025	Concept:T1025 
 T1026	Action 792 800	necesite
@@ -892,7 +892,7 @@ E1123	Action:T1123 Subject:E1125
 T1124	Concept 3440 3448	mosquito
 E1124	Concept:T1124 
 T1125	Action 3449 3458	infectado
-E1125	Action:T1125 Subject:E1124 Target:E1120
+E1125	Action:T1125 Target2:E1124 Subject:E1120
 R1022	is-a Arg1:E1120 Arg2:E1121
 R1023	causes Arg1:E1123 Arg2:E1122
 T1126	Concept 3600 3612;3613 3620	escanografía nuclear
@@ -944,7 +944,7 @@ T1148	Action 4148 4159	completaron
 E1148	Action:T1148 Target:E1149 Subject:E1147
 T1149	Action 4163 4172	gestación
 E1149	Action:T1149 Target:E1147
-E1150	Action:T1145 Subject:E1147
+E1150	Action:T1145 Subject:E1148
 T1150	Action 4079 4084	nacen
 E1151	Action:T1150 in-place:E1152 Subject:E1144
 T1151	Concept 4089 4095	pronto
@@ -965,7 +965,7 @@ T1157	Predicate 4334 4342	interior
 E1158	Predicate:T1157 Domain:E1154
 R1024	is-a Arg1:E1154 Arg2:E1153
 *	same-as E1154 E1155
-R1026	part-of Arg1:E1156 Arg2:E1154
+R1026	part-of Arg1:E1156 Arg2:E1158
 R1027	part-of Arg1:E1157 Arg2:E1158
 T1158	Concept 4412 4418;4419 4426	herpes genital
 E1159	Concept:T1158 
@@ -989,7 +989,7 @@ E1166	Concept:T1165
 T1166	Action 4684 4691	afectar
 E1167	Action:T1166 Target:E1168 Subject:E1166
 T1167	Predicate 4699 4704	todos
-E1168	Predicate:T1167 Arg:E1169 Arg2:E1170
+E1168	Predicate:T1167 Domain:E1169 Domain2:E1170
 T1168	Concept 4709 4716	órganos
 E1169	Concept:T1168 in-place:E1171
 T1169	Concept 4719 4727	sistemas
@@ -1094,7 +1094,7 @@ E1211	Concept:T1210
 T1211	Concept 5984 5992	personas
 E1212	Concept:T1211 
 T1212	Predicate 5977 5983	Muchas
-E1213	Predicate:T1212 Domain:E1216
+E1213	Predicate:T1212 Domain:E1216 Domain2:E1214
 T1213	Action 5997 6003	mascan
 E1214	Action:T1213 Target:E1215 Subject:E1212
 T1214	Concept 6004 6010	tabaco
@@ -1149,12 +1149,10 @@ E1237	Reference:T1236
 T1237	Concept 6609 6617	aparatos
 E1238	Concept:T1237 
 R1044	is-a Arg1:E1237 Arg2:E1238
-T1238	Action 6625 6633	mantener
-E1239	Action:T1238 Target:E1240 Subject:E1237 in-context:E1241
+T1238	Action 6625 6633;6634 6637;6638 6642	mantener con vida
+E1239	Action:T1238 Target:E1240 Subject:E1237
 T1239	Concept 6649 6656	persona
 E1240	Concept:T1239 
-T1240	Concept 6638 6642	vida
-E1241	Concept:T1240 
 T1241	Action 6671 6679	aumentan
 E1242	Action:T1241 Target:E1243 Subject:E1237
 T1242	Predicate 6683 6689	riesgo
@@ -1198,3 +1196,6 @@ R1048	is-a Arg1:E1255 Arg2:E1253
 R1049	is-a Arg1:E1256 Arg2:E1253
 R1050	is-a Arg1:E1257 Arg2:E1253
 R1051	is-a Arg1:E1258 Arg2:E1253
+A23	Emphasized E1102
+A24	Uncertain E1102
+A25	Emphasized E1146
