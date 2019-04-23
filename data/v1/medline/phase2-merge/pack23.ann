@@ -181,8 +181,8 @@ E83	Concept:T75
 A6	Negated E82
 T76	Concept 2091 2098	general
 E84	Concept:T76 
-T77	Predicate 2174 2183	problemas
-E85	Predicate:T77 in-place:E86
+T77	Action 2174 2183	problemas
+E85	Action:T77 Target:E86
 T78	Concept 2190 2196	sangre
 E86	Concept:T78 
 T79	Action 2197 2204	afectan
@@ -405,11 +405,9 @@ E192	Action:T175 Target:E185
 A10	Negated E192
 R27	is-a Arg1:E185 Arg2:E191
 T176	Action 4741 4749	necesite
-E193	Action:T176 in-context:E195 Target:E194
+E193	Action:T176 Target:E194
 T177	Concept 4753 4759;4760 4762;4763 4770;4771 4780	bypass de arteria coronaria
 E194	Concept:T177 
-T178	Concept 4729 4736	posible
-E195	Concept:T178 
 R28	entails Arg1:E192 Arg2:E193
 A11	Uncertain E193
 T179	Action 4878 4886	lesiones
@@ -573,16 +571,11 @@ A19	Uncertain E260
 T244	Reference 6959 6962	eso
 E262	Reference:T244 
 T245	Action 6966 6974	funciona
-E263	Action:T245 Target:E262
+E263	Action:T245 Target:E262 Subject:E262
 A20	Negated E263
-T246	Action 6991 6999	necesite
-E264	Action:T246 Target:E265 in-context:E266
-T247	Concept 7000 7007	cirugía
-E265	Concept:T247 
-A21	Uncertain E264
-T248	Concept 6979 6986	posible
-E266	Concept:T248 
-R48	entails Arg1:E263 Arg2:E264
+T247	Action 7000 7007	cirugía
+E265	Action:T247 
+R48	entails Arg1:E263 Arg2:E265
 T1001	Action 99 106	conocer
 E1001	Action:T1001 Target:E1002
 T1002	Concept 111 118;119 121;122 133	señales de advertencia
@@ -705,22 +698,21 @@ E1055	Concept:T1051
 T1052	Concept 1603 1608	hueso
 E1056	Concept:T1052 
 T1053	Action 1612 1621	deteriore
-E1057	Action:T1053 Target:E1056 Subject:E1053
+E1057	Action:T1053 Target:E1056
 T1054	Predicate 1626 1632	rápido
 E1058	Predicate:T1054 Domain:E1057 Arg:E1060
 A1004	Emphasized E1058
 T1055	Concept 1647 1653	cuerpo
 E1059	Concept:T1055 
 T1056	Action 1660 1670	producirlo
-E1060	Action:T1056 Subject:E1059 Target:E1054
-R1010	entails Arg1:E1052 Arg2:E1058
+E1060	Action:T1056 Subject:E1059 Target:E1056
 T1057	Concept 1734 1741	lípidos
 E1061	Concept:T1057 
 T1058	Concept 1746 1752	grasas
 E1062	Concept:T1058 
 R1011	is-a Arg1:E1061 Arg2:E1062
-T1059	Action 1766 1775	similares
-E1063	Action:T1059 Subject:E1065 Target:E1064
+T1059	Predicate 1766 1775	similares
+E1063	Predicate:T1059 Domain:E1065 Arg:E1064
 T1060	Concept 1781 1786	grasa
 E1064	Concept:T1060 
 T1061	Concept 1755 1765	sustancias
@@ -857,7 +849,7 @@ R1017	has-property Arg1:E1121 Arg2:E1122
 T1120	Action 3419 3424	eleva
 E1124	Action:T1120 Target:E1125 Subject:E1123 in-place:E1127
 T1121	Predicate 3428 3433	nivel
-E1125	Predicate:T1121 Domain:E1126
+E1125	Predicate:T1121 Arg:E1126
 T1122	Concept 3437 3443	calcio
 E1126	Concept:T1122 
 T1123	Concept 3450 3456	sangre
@@ -904,8 +896,8 @@ T1142	Reference 4081 4086	Otras
 E1146	Reference:T1142 
 T1143	Action 4097 4103	lentos
 E1147	Action:T1143 Subject:E1146 Target:E1148
-T1144	Concept 4108 4115;4116 4119;4120 4127	latidos del corazón
-E1148	Concept:T1144 
+T1144	Action 4108 4115	latidos
+E1148	Action:T1144 Subject:E267
 T1145	Action 4130 4137	aflojan
 E1149	Action:T1145 Target:E1151 Subject:E1146
 T1146	Action 4140 4149	ensanchan
@@ -950,7 +942,7 @@ E1167	Reference:T1163
 T1164	Action 4681 4688	consume
 E1168	Action:T1164 Subject:E1167 Target:E1166
 T1165	Action 4600 4606	ayudan
-E1169	Action:T1165 Subject:E1162 Target:E1164
+E1169	Action:T1165 Target:E1164 Subject:E268
 T1166	Action 4833 4841	necesite
 E1170	Action:T1166 Target:E1171
 T1167	Action 4845 4851	bypass
@@ -1010,8 +1002,6 @@ T1189	Concept 5381 5394	lente del ojo
 E1194	Concept:T1189 
 T1190	Concept 5531 5538	alcohol
 E1195	Concept:T1190 
-T1191	Action 5545 5551	causar
-E1196	Action:T1191 Target:E1197 Subject:E1195 Target2:E1203
 T1192	Action 5552 5561	problemas
 E1197	Action:T1192 Target:E1199 Target2:E1198 in-time:E1200 in-place:E1202
 T1193	Concept 5575 5583	conducta
@@ -1024,7 +1014,6 @@ T1196	Concept 5597 5601	vida
 E1201	Concept:T1196 
 T1197	Concept 5609 5614	niños
 E1202	Concept:T1197 
-A1018	Uncertain E1196
 T1198	Concept 5629 5658	síndrome de alcoholismo fetal
 E1203	Concept:T1198 
 T1199	Action 5761 5771	necesitará
@@ -1055,21 +1044,14 @@ R1026	is-a Arg1:E1213 Arg2:E1209
 R1027	is-a Arg1:E1214 Arg2:E1209
 T1206	Reference 6096 6101	Usted
 E1211	Reference:T1206 
-T1210	Action 6108 6117	necesitar
-E1215	Action:T1210 Target:E1216 Subject:E1211
 T1211	Action 6121 6131	trasplante
-E1216	Action:T1211 Target:E1217
+E1216	Action:T1211 Target:E1217 Subject:E1211
 T1212	Concept 6135 6142	órganos
 E1217	Concept:T1212 
 T1213	Concept 6157 6164	órganos
 E1218	Concept:T1213 
-T1214	Action 6168 6174	cumple
-E1219	Action:T1214 Subject:E1218 Target:E1220
-T1215	Concept 6183 6192	funciones
-E1220	Concept:T1215 
-A1021	Negated E1219
-R1028	entails Arg1:E1219 Arg2:E1215
-A1022	Uncertain E1215
+T1215	Action 6183 6192	funciones
+E1220	Action:T1215 Subject:E1218 Target:E1218
 T1216	Concept 6264 6275	tratamiento
 E1221	Concept:T1216 
 T1218	Concept 6284 6298	terapia física
@@ -1080,7 +1062,7 @@ R1029	is-a Arg1:E1223 Arg2:E1221
 R1030	is-a Arg1:E1224 Arg2:E1221
 A1023	Diminished E1224
 T1220	Concept 6448 6452	crup
-E1225	Concept:T1220 in-context:E1226
+E1225	Concept:T1220 
 T1221	Concept 6472 6477	grave
 E1226	Concept:T1221 
 A1025	Uncertain E1226
@@ -1140,3 +1122,17 @@ T1241	Concept 7053 7060	cirugía
 E1247	Concept:T1241 
 A1035	Uncertain E1246
 R1032	entails Arg1:E1244 Arg2:E1246
+R49	causes Arg1:E1053 Arg2:E1057	
+R50	entails Arg1:E1052 Arg2:E1053	
+T249	Concept 4120 4127	corazón
+E267	Concept:T249 
+T250	Reference 4584 4589	Estas
+E268	Reference:T250 
+R51	is-a Arg1:E268 Arg2:E1162	
+R52	causes Arg1:E1195 Arg2:E1197	
+R53	causes Arg1:E1195 Arg2:E1203	
+R54	entails Arg1:E1220 Arg2:E1216	
+A22	Uncertain E1216
+R55	has-property Arg1:E1225 Arg2:E1226	
+A23	Diminished E1226
+A21	Uncertain E265
