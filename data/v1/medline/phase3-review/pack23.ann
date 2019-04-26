@@ -239,7 +239,7 @@ E18	Concept:T17
 E19	Concept:T18 
 E35	Reference:T32 
 E36	Concept:T33 
-E37	Action:T34 Target2:E35 in-place:E39 in-place2:E41
+E37	Action:T34 Target2:E35 in-context:E39 in-context2:E41
 E38	Concept:T35 
 E39	Action:T36 Subject:E38 Target:E40
 E40	Concept:T37 
@@ -531,9 +531,9 @@ R1023	entails Arg1:E1190 Arg2:E1187
 A1019	Emphasized E1204
 A1020	Uncertain E1204
 R1024	entails Arg1:E1207 Arg2:E1204
-R1025	part-of Arg1:E1212 Arg2:E1209
-R1026	part-of Arg1:E1213 Arg2:E1209
-R1027	part-of Arg1:E1214 Arg2:E1209
+R1025	is-a Arg1:E1212 Arg2:E1209
+R1026	is-a Arg1:E1213 Arg2:E1209
+R1027	is-a Arg1:E1214 Arg2:E1209
 R1029	is-a Arg1:E1223 Arg2:E1221
 R1030	is-a Arg1:E1224 Arg2:E1221
 A1023	Diminished E1224

@@ -218,8 +218,7 @@ T1214	Concept 2973 2979	tabaco
 T1215	Action 2982 2990	consumen
 T1216	Concept 2991 2995	rapé
 T1217	Action 2996 3003	piensan
-T1218	Predicate 3011 3014	más
-T1219	Concept 3015 3019	sano
+T1218	Predicate 3011 3014;3015 3019	más sano
 T1220	Action 3024 3029	fumar
 T1221	Action 3034 3043;3044 3046;3047 3053	reemplazo de cadera
 T1222	Concept 3061 3068	cirugía
@@ -278,7 +277,7 @@ E92	Concept:T90
 E140	Reference:T137 
 E141	Concept:T138 
 E142	Action:T139 Target:E143
-E143	Concept:T140 in-place:E140
+E143	Concept:T140 in-context:E140
 E182	Concept:T177 
 E183	Action:T178 Target:E184 in-context:E185
 E184	Concept:T179 
@@ -477,8 +476,7 @@ E1215	Concept:T1214
 E1216	Action:T1215 Subject:E1212 Target:E1217
 E1217	Concept:T1216 
 E1218	Action:T1217 Subject:E1213 Target:E1219
-E1219	Predicate:T1218 Arg:E1220 Domain2:E1215 Domain:E1217 in-context:E1221
-E1220	Concept:T1219 
+E1219	Predicate:T1218 Domain2:E1215 Domain:E1217 Arg:E1221
 E1221	Action:T1220 
 E1222	Action:T1221 Target:E1227
 E1223	Concept:T1222 
@@ -596,7 +594,7 @@ E13	Predicate:T13 Arg:E1028 Domain:E1027
 *	same-as E1046 E1051
 R7	has-property Arg1:E1140 Arg2:E1143	
 R8	has-property Arg1:E1145 Arg2:E1146	
-R9	part-of Arg1:E1163 Arg2:E1165	
 R10	part-of Arg1:E1169 Arg2:E1171	
 R11	part-of Arg1:E1170 Arg2:E1171	
 R12	is-a Arg1:E1197 Arg2:E1195	
+R9	part-of Arg1:E1162 Arg2:E1165	

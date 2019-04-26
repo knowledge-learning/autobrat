@@ -163,7 +163,7 @@ T1125	Concept 1588 1593	usted
 T1126	Action 1576 1583	Conocer
 T1127	Concept 1661 1667;1668 1670;1671 1675	estilo de vida
 T1128	Concept 1680 1684	sano
-T1129	Concept 1730 1744	rehabilitación
+T1129	Action 1730 1744	rehabilitación
 T1130	Concept 1754 1763;1764 1779	accidente cerebrovascular
 T1131	Concept 1822 1836	discapacidades
 T1132	Concept 1853 1862	apoplejía
@@ -408,15 +408,15 @@ E1125	Concept:T1125
 E1126	Action:T1126 Target:E1124
 E1127	Concept:T1127 in-context:E1128
 E1128	Concept:T1128 
-E1129	Concept:T1129 
+E1129	Action:T1129 in-time:E1137
 E1130	Concept:T1130 
 E1131	Concept:T1131 
 E1132	Concept:T1132 
 E1133	Concept:T1133 
 E1134	Concept:T1134 
 E1135	Action:T1135 Subject:E1134 Target:E1131
-E1136	Action:T1136 Target:E1135 Subject:E1137
-E1137	Predicate:T1137 Arg:E1130 Domain:E1129
+E1136	Action:T1136 Target:E1135 Subject:E1129
+E1137	Predicate:T1137 Arg:E1130
 E1152	Action:T1152 
 E1153	Action:T1153 
 E1154	Action:T1154 in-context:E1155

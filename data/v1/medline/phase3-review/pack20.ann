@@ -458,7 +458,7 @@ E1018	Concept:T1016
 E1019	Action:T1017 in-place:E1018
 E1020	Concept:T1018 
 E1039	Concept:T1037 
-E1040	Action:T1038 Subject:E1039 Target:E1041
+E1040	Action:T1038 Subject:E1039 Target:E1041 Target2:E1042
 E1041	Predicate:T1039 Arg:E1043
 E1042	Predicate:T1040 Arg:E1043
 E1043	Concept:T1041 
@@ -632,12 +632,11 @@ R1063	has-property Arg1:E1281 Arg2:E1168
 R1064	has-property Arg1:E1159 Arg2:E1168
 R1003	has-property Arg1:E1019 Arg2:E1020
 *	same-as E1016 E1019 E1017
-R1006	entails Arg1:E1042 Arg2:E1040
 R70	entails Arg1:E1131 Arg2:E1141
 R71	entails Arg1:E1131 Arg2:E1141
 R72	entails Arg1:E1131 Arg2:E1141
 R74	entails Arg1:E170 Arg2:E175
 A27	Diminished E1231
-A3	Uncertain E259
+A3	Uncertain E255
 A4	Uncertain E257
-A9	Uncertain E255
+A9	Uncertain E259

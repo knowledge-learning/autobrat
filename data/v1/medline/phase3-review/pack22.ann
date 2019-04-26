@@ -137,7 +137,7 @@ T180	Concept 2560 2568;2569 2576;2577 2581	densidad mineral ósea
 T181	Concept 2588 2593	mejor
 T182	Concept 2594 2600	manera
 T183	Action 2604 2613	controlar
-T184	Predicate 2617 2622	salud
+T184	Concept 2617 2622	salud
 T185	Concept 2630 2636	huesos
 T186	Concept 2683 2689	azúcar
 T187	Action 2690 2694	baja
@@ -398,7 +398,7 @@ E145	Concept:T1 in-context:E142 in-context2:E144
 E146	Concept:T142 
 E147	Concept:T143 
 E148	Action:T144 Target:E149 Subject:E147
-E149	Action:T145 Target:E150
+E149	Action:T145 Subject:E150
 E150	Predicate:T146 Domain:E151
 E151	Concept:T147 
 E152	Action:T148 Target:E153 Subject:E147
@@ -426,9 +426,9 @@ E184	Concept:T180
 E185	Concept:T181 
 E186	Concept:T182 
 E187	Action:T183 Target:E188 Subject:E186 in-context:E185
-E188	Predicate:T184 Domain:E189
+E188	Concept:T184 in-context:E189
 E189	Concept:T185 
-E190	Concept:T186 
+E190	Concept:T186 in-place:E192
 E191	Action:T187 Target:E190 in-place:E193
 E192	Concept:T188 
 E193	Concept:T189 in-context:E194
@@ -492,19 +492,19 @@ E1112	Concept:T1107
 E1113	Action:T1108 Subject:E1109 Target:E1111
 E1114	Concept:T1109 in-context:E1115
 E1115	Concept:T1110 
-E1116	Action:T1111 Target:E1117
+E1116	Action:T1111 Target:E1114
 E1117	Concept:T1112 in-context:E1118
 E1118	Concept:T1113 
 E1119	Action:T1114 Target:E1120
 E1120	Concept:T1115 
-E1121	Action:T1116 Target:E1119 Subject:E1117
+E1121	Action:T1116 Target:E1119 Target2:E1114
 E1182	Predicate:T1175 Domain:E1183 Arg:E1184
 E1183	Concept:T1176 
 E1184	Concept:T1177 
 E1185	Concept:T1178 in-context:E1186
 E1186	Concept:T1179 
 E1187	Concept:T1180 
-E1188	Action:T1181 Target:E1185
+E1188	Action:T1181 Subject:E1185
 E1189	Action:T1182 Target:E1188 Subject:E1182
 E1004	Concept:T1004 
 E1231	Predicate:T1223 Domain:E1232
@@ -659,11 +659,13 @@ R65	is-a Arg1:E212 Arg2:E211
 R66	entails Arg1:E1252 Arg2:E1244
 A17	Uncertain E83
 R1	part-of Arg1:E1107 Arg2:E1108	
-A18	Uncertain E126
 T1	Concept 1915 1920	viaje
 T2	Action 1949 1953	haga
 E1	Action:T2 Target:E2
 T3	Concept 1954 1960	pausas
 E2	Concept:T3 in-context:E135 in-context2:E136
-R2	part-of Arg1:E190 Arg2:E192	
 A21	Emphasized E1277
+R24	entails Arg1:E37 Arg2:E38	
+R25	entails Arg1:E1116 Arg2:E1121	
+R26	entails Arg1:E140 Arg2:E1	
+R27	entails Arg1:E140 Arg2:E138	
