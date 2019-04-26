@@ -163,7 +163,7 @@ T1125	Concept 1588 1593	usted
 T1126	Action 1576 1583	Conocer
 T1127	Concept 1661 1667;1668 1670;1671 1675	estilo de vida
 T1128	Concept 1680 1684	sano
-T1129	Action 1730 1744	rehabilitación
+T1129	Concept 1730 1744	rehabilitación
 T1130	Concept 1754 1763;1764 1779	accidente cerebrovascular
 T1131	Concept 1822 1836	discapacidades
 T1132	Concept 1853 1862	apoplejía
@@ -205,7 +205,7 @@ T1181	Concept 2591 2597	cremas
 T1182	Concept 2603 2612;2613 2623	problemas valvulares
 T1183	Action 2631 2639	aparecer
 T1184	Action 2655 2665	nacimiento
-T1185	Action 2688 2699	infecciones
+T1185	Concept 2688 2699	infecciones
 T1186	Concept 2701 2709	infartos
 T1187	Concept 2712 2724;2736 2739;2740 2747	enfermedades del corazón
 T1188	Concept 2727 2735;2736 2739;2740 2747	lesiones del corazón
@@ -273,10 +273,10 @@ E147	Concept:T144
 E148	Concept:T145 in-context:E149
 E149	Concept:T146 
 E208	Concept:T203 
-E209	Action:T204 Subject:E208 in-context:E210 in-place:E211 in-place2:E212
+E209	Action:T204 Subject:E208 in-context:E210 Target:E211 Target2:E212
 E210	Concept:T205 
 E211	Concept:T206 
-E212	Concept:T207 in-place:E211
+E212	Concept:T207 
 E213	Action:T208 
 E214	Action:T209 
 E215	Reference:T210 
@@ -335,13 +335,13 @@ E1040	Predicate:T1040 Arg:E1041
 E1041	Concept:T1041 
 E1042	Concept:T1042 
 E1043	Action:T1043 Subject:E1042 in-place:E1046 Target:E1050
-E1044	Predicate:T1044 Arg:E1045
+E1044	Predicate:T1044 Domain:E1045
 E1045	Concept:T1045 
 E1046	Predicate:T1046 Domain:E1047
 E1047	Concept:T1047 
 E1048	Concept:T1048 
 E1049	Concept:T1049 
-E1050	Action:T1050 Subject:E1045 Target:E1048
+E1050	Action:T1050 Target:E1048 Subject:E1044
 E1051	Concept:T1051 
 E1052	Predicate:T1052 Domain:E1053 Arg:E1054
 E1053	Concept:T1053 
@@ -408,15 +408,15 @@ E1125	Concept:T1125
 E1126	Action:T1126 Target:E1124
 E1127	Concept:T1127 in-context:E1128
 E1128	Concept:T1128 
-E1129	Action:T1129 in-time:E1137
+E1129	Concept:T1129 
 E1130	Concept:T1130 
 E1131	Concept:T1131 
 E1132	Concept:T1132 
 E1133	Concept:T1133 
 E1134	Concept:T1134 
 E1135	Action:T1135 Subject:E1134 Target:E1131
-E1136	Action:T1136 Subject:E1129 Target:E1135
-E1137	Predicate:T1137 Arg:E1130
+E1136	Action:T1136 Target:E1135 Subject:E1137
+E1137	Predicate:T1137 Arg:E1130 Domain:E1129
 E1152	Action:T1152 
 E1153	Action:T1153 
 E1154	Action:T1154 in-context:E1155
@@ -450,7 +450,7 @@ E1181	Concept:T1181
 E1182	Concept:T1182 
 E1183	Action:T1183 Subject:E1182 in-time:E1184
 E1184	Action:T1184 
-E1185	Action:T1185 
+E1185	Concept:T1185 
 E1186	Concept:T1186 
 E1187	Concept:T1187 
 E1188	Concept:T1188 
@@ -533,10 +533,8 @@ R1013	is-a Arg1:E1034 Arg2:E1035
 R1014	entails Arg1:E1039 Arg2:E1036
 A1008	Diminished E1044
 R1015	is-a Arg1:E1049 Arg2:E1048
-*	same-as E1051 E1052
 A1009	Negated E1060
 R1016	causes Arg1:E1060 Arg2:E1063
-A1011	Negated E1017
 R1017	is-a Arg1:E1072 Arg2:E1071
 R1018	is-a Arg1:E1073 Arg2:E1071
 R1019	is-a Arg1:E1074 Arg2:E1071
@@ -583,3 +581,7 @@ R1055	has-property Arg1:E1247 Arg2:E1250
 A25	Emphasized E1079
 A26	Uncertain E1183
 R33	entails Arg1:E1190 Arg2:E1192
+R5	has-property Arg1:E1051 Arg2:E1052	
+A4	Uncertain E1102
+A6	Negated E1012
+R6	part-of Arg1:E212 Arg2:E211	

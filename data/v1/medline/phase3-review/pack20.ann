@@ -184,8 +184,8 @@ T1017	Action 215 223	problema
 T1018	Concept 228 233	común
 T1037	Concept 639 650	computadora
 T1038	Action 651 660	convierte
-T1039	Concept 665 669	ecos
-T1040	Concept 673 681	imágenes
+T1039	Predicate 665 669	ecos
+T1040	Predicate 673 681	imágenes
 T1041	Concept 688 695	corazón
 T1098	Concept 1377 1384;1385 1393	músculo cardíaco
 T1099	Action 1369 1373	daño
@@ -272,9 +272,9 @@ E6	Action:T6 Target:E1 in-time:E8 in-time2:E9
 E8	Concept:T8 
 E9	Concept:T9 
 E7	Reference:T7 
-E10	Concept:T10 in-context:E11
+E10	Concept:T10 in-context:E11 in-context2:E12
 E11	Concept:T11 
-E12	Concept:T12 in-context:E13 in-place:E10
+E12	Concept:T12 in-context:E13
 E13	Concept:T13 
 E14	Concept:T14 
 E21	Concept:T21 
@@ -309,8 +309,8 @@ E54	Action:T54 Target:E55 Subject:E50 Target2:E56 in-time:E58
 E55	Concept:T55 
 E56	Predicate:T56 Arg:E57
 E57	Concept:T57 
-E58	Predicate:T58 Arg:E59
-E59	Concept:T59 in-context:E60
+E58	Predicate:T58 Arg:E59 Domain:E60
+E59	Concept:T59 
 E60	Concept:T60 
 E61	Concept:T61 
 E62	Concept:T62 
@@ -459,8 +459,8 @@ E1019	Action:T1017 in-place:E1018
 E1020	Concept:T1018 
 E1039	Concept:T1037 
 E1040	Action:T1038 Subject:E1039 Target:E1041
-E1041	Concept:T1039 in-context:E1043
-E1042	Concept:T1040 in-context:E1043
+E1041	Predicate:T1039 Arg:E1043
+E1042	Predicate:T1040 Arg:E1043
 E1043	Concept:T1041 
 E1102	Concept:T1098 
 E1103	Action:T1099 Target:E1102
@@ -500,7 +500,7 @@ E1170	Concept:T1164
 E1171	Concept:T1165 
 E1172	Concept:T1166 
 E1175	Concept:T1153 in-context:E1160 in-place:E1161
-E1208	Concept:T1202 in-context:E1210 in-context2:E1209
+E1208	Concept:T1202 in-context2:E1209 in-place:E1210
 E1209	Concept:T1203 
 E1210	Reference:T1204 
 E1211	Action:T1205 Target:E1212
@@ -638,3 +638,6 @@ R71	entails Arg1:E1131 Arg2:E1141
 R72	entails Arg1:E1131 Arg2:E1141
 R74	entails Arg1:E170 Arg2:E175
 A27	Diminished E1231
+A3	Uncertain E259
+A4	Uncertain E257
+A9	Uncertain E255

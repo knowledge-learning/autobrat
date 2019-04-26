@@ -278,7 +278,7 @@ E92	Concept:T90
 E140	Reference:T137 
 E141	Concept:T138 
 E142	Action:T139 Target:E143
-E143	Concept:T140 in-context:E140
+E143	Concept:T140 in-place:E140
 E182	Concept:T177 
 E183	Action:T178 Target:E184 in-context:E185
 E184	Concept:T179 
@@ -301,10 +301,10 @@ E1020	Concept:T1020
 E1021	Concept:T1021 
 E1022	Concept:T1022 
 E1023	Concept:T1023 
-E1024	Action:T1024 Subject:E1015 Target:E1017 in-context:E1016
+E1024	Action:T1024 Subject:E1015 Target:E1017 in-place:E1016
 E1025	Concept:T1025 
-E1026	Action:T1026 Target:E1027 Target2:E1029
-E1027	Concept:T1027 in-context:E1028
+E1026	Action:T1026 Target2:E1029 Target:E13
+E1027	Concept:T1027 
 E1028	Concept:T1028 
 E1029	Action:T1029 
 E1030	Action:T1030 Target:E1025
@@ -349,7 +349,7 @@ E1068	Concept:T1068
 E1069	Predicate:T1069 Domain:E1067 Arg:E1070
 E1070	Concept:T1070 
 E1071	Concept:T1071 
-E1072	Action:T1072 Subject:E1071 in-place:E1075 in-context:E1073
+E1072	Action:T1072 Subject:E1071 in-place:E1075 in-context:E1073 Target:E1071
 E1073	Predicate:T1073 Domain:E1074
 E1074	Concept:T1074 
 E1075	Concept:T1075 in-context:E1076
@@ -407,18 +407,17 @@ E1132	Concept:T1132 in-place:E1133
 E1133	Predicate:T1133 Arg:E1134
 E1134	Concept:T1134 
 E1139	Concept:T1139 
-E1140	Action:T1140 Target:E1141 Subject:E1139 in-context:E1143
+E1140	Action:T1140 Target:E1141 Subject:E1139
 E1141	Concept:T1141 
 E1142	Concept:T1142 
 E1143	Predicate:T1143 Domain:E1142
 E1144	Concept:T1144 
-E1145	Action:T1145 Subject:E1144 in-context:E1146
-E1146	Predicate:T1146 Arg:E1150
+E1145	Action:T1145 Subject:E1144
+E1146	Predicate:T1146 Arg:E1148
 E1147	Concept:T1147 
 E1148	Action:T1148 Target:E1149 Subject:E1147
 E1149	Action:T1149 Target:E1147
-E1150	Action:T1145 Subject:E1148
-E1151	Action:T1150 in-place:E1152 Subject:E1144
+E1151	Action:T1150 Subject:E1144 in-time:E1152
 E1152	Concept:T1151 
 E1153	Concept:T1152 
 E1154	Reference:T1153 
@@ -430,14 +429,14 @@ E1159	Concept:T1158
 E1160	Concept:T1159 
 E1161	Concept:T1160 
 E1162	Concept:T1161 
-E1163	Predicate:T1162 Arg:E1164 in-place:E1165
+E1163	Predicate:T1162 Arg:E1164
 E1164	Concept:T1163 
 E1165	Concept:T1164 
 E1166	Concept:T1165 
 E1167	Action:T1166 Target:E1168 Subject:E1166
 E1168	Predicate:T1167 Domain:E1169 Domain2:E1170
-E1169	Concept:T1168 in-place:E1171
-E1170	Concept:T1169 in-place:E1171
+E1169	Concept:T1168 
+E1170	Concept:T1169 
 E1171	Concept:T1170 
 E1172	Reference:T1171 
 E1173	Concept:T1172 
@@ -448,9 +447,9 @@ E1185	Concept:T1184
 E1186	Concept:T1185 
 E1187	Concept:T1186 
 E1188	Concept:T1187 
-E1189	Predicate:T1188 Arg:E1188
+E1189	Predicate:T1188 Domain:E1188
 E1190	Concept:T1189 
-E1191	Predicate:T1190 Arg:E1190
+E1191	Predicate:T1190 Domain:E1190
 E1192	Action:T1191 Target:E1193
 E1193	Concept:T1192 
 E1194	Action:T1193 Target:E1189 Target2:E1191
@@ -478,7 +477,7 @@ E1215	Concept:T1214
 E1216	Action:T1215 Subject:E1212 Target:E1217
 E1217	Concept:T1216 
 E1218	Action:T1217 Subject:E1213 Target:E1219
-E1219	Predicate:T1218 Arg:E1220 Arg2:E1221 Domain2:E1215 Domain:E1217
+E1219	Predicate:T1218 Arg:E1220 Domain2:E1215 Domain:E1217 in-context:E1221
 E1220	Concept:T1219 
 E1221	Action:T1220 
 E1222	Action:T1221 Target:E1227
@@ -486,7 +485,7 @@ E1223	Concept:T1222
 E1224	Concept:T1223 
 E1225	Concept:T1224 
 E1226	Concept:T1225 
-E1227	Predicate:T1226 Domain:E1224 Arg:E1226 in-context:E1225
+E1227	Predicate:T1226 in-context:E1225 in-place:E1226 Domain:E1224
 E1228	Action:T1227 Subject:E1230 Target:E1229
 E1229	Concept:T1228 
 E1230	Reference:T1229 
@@ -537,7 +536,6 @@ A1002	Uncertain E1026
 R1010	causes Arg1:E1036 Arg2:E1035
 A1003	Uncertain E1038
 R1011	has-property Arg1:E1048 Arg2:E1046
-*	same-as E1051 E1046
 R1012	is-a Arg1:E1058 Arg2:E1056
 R1013	is-a Arg1:E1059 Arg2:E1056
 R1014	is-a Arg1:E1060 Arg2:E1056
@@ -576,7 +574,6 @@ R1037	part-of Arg1:E1186 Arg2:E1184
 R1038	part-of Arg1:E1187 Arg2:E1184
 R1039	entails Arg1:E1194 Arg2:E1192
 A1011	Uncertain E1192
-R1040	is-a Arg1:E1197 Arg2:E1195
 *	same-as E1200 E1207
 R1041	is-a Arg1:E1222 Arg2:E1223
 R1042	entails Arg1:E1228 Arg2:E1231
@@ -594,3 +591,12 @@ R1051	is-a Arg1:E1258 Arg2:E1253
 A23	Emphasized E1102
 A24	Uncertain E1102
 A25	Emphasized E1146
+T13	Predicate 389 392	con
+E13	Predicate:T13 Arg:E1028 Domain:E1027
+*	same-as E1046 E1051
+R7	has-property Arg1:E1140 Arg2:E1143	
+R8	has-property Arg1:E1145 Arg2:E1146	
+R9	part-of Arg1:E1163 Arg2:E1165	
+R10	part-of Arg1:E1169 Arg2:E1171	
+R11	part-of Arg1:E1170 Arg2:E1171	
+R12	is-a Arg1:E1197 Arg2:E1195	

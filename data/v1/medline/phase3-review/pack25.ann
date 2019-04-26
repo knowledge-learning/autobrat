@@ -462,7 +462,7 @@ E1183	Action:T1177 Target:E1184
 E1184	Action:T1178 Target:E1185
 E1185	Concept:T1179 
 E1186	Action:T1175 Target:E1183 Subject:E1171
-E1193	Action:T1186 in-context:E1201
+E1193	Action:T1186 in-context:E1201 Subject:E17 Target:E1194 Target2:E1195
 E1194	Reference:T1187 
 E1195	Predicate:T1188 Domain:E1196
 E1196	Concept:T1189 
@@ -595,3 +595,5 @@ R1053	is-a Arg1:E1246 Arg2:E1251
 R1054	is-a Arg1:E1252 Arg2:E1251
 R56	has-property Arg1:E1039 Arg2:E1041
 R57	part-of Arg1:E1127 Arg2:E1129
+T17	Reference 2358 2360	lo
+E17	Reference:T17 

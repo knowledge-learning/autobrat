@@ -30,7 +30,7 @@ T79	Action 1112 1119	afectan
 T80	Predicate 1133 1139	partes
 T81	Action 1150 1157	impiden
 T82	Action 1162 1168	cumpla
-T83	Concept 1172 1179	función
+T83	Action 1172 1179	función
 T101	Concept 1411 1418	médicos
 T103	Action 1419 1427	utilizan
 T104	Concept 1431 1437;1438 1444	examen físico
@@ -239,7 +239,7 @@ E18	Concept:T17
 E19	Concept:T18 
 E35	Reference:T32 
 E36	Concept:T33 
-E37	Action:T34 Target:E39 Target2:E35 Target3:E41
+E37	Action:T34 Target2:E35 in-place:E39 in-place2:E41
 E38	Concept:T35 
 E39	Action:T36 Subject:E38 Target:E40
 E40	Concept:T37 
@@ -269,7 +269,7 @@ E87	Action:T79 Target:E88 Subject:E85
 E88	Predicate:T80 Domain:E86
 E89	Action:T81 Target:E90 Subject:E85
 E90	Action:T82 Subject:E86 Target:E91
-E91	Concept:T83 in-context:E86
+E91	Action:T83 Subject:E86
 E116	Concept:T101 
 E117	Action:T103 Subject:E116 Target:E118 Target2:E119 Target3:E121 Target4:E122
 E118	Concept:T104 
@@ -531,9 +531,9 @@ R1023	entails Arg1:E1190 Arg2:E1187
 A1019	Emphasized E1204
 A1020	Uncertain E1204
 R1024	entails Arg1:E1207 Arg2:E1204
-R1025	is-a Arg1:E1212 Arg2:E1209
-R1026	is-a Arg1:E1213 Arg2:E1209
-R1027	is-a Arg1:E1214 Arg2:E1209
+R1025	part-of Arg1:E1212 Arg2:E1209
+R1026	part-of Arg1:E1213 Arg2:E1209
+R1027	part-of Arg1:E1214 Arg2:E1209
 R1029	is-a Arg1:E1223 Arg2:E1221
 R1030	is-a Arg1:E1224 Arg2:E1221
 A1023	Diminished E1224
@@ -550,3 +550,8 @@ A22	Uncertain E1216
 R55	has-property Arg1:E1225 Arg2:E1226
 A23	Diminished E1226
 A21	Uncertain E265
+A1	Emphasized E1147
+A2	Uncertain E1212
+A3	Uncertain E1213
+A4	Uncertain E1214
+A6	Negated E1220

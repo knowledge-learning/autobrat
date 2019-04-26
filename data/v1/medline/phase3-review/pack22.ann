@@ -98,22 +98,20 @@ T127	Action 1849 1857	lesiones
 T128	Concept 1864 1870	cabeza
 T129	Predicate 1873 1880	ciertas
 T130	Concept 1881 1893	enfermedades
-T131	Action 1954 1960	pausas
 T132	Action 1966 1973	caminar
 T133	Action 1976 1983	estirar
 T134	Concept 1988 1995	piernas
 T135	Action 1998 2005	ingiera
 T136	Concept 2012 2019	líquido
 T137	Action 1903 1911	realizar
-T138	Action 1915 1920	viaje
 T139	Concept 1921 1926	largo
 T140	Concept 1930 1939	automóvil
 T141	Concept 1942 1947	avión
 T142	Concept 2036 2047	medicamento
 T143	Concept 2056 2064	naloxona
 T144	Action 2075 2083	revertir
-T145	Predicate 2088 2095	efectos
-T146	Concept 2103 2113	sobredosis
+T145	Action 2088 2095	efectos
+T146	Predicate 2103 2113	sobredosis
 T147	Concept 2117 2125	opioides
 T148	Action 2128 2136	prevenir
 T149	Concept 2140 2146	muerte
@@ -139,7 +137,7 @@ T180	Concept 2560 2568;2569 2576;2577 2581	densidad mineral ósea
 T181	Concept 2588 2593	mejor
 T182	Concept 2594 2600	manera
 T183	Action 2604 2613	controlar
-T184	Concept 2617 2622	salud
+T184	Predicate 2617 2622	salud
 T185	Concept 2630 2636	huesos
 T186	Concept 2683 2689	azúcar
 T187	Action 2690 2694	baja
@@ -215,7 +213,7 @@ T1177	Concept 2345 2353	VIH/SIDA
 T1178	Concept 2415 2427	enfermedades
 T1179	Concept 2428 2435	comunes
 T1180	Concept 2445 2450	gripe
-T1181	Concept 2397 2411	complicaciones
+T1181	Action 2397 2411	complicaciones
 T1182	Action 2390 2396	sufrir
 T1004	Concept 90 98	avanzada
 T1223	Predicate 3003 3010	mayoría
@@ -270,7 +268,7 @@ T1283	Action 3888 3896	latiendo
 T1284	Concept 3897 3908	normalmente
 T1285	Concept 3853 3860	corazón
 T1286	Action 3833 3839	graban
-T1287	Concept 3843 3848	ritmo
+T1287	Predicate 3843 3848	ritmo
 T1288	Concept 65 70	común
 T1289	Action 26 35	diferente
 T1294	Concept 3921 3927	vacuna
@@ -313,7 +311,7 @@ E34	Concept:T33
 E35	Action:T34 Target:E36
 E36	Concept:T35 
 E37	Concept:T36 
-E38	Action:T37 Target:E39 in-time:E40 in-context:E37
+E38	Action:T37 Target:E39 in-time:E40
 E39	Concept:T38 
 E40	Predicate:T39 Arg:E41
 E41	Action:T40 Target:E43
@@ -323,7 +321,7 @@ E44	Concept:T43
 E45	Action:T44 Target:E46
 E46	Concept:T45 
 E47	Concept:T46 
-E48	Predicate:T47 Arg:E53
+E48	Predicate:T47 Domain:E53
 E49	Reference:T48 
 E50	Concept:T49 
 E51	Action:T50 Subject:E48 Target:E52
@@ -386,23 +384,22 @@ E130	Action:T127 Target:E131
 E131	Concept:T128 
 E132	Predicate:T129 Domain:E133
 E133	Concept:T130 
-E134	Action:T131 Target:E135 Target2:E136 in-context:E140
 E135	Action:T132 
 E136	Action:T133 Target:E137
 E137	Concept:T134 
-E138	Action:T135 Target:E139 in-context:E140
+E138	Action:T135 Target:E139
 E139	Concept:T136 
 E140	Action:T137 Target:E141 Target2:E145
-E141	Action:T138 in-context:E142 in-context2:E143
+E141	Concept:T1 in-context:E142 in-context2:E143
 E142	Concept:T139 
 E143	Concept:T140 
 E144	Concept:T141 
-E145	Action:T138 in-context:E142 in-context2:E144
+E145	Concept:T1 in-context:E142 in-context2:E144
 E146	Concept:T142 
 E147	Concept:T143 
 E148	Action:T144 Target:E149 Subject:E147
-E149	Predicate:T145 Arg:E150
-E150	Concept:T146 in-context:E151
+E149	Action:T145 Target:E150
+E150	Predicate:T146 Domain:E151
 E151	Concept:T147 
 E152	Action:T148 Target:E153 Subject:E147
 E153	Concept:T149 
@@ -429,9 +426,9 @@ E184	Concept:T180
 E185	Concept:T181 
 E186	Concept:T182 
 E187	Action:T183 Target:E188 Subject:E186 in-context:E185
-E188	Concept:T184 in-context:E189
+E188	Predicate:T184 Domain:E189
 E189	Concept:T185 
-E190	Concept:T186 in-place:E192
+E190	Concept:T186 
 E191	Action:T187 Target:E190 in-place:E193
 E192	Concept:T188 
 E193	Concept:T189 in-context:E194
@@ -453,7 +450,7 @@ E209	Action:T204 Target:E210
 E210	Concept:T205 
 E211	Concept:T206 
 E212	Concept:T207 
-E213	Action:T208 Subject:E212 Target:E214 Subject2:E215
+E213	Action:T208 Target:E214 Subject:E215
 E214	Concept:T209 
 E215	Predicate:T210 Domain:E211
 E218	Concept:T213 
@@ -486,7 +483,7 @@ E1103	Action:T1098 Target:E1105 Subject:E1106
 E1104	Action:T1099 Target:E1105 Subject:E1106
 E1105	Concept:T1100 
 E1106	Concept:T1101 
-E1107	Concept:T1102 in-context:E1108
+E1107	Concept:T1102 
 E1108	Concept:T1103 
 E1109	Action:T1104 in-context:E1110 Target:E1103 Target2:E1104
 E1110	Concept:T1105 
@@ -495,19 +492,19 @@ E1112	Concept:T1107
 E1113	Action:T1108 Subject:E1109 Target:E1111
 E1114	Concept:T1109 in-context:E1115
 E1115	Concept:T1110 
-E1116	Action:T1111 Target:E1117 Target2:E1121
+E1116	Action:T1111 Target:E1117
 E1117	Concept:T1112 in-context:E1118
 E1118	Concept:T1113 
 E1119	Action:T1114 Target:E1120
 E1120	Concept:T1115 
-E1121	Action:T1116 Target:E1119
+E1121	Action:T1116 Target:E1119 Subject:E1117
 E1182	Predicate:T1175 Domain:E1183 Arg:E1184
 E1183	Concept:T1176 
 E1184	Concept:T1177 
 E1185	Concept:T1178 in-context:E1186
 E1186	Concept:T1179 
 E1187	Concept:T1180 
-E1188	Concept:T1181 in-context:E1185
+E1188	Action:T1181 Target:E1185
 E1189	Action:T1182 Target:E1188 Subject:E1182
 E1004	Concept:T1004 
 E1231	Predicate:T1223 Domain:E1232
@@ -562,7 +559,7 @@ E1291	Action:T1283 Subject:E1293 in-context:E1292
 E1292	Concept:T1284 
 E1293	Concept:T1285 
 E1294	Action:T1286 Subject:E1289 Target:E1295
-E1295	Concept:T1287 in-context:E1293
+E1295	Predicate:T1287 Domain:E1293
 E1296	Concept:T1288 
 E1297	Action:T1289 Subject:E1001 Target:E1002
 E1302	Concept:T1294 
@@ -572,7 +569,7 @@ E1305	Action:T1297 Target:E1303
 E1306	Concept:T1298 in-place:E1307
 E1307	Concept:T1299 
 E1308	Concept:T1300 Domain:E1309
-E1309	Predicate:T1301 Arg:E1304 in-context:E1310
+E1309	Predicate:T1301 Arg:E1304 Arg2:E1310
 E1310	Concept:T1302 
 E298	Reference:T289 
 A1	Emphasized E10
@@ -638,7 +635,7 @@ R1024	is-a Arg1:E1107 Arg2:E1103
 R1025	is-a Arg1:E1107 Arg2:E1104
 R1026	is-a Arg1:E1111 Arg2:E1112
 A1007	Emphasized E1113
-R1027	is-a Arg1:E1114 Arg2:E1116
+R1027	is-a Arg1:E1114 Arg2:E1117
 R1037	is-a Arg1:E1187 Arg2:E1185
 A1017	Emphasized E1189
 A1018	Uncertain E1189
@@ -660,3 +657,13 @@ A19	Emphasized E181
 A20	Uncertain E181
 R65	is-a Arg1:E212 Arg2:E211
 R66	entails Arg1:E1252 Arg2:E1244
+A17	Uncertain E83
+R1	part-of Arg1:E1107 Arg2:E1108	
+A18	Uncertain E126
+T1	Concept 1915 1920	viaje
+T2	Action 1949 1953	haga
+E1	Action:T2 Target:E2
+T3	Concept 1954 1960	pausas
+E2	Concept:T3 in-context:E135 in-context2:E136
+R2	part-of Arg1:E190 Arg2:E192	
+A21	Emphasized E1277

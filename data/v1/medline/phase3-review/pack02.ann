@@ -6,7 +6,7 @@ T14	Concept 171 177	madres
 T15	Concept 184 189	bebés
 T16	Action 194 206	monitoreados
 T17	Concept 210 215	cerca
-T18	Concept 227 232	parto
+T18	Concept 216 232	durante el parto
 T24	Action 307 316	Practicar
 T25	Reference 323 328	ellos
 T26	Concept 346 356	beneficios
@@ -112,8 +112,7 @@ T1040	Action 1580 1585	vivir
 T1041	Concept 1593 1597	bazo
 T1042	Action 1574 1579	puede
 T1043	Concept 466 473	mujeres
-T1044	Action 481 490	problemas
-T1045	Concept 494 499	salud
+T1045	Concept 481 499	problemas de salud
 T1046	Concept 500 506	únicos
 T1055	Action 735 740	causa
 T1056	Action 748 758	trastornos
@@ -146,7 +145,7 @@ T1096	Concept 1117 1125	arsénico
 T1097	Concept 1142 1146	aire
 T1098	Concept 1151 1155	agua
 T1099	Concept 1161 1167	tierra
-T1100	Predicate 1170 1176	través
+T1100	Predicate 1168 1176	a través
 T1101	Concept 1181 1186	polvo
 T1102	Action 1194 1199	lleva
 T1103	Concept 1203 1209	viento
@@ -255,11 +254,11 @@ E41	Action:T41 Subject:E40 Target:E43
 E42	Concept:T42 
 E43	Action:T43 Target:E44 Subject:E42
 E44	Concept:T44 
-E45	Action:T45 Target:E47 Subject:E40
+E45	Action:T45 Subject:E40 Target:E46
 E46	Concept:T46 
 E47	Action:T47 Subject:E46 Target:E44
-E48	Predicate:T48 Arg:E50
-E49	Predicate:T49 Arg:E50
+E48	Predicate:T48 Domain:E50
+E49	Predicate:T49 Domain:E50
 E50	Concept:T50 
 E51	Concept:T51 
 E52	Action:T52 Subject:E51 Target:E48 Target2:E49 Target3:E53 Target4:E54
@@ -345,7 +344,6 @@ E1040	Action:T1040 in-context:E1041
 E1041	Concept:T1041 
 E1042	Action:T1042 Target:E1040
 E1043	Concept:T1043 
-E1044	Action:T1044 Target:E1045 Subject:E1043 in-context:E1046
 E1045	Concept:T1045 
 E1046	Concept:T1046 
 E1055	Action:T1055 Target:E1056
@@ -536,3 +534,12 @@ R1049	causes Arg1:E1215 Arg2:E1222
 R59	causes Arg1:E1078 Arg2:E1079
 R60	causes Arg1:E1119 Arg2:E1120
 R45	is-a Arg1:E154 Arg2:E156
+T1	Action 474 480	tienen
+E1	Action:T1 Target:E1045 Subject:E1043
+R7	has-property Arg1:E1045 Arg2:E1046	
+A3	Uncertain E62
+A5	Uncertain E1075
+A8	Uncertain E1076
+A9	Uncertain E1078
+T2	Concept 2165 2173	material
+E2	Concept:T2 
