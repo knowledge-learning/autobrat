@@ -1,0 +1,675 @@
+T1	Concept 4 12	hormonas
+E1	Concept:T1 
+T2	Action 13 21	trabajan
+E2	Action:T2 
+T3	Concept 22 32	lentamente
+E3	Concept:T3 
+T4	Action 35 42	afectan
+E4	Action:T4 
+T5	Concept 47 55;56 66	procesos corporales
+E5	Concept:T5 
+T6	Concept 76 82	cabeza
+E6	Concept:T6 
+T7	Concept 93 97	pies
+E7	Concept:T7 
+T8	Predicate 67 72	desde
+E8	Predicate:T8 
+T9	Predicate 83 88	hasta
+E9	Predicate:T9 
+T10	Concept 103 109;110 112;113 117	drogas de club
+E10	Concept:T10 
+T11	Action 149 160	violaciones
+E11	Action:T11 
+T12	Concept 164 169	citas
+E12	Concept:T12 
+T13	Action 137 143	usadas
+E13	Action:T13 
+T14	Reference 199 201	lo
+E14	Reference:T14 
+T15	Action 202 207	sufra
+E15	Action:T15 
+T16	Predicate 219 227	miembros
+E16	Predicate:T16 
+T17	Concept 234 241	familia
+E17	Concept:T17 
+T18	Concept 249 258	depresión
+E18	Concept:T18 
+T19	Concept 186 194	probable
+E19	Concept:T19 
+A1	Emphasized E19
+T20	Concept 211 216	usted
+E20	Concept:T20 
+T21	Concept 263 270	corazón
+E21	Concept:T21 
+T22	Predicate 277 283	cuatro
+E22	Predicate:T22 
+T23	Concept 284 292	válvulas
+E23	Concept:T23 
+T24	Reference 298 301	esa
+E24	Reference:T24 
+T25	Concept 302 306	capa
+E25	Concept:T25 
+T26	Concept 311 317	caries
+E26	Concept:T26 
+T27	Action 324 332	penetrar
+E27	Action:T27 
+A2	Uncertain E27
+T28	Concept 337 350	profundamente
+E28	Concept:T28 
+A3	Emphasized E28
+T29	Concept 357 363	diente
+E29	Concept:T29 
+T30	Concept 373 380	nervios
+E30	Concept:T30 
+T31	Concept 390 395	dolor
+E31	Concept:T31 
+T32	Concept 398 406	abscesos
+E32	Concept:T32 
+T33	Concept 411 416	grasa
+E33	Concept:T33 
+T34	Predicate 426 431	doble
+E34	Predicate:T34 
+T35	Concept 435 443	calorías
+E35	Concept:T35 
+T36	Concept 452 461	proteínas
+E36	Concept:T36 
+T37	Concept 464 472;473 475;476 483	hidratos de carbono
+E37	Concept:T37 
+T38	Reference 485 489	Esto
+E38	Reference:T38 
+T39	Action 505 511	riesgo
+E39	Action:T39 
+A4	Uncertain E39
+T40	Concept 515 519	vida
+E40	Concept:T40 
+T41	Concept 526 533	persona
+E41	Concept:T41 
+T43	Concept 538 544;545 549;550 552;553 560;561 563;564 566;567 572	seguro para el cuidado de la salud
+E43	Concept:T43 
+T42	Action 573 578	ayuda
+E42	Action:T42 
+T44	Concept 584 589	gente
+E44	Concept:T44 
+T45	Action 592 602	protegerse
+E45	Action:T45 
+T46	Concept 614 622	elevados
+E46	Concept:T46 
+T47	Concept 623 629;630 637	costos médicos
+E47	Concept:T47 
+T48	Concept 643 651	arterias
+E48	Concept:T48 
+T49	Action 652 658	llevan
+E49	Action:T49 
+T50	Concept 659 665	sangre
+E50	Concept:T50 
+T51	Concept 675 682	corazón
+E51	Concept:T51 
+T52	Predicate 666 671	desde
+E52	Predicate:T52 
+T53	Predicate 683 688	hasta
+E53	Predicate:T53 
+T54	Concept 695 702	órganos
+E54	Concept:T54 
+T55	Concept 709 714	venas
+E55	Concept:T55 
+T56	Action 715 721	llevan
+E56	Action:T56 
+T57	Concept 725 731	sangre
+E57	Concept:T57 
+T58	Concept 744 751	corazón
+E58	Concept:T58 
+T59	Action 756 766	desarrollo
+E59	Action:T59 
+T60	Concept 771 776	habla
+E60	Concept:T60 
+T61	Concept 782 790	lenguaje
+E61	Concept:T61 
+T62	Concept 798 803	niños
+E62	Concept:T62 
+T63	Concept 804 809	varía
+E63	Concept:T63 
+T64	Predicate 815 820	serie
+E64	Predicate:T64 
+T65	Concept 824 831	vacunas
+E65	Concept:T65 
+T66	Action 838 846	prevenir
+E66	Action:T66 
+A5	Uncertain E66
+T67	Concept 850 855	rabia
+E67	Concept:T67 
+T68	Concept 863 871	personas
+E68	Concept:T68 
+T69	Action 872 881	expuestas
+E69	Action:T69 
+T70	Concept 885 890	virus
+E70	Concept:T70 
+T71	Reference 895 898	ese
+E71	Reference:T71 
+T72	Predicate 908 916	objetivo
+E72	Predicate:T72 
+T73	Concept 921 932	tratamiento
+E73	Concept:T73 
+T74	Action 936 943	mejorar
+E74	Action:T74 
+T75	Concept 948 956	síntomas
+E75	Concept:T75 
+T76	Action 959 966	aliviar
+E76	Action:T76 
+T77	Concept 970 975	dolor
+E77	Concept:T77 
+T78	Reference 977 982	Estos
+E78	Reference:T78 
+T79	Action 992 997	dolor
+E79	Action:T79 
+T80	Concept 1004 1010	cuello
+E80	Concept:T80 
+T81	Concept 1016 1023	espalda
+E81	Concept:T81 
+T82	Action 1025 1039	entumecimiento
+E82	Action:T82 
+T83	Action 1041 1050	debilidad
+E83	Action:T83 
+T84	Action 1053 1058	dolor
+E84	Action:T84 
+T85	Concept 1066 1072	brazos
+E85	Concept:T85 
+T86	Concept 1079 1086	piernas
+E86	Concept:T86 
+T87	Predicate 1089 1098	problemas
+E87	Predicate:T87 
+T88	Concept 1106 1110	pies
+E88	Concept:T88 
+T89	Concept 1119 1126;1127 1133	Estados Unidos
+E89	Concept:T89 
+T90	Action 1135 1142	cocinar
+E90	Action:T90 
+T91	Concept 1172 1181;1182 1192	incendios domésticos
+E91	Concept:T91 
+T92	Concept 1149 1158	principal
+E92	Concept:T92 
+T93	Action 1159 1164	causa
+E93	Action:T93 
+T94	Concept 1197 1201	bebé
+E94	Concept:T94 
+T95	Action 1202 1210	recibirá
+E95	Action:T95 
+T96	Concept 1211 1223	medicamentos
+E96	Concept:T96 
+T97	Predicate 1224 1230	contra
+E97	Predicate:T97 
+T98	Concept 1234 1242	VIH/SIDA
+E98	Concept:T98 
+T99	Concept 1251 1257;1258 1259;1260 1264;1265 1272	cuatro a seis semanas
+E99	Concept:T99 
+T100	Predicate 1273 1280	después
+E100	Predicate:T100 
+T101	Concept 1285 1295	nacimiento
+E101	Concept:T101 
+T102	Concept 1300 1308;1309 1311;1312 1319	síndrome de Sjögren
+E102	Concept:T102 
+T103	Concept 1327 1337;1338 1348	enfermedad autoinmune
+E103	Concept:T103 
+T104	Concept 1365 1378	osteonecrosis
+E104	Concept:T104 
+T105	Action 1359 1364	tener
+E105	Action:T105 
+T106	Concept 1382 1385;1386 1387;1388 1394;1395 1401	uno o varios huesos
+E106	Concept:T106 
+T107	Action 1419 1427	prolapso
+E107	Action:T107 
+T108	Concept 1434 1441;1442 1448	válvula mitral
+E108	Concept:T108 
+T109	Action 1450 1457	aumenta
+E109	Action:T109 
+T110	Predicate 1461 1467	riesgo
+E110	Predicate:T110 
+T111	Concept 1471 1483	endocarditis
+E111	Concept:T111 
+T112	Predicate 1488 1492	tipo
+E112	Predicate:T112 
+T113	Concept 1496 1505	infección
+E113	Concept:T113 
+T114	Concept 1510 1517	corazón
+E114	Concept:T114 
+T115	Concept 1544 1550	cólera
+E115	Concept:T115 
+T116	Action 1538 1543	tener
+E116	Action:T116 
+T117	Action 1522 1526	cree
+E117	Action:T117 
+T118	Action 1557 1564	recibir
+E118	Action:T118 
+T119	Concept 1565 1573;1574 1580	atención médica
+E119	Concept:T119 
+T120	Concept 1584 1593	inmediato
+E120	Concept:T120 
+T121	Action 1604 1615	experimenta
+E121	Action:T121 
+T122	Concept 1619 1627	desastre
+E122	Concept:T122 
+T123	Concept 1632 1638	normal
+E123	Concept:T123 
+T124	Action 1639 1647	sentirse
+E124	Action:T124 
+T125	Concept 1648 1657	estresado
+E125	Concept:T125 
+T126	Concept 1598 1603	usted
+E126	Concept:T126 
+T127	Concept 1666 1671	mujer
+E127	Concept:T127 
+T128	Action 1672 1680	adquiere
+E128	Action:T128 
+T129	Concept 1684 1687	CMV
+E129	Concept:T129 
+T130	Concept 1694 1702	embarazo
+E130	Concept:T130 
+T131	Action 1710 1724	transmitírselo
+E131	Action:T131 
+T132	Concept 1728 1732	bebé
+E132	Concept:T132 
+T133	Concept 1737 1744;1745 1754	columna vertebral
+E133	Concept:T133 
+T134	Concept 1772 1774;1775 1781	26 huesos
+E134	Concept:T134 
+T135	Concept 1791 1800	vértebras
+E135	Concept:T135 
+T136	Action 1760 1767	formada
+E136	Action:T136 
+T137	Concept 1823 1828;1829 1837	dolor torácico
+E137	Concept:T137 
+T138	Action 1811 1819	presenta
+E138	Action:T138 
+T139	Action 1844 1853	consultar
+E139	Action:T139 
+T140	Concept 1859 1870;1871 1873;1874 1876;1877 1882	profesional de la salud
+E140	Concept:T140 
+T141	Concept 1888 1896	chinches
+E141	Concept:T141 
+T142	Action 1900 1908	esconden
+E142	Action:T142 
+T143	Predicate 1912 1918	varios
+E143	Predicate:T143 
+T144	Concept 1919 1926	lugares
+E144	Concept:T144 
+T145	Predicate 1927 1936	alrededor
+E145	Predicate:T145 
+T146	Concept 1943 1947	cama
+E146	Concept:T146 
+T147	Concept 1953 1961	escuelas
+E147	Concept:T147 
+T148	Action 1969 1974	tener
+E148	Action:T148 
+A6	Uncertain E148
+T149	Concept 1978 1984	efecto
+E149	Concept:T149 
+T150	Concept 1985 1995	importante
+E150	Concept:T150 
+T151	Concept 2002 2007	salud
+E151	Concept:T151 
+T152	Concept 2015 2020	niños
+E152	Concept:T152 
+T153	Concept 2025 2032	tsunami
+E153	Concept:T153 
+T154	Action 2039 2050	desplazarse
+E154	Action:T154 
+A7	Uncertain E154
+T155	Concept 2053 2060;2061 2063;2064 2070	cientos de millas
+E155	Concept:T155 
+T156	Predicate 2071 2074	por
+E156	Predicate:T156 
+T157	Concept 2075 2079	hora
+E157	Concept:T157 
+T158	Concept 2086 2092;2093 2100	océano abierto
+E158	Concept:T158 
+T159	Reference 2102 2106	Esto
+E159	Reference:T159 
+T160	Action 2113 2121	conducir
+E160	Action:T160 
+A8	Uncertain E160
+T161	Concept 2124 2129	bebés
+E161	Concept:T161 
+T162	Concept 2130 2137	adictos
+E162	Concept:T162 
+T163	Action 2144 2153	presentan
+E163	Action:T163 
+T164	Concept 2154 2162;2163 2165;2166 2177	síntomas de abstinencia
+E164	Concept:T164 
+T165	Concept 2193 2201;2202 2204;2205 2216;2217 2225	síndrome de abstinencia neonatal
+E165	Concept:T165 
+T166	Action 2236 2248	traumatismos
+E166	Action:T166 
+T167	Concept 2258 2267	hematomas
+E167	Concept:T167 
+T168	Action 2270 2280	distensión
+E168	Action:T168 
+T169	Concept 2288 2298	ligamentos
+E169	Concept:T169 
+T170	Action 2304 2314	trastornos
+E170	Action:T170 
+T171	Concept 2319 2326;2327 2335;2336 2344	sistema nervioso autónomo
+E171	Concept:T171 
+T172	Action 2352 2363	presentarse
+E172	Action:T172 
+A9	Uncertain E172
+T173	Concept 2364 2372	aislados
+E173	Concept:T173 
+T174	Concept 2399 2411	enfermedades
+E174	Concept:T174 
+T175	Action 2380 2389	resultado
+E175	Action:T175 
+T176	Concept 2427 2437;2438 2440;2441 2450	enfermedad de Parkinson
+E176	Concept:T176 
+T177	Concept 2455 2466	alcoholismo
+E177	Concept:T177 
+T178	Concept 2472 2480	diabetes
+E178	Concept:T178 
+T179	Concept 2485 2488	VIH
+E179	Concept:T179 
+T180	Action 2495 2506	contagiarse
+E180	Action:T180 
+A10	Emphasized E180
+A11	Uncertain E180
+T181	Concept 2523 2533;2534 2542	relaciones sexuales
+E181	Concept:T181 
+T182	Concept 2547 2557	protección
+E182	Concept:T182 
+A12	Negated E182
+T183	Concept 2566 2573	persona
+E183	Concept:T183 
+T184	Action 2574 2583	infectada
+E184	Action:T184 
+T185	Concept 2602 2607	niños
+E185	Concept:T185 
+T186	Concept 2612 2622;2623 2630	dermatitis atópica
+E186	Concept:T186 
+T187	Action 2631 2637	crecen
+E187	Action:T187 
+T188	Reference 2639 2641	el
+E188	Reference:T188 
+T189	Concept 2642 2650	problema
+E189	Concept:T189 
+T190	Action 2657 2664	mejorar
+E190	Action:T190 
+T191	Action 2667 2678	desaparecer
+E191	Action:T191 
+A13	Uncertain E190
+A14	Uncertain E191
+T192	Action 2683 2688	causa
+E192	Action:T192 
+T193	Concept 2689 2698	principal
+E193	Concept:T193 
+T194	Reference 2702 2706	esta
+E194	Reference:T194 
+T195	Concept 2707 2717	enfermedad
+E195	Concept:T195 
+T196	Action 2724 2734	exposición
+E196	Action:T196 
+T197	Concept 2735 2745	prolongada
+E197	Concept:T197 
+T198	Concept 2748 2758	sustancias
+E198	Concept:T198 
+T199	Action 2763 2770	irritan
+E199	Action:T199 
+T200	Action 2773 2778	dañan
+E200	Action:T200 
+T201	Concept 2783 2791	pulmones
+E201	Concept:T201 
+T202	Concept 2808 2812	humo
+E202	Concept:T202 
+T203	Concept 2816 2826	cigarrillo
+E203	Concept:T203 
+T204	Concept 2832 2837	heces
+E204	Concept:T204 
+T205	Concept 2849 2854	duras
+E205	Concept:T205 
+T206	Concept 2857 2862	secas
+E206	Concept:T206 
+A15	Uncertain E205
+A16	Uncertain E206
+T207	Action 2867 2876	necesitas
+E207	Action:T207 
+T208	Concept 2877 2882	ayuda
+E208	Concept:T208 
+T209	Action 2884 2889	habla
+E209	Action:T209 
+T210	Concept 2898 2904	padres
+E210	Concept:T210 
+T211	Concept 2909 2918;2919 2926	consejero escolar
+E211	Concept:T211 
+T212	Concept 2932 2943;2944 2946;2947 2949;2950 2955	profesional de la salud
+E212	Concept:T212 
+T213	Predicate 2969 2974	mitad
+E213	Predicate:T213 
+T214	Concept 2982 2990	personas
+E214	Concept:T214 
+T215	Action 2998 3003	dejan
+E215	Action:T215 
+A17	Negated E215
+T216	Action 3007 3012	fumar
+E216	Action:T216 
+T217	Action 3013 3019	morirá
+E217	Action:T217 
+T218	Action 3022 3027	causa
+E218	Action:T218 
+T219	Concept 3032 3042	cigarrillo
+E219	Concept:T219 
+T220	Concept 3045 3054	problemas
+E220	Concept:T220 
+T221	Action 3055 3067	relacionados
+E221	Action:T221 
+T222	Reference 3069 3074	Estas
+E222	Reference:T222 
+T223	Concept 3075 3081	drogas
+E223	Concept:T223 
+T224	Action 3093 3101	abusadas
+E224	Action:T224 
+T225	Concept 3106 3113;3114 3121	adultos jóvenes
+E225	Concept:T225 
+T226	Concept 3125 3132;3133 3142	fiestas bailables
+E226	Concept:T226 
+T227	Action 3147 3152	duran
+E227	Action:T227 
+T228	Predicate 3153 3157	toda
+E228	Predicate:T228 
+T229	Concept 3161 3166	noche
+E229	Concept:T229 
+T230	Concept 3168 3174;3175 3184	clubes nocturnos
+E230	Concept:T230 
+T231	Concept 3186 3192	discos
+E231	Concept:T231 
+T232	Concept 3195 3200	bares
+E232	Concept:T232 
+T233	Predicate 3202 3209	Catorce
+E233	Predicate:T233 
+T234	Concept 3217 3219;3220 3226	26 huesos
+E234	Concept:T234 
+T235	Concept 3234 3238	pies
+E235	Concept:T235 
+T236	Concept 3252 3257	dedos
+E236	Concept:T236 
+T237	Action 3259 3266	Existen
+E237	Action:T237 
+T238	Concept 3267 3270;3271 3281	dos categorías
+E238	Concept:T238 
+T239	Concept 3285 3288	VPH
+E239	Concept:T239 
+T240	Action 3289 3301	transmitidos
+E240	Action:T240 
+T241	Concept 3306 3309;3310 3316	vía sexual
+E241	Concept:T241 
+T242	Concept 3321 3331;3332 3334;3335 3344	enfermedad de Alzheimer
+E242	Concept:T242 
+T243	Predicate 3357 3360	más
+E243	Predicate:T243 
+T244	Concept 3361 3366	común
+E244	Concept:T244 
+T245	Concept 3351 3356	forma
+E245	Concept:T245 
+T246	Concept 3370 3378	demencia
+E246	Concept:T246 
+T247	Predicate 3379 3384	entre
+E247	Predicate:T247 
+T248	Concept 3389 3397;3398 3405	personas mayores
+E248	Concept:T248 
+T249	Concept 3411 3420	bacterias
+E249	Concept:T249 
+T250	Action 3432 3440	utilizan
+E250	Action:T250 
+T251	Action 3446 3451	hacer
+E251	Action:T251 
+T252	Concept 3452 3461	alimentos
+E252	Concept:T252 
+T253	Concept 3462 3472	saludables
+E253	Concept:T253 
+T254	Concept 3481 3487	yogurt
+E254	Concept:T254 
+T255	Concept 3493 3498	queso
+E255	Concept:T255 
+T256	Concept 3503 3508	plomo
+E256	Concept:T256 
+T257	Action 3515 3522	afectar
+E257	Action:T257 
+A18	Uncertain E257
+T258	Predicate 3530 3535	todos
+E258	Predicate:T258 
+T259	Concept 3540 3547	órganos
+E259	Concept:T259 
+T260	Concept 3550 3558	sistemas
+E260	Concept:T260 
+T261	Concept 3563 3569	cuerpo
+E261	Concept:T261 
+A19	Diminished E258
+T262	Predicate 3571 3577	Muchas
+E262	Predicate:T262 
+T263	Concept 3578 3586	personas
+E263	Concept:T263 
+T264	Action 3591 3597	mascan
+E264	Action:T264 
+T265	Concept 3598 3604	tabaco
+E265	Concept:T265 
+T266	Action 3607 3615	consumen
+E266	Action:T266 
+T267	Concept 3616 3620	rapé
+E267	Concept:T267 
+T268	Action 3621 3628	piensan
+E268	Action:T268 
+T269	Concept 3640 3644	sano
+E269	Concept:T269 
+T270	Action 3649 3654	fumar
+E270	Action:T270 
+T271	Predicate 3636 3639	más
+E271	Predicate:T271 
+T272	Reference 3659 3663	este
+E272	Reference:T272 
+T273	Concept 3673 3678	droga
+E273	Concept:T273 
+T274	Action 3691 3698	víctima
+E274	Action:T274 
+T275	Action 3708 3715	negarse
+E275	Action:T275 
+A20	Negated E275
+T276	Action 3718 3728	defenderse
+E276	Action:T276 
+A21	Negated E276
+T277	Predicate 3729 3735	contra
+E277	Predicate:T277 
+T278	Concept 3740 3748;3749 3755	agresión sexual
+E278	Concept:T278 
+T279	Action 3757 3763	Existe
+E279	Action:T279 
+T280	Concept 3768 3774	vacuna
+E280	Concept:T280 
+T281	Action 3780 3788	prevenir
+E281	Action:T281 
+T282	Concept 3792 3798	ántrax
+E282	Concept:T282 
+T283	Concept 3809 3817	personas
+E283	Concept:T283 
+T284	Concept 3824 3832;3833 3840	servicio militar
+E284	Concept:T284 
+T285	Concept 3849 3855;3856 3858;3859 3863;3864 3870	grupos de alto riesgo
+E285	Concept:T285 
+T286	Concept 3875 3885	terrorismo
+E286	Concept:T286 
+T287	Action 3900 3903	uso
+E287	Action:T287 
+T288	Action 3909 3916	amenaza
+E288	Action:T288 
+T289	Concept 3923 3929	fuerza
+E289	Concept:T289 
+T290	Concept 3935 3944	violencia
+E290	Concept:T290 
+T291	Predicate 3945 3951	contra
+E291	Predicate:T291 
+T292	Concept 3952 3960	personas
+E292	Concept:T292 
+T293	Concept 3963 3974	propiedades
+E293	Concept:T293 
+T294	Concept 3980 3987	mujeres
+E294	Concept:T294 
+T295	Concept 3995 4004;4005 4007;4008 4013	problemas de salud
+E295	Concept:T295 
+T296	Concept 4014 4020	únicos
+E296	Concept:T296 
+T297	Concept 4026 4035;4036 4046	incendios forestales
+E297	Concept:T297 
+T298	Concept 4051 4057	fuegos
+E298	Concept:T298 
+T299	Action 4067 4074	control
+E299	Action:T299 
+A22	Negated E299
+T300	Concept 4081 4085;4086 4093	área natural
+E300	Concept:T300 
+T301	Concept 4100 4107	bosques
+E301	Concept:T301 
+T302	Concept 4109 4119	pastizales
+E302	Concept:T302 
+T303	Concept 4122 4130	praderas
+E303	Concept:T303 
+T304	Concept 4136 4148;4149 4167	enfermedades neurodegenerativas
+E304	Concept:T304 
+T305	Concept 4179 4185	serias
+E305	Concept:T305 
+T306	Action 4205 4212	peligro
+E306	Action:T306 
+T307	Concept 4197 4201	vida
+E307	Concept:T307 
+T308	Concept 4217 4228	bilirrubina
+E308	Concept:T308 
+T309	Concept 4236 4245;4246 4253	sustancia química
+E309	Concept:T309 
+T310	Predicate 4254 4259	color
+E310	Predicate:T310 
+T311	Concept 4260 4268	amarillo
+E311	Concept:T311 
+T312	Action 4273 4281	contiene
+E312	Action:T312 
+T313	Concept 4285 4296	hemoglobina
+E313	Concept:T313 
+T314	Concept 4298 4307	sustancia
+E314	Concept:T314 
+T315	Action 4312 4322	transporta
+E315	Action:T315 
+T316	Concept 4326 4333	oxígeno
+E316	Concept:T316 
+T317	Concept 4341 4349;4350 4355	glóbulos rojos
+E317	Concept:T317 
+T318	Concept 4360 4369;4370 4377	trastorno bipolar
+E318	Concept:T318 
+T319	Action 4384 4391	empezar
+E319	Action:T319 
+T320	Predicate 4399 4406;4407 4411	últimos años
+E320	Predicate:T320 
+T321	Concept 4418 4430	adolescencia
+E321	Concept:T321 
+T322	Predicate 4436 4442	inicio
+E322	Predicate:T322 
+T323	Concept 4449 4453;4454 4460	edad adulta
+E323	Concept:T323 
+T324	Concept 4466 4471	niños
+E324	Concept:T324 
+T325	Concept 4474 4481	adultos
+E325	Concept:T325 
+T326	Action 4497 4505	sufrirlo
+E326	Action:T326 
+A23	Uncertain E326
