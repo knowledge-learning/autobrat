@@ -1,0 +1,261 @@
+T1	Concept 201 214;215 223;224 226;227 241;242 255	Confederación Española de Organizaciones Empresariales
+E1	Concept:T1 
+T2	Concept 257 261	CEOE
+E2	Concept:T2 
+*	same-as E1 E2
+T3	Action 266 274	aprobado
+E3	Action:T3 Subject:E15 Target:E6
+T4	Concept 278 285	inusual
+E4	Concept:T4 
+T5	Concept 286 296	comunicado
+E5	Concept:T5 in-context:E4
+T6	Action 307 314	reclama
+E6	Action:T6 Subject:E5 Target:E7 Target2:E8 Target3:E9
+T7	Concept 318 322	PSOE
+E7	Concept:T7 
+T8	Concept 331 339;340 349	partidos políticos
+E8	Concept:T8 
+T9	Action 365 374	formación
+E9	Action:T9 Target:E11 Target2:E16
+T10	Concept 381 389	gobierno
+E10	Concept:T10 
+T11	Predicate 390 401	alternativo
+E11	Predicate:T11 Domain:E10 Arg:E12
+T12	Concept 408 415	Podemos
+E12	Concept:T12 
+T13	Concept 431 437	España
+E13	Concept:T13 
+T14	Concept 446 454	economía
+E14	Concept:T14 
+T15	Concept 179 184;185 194	Junta Directiva
+E15	Concept:T15 
+R1	part-of Arg1:E15 Arg2:E1	
+T16	Predicate 420 427	interés
+E16	Predicate:T16 Arg:E13 Arg2:E14
+R2	part-of Arg1:E14 Arg2:E13	
+T17	Concept 462 466	CEOE
+E17	Concept:T17 
+T18	Concept 472 478	CEPYME
+E18	Concept:T18 
+T19	Action 479 488	suscriben
+E19	Action:T19 Subject:E17 Subject2:E18 Subject3:E20 Target:E21
+T20	Concept 519 526	Podemos
+E20	Concept:T20 
+T21	Action 535 542	busquen
+E21	Action:T21 Target:E22
+T22	Predicate 543 551	opciones
+E22	Predicate:T22 Domain:E23 in-context:E24
+T23	Concept 555 560	pacto
+E23	Concept:T23 
+T24	Concept 561 570	moderadas
+E24	Concept:T24 
+T25	Concept 577 590	negociaciones
+E25	Concept:T25 
+T26	Action 599 608	formación
+E26	Action:T26 Subject:E25 Target:E27
+T27	Concept 612 620	Gobierno
+E27	Concept:T27 
+T28	Action 630 637	abordar
+E28	Action:T28 Target:E26 in-context:E29 in-context2:E30
+T29	Concept 642 649;650 652;653 659	sentido de Estado
+E29	Concept:T29 
+T30	Action 662 674	anteponiendo
+E30	Action:T30 Subject:E31 Subject2:E32 Target:E34
+T31	Concept 678 685	respeto
+E31	Concept:T31 
+T32	Action 691 703	cumplimiento
+E32	Action:T32 Target:E33
+T33	Concept 708 713;714 728	marco constitucional
+E33	Concept:T33 
+T34	Concept 735 744	intereses
+E34	Concept:T34 in-context:E35
+T35	Concept 745 757	particulares
+E35	Concept:T35 
+T36	Action 760 767	Resalta
+E36	Action:T36 Target:E37
+T37	Action 785 793	explorar
+E37	Action:T37 Target:E40 Target2:E46
+T38	Predicate 794 802	opciones
+E38	Predicate:T38 Domain:E39
+T39	Concept 806 814	Gobierno
+E39	Concept:T39 
+T40	Action 819 829	garanticen
+E40	Action:T40 Subject:E38 Target:E41 Target2:E42
+T41	Concept 833 844;845 853	estabilidad política
+E41	Concept:T41 
+T42	Concept 859 869	moderación
+E42	Concept:T42 
+T43	Concept 875 885	necesarias
+E43	Concept:T43 in-context:E44
+T44	Action 894 903	confianza
+E44	Action:T44 Target:E45
+T45	Concept 910 914	país
+E45	Concept:T45 
+T46	Action 931 941	consolidar
+E46	Action:T46 Subject:E38 Target:E47 Target2:E48
+T47	Concept 945 957;958 967	recuperación económica
+E47	Concept:T47 
+T48	Action 973 981	creación
+E48	Action:T48 Target:E49
+T49	Concept 985 998	oportunidades
+E49	Concept:T49 
+R3	has-property Arg1:E41 Arg2:E43	
+R4	has-property Arg1:E42 Arg2:E43	
+T50	Concept 1009 1021	organización
+E50	Concept:T50 
+T51	Action 1026 1033	preside
+E51	Action:T51 Subject:E53 Target:E58
+T52	Concept 1037 1042	vasco
+E52	Concept:T52 
+T53	Concept 1043 1050;1051 1060	Antonio Garamendi
+E53	Concept:T53 
+R5	has-property Arg1:E53 Arg2:E52	
+T54	Concept 1078 1080;1081 1085	40 años
+E54	Concept:T54 in-context:E55
+T55	Concept 1089 1097	progreso
+E55	Concept:T55 
+T56	Concept 1100 1103;1104 1110	paz social
+E56	Concept:T56 
+T57	Action 1072 1077	juego
+E57	Action:T57 Target:E54 Target2:E59 in-context:E51
+T58	Reference 1006 1008	la
+E58	Reference:T58 
+R6	is-a Arg1:E58 Arg2:E50	
+T59	Concept 1078 1080;1081 1085	40 años
+E59	Concept:T59 in-context:E56
+T60	Reference 1116 1118	el
+E60	Reference:T60 
+T61	Concept 1119 1129	comunicado
+E61	Concept:T61 
+R7	is-a Arg1:E60 Arg2:E61	
+T62	Action 1133 1141	menciona
+E62	Action:T62 Subject:E60 Target:E63 Target2:E70 Target3:E68
+A1	Negated E62
+T63	Predicate 1145 1151	nombre
+E63	Predicate:T63 Arg:E64
+T64	Concept 1156 1166;1167 1170;1171 1179	presidente del Gobierno
+E64	Concept:T64 in-context:E69
+T65	Concept 1195 1201	actual
+E65	Concept:T65 
+T66	Concept 1202 1212;1213 1220	secretario general
+E66	Concept:T66 in-context:E65
+T67	Concept 1225 1229	PSOE
+E67	Concept:T67 
+T68	Concept 1231 1236;1237 1244	Pedro Sánchez
+E68	Concept:T68 
+R8	part-of Arg1:E66 Arg2:E67	
+T69	Concept 1183 1192	funciones
+E69	Concept:T69 
+E70	Predicate:T63 Arg:E66
+*	same-as E68 E66 E64
+T70	Concept 1264 1268	CEOE
+E71	Concept:T70 
+T71	Action 1269 1274	llama
+E72	Action:T71 Subject:E71 Target:E73
+T72	Action 1280 1295	responsabilidad
+E73	Action:T72 Subject:E74 Target:E75
+T73	Concept 1303 1311	partidos
+E74	Concept:T73 
+T74	Action 1317 1324	abordar
+E75	Action:T74 Target:E76 in-context:E78 in-context2:E79
+T75	Concept 1329 1334	retos
+E76	Concept:T75 in-context:E77
+T76	Concept 1335 1342	futuros
+E77	Concept:T76 
+T77	Concept 1353 1358;1359 1373	rigor presupuestario
+E78	Concept:T77 
+T78	Action 1380 1387	ahondar
+E79	Action:T78 Target:E80
+A2	Negated E79
+T79	Concept 1394 1408;1409 1418	desaceleración económica
+E80	Concept:T79 
+T80	Predicate 1432 1440	aspectos
+E81	Predicate:T80 Arg:E82
+T81	Concept 1445 1455	preacuerdo
+E82	Concept:T81 in-context:E89
+T82	Concept 1462 1466	PSOE
+E83	Concept:T82 
+T83	Concept 1469 1476	Podemos
+E84	Concept:T83 
+T84	Action 1485 1493	preocupa
+E85	Action:T84 Subject:E81 Target:E86
+A3	Emphasized E85
+T85	Concept 1499 1507	patronal
+E86	Concept:T85 
+T86	Action 1525 1530	subir
+E87	Action:T86 Target:E88
+T87	Concept 1534 1541;1542 1548	presión fiscal
+E88	Concept:T87 
+R9	is-a Arg1:E87 Arg2:E85	
+T88	Predicate 1456 1461	entre
+E89	Predicate:T88 Arg:E83 Arg2:E84
+T89	Concept 1555 1563;1564 1570	política fiscal
+E90	Concept:T89 
+T90	Action 1576 1582	ayudar
+E91	Action:T90 Subject:E90 Target:E92 Target2:E94 Target3:E95
+A4	Uncertain E91
+T91	Action 1588 1602	competitividad
+E92	Action:T91 Subject:E93
+T92	Concept 1610 1618	empresas
+E93	Concept:T92 
+T93	Action 1625 1645	internacionalización
+E94	Action:T93 Target:E93
+T94	Concept 1648 1658	innovación
+E95	Concept:T94 
+T95	Action 1673 1682	favorecer
+E96	Action:T95 Target:E98
+E97	Action:T90 Target:E96 Subject:E90
+A5	Emphasized E97
+A6	Uncertain E97
+T96	Action 1686 1694	creación
+E98	Action:T96 Target:E99
+T97	Concept 1698 1704	empleo
+E99	Concept:T97 
+T98	Concept 1716 1725;1726 1735	condición necesaria
+E100	Concept:T98 in-context:E101
+T99	Action 1744 1757	sostenimiento
+E101	Action:T99 Target:E102 Subject:E98
+T100	Concept 1762 1768;1769 1772;1773 1782	Estado del Bienestar
+E102	Concept:T100 
+R10	is-a Arg1:E98 Arg2:E100	
+T101	Concept 1789 1803	imprescindible
+E103	Concept:T101 
+T102	Concept 1807 1815	Gobierno
+E104	Concept:T102 in-context:E105 in-context2:E106
+T103	Concept 1816 1823	estable
+E105	Concept:T103 
+T104	Concept 1826 1834	moderado
+E106	Concept:T104 
+R11	has-property Arg1:E104 Arg2:E103	
+T105	Action 1840 1848	propicie
+E107	Action:T105 Subject:E104 Target:E108 Target2:E109
+T106	Concept 1849 1855;1856 1858;1859 1865	pactos de Estado
+E108	Concept:T106 
+T107	Concept 1872 1880	reformas
+E109	Concept:T107 in-context:E110
+T108	Concept 1881 1893	inaplazables
+E110	Concept:T108 
+T109	Concept 1896 1900	CEOE
+E111	Concept:T109 
+T110	Action 1901 1911	reivindica
+E112	Action:T110 Subject:E111 Target:E122
+T111	Concept 1923 1934	importancia
+E113	Concept:T111 
+T112	Concept 1939 1946;1947 1953	diálogo social
+E114	Concept:T112 
+T113	Action 1959 1970	canalizador
+E115	Action:T113 Target:E116 Subject:E114 Target2:E121
+T114	Predicate 1978 1987	intereses
+E116	Predicate:T114 Arg:E117
+T115	Concept 1995 2003	empresas
+E117	Concept:T115 
+T116	Concept 2013 2025	trabajadores
+E118	Concept:T116 
+T117	Action 2028 2036	garantía
+E119	Action:T117 Target:E120 Subject:E114
+T118	Concept 2041 2050;2051 2057	bienestar social
+E120	Concept:T118 
+E121	Predicate:T114 Arg:E118
+R12	has-property Arg1:E115 Arg2:E113	
+R13	has-property Arg1:E119 Arg2:E113	
+E122	Concept:T111 in-context:E115 in-context2:E119
