@@ -6,6 +6,7 @@ import collections
 import warnings
 
 from collections import defaultdict
+from typing import List
 
 
 class Keyphrase:
@@ -31,7 +32,7 @@ class Keyphrase:
         spans.append(end)
         self.spans = [(spans[i],spans[i+1]) for i in range(0, len(spans), 2)]
 
-    def clone(self, sentence):
+    def clone(self, sentence) -> 'Keyphrase':
         return Keyphrase(sentence, self.label, self.id, self.spans)
 
     @property
@@ -49,15 +50,15 @@ class Relation:
         self.destination = destination
         self.label = label
 
-    def clone(self, sentence):
+    def clone(self, sentence) -> 'Relation':
         return Relation(sentence, self.origin, self.destination, self.label)
 
     @property
-    def from_phrase(self):
+    def from_phrase(self) -> Keyphrase:
         return self.sentence.find_keyphrase(id=self.origin)
 
     @property
-    def to_phrase(self):
+    def to_phrase(self) -> Keyphrase:
         return self.sentence.find_keyphrase(id=self.destination)
 
     class _Unk:
@@ -72,10 +73,10 @@ class Relation:
 class Sentence:
     def __init__(self, text):
         self.text = text
-        self.keyphrases = []
-        self.relations = []
+        self.keyphrases: List[Keyphrase] = []
+        self.relations: List[Relation] = []
 
-    def clone(self, shallow=False):
+    def clone(self, shallow=False) -> 'Sentence':
         s = Sentence(self.text)
         s.keyphrases = [k if shallow else k.clone(s) for k in self.keyphrases]
         s.relations = [r if shallow else r.clone(s) for r in self.relations]
@@ -147,14 +148,14 @@ class Sentence:
 
         self.relations = list(new_relations.values())
 
-    def find_keyphrase(self, id=None, start=None, end=None, spans=None):
+    def find_keyphrase(self, id=None, start=None, end=None, spans=None) -> Keyphrase:
         if id is not None:
             return self._find_keyphrase_by_id(id)
         if spans is None:
             spans = [(start, end)]
         return self._find_keyphrase_by_spans(spans)
 
-    def find_relations(self, orig, dest):
+    def find_relations(self, orig, dest) -> List[Relation]:
         results = []
 
         for r in self.relations:
@@ -163,21 +164,21 @@ class Sentence:
 
         return results
 
-    def find_relation(self, orig, dest, label):
+    def find_relation(self, orig, dest, label) -> Relation:
         for r in self.relations:
             if r.origin == orig and r.destination == dest and label == r.label:
                 return r
 
         return None
 
-    def _find_keyphrase_by_id(self, id):
+    def _find_keyphrase_by_id(self, id) -> Keyphrase:
         for k in self.keyphrases:
             if k.id == id:
                 return k
 
         return None
 
-    def _find_keyphrase_by_spans(self, spans):
+    def _find_keyphrase_by_spans(self, spans) -> Keyphrase:
         for k in self.keyphrases:
             if k.spans == spans:
                 return k
@@ -194,15 +195,15 @@ class Sentence:
         return "Sentence(text=%r, keyphrases=%r, relations=%r)" % (self.text, self.keyphrases, self.relations)
 
     @staticmethod
-    def load(finput):
+    def load(finput) -> 'List[Sentence]':
         return [Sentence(s.strip()) for s in finput.open(encoding='utf8').readlines() if s]
 
 
 class Collection:
     def __init__(self, sentences=None):
-        self.sentences = sentences or []
+        self.sentences : 'List[Sentence]' = sentences or []
 
-    def clone(self):
+    def clone(self) -> 'Collection':
         return Collection([s.clone() for s in self.sentences])
 
     def __len__(self):
@@ -214,7 +215,7 @@ class Collection:
         for s in self.sentences:
             next_id = s.fix_ids(next_id)
 
-    def filter(self, keyphrase=(lambda k: True), relation=(lambda r: True)):
+    def filter(self, keyphrase=(lambda k: True), relation=(lambda r: True)) -> 'Collection':
         sentences = []
         for sentence in self.sentences:
             s = Sentence(sentence.text)
@@ -223,10 +224,10 @@ class Collection:
             sentences.append(s)
         return Collection(sentences)
     
-    def filter_keyphrase(self, labels):
+    def filter_keyphrase(self, labels) -> 'Collection':
         return self.filter(keyphrase=lambda k: k.label in labels)
 
-    def filter_relation(self, labels):
+    def filter_relation(self, labels) -> 'Collection':
         return self.filter(relation=lambda r: r.label in labels)
 
     def dump(self, finput, skip_empty_sentences=True):
@@ -369,7 +370,7 @@ class Collection:
         return sentence_by_id
 
 
-    def load(self, finput):
+    def load(self, finput) -> 'Collection':
         input_b_file = finput.parent / ('output_b_' + finput.name.split("_")[1])
 
         sentence_by_id = self.load_keyphrases(finput)
@@ -391,7 +392,7 @@ class Collection:
         return self
 
 
-    def load_ann(self, finput):
+    def load_ann(self, finput) -> 'Collection':
         ann_file = finput.parent / (finput.name[:-3] + 'ann')
         text = finput.open(encoding='utf8').read()
         sentences = [s for s in text.split('\n') if s]
