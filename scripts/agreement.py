@@ -74,7 +74,7 @@ def compute_metrics(data):
         'agreement': agreement(data)
     }
 
-def load_corpus(anns_path: Path, clean=True):
+def load_corpus(anns_path: Path, clean=True) -> Collection:
     collection = Collection()
 
     for file in sorted(anns_path.iterdir()):
@@ -132,6 +132,8 @@ def main(gold_dir: Path, submit_dir: Path, propagate_error=True):
     keyphrases = sorted(set(x.label for s in gold_collection.sentences for x in s.keyphrases))
     relations = sorted(set(x.label for s in gold_collection.sentences for x in s.relations))
 
+    history = {}
+
     for labels, select in zip([keyphrases, relations, ['Global']],
                              [Collection.filter_keyphrase, Collection.filter_relation, lambda x,y: x]):
         for label in labels:
@@ -148,12 +150,13 @@ def main(gold_dir: Path, submit_dir: Path, propagate_error=True):
                 propagate_error=propagate_error)
             data.update(dataB)
 
+            history[label] = data
             metrics = compute_metrics(data)
 
             for key,value in metrics.items():
                 print(label, "{0}: {1:0.4}".format(key, value))
 
-    return data
+    return data, history
 
 
 if __name__ == '__main__':
