@@ -50,8 +50,8 @@ T22	Action 608 612	usos
 E22	Action:T22 Subject:E23 Target:E21
 T23	Concept 613 620	médicos
 E23	Concept:T23 
-T24	Predicate 667 676	problemas
-E24	Predicate:T24 Arg:E25 in-place:E26
+T24	Action 667 676	problemas
+E24	Action:T24 in-place:E26 Target:E25
 T25	Concept 677 687	hormonales
 E25	Concept:T25 
 T26	Concept 691 698	hombres
@@ -66,15 +66,15 @@ T30	Concept 726 734	muscular
 E30	Concept:T30 
 T31	Concept 752 764	enfermedades
 E31	Concept:T31 
-R4	part-of Arg1:E24 Arg2:E22
-R5	part-of Arg1:E27 Arg2:E22
-R6	part-of Arg1:E29 Arg2:E22
+R4	is-a Arg1:E24 Arg2:E22
+R5	is-a Arg1:E27 Arg2:E22
+R6	is-a Arg1:E29 Arg2:E22
 T32	Reference 928 933	Estas
 E32	Reference:T32 
 T33	Concept 934 943	glándulas
 E33	Concept:T33 
 T34	Action 944 952	producen
-E34	Action:T34 Subject:E32 Target:E35 Target2:E38 Target3:E39
+E34	Action:T34 Subject:E32 Target:E35
 T35	Concept 953 961	hormonas
 E35	Concept:T35 in-context:E36
 T36	Concept 970 980	esenciales
@@ -93,7 +93,7 @@ E41	Action:T41 Target:E42
 T42	Concept 1061 1067	estrés
 E42	Concept:T42 
 T43	Predicate 1083 1088	otras
-E43	Predicate:T43 Arg:E40 Arg2:E44
+E43	Predicate:T43 Arg:E40 Domain:E44
 T44	Concept 1089 1098	funciones
 E44	Concept:T44 
 R8	is-a Arg1:E38 Arg2:E35
@@ -318,7 +318,7 @@ E139	Concept:T137
 T138	Action 3889 3897	utilizan
 E140	Action:T138 Subject:E139 Target:E141
 T139	Action 3903 3908	hacer
-E141	Action:T139 Target:E142 Target2:E144 Target3:E145
+E141	Action:T139 Target:E142
 T140	Concept 3909 3918	alimentos
 E142	Concept:T140 in-context:E143
 T141	Concept 3919 3929	saludables
@@ -401,7 +401,7 @@ A10	Emphasized E173
 T171	Concept 4762 4771	saludable
 E174	Concept:T171 
 T172	Action 4774 4780	reduce
-E175	Action:T172 Subject:E170 Target:E176
+E175	Action:T172 Target:E176
 T173	Predicate 4781 4788	riesgos
 E176	Predicate:T173 Arg:E177
 T174	Action 4792 4798	sufrir
@@ -583,14 +583,13 @@ T243	Concept 6891 6895	aire
 E253	Concept:T243 
 T244	Concept 6967 6976	marihuana
 E254	Concept:T244 
-T245	Predicate 6990 6999	problemas
-E255	Predicate:T245 Arg:E256
+E255	Action:T269 Target:E256
 T246	Concept 7007 7014	memoria
 E256	Concept:T246 
-E257	Predicate:T245 Arg:E258
+E257	Action:T270 Target:E258
 T247	Concept 7019 7030	aprendizaje
 E258	Concept:T247 
-E259	Predicate:T245 Arg:E260
+E259	Action:T269 Target:E260
 T248	Concept 7036 7050	comportamiento
 E260	Concept:T248 
 R63	causes Arg1:E254 Arg2:E255
@@ -685,8 +684,8 @@ T1015	Concept 597 601	ERGE
 E1017	Concept:T1015 
 T1016	Concept 543 550	esófago
 E1018	Concept:T1016 
-T1017	Concept 517 525	problema
-E1019	Concept:T1017 in-place:E1018
+T1017	Action 517 525	problema
+E1019	Action:T1017 in-place:E1018
 T1018	Concept 530 535	común
 E1020	Concept:T1018 
 A1002	Emphasized E1020
@@ -872,8 +871,7 @@ E1104	Concept:T1100
 T1101	Concept 2713 2719	rápido
 E1105	Concept:T1101 
 T1102	Action 2691 2697	recibe
-E1106	Action:T1102 Target:E1104
-R1017	has-property Arg1:E1106 Arg2:E1105
+E1106	Action:T1102 Target:E1104 in-context:E1105
 T1103	Action 2742 2750	prevenir
 E1107	Action:T1103 Target:E1103
 T1104	Action 2753 2760	limitar
@@ -951,10 +949,9 @@ E1137	Concept:T1131
 T1132	Concept 3828 3833	orina
 E1138	Concept:T1132 
 T1133	Concept 3836 3843	líquido
-E1139	Concept:T1133 
+E1139	Concept:T1133 in-place:E1140
 T1134	Concept 3850 3862	articulación
 E1140	Concept:T1134 
-R1028	part-of Arg1:E1139 Arg2:E1140
 T1135	Action 3801 3808	hacerle
 E1141	Action:T1135 Subject:E1133 Target:E1134 Target2:E1136 Target3:E1135
 A1007	Emphasized E1062
@@ -1046,7 +1043,7 @@ E1180	Predicate:T1174 Domain:E1181
 T1175	Concept 4950 4962	enfermedades
 E1181	Concept:T1175 
 T1172	Action 4852 4859	consumo
-E1178	Action:T1172 Target:E1182 Target2:E1177
+E1178	Action:T1172 Target:E1182
 T1176	Concept 4867 4872	dieta
 E1182	Concept:T1176 
 A1011	Emphasized E1173
@@ -1115,7 +1112,7 @@ E1206	Concept:T1200
 T1201	Action 5651 5655	usan
 E1207	Action:T1201 Target:E1201 Target2:E1202 Subject:E1206 in-context:E1204
 T1202	Concept 5851 5863	medicamentos
-E1208	Concept:T1202 in-place:E1210
+E1208	Concept:T1202 in-context:E1210 in-context2:E1209
 T1203	Concept 5878 5885	seguros
 E1209	Concept:T1203 
 A1016	Negated E1209
@@ -1127,7 +1124,6 @@ T1206	Predicate 5953 5958	otras
 E1212	Predicate:T1206 Arg:E1213
 T1207	Concept 5959 5968	medicinas
 E1213	Concept:T1207 
-R1040	has-property Arg1:E1208 Arg2:E1209
 T1208	Predicate 5921 5924	más
 E1214	Predicate:T1208 Arg:E1215 Domain:E1216
 T1209	Concept 5925 5930	altas
@@ -1158,11 +1154,9 @@ E1225	Predicate:T1219 Arg:E1224
 A1017	Negated E1223
 R1054	is-a Arg1:E1221 Arg2:E1222
 T1220	Action 6370 6380	mordeduras
-E1226	Action:T1220 Subject:E1227 in-time:E1228
+E1226	Action:T1220 Subject:E1227
 T1221	Concept 6384 6392	animales
 E1227	Concept:T1221 
-T1222	Concept 6393 6397;6398 6401	rara vez
-E1228	Concept:T1222 
 T1223	Concept 6422 6426	vida
 E1229	Concept:T1223 in-context:E1230
 T1224	Concept 6411 6418	peligro
@@ -1291,3 +1285,11 @@ E1287	Concept:T1167
 R1003	has-property Arg1:E1019 Arg2:E1020
 *	same-as E1016 E1019 E1017
 R1006	entails Arg1:E1042 Arg2:E1040
+R70	entails Arg1:E1131 Arg2:E1141	
+R71	entails Arg1:E1131 Arg2:E1141	
+R72	entails Arg1:E1131 Arg2:E1141	
+R73	entails Arg1:E1178 Arg2:E1177	
+R74	entails Arg1:E170 Arg2:E175	
+A27	Diminished E1231
+T269	Action 6990 6999	problemas
+T270	Action 6990 6999	problemas

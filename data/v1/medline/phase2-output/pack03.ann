@@ -20,243 +20,241 @@ T23	Concept 297 306	micóticas
 T24	Action 315 323	comenzar
 T25	Concept 331 339	pulmones
 T26	Concept 348 352	piel
-T30	Concept 462 474	tratamientos
-T31	Concept 484 496	radioterapia
-T32	Concept 498 511	quimioterapia
-T33	Concept 513 520	cirugía
-T34	Action 526 534	extirpar
-T35	Concept 538 542	bazo
-T36	Concept 545 552	terapia
-T37	Concept 553 561	dirigida
-T38	Concept 567 576	calambres
-T39	Concept 592 601	dolorosos
-T40	Predicate 607 615	defectos
-T41	Concept 622 627	vista
-T42	Action 633 636	ver
-T43	Concept 641 648	colores
-T44	Concept 649 653	rojo
-T45	Concept 656 661	verde
-T46	Concept 674 681	comunes
-T47	Reference 683 687	Este
-T48	Concept 688 694	examen
-T49	Action 701 707	buscar
-T50	Predicate 708 716	indicios
-T51	Action 720 728	sangrado
-T52	Action 731 742	inflamación
-T53	Concept 747 754	cerebro
-T54	Action 765 774	fracturas
-T55	Concept 779 785	cráneo
-T61	Action 858 866	necesite
-T62	Concept 871 878	cirugía
-T63	Concept 882 887	nuevo
-T64	Concept 891 899	bloqueos
-T65	Concept 900 911	posteriores
-T66	Action 915 921	forman
-T67	Concept 929 937	arterias
-T68	Concept 940 945	venas
-T69	Concept 946 956	injertadas
-T70	Concept 966 974	arterias
-T71	Action 990 1000	bloqueadas
-T72	Concept 1007 1013	pasado
-T73	Concept 1018 1027	ecografía
-T74	Concept 1030 1041	ultrasonido
-T75	Predicate 1048 1052	tipo
-T76	Concept 1056 1062	imagen
-T89	Concept 1236 1244;1245 1246	vitamina D
-T90	Action 1255 1260	juega
-T91	Concept 1264 1267	rol
-T92	Concept 1274 1281;1282 1290	sistema nervioso
-T93	Concept 1274 1281;1292 1300	sistema muscular
-T94	Concept 1274 1281;1303 1314	sistema inmunitario
-T95	Action 1330 1337	hacerse
-T96	Concept 1338 1347	enjuagues
-T97	Concept 1348 1355	nasales
-T98	Action 1375 1379	usar
-T99	Concept 1380 1384	agua
-T100	Concept 1385 1394	destilada
-T101	Action 1397 1409	esterilizada
-T102	Concept 1414 1417	sal
-T103	Reference 1419 1423	Este
-T104	Action 1424 1431	conecta
-T105	Predicate 1435 1440	parte
-T106	Concept 1441 1450	posterior
-T107	Concept 1459 1462	ojo
-T108	Concept 1467 1473	retina
-T109	Concept 1478 1485	cerebro
-T125	Predicate 1714 1723	problemas
-T126	Concept 1730 1736	sangre
-T127	Predicate 1752 1761	problemas
-T128	Action 1765 1776	coagulación
-T129	Concept 1778 1786;1787 1797	coágulos sanguíneos
-T131	Concept 1800 1810	desórdenes
-T132	Concept 1811 1823	plaquetarios
-T130	Predicate 1828 1833	mayor
-T133	Predicate 1834 1840	riesgo
-T134	Reference 1844 1848	esta
-T135	Concept 1849 1858	condición
-T136	Concept 1866 1876	hemorragia
-T137	Action 1888 1893	forma
-T138	Reference 1885 1887	se
-T139	Concept 1901 1915	articulaciones
-T140	Concept 1924 1932	doloroso
-T154	Reference 2102 2106	Esta
-T156	Concept 2125 2134	sustancia
-T157	Concept 2143 2148	placa
-T158	Action 2152 2159	acumula
-T159	Concept 2167 2175	arterias
-T160	Action 2180 2186	llevan
-T161	Concept 2190 2196	sangre
-T162	Concept 2200 2207	corazón
-T155	Action 2209 2219	reduciendo
-T163	Concept 2223 2228;2229 2238	flujo sanguíneo
-T172	Predicate 2389 2394	nivel
-T173	Concept 2398 2408	colesterol
-T174	Concept 2409 2413	alto
-T175	Predicate 2423 2435	antecedentes
-T177	Concept 2448 2457	sobrepeso
-T178	Action 2460 2467	consume
-T179	Concept 2475 2482	comidas
-T180	Concept 2483 2491	grasosas
-T181	Action 2380 2385	tener
-T182	Concept 2362 2376	probabilidades
-T176	Concept 2436 2446	familiares
-T183	Concept 2497 2507	testículos
-T184	Action 2508 2516	producen
-T185	Concept 2517 2525	hormonas
-T186	Concept 2526 2536	masculinas
-T187	Concept 2539 2544	semen
-T188	Concept 2549 2553	bebé
-T189	Action 2554 2560	pasará
-T190	Concept 2572 2579	cambios
-T191	Predicate 2591 2597;2598 2601	primer año
-T192	Concept 2605 2609	vida
-T193	Concept 2617 2625	arritmia
-T194	Concept 2629 2634	seria
-T195	Action 2650 2658	necesite
-T196	Concept 2662 2672	marcapasos
-T197	Concept 2673 2681	cardíaco
-T198	Concept 2687 2700	desfibrilador
-T199	Concept 2701 2712	implantable
-T200	Concept 2718 2723	setas
-T201	Concept 2729 2733	moho
-T203	Concept 2755 2761	hongos
-T204	Concept 2766 2773	reflujo
-T205	Concept 2781 2786	común
-T206	Concept 2794 2799	bebés
-T207	Reference 2801 2806	Estas
-T208	Concept 2807 2814	pruebas
-T209	Action 2822 2828	ayudar
-T210	Action 2831 2840	descubrir
-T211	Concept 2841 2853	enfermedades
-T212	Concept 2856 2866	afecciones
-T213	Concept 2867 2882	anticipadamente
-T214	Action 2910 2916	tratar
-T215	Concept 2899 2906	fáciles
-T216	Action 2934 2938	usar
-T217	Concept 2942 2950;2951 2958	historia clínica
-T218	Concept 2960 2967	pruebas
-T219	Concept 2972 2980	imágenes
-T220	Concept 2986 2993	biopsia
-T221	Predicate 2998 3005	pruebas
-T222	Action 3012 3019	función
-T223	Concept 3027 3035	pulmones
-T224	Concept 2921 2927	doctor
-T225	Action 3041 3053	diagnosticar
-T226	Concept 3057 3065;3066 3074	fibrosis pulmonar
-T227	Concept 3079 3085;3086 3090	médula ósea
-T228	Concept 3096 3100	timo
-T229	Action 3101 3109	producen
-T230	Concept 3114 3121	células
-T231	Concept 3146 3151	linfa
-T232	Concept 3156 3160	gota
-T233	Action 3182 3194	diagnosticar
-T234	Concept 3171 3178	difícil
-T235	Action 3219 3229	incrustado
-T236	Concept 3234 3241	astilla
-T237	Concept 3249 3254	arena
-T238	Action 3244 3248	tuvo
-T239	Concept 3261 3264	ojo
-T240	Concept 3293 3299	objeto
-T241	Concept 3300 3307	extraño
-T242	Predicate 3318 3323	parte
-T243	Concept 3330 3336	cuerpo
-T245	Action 3284 3289	tener
-T253	Reference 3505 3507	la
-T254	Action 3508 3513	tiene
-T255	Concept 3518 3524;3525 3529	médula ósea
-T256	Action 3533 3540	produce
-T257	Predicate 3541 3552	suficientes
-T258	Concept 3553 3560	células
-T259	Concept 3561 3571	sanguíneas
-T260	Concept 3572 3578	nuevas
+T27	Concept 357 365;366 376	artritis infecciosa
+T28	Concept 384 393	infección
+T29	Concept 400 412	articulación
+T30	Concept 418 430	tratamientos
+T31	Concept 440 452	radioterapia
+T32	Concept 454 467	quimioterapia
+T33	Concept 469 476	cirugía
+T34	Action 482 490	extirpar
+T35	Concept 494 498	bazo
+T36	Concept 501 508	terapia
+T37	Concept 509 517	dirigida
+T38	Concept 523 532	calambres
+T39	Concept 548 557	dolorosos
+T40	Predicate 563 571	defectos
+T41	Concept 578 583	vista
+T42	Action 589 592	ver
+T43	Concept 597 604	colores
+T44	Concept 605 609	rojo
+T45	Concept 612 617	verde
+T46	Concept 630 637	comunes
+T47	Reference 639 643	Este
+T48	Concept 644 650	examen
+T49	Action 657 663	buscar
+T50	Predicate 664 672	indicios
+T51	Action 676 684	sangrado
+T52	Action 687 698	inflamación
+T53	Concept 703 710	cerebro
+T54	Action 721 730	fracturas
+T55	Concept 735 741	cráneo
+T61	Action 814 822	necesite
+T62	Concept 827 834	cirugía
+T63	Concept 838 843	nuevo
+T64	Concept 847 855	bloqueos
+T65	Concept 856 867	posteriores
+T66	Action 871 877	forman
+T67	Concept 885 893	arterias
+T68	Concept 896 901	venas
+T69	Concept 902 912	injertadas
+T70	Concept 922 930	arterias
+T71	Action 946 956	bloqueadas
+T72	Concept 963 969	pasado
+T73	Concept 974 983	ecografía
+T74	Concept 986 997	ultrasonido
+T75	Predicate 1004 1008	tipo
+T76	Concept 1012 1018	imagen
+T89	Concept 1192 1200;1201 1202	vitamina D
+T90	Action 1211 1216	juega
+T91	Concept 1220 1223	rol
+T92	Concept 1230 1237;1238 1246	sistema nervioso
+T93	Concept 1230 1237;1248 1256	sistema muscular
+T94	Concept 1230 1237;1259 1270	sistema inmunitario
+T95	Action 1286 1293	hacerse
+T96	Concept 1294 1303	enjuagues
+T97	Concept 1304 1311	nasales
+T98	Action 1331 1335	usar
+T99	Concept 1336 1340	agua
+T100	Concept 1341 1350	destilada
+T101	Action 1353 1365	esterilizada
+T102	Concept 1370 1373	sal
+T103	Reference 1375 1379	Este
+T104	Action 1380 1387	conecta
+T105	Predicate 1391 1396	parte
+T106	Concept 1397 1406	posterior
+T107	Concept 1415 1418	ojo
+T108	Concept 1423 1429	retina
+T109	Concept 1434 1441	cerebro
+T125	Predicate 1670 1679	problemas
+T126	Concept 1686 1692	sangre
+T127	Predicate 1708 1717	problemas
+T128	Action 1721 1732	coagulación
+T129	Concept 1734 1742;1743 1753	coágulos sanguíneos
+T131	Concept 1756 1766	desórdenes
+T132	Concept 1767 1779	plaquetarios
+T130	Predicate 1784 1789	mayor
+T133	Predicate 1790 1796	riesgo
+T134	Reference 1800 1804	esta
+T135	Concept 1805 1814	condición
+T136	Concept 1822 1832	hemorragia
+T137	Action 1844 1849	forma
+T138	Reference 1841 1843	se
+T139	Concept 1857 1871	articulaciones
+T140	Concept 1880 1888	doloroso
+T154	Reference 2058 2062	Esta
+T156	Concept 2081 2090	sustancia
+T157	Concept 2099 2104	placa
+T158	Action 2108 2115	acumula
+T159	Concept 2123 2131	arterias
+T160	Action 2136 2142	llevan
+T161	Concept 2146 2152	sangre
+T162	Concept 2156 2163	corazón
+T155	Action 2165 2175	reduciendo
+T163	Concept 2179 2184;2185 2194	flujo sanguíneo
+T172	Predicate 2345 2350	nivel
+T173	Concept 2354 2364	colesterol
+T174	Concept 2365 2369	alto
+T175	Predicate 2379 2391	antecedentes
+T177	Concept 2404 2413	sobrepeso
+T178	Action 2416 2423	consume
+T179	Concept 2431 2438	comidas
+T180	Concept 2439 2447	grasosas
+T181	Action 2336 2341	tener
+T182	Concept 2318 2332	probabilidades
+T176	Concept 2392 2402	familiares
+T183	Concept 2453 2463	testículos
+T184	Action 2464 2472	producen
+T185	Concept 2473 2481	hormonas
+T186	Concept 2482 2492	masculinas
+T187	Concept 2495 2500	semen
+T188	Concept 2505 2509	bebé
+T189	Action 2510 2516	pasará
+T190	Concept 2528 2535	cambios
+T191	Predicate 2547 2553;2554 2557	primer año
+T192	Concept 2561 2565	vida
+T193	Concept 2573 2581	arritmia
+T194	Concept 2585 2590	seria
+T195	Action 2606 2614	necesite
+T196	Concept 2618 2628	marcapasos
+T197	Concept 2629 2637	cardíaco
+T198	Concept 2643 2656	desfibrilador
+T199	Concept 2657 2668	implantable
+T200	Concept 2674 2679	setas
+T201	Concept 2685 2689	moho
+T203	Concept 2711 2717	hongos
+T204	Concept 2722 2729	reflujo
+T205	Concept 2737 2742	común
+T206	Concept 2750 2755	bebés
+T207	Reference 2757 2762	Estas
+T208	Concept 2763 2770	pruebas
+T209	Action 2778 2784	ayudar
+T210	Action 2787 2796	descubrir
+T211	Concept 2797 2809	enfermedades
+T212	Concept 2812 2822	afecciones
+T213	Concept 2823 2838	anticipadamente
+T214	Action 2866 2872	tratar
+T215	Concept 2855 2862	fáciles
+T216	Action 2890 2894	usar
+T217	Concept 2898 2906;2907 2914	historia clínica
+T218	Concept 2916 2923	pruebas
+T219	Concept 2928 2936	imágenes
+T220	Concept 2942 2949	biopsia
+T221	Predicate 2954 2961	pruebas
+T222	Action 2968 2975	función
+T223	Concept 2983 2991	pulmones
+T224	Concept 2877 2883	doctor
+T225	Action 2997 3009	diagnosticar
+T226	Concept 3013 3021;3022 3030	fibrosis pulmonar
+T227	Concept 3035 3041;3042 3046	médula ósea
+T228	Concept 3052 3056	timo
+T229	Action 3057 3065	producen
+T230	Concept 3070 3077	células
+T231	Concept 3102 3107	linfa
+T232	Concept 3112 3116	gota
+T233	Action 3138 3150	diagnosticar
+T234	Concept 3127 3134	difícil
+T235	Action 3175 3185	incrustado
+T236	Concept 3190 3197	astilla
+T237	Concept 3205 3210	arena
+T238	Action 3200 3204	tuvo
+T239	Concept 3217 3220	ojo
+T240	Concept 3249 3255	objeto
+T241	Concept 3256 3263	extraño
+T242	Predicate 3274 3279	parte
+T243	Concept 3286 3292	cuerpo
+T245	Action 3240 3245	tener
+T253	Reference 3461 3463	la
+T254	Action 3464 3469	tiene
+T255	Concept 3474 3480;3481 3485	médula ósea
+T256	Action 3489 3496	produce
+T257	Predicate 3497 3508	suficientes
+T258	Concept 3509 3516	células
+T259	Concept 3517 3527	sanguíneas
+T260	Concept 3528 3534	nuevas
 T1015	Concept 112 116	boca
 T1016	Concept 117 121	seca
 T1017	Concept 149 163	envejecimiento
-T1031	Concept 791 796	niños
-T1032	Action 797 803	crecen
-T1033	Action 806 813	maduran
-T1034	Concept 832 841	distintas
-T1035	Concept 816 827	velocidades
-T1039	Concept 1185 1193	asesoría
-T1040	Concept 1226 1231	dolor
-T1047	Action 1697 1704	cambian
-T1048	Concept 1680 1687	cuerpos
-T1049	Concept 1690 1696	mentes
-T1050	Concept 1658 1669	envejecemos
-T1051	Action 1641 1649	evitarlo
-T1061	Concept 2059 2063	bebé
-T1062	Concept 2065 2070	usted
-T1063	Action 2071 2080	comenzará
-T1064	Concept 2084 2091;2092 2094;2095 2100	trabajo de parto
-T1065	Concept 2037 2042	lista
-T1099	Concept 377 388;389 392;393 399	infecciones por hongos
-T1100	Concept 401 410	micóticas
-T1101	Action 419 427	comenzar
-T1102	Concept 435 443	pulmones
-T1103	Concept 452 456	piel
-T1117	Action 1211 1222	sobrellevar
-T1119	Concept 1938 1945;1946 1957	dientes permanentes
-T1120	Concept 1958 1966	derechos
-T1121	Action 1983 1991	prevenir
-T1122	Concept 1992 2001;2002 2010	problemas dentales
-T1123	Concept 2017 2023	futuro
-T1124	Action 2048 2053	tener
-T1132	Concept 2247 2252	bebés
-T1133	Action 2263 2270	limpiar
-T1134	Concept 2275 2282	dientes
-T1135	Concept 2290 2294	paño
-T1136	Concept 2295 2300	suave
-T1137	Concept 2303 2309	limpio
-T1138	Concept 2319 2326;2327 2329;2330 2337	cepillo de dientes
-T1156	Concept 3342 3351	violación
-T1157	Concept 3365 3374;3375 3381	actividad sexual
-T1158	Concept 3392 3397	usted
-T1159	Action 3404 3408	dado
-T1160	Concept 3412 3424	autorización
-T1161	Reference 3426 3431	Ellos
-T1162	Action 3439 3444	tener
-T1163	Predicate 3459 3465	mismos
-T1164	Concept 3466 3475	problemas
-T1165	Concept 3491 3500	fumadores
-T1166	Action 3480 3486	tienen
-T1173	Concept 1084 1092	personas
-T1174	Reference 1097 1101	este
-T1175	Concept 1102 1110	síndrome
-T1176	Concept 1124 1132	cánceres
-T1177	Predicate 1141 1150	problemas
-T1178	Concept 1172 1180	hormonas
-T1189	Concept 2343 2348	bebés
-T1018	Reference 1487 1492	Éstas
-T1222	Action 1500 1506	ayudar
-T1223	Concept 1513 1524	proveedores
-T1224	Concept 1528 1533	salud
-T1225	Concept 1536 1546	familiares
-T1226	Action 1549 1554	tomar
-T1227	Concept 1555 1565	decisiones
-T1232	Concept 1574 1579;1580 1582;1586 1590	final de vida
+T1031	Concept 747 752	niños
+T1032	Action 753 759	crecen
+T1033	Action 762 769	maduran
+T1034	Concept 788 797	distintas
+T1035	Concept 772 783	velocidades
+T1039	Concept 1141 1149	asesoría
+T1040	Concept 1182 1187	dolor
+T1047	Action 1653 1660	cambian
+T1048	Concept 1636 1643	cuerpos
+T1049	Concept 1646 1652	mentes
+T1050	Concept 1614 1625	envejecemos
+T1051	Action 1597 1605	evitarlo
+T1061	Concept 2015 2019	bebé
+T1062	Concept 2021 2026	usted
+T1063	Action 2027 2036	comenzará
+T1064	Concept 2040 2047;2048 2050;2051 2056	trabajo de parto
+T1065	Concept 1993 1998	lista
+T1117	Action 1167 1178	sobrellevar
+T1119	Concept 1894 1901;1902 1913	dientes permanentes
+T1120	Concept 1914 1922	derechos
+T1121	Action 1939 1947	prevenir
+T1122	Concept 1948 1957;1958 1966	problemas dentales
+T1123	Concept 1973 1979	futuro
+T1124	Action 2004 2009	tener
+T1132	Concept 2203 2208	bebés
+T1133	Action 2219 2226	limpiar
+T1134	Concept 2231 2238	dientes
+T1135	Concept 2246 2250	paño
+T1136	Concept 2251 2256	suave
+T1137	Concept 2259 2265	limpio
+T1138	Concept 2275 2282;2283 2285;2286 2293	cepillo de dientes
+T1156	Concept 3298 3307	violación
+T1157	Concept 3321 3330;3331 3337	actividad sexual
+T1158	Concept 3348 3353	usted
+T1159	Action 3360 3364	dado
+T1160	Concept 3368 3380	autorización
+T1161	Reference 3382 3387	Ellos
+T1162	Action 3395 3400	tener
+T1163	Predicate 3415 3421	mismos
+T1164	Concept 3422 3431	problemas
+T1165	Concept 3447 3456	fumadores
+T1166	Action 3436 3442	tienen
+T1173	Concept 1040 1048	personas
+T1174	Reference 1053 1057	este
+T1175	Concept 1058 1066	síndrome
+T1176	Concept 1080 1088	cánceres
+T1177	Predicate 1097 1106	problemas
+T1178	Concept 1128 1136	hormonas
+T1189	Concept 2299 2304	bebés
+T1018	Reference 1443 1448	Éstas
+T1222	Action 1456 1462	ayudar
+T1223	Concept 1469 1480	proveedores
+T1224	Concept 1484 1489	salud
+T1225	Concept 1492 1502	familiares
+T1226	Action 1505 1510	tomar
+T1227	Concept 1511 1521	decisiones
+T1232	Concept 1530 1535;1536 1538;1542 1546	final de vida
 T1144	Concept 138 144	normal
-T1237	Action 1609 1617	tomarlas
-T261	Concept 2350 2355	Usted
+T1237	Action 1565 1573	tomarlas
+T261	Concept 2306 2311	Usted
 E1	Predicate:T1 Domain:E2
 E2	Concept:T2 
 E3	Action:T3 Subject:E1 Target:E4
@@ -279,6 +277,9 @@ E23	Concept:T23
 E24	Action:T24 in-place2:E26 Target:E21 in-place:E25
 E25	Concept:T25 
 E26	Concept:T26 
+E27	Concept:T27 
+E28	Concept:T28 in-place:E29
+E29	Concept:T29 
 E30	Concept:T30 
 E31	Concept:T31 
 E32	Concept:T32 
@@ -470,11 +471,6 @@ E1062	Concept:T1062
 E1063	Action:T1063 Subject:E1062 Target:E1064
 E1064	Concept:T1064 
 E1065	Concept:T1065 
-E1100	Concept:T1099 
-E1101	Concept:T1100 
-E1102	Action:T1101 Subject:E1100 in-place2:E1104 in-place:E1103
-E1103	Concept:T1102 
-E1104	Concept:T1103 
 E1118	Action:T1117 Target:E1040
 E1120	Concept:T1119 in-context:E1121
 E1121	Concept:T1120 
@@ -526,6 +522,7 @@ R4	is-a Arg1:E20 Arg2:E17
 R5	is-a Arg1:E20 Arg2:E18
 A2	Uncertain E24
 *	same-as E23 E21
+R6	is-a Arg1:E27 Arg2:E28
 R7	is-a Arg1:E31 Arg2:E30
 R8	is-a Arg1:E32 Arg2:E30
 R9	is-a Arg1:E34 Arg2:E30
@@ -579,8 +576,6 @@ A1004	Emphasized E1034
 R1010	has-property Arg1:E1033 Arg2:E1035
 R1011	has-property Arg1:E1032 Arg2:E1035
 A1005	Negated E1051
-*	same-as E1100 E1101
-A1010	Uncertain E1102
 A1014	Uncertain E1122
 R1012	entails Arg1:E1063 Arg2:E1065
 A1015	Uncertain E1134

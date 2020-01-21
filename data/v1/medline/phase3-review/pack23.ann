@@ -1,0 +1,557 @@
+T15	Concept 236 244	obesidad
+T16	Action 267 278	acumulación
+T17	Concept 282 287	grasa
+T18	Concept 294 300	cuerpo
+T32	Reference 453 457	Este
+T33	Concept 458 469	tratamiento
+T34	Action 473 483	recomienda
+T35	Concept 507 515	personas
+T36	Action 520 525	viven
+T37	Concept 532 537	hogar
+T38	Concept 549 556	parejas
+T39	Concept 557 564	íntimas
+T40	Concept 569 574	grasa
+T41	Predicate 584 589	doble
+T42	Concept 593 601	calorías
+T43	Concept 610 619	proteínas
+T44	Concept 622 630;631 633;634 641	hidratos de carbono
+T64	Concept 898 908	trastornos
+T65	Concept 913 919;920 922;923 928	estado de ánimo
+T66	Action 936 947	incrementar
+T67	Predicate 952 959	riesgos
+T68	Concept 963 975	enfermedades
+T69	Concept 980 987	corazón
+T70	Concept 989 997	diabetes
+T71	Concept 1006 1018	enfermedades
+T72	Concept 1026 1033	persona
+T77	Action 1089 1098	problemas
+T78	Concept 1105 1111	sangre
+T79	Action 1112 1119	afectan
+T80	Predicate 1133 1139	partes
+T81	Action 1150 1157	impiden
+T82	Action 1162 1168	cumpla
+T83	Action 1172 1179	función
+T101	Concept 1411 1418	médicos
+T103	Action 1419 1427	utilizan
+T104	Concept 1431 1437;1438 1444	examen físico
+T105	Concept 1446 1453	pruebas
+T106	Concept 1462 1470	tiroides
+T107	Concept 1472 1479;1480 1482;1483 1489	pruebas de imagen
+T108	Concept 1496 1503	biopsia
+T109	Action 1509 1521	diagnosticar
+T110	Concept 1525 1531;1532 1534;1535 1543	cáncer de tiroides
+T127	Concept 1732 1739	terapia
+T128	Concept 1746 1755	medicinas
+T129	Action 1763 1769	ayudar
+T130	Predicate 1775 1782	mayoría
+T131	Concept 1790 1798	personas
+T132	Action 1803 1810	piensan
+T133	Concept 1814 1824	suicidarse
+T134	Concept 1847 1852;1853 1861	dolor torácico
+T135	Action 1868 1877	consultar
+T136	Concept 1883 1894;1895 1897;1898 1900;1901 1906	profesional de la salud
+T137	Action 1947 1953	dañino
+T138	Predicate 1916 1923	mayoría
+T139	Concept 1931 1939	personas
+T140	Action 1954 1962	consumir
+T141	Concept 1969 1972;1973 1975	400 mg
+T142	Concept 1979 1986	cafeína
+T143	Concept 1990 1993	día
+T144	Predicate 1963 1968	hasta
+T157	Concept 2147 2160	osteoartritis
+T158	Concept 2186 2194	artritis
+T159	Predicate 2173 2176	más
+T160	Concept 2177 2182	común
+T168	Reference 2348 2353	estos
+T174	Concept 2354 2366	tratamientos
+T175	Action 2370 2379	funcionan
+T176	Action 2396 2404	necesite
+T177	Concept 2408 2414;2415 2417;2418 2425;2426 2435	bypass de arteria coronaria
+T179	Action 2441 2449	lesiones
+T180	Concept 2456 2463	espalda
+T181	Concept 2493 2500	deporte
+T182	Action 2502 2510	trabajos
+T183	Concept 2517 2521	casa
+T184	Concept 2530 2536	jardín
+T185	Action 2543 2551	sacudida
+T186	Concept 2552 2561	repentina
+T187	Concept 2574 2583;2584 2586;2587 2595	accidente de tránsito
+T230	Reference 3266 3270	esto
+T231	Action 3286 3296	desaparece
+T232	Concept 3305 3309	días
+T233	Concept 3316 3322	semana
+T234	Concept 3329 3337	síntomas
+T235	Concept 3345 3351	graves
+T236	Action 3355 3364	necesitan
+T237	Concept 3365 3376	tratamiento
+T238	Concept 3381 3394;3395 3403	insuficiencia cardiaca
+T239	Action 3407 3416	significa
+T240	Concept 3424 3431	corazón
+T241	Action 3438 3446	detenido
+T242	Action 3458 3463	dejar
+T243	Action 3467 3476	funcionar
+T244	Reference 3481 3484	eso
+T245	Action 3488 3496	funciona
+T247	Action 3522 3529	cirugía
+T1001	Action 14 21	conocer
+T1002	Concept 26 33;34 36;37 48	señales de advertencia
+T1003	Concept 56 64	lesiones
+T1004	Concept 65 74	moderadas
+T1005	Concept 77 83	graves
+T1006	Concept 3 13	importante
+T1007	Concept 88 99	amigdalitis
+T1008	Action 107 118	inflamación
+T1009	Concept 126 135	amígdalas
+T1011	Concept 174 192	cáncer de garganta
+T1013	Predicate 165 170	tipos
+T1014	Action 140 151	tratamiento
+T1010	Concept 215 222	terapia
+T1012	Concept 223 231	dirigida
+T1019	Action 374 381	mejorar
+T1020	Action 384 395	desaparecer
+T1021	Concept 319 324	niños
+T1022	Concept 329 347	dermatitis atópica
+T1023	Action 348 354	crecen
+T1024	Reference 397 402	Ambos
+T1025	Concept 403 410	cuadros
+T1026	Concept 415 422	comunes
+T1027	Concept 426 434	personas
+T1028	Predicate 443 451	avanzada
+T1029	Concept 438 442	edad
+T1044	Action 659 665	existe
+T1045	Action 669 680	tratamiento
+T1046	Concept 698 701	TEA
+T1047	Concept 681 689	estándar
+T1048	Concept 709 722	osteonecrosis
+T1049	Action 727 732	falta
+T1050	Action 736 741	flujo
+T1051	Concept 748 754	sangre
+T1052	Concept 767 772	hueso
+T1053	Action 776 785	deteriore
+T1054	Predicate 790 796	rápido
+T1055	Concept 811 817	cuerpo
+T1056	Action 824 834	producirlo
+T1057	Concept 840 847	lípidos
+T1058	Concept 852 858	grasas
+T1059	Predicate 872 881	similares
+T1060	Concept 887 892	grasa
+T1061	Concept 861 871	sustancias
+T1070	Concept 1038 1051	conjuntivitis
+T1071	Action 1068 1074	afecta
+T1072	Concept 1078 1083	vista
+T1082	Concept 1185 1197	antibióticos
+T1083	Action 1205 1211	tratar
+T1084	Concept 1216 1219	ETS
+T1085	Concept 1233 1242	bacterias
+T1086	Concept 1244 1250	hongos
+T1087	Concept 1253 1262	parásitos
+T1088	Concept 1268 1277	compañías
+T1089	Concept 1291 1298;1299 1310	bebidas energéticas
+T1091	Action 1282 1290	producen
+T1092	Action 1336 1344	aumentar
+T1093	Concept 1348 1364	estado de alerta
+T1094	Action 1367 1374	mejorar
+T1095	Action 1378 1389	rendimiento
+T1096	Concept 1390 1396	físico
+T1097	Concept 1399 1405	mental
+T1090	Action 1311 1318	afirman
+T1108	Predicate 1565 1571	0.4 mg
+T1109	Concept 1575 1587	ácido fólico
+T1110	Predicate 1588 1593	todos
+T1111	Concept 1598 1602	días
+T1112	Predicate 1603 1608	antes
+T1113	Action 1612 1618	quedar
+T1114	Concept 1619 1629	embarazada
+T1115	Predicate 1635 1644	principio
+T1116	Concept 1651 1659	embarazo
+T1117	Action 1559 1564	tomar
+T1118	Concept 1548 1558	importante
+T1119	Concept 1671 1681	vitamina D
+T1120	Action 1690 1695	eleva
+T1121	Predicate 1699 1704	nivel
+T1122	Concept 1708 1714	calcio
+T1123	Concept 1721 1727	sangre
+T1142	Reference 1995 2000	Otras
+T1143	Action 2011 2017	lentos
+T1144	Action 2022 2029	latidos
+T1145	Action 2044 2051	aflojan
+T1146	Action 2054 2063	ensanchan
+T1147	Concept 2068 2084	vasos sanguíneos
+T1148	Action 2089 2099	desarrollo
+T1149	Concept 2104 2109	habla
+T1150	Concept 2115 2123	lenguaje
+T1151	Concept 2131 2136	niños
+T1152	Action 2137 2142	varía
+T1156	Concept 2199 2214	fibra dietética
+T1157	Action 2233 2237	come
+T1158	Concept 2245 2254	vitaminas
+T1159	Concept 2285 2291	cuerpo
+T1160	Action 2297 2304	obtener
+T1161	Concept 2305 2312	energía
+T1162	Concept 2319 2325	comida
+T1163	Reference 2330 2335	usted
+T1164	Action 2336 2343	consume
+T1165	Action 2255 2261	ayudan
+T1182	Concept 2600 2608	melanoma
+T1183	Action 2623 2631	aparecer
+T1184	Concept 2640 2645	lunar
+T1185	Concept 2646 2651	nuevo
+T1186	Concept 2657 2665	catarata
+T1187	Action 2666 2671	opaca
+T1188	Action 2674 2679	nubla
+T1189	Concept 2683 2696	lente del ojo
+T1190	Concept 2701 2708	alcohol
+T1192	Action 2722 2731	problemas
+T1193	Concept 2745 2753	conducta
+T1194	Concept 2732 2739	físicos
+T1195	Predicate 2759 2763	toda
+T1196	Concept 2767 2771	vida
+T1197	Concept 2779 2784	niños
+T1198	Concept 2799 2828	síndrome de alcoholismo fetal
+T1199	Action 2847 2857	necesitará
+T1200	Concept 2862 2873	radiografía
+T1201	Concept 2877 2882	tórax
+T1202	Action 2888 2900	diagnosticar
+T1203	Concept 2904 2912	neumonía
+T1204	Action 2920 2929	problemas
+T1205	Concept 2934 2951	sistema linfático
+T1207	Concept 2967 2978	infecciones
+T1208	Concept 2980 2988	bloqueos
+T1209	Concept 2991 2997	cáncer
+T1206	Reference 2999 3004	Usted
+T1211	Action 3024 3034	trasplante
+T1212	Concept 3038 3045	órganos
+T1213	Concept 3060 3067	órganos
+T1215	Action 3086 3095	funciones
+T1216	Concept 3100 3111	tratamiento
+T1218	Concept 3120 3134	terapia física
+T1219	Concept 3155 3162	cirugía
+T1220	Concept 3187 3191	crup
+T1221	Concept 3211 3216	grave
+T1222	Action 3219 3229	interferir
+T1223	Action 3237 3248	respiración
+T1224	Concept 3255 3259	hijo
+T249	Concept 2034 2041	corazón
+T250	Reference 2239 2244	Estas
+E16	Concept:T15 
+E17	Action:T16 Target:E18 in-place:E19
+E18	Concept:T17 
+E19	Concept:T18 
+E35	Reference:T32 
+E36	Concept:T33 
+E37	Action:T34 Target2:E35 in-context:E39 in-context2:E41
+E38	Concept:T35 
+E39	Action:T36 Subject:E38 Target:E40
+E40	Concept:T37 
+E41	Concept:T38 in-context:E42
+E42	Concept:T39 
+E43	Concept:T40 
+E44	Predicate:T41 Domain:E45
+E45	Concept:T42 in-place:E46
+E46	Concept:T43 
+E47	Concept:T44 
+E48	Concept:T42 in-place:E47
+E49	Predicate:T41 Domain:E48
+E70	Concept:T64 in-context:E71
+E71	Concept:T65 
+E72	Action:T66 Subject:E70 Target:E73 Target2:E77 Target3:E79 in-place:E80
+E73	Predicate:T67 Arg:E74
+E74	Concept:T68 in-place:E75
+E75	Concept:T69 
+E76	Concept:T70 
+E77	Predicate:T67 Arg:E76
+E78	Concept:T71 
+E79	Predicate:T67 Arg:E78
+E80	Concept:T72 
+E85	Action:T77 Target:E86
+E86	Concept:T78 
+E87	Action:T79 Target:E88 Subject:E85
+E88	Predicate:T80 Domain:E86
+E89	Action:T81 Target:E90 Subject:E85
+E90	Action:T82 Subject:E86 Target:E91
+E91	Action:T83 Subject:E86
+E116	Concept:T101 
+E117	Action:T103 Subject:E116 Target:E118 Target2:E119 Target3:E121 Target4:E122
+E118	Concept:T104 
+E119	Concept:T105 in-context:E120
+E120	Concept:T106 
+E121	Concept:T107 
+E122	Concept:T108 
+E123	Action:T109 Target:E124 Subject:E116
+E124	Concept:T110 
+E144	Concept:T127 
+E145	Concept:T128 
+E146	Action:T129 Subject:E145 Subject2:E144 Target:E147
+E147	Predicate:T130 Arg:E149
+E148	Concept:T131 
+E149	Action:T132 Subject:E148 Target:E150
+E150	Concept:T133 
+E151	Concept:T134 
+E152	Action:T135 Target:E153 in-context:E151
+E153	Concept:T136 
+E154	Action:T137 Target:E155 Subject:E157
+E155	Predicate:T138 Domain:E156
+E156	Concept:T139 
+E157	Action:T140 Target:E161 in-time:E160
+E158	Concept:T141 
+E159	Concept:T142 
+E160	Concept:T143 
+E161	Predicate:T144 Domain:E159 Arg:E158
+E174	Concept:T157 
+E175	Concept:T158 
+E176	Predicate:T159 Domain:E175 Arg:E177
+E177	Concept:T160 
+E185	Reference:T168 
+E191	Concept:T174 
+E192	Action:T175 Target:E185
+E193	Action:T176 Target:E194
+E194	Concept:T177 
+E196	Action:T179 Target:E197
+E197	Concept:T180 
+E198	Concept:T181 
+E199	Action:T182 in-place:E200
+E200	Concept:T183 
+E201	Concept:T184 
+E202	Action:T182 in-place:E201
+E203	Action:T185 in-context:E204
+E204	Concept:T186 
+E205	Concept:T187 
+E248	Reference:T230 
+E249	Action:T231 Target:E248 Target2:E250 Target3:E251
+E250	Concept:T232 
+E251	Concept:T233 
+E252	Concept:T234 in-context:E248
+E253	Concept:T235 
+E254	Action:T236 Subject:E252 Target:E255
+E255	Concept:T237 
+E256	Concept:T238 
+E257	Action:T239 Subject:E256 Target:E259 Target2:E260
+E258	Concept:T240 
+E259	Action:T241 Target:E258
+E260	Action:T242 Target:E261
+E261	Action:T243 Target:E258
+E262	Reference:T244 
+E263	Action:T245 Target:E262 Subject:E262
+E265	Action:T247 
+E1001	Action:T1001 Target:E1002
+E1002	Concept:T1002 
+E1003	Concept:T1003 in-context:E1004 in-context2:E1005
+E1004	Concept:T1004 
+E1005	Concept:T1005 
+E1006	Concept:T1006 
+E1007	Concept:T1007 
+E1008	Action:T1008 Target:E1009
+E1009	Concept:T1009 
+E1011	Concept:T1011 
+E1013	Predicate:T1013 Domain:E1011
+E1014	Action:T1014 Target:E1013
+E1010	Concept:T1010 in-context:E1012
+E1012	Concept:T1012 
+E1019	Action:T1019 Target:E1022
+E1020	Action:T1020 Target:E1022
+E1021	Concept:T1021 in-context:E1022
+E1022	Concept:T1022 
+E1023	Action:T1023 Subject:E1021 Target:E1021
+E1024	Reference:T1024 in-place:E1028
+E1025	Concept:T1025 
+E1026	Concept:T1026 
+E1027	Concept:T1027 
+E1028	Predicate:T1028 Arg:E1029 Domain:E1027
+E1029	Concept:T1029 
+E1048	Action:T1044 Target:E1049
+E1049	Action:T1045 Target:E1050 in-context:E1051
+E1050	Concept:T1046 
+E1051	Concept:T1047 
+E1052	Concept:T1048 
+E1053	Action:T1049 Target:E1054
+E1054	Action:T1050 Target:E1055
+E1055	Concept:T1051 
+E1056	Concept:T1052 
+E1057	Action:T1053 Target:E1056
+E1058	Predicate:T1054 Domain:E1057 Arg:E1060
+E1059	Concept:T1055 
+E1060	Action:T1056 Subject:E1059 Target:E1056
+E1061	Concept:T1057 
+E1062	Concept:T1058 
+E1063	Predicate:T1059 Domain:E1065 Arg:E1064
+E1064	Concept:T1060 
+E1065	Concept:T1061 
+E1074	Concept:T1070 
+E1075	Action:T1071 Target:E1076 Subject:E1074
+E1076	Concept:T1072 
+E1086	Concept:T1082 
+E1087	Action:T1083 Target:E1088 Subject:E1086
+E1088	Concept:T1084 
+E1089	Concept:T1085 
+E1090	Concept:T1086 
+E1091	Concept:T1087 
+E1092	Concept:T1088 
+E1093	Concept:T1089 
+E1095	Action:T1091 Subject:E1092 Target:E1093
+E1096	Action:T1092 Target:E1097 Subject:E1093
+E1097	Concept:T1093 
+E1098	Action:T1094 Target:E1099 Subject:E1093
+E1099	Action:T1095 Target:E1100 Target2:E1101
+E1100	Concept:T1096 
+E1101	Concept:T1097 
+E1094	Action:T1090 Subject:E1095 Target:E1096 Target2:E1098
+E1112	Predicate:T1108 Domain:E1113
+E1113	Concept:T1109 
+E1114	Predicate:T1110 Domain:E1115
+E1115	Concept:T1111 
+E1116	Predicate:T1112 Domain:E1117
+E1117	Action:T1113 Target:E1118
+E1118	Concept:T1114 
+E1119	Predicate:T1115 Domain:E1120
+E1120	Concept:T1116 
+E1121	Action:T1117 Target:E1112 in-time:E1114 in-time2:E1116 in-time3:E1119
+E1122	Concept:T1118 
+E1123	Concept:T1119 
+E1124	Action:T1120 Target:E1125 Subject:E1123 in-place:E1127
+E1125	Predicate:T1121 Arg:E1126
+E1126	Concept:T1122 
+E1127	Concept:T1123 
+E1146	Reference:T1142 
+E1147	Action:T1143 Subject:E1146 Target:E1148
+E1148	Action:T1144 Subject:E267
+E1149	Action:T1145 Target:E1151 Subject:E1146
+E1150	Action:T1146 Target:E1151 Subject:E1146
+E1151	Concept:T1147 
+E1152	Action:T1148 Target:E1153 Target2:E1154 Subject:E1155
+E1153	Concept:T1149 
+E1154	Concept:T1150 
+E1155	Concept:T1151 
+E1156	Action:T1152 Target:E1152
+E1160	Concept:T1156 
+E1161	Action:T1157 Target:E1160
+E1162	Concept:T1158 
+E1163	Concept:T1159 
+E1164	Action:T1160 Subject:E1163 Target:E1165 in-place:E1168
+E1165	Concept:T1161 
+E1166	Concept:T1162 
+E1167	Reference:T1163 
+E1168	Action:T1164 Subject:E1167 Target:E1166
+E1169	Action:T1165 Target:E1164 Subject:E268
+E1186	Concept:T1182 
+E1187	Action:T1183 Target:E1186
+E1188	Concept:T1184 in-context:E1189
+E1189	Concept:T1185 
+E1190	Action:T1183 Target:E1188
+E1191	Concept:T1186 
+E1192	Action:T1187 Subject:E1191 Target:E1194
+E1193	Action:T1188 Subject:E1191 Target:E1194
+E1194	Concept:T1189 
+E1195	Concept:T1190 
+E1197	Action:T1192 Target:E1199 Target2:E1198 in-time:E1200 in-place:E1202
+E1198	Concept:T1193 
+E1199	Concept:T1194 
+E1200	Predicate:T1195 Domain:E1201
+E1201	Concept:T1196 
+E1202	Concept:T1197 
+E1203	Concept:T1198 
+E1204	Action:T1199 Target:E1205
+E1205	Concept:T1200 in-place:E1206
+E1206	Concept:T1201 
+E1207	Action:T1202 Target:E1208
+E1208	Concept:T1203 
+E1209	Action:T1204 Target:E1210
+E1210	Concept:T1205 
+E1212	Concept:T1207 
+E1213	Concept:T1208 
+E1214	Concept:T1209 
+E1211	Reference:T1206 
+E1216	Action:T1211 Target:E1217 Subject:E1211
+E1217	Concept:T1212 
+E1218	Concept:T1213 
+E1220	Action:T1215 Subject:E1218 Target:E1218
+E1221	Concept:T1216 
+E1223	Concept:T1218 
+E1224	Concept:T1219 
+E1225	Concept:T1220 
+E1226	Concept:T1221 
+E1227	Action:T1222 Target:E1228 Subject:E1225
+E1228	Action:T1223 Target:E1229 Subject:E1229
+E1229	Concept:T1224 
+E267	Concept:T249 
+E268	Reference:T250 
+R4	entails Arg1:E16 Arg2:E17
+R10	is-a Arg1:E35 Arg2:E36
+R11	has-property Arg1:E43 Arg2:E44
+R12	has-property Arg1:E43 Arg2:E49
+A5	Uncertain E72
+R16	is-a Arg1:E74 Arg2:E78
+R17	is-a Arg1:E76 Arg2:E78
+R21	entails Arg1:E123 Arg2:E117
+A8	Uncertain E146
+A9	Negated E154
+R25	is-a Arg1:E174 Arg2:E175
+*	same-as E174 E176
+A10	Negated E192
+R27	is-a Arg1:E185 Arg2:E191
+R28	entails Arg1:E192 Arg2:E193
+A11	Uncertain E193
+R29	causes Arg1:E198 Arg2:E196
+R30	causes Arg1:E199 Arg2:E196
+R31	causes Arg1:E202 Arg2:E196
+R32	causes Arg1:E203 Arg2:E196
+R33	causes Arg1:E205 Arg2:E196
+R34	causes Arg1:E205 Arg2:E203
+A16	Negated E253
+R47	has-property Arg1:E252 Arg2:E253
+A17	Negated E254
+A18	Negated E257
+A19	Uncertain E260
+A20	Negated E263
+R48	entails Arg1:E263 Arg2:E265
+R1001	causes Arg1:E1003 Arg2:E1002
+R1002	has-property Arg1:E1001 Arg2:E1006
+R1003	is-a Arg1:E1007 Arg2:E1008
+R1004	part-of Arg1:E1010 Arg2:E1014
+A1001	Uncertain E1019
+A1002	Uncertain E1020
+R1005	entails Arg1:E1023 Arg2:E1019
+R1006	entails Arg1:E1023 Arg2:E1020
+R1007	is-a Arg1:E1024 Arg2:E1025
+R1008	has-property Arg1:E1024 Arg2:E1026
+A1003	Negated E1048
+A1004	Emphasized E1058
+R1011	is-a Arg1:E1061 Arg2:E1062
+R1012	is-a Arg1:E1061 Arg2:E1063
+A1006	Negated E1075
+R1014	causes Arg1:E1089 Arg2:E1088
+R1015	causes Arg1:E1090 Arg2:E1088
+R1016	causes Arg1:E1091 Arg2:E1088
+A1007	Uncertain E1087
+A1008	Uncertain E1096
+A1009	Uncertain E1098
+A1010	Emphasized E1123
+R1017	has-property Arg1:E1121 Arg2:E1122
+A1017	Uncertain E1187
+R1023	entails Arg1:E1190 Arg2:E1187
+A1019	Emphasized E1204
+A1020	Uncertain E1204
+R1024	entails Arg1:E1207 Arg2:E1204
+R1025	is-a Arg1:E1212 Arg2:E1209
+R1026	is-a Arg1:E1213 Arg2:E1209
+R1027	is-a Arg1:E1214 Arg2:E1209
+R1029	is-a Arg1:E1223 Arg2:E1221
+R1030	is-a Arg1:E1224 Arg2:E1221
+A1023	Diminished E1224
+A1025	Uncertain E1226
+A1024	Diminished E1227
+A1026	Uncertain E1227
+R49	causes Arg1:E1053 Arg2:E1057
+R50	entails Arg1:E1052 Arg2:E1053
+R51	is-a Arg1:E268 Arg2:E1162
+R52	causes Arg1:E1195 Arg2:E1197
+R53	causes Arg1:E1195 Arg2:E1203
+R54	entails Arg1:E1220 Arg2:E1216
+A22	Uncertain E1216
+R55	has-property Arg1:E1225 Arg2:E1226
+A23	Diminished E1226
+A21	Uncertain E265
+A1	Emphasized E1147
+A2	Uncertain E1212
+A3	Uncertain E1213
+A4	Uncertain E1214
+A6	Negated E1220
