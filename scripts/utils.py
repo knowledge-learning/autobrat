@@ -26,18 +26,18 @@ class Keyphrase:
 
         for i, c in enumerate(self.text):
             if c == " ":
-                spans.append(start+i)
-                spans.append(start+i+1)
+                spans.append(start + i)
+                spans.append(start + i + 1)
 
         spans.append(end)
-        self.spans = [(spans[i],spans[i+1]) for i in range(0, len(spans), 2)]
+        self.spans = [(spans[i], spans[i + 1]) for i in range(0, len(spans), 2)]
 
-    def clone(self, sentence) -> 'Keyphrase':
+    def clone(self, sentence) -> "Keyphrase":
         return Keyphrase(sentence, self.label, self.id, self.spans)
 
     @property
     def text(self):
-        return " ".join(self.sentence.text[s:e] for (s,e) in self.spans)
+        return " ".join(self.sentence.text[s:e] for (s, e) in self.spans)
 
     def __repr__(self):
         return "Keyphrase(text=%r, label=%r, id=%r)" % (self.text, self.label, self.id)
@@ -50,7 +50,7 @@ class Relation:
         self.destination = destination
         self.label = label
 
-    def clone(self, sentence) -> 'Relation':
+    def clone(self, sentence) -> "Relation":
         return Relation(sentence, self.origin, self.destination, self.label)
 
     @property
@@ -62,12 +62,16 @@ class Relation:
         return self.sentence.find_keyphrase(id=self.destination)
 
     class _Unk:
-        text = 'UNK'
+        text = "UNK"
 
     def __repr__(self):
         from_phrase = (self.from_phrase or Relation._Unk()).text
         to_phrase = (self.to_phrase or Relation._Unk()).text
-        return "Relation(from=%r, to=%r, label=%r)" % (from_phrase, to_phrase, self.label)
+        return "Relation(from=%r, to=%r, label=%r)" % (
+            from_phrase,
+            to_phrase,
+            self.label,
+        )
 
 
 class Sentence:
@@ -76,7 +80,7 @@ class Sentence:
         self.keyphrases: List[Keyphrase] = []
         self.relations: List[Relation] = []
 
-    def clone(self, shallow=False) -> 'Sentence':
+    def clone(self, shallow=False) -> "Sentence":
         s = Sentence(self.text)
         s.keyphrases = [k if shallow else k.clone(s) for k in self.keyphrases]
         s.relations = [r if shallow else r.clone(s) for r in self.relations]
@@ -123,10 +127,16 @@ class Sentence:
 
             for relation in self.relations:
                 if relation.origin in rest_ids:
-                    print("Changing %r origin from %s to %s" % (relation, relation.origin, first.id))
+                    print(
+                        "Changing %r origin from %s to %s"
+                        % (relation, relation.origin, first.id)
+                    )
                     relation.origin = first.id
                 if relation.destination in rest_ids:
-                    print("Changing %r destination from %s to %s" % (relation, relation.destination, first.id))
+                    print(
+                        "Changing %r destination from %s to %s"
+                        % (relation, relation.destination, first.id)
+                    )
                     relation.destination = first.id
 
             for keyp in rest:
@@ -138,7 +148,7 @@ class Sentence:
         for r in self.relations:
             dup_relations[(r.label, r.origin, r.destination)].append(r)
 
-        return { k:v for k,v in dup_relations.items() if len(v) > 1}
+        return {k: v for k, v in dup_relations.items() if len(v) > 1}
 
     def remove_dup_relations(self):
         new_relations = {}
@@ -186,24 +196,32 @@ class Sentence:
         return None
 
     def sort(self):
-        self.keyphrases.sort(key=lambda k: tuple([s for s,e in k.spans] + [e for s,e in k.spans]))
+        self.keyphrases.sort(
+            key=lambda k: tuple([s for s, e in k.spans] + [e for s, e in k.spans])
+        )
 
     def __len__(self):
         return len(self.text)
 
     def __repr__(self):
-        return "Sentence(text=%r, keyphrases=%r, relations=%r)" % (self.text, self.keyphrases, self.relations)
+        return "Sentence(text=%r, keyphrases=%r, relations=%r)" % (
+            self.text,
+            self.keyphrases,
+            self.relations,
+        )
 
     @staticmethod
-    def load(finput) -> 'List[Sentence]':
-        return [Sentence(s.strip()) for s in finput.open(encoding='utf8').readlines() if s]
+    def load(finput) -> "List[Sentence]":
+        return [
+            Sentence(s.strip()) for s in finput.open(encoding="utf8").readlines() if s
+        ]
 
 
 class Collection:
     def __init__(self, sentences=None):
-        self.sentences : 'List[Sentence]' = sentences or []
+        self.sentences: "List[Sentence]" = sentences or []
 
-    def clone(self) -> 'Collection':
+    def clone(self) -> "Collection":
         return Collection([s.clone() for s in self.sentences])
 
     def __len__(self):
@@ -215,50 +233,69 @@ class Collection:
         for s in self.sentences:
             next_id = s.fix_ids(next_id)
 
-    def filter(self, keyphrase=(lambda k: True), relation=(lambda r: True)) -> 'Collection':
+    def filter(
+        self, keyphrase=(lambda k: True), relation=(lambda r: True)
+    ) -> "Collection":
         sentences = []
         for sentence in self.sentences:
             s = Sentence(sentence.text)
-            s.keyphrases = [ k.clone(s) for k in sentence.keyphrases if keyphrase(k)]
-            s.relations = [ r.clone(s) for r in sentence.relations if keyphrase(r.from_phrase) and keyphrase(r.to_phrase) and relation(r)]
+            s.keyphrases = [k.clone(s) for k in sentence.keyphrases if keyphrase(k)]
+            s.relations = [
+                r.clone(s)
+                for r in sentence.relations
+                if keyphrase(r.from_phrase) and keyphrase(r.to_phrase) and relation(r)
+            ]
             sentences.append(s)
         return Collection(sentences)
-    
-    def filter_keyphrase(self, labels) -> 'Collection':
+
+    def filter_keyphrase(self, labels) -> "Collection":
         return self.filter(keyphrase=lambda k: k.label in labels)
 
-    def filter_relation(self, labels) -> 'Collection':
+    def filter_relation(self, labels) -> "Collection":
         return self.filter(relation=lambda r: r.label in labels)
 
     def dump(self, finput, skip_empty_sentences=True):
         self.fix_ids()
 
-        input_file = finput.open('w', encoding='utf8')
-        output_a_file = (finput.parent / ('output_a_' + finput.name.split("_")[1])).open('w', encoding='utf8')
-        output_b_file = (finput.parent / ('output_b_' + finput.name.split("_")[1])).open('w', encoding='utf8')
+        input_file = finput.open("w", encoding="utf8")
+        output_a_file = (
+            finput.parent / ("output_a_" + finput.name.split("_")[1])
+        ).open("w", encoding="utf8")
+        output_b_file = (
+            finput.parent / ("output_b_" + finput.name.split("_")[1])
+        ).open("w", encoding="utf8")
 
         shift = 0
 
         for sentence in self.sentences:
-            if not sentence.keyphrases and not sentence.relations and skip_empty_sentences:
+            if (
+                not sentence.keyphrases
+                and not sentence.relations
+                and skip_empty_sentences
+            ):
                 continue
 
             input_file.write("{}\n".format(sentence.text))
 
             for keyphrase in sentence.keyphrases:
-                output_a_file.write("{0}\t{1}\t{2}\t{3}\n".format(
-                    keyphrase.id,
-                    ";".join("{} {}".format(start+shift, end+shift) for start,end in keyphrase.spans),
-                    keyphrase.label,
-                    keyphrase.text
-                ))
+                output_a_file.write(
+                    "{0}\t{1}\t{2}\t{3}\n".format(
+                        keyphrase.id,
+                        ";".join(
+                            "{} {}".format(start + shift, end + shift)
+                            for start, end in keyphrase.spans
+                        ),
+                        keyphrase.label,
+                        keyphrase.text,
+                    )
+                )
 
             for relation in sentence.relations:
-                output_b_file.write("{0}\t{1}\t{2}\n".format(
-                    relation.label,
-                    relation.origin,
-                    relation.destination
-                ))
+                output_b_file.write(
+                    "{0}\t{1}\t{2}\n".format(
+                        relation.label, relation.origin, relation.destination
+                    )
+                )
 
             shift += len(sentence) + 1
 
@@ -266,83 +303,93 @@ class Collection:
         self.fix_ids()
 
         def encode(label, num, rel):
-            return '{0}{1}:E{2}'.format(
-                label,
-                num if num else '',
-                rel.destination
-            )
+            return "{0}{1}:E{2}".format(label, num if num else "", rel.destination)
 
         rid = 0
         shift = 0
-        ann_file = finput.open('w', encoding='utf8')
+        ann_file = finput.open("w", encoding="utf8")
 
         for sentence in self.sentences:
-            if not sentence.keyphrases and not sentence.relations and skip_empty_sentences:
+            if (
+                not sentence.keyphrases
+                and not sentence.relations
+                and skip_empty_sentences
+            ):
                 continue
-            
+
             relations_from = defaultdict(lambda: defaultdict(list))
             standalone = []
             for relation in sentence.relations:
-                if relation.label in ['is-a', 'same-as', 'has-property', \
-                                      'part-of', 'causes', 'entails']:
+                if relation.label in [
+                    "is-a",
+                    "same-as",
+                    "has-property",
+                    "part-of",
+                    "causes",
+                    "entails",
+                ]:
                     standalone.append(relation)
                 else:
                     relations_from[relation.origin][relation.label].append(relation)
 
             for keyphrase in sentence.keyphrases:
-                ann_file.write("T{0}\t{1} {2}\t{3}\n".format(
-                    keyphrase.id,
-                    keyphrase.label,
-                    ";".join("{} {}".format(start+shift, end+shift) for start,end in keyphrase.spans),
-                    keyphrase.text
-                ))
+                ann_file.write(
+                    "T{0}\t{1} {2}\t{3}\n".format(
+                        keyphrase.id,
+                        keyphrase.label,
+                        ";".join(
+                            "{} {}".format(start + shift, end + shift)
+                            for start, end in keyphrase.spans
+                        ),
+                        keyphrase.text,
+                    )
+                )
 
                 labels = []
                 for label, rels in relations_from[keyphrase.id].items():
                     for i, rel in enumerate(rels):
                         labels.append(encode(label, i, rel))
 
-                ann_file.write("E{0}\t{1}:T{2} {3}\n".format(
-                    keyphrase.id,
-                    keyphrase.label,
-                    keyphrase.id,
-                    " ".join(labels),   
-                ))
-                
+                ann_file.write(
+                    "E{0}\t{1}:T{2} {3}\n".format(
+                        keyphrase.id, keyphrase.label, keyphrase.id, " ".join(labels),
+                    )
+                )
+
             for relation in standalone:
-                if relation.label == 'same-as':
-                    ann_file.write('*\tsame-as E{0} E{1}\n'.format(
-                        relation.origin,
-                        relation.destination
-                    ))
+                if relation.label == "same-as":
+                    ann_file.write(
+                        "*\tsame-as E{0} E{1}\n".format(
+                            relation.origin, relation.destination
+                        )
+                    )
                 else:
-                    ann_file.write("R{0}\t{1} Arg1:E{2} Arg2:E{3}\n".format(
-                        rid,
-                        relation.label,
-                        relation.origin,
-                        relation.destination
-                    ))
+                    ann_file.write(
+                        "R{0}\t{1} Arg1:E{2} Arg2:E{3}\n".format(
+                            rid, relation.label, relation.origin, relation.destination
+                        )
+                    )
                     rid += 1
 
             shift += len(sentence) + 1
 
     def load_input(self, finput):
-        sentences = [s.strip() for s in finput.open(encoding='utf8').readlines() if s]
+        sentences = [s.strip() for s in finput.open(encoding="utf8").readlines() if s]
         sentences_obj = [Sentence(text) for text in sentences]
         self.sentences.extend(sentences_obj)
 
     def load_keyphrases(self, finput):
         self.load_input(finput)
 
-        input_a_file = finput.parent / ('output_a_' + finput.name.split("_")[1])
+        input_a_file = finput.parent / ("output_a_" + finput.name.split("_")[1])
 
         sentences_length = [len(s.text) for s in self.sentences]
-        for i in range(1,len(sentences_length)):
-            sentences_length[i] += (sentences_length[i-1] + 1)
+        for i in range(1, len(sentences_length)):
+            sentences_length[i] += sentences_length[i - 1] + 1
 
         sentence_by_id = {}
 
-        for line in input_a_file.open(encoding='utf8').readlines():
+        for line in input_a_file.open(encoding="utf8").readlines():
             lid, spans, label, _ = line.strip().split("\t")
             lid = int(lid)
 
@@ -353,10 +400,14 @@ class Collection:
             i = bisect.bisect(sentences_length, spans[0][0])
             # correct the annotation spans
             if i > 0:
-                spans = [(start - sentences_length[i-1] - 1,
-                          end - sentences_length[i-1] - 1)
-                          for start,end in spans]
-                spans.sort(key=lambda t:t[0])
+                spans = [
+                    (
+                        start - sentences_length[i - 1] - 1,
+                        end - sentences_length[i - 1] - 1,
+                    )
+                    for start, end in spans
+                ]
+                spans.sort(key=lambda t: t[0])
             # store the annotation in the corresponding sentence
             the_sentence = self.sentences[i]
             keyphrase = Keyphrase(the_sentence, label, lid, spans)
@@ -369,33 +420,36 @@ class Collection:
 
         return sentence_by_id
 
-
-    def load(self, finput) -> 'Collection':
-        input_b_file = finput.parent / ('output_b_' + finput.name.split("_")[1])
+    def load(self, finput) -> "Collection":
+        input_b_file = finput.parent / ("output_b_" + finput.name.split("_")[1])
 
         sentence_by_id = self.load_keyphrases(finput)
 
-        for line in input_b_file.open(encoding='utf8').readlines():
+        for line in input_b_file.open(encoding="utf8").readlines():
             label, src, dst = line.strip().split("\t")
             src, dst = int(src), int(dst)
 
             the_sentence = sentence_by_id[src]
 
             if the_sentence != sentence_by_id[dst]:
-                warnings.warn("In file '%s' relation '%s' between %i and %i crosses sentence boundaries and has been ignored." % (finput, label, src, dst))
+                warnings.warn(
+                    "In file '%s' relation '%s' between %i and %i crosses sentence boundaries and has been ignored."
+                    % (finput, label, src, dst)
+                )
                 continue
 
             assert sentence_by_id[dst] == the_sentence
 
-            the_sentence.relations.append(Relation(the_sentence, src, dst, label.lower()))
+            the_sentence.relations.append(
+                Relation(the_sentence, src, dst, label.lower())
+            )
 
         return self
 
-
-    def load_ann(self, finput) -> 'Collection':
-        ann_file = finput.parent / (finput.name[:-3] + 'ann')
-        text = finput.open(encoding='utf8').read()
-        sentences = [s for s in text.split('\n') if s]
+    def load_ann(self, finput) -> "Collection":
+        ann_file = finput.parent / (finput.name[:-3] + "ann")
+        text = finput.open(encoding="utf8").read()
+        sentences = [s for s in text.split("\n") if s]
 
         self._parse_ann(sentences, ann_file)
 
@@ -404,8 +458,8 @@ class Collection:
     def _parse_ann(self, sentences, ann_file):
         sentences_length = [len(s) for s in sentences]
 
-        for i in range(1,len(sentences_length)):
-            sentences_length[i] += (sentences_length[i-1] + 1)
+        for i in range(1, len(sentences_length)):
+            sentences_length[i] += sentences_length[i - 1] + 1
 
         sentences_obj = [Sentence(text) for text in sentences]
         sentence_by_id = {}
@@ -414,12 +468,12 @@ class Collection:
         events = []
         relations = []
 
-        for line in ann_file.open(encoding='utf8'):
-            if line.startswith('T'):
+        for line in ann_file.open(encoding="utf8"):
+            if line.startswith("T"):
                 entities.append(line)
-            elif line.startswith('E'):
+            elif line.startswith("E"):
                 events.append(line)
-            elif line.startswith('R') or line.startswith('*'):
+            elif line.startswith("R") or line.startswith("*"):
                 relations.append(line)
 
         # find all keyphrases
@@ -434,10 +488,14 @@ class Collection:
             i = bisect.bisect(sentences_length, spans[0][0])
             # correct the annotation spans
             if i > 0:
-                spans = [(start - sentences_length[i-1] - 1,
-                          end - sentences_length[i-1] - 1)
-                          for start,end in spans]
-                spans.sort(key=lambda t:t[0])
+                spans = [
+                    (
+                        start - sentences_length[i - 1] - 1,
+                        end - sentences_length[i - 1] - 1,
+                    )
+                    for start, end in spans
+                ]
+                spans.sort(key=lambda t: t[0])
             # store the annotation in the corresponding sentence
             the_sentence = sentences_obj[i]
             keyphrase = Keyphrase(the_sentence, label, lid, spans)
@@ -465,19 +523,21 @@ class Collection:
 
             for p in parts[1:]:
                 rel_label, dst_id = p.split(":")
-                rel_label = result = ''.join([i for i in rel_label if not i.isdigit()])
+                rel_label = result = "".join([i for i in rel_label if not i.isdigit()])
                 dst_id = event_mapping.get(dst_id, int(dst_id[1:]))
 
                 assert the_sentence == sentence_by_id[dst_id]
                 # and store it
-                the_sentence.relations.append(Relation(the_sentence, src_id, dst_id, rel_label.lower()))
+                the_sentence.relations.append(
+                    Relation(the_sentence, src_id, dst_id, rel_label.lower())
+                )
 
         for relation_line in relations:
             _, content = relation_line.strip().split("\t")
             content = content.split()
             typ, content = content[0], content[1:]
 
-            if typ == 'same-as':
+            if typ == "same-as":
                 src_id = content[0]
                 src_id = event_mapping.get(src_id, int(src_id[1:]))
                 the_sentence = sentence_by_id[src_id]
@@ -486,7 +546,9 @@ class Collection:
                     dst_id = event_mapping.get(dst_id, int(dst_id[1:]))
 
                     assert the_sentence == sentence_by_id[dst_id]
-                    the_sentence.relations.append(Relation(the_sentence, src_id, dst_id, typ.lower()))
+                    the_sentence.relations.append(
+                        Relation(the_sentence, src_id, dst_id, typ.lower())
+                    )
 
             else:
                 src_id = content[0].split(":")[1]
@@ -497,16 +559,19 @@ class Collection:
                 dst_id = event_mapping.get(dst_id, int(dst_id[1:]))
 
                 assert the_sentence == sentence_by_id[dst_id]
-                the_sentence.relations.append(Relation(the_sentence, src_id, dst_id, typ.lower()))
+                the_sentence.relations.append(
+                    Relation(the_sentence, src_id, dst_id, typ.lower())
+                )
 
         for s in sentences_obj:
             s.sort()
 
         self.sentences.extend(sentences_obj)
 
+
 class DisjointSet:
     def __init__(self, *items):
-        self.nodes = { x: DisjointNode(x) for x in items }
+        self.nodes = {x: DisjointNode(x) for x in items}
 
     def merge(self, items):
         items = (self.nodes[x] for x in items)
@@ -519,11 +584,14 @@ class DisjointSet:
 
     @property
     def representatives(self):
-        return { n.representative for n in self.nodes.values() }
+        return {n.representative for n in self.nodes.values()}
 
     @property
     def groups(self):
-        return [[n for n in self.nodes.values() if n.representative == r] for r in self.representatives]
+        return [
+            [n for n in self.nodes.values() if n.representative == r]
+            for r in self.representatives
+        ]
 
     def __len__(self):
         return len(self.representatives)
@@ -539,6 +607,7 @@ class DisjointSet:
 
     def __repr__(self):
         return str(self)
+
 
 class DisjointNode:
     def __init__(self, value):
