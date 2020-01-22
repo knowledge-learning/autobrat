@@ -1,6 +1,5 @@
 # coding: utf8
 
-import fire
 import sys
 import bisect
 
@@ -10,13 +9,18 @@ def offset(id):
 
 
 class EntityAnnotation:
-    def __init__(self, line):
-        id, mid, text = line.strip().split('\t')
+    def __init__(self, id, typ, spans, text):
         self.id = id
-        typ, spans = mid.split(' ', 1)
         self.type = typ
-        self.spans = [tuple(s.split()) for s in spans.split(';')]
+        self.spans = spans
         self.text = text
+    
+    @staticmethod
+    def parse(line):
+        id, mid, text = line.strip().split('\t')
+        typ, spans = mid.split(' ', 1)
+        spans = [tuple(s.split()) for s in spans.split(';')]
+        return EntityAnnotation(id, typ, spans, text)
 
     def __repr__(self):
         return "<Entity(id=%r, type=%r, spans=%r, text=%r)>" % (self.id, self.type, self.spans, self.text)
@@ -29,12 +33,18 @@ class EntityAnnotation:
         return "%s\t%s %s\t%s" % (self.id, self.type, spans, self.text)
 
 class RelationAnnotation:
-    def __init__(self, line):
-        id, typ, arg1, arg2 = line.strip().split()
+    def __init__(self, id, typ, arg1, arg2):
         self.id = id
         self.type = typ
-        self.arg1 = arg1.split(':')[1]
-        self.arg2 = arg2.split(':')[1]
+        self.arg1 = arg1
+        self.arg2 = arg2
+
+    @staticmethod
+    def parse(line):
+        id, typ, arg1, arg2 = line.strip().split()
+        arg1 = arg1.split(':')[1]
+        arg2 = arg2.split(':')[1]
+        return RelationAnnotation(id, typ, arg1, arg2)
 
     def offset_id(self):
         self.arg1 = offset(self.arg1)
@@ -50,12 +60,18 @@ class RelationAnnotation:
 class SameAsAnnotation:
     total = 0
 
-    def __init__(self, line):
+    def __init__(self, id, typ, args):
+        self.id = id
+        self.type = typ
+        self.args = args
+
+    @staticmethod
+    def parse(line):
         SameAsAnnotation.total += 1
         typ, args = line[1:].strip().split(' ', 1)
-        self.id = '*%d' % SameAsAnnotation.total
-        self.type = typ
-        self.args = args.split()
+        id = '*%d' % SameAsAnnotation.total
+        args = args.split()
+        return SameAsAnnotation(id, typ, args)
 
     def offset_id(self):
         self.args = [offset(arg) for arg in self.args]
@@ -67,16 +83,20 @@ class SameAsAnnotation:
         return "*\t%s %s" % (self.type, " ".join(self.args))
 
 class EventAnnotation:
-    def __init__(self, line):
-        id, mid = line.strip().split('\t')
+    def __init__(self, id, typ, ref, args):
         self.id = id
+        self.type = typ
+        self.ref = ref
+        self.args = args
+
+    @staticmethod
+    def parse(line):
+        id, mid = line.strip().split('\t')
         args = mid.split()
         typ, ref = args[0].split(':')
         args = args[1:]
-
-        self.type = typ
-        self.ref = ref
-        self.args = { arg.split(':')[0] : arg.split(':')[1] for arg in args }
+        args = { arg.split(':')[0] : arg.split(':')[1] for arg in args }
+        return EventAnnotation(id, typ, ref, args)
 
     def offset_id(self):
         self.ref = offset(self.ref)
@@ -93,11 +113,15 @@ class EventAnnotation:
         return "%s\t%s:%s %s" % (self.id, self.type, self.ref, spans)
 
 class AttributeAnnotation:
-    def __init__(self, line):
-        id, typ, ref = line.strip().split()
+    def __init__(self, id, typ, ref):
         self.id = id
         self.type = typ
         self.ref = ref
+
+    @staticmethod
+    def parse(line):
+        id, typ, ref = line.strip().split()
+        return AttributeAnnotation(id, typ, ref)
 
     def offset_id(self):
         self.ref = offset(self.ref)
@@ -209,19 +233,19 @@ class AnnFile:
 
     def _parse(self, line):
         if line.startswith('T'):
-            return EntityAnnotation(line)
+            return EntityAnnotation.parse(line)
 
         if line.startswith('R'):
-            return RelationAnnotation(line)
+            return RelationAnnotation.parse(line)
 
         if line.startswith('*'):
-            return SameAsAnnotation(line)
+            return SameAsAnnotation.parse(line)
 
         if line.startswith('E'):
-            return EventAnnotation(line)
+            return EventAnnotation.parse(line)
 
         if line.startswith('A'):
-            return AttributeAnnotation(line)
+            return AttributeAnnotation.parse(line)
 
         if line.startswith('#'):
             return None
@@ -278,4 +302,5 @@ def to_review(order:str):
 
 
 if __name__ == "__main__":
+    import fire
     fire.Fire()
