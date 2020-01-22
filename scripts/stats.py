@@ -1,3 +1,5 @@
+# coding: utf8
+
 from pathlib import Path
 
 from scripts.agreement import load_corpus

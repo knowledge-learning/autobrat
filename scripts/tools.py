@@ -1,7 +1,7 @@
 # coding: utf8
 
-import sys
 import bisect
+import sys
 
 
 def offset(id):

@@ -1,6 +1,8 @@
-from pathlib import Path
 import argparse
+from pathlib import Path
+
 from scripts.agreement import main as agreement_main
+
 from .score import (
     CORRECT_A,
     CORRECT_B,

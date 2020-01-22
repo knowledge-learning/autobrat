@@ -1,10 +1,9 @@
 # coding: utf8
 
 import bisect
-import re
 import collections
+import re
 import warnings
-
 from collections import defaultdict
 from typing import List
 
