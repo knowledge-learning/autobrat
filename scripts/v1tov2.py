@@ -102,6 +102,8 @@ def transform_file(input_txt: Path, output_txt: Path):
     content = "\n".join(x.as_brat() for x in transformed.annotations)
     output_ann.write_text(content, encoding="utf8")
 
+    output_txt.write_text(input_txt.read_text(encoding="utf8"), encoding="utf8")
+
 
 def transform_directory(input_path: Path, output_path: Path):
     for pack in input_path.iterdir():
