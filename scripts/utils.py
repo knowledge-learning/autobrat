@@ -5,7 +5,13 @@ import collections
 import re
 import warnings
 from collections import defaultdict
+from pathlib import Path
 from typing import List
+
+from scripts.tools import AnnFile, EntityAnnotation, RelationAnnotation
+
+# TODO: add atributes
+# TODO: check dependencies to what was removed
 
 
 class Keyphrase:
@@ -41,6 +47,16 @@ class Keyphrase:
     def __repr__(self):
         return "Keyphrase(text=%r, label=%r, id=%r)" % (self.text, self.label, self.id)
 
+    def as_ann(self, shift):
+        return "T{0}\t{1} {2}\t{3}\n".format(
+            self.id,
+            self.label,
+            ";".join(
+                "{} {}".format(start + shift, end + shift) for start, end in self.spans
+            ),
+            self.text,
+        )
+
 
 class Relation:
     def __init__(self, sentence, origin, destination, label):
@@ -71,6 +87,14 @@ class Relation:
             to_phrase,
             self.label,
         )
+
+    def as_ann(self, shift):
+        if self.label == "same-as":
+            return "*\tsame-as E{0} E{1}\n".format(self.origin, self.destination)
+        else:
+            return "R{0}\t{1} Arg1:E{2} Arg2:E{3}\n".format(
+                shift, self.label, self.origin, self.destination
+            )
 
 
 class Sentence:
@@ -212,7 +236,9 @@ class Sentence:
     @staticmethod
     def load(finput) -> "List[Sentence]":
         return [
-            Sentence(s.strip()) for s in finput.open(encoding="utf8").readlines() if s
+            Sentence(s.strip())
+            for s in finput.read_text(encoding="utf8").splitlines()
+            if s
         ]
 
 
@@ -256,316 +282,103 @@ class Collection:
     def dump(self, finput, skip_empty_sentences=True):
         self.fix_ids()
 
-        input_file = finput.open("w", encoding="utf8")
-        output_a_file = (
-            finput.parent / ("output_a_" + finput.name.split("_")[1])
-        ).open("w", encoding="utf8")
-        output_b_file = (
-            finput.parent / ("output_b_" + finput.name.split("_")[1])
-        ).open("w", encoding="utf8")
-
-        shift = 0
-
-        for sentence in self.sentences:
-            if (
-                not sentence.keyphrases
-                and not sentence.relations
-                and skip_empty_sentences
-            ):
-                continue
-
-            input_file.write("{}\n".format(sentence.text))
-
-            for keyphrase in sentence.keyphrases:
-                output_a_file.write(
-                    "{0}\t{1}\t{2}\t{3}\n".format(
-                        keyphrase.id,
-                        ";".join(
-                            "{} {}".format(start + shift, end + shift)
-                            for start, end in keyphrase.spans
-                        ),
-                        keyphrase.label,
-                        keyphrase.text,
-                    )
-                )
-
-            for relation in sentence.relations:
-                output_b_file.write(
-                    "{0}\t{1}\t{2}\n".format(
-                        relation.label, relation.origin, relation.destination
-                    )
-                )
-
-            shift += len(sentence) + 1
-
-    def dump_ann(self, finput, skip_empty_sentences=True):
-        self.fix_ids()
-
-        def encode(label, num, rel):
-            return "{0}{1}:E{2}".format(label, num if num else "", rel.destination)
-
         rid = 0
         shift = 0
-        ann_file = finput.open("w", encoding="utf8")
+        with finput.open("w", encoding="utf8") as ann_file:
+            for sentence in self.sentences:
+                if (
+                    skip_empty_sentences
+                    and not sentence.keyphrases
+                    and not sentence.relations
+                ):
+                    continue
 
-        for sentence in self.sentences:
-            if (
-                not sentence.keyphrases
-                and not sentence.relations
-                and skip_empty_sentences
-            ):
-                continue
+                for keyphrase in sentence.keyphrases:
+                    ann_file.write(keyphrase.as_ann(shift))
 
-            relations_from = defaultdict(lambda: defaultdict(list))
-            standalone = []
-            for relation in sentence.relations:
-                if relation.label in [
-                    "is-a",
-                    "same-as",
-                    "has-property",
-                    "part-of",
-                    "causes",
-                    "entails",
-                ]:
-                    standalone.append(relation)
-                else:
-                    relations_from[relation.origin][relation.label].append(relation)
+                for relation in sentence.relations:
+                    ann_file.write(relation.as_ann(rid))
+                    if relation.label != "same-as":
+                        rid += 1
 
-            for keyphrase in sentence.keyphrases:
-                ann_file.write(
-                    "T{0}\t{1} {2}\t{3}\n".format(
-                        keyphrase.id,
-                        keyphrase.label,
-                        ";".join(
-                            "{} {}".format(start + shift, end + shift)
-                            for start, end in keyphrase.spans
-                        ),
-                        keyphrase.text,
-                    )
+                shift += len(sentence) + 1
+
+    def _load_input(self, finput: Path) -> List[Sentence]:
+        sentences = Sentence.load(finput)
+        self.sentences.extend(sentences)
+        return sentences
+
+    def _load_ann(self, finput: Path) -> AnnFile:
+        ann_path: Path = finput.parent / (finput.stem + ".ann")
+        return AnnFile().load(ann_path)
+
+    def _get_relative_ann(self, spans, sentences_length: List[int]) -> int:
+        # find the sentence where this annotation is
+        i = bisect.bisect(sentences_length, spans[0][0])
+        # correct the annotation spans
+        if i > 0:
+            spans = [
+                (
+                    start - sentences_length[i - 1] - 1,
+                    end - sentences_length[i - 1] - 1,
                 )
+                for start, end in spans
+            ]
+            spans.sort(key=lambda t: t[0])
+        return i, spans
 
-                labels = []
-                for label, rels in relations_from[keyphrase.id].items():
-                    for i, rel in enumerate(rels):
-                        labels.append(encode(label, i, rel))
+    def load(self, finput: Path) -> "Collection":
+        sentences = self._load_input(finput)
+        ann_file = self._load_ann(finput)
 
-                ann_file.write(
-                    "E{0}\t{1}:T{2} {3}\n".format(
-                        keyphrase.id, keyphrase.label, keyphrase.id, " ".join(labels),
-                    )
-                )
-
-            for relation in standalone:
-                if relation.label == "same-as":
-                    ann_file.write(
-                        "*\tsame-as E{0} E{1}\n".format(
-                            relation.origin, relation.destination
-                        )
-                    )
-                else:
-                    ann_file.write(
-                        "R{0}\t{1} Arg1:E{2} Arg2:E{3}\n".format(
-                            rid, relation.label, relation.origin, relation.destination
-                        )
-                    )
-                    rid += 1
-
-            shift += len(sentence) + 1
-
-    def load_input(self, finput):
-        sentences = [s.strip() for s in finput.open(encoding="utf8").readlines() if s]
-        sentences_obj = [Sentence(text) for text in sentences]
-        self.sentences.extend(sentences_obj)
-
-    def load_keyphrases(self, finput):
-        self.load_input(finput)
-
-        input_a_file = finput.parent / ("output_a_" + finput.name.split("_")[1])
-
-        sentences_length = [len(s.text) for s in self.sentences]
-        for i in range(1, len(sentences_length)):
-            sentences_length[i] += sentences_length[i - 1] + 1
-
-        sentence_by_id = {}
-
-        for line in input_a_file.open(encoding="utf8").readlines():
-            lid, spans, label, _ = line.strip().split("\t")
-            lid = int(lid)
-
-            spans = [s.split() for s in spans.split(";")]
-            spans = [(int(start), int(end)) for start, end in spans]
-
-            # find the sentence where this annotation is
-            i = bisect.bisect(sentences_length, spans[0][0])
-            # correct the annotation spans
-            if i > 0:
-                spans = [
-                    (
-                        start - sentences_length[i - 1] - 1,
-                        end - sentences_length[i - 1] - 1,
-                    )
-                    for start, end in spans
-                ]
-                spans.sort(key=lambda t: t[0])
-            # store the annotation in the corresponding sentence
-            the_sentence = self.sentences[i]
-            keyphrase = Keyphrase(the_sentence, label, lid, spans)
-            the_sentence.keyphrases.append(keyphrase)
-
-            if len(keyphrase.spans) == 1:
-                keyphrase.split()
-
-            sentence_by_id[lid] = the_sentence
-
-        return sentence_by_id
-
-    def load(self, finput) -> "Collection":
-        input_b_file = finput.parent / ("output_b_" + finput.name.split("_")[1])
-
-        sentence_by_id = self.load_keyphrases(finput)
-
-        for line in input_b_file.open(encoding="utf8").readlines():
-            label, src, dst = line.strip().split("\t")
-            src, dst = int(src), int(dst)
-
-            the_sentence = sentence_by_id[src]
-
-            if the_sentence != sentence_by_id[dst]:
+        def add_relation(source_id, destination_id, ann_type, id_to_sentence):
+            source_sentence = id_to_sentence[source_id]
+            destination_sentence = id_to_sentence[destination_id]
+            if source_sentence != destination_sentence:
                 warnings.warn(
                     "In file '%s' relation '%s' between %i and %i crosses sentence boundaries and has been ignored."
-                    % (finput, label, src, dst)
+                    % (finput, ann_type, source_id, destination_id)
                 )
-                continue
+            else:
+                relation = Relation(
+                    source_sentence,
+                    int(source_id[1:]),
+                    int(destination_id[1:]),
+                    ann_type,
+                )
+                sentence.relations.append(relation)
 
-            assert sentence_by_id[dst] == the_sentence
-
-            the_sentence.relations.append(
-                Relation(the_sentence, src, dst, label.lower())
-            )
-
-        return self
-
-    def load_ann(self, finput) -> "Collection":
-        ann_file = finput.parent / (finput.name[:-3] + "ann")
-        text = finput.open(encoding="utf8").read()
-        sentences = [s for s in text.split("\n") if s]
-
-        self._parse_ann(sentences, ann_file)
-
-        return self
-
-    def _parse_ann(self, sentences, ann_file):
         sentences_length = [len(s) for s in sentences]
-
         for i in range(1, len(sentences_length)):
             sentences_length[i] += sentences_length[i - 1] + 1
 
-        sentences_obj = [Sentence(text) for text in sentences]
-        sentence_by_id = {}
+        id_to_sentence = {}
+        for ann in ann_file.annotations:
+            if isinstance(ann, EntityAnnotation):
+                tid = int(ann.id[1:])
+                spans = [(int(start), int(end)) for start, end in ann.spans]
+                sid, spans = self._get_relative_ann(spans, sentences_length)
+                sentence = sentences[sid]
+                keyphrase = Keyphrase(sentence, ann.label, tid, spans)
+                sentence.keyphrases.append(keyphrase)
+                if len(keyphrase.spans) == 1:
+                    keyphrase.split()
+                id_to_sentence[ann.id] = sentence
 
-        entities = []
-        events = []
-        relations = []
+        for ann in ann_file.annotations:
+            if isinstance(ann, RelationAnnotation):
+                if ann.type != "same-as":
+                    add_relation(ann.arg1, ann.arg2, ann.type, id_to_sentence)
+                else:
+                    source = ann.args[0]
+                    for destination in ann.args[1:]:
+                        add_relation(source, destination, ann.type, id_to_sentence)
 
-        for line in ann_file.open(encoding="utf8"):
-            if line.startswith("T"):
-                entities.append(line)
-            elif line.startswith("E"):
-                events.append(line)
-            elif line.startswith("R") or line.startswith("*"):
-                relations.append(line)
-
-        # find all keyphrases
-        for entity_line in entities:
-            lid, content, text = entity_line.split("\t")
-            lid = int(lid[1:])
-            label, spans = content.split(" ", 1)
-            spans = [s.split() for s in spans.split(";")]
-            spans = [(int(start), int(end)) for start, end in spans]
-
-            # find the sentence where this annotation is
-            i = bisect.bisect(sentences_length, spans[0][0])
-            # correct the annotation spans
-            if i > 0:
-                spans = [
-                    (
-                        start - sentences_length[i - 1] - 1,
-                        end - sentences_length[i - 1] - 1,
-                    )
-                    for start, end in spans
-                ]
-                spans.sort(key=lambda t: t[0])
-            # store the annotation in the corresponding sentence
-            the_sentence = sentences_obj[i]
-            keyphrase = Keyphrase(the_sentence, label, lid, spans)
-            the_sentence.keyphrases.append(keyphrase)
-
-            if len(keyphrase.spans) == 1:
-                keyphrase.split()
-
-            sentence_by_id[lid] = the_sentence
-
-        event_mapping = {}
-
-        for event_line in events:
-            from_id, content = event_line.split("\t")
-            to_id = int(content.split()[0].split(":")[1][1:])
-            event_mapping[from_id] = to_id
-
-        for event_line in events:
-            from_id, content = event_line.split("\t")
-            parts = content.split()
-            src_id = parts[0].split(":")[1]
-            src_id = event_mapping.get(src_id, int(src_id[1:]))
-            # find the sentence this relation belongs to
-            the_sentence = sentence_by_id[src_id]
-
-            for p in parts[1:]:
-                rel_label, dst_id = p.split(":")
-                rel_label = result = "".join([i for i in rel_label if not i.isdigit()])
-                dst_id = event_mapping.get(dst_id, int(dst_id[1:]))
-
-                assert the_sentence == sentence_by_id[dst_id]
-                # and store it
-                the_sentence.relations.append(
-                    Relation(the_sentence, src_id, dst_id, rel_label.lower())
-                )
-
-        for relation_line in relations:
-            _, content = relation_line.strip().split("\t")
-            content = content.split()
-            typ, content = content[0], content[1:]
-
-            if typ == "same-as":
-                src_id = content[0]
-                src_id = event_mapping.get(src_id, int(src_id[1:]))
-                the_sentence = sentence_by_id[src_id]
-
-                for dst_id in content[1:]:
-                    dst_id = event_mapping.get(dst_id, int(dst_id[1:]))
-
-                    assert the_sentence == sentence_by_id[dst_id]
-                    the_sentence.relations.append(
-                        Relation(the_sentence, src_id, dst_id, typ.lower())
-                    )
-
-            else:
-                src_id = content[0].split(":")[1]
-                src_id = event_mapping.get(src_id, int(src_id[1:]))
-                the_sentence = sentence_by_id[src_id]
-
-                dst_id = content[1].split(":")[1]
-                dst_id = event_mapping.get(dst_id, int(dst_id[1:]))
-
-                assert the_sentence == sentence_by_id[dst_id]
-                the_sentence.relations.append(
-                    Relation(the_sentence, src_id, dst_id, typ.lower())
-                )
-
-        for s in sentences_obj:
+        for s in sentence:
             s.sort()
 
-        self.sentences.extend(sentences_obj)
+        self.sentences.extend(sentences)
+        return self
 
 
 class DisjointSet:
