@@ -95,9 +95,9 @@ class Relation:
 
     def as_ann(self, shift):
         if self.label == "same-as":
-            return "*\tsame-as E{0} E{1}\n".format(self.origin, self.destination)
+            return "*\tsame-as T{0} T{1}\n".format(self.origin, self.destination)
         else:
-            return "R{0}\t{1} Arg1:E{2} Arg2:E{3}\n".format(
+            return "R{0}\t{1} Arg1:T{2} Arg2:T{3}\n".format(
                 shift, self.label, self.origin, self.destination
             )
 
@@ -364,7 +364,7 @@ class Collection:
                 spans = [(int(start), int(end)) for start, end in ann.spans]
                 sid, spans = self._get_relative_ann(spans, sentences_length)
                 sentence = sentences[sid]
-                keyphrase = Keyphrase(sentence, ann.label, tid, spans)
+                keyphrase = Keyphrase(sentence, ann.type, tid, spans)
                 sentence.keyphrases.append(keyphrase)
                 if len(keyphrase.spans) == 1:
                     keyphrase.split()
