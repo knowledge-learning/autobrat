@@ -5,7 +5,7 @@ import warnings
 from collections import OrderedDict
 from pathlib import Path
 
-from .utils import Collection, DisjointSet
+from scripts.utils import Collection, DisjointSet
 
 CORRECT_A = "correct_A"
 INCORRECT_A = "incorrect_A"

@@ -2,7 +2,7 @@ import argparse
 from collections import OrderedDict
 from pathlib import Path
 
-from .score import (
+from scripts.score import (
     CORRECT_A,
     CORRECT_B,
     INCORRECT_A,
@@ -14,7 +14,7 @@ from .score import (
     match_keyphrases,
     match_relations,
 )
-from .utils import Collection, DisjointSet
+from scripts.utils import Collection, DisjointSet
 
 
 def partial_score(keyphrase1, keyphrase2):

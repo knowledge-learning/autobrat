@@ -3,7 +3,7 @@ from pathlib import Path
 
 from scripts.agreement import main as agreement_main
 
-from .score import (
+from scripts.score import (
     CORRECT_A,
     CORRECT_B,
     INCORRECT_A,
