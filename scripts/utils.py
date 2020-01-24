@@ -10,6 +10,7 @@ from typing import List
 
 from scripts.tools import (
     AnnFile,
+    AttributeAnnotation,
     EntityAnnotation,
     RelationAnnotation,
     SameAsAnnotation,
@@ -20,10 +21,11 @@ from scripts.tools import (
 
 class Keyphrase:
     def __init__(self, sentence, label, id, spans):
-        self.sentence = sentence
+        self.sentence: Sentence = sentence
         self.label = label
         self.id = id
         self.spans = spans
+        self.attributes: List[Attribute] = []
 
     def split(self):
         if len(self.spans) > 1:
@@ -41,15 +43,22 @@ class Keyphrase:
         spans.append(end)
         self.spans = [(spans[i], spans[i + 1]) for i in range(0, len(spans), 2)]
 
-    def clone(self, sentence) -> "Keyphrase":
-        return Keyphrase(sentence, self.label, self.id, self.spans)
+    def clone(self, sentence, shallow=False) -> "Keyphrase":
+        k = Keyphrase(sentence, self.label, self.id, self.spans)
+        k.attributes = [a if shallow else a.clone(k) for a in self.attributes]
+        return k
 
     @property
     def text(self):
         return " ".join(self.sentence.text[s:e] for (s, e) in self.spans)
 
     def __repr__(self):
-        return "Keyphrase(text=%r, label=%r, id=%r)" % (self.text, self.label, self.id)
+        return "Keyphrase(text=%r, label=%r, id=%r, attr=%r)" % (
+            self.text,
+            self.label,
+            self.id,
+            self.attributes,
+        )
 
     def as_ann(self, shift):
         return "T{0}\t{1} {2}\t{3}\n".format(
@@ -99,6 +108,21 @@ class Relation:
             return "R{0}\t{1} Arg1:T{2} Arg2:T{3}\n".format(
                 shift, self.label, self.origin, self.destination
             )
+
+
+class Attribute:
+    def __init__(self, keyphrase: Keyphrase, label):
+        self.keyphrase = keyphrase
+        self.label = label
+
+    def clone(self, keyphrase) -> "Attribute":
+        return Attribute(keyphrase, self.label)
+
+    def __repr__(self):
+        return "Attribute(label=%r)" % (self.label,)
+
+    def as_ann(self, shift):
+        return "A{0}\t{1} T{2}\n".format(shift, self.label, self.keyphrase.id)
 
 
 class Sentence:
@@ -286,6 +310,7 @@ class Collection:
     def dump(self, finput, skip_empty_sentences=True):
         self.fix_ids()
 
+        aid = 0
         rid = 0
         shift = 0
         with finput.open("w", encoding="utf8") as ann_file:
@@ -299,6 +324,10 @@ class Collection:
 
                 for keyphrase in sentence.keyphrases:
                     ann_file.write(keyphrase.as_ann(shift))
+
+                    for attribute in keyphrase.attributes:
+                        ann_file.write(attribute.as_ann(aid))
+                        aid += 1
 
                 for relation in sentence.relations:
                     ann_file.write(relation.as_ann(rid))
@@ -335,9 +364,9 @@ class Collection:
         sentences = self._load_input(finput)
         ann_file = self._load_ann(finput)
 
-        def add_relation(source_id, destination_id, ann_type, id_to_sentence):
-            source_sentence = id_to_sentence[source_id]
-            destination_sentence = id_to_sentence[destination_id]
+        def add_relation(source_id, destination_id, ann_type, id_to_keyphrase):
+            source_sentence = id_to_keyphrase[source_id].sentence
+            destination_sentence = id_to_keyphrase[destination_id].sentence
             if source_sentence != destination_sentence:
                 warnings.warn(
                     "In file '%s' relation '%s' between %i and %i crosses sentence boundaries and has been ignored."
@@ -356,7 +385,7 @@ class Collection:
         for i in range(1, len(sentences_length)):
             sentences_length[i] += sentences_length[i - 1] + 1
 
-        id_to_sentence = {}
+        id_to_keyphrase = {}
         for ann in ann_file.annotations:
             if isinstance(ann, EntityAnnotation):
                 tid = int(ann.id[1:])
@@ -367,16 +396,21 @@ class Collection:
                 sentence.keyphrases.append(keyphrase)
                 if len(keyphrase.spans) == 1:
                     keyphrase.split()
-                id_to_sentence[ann.id] = sentence
+                id_to_keyphrase[ann.id] = keyphrase
 
         for ann in ann_file.annotations:
             if isinstance(ann, RelationAnnotation):
-                add_relation(ann.arg1, ann.arg2, ann.type, id_to_sentence)
+                add_relation(ann.arg1, ann.arg2, ann.type, id_to_keyphrase)
 
             elif isinstance(ann, SameAsAnnotation):
                 source = ann.args[0]
                 for destination in ann.args[1:]:
-                    add_relation(source, destination, ann.type, id_to_sentence)
+                    add_relation(source, destination, ann.type, id_to_keyphrase)
+
+            elif isinstance(ann, AttributeAnnotation):
+                keyphrase = id_to_keyphrase[ann.ref]
+                attribute = Attribute(keyphrase, ann.type)
+                keyphrase.attributes.append(attribute)
 
             elif not isinstance(ann, EntityAnnotation):
                 warnings.warn(
