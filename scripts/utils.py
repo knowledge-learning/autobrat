@@ -346,7 +346,7 @@ class Collection:
                     int(destination_id[1:]),
                     ann_type,
                 )
-                sentence.relations.append(relation)
+                source_sentence.relations.append(relation)
 
         sentences_length = [len(s) for s in sentences]
         for i in range(1, len(sentences_length)):
@@ -376,8 +376,6 @@ class Collection:
 
         for s in sentence:
             s.sort()
-
-        self.sentences.extend(sentences)
         return self
 
 
