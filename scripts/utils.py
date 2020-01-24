@@ -16,7 +16,6 @@ from scripts.tools import (
 )
 
 # TODO: add atributes
-# TODO: check dependencies to what was removed
 
 
 class Keyphrase:

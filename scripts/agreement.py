@@ -98,7 +98,7 @@ def load_corpus(anns_path: Path, clean=True) -> Collection:
 
     for file in sorted(anns_path.iterdir()):
         if file.name.endswith(".txt"):
-            collection.load_ann(file)
+            collection.load(file)
 
     if clean:
         for s in collection.sentences:
