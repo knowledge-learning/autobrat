@@ -8,7 +8,12 @@ from collections import defaultdict
 from pathlib import Path
 from typing import List
 
-from scripts.tools import AnnFile, EntityAnnotation, RelationAnnotation
+from scripts.tools import (
+    AnnFile,
+    EntityAnnotation,
+    RelationAnnotation,
+    SameAsAnnotation,
+)
 
 # TODO: add atributes
 # TODO: check dependencies to what was removed
@@ -367,14 +372,19 @@ class Collection:
 
         for ann in ann_file.annotations:
             if isinstance(ann, RelationAnnotation):
-                if ann.type != "same-as":
-                    add_relation(ann.arg1, ann.arg2, ann.type, id_to_sentence)
-                else:
-                    source = ann.args[0]
-                    for destination in ann.args[1:]:
-                        add_relation(source, destination, ann.type, id_to_sentence)
+                add_relation(ann.arg1, ann.arg2, ann.type, id_to_sentence)
 
-        for s in sentence:
+            elif isinstance(ann, SameAsAnnotation):
+                source = ann.args[0]
+                for destination in ann.args[1:]:
+                    add_relation(source, destination, ann.type, id_to_sentence)
+
+            elif not isinstance(ann, EntityAnnotation):
+                warnings.warn(
+                    "In file '%s' annotation '%s' has been ignored." % (finput, ann)
+                )
+
+        for s in sentences:
             s.sort()
         return self
 
