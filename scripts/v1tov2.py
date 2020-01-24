@@ -1,5 +1,7 @@
 # coding: utf8
 
+# > The process is straightforward now that Collection supports `legacy`
+
 import argparse
 from pathlib import Path
 

@@ -12,11 +12,10 @@ from scripts.tools import (
     AnnFile,
     AttributeAnnotation,
     EntityAnnotation,
+    EventAnnotation,
     RelationAnnotation,
     SameAsAnnotation,
 )
-
-# TODO: add atributes
 
 
 class Keyphrase:
@@ -360,26 +359,35 @@ class Collection:
             spans.sort(key=lambda t: t[0])
         return i, spans
 
-    def load(self, finput: Path) -> "Collection":
+    def load(self, finput: Path, legacy=True) -> "Collection":
         sentences = self._load_input(finput)
         ann_file = self._load_ann(finput)
 
         def add_relation(source_id, destination_id, ann_type, id_to_keyphrase):
-            source_sentence = id_to_keyphrase[source_id].sentence
-            destination_sentence = id_to_keyphrase[destination_id].sentence
-            if source_sentence != destination_sentence:
+            source = id_to_keyphrase[source_id]
+            destination = id_to_keyphrase[destination_id]
+            if source.sentence != destination.sentence:
                 warnings.warn(
                     "In file '%s' relation '%s' between %i and %i crosses sentence boundaries and has been ignored."
                     % (finput, ann_type, source_id, destination_id)
                 )
             else:
                 relation = Relation(
-                    source_sentence,
-                    int(source_id[1:]),
-                    int(destination_id[1:]),
-                    ann_type,
+                    source.sentence, source.id, destination.id, ann_type
                 )
-                source_sentence.relations.append(relation)
+                source.sentence.relations.append(relation)
+
+        def legacy_load(ann_file, sentences, id_to_keyphrase):
+            for ann in ann_file.annotations:
+                if isinstance(ann, EventAnnotation):
+                    id_to_keyphrase[ann.id] = id_to_keyphrase[ann.ref]
+
+            for ann in ann_file.annotations:
+                if not isinstance(ann, EventAnnotation):
+                    continue
+                for label, destination in ann.args.items():
+                    label = "".join(i for i in label if not i.isdigit()).lower()
+                    add_relation(ann.ref, destination, label, id_to_keyphrase)
 
         sentences_length = [len(s) for s in sentences]
         for i in range(1, len(sentences_length)):
@@ -398,6 +406,9 @@ class Collection:
                     keyphrase.split()
                 id_to_keyphrase[ann.id] = keyphrase
 
+        if legacy:
+            legacy_load(ann_file, sentences, id_to_keyphrase)
+
         for ann in ann_file.annotations:
             if isinstance(ann, RelationAnnotation):
                 add_relation(ann.arg1, ann.arg2, ann.type, id_to_keyphrase)
@@ -412,7 +423,7 @@ class Collection:
                 attribute = Attribute(keyphrase, ann.type)
                 keyphrase.attributes.append(attribute)
 
-            elif not isinstance(ann, EntityAnnotation):
+            elif not legacy and not isinstance(ann, EntityAnnotation):
                 warnings.warn(
                     "In file '%s' annotation '%s' has been ignored." % (finput, ann)
                 )
