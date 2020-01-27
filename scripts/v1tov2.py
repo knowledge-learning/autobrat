@@ -110,7 +110,7 @@ def transform_file(input_txt: Path, output_txt: Path):
 
 
 def transform_directory(input_path: Path, output_path: Path):
-    for pack in input_path.iterdir():
+    for pack in sorted(input_path.iterdir()):
         if pack.suffix != ".txt":
             continue
         output = output_path / pack.name
