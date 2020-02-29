@@ -1,0 +1,331 @@
+{
+  "wikinews": [
+    {
+      "pack": 1,
+      "annotators": [
+        {
+          "assigned": "@hiancd",
+          "status": "completed"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 2,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": "@cicr_99",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "pack": 3,
+      "annotators": [
+        {
+          "assigned": "@d_alfaro",
+          "status": "pendindg-revision"
+        },
+        {
+          "assigned": "@u_knothing",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "pack": 4,
+      "annotators": [
+        {
+          "assigned": "@u_knothing",
+          "status": "pending-revision"
+        },
+        {
+          "assigned": "@d_alfaro",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "pack": 5,
+      "annotators": [
+        {
+          "assigned": "@fsadannn",
+          "status": "open"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 6,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 7,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 8,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 9,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 10,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 11,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 12,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 13,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 14,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 15,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    }
+  ],
+  "medline": [
+    {
+      "pack": 1,
+      "annotators": [
+        {
+          "assigned": "@PlayErwan",
+          "status": "open"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 2,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 3,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 4,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 5,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 6,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 7,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 8,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 9,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    },
+    {
+      "pack": 10,
+      "annotators": [
+        {
+          "assigned": null,
+          "status": "empty"
+        },
+        {
+          "assigned": null,
+          "status": "empty"
+        }
+      ]
+    }
+  ]
+}
