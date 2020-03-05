@@ -148,10 +148,44 @@ def coordinate(gold, submit):
         submit.pop()
 
 
+def unstable_coordinating(gold: Collection, submit: Collection):
+    texts = {s.text for s in gold.sentences} & {s.text for s in submit.sentences}
+    copy = texts.copy()
+
+    print(len(gold))
+    print(len(submit))
+
+    gold_sentences = []
+    for s in gold.sentences:
+        if s.text in texts:
+            gold_sentences.append(s)
+            texts.remove(s.text)
+        else:
+            print("Dropped from gold:", s.text)
+
+    assert not texts
+    texts = copy
+
+    submit_sentences = []
+    for s in submit.sentences:
+        if s.text in texts:
+            submit_sentences.append(s)
+            texts.remove(s.text)
+        else:
+            print("Dropped from submit:", s.text)
+
+    assert not texts
+    gold.sentences = sorted(gold_sentences, key=lambda x: x.text)
+    submit.sentences = sorted(submit_sentences, key=lambda x: x.text)
+    print(len(gold))
+    print(len(submit))
+
+
 def main(gold_dir: Path, submit_dir: Path, propagate_error=True):
     gold_collection = load_corpus(gold_dir)
     submit_collection = load_corpus(submit_dir)
     coordinate(gold_collection, submit_collection)
+    # unstable_coordinating(gold_collection, submit_collection)
 
     keyphrases = sorted(
         set(x.label for s in gold_collection.sentences for x in s.keyphrases)
