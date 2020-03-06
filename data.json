@@ -60,8 +60,8 @@
           "status": "open"
         },
         {
-          "assigned": null,
-          "status": "empty"
+          "assigned": "@u_knothing",
+          "status": "open"
         }
       ]
     },
@@ -70,7 +70,7 @@
       "annotators": [
         {
           "assigned": "@u_knothing",
-          "status": "open"
+          "status": "pending-revision"
         },
         {
           "assigned": null,
@@ -82,8 +82,8 @@
       "pack": 7,
       "annotators": [
         {
-          "assigned": null,
-          "status": "empty"
+          "assigned": "@d_alfaro",
+          "status": "open"
         },
         {
           "assigned": null,
