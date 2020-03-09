@@ -50,19 +50,17 @@ T31	Concept 404 407	TOC
 R22	domain Arg1:T30 Arg2:T29	
 R23	arg Arg1:T30 Arg2:T31	
 T32	Action 409 415	tienen
-R24	subject Arg1:T32 Arg2:T29	
-T33	Concept 416 428;429 438;441 453	pensamientos repetidos angustiantes
+T33	Concept 416 428	pensamientos
 T34	Concept 466 476	obsesiones
 R25	target Arg1:T32 Arg2:T33	
 T35	Concept 482 489	tumores
-T36	Concept 509 516;517 523	células extras
-R27	part-of Arg1:T36 Arg2:T35	
+T36	Concept 509 516	células
 T37	Concept 536 546	importante
 T38	Action 547 554	reducir
 T40	Concept 596 604	personas
 R28	has-property Arg1:T38 Arg2:T37	
 *	same-as T33 T34
-T41	Concept 618 622;623 632	peso saludable
+T41	Concept 618 622	peso
 T42	Concept 640 650	importante
 A2	Emphasized T37
 A3	Emphasized T42
@@ -79,16 +77,12 @@ R33	target Arg1:T45 Arg2:T41
 T46	Action 652 658	Indica
 T47	Concept 666 673	corazón
 T48	Action 683 690	bombear
-A4	Negated T48
 T49	Concept 694 700	sangre
-R34	target Arg1:T46 Arg2:T47	
 R35	subject Arg1:T48 Arg2:T47	
 T50	Predicate 707 713	manera
 T51	Predicate 718 725	debería
-R36	arg Arg1:T50 Arg2:T51	
 T52	Concept 738 750	pancreatitis
-T53	Concept 758 769;770 773;774 782	inflamación del páncreas
-R38	is-a Arg1:T52 Arg2:T53	
+T53	Concept 774 782	páncreas
 R39	target Arg1:T48 Arg2:T49	
 T55	Concept 794 804	nutrientes
 T56	Concept 817 826	proteínas
@@ -127,7 +121,6 @@ T75	Concept 1064 1071	cerebro
 T76	Concept 1079 1085	cabeza
 T77	Action 1042 1053	Suministran
 T74	Concept 1054 1060	sangre
-T78	Predicate 1091 1101	frecuencia
 T79	Concept 1106 1117	tratamiento
 T81	Concept 1126 1133	cirugía
 T82	Concept 1139 1146	caderas
@@ -136,19 +129,14 @@ A7	Emphasized T83
 R55	has-property Arg1:T82 Arg2:T83	
 T84	Concept 1168 1174	húmeda
 T85	Concept 1189 1194;1195 1205	vasos sanguíneos
-T86	Predicate 1206 1215	anormales
-R56	domain Arg1:T86 Arg2:T85	
+T86	Concept 1206 1215	anormales
 T87	Action 1216 1222	crecen
-T88	Concept 1223 1227;1231 1237	bajo mácula
-R57	subject Arg1:T87 Arg2:T85	
+T88	Concept 1231 1237	mácula
 T89	Action 1239 1246	Produce
 T90	Concept 1247 1255	hormonas
-R60	target Arg1:T89 Arg2:T90	
 T91	Action 1260 1266	ayudan
 T92	Concept 1270 1276	cuerpo
 T93	Action 1279 1288	funcionar
-T94	Predicate 1289 1300	normalmente
-R61	arg Arg1:T94 Arg2:T93	
 R62	subject Arg1:T93 Arg2:T92	
 R63	subject Arg1:T91 Arg2:T90	
 R64	target Arg1:T91 Arg2:T93	
@@ -158,22 +146,15 @@ T96	Concept 1317 1323	sangre
 T97	Action 1330 1337	mostrar
 A8	Uncertain T97
 T98	Concept 1347 1355	diabetes
-R58	in-place Arg1:T87 Arg2:T88	
-R66	target Arg1:T87 Arg2:T85	
-R59	is-a Arg1:T87 Arg2:T84	
 R67	arg Arg1:T95 Arg2:T96	
 R68	subject Arg1:T97 Arg2:T95	
-T99	Action 1341 1346	tiene
-R69	target Arg1:T97 Arg2:T99	
-R70	target Arg1:T99 Arg2:T98	
 T100	Concept 1361 1368	tumores
 T101	Concept 1380 1390	cancerosos
 T102	Concept 1393 1401	benignos
-T103	Concept 1361 1368	tumores
 T104	Concept 1422 1428;1429 1431;1432 1437	estado de ánimo
 T105	Action 1445 1456	incrementar
 T106	Predicate 1461 1468	riesgos
-T109	Concept 1472 1484;1489 1496	enfermedades corazón
+T109	Concept 1472 1484	enfermedades
 T107	Concept 1498 1506	diabetes
 T108	Concept 1535 1542	persona
 T110	Concept 1515 1527	enfermedades
@@ -181,10 +162,6 @@ T111	Predicate 1407 1417	trastornos
 R71	arg Arg1:T111 Arg2:T104	
 R72	subject Arg1:T105 Arg2:T111	
 R73	target Arg1:T105 Arg2:T106	
-R74	arg Arg1:T106 Arg2:T109	
-R75	arg Arg1:T106 Arg2:T107	
-R76	arg Arg1:T106 Arg2:T110	
-R77	in-context Arg1:T106 Arg2:T108	
 R78	subject Arg1:T71 Arg2:T70	
 R79	target Arg1:T71 Arg2:T70	
 R80	part-of Arg1:T72 Arg2:T70	
@@ -193,26 +170,16 @@ R81	domain Arg1:T73 Arg2:T70
 T112	Concept 1565 1576	coronavirus
 T113	Predicate 1557 1564	algunos
 R82	domain Arg1:T113 Arg2:T112	
-T114	Action 1584 1590	causar
-A9	Uncertain T114
 T115	Concept 1591 1603	enfermedades
 T116	Concept 1604 1610	graves
-R83	has-property Arg1:T115 Arg2:T116	
-R84	subject Arg1:T114 Arg2:T112	
-R85	target Arg1:T114 Arg2:T115	
 T117	Concept 1615 1626	encefalitis
-T54	Concept 1634 1645;1646 1649;1650 1657	inflamación del cerebro
-R37	is-a Arg1:T117 Arg2:T54	
+T54	Concept 1650 1657	cerebro
 T118	Concept 1662 1667	gente
-T119	Predicate 1672 1678	padece
+T119	Action 1672 1678	padece
 T120	Concept 1682 1687	apnea
 T121	Action 1694 1700	roncar
 T122	Concept 1705 1711	fuerte
 A10	Emphasized T122
-R86	arg Arg1:T119 Arg2:T120	
-R87	domain Arg1:T119 Arg2:T118	
-R88	subject Arg1:T121 Arg2:T118	
-R89	target Arg1:T121 Arg2:T122	
 A12	Uncertain T121
 T123	Concept 1717 1726	mosquitos
 T124	Concept 1731 1739	insectos
@@ -223,8 +190,6 @@ R92	target Arg1:T125 Arg2:T123
 T126	Concept 1761 1766	mundo
 R93	in-place Arg1:T125 Arg2:T126	
 T127	Concept 1772 1784	tratamientos
-T128	Predicate 1785 1793	posibles
-R94	domain Arg1:T128 Arg2:T127	
 T130	Concept 1835 1844	medicinas
 T131	Concept 1847 1859	radioterapia
 T132	Concept 1803 1810	cirugía
@@ -233,8 +198,7 @@ T134	Concept 1828 1833	tumor
 R95	subject Arg1:T133 Arg2:T132	
 R96	target Arg1:T133 Arg2:T134	
 T135	Concept 1864 1868	niño
-T136	Predicate 1869 1879	maltratado
-R101	domain Arg1:T136 Arg2:T135	
+T136	Concept 1869 1879	maltratado
 T137	Action 1886 1896	deprimirse
 A11	Uncertain T137
 R102	subject Arg1:T137 Arg2:T135	
@@ -242,12 +206,65 @@ R103	target Arg1:T137 Arg2:T135
 T138	Concept 954 959	cosas
 T139	Predicate 947 953	Varias
 R104	domain Arg1:T139 Arg2:T138	
-R105	subject Arg1:T68 Arg2:T138	
 A13	Uncertain T101
 A14	Uncertain T102
 R12	has-property Arg1:T100 Arg2:T101	
-R13	has-property Arg1:T103 Arg2:T102	
 R53	part-of Arg1:T81 Arg2:T79	
-R54	is-a Arg1:T133 Arg2:T127	
 R97	is-a Arg1:T130 Arg2:T127	
 R98	is-a Arg1:T131 Arg2:T127	
+R24	subject Arg1:T32 Arg2:T30	
+T16	Concept 429 438	repetidos
+T17	Concept 441 453	angustiantes
+R99	in-context Arg1:T33 Arg2:T16	
+R100	in-context Arg1:T33 Arg2:T17	
+R27	part-of Arg1:T36 Arg2:T35	
+T80	Concept 517 523	extras
+R106	in-context Arg1:T36 Arg2:T80	
+T129	Concept 623 632	saludable
+R107	in-context Arg1:T41 Arg2:T129	
+T140	Action 758 769	inflamación
+R38	is-a Arg1:T52 Arg2:T140	
+R108	subject Arg1:T140 Arg2:T53	
+R109	target Arg1:T140 Arg2:T53	
+R34	target Arg1:T46 Arg2:T48	
+A4	Negated T51
+R36	arg Arg1:T50 Arg2:T51	
+R110	arg Arg1:T50 Arg2:T48	
+R105	subject Arg1:T68 Arg2:T139	
+R111	target Arg1:T77 Arg2:T74	
+R112	in-place Arg1:T77 Arg2:T75	
+R113	in-place Arg1:T77 Arg2:T76	
+R59	causes Arg1:T87 Arg2:T84	
+R56	in-context Arg1:T85 Arg2:T86	
+T78	Predicate 1223 1227	bajo
+R57	arg Arg1:T78 Arg2:T88	
+R58	in-place Arg1:T87 Arg2:T78	
+R60	target Arg1:T89 Arg2:T91	
+T94	Concept 1289 1300	normalmente
+R61	in-context Arg1:T93 Arg2:T94	
+R66	target Arg1:T97 Arg2:T98	
+R13	has-property Arg1:T100 Arg2:T102	
+A15	Uncertain T105
+T99	Concept 1489 1496	corazón
+R69	in-context Arg1:T109 Arg2:T99	
+R70	arg Arg1:T106 Arg2:T109	
+R74	is-a Arg1:T107 Arg2:T110	
+R77	in-context Arg1:T105 Arg2:T108	
+T103	Predicate 1461 1468	riesgos
+T141	Predicate 1461 1468	riesgos
+R75	arg Arg1:T141 Arg2:T107	
+R76	arg Arg1:T103 Arg2:T110	
+R114	target Arg1:T105 Arg2:T141	
+R115	target Arg1:T105 Arg2:T103	
+R84	causes Arg1:T113 Arg2:T115	
+R83	in-context Arg1:T115 Arg2:T116	
+R37	subject Arg1:T119 Arg2:T118	
+R85	target Arg1:T119 Arg2:T120	
+R86	subject Arg1:T121 Arg2:T119	
+T114	Action 1634 1645	inflamación
+R87	in-context Arg1:T121 Arg2:T122	
+R88	subject Arg1:T114 Arg2:T54	
+R89	target Arg1:T114 Arg2:T54	
+R116	is-a Arg1:T117 Arg2:T114	
+R54	is-a Arg1:T133 Arg2:T127	
+R94	in-context Arg1:T135 Arg2:T136	

@@ -2,16 +2,12 @@ T1	Concept 4 12	gérmenes
 T2	Concept 28 35	persona
 T3	Concept 38 45	persona
 T4	Action 16 24	propagan
-R1	subject Arg1:T4 Arg2:T2	
 R2	target Arg1:T4 Arg2:T1	
-R3	arg Arg1:T4 Arg2:T3	
 T5	Concept 50 56	sepsis
 T6	Concept 64 74	enfermedad
-T7	Predicate 75 80	grave
-R4	domain Arg1:T7 Arg2:T6	
+T7	Concept 75 80	grave
 T8	Concept 86 94	síntomas
-T9	Predicate 95 106	posteriores
-R6	domain Arg1:T9 Arg2:T8	
+T9	Concept 95 106	posteriores
 T10	Concept 116 119	tos
 T11	Concept 122 127;128 130;131 135	falta de aire
 T12	Concept 151 155	cura
@@ -114,15 +110,12 @@ R38	target Arg1:T47 Arg2:T48
 R39	arg Arg1:T47 Arg2:T46	
 T58	Concept 786 793	líquido
 T59	Action 774 779	Beber
-T60	Predicate 780 785	mucho
-R50	domain Arg1:T60 Arg2:T58	
 R51	target Arg1:T59 Arg2:T58	
 T61	Action 795 804	descansar
 T62	Action 807 812	tomar
 T63	Concept 813 824	analgésicos
 T64	Concept 829 837	aspirina
 A9	Negated T64
-R52	has-property Arg1:T63 Arg2:T64	
 T65	Action 844 850	ayudar
 R53	target Arg1:T62 Arg2:T63	
 R54	subject Arg1:T65 Arg2:T62	
@@ -160,13 +153,10 @@ R68	in-context Arg1:T79 Arg2:T77
 T81	Concept 1038 1044	sangre
 T82	Action 1051 1061	determinar
 A12	Uncertain T82
-T83	Action 1065 1070	tiene
 T84	Concept 1074 1079	virus
 T85	Action 1026 1034	análisis
 R70	target Arg1:T85 Arg2:T81	
 R69	subject Arg1:T82 Arg2:T85	
-R71	target Arg1:T82 Arg2:T83	
-R72	target Arg1:T83 Arg2:T84	
 T86	Concept 1084 1089	sodio
 T87	Concept 1091 1097	calcio
 T88	Concept 1099 1106	potasio
@@ -196,8 +186,7 @@ R84	target Arg1:T99 Arg2:T93
 T100	Action 1232 1240	necesite
 A13	Uncertain T100
 T101	Concept 1245 1250	dieta
-T102	Predicate 1251 1259	especial
-R85	domain Arg1:T102 Arg2:T101	
+T102	Concept 1251 1259	especial
 T103	Action 1265 1272	reducir
 T105	Concept 1288 1295	potasio
 T106	Action 1300 1307	consume
@@ -209,13 +198,11 @@ R89	target Arg1:T100 Arg2:T101
 R90	arg Arg1:T100 Arg2:T103	
 T107	Concept 1323 1330	cirugía
 T108	Action 1337 1343	cerrar
-T109	Predicate 1309 1310;1311 1317	A menudo
 T110	Concept 1347 1352	labio
 T111	Concept 1358 1365	paladar
 R91	subject Arg1:T108 Arg2:T107	
 R92	target Arg1:T108 Arg2:T110	
 R93	target Arg1:T108 Arg2:T111	
-R94	in-context Arg1:T108 Arg2:T109	
 T112	Concept 1370 1375	virus
 T113	Concept 1379 1389	contagioso
 R95	has-property Arg1:T112 Arg2:T113	
@@ -274,10 +261,10 @@ R115	target Arg1:T131 Arg2:T136
 R116	target Arg1:T131 Arg2:T137	
 R117	target Arg1:T131 Arg2:T138	
 R118	target Arg1:T131 Arg2:T139	
-T140	Predicate 1676 1683;1684 1689	Algunas veces
+T140	Predicate 1684 1689	veces
 T141	Concept 1701 1705	bazo
 T142	Action 1712 1722	inflamarse
-R119	in-context Arg1:T142 Arg2:T140	
+R119	in-time Arg1:T142 Arg2:T140	
 R120	subject Arg1:T142 Arg2:T141	
 R121	target Arg1:T142 Arg2:T141	
 T145	Action 1773 1785	diagnosticar
@@ -298,8 +285,25 @@ T151	Concept 1853 1862	adenoides
 T152	Action 1840 1848	extirpar
 R127	subject Arg1:T152 Arg2:T150	
 R128	target Arg1:T152 Arg2:T151	
-R129	is-a Arg1:T149 Arg2:T150	
 T153	Action 1421 1422	a
 R130	target Arg1:T153 Arg2:T115	
 R131	target Arg1:T153 Arg2:T116	
 R132	in-context Arg1:T114 Arg2:T153	
+R85	in-context Arg1:T101 Arg2:T102	
+T83	Action 1065 1070	tiene
+R71	target Arg1:T83 Arg2:T84	
+R72	target Arg1:T82 Arg2:T83	
+T154	Predicate 1676 1683	Algunas
+R133	domain Arg1:T154 Arg2:T140	
+R129	is-a Arg1:T149 Arg2:T152	
+R4	in-context Arg1:T8 Arg2:T9	
+R6	in-context Arg1:T6 Arg2:T7	
+T155	Action 36 37	a
+R1	target Arg1:T155 Arg2:T2	
+R3	target Arg1:T155 Arg2:T3	
+R134	subject Arg1:T4 Arg2:T1	
+R135	in-context Arg1:T4 Arg2:T155	
+A21	Uncertain T65
+R50	in-context Arg1:T63 Arg2:T64	
+A22	Emphasized T58
+A23	Emphasized T108

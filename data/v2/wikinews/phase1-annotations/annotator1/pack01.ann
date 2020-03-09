@@ -88,7 +88,6 @@ R15	is-a Arg1:T72 Arg2:T73
 R16	has-property Arg1:T72 Arg2:T74	
 T75	Concept 157 164	oficial
 T76	Concept 169 180	liberalismo
-R17	in-context Arg1:T75 Arg2:T76	
 T77	Predicate 185 194	tendencia
 T78	Concept 195 214	centro-izquierdista
 R18	arg Arg1:T77 Arg2:T78	
@@ -661,3 +660,4 @@ R318	is-a Arg1:T38 Arg2:T42
 R261	domain Arg1:T303 Arg2:T302	
 R262	arg Arg1:T303 Arg2:T301	
 R263	target Arg1:T300 Arg2:T303	
+R17	domain Arg1:T307 Arg2:T76	

@@ -1,24 +1,24 @@
 {
   "wikinews": [
     {
-      "pack": 1,
+      "pack": "1",
       "annotators": [
         {
           "assigned": "@hiancd",
           "status": "completed"
         },
         {
-          "assigned": null,
-          "status": "empty"
+          "assigned": "@hiancd",
+          "status": "completed"
         }
       ]
     },
     {
-      "pack": 2,
+      "pack": "2",
       "annotators": [
         {
           "assigned": "@hiancd",
-          "status": "open"
+          "status": "completed"
         },
         {
           "assigned": "@cicr_99",
@@ -27,66 +27,66 @@
       ]
     },
     {
-      "pack": 3,
+      "pack": "3",
       "annotators": [
         {
-          "assigned": "@d_alfaro",
-          "status": "pendindg-revision"
+          "assigned": "Dayany Alfaro",
+          "status": "completed"
         },
         {
-          "assigned": "@u_knothing",
-          "status": "pending-revision"
+          "assigned": "Loraine",
+          "status": "completed"
         }
       ]
     },
     {
-      "pack": 4,
+      "pack": "4",
       "annotators": [
         {
-          "assigned": "@u_knothing",
-          "status": "pending-revision"
+          "assigned": "Loraine",
+          "status": "completed"
         },
         {
-          "assigned": "@d_alfaro",
-          "status": "pending-revision"
+          "assigned": "Dayany Alfaro",
+          "status": "completed"
         }
       ]
     },
     {
-      "pack": 5,
+      "pack": "5",
       "annotators": [
         {
           "assigned": "@fsadannn",
-          "status": "open"
+          "status": "completed"
         },
         {
-          "assigned": "@u_knothing",
-          "status": "open"
+          "assigned": "Loraine",
+          "status": "completed"
         }
       ]
     },
     {
-      "pack": 6,
+      "pack": "6",
       "annotators": [
         {
-          "assigned": "@u_knothing",
-          "status": "pending-revision"
+          "assigned": "Loraine",
+          "status": "completed"
         },
         {
-          "assigned": null,
-          "status": "empty"
+          "assigned": "@hiancd",
+          "status": "completed"
         }
       ]
     },
     {
-      "pack": 7,
+      "pack": "7",
       "annotators": [
         {
-          "assigned": "@d_alfaro",
-          "status": "open"
+          "assigned": "Dayany Alfaro",
+          "status": "completed"
         },
         {
-          "assigned": null,
+          "assigned": "@u_knothing",
           "status": "empty"
         }
       ]
@@ -95,11 +95,11 @@
       "pack": 8,
       "annotators": [
         {
-          "assigned": null,
+          "assigned": "@d_alfaro",
           "status": "empty"
         },
         {
-          "assigned": null,
+          "assigned": "@cicr_99",
           "status": "empty"
         }
       ]
@@ -108,7 +108,7 @@
       "pack": 9,
       "annotators": [
         {
-          "assigned": null,
+          "assigned": "@fsadannn",
           "status": "empty"
         },
         {
@@ -198,24 +198,24 @@
   ],
   "medline": [
     {
-      "pack": 1,
+      "pack": "1",
       "annotators": [
         {
           "assigned": "@PlayErwan",
-          "status": "pending-revision"
+          "status": "completed"
         },
         {
-          "assigned": null,
+          "assigned": "@danielvp",
           "status": "empty"
         }
       ]
     },
     {
-      "pack": 2,
+      "pack": "2",
       "annotators": [
         {
           "assigned": "@PlayErwan",
-          "status": "pending-revision"
+          "status": "completed"
         },
         {
           "assigned": null,
@@ -224,11 +224,11 @@
       ]
     },
     {
-      "pack": 3,
+      "pack": "3",
       "annotators": [
         {
           "assigned": "@PlayErwan",
-          "status": "open"
+          "status": "completed"
         },
         {
           "assigned": null,
@@ -237,11 +237,11 @@
       ]
     },
     {
-      "pack": 4,
+      "pack": "4",
       "annotators": [
         {
-          "assigned": null,
-          "status": "empty"
+          "assigned": "@PlayErwan",
+          "status": "completed"
         },
         {
           "assigned": null,
@@ -250,11 +250,11 @@
       ]
     },
     {
-      "pack": 5,
+      "pack": "5",
       "annotators": [
         {
-          "assigned": null,
-          "status": "empty"
+          "assigned": "@PlayErwan",
+          "status": "completed"
         },
         {
           "assigned": null,

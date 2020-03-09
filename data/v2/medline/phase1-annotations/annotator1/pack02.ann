@@ -1,6 +1,5 @@
 T1	Concept 4 12	animales
-T2	Predicate 13 21	salvajes
-R1	domain Arg1:T2 Arg2:T1	
+T2	Concept 13 21	salvajes
 T3	Action 29 33	huir
 A1	Uncertain T3
 T4	Concept 41 49	personas
@@ -32,9 +31,6 @@ R13	subject Arg1:T16 Arg2:T14
 T17	Concept 222 225	ano
 R14	target Arg1:T16 Arg2:T17	
 T18	Concept 250 261	tratamiento
-T19	Predicate 269 276	mayoría
-T20	Concept 284 289	casos
-R15	domain Arg1:T19 Arg2:T20	
 T21	Action 294 302	extirpar
 T22	Concept 306 311	tumor
 R16	target Arg1:T21 Arg2:T22	
@@ -48,38 +44,35 @@ R18	target Arg1:T27 Arg2:T23
 R19	target Arg1:T27 Arg2:T24	
 R20	target Arg1:T27 Arg2:T25	
 R21	target Arg1:T27 Arg2:T26	
-R22	in-context Arg1:T20 Arg2:T18	
 T28	Concept 400 406	lesión
 T29	Concept 412 422	enfermedad
 T30	Concept 429 436	cirugía
 T31	Concept 437 442	seria
 R23	has-property Arg1:T30 Arg2:T31	
 T32	Predicate 385 392	Después
-T35	Concept 447 459	recuperación
+T35	Action 447 459	recuperación
 T36	Concept 470 475	lenta
 A2	Uncertain T36
 T39	Concept 480 485	tumor
 T40	Action 492 498	crecer
 A3	Emphasized T40
-A4	Uncertain T40
 T41	Concept 499 509	lentamente
 R33	subject Arg1:T40 Arg2:T39	
 R34	target Arg1:T40 Arg2:T39	
 R35	in-context Arg1:T40 Arg2:T41	
 T42	Concept 514 523	hepatitis
-T43	Concept 531 542;543 546;547 553	inflamación del hígado
-R36	is-a Arg1:T42 Arg2:T43	
-R25	has-property Arg1:T35 Arg2:T36	
+T43	Concept 547 553	hígado
+R25	in-context Arg1:T35 Arg2:T36	
 T33	Predicate 385 392	Después
 T34	Predicate 385 392	Después
 R24	arg Arg1:T32 Arg2:T28	
 R26	arg Arg1:T34 Arg2:T29	
 R27	arg Arg1:T33 Arg2:T30	
-R29	in-context Arg1:T35 Arg2:T34	
-T37	Concept 447 459	recuperación
-T38	Concept 447 459	recuperación
-R28	in-context Arg1:T38 Arg2:T33	
-R30	in-context Arg1:T37 Arg2:T34	
+R29	in-time Arg1:T35 Arg2:T34	
+T37	Action 447 459	recuperación
+T38	Action 447 459	recuperación
+R28	in-time Arg1:T38 Arg2:T33	
+R30	in-time Arg1:T37 Arg2:T34	
 T44	Concept 559 566	oxiuros
 T45	Action 570 578	propagan
 T46	Concept 583 594	rápidamente
@@ -103,9 +96,9 @@ T53	Concept 685 697	tratamientos
 T54	Concept 707 713	cremas
 T55	Concept 715 724	medicinas
 T56	Concept 727 738	fototerapia
-R42	is-a Arg1:T54 Arg2:T53	
-R43	is-a Arg1:T55 Arg2:T53	
-R44	is-a Arg1:T56 Arg2:T53	
+R42	part-of Arg1:T54 Arg2:T53	
+R43	part-of Arg1:T55 Arg2:T53	
+R44	part-of Arg1:T56 Arg2:T53	
 T57	Concept 744 751	piernas
 T58	Concept 771 777	huesos
 T59	Concept 779 784;785 795	vasos sanguíneos
@@ -191,8 +184,8 @@ A17	Emphasized T95
 R78	has-property Arg1:T94 Arg2:T95	
 T96	Concept 1303 1310	malaria
 T97	Concept 1318 1328	enfermedad
-T98	Predicate 1329 1334	grave
-R80	domain Arg1:T98 Arg2:T97	
+T98	Concept 1329 1334	grave
+R80	in-context Arg1:T97 Arg2:T98	
 T99	Action 1335 1342	causada
 T100	Concept 1350 1358	parásito
 R81	subject Arg1:T100 Arg2:T99	
@@ -219,7 +212,7 @@ R92	subject Arg1:T110 Arg2:T109
 R93	target Arg1:T110 Arg2:T111	
 A18	Uncertain T110
 T112	Concept 1513 1520	benigno
-T113	Concept 1522 1524;1525 1534	no canceroso
+T113	Concept 1525 1534	canceroso
 T114	Concept 1538 1545	maligno
 T115	Concept 1547 1556	canceroso
 *	same-as T112 T113
@@ -253,8 +246,7 @@ T128	Action 1740 1745	Bajar
 T129	Concept 1749 1753	peso
 T130	Action 1755 1762	ingerir
 T131	Concept 1763 1772	alimentos
-T132	Predicate 1773 1783	saludables
-R103	domain Arg1:T132 Arg2:T131	
+T132	Concept 1773 1783	saludables
 T133	Action 1785 1795	mantenerse
 T134	Concept 1796 1802	activo
 T135	Action 1808 1813	fumar
@@ -276,13 +268,10 @@ T140	Action 1878 1886	realizar
 T141	Concept 1887 1894	pruebas
 T142	Action 1899 1907	detecten
 A25	Uncertain T140
-T143	Action 1911 1917	padece
 T144	Concept 1921 1929	arritmia
 R113	subject Arg1:T140 Arg2:T139	
 R114	target Arg1:T140 Arg2:T141	
 R115	subject Arg1:T142 Arg2:T141	
-R116	target Arg1:T142 Arg2:T143	
-R117	target Arg1:T143 Arg2:T144	
 T145	Reference 1931 1936	Estos
 T146	Concept 1946 1952	calcio
 T147	Concept 1954 1961	fósforo
@@ -302,3 +291,14 @@ R79	is-a Arg1:T96 Arg2:T97
 R105	target Arg1:T130 Arg2:T131	
 R89	target Arg1:T107 Arg2:T106	
 R90	arg Arg1:T107 Arg2:T105	
+R103	in-context Arg1:T131 Arg2:T132	
+R1	in-context Arg1:T1 Arg2:T2	
+R125	in-context Arg1:T37 Arg2:T36	
+A26	Emphasized T21
+T19	Action 231 245	diagnosticarlo
+T20	Action 531 542	inflamación
+R15	subject Arg1:T20 Arg2:T43	
+R22	target Arg1:T20 Arg2:T43	
+R36	is-a Arg1:T42 Arg2:T20	
+R116	target Arg1:T142 Arg2:T144	
+A4	Negated T113
