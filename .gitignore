@@ -6,3 +6,5 @@
 to_review.txt
 __pycache__/
 *.pyc
+.python-version
+.vscode/settings.json
