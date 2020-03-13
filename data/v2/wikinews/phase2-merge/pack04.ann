@@ -1,0 +1,1107 @@
+T1	Concept 0 4	Lula
+T2	Concept 33 38	miedo
+R1	in-context Arg1:T1 Arg2:T2
+A1	Negated T2
+T3	Concept 74 79	lugar
+A2	Negated T3
+T4	Concept 84 89	mundo
+R2	in-context Arg1:T3 Arg2:T4
+T5	Action 52 62	afirmación
+R3	subject Arg1:T5 Arg2:T1
+R4	in-place Arg1:T5 Arg2:T3
+T6	Concept 188 199	autoridades
+T7	Concept 204 212	hospital
+T8	Action 213 222	anticipan
+T9	Concept 247 254	aumente
+T10	Concept 239 246	muertos
+R5	in-place Arg1:T6 Arg2:T7
+R6	subject Arg1:T8 Arg2:T6
+R7	in-context Arg1:T10 Arg2:T9
+R8	target Arg1:T8 Arg2:T10
+T11	Concept 348 356	uribismo
+T13	Action 370 378	disperso
+T12	Concept 389 400	movimientos
+T14	Reference 331 335	este
+T15	Concept 336 343	momento
+R11	is-a Arg1:T14 Arg2:T15
+R12	in-time Arg1:T11 Arg2:T14
+T16	Concept 407 413;414 421	Cambio Radical
+T17	Concept 423 431;432 443	Colombia Democrática
+T18	Concept 445 453;454 458	Colombia Viva
+T19	Concept 461 466;467 474	Nuevo Partido
+R13	is-a Arg1:T16 Arg2:T12
+R14	is-a Arg1:T17 Arg2:T12
+R15	is-a Arg1:T18 Arg2:T12
+R16	is-a Arg1:T19 Arg2:T12
+T20	Concept 650 654;655 662	Tres muertos
+T21	Concept 674 684;685 692	quinientos heridos
+T22	Concept 715 730	manifestaciones
+T23	Concept 752 756;757 765	cien personas
+T24	Action 766 776	arrestadas
+T25	Concept 784 791	policía
+R17	target Arg1:T24 Arg2:T23
+R18	subject Arg1:T24 Arg2:T25
+T26	Concept 731 740	populares
+R19	in-context Arg1:T22 Arg2:T26
+T27	Action 700 705	saldo
+R20	subject Arg1:T27 Arg2:T22
+R21	target Arg1:T27 Arg2:T21
+R22	target Arg1:T27 Arg2:T20
+R23	subject Arg1:T27 Arg2:T23
+T28	Concept 940 951	autoridades
+T29	Action 952 963	prohibieron
+T30	Concept 967 974	ingreso
+T31	Concept 978 989	extranjeros
+R24	in-context Arg1:T30 Arg2:T31
+T32	Concept 992 1003	periodistas
+T33	Concept 1009 1013	zona
+R25	subject Arg1:T29 Arg2:T28
+R26	target Arg1:T29 Arg2:T30
+R27	in-context Arg1:T30 Arg2:T32
+R28	in-place Arg1:T30 Arg2:T33
+T34	Concept 1022 1030	testigos
+T35	Concept 1046 1055	situación
+T36	Concept 1059 1064	tensa
+R29	has-property Arg1:T35 Arg2:T36
+T37	Concept 1088 1097	seguridad
+T38	Concept 1131 1137;1138 1147	Juegos Olímpicos
+T39	Concept 1151 1156	Pekín
+R30	in-place Arg1:T38 Arg2:T39
+T40	Concept 1220 1225	Tibet
+T41	Concept 1198 1203;1204 1212	llama olímpica
+T42	Action 1031 1038	afirman
+R31	subject Arg1:T42 Arg2:T34
+R32	target Arg1:T42 Arg2:T35
+T43	Action 1074 1084	compromete
+T44	Concept 1111 1123	inauguración
+R33	target Arg1:T43 Arg2:T37
+R34	in-place Arg1:T37 Arg2:T44
+R35	in-context Arg1:T44 Arg2:T38
+T45	Concept 1529 1532;1533 1540	dos semanas
+T46	Action 1545 1553	desplegó
+T47	Concept 1557 1566	operativo
+T48	Concept 1582 1590	Guerrero
+T49	Concept 1570 1578	búsqueda
+R36	in-context Arg1:T47 Arg2:T49
+R37	target Arg1:T46 Arg2:T47
+R38	in-time Arg1:T46 Arg2:T45
+R39	in-place Arg1:T46 Arg2:T48
+T50	Concept 1737 1741;1742 1749	Juan Montoya
+T51	Concept 1769 1775;1776 1778;1779 1784	Bassil Da Costa
+T52	Concept 1811 1818	Montoya
+T53	Action 1792 1797	cargó
+T54	Concept 1801 1807	cuerpo
+T55	Predicate 1827 1832	antes
+T57	Action 1840 1849	asesinado
+R40	arg Arg1:T55 Arg2:T57
+R41	subject Arg1:T53 Arg2:T51
+R42	in-context Arg1:T54 Arg2:T52
+R43	target Arg1:T53 Arg2:T54
+R44	in-time Arg1:T53 Arg2:T55
+T56	Concept 1689 1697	disparos
+T58	Action 1709 1714	murió
+R45	target Arg1:T58 Arg2:T50
+R46	target Arg1:T58 Arg2:T51
+T59	Concept 1718 1727	dirigente
+T60	Concept 1728 1736	político
+R48	in-context Arg1:T59 Arg2:T60
+R49	has-property Arg1:T50 Arg2:T59
+T61	Concept 1755 1768	universitario
+R50	has-property Arg1:T51 Arg2:T61
+T62	Concept 2050 2056	clubes
+T63	Concept 2057 2070	neozelandeses
+R51	in-context Arg1:T62 Arg2:T63
+T64	Action 2071 2078	amplían
+T65	Concept 2082 2091	liderazgo
+T66	Concept 2094 2096;2097 2104	12 títulos
+T67	Concept 2113 2116	dos
+T68	Concept 2120 2129	Sudáfrica
+T69	Concept 2132 2141	Australia
+R52	subject Arg1:T64 Arg2:T62
+R53	target Arg1:T64 Arg2:T65
+T70	Action 2106 2112	contra
+R54	in-context Arg1:T67 Arg2:T68
+R55	in-context Arg1:T67 Arg2:T69
+R56	target Arg1:T70 Arg2:T67
+R57	subject Arg1:T70 Arg2:T62
+T71	Concept 2270 2275	rutas
+T72	Concept 2279 2287	comercio
+R58	in-context Arg1:T71 Arg2:T72
+T73	Concept 2290 2298	mercados
+T74	Concept 2299 2311	alimentarios
+R59	in-context Arg1:T73 Arg2:T74
+T75	Action 2330 2337	aumento
+T76	Concept 2344 2352	hambruna
+T77	Concept 2392 2401	conflicto
+T78	Concept 2368 2373	zonas
+T79	Action 2383 2388	llega
+R60	subject Arg1:T79 Arg2:T77
+A3	Negated T79
+R61	in-place Arg1:T78 Arg2:T79
+R63	in-place Arg1:T75 Arg2:T78
+T80	Action 2254 2266	interrupción
+R64	target Arg1:T80 Arg2:T71
+R65	target Arg1:T80 Arg2:T73
+R66	causes Arg1:T80 Arg2:T75
+T81	Concept 2573 2583	Afganistán
+T82	Concept 2559 2569	presidente
+T83	Concept 2585 2591;2592 2597	Ashraf Ghani
+T84	Action 2599 2607	calificó
+T85	Concept 2611 2617	ataque
+T86	Concept 2622 2631	espantoso
+T87	Concept 2634 2641	cobarde
+R67	in-context Arg1:T85 Arg2:T86
+R68	in-context Arg1:T85 Arg2:T87
+R69	target Arg1:T84 Arg2:T85
+R70	subject Arg1:T84 Arg2:T82
+R71	in-place Arg1:T82 Arg2:T81
+*	same-as T82 T83
+T88	Concept 2735 2745;2746 2759;2760 2762;2763 2776	Federación Internacional de Automovilismo
+T89	Concept 2778 2781	FIA
+*	same-as T88 T89
+T90	Action 2796 2806	analizando
+T91	Concept 2813 2822	escudería
+T93	Concept 2848 2852	2011
+R73	subject Arg1:T90 Arg2:T88
+T94	Concept 2882 2891	categoría
+T95	Predicate 2875 2881	máxima
+T96	Concept 2896 2909	automovilismo
+T97	Concept 2910 2917	mundial
+R76	in-context Arg1:T96 Arg2:T97
+T98	Action 2858 2868	participar
+R78	in-place Arg1:T98 Arg2:T95
+R79	subject Arg1:T98 Arg2:T91
+T99	Concept 3112 3123	científicos
+T100	Concept 3144 3155	severamente
+T101	Concept 3176 3184	sectores
+T102	Concept 3185 3198	conservadores
+R81	in-context Arg1:T101 Arg2:T102
+A4	Emphasized T101
+T103	Action 3131 3143	cuestionados
+R82	in-context Arg1:T103 Arg2:T100
+T104	Reference 3106 3111	Ambos
+R83	subject Arg1:T103 Arg2:T101
+R84	is-a Arg1:T104 Arg2:T99
+R85	target Arg1:T103 Arg2:T104
+T105	Concept 3298 3311	negociaciones
+T106	Concept 3319 3325	arduas
+R86	in-context Arg1:T105 Arg2:T106
+T107	Concept 3340 3348	Schröder
+T108	Action 3355 3364	expresado
+T109	Concept 3368 3377	intención
+T110	Concept 3384 3391	partido
+T111	Reference 3405 3407	él
+T112	Concept 3411 3420	Canciller
+T113	Concept 3427 3436	coalición
+T114	Concept 3456 3463	partido
+T115	Action 3470 3477	llegado
+T116	Concept 3478 3485	segundo
+T117	Concept 3490 3494;3495 3496	34,2 %
+T118	Concept 3520 3523;3523 3524;3524 3527	CDU / CSU
+T119	Concept 3539 3543;3544 3545	35,2 %
+R87	causes Arg1:T108 Arg2:T105
+R88	subject Arg1:T108 Arg2:T107
+R89	target Arg1:T108 Arg2:T109
+R90	in-context Arg1:T109 Arg2:T110
+R91	has-property Arg1:T111 Arg2:T112
+R92	in-context Arg1:T112 Arg2:T113
+R93	subject Arg1:T115 Arg2:T114
+R94	in-context Arg1:T115 Arg2:T116
+T120	Concept 3829 3838;3839 3847	Francisco Palencia
+T121	Concept 3850 3856;3857 3861	Carlos Vela
+T122	Action 3879 3886	ampliar
+T123	Concept 3890 3898	victoria
+T124	Concept 3899 3907	mexicana
+R97	target Arg1:T122 Arg2:T123
+T125	Concept 3924 3930	equipo
+T126	Concept 3935 3937;3938 3946	El Salvador
+T127	Action 3947 3952	logró
+T128	Concept 3956 3959	gol
+T129	Concept 3980 3987	finales
+T130	Concept 3992 3999	partido
+T131	Concept 3817 3828	futbolistas
+R95	is-a Arg1:T120 Arg2:T131
+R96	is-a Arg1:T121 Arg2:T131
+R98	subject Arg1:T122 Arg2:T121
+R99	subject Arg1:T122 Arg2:T120
+R101	subject Arg1:T127 Arg2:T125
+R102	target Arg1:T127 Arg2:T128
+R103	in-context Arg1:T129 Arg2:T130
+R104	in-time Arg1:T127 Arg2:T129
+R105	in-time Arg1:T122 Arg2:T127
+T132	Concept 4215 4219;4220 4224	seis años
+R106	causes Arg1:T42 Arg2:T43
+T134	Concept 1187 1191	paso
+R108	in-context Arg1:T134 Arg2:T41
+R109	in-place Arg1:T134 Arg2:T40
+T135	Reference 4234 4239	estos
+T136	Concept 4240 4248	residuos
+R110	is-a Arg1:T135 Arg2:T136
+T137	Concept 4303 4311	Sogarisa
+T138	Concept 4324 4333	municipio
+T139	Concept 4334 4341	coruñés
+T140	Concept 4345 4347;4348 4355	As Somozas
+T141	Action 4264 4273	terminado
+T142	Concept 4277 4285	tratarse
+T143	Concept 4292 4298	planta
+R111	target Arg1:T141 Arg2:T142
+R112	in-place Arg1:T142 Arg2:T143
+R113	is-a Arg1:T139 Arg2:T138
+R114	is-a Arg1:T140 Arg2:T138
+A5	Negated T141
+R115	in-place Arg1:T143 Arg2:T138
+R116	in-context Arg1:T143 Arg2:T137
+T144	Predicate 4225 4232	después
+R117	arg Arg1:T144 Arg2:T132
+R118	subject Arg1:T141 Arg2:T135
+R119	in-time Arg1:T141 Arg2:T144
+T145	Concept 4537 4541;4542 4550	tres primeras
+T146	Concept 4551 4566	clasificaciones
+R120	in-context Arg1:T146 Arg2:T145
+T147	Concept 4574 4581	mundial
+T148	Concept 4585 4594	Sudáfrica
+T149	Concept 4595 4599	2010
+R121	in-place Arg1:T147 Arg2:T148
+R122	in-time Arg1:T147 Arg2:T149
+T150	Predicate 4617 4623	cuarto
+T151	Concept 4630 4635	tabla
+T152	Concept 4639 4649	posiciones
+R123	in-context Arg1:T151 Arg2:T152
+T153	Action 4653 4659	medirá
+T154	Concept 4666 4675	repechaje
+T155	Predicate 4683 4689	quinto
+T156	Concept 4697 4710	eliminatorias
+T157	Concept 4717 4725	CONMEBOL
+T158	Action 4567 4570	van
+R124	subject Arg1:T158 Arg2:T146
+R125	in-place Arg1:T158 Arg2:T147
+R126	target Arg1:T158 Arg2:T146
+R127	domain Arg1:T150 Arg2:T151
+R128	target Arg1:T153 Arg2:T150
+R129	in-place Arg1:T153 Arg2:T154
+R130	domain Arg1:T155 Arg2:T156
+R132	target Arg1:T153 Arg2:T155
+R131	in-place Arg1:T156 Arg2:T157
+T159	Concept 4964 4973	rapiñeros
+T160	Concept 4954 4959	caída
+T161	Action 4977 4984	fugaron
+T162	Concept 4990 4995	amigo
+T163	Action 5002 5008	buscar
+T164	Concept 5009 5014	ayuda
+T165	Concept 5021 5026	autos
+T166	Action 5031 5038	pasaban
+T167	Concept 5048 5054	rambla
+T168	Predicate 4942 4947	Luego
+R133	arg Arg1:T168 Arg2:T160
+R134	subject Arg1:T161 Arg2:T159
+R135	in-time Arg1:T161 Arg2:T168
+R136	subject Arg1:T163 Arg2:T162
+R137	target Arg1:T163 Arg2:T164
+R138	in-place Arg1:T163 Arg2:T166
+R139	subject Arg1:T166 Arg2:T165
+T169	Predicate 5039 5044	sobre
+R140	arg Arg1:T169 Arg2:T167
+R141	in-place Arg1:T166 Arg2:T169
+T170	Concept 5173 5180	gigante
+T171	Concept 5184 5192	internet
+T172	Concept 5193 5199	Google
+R142	in-place Arg1:T170 Arg2:T171
+*	same-as T172 T170
+T173	Action 5203 5209	cedido
+T174	Concept 5216 5225	presiones
+T175	Concept 5230 5238;5239 5244	gobierno chino
+T177	Action 5247 5254	anunció
+T178	Action 5259 5268	censurará
+T179	Reference 5269 5276	algunos
+T180	Concept 5284 5293	servicios
+T181	Reference 5296 5303	algunos
+T182	Concept 5304 5312	términos
+T183	Concept 5327 5336	polémicos
+T184	Concept 5342 5347	Pekín
+R143	subject Arg1:T173 Arg2:T172
+R144	target Arg1:T173 Arg2:T174
+R145	in-context Arg1:T174 Arg2:T175
+R146	subject Arg1:T177 Arg2:T172
+R147	target Arg1:T177 Arg2:T178
+R148	is-a Arg1:T179 Arg2:T180
+R149	is-a Arg1:T181 Arg2:T182
+R150	target Arg1:T178 Arg2:T179
+R151	target Arg1:T178 Arg2:T181
+R152	subject Arg1:T178 Arg2:T172
+R153	in-place Arg1:T183 Arg2:T184
+R154	has-property Arg1:T181 Arg2:T183
+R155	has-property Arg1:T179 Arg2:T183
+T176	Concept 5532 5541	Wallabies
+T185	Concept 5546 5555	selección
+T186	Concept 5559 5564	rugby
+T187	Concept 5568 5577	Australia
+R156	in-context Arg1:T185 Arg2:T186
+R157	in-place Arg1:T185 Arg2:T187
+*	same-as T176 T185
+T188	Action 5579 5587	entrarán
+T189	Predicate 5598 5604	recién
+T190	Concept 5611 5618;5619 5626	tercera jornada
+T191	Action 5635 5644	enfrenten
+T192	Concept 5650 5657	locales
+T193	Concept 5664 5674	Springboks
+T194	Concept 5679 5681;5682 5684;5685 5690	24 de julio
+T195	Concept 5697 5704;5705 5712	Suncorp Stadium
+T196	Concept 5716 5724	Brisbane
+T197	Concept 5591 5597	acción
+R158	arg Arg1:T189 Arg2:T190
+R159	in-context Arg1:T191 Arg2:T192
+R160	subject Arg1:T188 Arg2:T176
+R161	in-context Arg1:T188 Arg2:T197
+R162	in-time Arg1:T188 Arg2:T189
+R163	in-time Arg1:T188 Arg2:T191
+R164	target Arg1:T191 Arg2:T193
+R165	subject Arg1:T191 Arg2:T176
+R166	in-time Arg1:T191 Arg2:T194
+R167	in-place Arg1:T191 Arg2:T195
+R168	in-place Arg1:T195 Arg2:T196
+T198	Concept 5924 5931	Murillo
+T199	Action 5932 5937	llamó
+T200	Concept 5941 5946	padre
+T201	Action 5949 5957	declarar
+T202	Concept 5966 5974	fiscalía
+T203	Predicate 5958 5962	ante
+T204	Concept 5983 5992	Solalinde
+T205	Action 5993 5999	aceptó
+T206	Action 6001 6009	advirtió
+T207	Concept 6019 6027	testigos
+T208	Action 6036 6046	informaron
+T209	Concept 6053 6059	muerte
+T210	Concept 6067 6078	estudiantes
+T211	Action 6080 6085	temen
+T212	Concept 6093 6097	vida
+R169	subject Arg1:T199 Arg2:T198
+R170	target Arg1:T199 Arg2:T200
+R171	in-context Arg1:T199 Arg2:T201
+R172	subject Arg1:T201 Arg2:T200
+R173	in-place Arg1:T201 Arg2:T203
+R174	arg Arg1:T203 Arg2:T202
+R175	subject Arg1:T205 Arg2:T204
+R176	subject Arg1:T206 Arg2:T204
+R177	in-context Arg1:T206 Arg2:T207
+R178	in-context Arg1:T208 Arg2:T209
+R179	in-context Arg1:T209 Arg2:T210
+R180	subject Arg1:T208 Arg2:T207
+R181	subject Arg1:T211 Arg2:T207
+R182	in-context Arg1:T211 Arg2:T212
+*	same-as T200 T204
+T213	Concept 6280 6287	réplica
+T214	Concept 6291 6294;6295 6301	2,8 grados
+T216	Action 6305 6312	reportó
+T217	Concept 6319 6323;6324 6327	2:46 EST
+T219	Concept 6329 6334;6335 6338	18:46 UTC
+R185	in-time Arg1:T216 Arg2:T217
+*	same-as T217 T219
+R183	in-context Arg1:T213 Arg2:T214
+R184	target Arg1:T216 Arg2:T213
+T215	Concept 6406 6412	Google
+T218	Concept 6423 6430	versión
+T220	Concept 6431 6439	completa
+T221	Concept 6446 6451	motor
+T222	Concept 6455 6463	búsqueda
+T223	Concept 6467 6472	chino
+T224	Concept 6496 6506	servidores
+T225	Concept 6510 6520	California
+T226	Action 6474 6486	administrado
+R186	has-property Arg1:T215 Arg2:T218
+R187	in-context Arg1:T218 Arg2:T220
+R188	in-context Arg1:T218 Arg2:T221
+R189	in-context Arg1:T221 Arg2:T222
+R190	target Arg1:T226 Arg2:T221
+R191	in-context Arg1:T222 Arg2:T223
+R192	in-place Arg1:T226 Arg2:T224
+R193	in-place Arg1:T224 Arg2:T225
+T227	Action 6651 6658	ocurrió
+T228	Concept 6641 6650	explosión
+T229	Concept 6671 6678	autobús
+T230	Action 6679 6685	pasaba
+T231	Concept 6693 6700	mercado
+T232	Predicate 6701 6706	lleno
+T233	Concept 6710 6715	gente
+T234	Action 6717 6728	infligiendo
+T235	Concept 6729 6734	bajas
+T236	Concept 6741 6752	compradores
+T237	Concept 6755 6766	transeúntes
+T238	Predicate 6735 6740	entre
+T239	Action 6767 6774	dijeron
+T240	Concept 6775 6783	testigos
+R194	arg Arg1:T238 Arg2:T236
+R195	arg Arg1:T238 Arg2:T237
+R196	subject Arg1:T227 Arg2:T228
+R198	subject Arg1:T230 Arg2:T229
+R197	target Arg1:T227 Arg2:T230
+R199	in-place Arg1:T230 Arg2:T231
+R200	in-context Arg1:T231 Arg2:T232
+R201	arg Arg1:T232 Arg2:T233
+R202	subject Arg1:T234 Arg2:T228
+R203	in-context Arg1:T235 Arg2:T238
+R204	subject Arg1:T239 Arg2:T240
+R205	target Arg1:T234 Arg2:T235
+R206	target Arg1:T239 Arg2:T234
+T241	Reference 6932 6936	Esta
+T242	Concept 6937 6941	idea
+T243	Action 6950 6955	visto
+T244	Concept 6956 6961	bueno
+T245	Concept 6965 6970	Arias
+T246	Concept 6972 6978;6979 6984;6985 6987;6988 6990;6991 6994	Premio Nobel de la Paz
+T247	Action 7008 7017	recomendó
+T248	Concept 7026 7034	personas
+T249	Action 7038 7046	realizar
+A6	Negated T249
+T250	Concept 7050 7055	viaje
+T251	Predicate 7020 7025	ambas
+R207	domain Arg1:T251 Arg2:T248
+T252	Concept 7056 7063	todavía
+R208	is-a Arg1:T241 Arg2:T242
+R209	in-context Arg1:T243 Arg2:T244
+A7	Negated T244
+R210	subject Arg1:T243 Arg2:T245
+R211	target Arg1:T243 Arg2:T241
+*	same-as T245 T246
+R212	subject Arg1:T247 Arg2:T245
+R213	target Arg1:T247 Arg2:T251
+R214	in-context Arg1:T247 Arg2:T249
+R215	target Arg1:T249 Arg2:T250
+R216	in-time Arg1:T250 Arg2:T252
+R217	subject Arg1:T249 Arg2:T251
+T253	Concept 7202 7210	personas
+T254	Concept 7226 7236	lesionadas
+T255	Action 7244 7255	trasladadas
+T256	Concept 7261 7269	hospital
+T257	Concept 7270 7277	cercano
+T258	Action 7300 7309	fallecido
+T259	Concept 7313 7321	atacante
+T260	Concept 7336 7337;7338 7346	3 personas
+T261	Predicate 7348 7351	mas
+T262	Concept 7352 7357	tarde
+T263	Action 7369 7377	confirmó
+T264	Action 7381 7394	fallecimiento
+T265	Concept 7402 7408;7409 7416	quinta persona
+T266	Action 7426 7435	ingresaba
+T267	Concept 7439 7447	hospital
+R218	in-context Arg1:T253 Arg2:T254
+R219	target Arg1:T255 Arg2:T253
+R220	in-place Arg1:T255 Arg2:T256
+R221	in-context Arg1:T256 Arg2:T257
+R222	in-place Arg1:T258 Arg2:T256
+R223	subject Arg1:T258 Arg2:T259
+R224	target Arg1:T258 Arg2:T259
+R225	target Arg1:T258 Arg2:T260
+R226	subject Arg1:T258 Arg2:T260
+R227	arg Arg1:T261 Arg2:T262
+R228	target Arg1:T263 Arg2:T264
+R229	in-time Arg1:T263 Arg2:T261
+R230	target Arg1:T264 Arg2:T265
+R231	subject Arg1:T264 Arg2:T265
+R232	in-time Arg1:T264 Arg2:T266
+R233	subject Arg1:T266 Arg2:T265
+R234	target Arg1:T266 Arg2:T267
+R235	in-place Arg1:T264 Arg2:T256
+R236	causes Arg1:T161 Arg2:T163
+R237	in-time Arg1:T158 Arg2:T153
+R238	in-context Arg1:T109 Arg2:T111
+T268	Action 3532 3538	obtuvo
+R239	in-context Arg1:T268 Arg2:T119
+T269	Concept 3510 3519	coalición
+R240	in-context Arg1:T269 Arg2:T118
+R241	subject Arg1:T268 Arg2:T269
+T270	Predicate 3497 3503	detrás
+R242	arg Arg1:T270 Arg2:T269
+R243	in-context Arg1:T116 Arg2:T117
+R244	in-context Arg1:T115 Arg2:T270
+R245	subject Arg1:T115 Arg2:T110
+A8	Diminished T134
+R107	causes Arg1:T134 Arg2:T43
+R246	causes Arg1:T29 Arg2:T34
+R9	subject Arg1:T13 Arg2:T11
+R10	in-place Arg1:T13 Arg2:T12
+T133	Concept 1674 1685	intercambio
+R247	in-context Arg1:T133 Arg2:T56
+R47	causes Arg1:T133 Arg2:T58
+R248	in-context Arg1:T64 Arg2:T66
+R62	target Arg1:T75 Arg2:T76
+T92	Action 2828 2838	suspendida
+R72	target Arg1:T92 Arg2:T91
+R77	in-time Arg1:T92 Arg2:T93
+R74	target Arg1:T90 Arg2:T92
+R75	domain Arg1:T95 Arg2:T94
+R80	in-context Arg1:T94 Arg2:T96
+R100	in-context Arg1:T125 Arg2:T126
+T1001	Concept 92 96	Lula
+T1002	Action 105 111	añadió
+T1003	Action 119 124	tiene
+A1001	Negated T1003
+T1004	Concept 125 130	miedo
+R1001	subject Arg1:T1002 Arg2:T1001
+R1002	target Arg1:T1002 Arg2:T1003
+R1003	subject Arg1:T1003 Arg2:T1001
+R1004	target Arg1:T1003 Arg2:T1004
+T1005	Action 134 139	hacer
+T1006	Reference 140 143	esa
+T1007	Concept 144 154	afirmación
+R1005	is-a Arg1:T1006 Arg2:T1007
+R1006	target Arg1:T1005 Arg2:T1006
+T1008	Predicate 159 165	ningún
+T1009	Concept 166 171	lugar
+T1010	Concept 176 181	mundo
+R1007	arg Arg1:T1008 Arg2:T1009
+R1008	domain Arg1:T1008 Arg2:T1010
+R1009	in-place Arg1:T1005 Arg2:T1008
+R1010	in-context Arg1:T1003 Arg2:T1005
+T1011	Concept 260 271	autoridades
+T1012	Concept 276 284	hospital
+T1013	Action 285 294	anticipan
+T1014	Concept 302 307	cifra
+T1015	Concept 311 318	muertos
+T1016	Action 319 326	aumente
+R1011	in-place Arg1:T1011 Arg2:T1012
+R1012	subject Arg1:T1013 Arg2:T1011
+R1013	in-context Arg1:T1014 Arg2:T1015
+R1014	target Arg1:T1016 Arg2:T1014
+R1015	target Arg1:T1013 Arg2:T1016
+T1017	Predicate 492 496	este
+T1018	Concept 497 504	momento
+R1016	domain Arg1:T1017 Arg2:T1018
+T1019	Concept 509 517	uribismo
+T1020	Concept 531 539	disperso
+T1021	Predicate 543 549	varios
+T1022	Concept 550 561	movimientos
+R1017	domain Arg1:T1021 Arg2:T1022
+T1023	Concept 568 574;575 582	Cambio Radical
+T1024	Concept 584 592;593 604	Colombia Democrática
+T1025	Concept 606 614;615 619	Colombia Viva
+T1026	Concept 622 627;628 635	Nuevo Partido
+T1027	Concept 643 648	otros
+R1018	in-time Arg1:T1019 Arg2:T1017
+R1019	has-property Arg1:T1019 Arg2:T1020
+R1020	in-context Arg1:T1020 Arg2:T1021
+R1021	is-a Arg1:T1023 Arg2:T1022
+R1022	is-a Arg1:T1024 Arg2:T1022
+R1023	is-a Arg1:T1025 Arg2:T1022
+R1024	is-a Arg1:T1026 Arg2:T1022
+R1025	is-a Arg1:T1027 Arg2:T1022
+T1028	Predicate 793 797	Tres
+T1029	Concept 798 805	muertos
+R1026	domain Arg1:T1028 Arg2:T1029
+T1030	Predicate 808 810;811 816	al menos
+T1031	Concept 817 827	quinientos
+T1032	Concept 828 835	heridos
+R1027	arg Arg1:T1030 Arg2:T1031
+R1028	domain Arg1:T1030 Arg2:T1032
+T1033	Reference 852 857	estas
+T1034	Concept 858 873	manifestaciones
+T1035	Concept 874 883	populares
+R1029	is-a Arg1:T1033 Arg2:T1034
+R1030	in-context Arg1:T1033 Arg2:T1035
+T1036	Predicate 895 899	cien
+T1037	Concept 900 908	personas
+R1031	domain Arg1:T1036 Arg2:T1037
+T1038	Action 909 919	arrestadas
+T1039	Concept 927 934	policía
+R1032	subject Arg1:T1038 Arg2:T1039
+R1033	target Arg1:T1038 Arg2:T1036
+R1034	causes Arg1:T1033 Arg2:T1028
+R1035	causes Arg1:T1033 Arg2:T1030
+R1036	causes Arg1:T1033 Arg2:T1038
+T1040	Concept 1231 1242	autoridades
+T1041	Action 1243 1254	prohibieron
+T1042	Action 1258 1265	ingreso
+T1043	Concept 1269 1280	extranjeros
+T1044	Concept 1283 1294	periodistas
+T1045	Concept 1300 1304	zona
+T1046	Concept 1313 1321	testigos
+T1047	Action 1322 1329	afirman
+T1048	Concept 1337 1346	situación
+T1049	Concept 1350 1355	tensa
+T1050	Action 1365 1375	compromete
+T1051	Concept 1379 1388	seguridad
+T1052	Action 1402 1414	inauguración
+T1053	Concept 1422 1428;1429 1438	Juegos Olímpicos
+T1054	Concept 1442 1447	Pekín
+R1037	in-place Arg1:T1053 Arg2:T1054
+T1055	Concept 1511 1516	Tibet
+T1056	Concept 1489 1494;1495 1503	llama olímpica
+T1057	Action 1478 1482	paso
+R1038	subject Arg1:T1041 Arg2:T1040
+R1039	target Arg1:T1041 Arg2:T1042
+R1040	subject Arg1:T1042 Arg2:T1043
+R1041	subject Arg1:T1042 Arg2:T1044
+R1042	target Arg1:T1042 Arg2:T1045
+R1043	subject Arg1:T1047 Arg2:T1046
+R1044	has-property Arg1:T1048 Arg2:T1049
+R1045	target Arg1:T1047 Arg2:T1048
+R1046	causes Arg1:T1047 Arg2:T1050
+R1047	target Arg1:T1050 Arg2:T1051
+R1048	in-context Arg1:T1050 Arg2:T1052
+R1049	target Arg1:T1052 Arg2:T1053
+R1050	target Arg1:T1057 Arg2:T1056
+R1051	in-place Arg1:T1057 Arg2:T1055
+R1052	in-context Arg1:T1050 Arg2:T1057
+R1053	in-context Arg1:T1041 Arg2:T1047
+T1058	Predicate 1598 1602	hace
+T1059	Concept 1603 1606	dos
+T1060	Concept 1607 1614	semanas
+R1054	arg Arg1:T1058 Arg2:T1059
+R1055	domain Arg1:T1058 Arg2:T1060
+T1061	Action 1619 1627	desplegó
+T1062	Concept 1631 1640	operativo
+T1063	Action 1644 1652	búsqueda
+T1064	Concept 1656 1664	Guerrero
+R1056	target Arg1:T1061 Arg2:T1062
+R1057	in-context Arg1:T1062 Arg2:T1063
+R1058	in-place Arg1:T1061 Arg2:T1064
+R1059	in-time Arg1:T1061 Arg2:T1058
+T1065	Action 1859 1870	intercambio
+T1066	Concept 1874 1882	disparos
+T1067	Action 1894 1899	murió
+T1068	Concept 1903 1912	dirigente
+T1069	Concept 1913 1921	político
+T1070	Concept 1922 1926;1927 1934	Juan Montoya
+T1071	Concept 1940 1953	universitario
+T1072	Concept 1954 1960;1961 1963;1964 1969	Bassil Da Costa
+T1073	Action 1977 1982	cargó
+T1074	Concept 1986 1992	cuerpo
+T1075	Concept 1996 2003	Montoya
+T1076	Concept 2004 2011	minutos
+T1077	Predicate 2012 2017	antes
+T1078	Action 2025 2034	asesinado
+R1060	target Arg1:T1065 Arg2:T1066
+R1061	causes Arg1:T1065 Arg2:T1067
+R1062	in-context Arg1:T1068 Arg2:T1069
+R1063	is-a Arg1:T1070 Arg2:T1068
+R1064	target Arg1:T1067 Arg2:T1070
+R1065	is-a Arg1:T1072 Arg2:T1071
+R1066	target Arg1:T1067 Arg2:T1072
+R1067	subject Arg1:T1073 Arg2:T1072
+R1068	target Arg1:T1073 Arg2:T1074
+R1069	part-of Arg1:T1074 Arg2:T1075
+R1070	arg Arg1:T1077 Arg2:T1076
+R1071	in-time Arg1:T1073 Arg2:T1077
+R1072	target Arg1:T1078 Arg2:T1072
+R1073	domain Arg1:T1077 Arg2:T1078
+T1079	Concept 2157 2163	clubes
+T1080	Concept 2164 2177	neozelandeses
+T1081	Action 2178 2185	amplían
+T1082	Concept 2189 2198	liderazgo
+T1083	Concept 2201 2203	12
+T1084	Concept 2204 2211	títulos
+T1085	Concept 2220 2223	dos
+T1086	Concept 2227 2236	Sudáfrica
+T1087	Concept 2239 2248	Australia
+R1074	in-place Arg1:T1085 Arg2:T1086
+R1075	in-place Arg1:T1085 Arg2:T1087
+T1088	Action 2213 2219	contra
+R1076	in-context Arg1:T1083 Arg2:T1084
+R1077	subject Arg1:T1088 Arg2:T1083
+R1078	target Arg1:T1088 Arg2:T1085
+R1079	in-place Arg1:T1079 Arg2:T1080
+R1080	subject Arg1:T1081 Arg2:T1079
+R1081	target Arg1:T1081 Arg2:T1082
+R1082	in-context Arg1:T1081 Arg2:T1088
+T1089	Action 2407 2419	interrupción
+T1090	Concept 2423 2428	rutas
+T1091	Concept 2432 2440	comercio
+T1092	Concept 2443 2451	mercados
+T1093	Concept 2452 2464	alimentarios
+T1095	Action 2483 2490	aumento
+T1094	Concept 2497 2505	hambruna
+T1096	Concept 2521 2526	zonas
+T1097	Action 2536 2541	llega
+A1002	Negated T1097
+T1098	Concept 2545 2554	conflicto
+R1083	target Arg1:T1089 Arg2:T1090
+R1084	in-context Arg1:T1090 Arg2:T1091
+R1085	in-context Arg1:T1092 Arg2:T1093
+R1086	target Arg1:T1089 Arg2:T1092
+R1087	causes Arg1:T1089 Arg2:T1095
+R1088	target Arg1:T1095 Arg2:T1094
+R1089	target Arg1:T1097 Arg2:T1098
+R1090	in-context Arg1:T1096 Arg2:T1097
+R1091	in-place Arg1:T1095 Arg2:T1096
+T1099	Concept 2647 2657	presidente
+T1100	Concept 2661 2671	Afganistán
+T1101	Concept 2673 2679;2680 2685	Ashraf Ghani
+R1092	in-place Arg1:T1099 Arg2:T1100
+T1102	Action 2687 2695	calificó
+T1103	Concept 2699 2705	ataque
+T1104	Concept 2710 2719	espantoso
+T1105	Concept 2722 2729	cobarde
+R1093	has-property Arg1:T1103 Arg2:T1104
+R1094	has-property Arg1:T1103 Arg2:T1105
+R1095	target Arg1:T1102 Arg2:T1103
+R1096	subject Arg1:T1102 Arg2:T1101
+*	same-as T1101 T1099
+T1106	Concept 2922 2932;2933 2946;2947 2949;2950 2963	Federación Internacional de Automovilismo
+T1107	Concept 2965 2968	FIA
+*	same-as T1106 T1107
+T1108	Action 2983 2993	analizando
+T1109	Concept 3000 3009	escudería
+T1110	Action 3015 3025	suspendida
+T1111	Predicate 3026 3031	hasta
+T1112	Concept 3035 3039	2011
+R1097	arg Arg1:T1111 Arg2:T1112
+T1113	Action 3045 3055	participar
+T1114	Predicate 3062 3068	máxima
+T1115	Concept 3069 3078	categoría
+T1116	Concept 3083 3096	automovilismo
+T1117	Concept 3097 3104	mundial
+R1098	subject Arg1:T1108 Arg2:T1106
+R1099	target Arg1:T1110 Arg2:T1109
+R1100	in-time Arg1:T1110 Arg2:T1111
+R1101	in-context Arg1:T1110 Arg2:T1113
+R1102	domain Arg1:T1114 Arg2:T1115
+R1103	in-context Arg1:T1116 Arg2:T1117
+R1104	in-context Arg1:T1114 Arg2:T1116
+R1105	target Arg1:T1113 Arg2:T1114
+R1106	target Arg1:T1108 Arg2:T1110
+T1118	Predicate 3200 3205	Ambos
+T1119	Concept 3206 3217	científicos
+R1107	domain Arg1:T1118 Arg2:T1119
+T1120	Action 3225 3237	cuestionados
+A1003	Emphasized T1120
+R1108	target Arg1:T1120 Arg2:T1118
+T1121	Concept 3270 3278	sectores
+T1122	Concept 3279 3292	conservadores
+R1109	in-context Arg1:T1121 Arg2:T1122
+R1110	subject Arg1:T1120 Arg2:T1121
+T1123	Concept 3551 3564	negociaciones
+T1124	Concept 3572 3578	arduas
+R1111	has-property Arg1:T1123 Arg2:T1124
+T1125	Concept 3593 3601	Schröder
+T1126	Action 3608 3617	expresado
+T1127	Action 3621 3630	intención
+T1128	Concept 3637 3644	partido
+T1129	Concept 3664 3673	Canciller
+T1130	Concept 3680 3689	coalición
+R1112	in-context Arg1:T1129 Arg2:T1130
+T1131	Concept 3709 3716	partido
+R1113	subject Arg1:T1126 Arg2:T1125
+T1132	Reference 3658 3660	él
+T1134	Concept 3731 3738	segundo
+T1135	Concept 3743 3747;3748 3749	34,2 %
+T1136	Action 3750 3756	detrás
+T1137	Concept 3763 3772	coalición
+T1138	Concept 3773 3776;3777 3780	CDU CSU
+T1139	Concept 3792 3796;3797 3798	35,2 %
+R1114	subject Arg1:T1136 Arg2:T1131
+R1115	in-context Arg1:T1131 Arg2:T1135
+R1116	is-a Arg1:T1138 Arg2:T1137
+R1117	in-context Arg1:T1138 Arg2:T1139
+R1118	target Arg1:T1136 Arg2:T1137
+R1119	entails Arg1:T1136 Arg2:T1133
+T1133	Action 3723 3730	llegado
+R1120	subject Arg1:T1133 Arg2:T1131
+R1121	target Arg1:T1133 Arg2:T1134
+R1122	target Arg1:T1126 Arg2:T1127
+R1123	subject Arg1:T1127 Arg2:T1128
+T1140	Action 3652 3657	fuera
+R1124	subject Arg1:T1140 Arg2:T1132
+R1125	target Arg1:T1140 Arg2:T1129
+R1126	target Arg1:T1127 Arg2:T1140
+R1127	in-context Arg1:T1126 Arg2:T1136
+T1141	Concept 3580 3592	inicialmente
+R1128	in-time Arg1:T1126 Arg2:T1141
+T1142	Concept 4018 4029	futbolistas
+T1143	Concept 4030 4039;4040 4048	Francisco Palencia
+T1144	Concept 4051 4057;4058 4062	Carlos Vela
+R1129	is-a Arg1:T1143 Arg2:T1142
+R1130	is-a Arg1:T1144 Arg2:T1142
+T1145	Action 4080 4087	ampliar
+T1146	Concept 4091 4099	victoria
+T1147	Concept 4100 4108	mexicana
+R1131	subject Arg1:T1145 Arg2:T1143
+R1132	subject Arg1:T1145 Arg2:T1144
+R1133	target Arg1:T1145 Arg2:T1146
+R1134	in-context Arg1:T1146 Arg2:T1147
+T1148	Concept 4125 4131	equipo
+T1149	Concept 4136 4138;4139 4147	El Salvador
+R1135	in-context Arg1:T1148 Arg2:T1149
+T1150	Action 4148 4153	logró
+T1151	Predicate 4154 4156	un
+T1152	Concept 4157 4160	gol
+T1153	Predicate 4161 4166	hasta
+T1154	Concept 4171 4180	instantes
+T1155	Concept 4181 4188	finales
+T1156	Concept 4193 4200	partido
+R1136	subject Arg1:T1150 Arg2:T1148
+R1137	domain Arg1:T1151 Arg2:T1152
+R1138	domain Arg1:T1153 Arg2:T1154
+R1139	in-context Arg1:T1154 Arg2:T1155
+R1140	in-context Arg1:T1154 Arg2:T1156
+R1141	target Arg1:T1150 Arg2:T1151
+R1142	in-time Arg1:T1150 Arg2:T1153
+T1157	Predicate 4380 4387	después
+T1158	Concept 4370 4374	seis
+T1159	Concept 4375 4379	años
+R1143	arg Arg1:T1157 Arg2:T1158
+R1144	domain Arg1:T1157 Arg2:T1159
+T1160	Reference 4389 4394	estos
+T1161	Concept 4395 4403	residuos
+R1145	is-a Arg1:T1160 Arg2:T1161
+T1162	Action 4419 4428	terminado
+A1004	Negated T1162
+T1163	Action 4432 4440	tratarse
+T1164	Concept 4447 4453	planta
+T1165	Concept 4458 4466	Sogarisa
+T1166	Action 4467 4472	tiene
+T1167	Concept 4479 4488	municipio
+T1168	Concept 4489 4496	coruñés
+T1169	Concept 4500 4502;4503 4510	As Somozas
+R1146	is-a Arg1:T1169 Arg2:T1167
+R1147	in-context Arg1:T1167 Arg2:T1168
+R1148	target Arg1:T1166 Arg2:T1164
+R1149	subject Arg1:T1166 Arg2:T1165
+R1150	in-place Arg1:T1166 Arg2:T1169
+R1151	subject Arg1:T1162 Arg2:T1160
+R1152	target Arg1:T1162 Arg2:T1163
+R1153	in-time Arg1:T1162 Arg2:T1157
+R1154	in-place Arg1:T1163 Arg2:T1166
+T1170	Action 4735 4743	recordar
+T1171	Predicate 4757 4765	primeras
+T1172	Concept 4752 4756	tres
+T1173	Concept 4766 4781	clasificaciones
+R1155	arg Arg1:T1171 Arg2:T1172
+R1156	domain Arg1:T1171 Arg2:T1173
+T1174	Action 4782 4785	van
+T1175	Concept 4789 4796	mundial
+T1176	Concept 4800 4809	Sudáfrica
+T1177	Concept 4810 4814	2010
+R1157	in-place Arg1:T1175 Arg2:T1176
+R1158	in-time Arg1:T1175 Arg2:T1177
+R1159	subject Arg1:T1174 Arg2:T1171
+R1160	target Arg1:T1174 Arg2:T1175
+R1161	target Arg1:T1170 Arg2:T1174
+T1178	Concept 4832 4838	cuarto
+T1179	Concept 4845 4850	tabla
+T1180	Concept 4854 4864	posiciones
+R1162	in-context Arg1:T1179 Arg2:T1180
+T1181	Action 4868 4874	medirá
+T1182	Concept 4881 4890	repechaje
+T1183	Concept 4898 4904	quinto
+T1184	Concept 4912 4925	eliminatorias
+T1185	Concept 4932 4940	CONMEBOL
+R1163	in-place Arg1:T1178 Arg2:T1179
+R1164	in-place Arg1:T1183 Arg2:T1184
+R1165	in-context Arg1:T1184 Arg2:T1185
+R1166	subject Arg1:T1181 Arg2:T1178
+R1167	target Arg1:T1181 Arg2:T1183
+R1168	in-context Arg1:T1181 Arg2:T1182
+T1186	Predicate 5056 5061	Luego
+T1187	Concept 5068 5073	caída
+T1188	Concept 5078 5087	rapiñeros
+T1189	Action 5091 5098	fugaron
+T1190	Concept 5104 5109	amigo
+T1191	Action 5116 5122	buscar
+T1192	Concept 5123 5128	ayuda
+T1193	Concept 5135 5140	autos
+T1194	Action 5145 5152	pasaban
+T1195	Predicate 5153 5158	sobre
+T1196	Concept 5162 5168	rambla
+R1169	target Arg1:T1189 Arg2:T1188
+R1170	domain Arg1:T1186 Arg2:T1187
+R1171	in-time Arg1:T1189 Arg2:T1186
+R1172	subject Arg1:T1191 Arg2:T1190
+R1173	target Arg1:T1191 Arg2:T1192
+R1174	subject Arg1:T1194 Arg2:T1193
+R1175	target Arg1:T1194 Arg2:T1195
+R1176	domain Arg1:T1195 Arg2:T1196
+R1177	in-place Arg1:T1191 Arg2:T1194
+T1197	Concept 5352 5359	gigante
+T1198	Concept 5363 5371	internet
+R1178	in-context Arg1:T1197 Arg2:T1198
+T1199	Concept 5372 5378	Google
+*	same-as T1199 T1197
+T1200	Action 5382 5388	cedido
+T1201	Action 5395 5404	presiones
+T1202	Concept 5409 5417	gobierno
+T1203	Concept 5418 5423	chino
+T1204	Action 5426 5433	anunció
+T1205	Action 5438 5447	censurará
+T1206	Predicate 5448 5455	algunos
+T1207	Concept 5463 5472	servicios
+T1208	Predicate 5475 5482	algunos
+T1209	Concept 5483 5491	términos
+T1210	Concept 5506 5515	polémicos
+T1211	Concept 5521 5526	Pekín
+R1179	subject Arg1:T1200 Arg2:T1199
+R1180	target Arg1:T1200 Arg2:T1201
+R1181	subject Arg1:T1201 Arg2:T1202
+R1182	in-context Arg1:T1202 Arg2:T1203
+R1183	subject Arg1:T1204 Arg2:T1199
+R1184	target Arg1:T1204 Arg2:T1205
+R1185	target Arg1:T1205 Arg2:T1206
+R1186	domain Arg1:T1206 Arg2:T1207
+R1187	domain Arg1:T1208 Arg2:T1209
+R1188	target Arg1:T1205 Arg2:T1208
+T1212	Action 5492 5504	considerados
+R1189	target Arg1:T1212 Arg2:T1210
+R1190	subject Arg1:T1212 Arg2:T1211
+R1191	in-context Arg1:T1209 Arg2:T1212
+T1213	Concept 5730 5739	Wallabies
+T1214	Concept 5744 5753	selección
+T1215	Concept 5757 5762	rugby
+T1216	Concept 5766 5775	Australia
+R1192	in-context Arg1:T1214 Arg2:T1215
+R1193	in-place Arg1:T1214 Arg2:T1216
+T1217	Action 5777 5785	entrarán
+T1218	Concept 5789 5795	acción
+T1219	Concept 5862 5872	Springboks
+T1220	Concept 5877 5879;5880 5882;5883 5888	24 de julio
+T1221	Concept 5895 5902;5903 5910	Suncorp Stadium
+T1222	Concept 5914 5922	Brisbane
+R1194	in-place Arg1:T1221 Arg2:T1222
+T1223	Action 5833 5842	enfrenten
+T1224	Concept 5848 5855	locales
+R1195	in-context Arg1:T1223 Arg2:T1224
+R1196	in-time Arg1:T1223 Arg2:T1220
+R1197	in-place Arg1:T1223 Arg2:T1221
+R1198	target Arg1:T1223 Arg2:T1219
+T1225	Predicate 5809 5816	tercera
+T1226	Concept 5817 5824	jornada
+R1199	domain Arg1:T1225 Arg2:T1226
+R1200	target Arg1:T1217 Arg2:T1218
+R1201	subject Arg1:T1217 Arg2:T1213
+R1202	in-context Arg1:T1217 Arg2:T1225
+R1204	in-time Arg1:T1217 Arg2:T1223
+T1227	Concept 6100 6107	Murillo
+T1228	Concept 5730 5739	Wallabies
+R1203	subject Arg1:T1223 Arg2:T1228
+*	same-as T1214 T1228
+T1229	Action 6108 6113	llamó
+T1230	Concept 6117 6122	padre
+T1231	Action 6125 6133	declarar
+T1232	Concept 6142 6150	fiscalía
+T1233	Concept 6159 6168	Solalinde
+T1234	Action 6169 6175	aceptó
+T1235	Action 6177 6185	advirtió
+T1236	Concept 6195 6203	testigos
+T1237	Action 6212 6222	informaron
+T1238	Action 6229 6235	muerte
+T1239	Concept 6243 6254	estudiantes
+T1240	Action 6256 6261	temen
+T1241	Concept 6269 6273	vida
+R1205	subject Arg1:T1229 Arg2:T1227
+R1206	target Arg1:T1229 Arg2:T1230
+R1207	in-context Arg1:T1229 Arg2:T1231
+R1208	in-context Arg1:T1231 Arg2:T1232
+R1209	subject Arg1:T1234 Arg2:T1233
+R1210	in-context Arg1:T1235 Arg2:T1234
+R1211	subject Arg1:T1237 Arg2:T1236
+R1212	subject Arg1:T1238 Arg2:T1239
+R1213	target Arg1:T1237 Arg2:T1238
+R1214	subject Arg1:T1240 Arg2:T1237
+R1215	target Arg1:T1240 Arg2:T1241
+R1216	target Arg1:T1235 Arg2:T1240
+T1242	Concept 6345 6352	réplica
+T1243	Concept 6356 6359;6360 6366	2,8 grados
+T1244	Action 6370 6377	reportó
+T1245	Concept 6384 6385;6385 6386;6386 6388;6389 6392	2 : 46 EST
+T1246	Concept 6394 6397;6397 6399;6400 6403	18: 46 UTC
+*	same-as T1245 T1246
+R1217	target Arg1:T1244 Arg2:T1242
+R1218	in-context Arg1:T1242 Arg2:T1243
+R1219	in-time Arg1:T1244 Arg2:T1245
+T1247	Concept 6522 6528	Google
+T1248	Action 6529 6534	tiene
+T1249	Concept 6539 6546	versión
+T1250	Concept 6547 6555	completa
+T1251	Concept 6562 6567;6568 6570;6571 6579	motor de búsqueda
+T1253	Concept 6583 6588	chino
+T1254	Action 6590 6602	administrado
+T1256	Concept 6612 6622	servidores
+T1257	Concept 6626 6636	California
+R1220	in-place Arg1:T1256 Arg2:T1257
+R1221	in-place Arg1:T1254 Arg2:T1256
+R1222	subject Arg1:T1248 Arg2:T1247
+R1223	in-context Arg1:T1249 Arg2:T1250
+R1224	target Arg1:T1248 Arg2:T1249
+R1225	in-context Arg1:T1251 Arg2:T1253
+R1226	in-context Arg1:T1248 Arg2:T1254
+R1227	target Arg1:T1254 Arg2:T1251
+T1252	Concept 6788 6797	explosión
+T1255	Action 6798 6805	ocurrió
+R1228	subject Arg1:T1255 Arg2:T1252
+T1258	Concept 6818 6825	autobús
+T1259	Action 6826 6832	pasaba
+T1260	Concept 6840 6847	mercado
+T1261	Concept 6848 6853	lleno
+T1262	Concept 6857 6862	gente
+T1263	Action 6864 6875	infligiendo
+T1264	Concept 6876 6881	bajas
+T1265	Concept 6888 6899	compradores
+T1266	Concept 6902 6913	transeúntes
+T1267	Action 6914 6921	dijeron
+T1268	Concept 6922 6930	testigos
+R1229	subject Arg1:T1267 Arg2:T1268
+R1230	subject Arg1:T1259 Arg2:T1258
+R1231	target Arg1:T1263 Arg2:T1264
+R1232	in-context Arg1:T1263 Arg2:T1265
+R1233	in-context Arg1:T1263 Arg2:T1266
+R1234	in-context Arg1:T1261 Arg2:T1262
+R1235	in-context Arg1:T1260 Arg2:T1261
+R1236	target Arg1:T1259 Arg2:T1260
+R1237	in-time Arg1:T1255 Arg2:T1259
+R1238	subject Arg1:T1263 Arg2:T1255
+R1239	target Arg1:T1267 Arg2:T1263
+T1269	Reference 7065 7069	Esta
+T1270	Concept 7070 7074	idea
+T1271	Action 7078 7082	tuvo
+A1005	Negated T1271
+T1272	Concept 7083 7088	visto
+T1273	Concept 7089 7094	bueno
+T1274	Concept 7098 7103	Arias
+T1275	Concept 7105 7111;7112 7117;7118 7120;7121 7123;7124 7127	Premio Nobel de la Paz
+R1240	is-a Arg1:T1274 Arg2:T1275
+T1276	Action 7141 7150	recomendó
+T1277	Predicate 7153 7158	ambas
+T1278	Concept 7159 7167	personas
+R1241	domain Arg1:T1277 Arg2:T1278
+T1279	Action 7171 7179	realizar
+A1006	Negated T1279
+T1280	Concept 7183 7188	viaje
+R1242	target Arg1:T1279 Arg2:T1280
+R1243	subject Arg1:T1279 Arg2:T1277
+R1244	target Arg1:T1276 Arg2:T1279
+R1245	subject Arg1:T1276 Arg2:T1274
+R1246	is-a Arg1:T1269 Arg2:T1270
+R1247	subject Arg1:T1271 Arg2:T1269
+R1248	in-context Arg1:T1272 Arg2:T1273
+R1249	target Arg1:T1271 Arg2:T1272
+R1250	in-context Arg1:T1272 Arg2:T1274
+T1281	Concept 7453 7461	personas
+T1282	Action 7477 7487	lesionadas
+T1283	Action 7495 7506	trasladadas
+T1284	Concept 7512 7520	hospital
+T1285	Concept 7521 7528	cercano
+T1286	Action 7551 7560	fallecido
+T1287	Concept 7564 7572	atacante
+T1289	Concept 7587 7588	3
+T1290	Concept 7589 7597	personas
+T1291	Predicate 7599 7602	mas
+T1292	Concept 7603 7608	tarde
+T1293	Action 7620 7628	confirmó
+T1294	Action 7632 7645	fallecimiento
+T1295	Predicate 7653 7659	quinta
+T1296	Concept 7660 7667	persona
+T1297	Action 7677 7686	ingresaba
+T1298	Concept 7690 7698	hospital
+R1251	target Arg1:T1282 Arg2:T1281
+R1252	target Arg1:T1283 Arg2:T1282
+R1253	in-place Arg1:T1283 Arg2:T1284
+R1254	in-context Arg1:T1284 Arg2:T1285
+R1255	subject Arg1:T1286 Arg2:T1287
+R1256	in-place Arg1:T1286 Arg2:T1284
+T1288	Predicate 7581 7586	otras
+R1257	arg Arg1:T1288 Arg2:T1289
+R1258	domain Arg1:T1288 Arg2:T1290
+R1259	subject Arg1:T1286 Arg2:T1288
+R1260	target Arg1:T1293 Arg2:T1294
+R1261	domain Arg1:T1295 Arg2:T1296
+R1262	subject Arg1:T1294 Arg2:T1295
+R1263	target Arg1:T1297 Arg2:T1298
+R1264	subject Arg1:T1297 Arg2:T1295
+R1265	in-time Arg1:T1294 Arg2:T1297
