@@ -22,7 +22,7 @@
         },
         {
           "assigned": "@cicr_99",
-          "status": "open"
+          "status": "completed"
         }
       ]
     },
@@ -87,33 +87,33 @@
         },
         {
           "assigned": "@u_knothing",
-          "status": "empty"
+          "status": "completed"
         }
       ]
     },
     {
-      "pack": 8,
+      "pack": "8",
       "annotators": [
         {
-          "assigned": "@d_alfaro",
-          "status": "empty"
+          "assigned": "Dayany Alfaro",
+          "status": "completed"
         },
         {
           "assigned": "@cicr_99",
-          "status": "empty"
+          "status": "completed"
         }
       ]
     },
     {
-      "pack": 9,
+      "pack": "9",
       "annotators": [
         {
           "assigned": "@fsadannn",
-          "status": "empty"
+          "status": "completed"
         },
         {
-          "assigned": null,
-          "status": "empty"
+          "assigned": "@hiancd",
+          "status": "completed"
         }
       ]
     },
@@ -138,7 +138,7 @@
           "status": "empty"
         },
         {
-          "assigned": null,
+          "assigned": "@hiancd",
           "status": "empty"
         }
       ]
@@ -205,8 +205,8 @@
           "status": "completed"
         },
         {
-          "assigned": "@danielvp",
-          "status": "empty"
+          "assigned": "@hiancd",
+          "status": "completed"
         }
       ]
     },
@@ -218,8 +218,8 @@
           "status": "completed"
         },
         {
-          "assigned": null,
-          "status": "empty"
+          "assigned": "@hiancd",
+          "status": "completed"
         }
       ]
     },
@@ -231,8 +231,8 @@
           "status": "completed"
         },
         {
-          "assigned": null,
-          "status": "empty"
+          "assigned": "@hiancd",
+          "status": "completed"
         }
       ]
     },
@@ -244,8 +244,8 @@
           "status": "completed"
         },
         {
-          "assigned": null,
-          "status": "empty"
+          "assigned": "@hiancd",
+          "status": "completed"
         }
       ]
     },
@@ -257,73 +257,73 @@
           "status": "completed"
         },
         {
-          "assigned": null,
+          "assigned": "@hiancd",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "pack": "6",
+      "annotators": [
+        {
+          "assigned": "@PlayErwan",
+          "status": "completed"
+        },
+        {
+          "assigned": "@hiancd",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "pack": "7",
+      "annotators": [
+        {
+          "assigned": "@PlayErwan",
+          "status": "completed"
+        },
+        {
+          "assigned": "@hiancd",
           "status": "empty"
         }
       ]
     },
     {
-      "pack": 6,
+      "pack": "8",
       "annotators": [
         {
-          "assigned": null,
-          "status": "empty"
+          "assigned": "@PlayErwan",
+          "status": "completed"
         },
         {
-          "assigned": null,
-          "status": "empty"
+          "assigned": "@u_knothing",
+          "status": "completed"
         }
       ]
     },
     {
-      "pack": 7,
+      "pack": "9",
       "annotators": [
         {
-          "assigned": null,
+          "assigned": "@PlayErwan",
           "status": "empty"
         },
         {
-          "assigned": null,
-          "status": "empty"
+          "assigned": "Dayany Alfaro",
+          "status": "completed"
         }
       ]
     },
     {
-      "pack": 8,
+      "pack": "10",
       "annotators": [
         {
-          "assigned": null,
+          "assigned": "@hiancd",
           "status": "empty"
         },
         {
-          "assigned": null,
-          "status": "empty"
-        }
-      ]
-    },
-    {
-      "pack": 9,
-      "annotators": [
-        {
-          "assigned": null,
-          "status": "empty"
-        },
-        {
-          "assigned": null,
-          "status": "empty"
-        }
-      ]
-    },
-    {
-      "pack": 10,
-      "annotators": [
-        {
-          "assigned": null,
-          "status": "empty"
-        },
-        {
-          "assigned": null,
-          "status": "empty"
+          "assigned": "@fsadannn",
+          "status": "completed"
         }
       ]
     }
