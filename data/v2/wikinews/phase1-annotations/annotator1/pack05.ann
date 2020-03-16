@@ -109,7 +109,7 @@ T58	Concept 1083 1103	provincia de Tucumán
 R47	in-place Arg1:T57 Arg2:T58	
 T59	Concept 1108 1122	norte del país
 R48	in-place Arg1:T57 Arg2:T59	
-T60	Concept 1127 1131	1934
+T60	Predicate 1127 1131	1934
 R49	in-time Arg1:T57 Arg2:T60	
 T61	Concept 1137 1180	candidatos presidenciales de Estados Unidos
 T62	Concept 1182 1193	John McCain
@@ -323,7 +323,7 @@ R146	arg Arg1:T168 Arg2:T167
 T169	Concept 2852 2861	conflicto
 T170	Concept 2865 2878	Sudán del Sur
 R147	in-place Arg1:T169 Arg2:T170	
-T171	Concept 2879 2892	ha desplazado
+T171	Action 2879 2892	ha desplazado
 T172	Concept 2915 2923	personas
 T173	Predicate 2895 2898	más
 T174	Predicate 2905 2911	millón
@@ -515,22 +515,27 @@ T271	Concept 4403 4412	derrumbes
 T272	Concept 4415 4427	hundimientos
 R232	target Arg1:T270 Arg2:T271	
 R233	target Arg1:T270 Arg2:T272	
-T273	Concept 4438 4443	cifra
-T274	Predicate 4444 4450	actual
-R234	arg Arg1:T274 Arg2:T273	
+T273	Predicate 4438 4443	cifra
+T274	Concept 4444 4450	actual
 T275	Concept 4454 4464	fallecidos
-R235	in-context Arg1:T275 Arg2:T273	
 T276	Concept 4479 4486	civiles
 T277	Concept 4488 4496	policías
 T278	Concept 4499 4508	diputados
 T279	Predicate 4519 4521	un
 T280	Concept 4522 4532	periodista
 R236	domain Arg1:T279 Arg2:T280	
-T281	Concept 4539 4551	cadena árabe
 T282	Concept 4552 4562	Al Arabiya
 R237	part-of Arg1:T276 Arg2:T273	
 R238	part-of Arg1:T277 Arg2:T273	
 R239	part-of Arg1:T278 Arg2:T273	
 R240	part-of Arg1:T279 Arg2:T273	
-R242	is-a Arg1:T282 Arg2:T281	
 R241	in-context Arg1:T280 Arg2:T282	
+R243	subject Arg1:T171 Arg2:T169	
+R244	target Arg1:T171 Arg2:T172	
+R245	in-time Arg1:T171 Arg2:T166	
+R234	arg Arg1:T273 Arg2:T275	
+R246	in-time Arg1:T273 Arg2:T274	
+T281	Concept 4539 4545	cadena
+T283	Concept 4546 4551	árabe
+R235	in-context Arg1:T281 Arg2:T283	
+R242	is-a Arg1:T282 Arg2:T281	
