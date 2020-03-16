@@ -1,0 +1,401 @@
+T1	Concept 10 18	personas
+T2	Concept 22 26;27 32	seis meses
+T3	Concept 36 40	edad
+T4	Predicate 43 50	mayores
+T5	Action 57 66	vacunarse
+T6	Concept 72 81	temporada
+T7	Concept 92 97	gripe
+T8	Predicate 67 71	cada
+R1	arg Arg1:T8 Arg2:T6	
+T9	Action 82 88	contra
+T10	Predicate 0 5	Todas
+R2	domain Arg1:T10 Arg2:T1	
+R3	arg Arg1:T10 Arg2:T2	
+R4	in-context Arg1:T2 Arg2:T3	
+R5	domain Arg1:T4 Arg2:T3	
+R6	arg Arg1:T4 Arg2:T2	
+T11	Predicate 0 5	Todas
+R7	arg Arg1:T11 Arg2:T4	
+R8	domain Arg1:T10 Arg2:T1	
+R9	target Arg1:T9 Arg2:T7	
+R10	in-time Arg1:T5 Arg2:T8	
+R11	subject Arg1:T5 Arg2:T11	
+R12	subject Arg1:T5 Arg2:T10	
+R13	subject Arg1:T9 Arg2:T5	
+T12	Concept 102 108	herpes
+T13	Concept 109 115	labial
+T14	Action 122 130	aparecer
+T15	Predicate 131 136	fuera
+T16	Concept 143 147	boca
+T17	Concept 157 163	labios
+R14	in-context Arg1:T12 Arg2:T13	
+R15	subject Arg1:T14 Arg2:T12	
+R16	arg Arg1:T15 Arg2:T16	
+R17	in-place Arg1:T14 Arg2:T15	
+R18	in-place Arg1:T14 Arg2:T17	
+T18	Predicate 167 176	alrededor
+R19	arg Arg1:T18 Arg2:T17	
+R20	in-place Arg1:T14 Arg2:T18	
+T19	Concept 181 192	tratamiento
+T20	Concept 197 202	dolor
+T21	Concept 206 211	pecho
+T22	Concept 228 233	causa
+T23	Concept 238 243	dolor
+R21	in-context Arg1:T22 Arg2:T23	
+R22	in-context Arg1:T19 Arg2:T20	
+R23	in-place Arg1:T20 Arg2:T21	
+T24	Action 212 221	dependerá
+R24	subject Arg1:T24 Arg2:T19	
+R25	target Arg1:T24 Arg2:T22	
+T25	Concept 255 266	medicamento
+T26	Action 283 289	tratar
+T27	Concept 294 305	infecciones
+T28	Concept 310 319	Norovirus
+A1	Negated T25
+R26	subject Arg1:T26 Arg2:T25	
+R27	target Arg1:T26 Arg2:T27	
+R28	in-context Arg1:T27 Arg2:T28	
+T29	Concept 327 335	sentirse
+A3	Uncertain T29
+T30	Concept 336 344	aturdido
+T31	Concept 359 363	bien
+T32	Concept 350 358	sentirse
+T33	Concept 375 379	días
+T34	Concept 382 389	semanas
+T35	Predicate 390 397	después
+T36	Concept 404 410	lesión
+R29	arg Arg1:T35 Arg2:T36	
+R30	in-time Arg1:T33 Arg2:T35	
+R31	in-time Arg1:T34 Arg2:T35	
+R32	in-context Arg1:T29 Arg2:T30	
+R33	in-context Arg1:T32 Arg2:T31	
+A4	Negated T32
+R34	in-time Arg1:T29 Arg2:T33	
+R35	in-time Arg1:T29 Arg2:T34	
+R36	in-time Arg1:T32 Arg2:T33	
+R37	in-time Arg1:T32 Arg2:T34	
+T37	Concept 416 424	personas
+T38	Concept 425 432	mayores
+T39	Concept 438 445	jóvenes
+A5	Emphasized T39
+T40	Concept 463 473	enfermedad
+T41	Concept 474 481	crónica
+T42	Predicate 499 504	mayor
+T43	Concept 492 498	riesgo
+R38	domain Arg1:T42 Arg2:T43	
+R39	in-context Arg1:T37 Arg2:T38	
+R40	in-context Arg1:T37 Arg2:T39	
+R41	in-context Arg1:T40 Arg2:T41	
+R42	in-context Arg1:T37 Arg2:T40	
+R43	has-property Arg1:T37 Arg2:T42	
+T44	Action 530 536	drenar
+A6	Negated T44
+T45	Concept 541 549	ampollas
+T46	Predicate 557 563	riesgo
+T47	Concept 567 576	infección
+R44	arg Arg1:T46 Arg2:T47	
+R45	target Arg1:T44 Arg2:T45	
+R46	in-context Arg1:T44 Arg2:T46	
+T48	Concept 591 596	dolor
+T49	Predicate 603 608	parte
+T50	Concept 609 613	baja
+T51	Concept 618 625	abdomen
+R47	domain Arg1:T49 Arg2:T51	
+R48	arg Arg1:T49 Arg2:T50	
+T52	Concept 627 633	fiebre
+T53	Concept 635 644	secreción
+T54	Concept 645 652	vaginal
+T55	Concept 661 665	olor
+T56	Concept 657 660	mal
+T57	Concept 667 677	hemorragia
+T58	Concept 678 687	irregular
+T59	Concept 690 695	dolor
+T60	Concept 708 718	relaciones
+T61	Concept 719 727	sexuales
+T62	Concept 733 739	orinar
+R50	in-place Arg1:T48 Arg2:T49	
+T63	Action 584 590	tienen
+T64	Reference 578 583	Otras
+R49	subject Arg1:T63 Arg2:T64	
+R51	target Arg1:T63 Arg2:T48	
+R52	target Arg1:T63 Arg2:T52	
+R53	target Arg1:T63 Arg2:T53	
+R54	in-context Arg1:T53 Arg2:T54	
+R55	in-context Arg1:T55 Arg2:T56	
+R57	in-context Arg1:T57 Arg2:T58	
+R58	in-time Arg1:T59 Arg2:T60	
+R59	in-time Arg1:T59 Arg2:T62	
+R60	target Arg1:T63 Arg2:T57	
+R61	target Arg1:T63 Arg2:T59	
+R56	in-context Arg1:T53 Arg2:T55	
+T65	Concept 745 756	analgésicos
+T66	Concept 761 769	potentes
+T67	Concept 778 786	opioides
+T68	Predicate 757 760	más
+R62	domain Arg1:T68 Arg2:T65	
+R63	arg Arg1:T68 Arg2:T66	
+R64	has-property Arg1:T67 Arg2:T68	
+T69	Concept 791 802	tratamiento
+T70	Concept 810 815	niños
+T71	Action 827 836	diferente
+T73	Concept 859 866	adultos
+R65	in-place Arg1:T69 Arg2:T70	
+R66	subject Arg1:T71 Arg2:T69	
+R67	target Arg1:T71 Arg2:T73	
+T72	Action 887 893	fallan
+T74	Concept 879 886	riñones
+T75	Concept 911 922	tratamiento
+T77	Action 928 937	sustituir
+T78	Concept 941 948	trabajo
+T79	Action 959 969	realizaban
+R68	subject Arg1:T72 Arg2:T74	
+R69	subject Arg1:T77 Arg2:T75	
+R70	target Arg1:T79 Arg2:T78	
+R71	subject Arg1:T79 Arg2:T74	
+R72	target Arg1:T77 Arg2:T79	
+T76	Concept 974 988	hipotiroidismo
+T80	Concept 996 1001	común
+T81	Concept 1009 1016	mujeres
+T82	Concept 1025 1033	personas
+T83	Concept 1044 1053	problemas
+T84	Concept 1060 1068	tiroides
+T85	Concept 1078 1086	personas
+T86	Predicate 1087 1094	mayores
+T87	Concept 1098 1100;1101 1105	60 años
+R74	domain Arg1:T86 Arg2:T85	
+R75	arg Arg1:T86 Arg2:T87	
+T88	Predicate 992 995	más
+R76	arg Arg1:T88 Arg2:T80	
+R77	has-property Arg1:T76 Arg2:T88	
+R78	in-place Arg1:T88 Arg2:T81	
+R79	in-place Arg1:T88 Arg2:T82	
+R80	in-context Arg1:T82 Arg2:T83	
+R81	in-place Arg1:T83 Arg2:T84	
+R82	in-place Arg1:T88 Arg2:T85	
+T90	Concept 1134 1138	años
+T91	Concept 1152 1159	células
+T92	Concept 1160 1168	normales
+T93	Concept 1173 1179;1180 1187	cuello uterino
+T95	Action 1191 1201	conviertan
+T96	Concept 1205 1212	células
+T97	Concept 1213 1223	cancerosas
+R85	in-context Arg1:T91 Arg2:T92	
+R86	in-place Arg1:T91 Arg2:T93	
+R88	target Arg1:T95 Arg2:T96	
+R89	in-context Arg1:T96 Arg2:T97	
+T94	Concept 1253 1263	daltonismo
+T98	Concept 1267 1275	genético
+R90	has-property Arg1:T94 Arg2:T98	
+T99	Concept 1284 1291	mujeres
+T100	Concept 1297 1304	pruebas
+T102	Action 1328 1336	detectar
+A7	Uncertain T102
+T103	Concept 1337 1344	cambios
+T104	Concept 1351 1357;1358 1365	cuello uterino
+T105	Action 1377 1388	convertirse
+A8	Uncertain T105
+T106	Concept 1392 1398	cáncer
+T101	Concept 1308 1320	Papanicolaou
+R91	subject Arg1:T102 Arg2:T100	
+R92	in-context Arg1:T100 Arg2:T101	
+R93	in-place Arg1:T102 Arg2:T99	
+R94	target Arg1:T102 Arg2:T103	
+R95	in-place Arg1:T103 Arg2:T104	
+R96	subject Arg1:T105 Arg2:T103	
+R97	target Arg1:T105 Arg2:T106	
+T107	Concept 1403 1409	vejiga
+T108	Action 1413 1420	expande
+T109	Concept 1433 1438	llena
+T110	Concept 1453 1460	pequeña
+T111	Predicate 1449 1452	más
+T112	Concept 1473 1478	vacía
+T113	Concept 1403 1409	vejiga
+R99	in-context Arg1:T107 Arg2:T109	
+R100	entails Arg1:T107 Arg2:T108	
+R101	arg Arg1:T111 Arg2:T110	
+T115	Concept 1403 1409	vejiga
+T116	Concept 1403 1409	vejiga
+R98	subject Arg1:T108 Arg2:T116	
+R102	domain Arg1:T111 Arg2:T115	
+R103	in-context Arg1:T113 Arg2:T112	
+R104	entails Arg1:T113 Arg2:T115	
+T114	Concept 1487 1499	medicamentos
+T117	Concept 1504 1510	receta
+A9	Negated T117
+T118	Action 1517 1524	alivian
+T119	Concept 1528 1533	dolor
+T120	Action 1551 1560	indicarle
+T121	Concept 1538 1544	médico
+T122	Concept 1570 1576	fuerte
+T123	Concept 1561 1565	algo
+T124	Predicate 1566 1569	más
+R105	domain Arg1:T124 Arg2:T123	
+R106	arg Arg1:T124 Arg2:T122	
+A10	Uncertain T120
+R107	in-context Arg1:T114 Arg2:T117	
+A11	Negated T118
+R108	subject Arg1:T118 Arg2:T114	
+R109	target Arg1:T118 Arg2:T119	
+R110	subject Arg1:T120 Arg2:T121	
+R111	target Arg1:T120 Arg2:T124	
+R112	entails Arg1:T114 Arg2:T120	
+T125	Concept 1586 1593	agentes
+T126	Concept 1594 1605	infecciosos
+T127	Concept 1615 1618	VIH
+R113	in-context Arg1:T125 Arg2:T126	
+R114	is-a Arg1:T127 Arg2:T125	
+T128	Action 1627 1637	sobrevivir
+A12	Uncertain T128
+T129	Concept 1644 1650	sangre
+T130	Action 1653 1661	infectar
+T131	Concept 1667 1674	persona
+T132	Action 1684 1694	recibiendo
+T133	Concept 1698 1709	transfusión
+R115	subject Arg1:T128 Arg2:T125	
+R116	in-place Arg1:T128 Arg2:T129	
+R117	subject Arg1:T130 Arg2:T125	
+R118	subject Arg1:T132 Arg2:T131	
+R119	target Arg1:T132 Arg2:T133	
+R120	target Arg1:T130 Arg2:T132	
+T134	Concept 1719 1727	material
+T135	Action 1711 1718	Incluye
+T136	Reference 1749 1751	ti
+T138	Concept 1765 1771	padres
+T140	Concept 1786 1791	salud
+T141	Concept 1797 1806	seguridad
+T142	Concept 1814 1826	adolescentes
+R121	target Arg1:T135 Arg2:T134	
+A13	Negated T138
+T139	Concept 1831 1842	eliminación
+T143	Concept 1856 1861	recto
+T144	Concept 1871 1882	flatulencia
+R123	in-place Arg1:T139 Arg2:T143	
+*	same-as T144 T139
+T145	Concept 1888 1896	personas
+T146	Concept 1904 1914	enfermedad
+T147	Action 1915 1920	nacen
+T148	Concept 1925 1928;1929 1934	dos genes
+T149	Concept 1938 1945	células
+T150	Concept 1946 1957	falciformes
+R124	in-context Arg1:T145 Arg2:T146	
+R125	in-context Arg1:T149 Arg2:T150	
+R126	subject Arg1:T147 Arg2:T145	
+R127	in-context Arg1:T147 Arg2:T148	
+R128	in-context Arg1:T148 Arg2:T149	
+T151	Concept 1984 1991	diarrea
+T152	Action 1992 2002	desaparece
+T153	Predicate 2003 2010	después
+T154	Concept 2019 2023	días
+T155	Action 2056 2062	buscar
+T156	Concept 2066 2072	origen
+T157	Predicate 1966 1970	cada
+T158	Concept 1971 1976	padre
+R129	arg Arg1:T157 Arg2:T158	
+R130	in-context Arg1:T148 Arg2:T157	
+R131	subject Arg1:T152 Arg2:T151	
+R132	in-time Arg1:T152 Arg2:T153	
+R133	arg Arg1:T153 Arg2:T154	
+R134	target Arg1:T155 Arg2:T156	
+R135	entails Arg1:T152 Arg2:T155	
+A14	Negated T155
+T159	Concept 2077 2083	eccema
+T160	Action 2090 2097	mejorar
+T161	Action 2100 2108	empeorar
+T162	Concept 2116 2122	tiempo
+T163	Concept 2145 2155	enfermedad
+T164	Concept 2159 2164	larga
+T165	Concept 2165 2173	duración
+R136	subject Arg1:T160 Arg2:T159	
+R137	subject Arg1:T161 Arg2:T159	
+A15	Uncertain T160
+A16	Uncertain T161
+R139	in-context Arg1:T165 Arg2:T164	
+R140	in-context Arg1:T163 Arg2:T165	
+R141	is-a Arg1:T159 Arg2:T163	
+T166	Concept 2175 2180	Altas
+T167	Concept 2181 2186	dosis
+T168	Concept 2198 2207	vitaminas
+T169	Reference 2190 2197	algunas
+T171	Concept 2225 2234	problemas
+R142	is-a Arg1:T169 Arg2:T168	
+R143	in-context Arg1:T167 Arg2:T166	
+R144	in-context Arg1:T167 Arg2:T169	
+R145	causes Arg1:T167 Arg2:T171	
+A17	Uncertain T171
+T170	Predicate 2240 2247	niveles
+T172	Concept 2251 2261	colesterol
+T173	Action 2272 2280	aumentar
+T174	Concept 2288 2292	edad
+R146	arg Arg1:T170 Arg2:T172	
+R147	target Arg1:T173 Arg2:T170	
+R148	in-context Arg1:T173 Arg2:T174	
+T175	Concept 2297 2303	comida
+T176	Concept 2321 2330	proteínas
+T177	Concept 2332 2345	carbohidratos
+T178	Concept 2348 2354	grasas
+R149	part-of Arg1:T176 Arg2:T175	
+R150	part-of Arg1:T177 Arg2:T175	
+R151	part-of Arg1:T178 Arg2:T175	
+T179	Concept 2370 2376	prueba
+T180	Concept 2377 2385	estándar
+T181	Concept 2394 2400;2401 2403;2404 2412	cáncer de próstata
+R152	in-context Arg1:T179 Arg2:T180	
+R122	in-context Arg1:T135 Arg2:T136	
+R153	in-context Arg1:T135 Arg2:T138	
+T137	Predicate 1773 1779	acerca
+R154	domain Arg1:T137 Arg2:T135	
+R155	arg Arg1:T137 Arg2:T140	
+R156	arg Arg1:T137 Arg2:T141	
+R157	in-context Arg1:T141 Arg2:T142	
+T182	Action 2359 2365	existe
+A18	Negated T182
+R158	subject Arg1:T182 Arg2:T179	
+R159	target Arg1:T182 Arg2:T181	
+T183	Concept 2418 2426	resfríos
+T185	Concept 2444 2450	fiebre
+T186	Concept 2453 2460	dolores
+T187	Concept 2464 2470	cabeza
+R160	in-place Arg1:T186 Arg2:T187	
+R161	causes Arg1:T183 Arg2:T185	
+A19	Diminished T185
+A20	Diminished T186
+R162	causes Arg1:T183 Arg2:T186	
+T184	Concept 2476 2490	inmunizaciones
+T188	Concept 2510 2515	fácil
+T189	Concept 2524 2532	riesgosa
+T190	Concept 2544 2550	inmune
+T191	Concept 2562 2567	bebés
+T192	Action 2574 2583	vacunarse
+T193	Concept 2594 2599	niños
+T194	Concept 2600 2607	mayores
+T195	Concept 2614 2621	adultos
+R163	target Arg1:T192 Arg2:T191	
+R164	in-context Arg1:T193 Arg2:T194	
+T197	Action 2574 2583	vacunarse
+A21	Uncertain T197
+R165	target Arg1:T197 Arg2:T193	
+R166	target Arg1:T197 Arg2:T195	
+T196	Concept 2499 2505	manera
+T198	Predicate 2506 2509	más
+R167	domain Arg1:T198 Arg2:T196	
+R168	arg Arg1:T198 Arg2:T188	
+T199	Predicate 2518 2523	menos
+R169	domain Arg1:T199 Arg2:T196	
+R170	arg Arg1:T199 Arg2:T189	
+R171	in-context Arg1:T198 Arg2:T190	
+R172	in-context Arg1:T199 Arg2:T190	
+T200	Predicate 1228 1235	mayoría
+T201	Concept 1243 1248	veces
+R174	domain Arg1:T200 Arg2:T201	
+R175	in-time Arg1:T94 Arg2:T200	
+A2	Uncertain T14
+A22	Uncertain T32
+A23	Uncertain T71
+R73	causes Arg1:T72 Arg2:T77	
+R87	subject Arg1:T95 Arg2:T91	
+R83	in-time Arg1:T95 Arg2:T90	
+A24	Uncertain T90
+R84	in-context Arg1:T160 Arg2:T162	
+R138	in-context Arg1:T161 Arg2:T162	
+R173	is-a Arg1:T184 Arg2:T198	
+R176	is-a Arg1:T184 Arg2:T199	

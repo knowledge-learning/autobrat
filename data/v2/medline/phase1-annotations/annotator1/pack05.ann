@@ -81,7 +81,7 @@ T53	Predicate 979 984	misma
 R39	domain Arg1:T53 Arg2:T51	
 R40	arg Arg1:T53 Arg2:T52	
 T54	Predicate 919 922	más
-R41	domain Arg1:T54 Arg2:T50	
+R41	arg Arg1:T54 Arg2:T50	
 T55	Concept 923 932;933 935;936 943	problemas de memoria
 T57	Concept 952 960	normales
 R43	causes Arg1:T48 Arg2:T54	

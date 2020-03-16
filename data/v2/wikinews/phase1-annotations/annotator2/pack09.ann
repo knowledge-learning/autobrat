@@ -1,0 +1,577 @@
+T1	Concept 25 39	barranquillero
+T2	Concept 40 47;48 57;58 67	Armando Benedetti Villaneda
+T3	Concept 69 74	autor
+T4	Concept 79 87;88 90;91 94	proyecto de ley
+T5	Action 96 102	afirmó
+T6	Concept 110 118	Congreso
+T7	Action 123 128	sirve
+T8	Action 149 160	hundimiento
+T9	Concept 165 173;174 176;177 180	proyecto de ley
+T10	Action 181 188	muestra
+T11	Concept 196 202	Senado
+T12	Concept 207 218	cavernícola
+T13	Concept 251 259	catedral
+T14	Concept 279 288	pesebrera
+R1	is-a Arg1:T2 Arg2:T1	
+R2	is-a Arg1:T2 Arg2:T3	
+R3	in-context Arg1:T3 Arg2:T4	
+R4	subject Arg1:T5 Arg2:T2	
+R5	subject Arg1:T7 Arg2:T6	
+R6	target Arg1:T5 Arg2:T7	
+R7	subject Arg1:T8 Arg2:T9	
+R8	subject Arg1:T10 Arg2:T8	
+R9	in-context Arg1:T12 Arg2:T11	
+R10	target Arg1:T10 Arg2:T12	
+R11	target Arg1:T5 Arg2:T10	
+T15	Concept 309 322	investigación
+T16	Concept 344 352	desastre
+T17	Predicate 359 371	responsables
+R12	domain Arg1:T17 Arg2:T16	
+T18	Action 380 385	sigue
+T19	Concept 386 393	abierta
+T20	Concept 439 454	indemnizaciones
+T21	Predicate 457 460	700
+T22	Concept 461 470	marineros
+R13	domain Arg1:T21 Arg2:T22	
+T23	Action 323 328	sobre
+T24	Concept 333 339	causas
+R14	subject Arg1:T23 Arg2:T15	
+R15	target Arg1:T23 Arg2:T24	
+R16	in-context Arg1:T24 Arg2:T16	
+T25	Predicate 415 425	pendientes
+T26	Concept 430 435	pagos
+T27	Concept 727 730;731 744	MTV Latinoamérica
+T28	Predicate 479 482	70%
+R17	subject Arg1:T18 Arg2:T15	
+R18	target Arg1:T18 Arg2:T19	
+R19	in-context Arg1:T26 Arg2:T20	
+R20	in-context Arg1:T20 Arg2:T21	
+R21	target Arg1:T18 Arg2:T25	
+R22	domain Arg1:T25 Arg2:T26	
+T29	Concept 486 497	popularidad
+T30	Concept 512 521	encuestas
+T31	Concept 523 528	Uribe
+T32	Concept 749 755	músico
+T33	Concept 620 629	candidato
+T34	Action 642 652	contrapeso
+T35	Concept 564 574	reelección
+T36	Predicate 551 560	asegurada
+T37	Action 529 536	tendría
+R23	subject Arg1:T37 Arg2:T31	
+R24	arg Arg1:T36 Arg2:T35	
+R25	target Arg1:T37 Arg2:T36	
+T38	Concept 657 667;668 676	periodista mexicana
+T39	Action 591 597	existe
+A1	Negated T39
+R26	subject Arg1:T39 Arg2:T33	
+R29	domain Arg1:T28 Arg2:T29	
+R30	domain Arg1:T28 Arg2:T30	
+R27	target Arg1:T39 Arg2:T34	
+R28	target Arg1:T34 Arg2:T31	
+R31	entails Arg1:T39 Arg2:T37	
+T40	Concept 677 682;683 686	Ilana Sod
+T41	Action 687 696	entregará
+T42	Concept 700 706;707 713	premio Chiuku
+T43	Concept 769 775;776 780	Wyclef Jean
+T44	Concept 758 768	filántropo
+R32	is-a Arg1:T43 Arg2:T44	
+T45	Action 788 795	trabajo
+T46	Concept 796 807	humanitario
+T47	Concept 845 849	Yélé
+T48	Concept 823 835	organización
+T50	Concept 851 856	Uribe
+T51	Predicate 857 864	tendría
+T52	Predicate 865 869	esta
+T53	Concept 870 876	semana
+R35	domain Arg1:T52 Arg2:T53	
+T54	Concept 897 902	grupo
+T55	Concept 906 920	parlamentarios
+T56	Action 928 933	apoya
+R36	subject Arg1:T56 Arg2:T55	
+R37	target Arg1:T56 Arg2:T50	
+T57	Concept 1019 1027;1028 1036	programa político
+T58	Concept 958 965	partido
+R38	is-a Arg1:T40 Arg2:T38	
+R39	subject Arg1:T41 Arg2:T40	
+R40	target Arg1:T41 Arg2:T42	
+T60	Action 715 716;717 723	a nombre
+R41	target Arg1:T60 Arg2:T27	
+R42	target Arg1:T41 Arg2:T60	
+R43	target Arg1:T41 Arg2:T43	
+R44	is-a Arg1:T43 Arg2:T32	
+R33	subject Arg1:T45 Arg2:T43	
+R45	target Arg1:T45 Arg2:T46	
+R46	target Arg1:T41 Arg2:T45	
+T49	Concept 836 844	haitiana
+R34	is-a Arg1:T47 Arg2:T49	
+R47	is-a Arg1:T47 Arg2:T48	
+R48	in-place Arg1:T45 Arg2:T47	
+T61	Action 880 889	encuentro
+R49	arg Arg1:T51 Arg2:T52	
+R50	in-time Arg1:T61 Arg2:T51	
+R51	target Arg1:T61 Arg2:T50	
+R52	in-context Arg1:T54 Arg2:T55	
+R53	target Arg1:T61 Arg2:T54	
+T62	Action 949 954	crear
+R54	subject Arg1:T62 Arg2:T61	
+R55	target Arg1:T62 Arg2:T58	
+R56	in-context Arg1:T57 Arg2:T50	
+T59	Action 990 999	preservar
+R57	target Arg1:T59 Arg2:T57	
+R58	in-context Arg1:T58 Arg2:T59	
+T63	Concept 1059 1062	ley
+T64	Action 1067 1077	reformaría
+T65	Concept 1081 1093	Constitución
+T66	Action 1111 1121	reelección
+T67	Concept 1122 1134	presidencial
+R59	target Arg1:T66 Arg2:T67	
+T68	Concept 1135 1144	inmediata
+R60	in-time Arg1:T66 Arg2:T68	
+T69	Concept 1162 1170	Congreso
+T70	Concept 1174 1183	diciembre
+T71	Predicate 1184 1190	pasado
+R61	domain Arg1:T71 Arg2:T70	
+T72	Concept 1217 1222;1223 1237	Corte Constitucional
+T73	Concept 240 247	fachada
+R62	in-context Arg1:T73 Arg2:T13	
+T74	Predicate 1265 1273	mediados
+T75	Concept 1278 1281	año
+R63	arg Arg1:T74 Arg2:T75	
+T76	Concept 1244 1249	fallo
+T77	Action 1253 1259	espera
+R64	in-time Arg1:T77 Arg2:T74	
+R65	target Arg1:T77 Arg2:T76	
+T78	Concept 1204 1210	examen
+R66	subject Arg1:T64 Arg2:T63	
+R67	target Arg1:T64 Arg2:T65	
+T79	Action 1099 1107	permitir
+R68	subject Arg1:T79 Arg2:T64	
+R69	target Arg1:T79 Arg2:T66	
+T80	Action 1146 1154	aprobada
+R70	subject Arg1:T80 Arg2:T79	
+R71	target Arg1:T80 Arg2:T69	
+R72	in-time Arg1:T80 Arg2:T71	
+T81	Action 1192 1196	pasa
+R73	subject Arg1:T81 Arg2:T80	
+R74	target Arg1:T81 Arg2:T78	
+R75	in-place Arg1:T81 Arg2:T72	
+T82	Concept 1044 1054	actualidad
+T83	Concept 1295 1298	Ban
+R76	in-context Arg1:T76 Arg2:T72	
+R77	target Arg1:T81 Arg2:T77	
+T84	Concept 1311 1314	ONU
+T85	Action 1315 1326	contribuirá
+T86	Concept 1331 1336;1337 1348	ayuda humanitaria
+T87	Concept 1362 1374	damnificados
+T88	Concept 1382 1392	inundación
+T89	Predicate 1449 1455	pasado
+T90	Concept 1456 1463	domingo
+T91	Predicate 1422 1428	varios
+T92	Concept 1429 1439	kilómetros
+R78	domain Arg1:T91 Arg2:T92	
+T93	Concept 1413 1418	radio
+T94	Action 1401 1409	afectado
+R79	subject Arg1:T94 Arg2:T88	
+R80	arg Arg1:T89 Arg2:T90	
+R81	in-time Arg1:T94 Arg2:T89	
+R82	in-context Arg1:T93 Arg2:T91	
+R83	target Arg1:T94 Arg2:T93	
+R84	in-context Arg1:T87 Arg2:T88	
+T95	Action 1299 1303	dijo
+T96	Reference 1286 1290	ella
+R85	subject Arg1:T95 Arg2:T96	
+R86	subject Arg1:T85 Arg2:T84	
+R87	target Arg1:T85 Arg2:T86	
+R88	target Arg1:T85 Arg2:T87	
+R89	target Arg1:T95 Arg2:T85	
+T97	Concept 1468 1478;1479 1486	Secretario General
+T98	Concept 1613 1627;1628 1630;1631 1646	Organizaciones No Gubernamentales
+T99	Concept 1607 1610	ONU
+T100	Concept 1516 1523;1524 1532	capital mexicana
+T101	Concept 1540 1542;1543 1554;1555 1560;1561 1564;1565 1577;1578 1580;1581 1592;1593 1600	62 Conferencia Anual del Departamento de Información Pública
+T102	Action 1503 1509	visita
+R90	subject Arg1:T102 Arg2:T97	
+R91	target Arg1:T102 Arg2:T100	
+R92	in-context Arg1:T101 Arg2:T99	
+R93	in-context Arg1:T101 Arg2:T98	
+R94	target Arg1:T102 Arg2:T101	
+T103	Concept 1653 1658	lunes
+T104	Reference 1648 1652	Este
+R95	is-a Arg1:T104 Arg2:T103	
+T105	Concept 1660 1662	18
+R96	is-a Arg1:T104 Arg2:T105	
+T106	Concept 1687 1692;1693 1700	Unión Europea
+T107	Action 1701 1710	comenzará
+T108	Predicate 1729 1737	millones
+T109	Concept 1741 1748	dólares
+T110	Concept 1752 1757;1758 1768	ayuda extranjera
+T111	Concept 1771 1780	Palestina
+T112	Action 1713 1719	enviar
+T113	Action 1670 1679	anunciado
+R97	in-time Arg1:T113 Arg2:T104	
+R98	subject Arg1:T107 Arg2:T106	
+R99	target Arg1:T107 Arg2:T112	
+R100	subject Arg1:T112 Arg2:T106	
+T114	Concept 1720 1722;1723 1728	de nuevo
+R101	in-context Arg1:T112 Arg2:T114	
+R102	domain Arg1:T108 Arg2:T109	
+R103	target Arg1:T112 Arg2:T108	
+R104	arg Arg1:T108 Arg2:T110	
+R105	in-place Arg1:T110 Arg2:T111	
+T115	Concept 1802 1808	España
+T116	Concept 1887 1896;1897 1900	America’s Cup
+T117	Concept 1866 1880	acontecimiento
+A2	Emphasized T117
+R106	target Arg1:T113 Arg2:T107	
+T118	Concept 1904 1908	2007
+T119	Concept 1953 1957	2008
+R107	in-time Arg1:T116 Arg2:T118	
+R108	is-a Arg1:T116 Arg2:T117	
+T120	Concept 1972 1978	Santón
+T121	Action 1963 1971	señalado
+R109	subject Arg1:T121 Arg2:T120	
+T122	Predicate 1793 1798	único
+T123	Concept 1786 1792	Centro
+R110	domain Arg1:T122 Arg2:T123	
+R111	arg Arg1:T122 Arg2:T115	
+T124	Action 1813 1821	pretende
+T125	Action 1822 1833	anticiparse
+T126	Concept 1840 1845	retos
+T127	Predicate 1846 1857	posteriores
+R112	domain Arg1:T127 Arg2:T126	
+T128	Concept 1933 1939	ciudad
+T129	Concept 2051 2059;2060 2067	Derechos Humanos
+T130	Concept 2071 2077	México
+T131	Concept 2081 2085	2012
+T132	Concept 2097 2100;2101 2108	RIA Novosti
+T133	Concept 2032 2038;2039 2047	Premio Nacional
+T135	Concept 2011 2020;2021 2030	Alejandro Solalinde
+T137	Concept 2001 2010	sacerdote
+R113	is-a Arg1:T135 Arg2:T137	
+T136	Concept 1983 1989	jueves
+T138	Predicate 1990 1996	pasado
+R114	arg Arg1:T138 Arg2:T136	
+R115	in-context Arg1:T133 Arg2:T129	
+R116	in-place Arg1:T133 Arg2:T130	
+R117	in-context Arg1:T133 Arg2:T131	
+T134	Action 2087 2094	declaró
+R118	subject Arg1:T134 Arg2:T135	
+R119	in-time Arg1:T134 Arg2:T138	
+R120	target Arg1:T134 Arg2:T132	
+T139	Concept 2117 2128	estudiantes
+T140	Concept 2137 2144	muertos
+T141	Concept 2174 2182	quemados
+T142	Concept 2183 2188	vivos
+R121	in-context Arg1:T141 Arg2:T142	
+R124	target Arg1:T134 Arg2:T139	
+R122	target Arg1:T134 Arg2:T140	
+R123	target Arg1:T134 Arg2:T141	
+T143	Concept 2194 2203;2204 2211	explosión suicida
+T144	Concept 2219 2224;2225 2230	coche bomba
+T145	Action 2231 2235	dejó
+T146	Predicate 2245 2247	24
+T147	Concept 2248 2256	personas
+T148	Concept 2257 2264	muertas
+T149	Predicate 2267 2269	42
+T150	Concept 2270 2277	heridas
+T151	Concept 2281 2286	Kabul
+T152	Concept 2291 2298	capital
+T153	Concept 2302 2312	Afganistán
+R125	is-a Arg1:T151 Arg2:T152	
+R126	in-place Arg1:T151 Arg2:T153	
+R127	domain Arg1:T149 Arg2:T150	
+R128	in-context Arg1:T147 Arg2:T148	
+R129	domain Arg1:T146 Arg2:T147	
+R130	subject Arg1:T145 Arg2:T144	
+R131	in-context Arg1:T144 Arg2:T143	
+R132	target Arg1:T145 Arg2:T146	
+R133	target Arg1:T145 Arg2:T149	
+T154	Concept 2318 2325	cadenas
+T155	Concept 2326 2334	privadas
+T156	Concept 2338 2348	televisión
+T157	Action 2349 2356	afirman
+T158	Predicate 2381 2384	800
+T159	Concept 2389 2402	manifestantes
+T160	Concept 2417 2425	imágenes
+T161	Action 2405 2416	difundieron
+T162	Concept 2429 2434	gente
+T163	Action 2435 2446	vociferando
+T164	Predicate 2450 2456	contra
+T165	Concept 2461 2469	gobierno
+T166	Predicate 2368 2377	alrededor
+R134	in-context Arg1:T154 Arg2:T155	
+R135	in-context Arg1:T154 Arg2:T156	
+R136	subject Arg1:T157 Arg2:T154	
+R137	domain Arg1:T158 Arg2:T159	
+R138	arg Arg1:T166 Arg2:T158	
+T167	Action 2361 2367	fueron
+R139	subject Arg1:T166 Arg2:T167	
+R140	target Arg1:T157 Arg2:T167	
+R141	subject Arg1:T161 Arg2:T154	
+R142	target Arg1:T161 Arg2:T160	
+R143	subject Arg1:T163 Arg2:T162	
+R144	arg Arg1:T164 Arg2:T165	
+R145	target Arg1:T163 Arg2:T164	
+T168	Concept 2471 2475;2476 2482	Hugo Chávez
+T169	Concept 2484 2494	presidente
+T170	Concept 2498 2507	Venezuela
+T171	Action 2509 2516	anunció
+T172	Action 2520 2532	expropiación
+T173	Concept 2536 2547;2548 2551;2552 2558	Siderúrgica del Turbio
+T174	Concept 2560 2567	Sidetur
+T175	Predicate 2573 2578	mayor
+T176	Concept 2579 2586	empresa
+T177	Concept 2587 2598	siderúrgica
+T178	Concept 2653 2658	acero
+T179	Concept 2667 2679	construcción
+T180	Action 2628 2638	proveedora
+T181	Predicate 2618 2627	principal
+R146	is-a Arg1:T168 Arg2:T169	
+R147	in-place Arg1:T169 Arg2:T170	
+R148	subject Arg1:T171 Arg2:T168	
+R149	target Arg1:T172 Arg2:T173	
+R150	domain Arg1:T175 Arg2:T176	
+R151	domain Arg1:T181 Arg2:T180	
+R152	target Arg1:T180 Arg2:T178	
+R153	in-context Arg1:T180 Arg2:T179	
+*	same-as T173 T174
+R154	in-context Arg1:T173 Arg2:T175	
+R155	in-context Arg1:T176 Arg2:T177	
+R156	in-context Arg1:T173 Arg2:T181	
+T182	Concept 2684 2694;2695 2697;2698 2703;2704 2705;2706 2715;2716 2723	secretaria de Salud y Servicios Humanos
+T186	Action 2744 2748	dijo
+T187	Concept 2757 2769	trabajadores
+T188	Concept 2783 2792	sensibles
+T189	Concept 2799 2805	gripes
+T190	Concept 2820 2827	vacunas
+T191	Concept 2838 2843	gripe
+T192	Action 2812 2819	obtener
+T183	Concept 2725 2733;2734 2742	Kathleen Sebelius
+*	same-as T183 T182
+R157	subject Arg1:T192 Arg2:T187	
+A3	Emphasized T188
+R158	in-context Arg1:T188 Arg2:T189	
+R159	in-context Arg1:T187 Arg2:T188	
+T184	Predicate 2828 2834	contra
+R160	arg Arg1:T184 Arg2:T191	
+R161	in-context Arg1:T190 Arg2:T184	
+R162	target Arg1:T192 Arg2:T190	
+T185	Concept 2869 2877	protesta
+T193	Predicate 3565 3567	17
+T194	Predicate 3584 3586	51
+T195	Concept 2902 2911	políticas
+T196	Concept 2924 2934	neoliberal
+T197	Concept 2950 2954;2955 2961;2962 2968	Juan Manuel Santos
+T198	Concept 3006 3010;3011 3019;3020 3022;3023 3033	Plan Nacional de Desarrollo
+T199	Concept 3047 3060	privatización
+T200	Predicate 3038 3046	eventual
+T201	Concept 3068 3081;3082 3090	universidades públicas
+T202	Concept 3146 3149;3150 3158	ola invernal
+T203	Concept 3127 3139	damnificados
+R163	in-context Arg1:T203 Arg2:T202	
+T204	Action 2889 2897	criticar
+R164	subject Arg1:T204 Arg2:T185	
+R165	in-context Arg1:T195 Arg2:T196	
+T205	Concept 2939 2949	presidente
+R166	is-a Arg1:T197 Arg2:T205	
+R167	target Arg1:T204 Arg2:T195	
+R168	target Arg1:T204 Arg2:T197	
+T206	Action 2981 2988	incluía
+R169	arg Arg1:T200 Arg2:T199	
+R170	in-context Arg1:T199 Arg2:T201	
+T207	Concept 3097 3101	país
+R171	in-place Arg1:T201 Arg2:T207	
+R172	subject Arg1:T186 Arg2:T183	
+R173	target Arg1:T186 Arg2:T192	
+R174	subject Arg1:T206 Arg2:T185	
+T208	Action 2992 3002	desacuerdo
+R175	target Arg1:T206 Arg2:T208	
+R176	target Arg1:T208 Arg2:T198	
+R177	target Arg1:T206 Arg2:T200	
+T209	Action 3107 3118	solidaridad
+R178	target Arg1:T209 Arg2:T203	
+R179	target Arg1:T206 Arg2:T209	
+T210	Concept 3160 3166	Martín
+T211	Action 3181 3186	junto
+T212	Concept 3194 3199	amigo
+T213	Predicate 3203 3208	igual
+T214	Concept 3209 3215	nombre
+R180	domain Arg1:T213 Arg2:T214	
+R181	arg Arg1:T213 Arg2:T212	
+R182	is-a Arg1:T213 Arg2:T210	
+R183	subject Arg1:T211 Arg2:T210	
+R184	target Arg1:T211 Arg2:T212	
+T215	Concept 3310 3316;3317 3320	Barrio Sur
+T216	Predicate 3245 3251	cuatro
+T217	Concept 3252 3261	rapiñeros
+T219	Concept 3276 3283;3284 3286;3287 3291	menores de edad
+R185	arg Arg1:T216 Arg2:T217	
+T218	Action 3231 3240	abordados
+R186	subject Arg1:T218 Arg2:T211	
+R187	target Arg1:T218 Arg2:T216	
+R188	in-context Arg1:T217 Arg2:T219	
+T220	Concept 3299 3305	rambla
+R189	in-context Arg1:T220 Arg2:T215	
+R190	in-place Arg1:T218 Arg2:T220	
+T221	Concept 3344 3351	Twitter
+T222	Concept 3356 3361	sismo
+T223	Action 3365 3371	sintió
+T224	Concept 3378 3386	interior
+T225	Concept 3395 3405	Filadelfia
+T226	Concept 3407 3416	Cleveland
+T227	Concept 3418 3425	Toronto
+T228	Concept 3459 3464;3465 3469	Nueva York
+T229	Concept 3472 3479	Georgia
+R191	subject Arg1:T223 Arg2:T222	
+R192	target Arg1:T223 Arg2:T224	
+R193	target Arg1:T223 Arg2:T225	
+R194	target Arg1:T223 Arg2:T226	
+R195	target Arg1:T223 Arg2:T227	
+T230	Predicate 3434 3439	largo
+T231	Concept 3446 3451	costa
+R196	domain Arg1:T230 Arg2:T231	
+R197	arg Arg1:T230 Arg2:T228	
+R198	arg Arg1:T230 Arg2:T229	
+R199	target Arg1:T223 Arg2:T230	
+T232	Concept 3332 3340	informes
+R200	in-place Arg1:T232 Arg2:T221	
+R201	in-place Arg1:T223 Arg2:T232	
+T233	Concept 3484 3490	región
+T234	Action 3503 3511	afectada
+T235	Concept 3524 3530	sequía
+T236	Predicate 3519 3523	peor
+R202	domain Arg1:T236 Arg2:T235	
+T237	Predicate 3534 3538	seis
+T238	Concept 3539 3546	décadas
+R203	domain Arg1:T237 Arg2:T238	
+R204	subject Arg1:T234 Arg2:T233	
+R205	target Arg1:T234 Arg2:T236	
+R206	in-time Arg1:T234 Arg2:T237	
+T239	Predicate 3611 3613	12
+T240	Predicate 3629 3631	19
+T241	Concept 3568 3573;3574 3575;3576 3581	votos a favor
+T242	Predicate 3590 3596	contra
+T243	Concept 3601 3609	proyecto
+T244	Concept 3614 3626	abstenciones
+T245	Concept 3632 3644	congresistas
+T246	Predicate 3645 3653	ausentes
+R207	domain Arg1:T246 Arg2:T245	
+R208	arg Arg1:T193 Arg2:T241	
+R209	arg Arg1:T194 Arg2:T242	
+R210	arg Arg1:T242 Arg2:T243	
+R211	arg Arg1:T239 Arg2:T244	
+R212	arg Arg1:T240 Arg2:T245	
+T247	Concept 3669 3672;3673 3675	NTN 24
+T248	Concept 3708 3714;3715 3718	página web
+T249	Concept 3730 3737	YouTube
+T250	Concept 3810 3818;3819 3829	gobierno venezolano
+T251	Action 3685 3698	transmitiendo
+R213	subject Arg1:T251 Arg2:T247	
+R214	in-place Arg1:T251 Arg2:T248	
+R215	in-place Arg1:T251 Arg2:T249	
+T252	Predicate 3750 3759	problemas
+T253	Concept 3763 3769	acceso
+T254	Concept 3790 3795	sitio
+T255	Action 3777 3784	bloqueo
+R216	target Arg1:T255 Arg2:T254	
+R217	subject Arg1:T250 Arg2:T255	
+R218	in-context Arg1:T254 Arg2:T247	
+R219	domain Arg1:T252 Arg2:T253	
+R220	in-context Arg1:T251 Arg2:T252	
+R221	in-context Arg1:T251 Arg2:T255	
+T256	Concept 3846 3853;3854 3861	Policía Federal
+T257	Concept 3863 3865	PF
+*	same-as T257 T256
+T258	Concept 3871 3882;3883 3891	Gendarmería Nacional
+T259	Concept 3897 3905	Ejército
+T260	Action 3906 3913	tomaron
+T261	Concept 3917 3924	control
+T262	Concept 3931 3940;3941 3948	seguridad pública
+T263	Predicate 3952 3954	12
+T264	Concept 3955 3965	municipios
+T265	Concept 3970 3976	estado
+T266	Concept 3980 3988	Guerrero
+T267	Predicate 3991 3994	uno
+T268	Concept 3999 4005;4006 4008;4009 4015	Estado de México
+T269	Predicate 4036 4038	43
+T270	Concept 4039 4050;4051 4064	estudiantes desaparecidos
+T272	Concept 4068 4074;4075 4077;4078 4080;4081 4094	Iguala de la Independencia
+T273	Predicate 4098 4104	pasado
+T274	Concept 4105 4107;4108 4110;4111 4121	26 de septiembre
+T275	Concept 4024 4028	caso
+T276	Concept 3831 3839	Personal
+R222	in-context Arg1:T276 Arg2:T256	
+R223	in-context Arg1:T276 Arg2:T258	
+R224	in-context Arg1:T276 Arg2:T259	
+R225	subject Arg1:T260 Arg2:T276	
+R226	domain Arg1:T269 Arg2:T270	
+R227	in-context Arg1:T275 Arg2:T269	
+R228	domain Arg1:T263 Arg2:T264	
+R229	is-a Arg1:T266 Arg2:T265	
+R230	in-place Arg1:T263 Arg2:T266	
+R231	domain Arg1:T267 Arg2:T264	
+R232	in-place Arg1:T267 Arg2:T268	
+R233	in-context Arg1:T261 Arg2:T262	
+R234	target Arg1:T260 Arg2:T261	
+R235	in-place Arg1:T260 Arg2:T263	
+R236	in-place Arg1:T260 Arg2:T267	
+R237	in-place Arg1:T270 Arg2:T272	
+R238	in-time Arg1:T269 Arg2:T273	
+R239	arg Arg1:T273 Arg2:T274	
+R240	target Arg1:T260 Arg2:T275	
+T271	Predicate 4126 4131	única
+T277	Concept 4132 4139	censura
+T278	Concept 4192 4200	noticias
+T279	Concept 4180 4188	buscador
+R241	domain Arg1:T271 Arg2:T277	
+T280	Action 4144 4152	aplicaba
+T281	Concept 4161 4168	versión
+R242	subject Arg1:T280 Arg2:T271	
+R243	in-context Arg1:T279 Arg2:T278	
+R244	target Arg1:T280 Arg2:T281	
+R245	in-place Arg1:T280 Arg2:T279	
+T282	Predicate 4208 4214	tercer
+T283	Predicate 4217 4223	última
+T284	Concept 4224 4236	presentación
+T285	Predicate 4244 4250	primer
+T286	Concept 4251 4256	ronda
+T287	Reference 4260 4264	este
+T288	Concept 4265 4271	torneo
+T289	Concept 4286 4290	ayer
+T290	Concept 4279 4282	día
+R246	is-a Arg1:T289 Arg2:T290	
+T291	Concept 4291 4297	Brasil
+T292	Action 4298 4305	derrotó
+T293	Concept 4320 4327	Camerún
+T294	Concept 4310 4317	goleada
+R247	subject Arg1:T292 Arg2:T291	
+R248	target Arg1:T292 Arg2:T293	
+R249	in-context Arg1:T292 Arg2:T294	
+R250	in-time Arg1:T292 Arg2:T289	
+R251	domain Arg1:T283 Arg2:T284	
+R252	arg Arg1:T282 Arg2:T284	
+R253	arg Arg1:T285 Arg2:T286	
+R254	in-place Arg1:T292 Arg2:T287	
+R255	is-a Arg1:T287 Arg2:T288	
+R256	in-place Arg1:T292 Arg2:T285	
+R257	in-place Arg1:T292 Arg2:T282	
+R258	in-place Arg1:T292 Arg2:T283	
+T295	Concept 4349 4358	Wikipedia
+T296	Concept 4362 4368	inglés
+T297	Action 4369 4376	decidió
+T299	Predicate 4411 4413	24
+T300	Concept 4414 4419	horas
+T301	Concept 4447 4453	reddit
+T302	Concept 4455 4462	OatMeal
+T303	Concept 4481 4489	Internet
+T304	Concept 4493 4498	señal
+T305	Concept 4502 4510	protesta
+R259	in-context Arg1:T295 Arg2:T296	
+R260	subject Arg1:T297 Arg2:T295	
+T298	Action 4389 4395	cierre
+T306	Concept 4400 4406	portal
+R261	is-a Arg1:T295 Arg2:T306	
+R262	subject Arg1:T298 Arg2:T295	
+R263	target Arg1:T298 Arg2:T295	
+R264	domain Arg1:T299 Arg2:T300	
+R265	target Arg1:T298 Arg2:T299	
