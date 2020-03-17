@@ -858,15 +858,12 @@ T1114	Concept 3140 3146	activo
 T1115	Predicate 3136 3139	más
 R1114	arg Arg1:T1115 Arg2:T1114
 T1116	Concept 3150 3158	Islandia
-T1117	Action 3159 3164	entró
-T1118	Concept 3168 3176	erupción
+T1117	Action 3168 3176	erupción
 T1119	Concept 3182 3188	sábado
 R1115	is-a Arg1:T1113 Arg2:T1112
 R1116	in-place Arg1:T1115 Arg2:T1116
-R1117	has-property Arg1:T1113 Arg2:T1115
 R1118	subject Arg1:T1117 Arg2:T1113
-R1119	in-context Arg1:T1117 Arg2:T1118
-R1120	in-time Arg1:T1117 Arg2:T1119
+R1120	in-time Arg1:T1117 Arg2:T60
 T1120	Concept 3356 3362	países
 T1121	Concept 3368 3375	Francia
 T1122	Concept 3377 3382;3383 3390	Nueva Zelanda
@@ -1295,3 +1292,6 @@ T43	Predicate 3012 3019	durante
 T58	Concept 3027 3032	horas
 R311	arg Arg1:T43 Arg2:T1111	
 R312	domain Arg1:T43 Arg2:T58	
+*	same-as T1113 T1115
+T60	Predicate 3177 3181	este
+R313	domain Arg1:T60 Arg2:T1119	
