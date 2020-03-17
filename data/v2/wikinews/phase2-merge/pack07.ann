@@ -1132,35 +1132,25 @@ R1259	in-context Arg1:T1273 Arg2:T1272
 R1260	in-place Arg1:T1273 Arg2:T1274
 R1261	target Arg1:T1271 Arg2:T1273
 T1275	Concept 7826 7838	viceministro
-T1276	Concept 7848 7858	Industrias
-T1277	Concept 7859 7866	Básicas
-T1278	Concept 7869 7876	Minería
+T1276	Concept 7848 7858;7859 7866;7867 7868;7869 7876	Industrias Básicas y Minería
 T1279	Concept 7878 7882;7883 7890	José Paredes
-T1280	Action 7892 7901	argumentó
-T1281	Concept 7905 7910	favor
+T1280	Action 7905 7910	favor
 T1282	Concept 7915 7922	decreto
-T1283	Concept 7931 7940	necesario
-T1284	Concept 7949 7959	desarrollo
+T1284	Action 7949 7959	desarrollo
 T1285	Concept 7963 7968	obras
 T1286	Concept 7969 7977	públicas
 T1287	Concept 7990 7997	insumos
 T1288	Concept 7998 8007	metálicos
 T1289	Concept 8008 8018	necesarios
 T1290	Action 8032 8040	llegaban
-T1291	Predicate 8044 8050	sector
+T1291	Concept 8044 8050	sector
 T1292	Concept 8051 8058	público
-R1262	domain Arg1:T1291 Arg2:T1292
-R1263	in-context Arg1:T1276 Arg2:T1277
-R1264	in-context Arg1:T1276 Arg2:T1278
+R1262	in-context Arg1:T1291 Arg2:T1292
 R1265	in-context Arg1:T1275 Arg2:T1276
 R1266	is-a Arg1:T1279 Arg2:T1275
 R1267	subject Arg1:T1280 Arg2:T1279
-R1268	in-context Arg1:T1280 Arg2:T1281
-R1269	in-context Arg1:T1281 Arg2:T1282
 R1270	in-context Arg1:T1285 Arg2:T1286
-R1271	in-context Arg1:T1282 Arg2:T1283
-R1272	in-context Arg1:T1283 Arg2:T1284
-R1273	in-context Arg1:T1284 Arg2:T1285
+R1273	target Arg1:T1284 Arg2:T1285
 R1274	in-context Arg1:T1287 Arg2:T1288
 R1275	in-context Arg1:T1287 Arg2:T1289
 R1276	subject Arg1:T1290 Arg2:T1287
@@ -1300,3 +1290,6 @@ R252	domain Arg1:T270 Arg2:T271
 R255	arg Arg1:T270 Arg2:T269	
 R257	entails Arg1:T265 Arg2:T254	
 R266	entails Arg1:T274 Arg2:T276	
+R271	target Arg1:T1280 Arg2:T1284	
+R329	subject Arg1:T1284 Arg2:T1282	
+A17	Negated T1290
