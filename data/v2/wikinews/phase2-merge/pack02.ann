@@ -479,7 +479,7 @@ R228	in-context Arg1:T257 Arg2:T258
 R229	domain Arg1:T256 Arg2:T257
 R230	in-time Arg1:T255 Arg2:T254
 R231	subject Arg1:T254 Arg2:T253
-R232	target Arg1:T254 Arg2:T257
+R232	target Arg1:T254 Arg2:T256
 T259	Concept 9326 9334	ponencia
 T260	Concept 9346 9352	sesión
 T261	Concept 9378 9382	ayer
@@ -493,7 +493,6 @@ T265	Concept 9455 9466	recreativos
 T266	Action 9490 9500	aprobación
 T267	Concept 9507 9510	ley
 T268	Concept 9543 9548;9549 9556	orden natural
-A3	Negated T268
 T269	Concept 9409 9416;9417 9429	parejas homosexuales
 R236	in-context Arg1:T264 Arg2:T269
 R237	target Arg1:T263 Arg2:T264
@@ -501,10 +500,10 @@ R238	has-property Arg1:T264 Arg2:T265
 T270	Action 9476 9484	opondría
 R239	subject Arg1:T270 Arg2:T262
 R240	target Arg1:T270 Arg2:T266
-T271	Action 9522 9528	estaba
-R241	subject Arg1:T271 Arg2:T267
+T271	Action 9532 9538	contra
+R241	subject Arg1:T271 Arg2:T277
 R242	target Arg1:T271 Arg2:T268
-R243	target Arg1:T266 Arg2:T271
+R243	target Arg1:T266 Arg2:T277
 T1001	Concept 342 353	Conferencia
 T1002	Action 357 365	dividirá
 R1001	subject Arg1:T1002 Arg2:T1001
@@ -1200,3 +1199,8 @@ R292	subject Arg1:T1312 Arg2:T1309
 R293	subject Arg1:T1311 Arg2:T1309	
 R294	causes Arg1:T1312 Arg2:T1319	
 R295	causes Arg1:T1312 Arg2:T1304	
+R296	target Arg1:T263 Arg2:T270	
+R297	in-place Arg1:T263 Arg2:T259	
+T277	Reference 9504 9506	la
+R298	is-a Arg1:T277 Arg2:T267	
+R299	target Arg1:T263 Arg2:T271	
