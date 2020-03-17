@@ -1009,7 +1009,7 @@ T1201	Concept 5192 5204;5205 5207;5208 5211;5212 5220;5221 5227	Organización de
 *	same-as T1201 T1200
 R1194	in-place Arg1:T1199 Arg2:T1200
 T1202	Action 5229 5236	condenó
-T1203	Concept 5240 5245	acoso
+T1203	Action 5240 5245	acoso
 T1204	Concept 5255 5263	embajada
 T1205	Concept 5267 5273	Brasil
 T1206	Concept 5277 5288	Tegucigalpa
@@ -1019,25 +1019,24 @@ T1209	Action 5319 5326	detenga
 R1195	subject Arg1:T1202 Arg2:T1199
 R1196	target Arg1:T1202 Arg2:T1203
 R1197	in-context Arg1:T1204 Arg2:T1205
-R1198	in-place Arg1:T1203 Arg2:T1204
+R1198	target Arg1:T1203 Arg2:T1204
 R1199	in-place Arg1:T1204 Arg2:T1206
 R1200	subject Arg1:T1207 Arg2:T1199
-R1201	target Arg1:T1207 Arg2:T1208
-R1202	in-context Arg1:T1207 Arg2:T1209
+R1201	target Arg1:T1207 Arg2:T1209
 R1203	subject Arg1:T1209 Arg2:T1208
-T1210	Concept 5661 5662;5663 5671;5672 5674;5675 5683	8 millones de personas
+T1210	Predicate 5661 5662;5663 5671	8 millones
 T1211	Action 5690 5700	convocadas
 T1212	Predicate 5723 5730	mayores
 T1213	Concept 5734 5736;5737 5741	16 años
 T1214	Action 5751 5758	escoger
 T1215	Concept 5766 5771	urnas
-T1216	Concept 5782 5788;5789 5799	15.236 concejales
+T1216	Predicate 5782 5788	15.236
 T1217	Concept 5807 5814	sistema
 T1218	Concept 5815 5825	escalonado
 T1219	Action 5828 5835	vigente
 T1220	Concept 5842 5846	1976
 T1221	Action 5854 5863	concluirá
-T1222	Concept 5870 5876	primer
+T1222	Predicate 5870 5876	primer
 T1223	Concept 5877 5886	trimestre
 T1224	Concept 5890 5894	2008
 T1225	Concept 5903 5905;5906 5914	31 miembros
@@ -1046,19 +1045,16 @@ T1227	Action 5938 5947	presidido
 T1228	Concept 5948 5955	siempre
 T1229	Concept 5960 5966	Castro
 A1006	Uncertain T1210
-R1204	subject Arg1:T1211 Arg2:T1210
-R1205	domain Arg1:T1212 Arg2:T1210
+R1204	target Arg1:T1211 Arg2:T1210
 R1206	arg Arg1:T1212 Arg2:T1213
-R1207	subject Arg1:T1214 Arg2:T1210
+R1207	subject Arg1:T1214 Arg2:T1211
 R1208	in-place Arg1:T1214 Arg2:T1215
 R1209	target Arg1:T1214 Arg2:T1216
 R1210	in-context Arg1:T1217 Arg2:T1218
 R1211	in-time Arg1:T1219 Arg2:T1220
 R1212	subject Arg1:T1219 Arg2:T1217
-R1213	in-context Arg1:T1223 Arg2:T1222
-R1214	in-context Arg1:T1214 Arg2:T1217
+R1214	in-context Arg1:T1214 Arg2:T1219
 R1215	target Arg1:T1221 Arg2:T1214
-R1217	in-time Arg1:T1223 Arg2:T1224
 R1218	in-context Arg1:T1225 Arg2:T1226
 R1219	subject Arg1:T1227 Arg2:T1229
 R1220	in-time Arg1:T1227 Arg2:T1228
@@ -1253,7 +1249,6 @@ R1019	target Arg1:T1017 Arg2:T1021
 R1035	in-place Arg1:T1041 Arg2:T1039
 R1051	in-context Arg1:T1047 Arg2:T1050
 R1315	domain Arg1:T1115 Arg2:T1112
-R1216	in-time Arg1:T1221 Arg2:T1223
 R1173	in-context Arg1:T1175 Arg2:T1176
 R1176	subject Arg1:T1178 Arg2:T1175
 A14	Negated T1009
@@ -1295,3 +1290,13 @@ R170	domain Arg1:T172 Arg2:T174
 R178	in-place Arg1:T173 Arg2:T176	
 R181	entails Arg1:T180 Arg2:T177	
 R183	target Arg1:T180 Arg2:T172	
+T93	Concept 5675 5683	personas
+R319	domain Arg1:T1210 Arg2:T93	
+R320	has-property Arg1:T1211 Arg2:T1212	
+T324	Concept 5789 5799	concejales
+R321	domain Arg1:T1216 Arg2:T324	
+T325	Predicate 5836 5841	desde
+R322	arg Arg1:T325 Arg2:T1220	
+R323	domain Arg1:T1222 Arg2:T1223	
+R324	arg Arg1:T1222 Arg2:T1224	
+R325	in-time Arg1:T1221 Arg2:T1222	
