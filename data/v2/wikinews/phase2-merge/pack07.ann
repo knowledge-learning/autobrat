@@ -42,10 +42,9 @@ T23	Concept 534 543	izquierda
 T24	Concept 548 561	recientemente
 T25	Action 565 572	cobrado
 T26	Concept 573 583	celebridad
-T27	Concept 592 600	reclamos
 T28	Action 614 623	aparición
 T29	Concept 631 637	restos
-T30	Action 641 650	efectuado
+T30	Action 592 600	reclamos
 T31	Concept 654 659	poeta
 T32	Concept 660 669	argentino
 T33	Concept 670 674;675 681	Juan Gelman
@@ -53,23 +52,19 @@ R19	in-context Arg1:T31 Arg2:T32
 R20	is-a Arg1:T33 Arg2:T31
 R21	subject Arg1:T30 Arg2:T33
 R22	target Arg1:T28 Arg2:T29
-R23	target Arg1:T30 Arg2:T27
-R24	in-context Arg1:T30 Arg2:T28
+R24	target Arg1:T30 Arg2:T28
 R25	in-context Arg1:T22 Arg2:T23
 R26	is-a Arg1:T21 Arg2:T22
 R27	subject Arg1:T25 Arg2:T21
 R28	target Arg1:T25 Arg2:T26
 R29	in-time Arg1:T25 Arg2:T24
-R30	in-context Arg1:T25 Arg2:T30
 T34	Action 871 878	emisión
 T36	Concept 889 897	programa
 T37	Concept 898 907	dominical
 T38	Concept 908 913;914 925	¡Aló, presidente!
-T39	Concept 927 933	Chávez
 T40	Action 934 941	anunció
 T41	Concept 950 963	instalaciones
 T42	Concept 967 974	Sidetur
-T43	Concept 987 996	propiedad
 T44	Concept 1003 1009	nación
 T45	Action 1013 1019	ordenó
 T46	Action 1023 1035	movilización
@@ -92,21 +87,15 @@ R33	target Arg1:T34 Arg2:T38
 R34	in-context Arg1:T34 Arg2:T35
 R35	subject Arg1:T40 Arg2:T59
 R36	in-time Arg1:T34 Arg2:T37
-R40	target Arg1:T40 Arg2:T58
 R41	in-context Arg1:T40 Arg2:T34
 R37	in-context Arg1:T41 Arg2:T42
-T58	Action 983 986	ser
-R39	subject Arg1:T58 Arg2:T41
-R42	target Arg1:T58 Arg2:T43
-R43	subject Arg1:T45 Arg2:T60
+R43	subject Arg1:T45 Arg2:T59
 R44	target Arg1:T46 Arg2:T47
 R45	target Arg1:T45 Arg2:T46
 R46	in-context Arg1:T49 Arg2:T50
 R47	target Arg1:T48 Arg2:T49
-R48	in-context Arg1:T45 Arg2:T48
-R49	subject Arg1:T51 Arg2:T39
+R49	subject Arg1:T51 Arg2:T59
 T59	Concept 927 933	Chávez
-T60	Concept 927 933	Chávez
 R50	subject Arg1:T53 Arg2:T52
 R51	target Arg1:T53 Arg2:T54
 R52	target Arg1:T57 Arg2:T55
@@ -146,9 +135,6 @@ R69	subject Arg1:T75 Arg2:T74
 R70	target Arg1:T75 Arg2:T76
 R71	target Arg1:T77 Arg2:T75
 R72	in-time Arg1:T77 Arg2:T72
-T79	Action 1938 1947	sucedería
-A4	Negated T79
-R74	is-a Arg1:T75 Arg2:T79
 T80	Concept 2064 2069	Barak
 T81	Action 2078 2082	dijo
 T82	Concept 2087 2093	Israel
@@ -169,14 +155,9 @@ R81	subject Arg1:T88 Arg2:T89
 T90	Concept 2212 2221	operación
 T91	Concept 2225 2229	Gaza
 R82	in-place Arg1:T90 Arg2:T91
-T92	Action 2191 2195	trae
+T92	Action 2200 2205	cerca
 R83	subject Arg1:T92 Arg2:T88
-T93	Concept 2200 2205	cerca
-R84	target Arg1:T92 Arg2:T93
-R85	in-context Arg1:T92 Arg2:T90
-A5	Emphasized T93
 R86	target Arg1:T87 Arg2:T92
-R87	in-context Arg1:T83 Arg2:T87
 T94	Concept 2403 2411	cantante
 T95	Action 2416 2426	acompañado
 T96	Concept 2434 2444	colombiano
@@ -367,7 +348,6 @@ R183	in-context Arg1:T177 Arg2:T180
 R184	in-time Arg1:T182 Arg2:T183
 R185	subject Arg1:T182 Arg2:T184
 R186	target Arg1:T182 Arg2:T177
-R38	in-context Arg1:T58 Arg2:T44
 R65	part-of Arg1:T65 Arg2:T61
 T64	Concept 1850 1854	todo
 R187	subject Arg1:T77 Arg2:T64
@@ -842,8 +822,8 @@ T1107	Concept 2946 2956	invitación
 T1108	Action 2968 2974	vibrar
 T1109	Concept 2981 2993	espectadores
 T1110	Concept 3002 3011	canciones
-T1111	Concept 3020 3026;3027 3032	cuatro horas
-R1085	target Arg1:T1094 Arg2:T1093
+T1111	Concept 3020 3026	cuatro
+R1085	target Arg1:T1094 Arg2:T39
 R1086	subject Arg1:T1094 Arg2:T1096
 R1087	is-a Arg1:T1096 Arg2:T1095
 R1088	is-a Arg1:T1098 Arg2:T1097
@@ -871,7 +851,7 @@ R1109	subject Arg1:T1108 Arg2:T1098
 R1110	subject Arg1:T1108 Arg2:T1096
 R1111	target Arg1:T1108 Arg2:T1109
 R1112	in-context Arg1:T1108 Arg2:T1110
-R1113	in-time Arg1:T1108 Arg2:T1111
+R1113	in-time Arg1:T1108 Arg2:T43
 T1112	Concept 3115 3121	volcán
 T1113	Concept 3122 3131	Grímsvötn
 T1114	Concept 3140 3146	activo
@@ -1296,3 +1276,22 @@ R1173	in-context Arg1:T1175 Arg2:T1176
 R1176	subject Arg1:T1178 Arg2:T1175
 A14	Negated T1009
 R18	causes Arg1:T20 Arg2:T16	
+R23	in-context Arg1:T29 Arg2:T21	
+R30	causes Arg1:T30 Arg2:T25	
+R48	target Arg1:T45 Arg2:T48	
+R38	part-of Arg1:T41 Arg2:T44	
+R39	target Arg1:T40 Arg2:T41	
+T27	Action 1888 1895	someter
+R40	subject Arg1:T27 Arg2:T74	
+R42	target Arg1:T27 Arg2:T76	
+A4	Negated T27
+A15	Uncertain T77
+R74	target Arg1:T92 Arg2:T90	
+R84	subject Arg1:T87 Arg2:T80	
+R85	in-context Arg1:T81 Arg2:T87	
+T39	Reference 2717 2719	El
+R87	is-a Arg1:T39 Arg2:T1093	
+T43	Predicate 3012 3019	durante
+T58	Concept 3027 3032	horas
+R311	arg Arg1:T43 Arg2:T1111	
+R312	domain Arg1:T43 Arg2:T58	
