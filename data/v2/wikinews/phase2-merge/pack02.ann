@@ -1042,7 +1042,6 @@ R1278	in-context Arg1:T1304 Arg2:T1305
 R1279	in-context Arg1:T1302 Arg2:T1303
 R1280	target Arg1:T1304 Arg2:T1302
 T1309	Concept 8938 8944	Neymar
-T1310	Action 8949 8954	logró
 T1311	Action 8955 8963	disparar
 T1312	Action 8966 8971	poner
 T1313	Concept 8975 8980	balón
@@ -1056,13 +1055,9 @@ T1316	Concept 9011 9017	golazo
 T1317	Concept 9001 9010	verdadero
 R1285	in-context Arg1:T1316 Arg2:T1317
 R1286	is-a Arg1:T1312 Arg2:T1316
-R1287	target Arg1:T1310 Arg2:T1311
-R1288	target Arg1:T1310 Arg2:T1312
-R1289	subject Arg1:T1310 Arg2:T1309
 T1318	Concept 9033 9043	brasileños
 T1319	Action 9047 9054	ventaja
 R1290	target Arg1:T1319 Arg2:T1318
-R1291	causes Arg1:T1310 Arg2:T1319
 T1320	Action 9261 9268	asegura
 T1321	Predicate 9269 9272	más
 T1322	Concept 9284 9289	casos
@@ -1201,3 +1196,7 @@ R289	target Arg1:T1295 Arg2:T1296
 R290	entails Arg1:T1295 Arg2:T1289	
 T276	Concept 8525 8532	antigua
 R291	has-property Arg1:T242 Arg2:T276	
+R292	subject Arg1:T1312 Arg2:T1309	
+R293	subject Arg1:T1311 Arg2:T1309	
+R294	causes Arg1:T1312 Arg2:T1319	
+R295	causes Arg1:T1312 Arg2:T1304	
