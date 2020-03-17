@@ -1199,3 +1199,5 @@ R287	target Arg1:T1289 Arg2:T1288
 R288	target Arg1:T1289 Arg2:T1292	
 R289	target Arg1:T1295 Arg2:T1296	
 R290	entails Arg1:T1295 Arg2:T1289	
+T276	Concept 8525 8532	antigua
+R291	has-property Arg1:T242 Arg2:T276	
