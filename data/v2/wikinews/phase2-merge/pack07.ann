@@ -297,14 +297,13 @@ T163	Concept 4299 4305	vacuna
 T165	Concept 4316 4321	gripe
 T166	Concept 4322 4323;4324 4330	A (H1N1)
 R161	is-a Arg1:T166 Arg2:T165
-R163	has-property Arg1:T163 Arg2:T162
-R164	has-property Arg1:T163 Arg2:T161
+R163	in-context Arg1:T163 Arg2:T162
+R164	in-context Arg1:T163 Arg2:T161
 R165	subject Arg1:T157 Arg2:T156
 R166	target Arg1:T157 Arg2:T158
 R167	subject Arg1:T158 Arg2:T156
-R168	in-context Arg1:T158 Arg2:T159
-R169	target Arg1:T159 Arg2:T163
-R170	in-context Arg1:T163 Arg2:T166
+R168	target Arg1:T158 Arg2:T159
+R169	target Arg1:T159 Arg2:T79
 T160	Concept 4457 4466	ceremonia
 T167	Action 4470 4479	realizará
 T168	Concept 4480 4483	hoy
@@ -1292,3 +1291,6 @@ R318	in-place Arg1:T143 Arg2:T142
 R145	subject Arg1:T143 Arg2:T137	
 A5	Emphasized T1145
 A16	Emphasized T1148
+T79	Action 4306 4312	contra
+R149	target Arg1:T79 Arg2:T166	
+R150	subject Arg1:T79 Arg2:T163	
