@@ -562,12 +562,11 @@ T299	Concept 8097 8106	militante
 T300	Concept 8113 8121;8122 8132;8133 8136;8137 8144	Juventud Socialista del Uruguay
 T302	Predicate 8180 8185	hasta
 T303	Concept 8190 8192;8193 8198	72 horas
-T304	Concept 8213 8225	desaparición
+T304	Action 8213 8225	desaparición
 T305	Predicate 8199 8206	después
 R288	subject Arg1:T297 Arg2:T296
-R289	in-context Arg1:T298 Arg2:T299
 R290	in-context Arg1:T299 Arg2:T300
-R291	target Arg1:T297 Arg2:T298
+R291	target Arg1:T297 Arg2:T256
 R295	in-time Arg1:T297 Arg2:T302
 T301	Concept 8394 8403;8404 8408	Elisabeth Byrs
 T306	Concept 8410 8418	portavoz
@@ -1293,3 +1292,11 @@ R266	entails Arg1:T274 Arg2:T276
 R271	target Arg1:T1280 Arg2:T1284	
 R329	subject Arg1:T1284 Arg2:T1282	
 A17	Negated T1290
+T256	Reference 8087 8089	al
+R330	is-a Arg1:T256 Arg2:T298	
+R289	is-a Arg1:T256 Arg2:T299	
+R331	target Arg1:T304 Arg2:T256	
+T266	Action 8158 8166	búsqueda
+T326	Concept 8170 8176	tiempo
+R332	has-property Arg1:T266 Arg2:T326	
+R333	in-context Arg1:T326 Arg2:T302	
