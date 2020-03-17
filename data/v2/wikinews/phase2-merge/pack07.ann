@@ -906,28 +906,24 @@ R1142	subject Arg1:T1141 Arg2:T1135
 R1143	in-place Arg1:T1141 Arg2:T1140
 R1144	in-place Arg1:T1141 Arg2:T1142
 R1145	in-context Arg1:T1142 Arg2:T1143
-T1144	Concept 4014 4021	fuertes
-T1145	Concept 4022 4029	lluvias
-T1147	Concept 4055 4060	grave
+T1145	Action 4022 4029	lluvias
 T1148	Concept 4061 4069	problema
 T1149	Concept 4070 4074	vial
-T1150	Concept 4088 4100	inundaciones
-T1151	Concept 4103 4112	derrumbes
+T1150	Action 4088 4100	inundaciones
+T1151	Action 4103 4112	derrumbes
 T1152	Concept 4129 4135	graves
 T1153	Predicate 4125 4128	más
 T1154	Action 4143 4153	registrado
 T1155	Concept 4160 4167	capital
 T1156	Concept 4173 4183	importante
 T1157	Concept 4184 4193;4194 4208	Carretera Interamericana
-R1146	in-context Arg1:T1145 Arg2:T1144
 R1147	causes Arg1:T1145 Arg2:T1148
-R1148	in-context Arg1:T1148 Arg2:T1147
-R1149	in-context Arg1:T1148 Arg2:T1149
+R1149	in-place Arg1:T1148 Arg2:T1149
 R1150	causes Arg1:T1150 Arg2:T1148
 R1151	causes Arg1:T1151 Arg2:T1148
 R1152	arg Arg1:T1153 Arg2:T1152
 R1153	in-place Arg1:T1154 Arg2:T1155
-R1154	subject Arg1:T1154 Arg2:T1153
+R1154	target Arg1:T1154 Arg2:T1153
 R1155	in-place Arg1:T1154 Arg2:T1157
 R1156	has-property Arg1:T1157 Arg2:T1156
 T1146	Concept 4332 4344	Funcionarios
@@ -1294,3 +1290,5 @@ R316	target Arg1:T1127 Arg2:T1128
 R317	target Arg1:T138 Arg2:T137	
 R318	in-place Arg1:T143 Arg2:T142	
 R145	subject Arg1:T143 Arg2:T137	
+A5	Emphasized T1145
+A16	Emphasized T1148
