@@ -33,10 +33,9 @@ T20	Concept 419 424	Baidu
 R12	subject Arg1:T16 Arg2:T15
 R13	target Arg1:T16 Arg2:T17
 R14	in-context Arg1:T13 Arg2:T14
-R15	in-context Arg1:T16 Arg2:T13
+R15	in-place Arg1:T16 Arg2:T13
 R16	in-context Arg1:T18 Arg2:T19
 R17	is-a Arg1:T20 Arg2:T18
-R18	in-context Arg1:T16 Arg2:T20
 T21	Concept 506 512	García
 T22	Concept 521 530	militante
 T23	Concept 534 543	izquierda
@@ -665,7 +664,7 @@ T1013	Predicate 252 257	antes
 R1001	arg Arg1:T1013 Arg2:T1007
 R1002	in-context Arg1:T1007 Arg2:T1008
 R1003	subject Arg1:T1002 Arg2:T1001
-R1004	in-context Arg1:T1002 Arg2:T1003
+R1004	target Arg1:T1002 Arg2:T1003
 R1005	target Arg1:T1003 Arg2:T1004
 R1006	in-time Arg1:T1004 Arg2:T1006
 R1007	is-a Arg1:T1006 Arg2:T1005
@@ -1295,3 +1294,5 @@ R1315	domain Arg1:T1115 Arg2:T1112
 R1216	in-time Arg1:T1221 Arg2:T1223
 R1173	in-context Arg1:T1175 Arg2:T1176
 R1176	subject Arg1:T1178 Arg2:T1175
+A14	Negated T1009
+R18	causes Arg1:T20 Arg2:T16	
