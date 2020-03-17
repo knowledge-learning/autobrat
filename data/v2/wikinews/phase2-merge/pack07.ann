@@ -439,16 +439,16 @@ R225	in-time Arg1:T226 Arg2:T221
 R226	target Arg1:T224 Arg2:T222
 R228	entails Arg1:T224 Arg2:T226
 R227	in-context Arg1:T224 Arg2:T223
-T228	Concept 6121 6130	temporada
+T228	Predicate 6121 6130	temporada
 T229	Concept 6140 6146	fútbol
 T230	Concept 6147 6158	ecuatoriano
 T231	Concept 6131 6135	2016
 R229	in-place Arg1:T229 Arg2:T230
-R230	in-context Arg1:T228 Arg2:T229
-R231	in-time Arg1:T228 Arg2:T231
+R230	domain Arg1:T228 Arg2:T229
+R231	arg Arg1:T228 Arg2:T231
 T232	Action 6159 6165	inició
 T233	Concept 6166 6178	oficialmente
-T234	Concept 6186 6193	partido
+T234	Action 6186 6193	partido
 T235	Concept 6203 6207;6208 6217;6218 6223;6224 6231	Club Deportivo River Ecuador
 T236	Concept 6242 6248;6249 6253;6254 6262;6263 6267	Mushuc Runa Sporting Club
 T237	Concept 6274 6281	estadio
@@ -456,14 +456,14 @@ T238	Concept 6282 6291;6292 6299;6300 6310	Christian Benítez Betancourt
 T239	Concept 6317 6323	ciudad
 T240	Concept 6327 6336	Guayaquil
 T241	Concept 6343 6348;6349 6356	19:00 (UTC-5)
-R232	subject Arg1:T232 Arg2:T228
+R232	target Arg1:T232 Arg2:T228
 R233	in-context Arg1:T232 Arg2:T233
-R234	in-context Arg1:T234 Arg2:T235
-R235	in-context Arg1:T234 Arg2:T236
+R234	subject Arg1:T234 Arg2:T235
+R235	subject Arg1:T234 Arg2:T236
 R236	in-place Arg1:T234 Arg2:T238
 R237	is-a Arg1:T238 Arg2:T237
 R238	in-time Arg1:T234 Arg2:T241
-R239	in-context Arg1:T232 Arg2:T234
+R239	subject Arg1:T232 Arg2:T234
 T242	Concept 6601 6611	procurador
 T243	Action 6612 6619	aseguró
 T244	Predicate 6628 6634	decena
@@ -473,22 +473,18 @@ T246	Action 6649 6660	incorporará
 T247	Concept 6667 6675	trabajos
 T248	Action 6681 6691	determinar
 T249	Concept 6699 6706	cuerpos
-T250	Action 6707 6719	corresponden
 T251	Concept 6726 6728;6729 6740	43 normalistas
 T252	Concept 6741 6754	desaparecidos
 R241	subject Arg1:T243 Arg2:T242
 R242	subject Arg1:T246 Arg2:T244
 R243	in-place Arg1:T246 Arg2:T247
-R244	in-context Arg1:T246 Arg2:T248
-R245	subject Arg1:T250 Arg2:T249
-R246	target Arg1:T250 Arg2:T251
+R244	target Arg1:T246 Arg2:T248
 R247	in-context Arg1:T251 Arg2:T252
-R248	target Arg1:T248 Arg2:T250
+R248	target Arg1:T248 Arg2:T249
 T253	Action 6924 6931	propuso
 T254	Action 6936 6946	suspensión
 T255	Concept 6947 6955	perpetua
-T256	Concept 6958 6964;6965 6973	Flavio Briatore
-R249	target Arg1:T254 Arg2:T256
+R249	target Arg1:T254 Arg2:T272
 R250	in-context Arg1:T254 Arg2:T255
 R251	target Arg1:T253 Arg2:T254
 T257	Concept 6988 6992	jefe
@@ -499,7 +495,7 @@ T261	Action 7048 7058	accidentar
 T262	Concept 7062 7068	piloto
 T263	Concept 7069 7078	brasileño
 T264	Concept 7087 7094	directa
-T265	Action 7095 7108	participación
+T265	Action 7115 7122	montaje
 T266	Concept 7115 7122	montaje
 T267	Concept 7132 7138	Alonso
 T268	Action 7139 7148	obtuviera
@@ -510,18 +506,13 @@ R252	domain Arg1:T269 Arg2:T270
 R253	subject Arg1:T268 Arg2:T267
 R254	target Arg1:T268 Arg2:T269
 R255	in-context Arg1:T268 Arg2:T271
-R256	in-context Arg1:T266 Arg2:T268
-R257	in-context Arg1:T265 Arg2:T266
 T272	Concept 6958 6964;6965 6973	Flavio Briatore
 R258	subject Arg1:T260 Arg2:T272
 R259	in-context Arg1:T257 Arg2:T258
 R260	in-place Arg1:T258 Arg2:T259
 R261	is-a Arg1:T272 Arg2:T257
-R262	is-a Arg1:T256 Arg2:T257
 R263	target Arg1:T260 Arg2:T261
-R264	target Arg1:T261 Arg2:T262
-R265	has-property Arg1:T262 Arg2:T263
-R266	in-context Arg1:T260 Arg2:T265
+R264	target Arg1:T261 Arg2:T250
 R267	has-property Arg1:T265 Arg2:T264
 T273	Concept 7449 7454	sismo
 T274	Concept 7461 7469	informes
@@ -1300,3 +1291,12 @@ R322	arg Arg1:T325 Arg2:T1220
 R323	domain Arg1:T1222 Arg2:T1223	
 R324	arg Arg1:T1222 Arg2:T1224	
 R325	in-time Arg1:T1221 Arg2:T1222	
+R326	in-place Arg1:T238 Arg2:T240	
+R327	is-a Arg1:T240 Arg2:T239	
+R328	target Arg1:T243 Arg2:T246	
+R245	part-of Arg1:T249 Arg2:T251	
+T250	Reference 7059 7061	al
+R246	is-a Arg1:T250 Arg2:T262	
+R262	has-property Arg1:T250 Arg2:T263	
+R265	subject Arg1:T265 Arg2:T272	
+R256	target Arg1:T265 Arg2:T268	
