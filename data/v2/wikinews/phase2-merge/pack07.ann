@@ -1176,36 +1176,28 @@ T1305	Concept 8640 8649;8650 8654	Elisabeth Byrs
 T1306	Concept 8656 8664	portavoz
 T1307	Concept 8669 8677;8678 8685;8686 8688;8689 8698	Programa Mundial de Alimentos
 T1308	Action 8700 8707	declaró
-T1309	Concept 8714 8721	finales
+T1309	Predicate 8714 8721	finales
 T1310	Concept 8725 8730	abril
-T1311	Action 8734 8740	tendrá
-T1312	Concept 8746 8752	visión
+T1312	Action 8746 8752	visión
 T1313	Concept 8757 8762	clara
-T1314	Predicate 8753 8756	más
-R1287	domain Arg1:T1314 Arg2:T1312
-R1288	arg Arg1:T1314 Arg2:T1313
 T1315	Concept 8773 8782	situación
 T1316	Concept 8783 8794	alimentaria
 T1317	Concept 8798 8803;8804 8807;8808 8811	Sudán del Sur
 T1318	Concept 8817 8822	ahora
 T1319	Concept 8826 8833	agencia
-T1320	Action 8834 8840	brinda
-T1321	Concept 8841 8853	alimentación
+T1320	Action 8841 8853	alimentación
 T1322	Concept 8856 8859;8860 8863;8864 8876	600 000 sursudaneses
 T1324	Action 8878 8884	aclaró
 R1289	is-a Arg1:T1305 Arg2:T1306
 R1290	in-place Arg1:T1306 Arg2:T1307
 R1291	subject Arg1:T1308 Arg2:T1305
 R1292	in-context Arg1:T1309 Arg2:T1310
-R1293	in-time Arg1:T1311 Arg2:T1309
-R1294	target Arg1:T1311 Arg2:T1312
-R1295	in-context Arg1:T1308 Arg2:T1311
+R1295	target Arg1:T1308 Arg2:T1312
 R1296	in-context Arg1:T1315 Arg2:T1316
 R1297	in-place Arg1:T1315 Arg2:T1317
 R1298	in-time Arg1:T1320 Arg2:T1318
 R1299	subject Arg1:T1320 Arg2:T1319
 R1300	subject Arg1:T1324 Arg2:T1305
-R1302	in-context Arg1:T1320 Arg2:T1321
 R1303	target Arg1:T1320 Arg2:T1322
 R1304	in-context Arg1:T1076 Arg2:T1075
 R1305	subject Arg1:T1076 Arg2:T1073
@@ -1218,7 +1210,6 @@ R1309	has-property Arg1:T1295 Arg2:T1299
 R1310	in-context Arg1:T1249 Arg2:T1251
 R1311	causes Arg1:T1268 Arg2:T1256
 R1312	in-context Arg1:T1264 Arg2:T1271
-R1313	in-context Arg1:T1314 Arg2:T1315
 R1301	subject Arg1:T1007 Arg2:T1001
 R1314	in-context Arg1:T1002 Arg2:T1009
 R1019	target Arg1:T1017 Arg2:T1021
@@ -1300,3 +1291,8 @@ T266	Action 8158 8166	búsqueda
 T326	Concept 8170 8176	tiempo
 R332	has-property Arg1:T266 Arg2:T326	
 R333	in-context Arg1:T326 Arg2:T302	
+R334	target Arg1:T1312 Arg2:T1315	
+R335	in-context Arg1:T1312 Arg2:T1313	
+A18	Emphasized T1313
+R336	in-time Arg1:T1312 Arg2:T1309	
+R337	target Arg1:T1324 Arg2:T1320	
