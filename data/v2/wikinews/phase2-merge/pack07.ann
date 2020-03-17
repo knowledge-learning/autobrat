@@ -260,17 +260,14 @@ T145	Concept 3626 3634	uruguaya
 R138	in-context Arg1:T135 Arg2:T136
 R139	is-a Arg1:T137 Arg2:T135
 R140	subject Arg1:T138 Arg2:T137
-R141	in-context Arg1:T139 Arg2:T140
+R141	target Arg1:T139 Arg2:T140
 R142	in-time Arg1:T138 Arg2:T134
 R143	subject Arg1:T139 Arg2:T137
 R144	in-context Arg1:T138 Arg2:T139
-R145	target Arg1:T139 Arg2:T137
 R146	part-of Arg1:T140 Arg2:T137
 R148	in-place Arg1:T139 Arg2:T141
-R150	subject Arg1:T143 Arg2:T137
 R152	in-place Arg1:T141 Arg2:T142
 R147	in-place Arg1:T142 Arg2:T144
-R149	in-context Arg1:T142 Arg2:T143
 R151	in-context Arg1:T144 Arg2:T145
 T146	Concept 3822 3829	lluvias
 A7	Emphasized T146
@@ -868,20 +865,16 @@ T1120	Concept 3356 3362	países
 T1121	Concept 3368 3375	Francia
 T1122	Concept 3377 3382;3383 3390	Nueva Zelanda
 T1123	Concept 3393 3400	Uruguay
-T1124	Action 3405 3409	dado
-T1125	Concept 3410 3413	luz
-T1126	Concept 3414 3419	verde
-T1127	Concept 3423 3433	matrimonio
+T1124	Action 3410 3413;3414 3419	luz verde
+T1127	Action 3423 3433	matrimonio
 T1128	Concept 3440 3447	parejas
 T1129	Concept 3448 3460	homosexuales
 R1121	in-context Arg1:T1128 Arg2:T1129
-R1122	in-context Arg1:T1127 Arg2:T1128
-R1123	in-context Arg1:T1125 Arg2:T1126
+R1122	subject Arg1:T1127 Arg2:T1128
 R1124	is-a Arg1:T1121 Arg2:T1120
 R1125	is-a Arg1:T1122 Arg2:T1120
 R1126	is-a Arg1:T1123 Arg2:T1120
-R1127	subject Arg1:T1124 Arg2:T1120
-R1128	in-context Arg1:T1124 Arg2:T1125
+R1127	subject Arg1:T1124 Arg2:T1121
 R1129	target Arg1:T1124 Arg2:T1127
 T1130	Concept 3351 3354	mes
 R1130	in-time Arg1:T1124 Arg2:T1130
@@ -1295,3 +1288,9 @@ R312	domain Arg1:T43 Arg2:T58
 *	same-as T1113 T1115
 T60	Predicate 3177 3181	este
 R313	domain Arg1:T60 Arg2:T1119	
+R314	subject Arg1:T1124 Arg2:T1122	
+R315	subject Arg1:T1124 Arg2:T1123	
+R316	target Arg1:T1127 Arg2:T1128	
+R317	target Arg1:T138 Arg2:T137	
+R318	in-place Arg1:T143 Arg2:T142	
+R145	subject Arg1:T143 Arg2:T137	
