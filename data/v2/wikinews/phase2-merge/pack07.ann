@@ -486,7 +486,7 @@ T254	Action 6936 6946	suspensión
 T255	Concept 6947 6955	perpetua
 R249	target Arg1:T254 Arg2:T272
 R250	in-context Arg1:T254 Arg2:T255
-R251	target Arg1:T253 Arg2:T254
+R251	target Arg1:T253 Arg2:T265
 T257	Concept 6988 6992	jefe
 T258	Concept 6999 7008	escudería
 T259	Concept 7015 7019;7020 7026;7027 7029;7030 7038	Gran Premio de Singapur
@@ -496,16 +496,13 @@ T262	Concept 7062 7068	piloto
 T263	Concept 7069 7078	brasileño
 T264	Concept 7087 7094	directa
 T265	Action 7115 7122	montaje
-T266	Concept 7115 7122	montaje
 T267	Concept 7132 7138	Alonso
 T268	Action 7139 7148	obtuviera
-T269	Predicate 7152 7158	primer
-T270	Concept 7159 7164	lugar
+T269	Concept 7152 7158	primer
+T270	Predicate 7159 7164	lugar
 T271	Concept 7171 7178	carrera
-R252	domain Arg1:T269 Arg2:T270
 R253	subject Arg1:T268 Arg2:T267
-R254	target Arg1:T268 Arg2:T269
-R255	in-context Arg1:T268 Arg2:T271
+R254	target Arg1:T268 Arg2:T270
 T272	Concept 6958 6964;6965 6973	Flavio Briatore
 R258	subject Arg1:T260 Arg2:T272
 R259	in-context Arg1:T257 Arg2:T258
@@ -513,7 +510,7 @@ R260	in-place Arg1:T258 Arg2:T259
 R261	is-a Arg1:T272 Arg2:T257
 R263	target Arg1:T260 Arg2:T261
 R264	target Arg1:T261 Arg2:T250
-R267	has-property Arg1:T265 Arg2:T264
+R267	in-context Arg1:T265 Arg2:T264
 T273	Concept 7449 7454	sismo
 T274	Concept 7461 7469	informes
 T275	Concept 7470 7479	oficiales
@@ -1300,3 +1297,6 @@ R246	is-a Arg1:T250 Arg2:T262
 R262	has-property Arg1:T250 Arg2:T263	
 R265	subject Arg1:T265 Arg2:T272	
 R256	target Arg1:T265 Arg2:T268	
+R252	domain Arg1:T270 Arg2:T271	
+R255	arg Arg1:T270 Arg2:T269	
+R257	entails Arg1:T265 Arg2:T254	
