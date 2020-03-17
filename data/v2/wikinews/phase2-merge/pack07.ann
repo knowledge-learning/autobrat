@@ -315,7 +315,7 @@ R171	in-place Arg1:T170 Arg2:T171
 R172	target Arg1:T167 Arg2:T160
 R173	in-time Arg1:T167 Arg2:T168
 R174	in-place Arg1:T167 Arg2:T169
-T172	Concept 4596 4605;4606 4609	Cincuenta mil
+T172	Predicate 4596 4605;4606 4609	Cincuenta mil
 T173	Concept 4610 4615	niños
 T174	Predicate 4616 4623	menores
 T175	Concept 4627 4632;4633 4637	cinco años
@@ -324,9 +324,9 @@ R176	arg Arg1:T174 Arg2:T175
 T176	Concept 4641 4646;4647 4650;4651 4654	Sudán del Sur
 T177	Action 4663 4668	morir
 A10	Uncertain T177
-T178	Reference 4672 4676	este
+T178	Predicate 4672 4676	este
 T179	Concept 4677 4680	año
-R177	is-a Arg1:T178 Arg2:T179
+R177	domain Arg1:T178 Arg2:T179
 T180	Action 4691 4702	alimentados
 A11	Negated T180
 T181	Concept 4703 4717	inmediatamente
@@ -335,15 +335,12 @@ T183	Concept 4728 4731	hoy
 T184	Concept 4735 4740;4741 4743;4744 4747;4748 4756;4757 4763;4764 4768;4769 4771;4772 4780	Fondo de las Naciones Unidas para la Infancia
 T185	Concept 4782 4788	Unicef
 *	same-as T184 T185
-R178	in-context Arg1:T174 Arg2:T172
-R179	target Arg1:T177 Arg2:T174
+R179	target Arg1:T177 Arg2:T172
 R180	in-time Arg1:T177 Arg2:T178
-R181	in-place Arg1:T177 Arg2:T176
 R182	in-time Arg1:T180 Arg2:T181
-R183	in-context Arg1:T177 Arg2:T180
 R184	in-time Arg1:T182 Arg2:T183
 R185	subject Arg1:T182 Arg2:T184
-R186	target Arg1:T182 Arg2:T177
+R186	target Arg1:T182 Arg2:T180
 R65	part-of Arg1:T65 Arg2:T61
 T64	Concept 1850 1854	todo
 R187	subject Arg1:T77 Arg2:T64
@@ -1294,3 +1291,7 @@ A16	Emphasized T1148
 T79	Action 4306 4312	contra
 R149	target Arg1:T79 Arg2:T166	
 R150	subject Arg1:T79 Arg2:T163	
+R170	domain Arg1:T172 Arg2:T174	
+R178	in-place Arg1:T173 Arg2:T176	
+R181	entails Arg1:T180 Arg2:T177	
+R183	target Arg1:T180 Arg2:T172	
