@@ -1013,17 +1013,12 @@ T1286	Concept 8363 8367;8368 8372;8373 8379	José Luis Abarca
 T1287	Predicate 8385 8391	esposa
 T1288	Concept 8393 8398;8399 8405	María Pineda
 T1289	Action 8303 8309	ubicar
-T1290	Action 8312 8321	presentar
 T1291	Action 8324 8332	declarar
 T1292	Concept 8419 8427	director
 T1293	Concept 8431 8440;8441 8448;8449 8458	Seguridad Pública Municipal
 R1264	in-context Arg1:T1292 Arg2:T1293
-T1294	Action 8251 8257	agregó
 T1295	Action 8269 8277	iniciado
-T1296	Action 8282 8297	investigaciones
-R1267	target Arg1:T1296 Arg2:T1289
-R1269	target Arg1:T1295 Arg2:T1296
-R1270	target Arg1:T1294 Arg2:T1295
+T1296	Concept 8282 8297	investigaciones
 T1297	Concept 8588 8594;8595 8601	Angela Merkel
 T1298	Action 8602 8610	proviene
 T1299	Concept 8617 8624;8625 8633;8634 8642	antigua Alemania Oriental
@@ -1192,8 +1187,15 @@ R280	is-a Arg1:T1286 Arg2:T1283
 R281	has-property Arg1:T1286 Arg2:T1285	
 R282	arg Arg1:T1287 Arg2:T1286	
 *	same-as T1288 T1287
-R78	target Arg1:T1291 Arg2:T1286	
+R78	subject Arg1:T1291 Arg2:T1286	
 T272	Concept 2455 2464	situación
 R252	in-place Arg1:T272 Arg2:T1088	
 R253	domain Arg1:T1088 Arg2:T1089	
 R283	domain Arg1:T1092 Arg2:T272	
+R284	subject Arg1:T1291 Arg2:T1288	
+R285	subject Arg1:T1291 Arg2:T1292	
+R286	target Arg1:T1289 Arg2:T1286	
+R287	target Arg1:T1289 Arg2:T1288	
+R288	target Arg1:T1289 Arg2:T1292	
+R289	target Arg1:T1295 Arg2:T1296	
+R290	entails Arg1:T1295 Arg2:T1289	
