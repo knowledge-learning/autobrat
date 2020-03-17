@@ -519,7 +519,6 @@ T277	Concept 7500 7505;7506 7514	15-30 segundos
 R268	subject Arg1:T276 Arg2:T273
 R269	in-time Arg1:T276 Arg2:T277
 R270	in-context Arg1:T274 Arg2:T275
-R271	in-context Arg1:T276 Arg2:T274
 T278	Concept 7589 7601	viceministro
 T279	Concept 7611 7621;7622 7629	Industrias Básicas
 T281	Concept 7611 7621;7632 7639	Industrias Minería
@@ -1300,3 +1299,4 @@ R256	target Arg1:T265 Arg2:T268
 R252	domain Arg1:T270 Arg2:T271	
 R255	arg Arg1:T270 Arg2:T269	
 R257	entails Arg1:T265 Arg2:T254	
+R266	entails Arg1:T274 Arg2:T276	
