@@ -156,15 +156,14 @@ T109	Concept 2875 2887	enfermedades
 T107	Concept 2901 2909	diabetes
 T108	Concept 2938 2945	persona
 T110	Concept 2918 2930	enfermedades
-T111	Predicate 2810 2820	trastornos
-R71	arg Arg1:T111 Arg2:T104
-R72	subject Arg1:T105 Arg2:T111
+T111	Action 2810 2820	trastornos
+R71	target Arg1:T111 Arg2:T104
 R73	target Arg1:T105 Arg2:T106
 R78	subject Arg1:T71 Arg2:T70
 R79	target Arg1:T71 Arg2:T70
-R80	part-of Arg1:T72 Arg2:T70
+R80	part-of Arg1:T72 Arg2:T73
 T73	Predicate 2004 2011	Algunas
-R81	domain Arg1:T73 Arg2:T70
+R81	domain Arg1:T73 Arg2:T71
 T112	Concept 3109 3120	coronavirus
 T113	Predicate 3101 3108	algunos
 R82	domain Arg1:T113 Arg2:T112
@@ -240,7 +239,6 @@ T94	Concept 2528 2539	normalmente
 R61	in-context Arg1:T93 Arg2:T94
 R66	target Arg1:T97 Arg2:T98
 R13	has-property Arg1:T100 Arg2:T102
-A15	Uncertain T105
 T99	Concept 2892 2899	corazón
 R69	in-context Arg1:T109 Arg2:T99
 R70	arg Arg1:T106 Arg2:T109
@@ -549,3 +547,4 @@ R117	subject Arg1:T128 Arg2:T47
 R118	target Arg1:T128 Arg2:T49	
 R119	entails Arg1:T64 Arg2:T62	
 R49	has-property Arg1:T62 Arg2:T63	
+R72	causes Arg1:T111 Arg2:T105	
