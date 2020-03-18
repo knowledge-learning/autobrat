@@ -157,7 +157,7 @@ T84	Action 2262 2273	considerada
 T85	Concept 2279 2284	justa
 T86	Concept 2293 2301	expertos
 R75	target Arg1:T84 Arg2:T85
-R76	in-context Arg1:T84 Arg2:T86
+R76	subject Arg1:T84 Arg2:T86
 T87	Concept 2429 2438	escudería
 T88	Concept 2439 2447	francesa
 R77	in-context Arg1:T87 Arg2:T88
@@ -1129,3 +1129,4 @@ R249	target Arg1:T1062 Arg2:T1069
 R250	target Arg1:T1062 Arg2:T1070	
 R251	target Arg1:T1062 Arg2:T1071	
 R252	domain Arg1:T1084 Arg2:T1079	
+R253	target Arg1:T84 Arg2:T79	
