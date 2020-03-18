@@ -705,12 +705,10 @@ T1108	Concept 2859 2866	suicida
 T1109	Concept 2881 2887	calles
 T1110	Concept 2888 2897	céntricas
 T1111	Concept 2904 2910	ciudad
-T1112	Action 2917 2921	dejó
 T1113	Predicate 2934 2935	4
 T1114	Concept 2936 2946	fallecidos
 T1115	Predicate 2968 2970	30
 T1116	Concept 2971 2978	heridos
-T1117	Concept 2952 2967	aproximadamente
 R1093	in-context Arg1:T1107 Arg2:T1108
 R1094	in-context Arg1:T1109 Arg2:T1110
 R1095	in-context Arg1:T1109 Arg2:T1111
@@ -718,14 +716,8 @@ T1118	Predicate 2870 2873	una
 R1096	domain Arg1:T1118 Arg2:T1109
 R1097	in-place Arg1:T1107 Arg2:T1118
 R1098	domain Arg1:T1113 Arg2:T1114
-R1099	target Arg1:T1112 Arg2:T1113
 R1100	domain Arg1:T1115 Arg2:T1116
-R1101	in-context Arg1:T1115 Arg2:T1117
-R1102	target Arg1:T1112 Arg2:T1115
-R1103	causes Arg1:T1107 Arg2:T1112
-R1104	target Arg1:T1105 Arg2:T1107
-R1105	in-time Arg1:T1105 Arg2:T1102
-R1106	in-place Arg1:T1105 Arg2:T1104
+R1103	causes Arg1:T1107 Arg2:T1113
 T1119	Action 3040 3047	destacó
 T1120	Concept 3053 3062	guionista
 T1121	Predicate 3068 3070	10
@@ -1130,3 +1122,8 @@ R250	target Arg1:T1062 Arg2:T1070
 R251	target Arg1:T1062 Arg2:T1071	
 R252	domain Arg1:T1084 Arg2:T1079	
 R253	target Arg1:T84 Arg2:T79	
+A7	Uncertain T1098
+R254	in-place Arg1:T1107 Arg2:T1104	
+R255	in-time Arg1:T1107 Arg2:T1102	
+R256	causes Arg1:T1107 Arg2:T1115	
+A8	Uncertain T1115
