@@ -96,7 +96,7 @@ R42	is-a Arg1:T58 Arg2:T55
 R43	is-a Arg1:T59 Arg2:T55
 R44	is-a Arg1:T60 Arg2:T55
 R45	is-a Arg1:T61 Arg2:T55
-T62	Predicate 1769 1777	descanso
+T62	Action 1769 1777	descanso
 T63	Concept 1785 1795	importante
 A5	Emphasized T63
 T64	Action 1804 1809	ayuda
@@ -105,8 +105,7 @@ T66	Action 1823 1828	sanar
 R46	subject Arg1:T66 Arg2:T65
 R47	target Arg1:T66 Arg2:T65
 R48	target Arg1:T64 Arg2:T66
-R49	has-property Arg1:T62 Arg2:T63
-R50	target Arg1:T64 Arg2:T62
+R50	subject Arg1:T64 Arg2:T62
 T67	Concept 1937 1947	colesterol
 T68	Action 1914 1921	afectar
 A6	Uncertain T68
@@ -226,9 +225,7 @@ R38	is-a Arg1:T52 Arg2:T140
 R108	subject Arg1:T140 Arg2:T53
 R109	target Arg1:T140 Arg2:T53
 R34	target Arg1:T46 Arg2:T48
-A4	Negated T51
 R36	arg Arg1:T50 Arg2:T51
-R110	arg Arg1:T50 Arg2:T48
 R105	subject Arg1:T68 Arg2:T139
 R111	target Arg1:T77 Arg2:T74
 R112	in-place Arg1:T77 Arg2:T75
@@ -544,3 +541,11 @@ R1120	arg Arg1:T1143 Arg2:T1081
 R1121	subject Arg1:T1087 Arg2:T1085
 R1062	in-context Arg1:T1121 Arg2:T1119
 R1054	is-a Arg1:T1133 Arg2:T1127
+R101	in-context Arg1:T48 Arg2:T50	
+R110	arg Arg1:T51 Arg2:T128	
+T128	Action 1335 1342	bombear
+A2	Negated T48
+R117	subject Arg1:T128 Arg2:T47	
+R118	target Arg1:T128 Arg2:T49	
+R119	entails Arg1:T64 Arg2:T62	
+R49	has-property Arg1:T62 Arg2:T63	
