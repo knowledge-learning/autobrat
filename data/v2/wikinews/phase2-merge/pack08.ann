@@ -718,13 +718,10 @@ R1097	in-place Arg1:T1107 Arg2:T1118
 R1098	domain Arg1:T1113 Arg2:T1114
 R1100	domain Arg1:T1115 Arg2:T1116
 R1103	causes Arg1:T1107 Arg2:T1113
-T1119	Action 3040 3047	destacó
 T1120	Concept 3053 3062	guionista
 T1121	Predicate 3068 3070	10
 T1122	Concept 3071 3076	obras
 R1107	domain Arg1:T1121 Arg2:T1122
-R1108	in-context Arg1:T1119 Arg2:T1120
-R1109	in-context Arg1:T1119 Arg2:T1121
 T1123	Predicate 3243 3250	Cientos
 T1124	Concept 3254 3262	clínicas
 T1125	Concept 3266 3278	reproducción
@@ -1127,3 +1124,7 @@ R254	in-place Arg1:T1107 Arg2:T1104
 R255	in-time Arg1:T1107 Arg2:T1102	
 R256	causes Arg1:T1107 Arg2:T1115	
 A8	Uncertain T1115
+T277	Reference 3037 3039	se
+R257	is-a Arg1:T277 Arg2:T1120	
+A9	Emphasized T1120
+R258	has-property Arg1:T277 Arg2:T1121	
