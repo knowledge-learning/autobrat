@@ -458,18 +458,16 @@ T268	Concept 7254 7262	edificio
 T269	Concept 7266 7276;7277 7279;7280 7290	Venezolana de Televisión
 T270	Action 7295 7302	atacado
 T271	Concept 7307 7320	manifestantes
-T272	Concept 7321 7331	opositores
+T272	Action 7321 7331	opositores
 T273	Action 7340 7348	hirieron
 T274	Concept 7352 7356	bala
 T275	Concept 7363 7372	reportera
 R229	target Arg1:T273 Arg2:T275
 R230	in-context Arg1:T273 Arg2:T274
-R231	in-context Arg1:T271 Arg2:T272
-R232	subject Arg1:T273 Arg2:T271
-R233	subject Arg1:T270 Arg2:T271
+R232	subject Arg1:T273 Arg2:T272
+R233	subject Arg1:T270 Arg2:T272
 R234	target Arg1:T270 Arg2:T268
 R235	in-time Arg1:T270 Arg2:T267
-R236	in-context Arg1:T270 Arg2:T269
 T1001	Concept 282 291	cantantes
 T1002	Concept 292 307	iberoamericanos
 R1001	in-context Arg1:T1001 Arg2:T1002
@@ -1132,3 +1130,5 @@ R289	is-a Arg1:T259 Arg2:T260
 T174	Action 7067 7073	alerta
 R290	target Arg1:T174 Arg2:T266	
 R291	causes Arg1:T265 Arg2:T174	
+R227	in-context Arg1:T268 Arg2:T269	
+R231	subject Arg1:T272 Arg2:T271	
