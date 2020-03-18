@@ -362,15 +362,9 @@ T209	Action 5695 5702	declaró
 T210	Concept 5711 5720	rapiñeros
 T211	Action 5724 5733	exigieron
 T212	Concept 5738 5750	pertenencias
-T213	Concept 5753 5758	ambos
-T214	Concept 5761 5765	Pino
 T215	Action 5770 5778	resistió
 T216	Action 5787 5795	forcejeo
-T217	Predicate 5804 5806	de
-T218	Concept 5800 5803	uno
-T219	Concept 5807 5812	ellos
-R182	arg Arg1:T217 Arg2:T218
-R183	domain Arg1:T217 Arg2:T219
+T218	Predicate 5800 5803	uno
 T220	Action 5813 5820	resbaló
 T221	Action 5823 5827	cayó
 T222	Concept 5834 5839	aguas
@@ -378,14 +372,10 @@ T223	Concept 5844 5847;5848 5850;5851 5853;5854 5859	Río de la Plata
 R184	subject Arg1:T209 Arg2:T208
 R185	subject Arg1:T211 Arg2:T210
 R186	target Arg1:T211 Arg2:T212
-R187	in-context Arg1:T211 Arg2:T213
 R188	subject Arg1:T215 Arg2:T224
-R189	in-context Arg1:T216 Arg2:T217
 T224	Concept 5761 5765	Pino
-R190	subject Arg1:T220 Arg2:T214
-R191	in-context Arg1:T220 Arg2:T216
-T225	Concept 5761 5765	Pino
-R192	subject Arg1:T221 Arg2:T225
+R190	subject Arg1:T220 Arg2:T224
+R192	subject Arg1:T221 Arg2:T224
 R193	target Arg1:T221 Arg2:T222
 R194	in-place Arg1:T221 Arg2:T223
 T226	Concept 6052 6058;6059 6067	Tierra Caliente
@@ -1127,3 +1117,14 @@ T166	Predicate 5247 5253	varios
 R169	domain Arg1:T166 Arg2:T194	
 R270	subject Arg1:T200 Arg2:T196	
 R271	is-a Arg1:T205 Arg2:T202	
+R272	in-context Arg1:T208 Arg2:T224	
+R187	in-context Arg1:T212 Arg2:T224	
+R273	in-context Arg1:T212 Arg2:T208	
+R274	target Arg1:T215 Arg2:T210	
+R275	subject Arg1:T216 Arg2:T224	
+R276	target Arg1:T216 Arg2:T218	
+R277	domain Arg1:T218 Arg2:T210	
+R182	causes Arg1:T216 Arg2:T220	
+R183	causes Arg1:T216 Arg2:T221	
+R189	target Arg1:T209 Arg2:T211	
+R191	target Arg1:T209 Arg2:T216	
