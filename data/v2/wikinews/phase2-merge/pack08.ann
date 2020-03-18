@@ -269,7 +269,7 @@ R126	target Arg1:T144 Arg2:T145
 T148	Concept 4058 4063	horas
 T149	Action 4089 4096	público
 R128	in-place Arg1:T149 Arg2:T146
-T150	Predicate 4068 4073	tarde
+T150	Predicate 4064 4067;4068 4073	más tarde
 R130	domain Arg1:T150 Arg2:T148
 R131	in-time Arg1:T143 Arg2:T150
 T152	Concept 4348 4355;4356 4362	Estados Unidos
@@ -282,9 +282,8 @@ T158	Concept 4435 4444	Palestina
 R133	subject Arg1:T154 Arg2:T152
 R134	subject Arg1:T154 Arg2:T153
 R135	target Arg1:T154 Arg2:T155
-R136	target Arg1:T155 Arg2:T156
+R136	target Arg1:T155 Arg2:T147
 R137	in-context Arg1:T156 Arg2:T157
-R138	in-context Arg1:T155 Arg2:T158
 T159	Concept 4554 4560;4561 4566	Louise Brown
 T160	Predicate 4571 4578	primera
 T161	Concept 4579 4583;4584 4591	bebé probeta
@@ -1127,3 +1126,8 @@ R127	in-context Arg1:T146 Arg2:T142
 R132	subject Arg1:T149 Arg2:T142	
 R264	target Arg1:T149 Arg2:T144	
 R129	arg Arg1:T150 Arg2:T149	
+T147	Action 4428 4434	contra
+R138	subject Arg1:T147 Arg2:T156	
+R265	target Arg1:T147 Arg2:T158	
+R266	subject Arg1:T155 Arg2:T152	
+R267	subject Arg1:T155 Arg2:T153	
