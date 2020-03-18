@@ -312,15 +312,12 @@ T180	Concept 4998 5002	2002
 T181	Action 5010 5015	apoyo
 A4	Negated T181
 T182	Concept 5030 5037	partido
-T183	Concept 5022 5029	antiguo
-R155	has-property Arg1:T182 Arg2:T183
+T183	Predicate 5022 5029	antiguo
 R156	subject Arg1:T178 Arg2:T177
 R157	target Arg1:T178 Arg2:T179
 R158	in-time Arg1:T178 Arg2:T180
 R159	in-context Arg1:T178 Arg2:T181
-R160	subject Arg1:T181 Arg2:T182
-T184	Concept 4966 4971	Uribe
-R161	part-of Arg1:T184 Arg2:T182
+R160	subject Arg1:T181 Arg2:T183
 T185	Concept 5125 5130;5131 5133;5134 5140	rueda de prensa
 T186	Action 5141 5148	aseguró
 T187	Concept 5157 5164;5165 5168;5169 5174	fuerzas del orden
@@ -867,7 +864,7 @@ R1191	subject Arg1:T1206 Arg2:T1207
 T1209	Predicate 5086 5089	sin
 R1192	arg Arg1:T1209 Arg2:T1206
 R1193	subject Arg1:T1203 Arg2:T1202
-R1194	in-place Arg1:T1203 Arg2:T1204
+R1194	target Arg1:T1203 Arg2:T1204
 R1195	in-time Arg1:T1203 Arg2:T1205
 R1196	in-context Arg1:T1203 Arg2:T1209
 T1210	Action 5283 5290	aseguró
@@ -1127,3 +1124,6 @@ R146	causes Arg1:T169 Arg2:T159
 R140	subject Arg1:T171 Arg2:T176	
 R152	subject Arg1:T171 Arg2:T159	
 R153	target Arg1:T172 Arg2:T170	
+R154	target Arg1:T181 Arg2:T177	
+R155	domain Arg1:T183 Arg2:T182	
+R161	part-of Arg1:T182 Arg2:T177	
