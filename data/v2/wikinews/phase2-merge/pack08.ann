@@ -444,7 +444,6 @@ T259	Concept 6932 6940;6941 6946	Graciela Ocaña
 T260	Concept 6948 6956;6957 6959;6960 6965	ministra de Salud
 T261	Concept 6972 6981	Argentina
 R223	in-place Arg1:T260 Arg2:T261
-*	same-as T259 T260
 T262	Action 6983 6991	renunció
 T263	Concept 6992 6995	hoy
 T264	Action 7015 7027	agravamiento
@@ -453,7 +452,6 @@ T266	Concept 7077 7081	país
 R224	subject Arg1:T262 Arg2:T259
 R225	in-time Arg1:T262 Arg2:T263
 R226	target Arg1:T264 Arg2:T265
-R227	in-context Arg1:T264 Arg2:T266
 R228	in-context Arg1:T262 Arg2:T264
 T267	Concept 7245 7250	noche
 T268	Concept 7254 7262	edificio
@@ -977,26 +975,21 @@ R1257	target Arg1:T1270 Arg2:T1271
 R1258	target Arg1:T1270 Arg2:T1273
 R1259	target Arg1:T1269 Arg2:T1270
 R1260	subject Arg1:T1269 Arg2:T1262
-T1275	Concept 6829 6831;6832 6839	ex militar
+T1275	Predicate 6829 6831	ex
 T1276	Action 6844 6854	trasladado
 T1277	Concept 6858 6866;6867 6874	Hospital Militar
-T1278	Predicate 6881 6886	misma
+T1278	Reference 6881 6886	misma
 T1279	Concept 6887 6893	ciudad
 T1280	Action 6920 6930	fallecería
-T1281	Predicate 6910 6913	más
-T1282	Concept 6914 6919	tarde
+T1281	Predicate 6910 6913;6914 6919	más tarde
 T1283	Concept 6900 6903;6904 6909	dos horas
 R1261	subject Arg1:T1276 Arg2:T1275
-R1263	arg Arg1:T1278 Arg2:T1279
-R1262	in-context Arg1:T1277 Arg2:T1278
+R1263	is-a Arg1:T1278 Arg2:T1279
+R1262	in-place Arg1:T1277 Arg2:T1278
 R1264	in-place Arg1:T1276 Arg2:T1277
-R1265	arg Arg1:T1281 Arg2:T1282
-R1266	arg Arg1:T1281 Arg2:T1283
+R1266	domain Arg1:T1281 Arg2:T1283
 R1267	subject Arg1:T1280 Arg2:T1275
 R1268	in-time Arg1:T1280 Arg2:T1281
-T1284	Action 6895 6899	pero
-R1269	subject Arg1:T1284 Arg2:T1276
-R1270	target Arg1:T1284 Arg2:T1280
 T1285	Concept 7083 7091;7092 7097	Graciela Ocaña
 T1286	Concept 7099 7107	ministra
 T1287	Concept 7111 7116	Salud
@@ -1132,3 +1125,10 @@ R284	subject Arg1:T1270 Arg2:T1262
 R285	in-time Arg1:T1270 Arg2:T1274	
 T167	Concept 6689 6699	Presidente
 R286	is-a Arg1:T1273 Arg2:T167	
+T168	Concept 6832 6839	militar
+R287	domain Arg1:T1275 Arg2:T168	
+R288	arg Arg1:T1281 Arg2:T1276	
+R289	is-a Arg1:T259 Arg2:T260	
+T174	Action 7067 7073	alerta
+R290	target Arg1:T174 Arg2:T266	
+R291	causes Arg1:T265 Arg2:T174	
