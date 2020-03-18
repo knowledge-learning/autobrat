@@ -691,12 +691,8 @@ R1088	in-context Arg1:T1097 Arg2:T1096
 R1089	subject Arg1:T1098 Arg2:T1099
 R1090	target Arg1:T1098 Arg2:T1097
 T1101	Concept 2806 2812	sábado
-T1102	Concept 2790 2797	jornada
-T1103	Concept 2801 2805	ayer
-*	same-as T1103 T1101
-R1091	in-context Arg1:T1102 Arg2:T1103
+T1103	Predicate 2801 2805	ayer
 T1104	Concept 2829 2837	Estambul
-T1105	Action 2817 2825	registró
 T1106	Concept 2839 2846	Turquía
 R1092	part-of Arg1:T1104 Arg2:T1106
 T1107	Action 2850 2858	atentado
@@ -1118,7 +1114,7 @@ R252	domain Arg1:T1084 Arg2:T1079
 R253	target Arg1:T84 Arg2:T79	
 A7	Uncertain T1098
 R254	in-place Arg1:T1107 Arg2:T1104	
-R255	in-time Arg1:T1107 Arg2:T1102	
+R255	in-time Arg1:T1107 Arg2:T1103	
 R256	causes Arg1:T1107 Arg2:T1115	
 A8	Uncertain T1115
 T277	Reference 3037 3039	se
@@ -1128,3 +1124,4 @@ R258	has-property Arg1:T277 Arg2:T1121
 R259	domain Arg1:T1131 Arg2:T1134	
 R260	domain Arg1:T117 Arg2:T112	
 R103	entails Arg1:T112 Arg2:T109	
+R261	domain Arg1:T1103 Arg2:T1101	
