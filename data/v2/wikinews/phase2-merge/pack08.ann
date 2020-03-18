@@ -596,7 +596,7 @@ T1045	Concept 1272 1279	mujeres
 T1046	Concept 1280 1291	embarazadas
 T1047	Concept 1293 1305	trabajadores
 T1048	Concept 1312 1317	salud
-T1049	Concept 1324 1331	tutores
+T1049	Action 1324 1331	tutores
 T1050	Concept 1339 1344	niños
 T1051	Predicate 1345 1352	menores
 T1052	Concept 1356 1360;1361 1366	seis meses
@@ -604,14 +604,14 @@ T1053	Concept 1370 1374	edad
 R1039	in-context Arg1:T1052 Arg2:T1053
 R1040	domain Arg1:T1051 Arg2:T1050
 R1041	arg Arg1:T1051 Arg2:T1052
-R1042	in-context Arg1:T1049 Arg2:T1051
+R1042	target Arg1:T1049 Arg2:T1051
 R1043	in-context Arg1:T1047 Arg2:T1048
 R1044	in-context Arg1:T1045 Arg2:T1046
 R1045	has-property Arg1:T1045 Arg2:T1043
 R1046	has-property Arg1:T1047 Arg2:T1043
-R1047	is-a Arg1:T1049 Arg2:T1043
+R1047	has-property Arg1:T1049 Arg2:T1043
 R1048	subject Arg1:T1042 Arg2:T1041
-R1049	target Arg1:T1042 Arg2:T1043
+R1049	target Arg1:T1042 Arg2:T1045
 T1054	Concept 1464 1468;1469 1474	Ehud Barak
 T1055	Concept 1479 1487;1488 1490;1491 1498	Ministro de Defensa
 T1056	Concept 1499 1506	israelí
@@ -1131,3 +1131,5 @@ R242	in-context Arg1:T1022 Arg2:T1023
 R241	in-context Arg1:T1040 Arg2:T1023	
 R243	in-context Arg1:T1035 Arg2:T1044	
 R244	target Arg1:T1044 Arg2:T1007	
+R245	target Arg1:T1042 Arg2:T1047	
+R246	target Arg1:T1042 Arg2:T1049	
