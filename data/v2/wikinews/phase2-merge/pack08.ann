@@ -254,10 +254,8 @@ R119	subject Arg1:T133 Arg2:T135
 T137	Reference 3926 3930	Este
 T138	Concept 3931 3937	cambio
 R120	is-a Arg1:T137 Arg2:T138
-T139	Concept 3952 3965	imperceptible
-R121	has-property Arg1:T137 Arg2:T139
+T139	Action 3952 3965	imperceptible
 T140	Concept 3975 3983	usuarios
-R122	in-context Arg1:T137 Arg2:T140
 T141	Action 3988 3996	concretó
 R123	target Arg1:T141 Arg2:T137
 T142	Concept 4009 4016	GoDaddy
@@ -265,20 +263,15 @@ T143	Action 4025 4036	contradecir
 T144	Action 4040 4045	apoyo
 T145	Concept 4048 4052	SOPA
 T146	Concept 4112 4118;4119 4130	portal corporativo
-T147	Concept 4089 4096	público
 R124	subject Arg1:T143 Arg2:T142
 R125	target Arg1:T143 Arg2:T144
 R126	target Arg1:T144 Arg2:T145
 T148	Concept 4058 4063	horas
-T149	Action 4081 4088	hiciese
-R127	target Arg1:T149 Arg2:T147
-R128	in-context Arg1:T149 Arg2:T146
+T149	Action 4089 4096	público
+R128	in-place Arg1:T149 Arg2:T146
 T150	Predicate 4068 4073	tarde
-T151	Concept 4053 4057	unas
-R129	arg Arg1:T150 Arg2:T151
 R130	domain Arg1:T150 Arg2:T148
 R131	in-time Arg1:T143 Arg2:T150
-R132	in-context Arg1:T144 Arg2:T149
 T152	Concept 4348 4355;4356 4362	Estados Unidos
 T153	Concept 4368 4374	Israel
 T154	Action 4379 4387	afirmado
@@ -1126,3 +1119,11 @@ R103	entails Arg1:T112 Arg2:T109
 R261	domain Arg1:T1103 Arg2:T1101	
 R262	in-context Arg1:T132 Arg2:T127	
 R109	in-time Arg1:T123 Arg2:T124	
+R121	target Arg1:T139 Arg2:T137	
+R122	subject Arg1:T139 Arg2:T140	
+A10	Diminished T139
+R263	subject Arg1:T144 Arg2:T142	
+R127	in-context Arg1:T146 Arg2:T142	
+R132	subject Arg1:T149 Arg2:T142	
+R264	target Arg1:T149 Arg2:T144	
+R129	arg Arg1:T150 Arg2:T149	
