@@ -561,23 +561,13 @@ T1026	Concept 984 990	ciudad
 R1020	is-a Arg1:T1025 Arg2:T1026
 R1021	in-place Arg1:T1024 Arg2:T1025
 T1027	Action 847 854	campeón
-T1028	Concept 862 871	ediciones
+T1028	Predicate 862 871	ediciones
 T1029	Concept 896 901;902 903	Serie A
-R1022	in-context Arg1:T1028 Arg2:T1029
+R1022	domain Arg1:T1028 Arg2:T1029
 T1030	Concept 872 876	2013
 T1031	Concept 878 882	2014
 T1032	Concept 885 889	2015
-R1023	in-time Arg1:T1028 Arg2:T1030
-T1033	Concept 862 871	ediciones
-R1024	in-context Arg1:T1033 Arg2:T1029
-R1025	in-time Arg1:T1033 Arg2:T1031
-T1034	Concept 862 871	ediciones
-R1026	in-context Arg1:T1034 Arg2:T1029
-R1027	in-time Arg1:T1034 Arg2:T1032
-R1028	target Arg1:T1027 Arg2:T1034
-R1029	target Arg1:T1027 Arg2:T1033
 R1030	target Arg1:T1027 Arg2:T1028
-*	same-as T1023 T1027
 R1031	subject Arg1:T1024 Arg2:T1023
 R1032	causes Arg1:T1021 Arg2:T1024
 T1035	Action 1003 1009	empató
@@ -591,7 +581,7 @@ R1035	in-place Arg1:T1035 Arg2:T1038
 R1036	in-time Arg1:T1035 Arg2:T1039
 R1037	subject Arg1:T1035 Arg2:T1023
 T1040	Concept 1016 1021	debut
-R1038	in-context Arg1:T1035 Arg2:T1040
+R1038	in-time Arg1:T1035 Arg2:T1040
 T1041	Concept 1224 1232	Sebelius
 T1042	Action 1233 1239	indicó
 T1043	Concept 1252 1263	vulnerables
@@ -601,8 +591,7 @@ R1006	target Arg1:T1008 Arg2:T1010
 R1007	target Arg1:T1008 Arg2:T1011
 *	same-as T1006 T1008
 T1007	Concept 1067 1070	2-2
-T1044	Concept 1055 1063	marcador
-R1008	is-a Arg1:T1007 Arg2:T1044
+T1044	Action 1055 1063	marcador
 T1045	Concept 1272 1279	mujeres
 T1046	Concept 1280 1291	embarazadas
 T1047	Concept 1293 1305	trabajadores
@@ -1134,3 +1123,11 @@ R24	target Arg1:T2 Arg2:T13
 T5	Concept 82 94	espectadores
 R25	domain Arg1:T9 Arg2:T5	
 R237	arg Arg1:T1 Arg2:T3	
+R238	arg Arg1:T1028 Arg2:T1030	
+R239	arg Arg1:T1028 Arg2:T1031	
+R240	arg Arg1:T1028 Arg2:T1032	
+R242	in-context Arg1:T1022 Arg2:T1023	
+*	same-as T1027 T1023
+R241	in-context Arg1:T1040 Arg2:T1023	
+R243	in-context Arg1:T1035 Arg2:T1044	
+R244	target Arg1:T1044 Arg2:T1007	
