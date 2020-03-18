@@ -288,12 +288,9 @@ T159	Concept 4554 4560;4561 4566	Louise Brown
 T160	Predicate 4571 4578	primera
 T161	Concept 4579 4583;4584 4591	bebé probeta
 T162	Action 4596 4606	congratuló
-T163	Concept 4614 4620	premio
+T163	Action 4614 4620	premio
 T164	Concept 4624 4634	científico
 T165	Action 4637 4641	dijo
-T166	Reference 4652 4656	ella
-T167	Concept 4665 4670	madre
-T168	Concept 4679 4686	felices
 T169	Action 4691 4705	reconocimiento
 T170	Concept 4709 4712	Bob
 T171	Action 4722 4729	dijeron
@@ -301,25 +298,13 @@ T172	Action 4733 4740	guardan
 T173	Concept 4747 4753	cariño
 A3	Emphasized T173
 R139	target Arg1:T172 Arg2:T173
-R140	in-context Arg1:T172 Arg2:T170
 R141	target Arg1:T171 Arg2:T172
-R142	subject Arg1:T171 Arg2:T166
-R143	subject Arg1:T171 Arg2:T167
 R144	target Arg1:T169 Arg2:T170
-T174	Action 4671 4678	estaban
-R145	subject Arg1:T174 Arg2:T175
-R146	subject Arg1:T174 Arg2:T176
-T175	Reference 4652 4656	ella
 T176	Concept 4665 4670	madre
 R147	arg Arg1:T160 Arg2:T161
 *	same-as T159 T160
-R148	in-context Arg1:T163 Arg2:T164
-R149	target Arg1:T162 Arg2:T159
-R150	in-context Arg1:T162 Arg2:T163
+R149	subject Arg1:T162 Arg2:T159
 R151	subject Arg1:T165 Arg2:T159
-R152	target Arg1:T165 Arg2:T174
-R153	target Arg1:T174 Arg2:T168
-R154	in-context Arg1:T174 Arg2:T169
 T177	Concept 4966 4971	Uribe
 T178	Action 4972 4977	llegó
 T179	Concept 4983 4994	presidencia
@@ -1131,3 +1116,14 @@ R138	subject Arg1:T147 Arg2:T156
 R265	target Arg1:T147 Arg2:T158	
 R266	subject Arg1:T155 Arg2:T152	
 R267	subject Arg1:T155 Arg2:T153	
+R148	target Arg1:T163 Arg2:T170	
+R268	is-a Arg1:T170 Arg2:T164	
+R150	causes Arg1:T163 Arg2:T162	
+R142	in-context Arg1:T176 Arg2:T159	
+T151	Concept 4679 4686	felices
+R143	causes Arg1:T169 Arg2:T176	
+R145	has-property Arg1:T176 Arg2:T151	
+R146	causes Arg1:T169 Arg2:T159	
+R140	subject Arg1:T171 Arg2:T176	
+R152	subject Arg1:T171 Arg2:T159	
+R153	target Arg1:T172 Arg2:T170	
