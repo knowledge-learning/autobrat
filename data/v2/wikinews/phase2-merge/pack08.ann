@@ -1,10 +1,10 @@
-T1	Concept 0 5;6 15	Siete cantantes
+T1	Predicate 0 5	Siete
 T3	Concept 16 31	iberoamericanos
 T4	Concept 137 141;142 152	paso fronterizo
 T6	Concept 159 167	Colombia
 T7	Concept 170 179	Venezuela
 T8	Concept 57 64	domingo
-T9	Concept 75 81;82 94	60.000 espectadores
+T9	Predicate 75 81	60.000
 T10	Concept 101 107;108 121;122 127;128 135	Puente Internacional Simón Bolívar
 T11	Concept 203 212	concierto
 T12	Concept 213 216;217 220;221 230	Paz Sin Fronteras
@@ -42,20 +42,16 @@ R11	in-context Arg1:T28 Arg2:T26
 R12	is-a Arg1:T16 Arg2:T14
 R14	subject Arg1:T13 Arg2:T16
 R13	is-a Arg1:T16 Arg2:T15
-R15	in-context Arg1:T1 Arg2:T3
-T2	Action 44 53	presentes
+T2	Action 186 196	participar
 R16	subject Arg1:T2 Arg2:T1
 R17	in-time Arg1:T2 Arg2:T8
 R18	in-context Arg1:T2 Arg2:T9
 R19	in-place Arg1:T2 Arg2:T10
-R20	in-context Arg1:T4 Arg2:T6
-R21	in-context Arg1:T4 Arg2:T7
-T5	Action 186 196	participar
+R20	in-place Arg1:T4 Arg2:T6
+R21	in-place Arg1:T4 Arg2:T7
 *	same-as T10 T4
 R22	is-a Arg1:T12 Arg2:T11
 R23	target Arg1:T13 Arg2:T12
-R24	target Arg1:T5 Arg2:T13
-R25	in-context Arg1:T2 Arg2:T5
 T33	Action 743 749	empató
 T34	Concept 756 761	debut
 T35	Concept 770 781;782 790	Universidad Católica
@@ -1132,3 +1128,9 @@ R1286	in-context Arg1:T1298 Arg2:T1299
 R1287	subject Arg1:T1301 Arg2:T1298
 R1288	target Arg1:T1301 Arg2:T1302
 R1289	in-time Arg1:T1301 Arg2:T1291
+T276	Concept 6 15	cantantes
+R15	domain Arg1:T1 Arg2:T276	
+R24	target Arg1:T2 Arg2:T13	
+T5	Concept 82 94	espectadores
+R25	domain Arg1:T9 Arg2:T5	
+R237	arg Arg1:T1 Arg2:T3	
