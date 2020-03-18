@@ -19,22 +19,21 @@ R7	target Arg1:T9 Arg2:T10
 R8	in-place Arg1:T9 Arg2:T8
 T11	Concept 247 252	mujer
 T12	Concept 258 268	embarazada
-R9	has-property Arg1:T11 Arg2:T12
-R10	in-context Arg1:T9 Arg2:T11
+R9	in-context Arg1:T11 Arg2:T12
+R10	in-time Arg1:T9 Arg2:T11
 T13	Concept 366 373	médicos
 T14	Concept 379 386	pruebas
 T15	Action 374 378	usan
 R11	subject Arg1:T15 Arg2:T13
-R12	target Arg1:T15 Arg2:T14
+R12	target Arg1:T15 Arg2:T16
 T16	Action 391 399	examinan
 R13	subject Arg1:T16 Arg2:T14
 T17	Concept 403 406	ano
 R14	target Arg1:T16 Arg2:T17
-T18	Concept 497 508	tratamiento
+T18	Action 497 508	tratamiento
 T21	Action 541 549	extirpar
 T22	Concept 553 558	tumor
 R16	target Arg1:T21 Arg2:T22
-R17	subject Arg1:T21 Arg2:T18
 T23	Concept 640 647	cirugía
 T24	Concept 649 661	radioterapia
 T25	Concept 663 676	quimioterapia
@@ -48,7 +47,7 @@ T28	Concept 785 791	lesión
 T29	Concept 797 807	enfermedad
 T30	Concept 814 821	cirugía
 T31	Concept 822 827	seria
-R23	has-property Arg1:T30 Arg2:T31
+R23	in-context Arg1:T30 Arg2:T31
 T32	Predicate 770 777	Después
 T35	Action 832 844	recuperación
 T36	Concept 855 860	lenta
@@ -62,7 +61,6 @@ R34	target Arg1:T40 Arg2:T39
 R35	in-context Arg1:T40 Arg2:T41
 T42	Concept 1025 1034	hepatitis
 T43	Concept 1058 1064	hígado
-R25	in-context Arg1:T35 Arg2:T36
 T33	Predicate 770 777	Después
 T34	Predicate 770 777	Después
 R24	arg Arg1:T32 Arg2:T28
@@ -91,7 +89,7 @@ T51	Concept 1309 1314	tumor
 R40	target Arg1:T50 Arg2:T51
 A7	Uncertain T50
 T52	Concept 1274 1284	frecuencia
-R41	in-context Arg1:T50 Arg2:T52
+R41	in-time Arg1:T50 Arg2:T52
 T53	Concept 1366 1378	tratamientos
 T54	Concept 1388 1394	cremas
 T55	Concept 1396 1405	medicinas
@@ -122,11 +120,8 @@ T68	Predicate 1688 1691;1692 1696;1697 1700	una sola vez
 R52	target Arg1:T62 Arg2:T63
 R53	in-context Arg1:T62 Arg2:T68
 T69	Action 1825 1828	uso
-T70	Concept 1841 1854;1855 1857;1858 1863	preservativos de látex
+T70	Concept 1841 1854	preservativos
 T71	Action 1864 1873	disminuye
-T72	Concept 1874 1885	enormemente
-A9	Emphasized T72
-R54	in-context Arg1:T71 Arg2:T72
 R55	causes Arg1:T69 Arg2:T71
 R56	target Arg1:T69 Arg2:T70
 T73	Predicate 1909 1915	riesgo
@@ -293,8 +288,6 @@ R89	target Arg1:T107 Arg2:T106
 R90	arg Arg1:T107 Arg2:T105
 R103	in-context Arg1:T131 Arg2:T132
 R1	in-context Arg1:T1 Arg2:T2
-R125	in-context Arg1:T37 Arg2:T36
-A26	Emphasized T21
 T19	Action 412 426	diagnosticarlo
 T20	Action 1042 1053	inflamación
 R15	subject Arg1:T20 Arg2:T43
@@ -305,10 +298,8 @@ A4	Negated T113
 T1001	Concept 55 63	animales
 T1002	Concept 64 72	salvajes
 T1003	Action 80 84	huir
-A1001	Uncertain T1003
 T1004	Concept 92 100	personas
 R1002	subject Arg1:T1003 Arg2:T1001
-R1004	in-context Arg1:T1003 Arg2:T1004
 T1005	Concept 144 152	hormonas
 T1006	Concept 157 167;168 176	mensajeros químicos
 R1005	is-a Arg1:T1005 Arg2:T1006
@@ -321,7 +312,7 @@ R1007	target Arg1:T1009 Arg2:T1010
 R1008	in-place Arg1:T1009 Arg2:T1008
 T1011	Concept 339 344	mujer
 T1012	Concept 350 360	embarazada
-R1009	has-property Arg1:T1011 Arg2:T1012
+R1009	in-context Arg1:T1011 Arg2:T1012
 R1010	in-context Arg1:T1009 Arg2:T1011
 T1013	Concept 432 439	médicos
 T1014	Concept 445 452	pruebas
@@ -384,7 +375,6 @@ T1050	Action 1343 1351	extirpar
 T1051	Concept 1355 1360	tumor
 R1040	target Arg1:T1050 Arg2:T1051
 A1007	Uncertain T1050
-T1052	Predicate 1316 1319;1320 1330	Con frecuencia
 T1053	Concept 1425 1437	tratamientos
 T1054	Concept 1447 1453	cremas
 T1055	Concept 1455 1464	medicinas
@@ -607,8 +597,6 @@ A1028	Uncertain T1024
 A1029	Uncertain T1025
 A1030	Uncertain T1026
 R1128	in-context Arg1:T1038 Arg2:T1036
-R1015	domain Arg1:T1052 Arg2:T1050
-R1032	domain Arg1:T1068 Arg2:T1064
 R1034	target Arg1:T1066 Arg2:T1065
 R1051	causes Arg1:T1066 Arg2:T1067
 R1041	arg Arg1:T1072 Arg2:T1073
@@ -620,3 +608,20 @@ R1130	in-context Arg1:T1155 Arg2:T1114
 A1008	Uncertain T1124
 A1021	Uncertain T1126
 R1131	causes Arg1:T1141 Arg2:T1142
+R117	causes Arg1:T1004 Arg2:T1003	
+R126	target Arg1:T19 Arg2:T17	
+R127	entails Arg1:T19 Arg2:T15	
+R128	subject Arg1:T19 Arg2:T13	
+R17	target Arg1:T18 Arg2:T22	
+R129	entails Arg1:T18 Arg2:T21	
+A26	Uncertain T21
+A27	Uncertain T27
+R25	has-property Arg1:T35 Arg2:T36	
+R125	has-property Arg1:T37 Arg2:T36	
+R130	has-property Arg1:T38 Arg2:T36	
+R131	is-a Arg1:T1060 Arg2:T1061	
+R132	is-a Arg1:T1059 Arg2:T1061	
+R133	is-a Arg1:T1058 Arg2:T1061	
+A9	Emphasized T71
+T72	Concept 1858 1863	látex
+R54	in-context Arg1:T70 Arg2:T72	
