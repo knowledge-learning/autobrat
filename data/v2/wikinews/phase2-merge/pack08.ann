@@ -649,19 +649,17 @@ R1068	subject Arg1:T1062 Arg2:T1061
 T1076	Concept 2050 2057	temblor
 T1077	Concept 2074 2078;2079 2085	Casa Blanca
 T1078	Concept 2100 2102;2103 2110;2111 2117;2090 2099	de Estados Unidos Capitolio
-T1079	Concept 2131 2136	costa
-T1080	Concept 2137 2141	este
+T1079	Concept 2131 2136;2137 2141	costa este
 T1081	Predicate 2123 2127	toda
 T1082	Concept 2159 2165;2166 2170	Chapel Hill
 T1083	Concept 2172 2180;2181 2184;2185 2190	Carolina del Norte
 R1069	part-of Arg1:T1082 Arg2:T1083
-T1084	Concept 2150 2153	sur
-R1070	in-place Arg1:T1082 Arg2:T1084
+T1084	Predicate 2150 2153	sur
+R1070	part-of Arg1:T1082 Arg2:T1084
 T1085	Action 2061 2067	sintió
 R1071	target Arg1:T1085 Arg2:T1076
 R1072	in-place Arg1:T1085 Arg2:T1077
 R1073	in-place Arg1:T1085 Arg2:T1078
-R1074	in-context Arg1:T1079 Arg2:T1080
 R1075	domain Arg1:T1081 Arg2:T1079
 R1076	in-place Arg1:T1085 Arg2:T1081
 R1077	in-place Arg1:T1085 Arg2:T1082
@@ -1130,3 +1128,4 @@ R248	in-context Arg1:T1063 Arg2:T1065
 R249	target Arg1:T1062 Arg2:T1069	
 R250	target Arg1:T1062 Arg2:T1070	
 R251	target Arg1:T1062 Arg2:T1071	
+R252	domain Arg1:T1084 Arg2:T1079	
