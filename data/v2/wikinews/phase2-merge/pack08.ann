@@ -631,13 +631,9 @@ T1064	Concept 1762 1773	Presidencia
 T1065	Concept 1778 1787	Bundestag
 T1066	Predicate 1790 1794	seis
 T1067	Concept 1795 1806	ministerios
-T1068	Reference 1814 1819	ellos
 T1069	Concept 1820 1828	Interior
 T1070	Concept 1830 1837	Defensa
-T1071	Concept 1863 1871	Economía
-T1072	Concept 1873 1879	Europa
-T1073	Concept 1882 1888;1889 1900	Nuevas Tecnologías
-R1055	is-a Arg1:T1068 Arg2:T1067
+T1071	Concept 1863 1871;1873 1879;1880 1881;1882 1888;1889 1900	Economía Europa y Nuevas Tecnologías
 R1056	domain Arg1:T1066 Arg2:T1067
 R1057	in-context Arg1:T1064 Arg2:T1065
 R1058	is-a Arg1:T1069 Arg2:T1067
@@ -646,9 +642,6 @@ T1074	Concept 1843 1848	nuevo
 T1075	Concept 1849 1859	ministerio
 R1060	in-context Arg1:T1075 Arg2:T1074
 R1061	is-a Arg1:T1071 Arg2:T1075
-R1062	is-a Arg1:T1071 Arg2:T1067
-R1063	is-a Arg1:T1072 Arg2:T1067
-R1064	is-a Arg1:T1073 Arg2:T1067
 R1065	target Arg1:T1062 Arg2:T1063
 R1066	target Arg1:T1062 Arg2:T1064
 R1067	target Arg1:T1062 Arg2:T1066
@@ -1133,3 +1126,7 @@ R244	target Arg1:T1044 Arg2:T1007
 R245	target Arg1:T1042 Arg2:T1047	
 R246	target Arg1:T1042 Arg2:T1049	
 R247	is-a Arg1:T40 Arg2:T51	
+R248	in-context Arg1:T1063 Arg2:T1065	
+R249	target Arg1:T1062 Arg2:T1069	
+R250	target Arg1:T1062 Arg2:T1070	
+R251	target Arg1:T1062 Arg2:T1071	
