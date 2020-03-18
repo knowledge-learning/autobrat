@@ -325,22 +325,17 @@ T189	Action 5179 5187	llevaban
 A5	Negated T189
 T190	Action 5191 5197	usaron
 A6	Negated T190
-T191	Concept 5198 5203;5204 5206;5207 5212	armas de fuego
 T192	Action 5215 5229	contradiciendo
 T193	Concept 5234 5243	versiones
 T194	Concept 5254 5262	testigos
-R162	in-context Arg1:T186 Arg2:T185
+R162	in-place Arg1:T186 Arg2:T185
 R163	subject Arg1:T189 Arg2:T187
-R164	target Arg1:T189 Arg2:T191
-T188	Concept 5157 5164;5165 5168;5169 5174	fuerzas del orden
 T195	Concept 5198 5203;5204 5206;5207 5212	armas de fuego
-R165	subject Arg1:T190 Arg2:T188
 R166	target Arg1:T190 Arg2:T195
 R167	target Arg1:T186 Arg2:T189
 R168	target Arg1:T186 Arg2:T190
-R169	in-context Arg1:T186 Arg2:T192
 R170	target Arg1:T192 Arg2:T193
-R171	in-context Arg1:T193 Arg2:T194
+R171	in-context Arg1:T193 Arg2:T166
 T196	Concept 5409 5416	senador
 T197	Action 5417 5427	oficializó
 T198	Action 5431 5439	renuncia
@@ -1127,3 +1122,8 @@ R153	target Arg1:T172 Arg2:T170
 R154	target Arg1:T181 Arg2:T177	
 R155	domain Arg1:T183 Arg2:T182	
 R161	part-of Arg1:T182 Arg2:T177	
+R165	subject Arg1:T190 Arg2:T187	
+R269	target Arg1:T189 Arg2:T195	
+R164	subject Arg1:T192 Arg2:T186	
+T166	Predicate 5247 5253	varios
+R169	domain Arg1:T166 Arg2:T194	
