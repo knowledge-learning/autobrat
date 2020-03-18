@@ -958,24 +958,23 @@ T1262	Concept 6560 6564;6565 6571	Ehud Olmert
 T1263	Concept 6573 6579;6580 6588	Primer Ministro
 T1264	Concept 6592 6598	Israel
 R1251	in-place Arg1:T1263 Arg2:T1264
-*	same-as T1262 T1263
 T1265	Action 6600 6606	arribó
 T1266	Concept 6609 6616;6617 6623	Estados Unidos
-T1267	Reference 6624 6628	este
+T1267	Predicate 6624 6628	este
 T1268	Concept 6629 6632;6633 6635;6636 6642	fin de semana
 T1269	Action 6645 6651	planea
 T1270	Action 6652 6660	discutir
 T1271	Concept 6664 6673	situación
 T1272	Concept 6677 6681	Gaza
-T1273	Concept 6689 6699;6700 6706;6707 6711	Presidente George Bush
+T1273	Concept 6700 6706;6707 6711	George Bush
 T1274	Concept 6712 6718	mañana
-R1252	is-a Arg1:T1267 Arg2:T1268
+R1252	domain Arg1:T1267 Arg2:T1268
 R1253	subject Arg1:T1265 Arg2:T1262
 R1254	in-place Arg1:T1265 Arg2:T1266
 R1255	in-time Arg1:T1265 Arg2:T1267
 R1256	in-context Arg1:T1271 Arg2:T1272
 R1257	target Arg1:T1270 Arg2:T1271
-R1258	in-context Arg1:T1270 Arg2:T1273
+R1258	target Arg1:T1270 Arg2:T1273
 R1259	target Arg1:T1269 Arg2:T1270
 R1260	subject Arg1:T1269 Arg2:T1262
 T1275	Concept 6829 6831;6832 6839	ex militar
@@ -1128,3 +1127,8 @@ R279	part-of Arg1:T1256 Arg2:T1258
 R280	part-of Arg1:T1255 Arg2:T1258	
 R281	part-of Arg1:T1254 Arg2:T1258	
 R282	part-of Arg1:T1253 Arg2:T1258	
+R283	is-a Arg1:T1262 Arg2:T1263	
+R284	subject Arg1:T1270 Arg2:T1262	
+R285	in-time Arg1:T1270 Arg2:T1274	
+T167	Concept 6689 6699	Presidente
+R286	is-a Arg1:T1273 Arg2:T167	
