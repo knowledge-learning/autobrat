@@ -350,14 +350,12 @@ T206	Concept 5536 5544	congreso
 R172	subject Arg1:T197 Arg2:T196
 R173	target Arg1:T197 Arg2:T198
 R174	target Arg1:T198 Arg2:T199
-T207	Concept 5409 5416	senador
 R175	subject Arg1:T198 Arg2:T196
 R176	in-context Arg1:T197 Arg2:T200
 R177	target Arg1:T200 Arg2:T201
 R178	in-context Arg1:T202 Arg2:T203
 R179	in-context Arg1:T203 Arg2:T204
-*	same-as T205 T202
-R180	in-context Arg1:T200 Arg2:T205
+R180	target Arg1:T200 Arg2:T205
 R181	in-place Arg1:T200 Arg2:T206
 T208	Concept 5689 5694	amigo
 T209	Action 5695 5702	declaró
@@ -1127,3 +1125,5 @@ R269	target Arg1:T189 Arg2:T195
 R164	subject Arg1:T192 Arg2:T186	
 T166	Predicate 5247 5253	varios
 R169	domain Arg1:T166 Arg2:T194	
+R270	subject Arg1:T200 Arg2:T196	
+R271	is-a Arg1:T205 Arg2:T202	
