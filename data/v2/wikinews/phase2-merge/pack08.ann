@@ -94,13 +94,12 @@ T40	Concept 1376 1380;1381 1386	Ehud Barak
 T51	Concept 1391 1399;1400 1402;1403 1410	Ministro de Defensa
 T52	Concept 1411 1418	israelí
 R46	in-context Arg1:T51 Arg2:T52
-*	same-as T40 T51
 T53	Action 1419 1423	dijo
 T54	Action 1444 1453	debilitar
 T55	Concept 1456 1461	Hamás
 R47	target Arg1:T54 Arg2:T55
 T56	Concept 1432 1440	objetivo
-R48	has-property Arg1:T54 Arg2:T56
+R48	is-a Arg1:T54 Arg2:T56
 R49	subject Arg1:T53 Arg2:T40
 R50	target Arg1:T53 Arg2:T54
 T57	Concept 1555 1558	CDU
@@ -1133,3 +1132,4 @@ R243	in-context Arg1:T1035 Arg2:T1044
 R244	target Arg1:T1044 Arg2:T1007	
 R245	target Arg1:T1042 Arg2:T1047	
 R246	target Arg1:T1042 Arg2:T1049	
+R247	is-a Arg1:T40 Arg2:T51	
