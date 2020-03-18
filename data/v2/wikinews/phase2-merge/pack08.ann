@@ -937,7 +937,6 @@ R1237	target Arg1:T1236 Arg2:T1242
 R1238	target Arg1:T1236 Arg2:T1246
 R1239	target Arg1:T1236 Arg2:T1247
 T1250	Concept 6234 6240;6241 6249	Tierra Caliente
-T1251	Action 6253 6257	tomó
 T1252	Action 6261 6268	control
 T1253	Concept 6272 6279	Arcelia
 T1254	Concept 6281 6287;6288 6290;6291 6298	Coyuca de Catalán
@@ -947,18 +946,14 @@ T1257	Concept 6336 6346	Tlapehuala
 T1258	Concept 6351 6359	Guerrero
 T1259	Concept 6363 6370;6371 6373;6374 6376;6377 6380	Ixtapan de la Sal
 T1260	Concept 6382 6388;6389 6391;6392 6398	Estado de México
-T1261	Predicate 6218 6226	Mientras
 R1240	target Arg1:T1252 Arg2:T1253
 R1241	target Arg1:T1252 Arg2:T1254
 R1242	target Arg1:T1252 Arg2:T1255
 R1243	target Arg1:T1252 Arg2:T1256
-R1244	in-place Arg1:T1257 Arg2:T1258
+R1244	part-of Arg1:T1257 Arg2:T1258
 R1245	target Arg1:T1252 Arg2:T1257
 R1246	part-of Arg1:T1259 Arg2:T1260
 R1247	target Arg1:T1252 Arg2:T1259
-R1248	target Arg1:T1251 Arg2:T1252
-R1249	in-place Arg1:T1251 Arg2:T1250
-R1250	in-time Arg1:T1251 Arg2:T1261
 T1262	Concept 6560 6564;6565 6571	Ehud Olmert
 T1263	Concept 6573 6579;6580 6588	Primer Ministro
 T1264	Concept 6592 6598	Israel
@@ -1128,3 +1123,8 @@ R182	causes Arg1:T216 Arg2:T220
 R183	causes Arg1:T216 Arg2:T221	
 R189	target Arg1:T209 Arg2:T211	
 R191	target Arg1:T209 Arg2:T216	
+R278	in-place Arg1:T1252 Arg2:T1250	
+R279	part-of Arg1:T1256 Arg2:T1258	
+R280	part-of Arg1:T1255 Arg2:T1258	
+R281	part-of Arg1:T1254 Arg2:T1258	
+R282	part-of Arg1:T1253 Arg2:T1258	
