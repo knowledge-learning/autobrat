@@ -211,12 +211,11 @@ T117	Predicate 3234 3241	después
 R95	target Arg1:T109 Arg2:T106
 R96	in-place Arg1:T109 Arg2:T110
 R97	subject Arg1:T112 Arg2:T113
-R98	subject Arg1:T112 Arg2:T115
+R98	subject Arg1:T112 Arg2:T114
 R99	arg Arg1:T117 Arg2:T116
 R100	in-time Arg1:T115 Arg2:T117
 R101	subject Arg1:T115 Arg2:T114
-R102	has-property Arg1:T112 Arg2:T111
-R103	in-context Arg1:T109 Arg2:T112
+R102	in-context Arg1:T112 Arg2:T111
 T118	Concept 3411 3421	campamento
 T119	Concept 3428 3432	área
 T120	Concept 3436 3441;3442 3445	Dollo Ado
@@ -736,14 +735,12 @@ T1133	Action 3380 3388	falleció
 R1110	subject Arg1:T1133 Arg2:T1130
 R1111	arg Arg1:T1131 Arg2:T1132
 R1112	in-time Arg1:T1133 Arg2:T1131
-T1134	Action 3345 3350	hecha
-T1135	Concept 3333 3344	fecundación
+T1134	Action 3333 3344	fecundación
 T1136	Concept 3321 3326	éxito
 T1137	Predicate 3313 3317	tras
-R1113	subject Arg1:T1134 Arg2:T1135
-R1114	target Arg1:T1134 Arg2:T1129
-R1115	target Arg1:T1134 Arg2:T1130
-R1116	has-property Arg1:T1134 Arg2:T1136
+R1114	subject Arg1:T1134 Arg2:T1129
+R1115	subject Arg1:T1134 Arg2:T1130
+R1116	in-context Arg1:T1134 Arg2:T1136
 R1117	arg Arg1:T1137 Arg2:T1134
 R1118	in-context Arg1:T1125 Arg2:T1126
 R1119	in-context Arg1:T1124 Arg2:T1125
@@ -1128,3 +1125,6 @@ T277	Reference 3037 3039	se
 R257	is-a Arg1:T277 Arg2:T1120	
 A9	Emphasized T1120
 R258	has-property Arg1:T277 Arg2:T1121	
+R259	domain Arg1:T1131 Arg2:T1134	
+R260	domain Arg1:T117 Arg2:T112	
+R103	entails Arg1:T112 Arg2:T109	
