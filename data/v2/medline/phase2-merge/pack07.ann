@@ -380,7 +380,7 @@ R185	arg Arg1:T206 Arg2:T204
 T198	Predicate 5216 5223	Algunas
 T207	Predicate 5224 5230	causas
 T208	Concept 5231 5238	comunes
-T209	Concept 5242 5250	lesiones
+T209	Action 5242 5250	lesiones
 T210	Concept 5257 5263	cabeza
 T211	Concept 5272 5278	caídas
 T212	Concept 5280 5290	accidentes
@@ -388,9 +388,8 @@ T213	Concept 5294 5302	tránsito
 T214	Concept 5304 5313	violencia
 T215	Concept 5316 5324	deportes
 R186	in-context Arg1:T212 Arg2:T213
-R187	in-place Arg1:T209 Arg2:T210
+R187	target Arg1:T209 Arg2:T210
 R188	domain Arg1:T198 Arg2:T207
-R189	in-context Arg1:T207 Arg2:T208
 R190	arg Arg1:T207 Arg2:T209
 R191	is-a Arg1:T211 Arg2:T198
 R192	is-a Arg1:T212 Arg2:T198
@@ -849,3 +848,4 @@ T106	Concept 4546 4553;4554 4563	túneles carpianos
 R159	in-place Arg1:T106 Arg2:T182	
 R172	in-context Arg1:T197 Arg2:T196	
 A13	Emphasized T200
+R189	in-context Arg1:T209 Arg2:T208	
