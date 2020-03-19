@@ -47,7 +47,7 @@ R22	in-context Arg1:T27 Arg2:T25
 T28	Action 683 694	recomiendan
 T29	Action 672 679	pruebas
 R23	target Arg1:T28 Arg2:T29
-T30	Concept 697 705	personas
+T30	Concept 771 778	hombres
 T31	Predicate 709 714	entre
 T32	Concept 720 722;723 727	75 años
 T33	Concept 738 750;751 761	antecedentes familiares
@@ -59,7 +59,6 @@ R27	arg Arg1:T31 Arg2:T32
 R24	in-time Arg1:T30 Arg2:T31
 R25	in-time Arg1:T35 Arg2:T31
 R28	in-context Arg1:T35 Arg2:T33
-R29	has-property Arg1:T30 Arg2:T34
 R30	target Arg1:T29 Arg2:T30
 R31	target Arg1:T29 Arg2:T35
 T37	Concept 915 922	escuela
@@ -834,3 +833,5 @@ R1177	subject Arg1:T1201 Arg2:T1200
 R1178	target Arg1:T1201 Arg2:T1202
 R1179	arg Arg1:T1195 Arg2:T1201
 R4	in-place Arg1:T5 Arg2:T2	
+R5	in-context Arg1:T30 Arg2:T34	
+R29	is-a Arg1:T30 Arg2:T35	
