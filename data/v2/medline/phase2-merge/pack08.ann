@@ -208,10 +208,8 @@ T109	Concept 2492 2500	genético
 A17	Emphasized T109
 R99	has-property Arg1:T108 Arg2:T109
 T110	Concept 2561 2568	mujeres
-T111	Concept 2585 2597	Papanicolaou
 T112	Action 2605 2613	detectar
-T113	Action 2574 2581	pruebas
-R100	arg Arg1:T113 Arg2:T111
+T113	Concept 2574 2581;2582 2584;2585 2597	pruebas de Papanicolaou
 R101	subject Arg1:T112 Arg2:T113
 T114	Concept 2614 2621	cambios
 T115	Concept 2628 2634;2635 2642	cuello uterino
@@ -225,18 +223,10 @@ R103	target Arg1:T112 Arg2:T116
 R106	in-place Arg1:T113 Arg2:T110
 T118	Concept 2803 2809	vejiga
 T119	Action 2813 2820	expande
-T120	Concept 2833 2838	llena
+T120	Action 2833 2838	llena
 R107	subject Arg1:T119 Arg2:T118
-R108	target Arg1:T119 Arg2:T118
-R109	in-context Arg1:T118 Arg2:T120
-T121	Concept 2803 2809	vejiga
-T122	Concept 2873 2878	vacía
-T123	Action 2844 2848	hace
-T124	Concept 2853 2860	pequeña
-R110	in-context Arg1:T121 Arg2:T122
-R111	subject Arg1:T123 Arg2:T121
-R112	arg Arg1:T123 Arg2:T124
-R113	target Arg1:T123 Arg2:T121
+T122	Action 2873 2878	vacía
+T124	Action 2853 2860	pequeña
 T125	Concept 2967 2979	medicamentos
 T126	Concept 2984 2990	receta
 A19	Negated T126
@@ -523,30 +513,26 @@ T1067	Concept 1566 1574	opioides
 T1068	Predicate 1545 1548	más
 R1062	domain Arg1:T1068 Arg2:T1065
 R1063	arg Arg1:T1068 Arg2:T1066
-R1064	has-property Arg1:T1067 Arg2:T1068
 T1069	Concept 1659 1670	tratamiento
 T1070	Concept 1678 1683	niños
 T1071	Action 1695 1704	diferente
 T1073	Concept 1727 1734	adultos
 R1065	in-place Arg1:T1069 Arg2:T1070
 R1066	subject Arg1:T1071 Arg2:T1069
-R1067	target Arg1:T1071 Arg2:T1073
+R1067	subject Arg1:T1071 Arg2:T48
 T1072	Action 1858 1864	fallan
 T1074	Concept 1850 1857	riñones
 T1075	Concept 1882 1893	tratamiento
 T1077	Action 1899 1908	sustituir
 T1078	Concept 1912 1919	trabajo
-T1079	Action 1930 1940	realizaban
 R1068	subject Arg1:T1072 Arg2:T1074
 R1069	subject Arg1:T1077 Arg2:T1075
-R1070	target Arg1:T1079 Arg2:T1078
-R1071	subject Arg1:T1079 Arg2:T1074
-R1072	target Arg1:T1077 Arg2:T1079
+R1072	target Arg1:T1077 Arg2:T1078
 T1076	Concept 2089 2103	hipotiroidismo
 T1080	Concept 2111 2116	común
 T1081	Concept 2124 2131	mujeres
 T1082	Concept 2140 2148	personas
-T1083	Concept 2159 2168	problemas
+T1083	Action 2159 2168	problemas
 T1084	Concept 2175 2183	tiroides
 T1085	Concept 2193 2201	personas
 T1086	Predicate 2202 2209	mayores
@@ -557,10 +543,9 @@ T1088	Predicate 2107 2110	más
 R1076	arg Arg1:T1088 Arg2:T1080
 R1077	has-property Arg1:T1076 Arg2:T1088
 R1078	in-place Arg1:T1088 Arg2:T1081
-R1079	in-place Arg1:T1088 Arg2:T1082
-R1080	in-context Arg1:T1082 Arg2:T1083
+R1079	in-place Arg1:T1088 Arg2:T1083
 R1081	in-place Arg1:T1083 Arg2:T1084
-R1082	in-place Arg1:T1088 Arg2:T1085
+R1082	in-place Arg1:T1088 Arg2:T1086
 T1090	Concept 2359 2363	años
 T1091	Concept 2377 2384	células
 T1092	Concept 2385 2393	normales
@@ -828,3 +813,15 @@ R206	has-property Arg1:T1064 Arg2:T1057
 R207	target Arg1:T1048 Arg2:T1064	
 R200	in-time Arg1:T1059 Arg2:T1060	
 R202	in-time Arg1:T1059 Arg2:T1062	
+*	same-as T1067 T1068
+T48	Concept 1659 1670	tratamiento
+R208	in-place Arg1:T48 Arg2:T1073	
+R209	in-place Arg1:T1078 Arg2:T1074	
+R210	target Arg1:T1083 Arg2:T1082	
+A5	Uncertain T105
+A15	Uncertain T112
+R100	target Arg1:T120 Arg2:T118	
+R108	subject Arg1:T124 Arg2:T118	
+R109	target Arg1:T122 Arg2:T118	
+R110	entails Arg1:T119 Arg2:T120	
+R111	entails Arg1:T124 Arg2:T122	
