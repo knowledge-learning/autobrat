@@ -90,9 +90,7 @@ R43	in-context Arg1:T44 Arg2:T43
 T45	Concept 875 885	enfermedad
 T46	Concept 886 893	crónica
 R44	in-context Arg1:T45 Arg2:T46
-T47	Predicate 904 910	riesgo
-T48	Concept 911 916	mayor
-R45	in-context Arg1:T47 Arg2:T48
+T47	Concept 904 910	riesgo
 T49	Concept 828 836	personas
 R46	in-context Arg1:T49 Arg2:T45
 T50	Action 1036 1042	drenar
@@ -102,10 +100,9 @@ T52	Predicate 1063 1069	riesgo
 T53	Action 1073 1082	infección
 R47	arg Arg1:T52 Arg2:T53
 R48	target Arg1:T50 Arg2:T51
-R49	in-context Arg1:T50 Arg2:T52
-R50	in-context Arg1:T49 Arg2:T47
-R51	in-context Arg1:T44 Arg2:T47
-R52	in-context Arg1:T41 Arg2:T47
+R50	has-property Arg1:T49 Arg2:T47
+R51	has-property Arg1:T44 Arg2:T47
+R52	has-property Arg1:T41 Arg2:T47
 T54	Concept 1169 1174	dolor
 T55	Predicate 1181 1186	parte
 T56	Concept 1187 1191	baja
@@ -465,25 +462,18 @@ A1001	Negated T1025
 R1026	subject Arg1:T1026 Arg2:T1025
 R1027	target Arg1:T1026 Arg2:T1027
 R1028	in-context Arg1:T1027 Arg2:T1028
-T1029	Concept 739 747	sentirse
+T1029	Action 739 747	sentirse
 A1003	Uncertain T1029
 T1030	Concept 748 756	aturdido
 T1031	Concept 771 775	bien
-T1032	Concept 762 770	sentirse
+T1032	Action 762 770	sentirse
 T1033	Concept 787 791	días
 T1034	Concept 794 801	semanas
 T1035	Predicate 802 809	después
 T1036	Concept 816 822	lesión
-R1029	arg Arg1:T1035 Arg2:T1036
-R1030	in-time Arg1:T1033 Arg2:T1035
-R1031	in-time Arg1:T1034 Arg2:T1035
 R1032	in-context Arg1:T1029 Arg2:T1030
 R1033	in-context Arg1:T1032 Arg2:T1031
 A1004	Negated T1032
-R1034	in-time Arg1:T1029 Arg2:T1033
-R1035	in-time Arg1:T1029 Arg2:T1034
-R1036	in-time Arg1:T1032 Arg2:T1033
-R1037	in-time Arg1:T1032 Arg2:T1034
 T1037	Concept 922 930	personas
 T1038	Concept 931 938	mayores
 T1039	Concept 944 951	jóvenes
@@ -825,3 +815,16 @@ R9	subject Arg1:T5 Arg2:T6
 R186	target Arg1:T5 Arg2:T9	
 T208	Concept 208 214	labial
 R187	in-context Arg1:T10 Arg2:T208	
+R188	causes Arg1:T1036 Arg2:T1029	
+R189	causes Arg1:T1036 Arg2:T1032	
+R190	in-time Arg1:T1029 Arg2:T1035	
+R191	in-time Arg1:T1029 Arg2:T1035	
+R192	in-time Arg1:T1032 Arg2:T1035	
+R193	in-time Arg1:T1032 Arg2:T1035	
+R194	causes Arg1:T38 Arg2:T31	
+R195	causes Arg1:T38 Arg2:T39	
+R196	causes Arg1:T38 Arg2:T29	
+R197	causes Arg1:T38 Arg2:T40	
+A1	Emphasized T47
+R45	entails Arg1:T52 Arg2:T50	
+R49	target Arg1:T53 Arg2:T51	

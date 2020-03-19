@@ -5,3 +5,5 @@
 - Diferentes relaciones de tiempo, como ocurre durante, ocurre después
 - Una forma de decir el valor que tiene cierta propiedad.
 - Unión e intersección explícitas.
+- existencia, para todo, ninguno.
+- duración no es lo mismo que ocurre en un instante de tiempo.
