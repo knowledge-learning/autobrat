@@ -217,19 +217,19 @@ T121	Concept 3173 3176	CMV
 T122	Action 3177 3184	penetra
 T123	Concept 3191 3197	cuerpo
 T124	Concept 3204 3211	persona
-R111	part-of Arg1:T123 Arg2:T124
+R111	in-place Arg1:T123 Arg2:T124
 T125	Action 3213 3222	permanece
 R112	subject Arg1:T122 Arg2:T121
 T126	Concept 3232 3239	siempre
 R113	in-time Arg1:T125 Arg2:T126
 R114	target Arg1:T122 Arg2:T123
-R115	causes Arg1:T122 Arg2:T125
+R115	entails Arg1:T122 Arg2:T125
 T127	Concept 3328 3336	síntomas
 T128	Concept 3346 3352	fiebre
 T129	Concept 3355 3366	escalofríos
-T130	Concept 3368 3373	dolor
+T130	Action 3368 3373	dolor
 T131	Concept 3377 3383	cabeza
-R116	in-place Arg1:T130 Arg2:T131
+R116	target Arg1:T130 Arg2:T131
 T132	Concept 3385 3393	malestar
 T133	Concept 3394 3403	estomacal
 R117	in-context Arg1:T132 Arg2:T133
@@ -840,3 +840,4 @@ R70	target Arg1:T84 Arg2:T83
 *	same-as T85 T86
 R75	subject Arg1:T102 Arg2:T100	
 R88	in-place Arg1:T110 Arg2:T108	
+R91	subject Arg1:T125 Arg2:T121	
