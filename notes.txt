@@ -2,3 +2,6 @@
 - Una relación para `depends` o `has-dependency`
 - Una relación para `has-purpose`
 - Una relación para `has-means`
+- Diferentes relaciones de tiempo, como ocurre durante, ocurre después
+- Una forma de decir el valor que tiene cierta propiedad.
+- Unión e intersección explícitas.

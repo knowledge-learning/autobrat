@@ -1,53 +1,41 @@
 T1	Concept 10 18	personas
-T2	Concept 22 26;27 32	seis meses
 T3	Predicate 43 50	mayores
-T4	Concept 36 40	edad
-R1	arg Arg1:T3 Arg2:T2
-R2	domain Arg1:T3 Arg2:T1
-T5	Concept 10 18	personas
-R3	in-context Arg1:T4 Arg2:T2
-R4	in-context Arg1:T5 Arg2:T4
+T4	Predicate 36 40	edad
 T6	Action 57 66	vacunarse
 T7	Predicate 67 71	cada
 T8	Concept 72 81	temporada
 T9	Concept 92 97	gripe
 R5	domain Arg1:T7 Arg2:T8
 R6	in-time Arg1:T6 Arg2:T7
-R7	subject Arg1:T6 Arg2:T1
-R8	subject Arg1:T6 Arg2:T5
-R9	arg Arg1:T6 Arg2:T9
-T10	Concept 201 207;208 214	herpes labial
+T10	Concept 201 207	herpes
 T11	Action 221 229	aparecer
-A1	Emphasized T11
 A2	Uncertain T11
 T12	Predicate 230 235	fuera
 T13	Concept 242 246	boca
-R10	in-context Arg1:T12 Arg2:T13
+R10	arg Arg1:T12 Arg2:T13
 R11	in-place Arg1:T11 Arg2:T12
 T14	Concept 256 262	labios
 T15	Predicate 266 275	alrededor
-R12	in-context Arg1:T15 Arg2:T14
+R12	arg Arg1:T15 Arg2:T14
 T16	Action 221 229	aparecer
-A3	Emphasized T16
 A4	Uncertain T16
 T17	Action 221 229	aparecer
-A5	Emphasized T17
 A6	Uncertain T17
 R13	in-place Arg1:T17 Arg2:T14
 R14	in-place Arg1:T16 Arg2:T15
 R15	subject Arg1:T16 Arg2:T10
 R16	subject Arg1:T17 Arg2:T10
 R17	subject Arg1:T11 Arg2:T10
-T18	Concept 359 370	tratamiento
+T18	Action 359 370	tratamiento
 T19	Concept 375 380	dolor
 T20	Concept 384 389	pecho
 R18	in-place Arg1:T19 Arg2:T20
-R19	in-context Arg1:T18 Arg2:T19
+R19	target Arg1:T18 Arg2:T19
 T21	Action 390 399	dependerá
 R20	subject Arg1:T21 Arg2:T18
-T22	Predicate 406 411	causa
+T22	Action 406 411	causa
 T23	Concept 416 421	dolor
-R21	arg Arg1:T22 Arg2:T23
+R21	target Arg1:T22 Arg2:T23
 R22	target Arg1:T21 Arg2:T22
 T24	Concept 500 511	medicamento
 A7	Negated T24
@@ -58,7 +46,7 @@ T27	Action 539 550	infecciones
 T28	Concept 555 564	Norovirus
 R24	subject Arg1:T27 Arg2:T28
 R25	target Arg1:T26 Arg2:T27
-R26	in-context Arg1:T26 Arg2:T24
+R26	subject Arg1:T26 Arg2:T24
 T29	Action 648 656	sentirse
 A8	Uncertain T29
 T30	Concept 657 665	aturdido
@@ -821,3 +809,19 @@ R1084	in-context Arg1:T1160 Arg2:T1162
 R1138	in-context Arg1:T1161 Arg2:T1162
 R1173	is-a Arg1:T1184 Arg2:T1198
 R1176	is-a Arg1:T1184 Arg2:T1199
+T206	Concept 27 32	meses
+T2	Predicate 22 26	seis
+R2	domain Arg1:T2 Arg2:T206	
+R3	arg Arg1:T4 Arg2:T2	
+T207	Predicate 36 40	edad
+R8	arg Arg1:T3 Arg2:T2	
+R1	domain Arg1:T207 Arg2:T1	
+R4	arg Arg1:T207 Arg2:T3	
+R7	domain Arg1:T4 Arg2:T1	
+R184	target Arg1:T6 Arg2:T4	
+R185	target Arg1:T6 Arg2:T207	
+T5	Action 82 88	contra
+R9	subject Arg1:T5 Arg2:T6	
+R186	target Arg1:T5 Arg2:T9	
+T208	Concept 208 214	labial
+R187	in-context Arg1:T10 Arg2:T208	
