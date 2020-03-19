@@ -323,7 +323,7 @@ T177	Predicate 4522 4529	Algunas
 T178	Concept 4530 4538	personas
 T179	Concept 4546 4553;4554 4563	túneles carpianos
 R161	domain Arg1:T177 Arg2:T178
-R162	part-of Arg1:T179 Arg2:T177
+R162	part-of Arg1:T179 Arg2:T178
 T180	Predicate 4564 4567	más
 T181	Concept 4568 4576	pequeños
 T182	Predicate 4581 4586	otras
@@ -843,3 +843,9 @@ R90	subject Arg1:T169 Arg2:T170
 R97	subject Arg1:T169 Arg2:T163	
 R98	subject Arg1:T169 Arg2:T156	
 R99	has-property Arg1:T171 Arg2:T176	
+T103	Concept 4546 4553;4554 4563	túneles carpianos
+R101	in-place Arg1:T103 Arg2:T177	
+R151	has-property Arg1:T179 Arg2:T180	
+R152	domain Arg1:T180 Arg2:T106	
+T106	Concept 4546 4553;4554 4563	túneles carpianos
+R159	in-place Arg1:T106 Arg2:T182	
