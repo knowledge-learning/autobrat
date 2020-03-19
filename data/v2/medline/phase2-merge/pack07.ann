@@ -295,22 +295,20 @@ T168	Concept 4211 4216	suave
 T169	Action 4223 4229	ayudar
 A11	Uncertain T169
 R141	target Arg1:T156 Arg2:T157
-R142	part-of Arg1:T157 Arg2:T158
+R142	in-place Arg1:T157 Arg2:T158
 R143	in-time Arg1:T156 Arg2:T159
 R144	domain Arg1:T159 Arg2:T160
 R145	in-context Arg1:T156 Arg2:T161
 R146	in-context Arg1:T161 Arg2:T162
-R147	part-of Arg1:T165 Arg2:T158
+R147	in-context Arg1:T165 Arg2:T158
 R148	in-context Arg1:T163 Arg2:T164
 R149	target Arg1:T163 Arg2:T165
 R150	in-context Arg1:T167 Arg2:T168
-R151	causes Arg1:T163 Arg2:T169
-R152	causes Arg1:T156 Arg2:T169
-R153	in-context Arg1:T163 Arg2:T166
+R153	subject Arg1:T163 Arg2:T166
 T170	Action 4143 4149	frotar
 R154	in-context Arg1:T170 Arg2:T164
 R155	target Arg1:T170 Arg2:T165
-R156	in-context Arg1:T170 Arg2:T167
+R156	subject Arg1:T170 Arg2:T167
 T171	Concept 4387 4397;4398 4405	disfunción eréctil
 T172	Concept 4407 4409	DE
 *	same-as T171 T172
@@ -842,3 +840,6 @@ R75	subject Arg1:T102 Arg2:T100
 R88	in-place Arg1:T110 Arg2:T108	
 R91	subject Arg1:T125 Arg2:T121	
 A7	Diminished T141
+R90	subject Arg1:T169 Arg2:T170	
+R97	subject Arg1:T169 Arg2:T163	
+R98	subject Arg1:T169 Arg2:T156	

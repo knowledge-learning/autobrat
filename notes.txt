@@ -1,0 +1,4 @@
+- Una relación para `claims`
+- Una relación para `depends` o `has-dependency`
+- Una relación para `has-purpose`
+- Una relación para `has-means`
