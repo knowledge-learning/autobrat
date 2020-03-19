@@ -183,7 +183,6 @@ T104	Concept 2649 2653	bien
 R89	in-context Arg1:T102 Arg2:T104
 R92	target Arg1:T98 Arg2:T102
 T105	Concept 2787 2795	gérmenes
-T106	Action 2796 2806	permanecen
 T107	Concept 2813 2818	nariz
 T108	Concept 2827 2835	garganta
 T109	Concept 2840 2844	niño
@@ -192,13 +191,9 @@ R94	in-place Arg1:T108 Arg2:T109
 T110	Action 2796 2806	permanecen
 R95	subject Arg1:T110 Arg2:T105
 R96	in-place Arg1:T110 Arg2:T107
-R97	subject Arg1:T106 Arg2:T105
-R98	in-place Arg1:T106 Arg2:T108
 T111	Action 2866 2873	enferme
 A8	Uncertain T111
-R99	subject Arg1:T111 Arg2:T109
 R100	target Arg1:T111 Arg2:T109
-R101	causes Arg1:T106 Arg2:T111
 R102	causes Arg1:T110 Arg2:T111
 A9	Negated T111
 T112	Concept 2978 2989	adherencias
@@ -208,13 +203,13 @@ T114	Action 2990 3001	desaparecen
 R104	subject Arg1:T114 Arg2:T113
 R105	target Arg1:T114 Arg2:T113
 T115	Action 3068 3074	limita
-T116	Predicate 3078 3083	flujo
+T116	Action 3078 3083	flujo
 T117	Concept 3087 3093	sangre
 T118	Concept 3102 3109	oxígeno
 T119	Concept 3094 3098	rica
 R106	in-context Arg1:T119 Arg2:T118
 R107	in-context Arg1:T117 Arg2:T119
-R108	arg Arg1:T116 Arg2:T117
+R108	subject Arg1:T116 Arg2:T117
 R109	target Arg1:T115 Arg2:T116
 T120	Reference 3064 3067	Eso
 R110	subject Arg1:T115 Arg2:T120
@@ -629,8 +624,8 @@ T1103	Predicate 3141 3145	rica
 R1090	domain Arg1:T1103 Arg2:T1102
 T1104	Concept 3149 3156	oxígeno
 R1091	arg Arg1:T1103 Arg2:T1104
-T1105	Concept 3125 3130	flujo
-R1092	in-context Arg1:T1105 Arg2:T1103
+T1105	Action 3125 3130	flujo
+R1092	target Arg1:T1105 Arg2:T1103
 R1093	subject Arg1:T1101 Arg2:T1100
 R1094	target Arg1:T1101 Arg2:T1105
 T1106	Concept 3256 3259	CMV
@@ -844,3 +839,4 @@ R69	subject Arg1:T79 Arg2:T80
 R70	target Arg1:T84 Arg2:T83	
 *	same-as T85 T86
 R75	subject Arg1:T102 Arg2:T100	
+R88	in-place Arg1:T110 Arg2:T108	
