@@ -646,14 +646,13 @@ R1123	in-place Arg1:T1139 Arg2:T1143
 T1145	Concept 3866 3874	personas
 T1146	Concept 3882 3892	enfermedad
 T1147	Action 3893 3898	nacen
-T1148	Concept 3903 3906;3907 3912	dos genes
+T1148	Predicate 3903 3906	dos
 T1149	Concept 3916 3923	células
 T1150	Concept 3924 3935	falciformes
-R1124	in-context Arg1:T1145 Arg2:T1146
+R1124	in-context Arg1:T1145 Arg2:T121
 R1125	in-context Arg1:T1149 Arg2:T1150
 R1126	subject Arg1:T1147 Arg2:T1145
 R1127	in-context Arg1:T1147 Arg2:T1148
-R1128	in-context Arg1:T1148 Arg2:T1149
 T1151	Concept 4058 4065	diarrea
 T1152	Action 4066 4076	desaparece
 T1153	Predicate 4077 4084	después
@@ -828,3 +827,10 @@ T111	Predicate 3289 3296	Algunos
 R113	domain Arg1:T111 Arg2:T1125	
 R211	subject Arg1:T1128 Arg2:T111	
 R212	subject Arg1:T1130 Arg2:T111	
+T121	Reference 3879 3881	la
+R213	is-a Arg1:T121 Arg2:T1146	
+T123	Concept 3907 3912	genes
+R214	domain Arg1:T1148 Arg2:T123	
+R215	in-context Arg1:T123 Arg2:T1149	
+R216	domain Arg1:T1157 Arg2:T123	
+R217	in-context Arg1:T1156 Arg2:T1151	
