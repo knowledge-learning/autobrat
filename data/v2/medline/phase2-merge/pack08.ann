@@ -94,7 +94,6 @@ T47	Concept 904 910	riesgo
 T49	Concept 828 836	personas
 R46	in-context Arg1:T49 Arg2:T45
 T50	Action 1036 1042	drenar
-A15	Negated T50
 T51	Concept 1047 1055	ampollas
 T52	Predicate 1063 1069	riesgo
 T53	Action 1073 1082	infección
@@ -496,7 +495,7 @@ T1047	Concept 1145 1154	infección
 R1044	arg Arg1:T1046 Arg2:T1047
 R1045	target Arg1:T1044 Arg2:T1045
 R1046	in-context Arg1:T1044 Arg2:T1046
-T1048	Concept 1332 1337	dolor
+T1048	Action 1332 1337	dolor
 T1049	Predicate 1344 1349	parte
 T1050	Concept 1350 1354	baja
 T1051	Concept 1359 1366	abdomen
@@ -509,24 +508,14 @@ T1055	Concept 1402 1406	olor
 T1056	Concept 1398 1401	mal
 T1057	Concept 1408 1418	hemorragia
 T1058	Concept 1419 1428	irregular
-T1059	Concept 1431 1436	dolor
-T1060	Concept 1449 1459	relaciones
-T1061	Concept 1460 1468	sexuales
-T1062	Concept 1474 1480	orinar
+T1059	Action 1431 1436	dolor
+T1060	Action 1449 1459;1460 1468	relaciones sexuales
+T1062	Action 1474 1480	orinar
 R1050	in-place Arg1:T1048 Arg2:T1049
-T1063	Action 1325 1331	tienen
 T1064	Reference 1319 1324	Otras
-R1049	subject Arg1:T1063 Arg2:T1064
-R1051	target Arg1:T1063 Arg2:T1048
-R1052	target Arg1:T1063 Arg2:T1052
-R1053	target Arg1:T1063 Arg2:T1053
 R1054	in-context Arg1:T1053 Arg2:T1054
 R1055	in-context Arg1:T1055 Arg2:T1056
 R1057	in-context Arg1:T1057 Arg2:T1058
-R1058	in-time Arg1:T1059 Arg2:T1060
-R1059	in-time Arg1:T1059 Arg2:T1062
-R1060	target Arg1:T1063 Arg2:T1057
-R1061	target Arg1:T1063 Arg2:T1059
 R1056	in-context Arg1:T1053 Arg2:T1055
 T1065	Concept 1533 1544	analgésicos
 T1066	Concept 1549 1557	potentes
@@ -826,5 +815,16 @@ R195	causes Arg1:T38 Arg2:T39
 R196	causes Arg1:T38 Arg2:T29	
 R197	causes Arg1:T38 Arg2:T40	
 A1	Emphasized T47
-R45	entails Arg1:T52 Arg2:T50	
 R49	target Arg1:T53 Arg2:T51	
+A3	Negated T50
+R45	in-context Arg1:T50 Arg2:T52	
+R198	subject Arg1:T1060 Arg2:T1064	
+R199	subject Arg1:T1062 Arg2:T1064	
+R201	target Arg1:T1059 Arg2:T1064	
+R203	target Arg1:T1059 Arg2:T1064	
+R204	has-property Arg1:T1064 Arg2:T1052	
+R205	has-property Arg1:T1064 Arg2:T1053	
+R206	has-property Arg1:T1064 Arg2:T1057	
+R207	target Arg1:T1048 Arg2:T1064	
+R200	in-time Arg1:T1059 Arg2:T1060	
+R202	in-time Arg1:T1059 Arg2:T1062	

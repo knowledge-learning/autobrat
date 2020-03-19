@@ -7,3 +7,4 @@
 - Unión e intersección explícitas.
 - existencia, para todo, ninguno.
 - duración no es lo mismo que ocurre en un instante de tiempo.
+- oraciones explícitas donde el conocimiento sea un statement.
