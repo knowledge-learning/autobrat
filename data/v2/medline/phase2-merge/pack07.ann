@@ -363,7 +363,6 @@ R176	domain Arg1:T193 Arg2:T194
 R177	causes Arg1:T192 Arg2:T197
 T199	Predicate 5057 5063	riesgo
 T200	Action 5070 5079	evaluarse
-A13	Emphasized T200
 T202	Concept 5085 5089;5090 5095	tres meses
 T203	Predicate 5080 5084	cada
 T201	Concept 5114 5118;5119 5123	ocho años
@@ -371,11 +370,11 @@ T204	Action 5106 5113	cumplan
 R179	target Arg1:T204 Arg2:T201
 T205	Concept 5038 5043	niños
 R180	in-context Arg1:T205 Arg2:T199
-R181	subject Arg1:T200 Arg2:T205
+R181	target Arg1:T200 Arg2:T205
 R182	in-time Arg1:T200 Arg2:T203
 R183	arg Arg1:T203 Arg2:T202
 T206	Predicate 5096 5101	hasta
-R184	arg Arg1:T200 Arg2:T206
+R184	in-time Arg1:T200 Arg2:T206
 R178	subject Arg1:T204 Arg2:T205
 R185	arg Arg1:T206 Arg2:T204
 T198	Predicate 5216 5223	Algunas
@@ -849,3 +848,4 @@ R152	domain Arg1:T180 Arg2:T106
 T106	Concept 4546 4553;4554 4563	túneles carpianos
 R159	in-place Arg1:T106 Arg2:T182	
 R172	in-context Arg1:T197 Arg2:T196	
+A13	Emphasized T200
