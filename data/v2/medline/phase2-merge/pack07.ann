@@ -124,20 +124,17 @@ T69	Concept 1848 1855	órganos
 R59	is-a Arg1:T67 Arg2:T69
 T70	Predicate 1860 1866	tamaño
 T71	Concept 1873 1877	puño
-R60	in-context Arg1:T67 Arg2:T70
 T72	Concept 1884 1888	mano
 R61	in-place Arg1:T71 Arg2:T72
 R62	arg Arg1:T70 Arg2:T71
 T73	Predicate 1900 1904	cada
-T74	Concept 1905 1909	lado
+T74	Predicate 1905 1909	lado
 R63	domain Arg1:T73 Arg2:T74
 T75	Concept 1916 1923	columna
-R64	in-context Arg1:T74 Arg2:T75
+R64	arg Arg1:T74 Arg2:T75
 T76	Predicate 1929 1935	arriba
 T77	Concept 1942 1949	cintura
 R65	arg Arg1:T76 Arg2:T77
-R66	in-place Arg1:T67 Arg2:T73
-R67	in-context Arg1:T74 Arg2:T76
 T78	Concept 2102 2109	islotes
 T79	Concept 2110 2123	trasplantadas
 T80	Concept 2087 2094	células
@@ -550,7 +547,7 @@ R1044	target Arg1:T1058 Arg2:T1057
 R1045	target Arg1:T1058 Arg2:T1052
 R1046	target Arg1:T1058 Arg2:T1056
 R1048	subject Arg1:T1053 Arg2:T1051
-R1049	target Arg1:T1053 Arg2:T1054
+R1049	subject Arg1:T1053 Arg2:T1054
 T1059	Concept 1955 1962	riñones
 T1060	Concept 1967 1974	órganos
 T1061	Concept 1992 1996	puño
@@ -844,3 +841,10 @@ R208	arg Arg1:T1056 Arg2:T1052
 A16	Uncertain T1058
 T10	Concept 1752 1762	ortodoncia
 R209	in-context Arg1:T1054 Arg2:T10	
+T229	Predicate 1860 1866	tamaño
+R60	arg Arg1:T229 Arg2:T67	
+*	same-as T229 T70
+T230	Action 1889 1897	ubicados
+R66	subject Arg1:T230 Arg2:T67	
+R67	in-place Arg1:T230 Arg2:T73	
+R210	in-place Arg1:T230 Arg2:T76	
