@@ -80,7 +80,6 @@ T45	Action 1099 1106	mejoran
 T46	Concept 1111 1119	síntomas
 R37	subject Arg1:T45 Arg2:T44
 R38	target Arg1:T45 Arg2:T46
-R39	part-of Arg1:T44 Arg2:T43
 T47	Concept 1194 1201	proceso
 T48	Concept 1210 1218;1219 1226	recambio celular
 R40	is-a Arg1:T48 Arg2:T47
@@ -522,7 +521,7 @@ R1034	target Arg1:T1040 Arg2:T1041
 T1039	Concept 1333 1340	proceso
 T1042	Concept 1349 1357;1358 1365	recambio celular
 R1033	is-a Arg1:T1042 Arg2:T1039
-T1043	Concept 1371 1378;1379 1381;1382 1384;1385 1389	células de la piel
+T1043	Concept 1371 1378	células
 T1044	Action 1394 1400	crecen
 T1045	Concept 1417 1425	profunda
 T1046	Concept 1432 1436	piel
@@ -835,3 +834,8 @@ R1179	arg Arg1:T1195 Arg2:T1201
 R4	in-place Arg1:T5 Arg2:T2	
 R5	in-context Arg1:T30 Arg2:T34	
 R29	is-a Arg1:T30 Arg2:T35	
+A14	Uncertain T40
+*	same-as T48 T54
+*	same-as T1042 T1040
+T6	Concept 1385 1389	piel
+R39	in-place Arg1:T1043 Arg2:T6	
