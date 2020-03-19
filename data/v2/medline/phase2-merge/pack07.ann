@@ -318,7 +318,6 @@ T175	Concept 4436 4445	masculina
 T176	Concept 4446 4451	común
 R157	in-context Arg1:T173 Arg2:T174
 R158	in-context Arg1:T173 Arg2:T175
-R159	has-property Arg1:T173 Arg2:T176
 R160	is-a Arg1:T171 Arg2:T173
 T177	Predicate 4522 4529	Algunas
 T178	Concept 4530 4538	personas
@@ -843,3 +842,4 @@ A7	Diminished T141
 R90	subject Arg1:T169 Arg2:T170	
 R97	subject Arg1:T169 Arg2:T163	
 R98	subject Arg1:T169 Arg2:T156	
+R99	has-property Arg1:T171 Arg2:T176	
