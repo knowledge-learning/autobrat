@@ -175,31 +175,26 @@ T98	Action 2632 2640	muestran
 T99	Concept 2668 2675	cámaras
 T100	Concept 2678 2686	válvulas
 T101	Concept 2693 2700	corazón
-R85	part-of Arg1:T100 Arg2:T101
-R86	part-of Arg1:T99 Arg2:T101
+R85	in-place Arg1:T100 Arg2:T101
+R86	in-place Arg1:T99 Arg2:T101
 T102	Action 2654 2663	funcionan
 R87	subject Arg1:T102 Arg2:T99
-T103	Action 2654 2663	funcionan
-R88	subject Arg1:T103 Arg2:T100
 T104	Concept 2649 2653	bien
 R89	in-context Arg1:T102 Arg2:T104
-R90	in-context Arg1:T103 Arg2:T104
-R91	target Arg1:T98 Arg2:T103
 R92	target Arg1:T98 Arg2:T102
 T105	Concept 2787 2795	gérmenes
 T106	Action 2796 2806	permanecen
 T107	Concept 2813 2818	nariz
 T108	Concept 2827 2835	garganta
 T109	Concept 2840 2844	niño
-R93	part-of Arg1:T107 Arg2:T109
-R94	part-of Arg1:T108 Arg2:T109
+R93	in-place Arg1:T107 Arg2:T109
+R94	in-place Arg1:T108 Arg2:T109
 T110	Action 2796 2806	permanecen
 R95	subject Arg1:T110 Arg2:T105
 R96	in-place Arg1:T110 Arg2:T107
 R97	subject Arg1:T106 Arg2:T105
 R98	in-place Arg1:T106 Arg2:T108
 T111	Action 2866 2873	enferme
-A7	Emphasized T111
 A8	Uncertain T111
 R99	subject Arg1:T111 Arg2:T109
 R100	target Arg1:T111 Arg2:T109
@@ -580,7 +575,7 @@ R1062	is-a Arg1:T1076 Arg2:T1075
 R1063	is-a Arg1:T1077 Arg2:T1075
 R1064	is-a Arg1:T1073 Arg2:T1074
 T1078	Predicate 2424 2430	dentro
-R1065	arg Arg1:T1078 Arg2:T1075
+R1065	domain Arg1:T1078 Arg2:T1075
 R1066	in-place Arg1:T1073 Arg2:T1078
 T1079	Concept 2561 2569	insulina
 T1080	Concept 2588 2595	glucosa
@@ -848,3 +843,4 @@ R210	in-place Arg1:T230 Arg2:T76
 R69	subject Arg1:T79 Arg2:T80	
 R70	target Arg1:T84 Arg2:T83	
 *	same-as T85 T86
+R75	subject Arg1:T102 Arg2:T100	
