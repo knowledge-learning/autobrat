@@ -601,9 +601,7 @@ T1119	Concept 3106 3111	dolor
 T1120	Action 3129 3138	indicarle
 T1121	Concept 3116 3122	médico
 T1122	Concept 3148 3154	fuerte
-T1123	Concept 3139 3143	algo
 T1124	Predicate 3144 3147	más
-R1105	domain Arg1:T1124 Arg2:T1123
 R1106	arg Arg1:T1124 Arg2:T1122
 A1010	Uncertain T1120
 R1107	in-context Arg1:T1114 Arg2:T1117
@@ -625,9 +623,9 @@ T1130	Action 3364 3372	infectar
 T1131	Concept 3378 3385	persona
 T1132	Action 3395 3405	recibiendo
 T1133	Concept 3409 3420	transfusión
-R1115	subject Arg1:T1128 Arg2:T1125
+R1115	subject Arg1:T1128 Arg2:T1127
 R1116	in-place Arg1:T1128 Arg2:T1129
-R1117	subject Arg1:T1130 Arg2:T1125
+R1117	subject Arg1:T1130 Arg2:T1127
 R1118	subject Arg1:T1132 Arg2:T1131
 R1119	target Arg1:T1132 Arg2:T1133
 R1120	target Arg1:T1130 Arg2:T1132
@@ -825,3 +823,8 @@ R108	subject Arg1:T124 Arg2:T118
 R109	target Arg1:T122 Arg2:T118	
 R110	entails Arg1:T119 Arg2:T120	
 R111	entails Arg1:T124 Arg2:T122	
+R112	domain Arg1:T1124 Arg2:T1114	
+T111	Predicate 3289 3296	Algunos
+R113	domain Arg1:T111 Arg2:T1125	
+R211	subject Arg1:T1128 Arg2:T111	
+R212	subject Arg1:T1130 Arg2:T111	
