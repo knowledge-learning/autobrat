@@ -841,3 +841,4 @@ R70	target Arg1:T84 Arg2:T83
 R75	subject Arg1:T102 Arg2:T100	
 R88	in-place Arg1:T110 Arg2:T108	
 R91	subject Arg1:T125 Arg2:T121	
+A7	Diminished T141
