@@ -151,7 +151,6 @@ T85	Concept 2291 2297;2298 2302	médula ósea
 T86	Concept 2309 2315	tejido
 T87	Concept 2316 2325	esponjoso
 R74	in-context Arg1:T86 Arg2:T87
-R75	is-a Arg1:T85 Arg2:T86
 T88	Predicate 2336 2343	algunos
 T89	Concept 2351 2357	huesos
 T90	Concept 2367 2373	cadera
@@ -848,3 +847,4 @@ R67	in-place Arg1:T230 Arg2:T73
 R210	in-place Arg1:T230 Arg2:T76	
 R69	subject Arg1:T79 Arg2:T80	
 R70	target Arg1:T84 Arg2:T83	
+*	same-as T85 T86
