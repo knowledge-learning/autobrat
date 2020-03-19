@@ -355,13 +355,12 @@ T194	Concept 4890 4895;4896 4897	rayos X
 T195	Concept 4914 4920	huesos
 T196	Concept 4928 4935	blancos
 T197	Action 4924 4927	ven
-R171	subject Arg1:T197 Arg2:T195
+R171	target Arg1:T197 Arg2:T195
 R173	in-place Arg1:T190 Arg2:T191
 R174	subject Arg1:T192 Arg2:T190
 R175	target Arg1:T192 Arg2:T193
 R176	domain Arg1:T193 Arg2:T194
 R177	causes Arg1:T192 Arg2:T197
-R172	in-context Arg1:T195 Arg2:T196
 T199	Predicate 5057 5063	riesgo
 T200	Action 5070 5079	evaluarse
 A13	Emphasized T200
@@ -849,3 +848,4 @@ R151	has-property Arg1:T179 Arg2:T180
 R152	domain Arg1:T180 Arg2:T106	
 T106	Concept 4546 4553;4554 4563	túneles carpianos
 R159	in-place Arg1:T106 Arg2:T182	
+R172	in-context Arg1:T197 Arg2:T196	
