@@ -538,7 +538,7 @@ R1040	subject Arg1:T1049 Arg2:T1048
 R1041	target Arg1:T1049 Arg2:T1050
 T1051	Concept 1698 1709;1710 1719	odontología cosmética
 T1053	Action 1723 1732	diferente
-T1054	Concept 1737 1748;1749 1751;1752 1762	tratamiento de ortodoncia
+T1054	Concept 1737 1748	tratamiento
 T1052	Concept 1800 1809	frenillos
 T1055	Concept 1818 1830	dispositivos
 T1056	Predicate 1812 1817	otros
@@ -546,10 +546,9 @@ R1042	domain Arg1:T1056 Arg2:T1055
 R1043	is-a Arg1:T1052 Arg2:T1055
 T1057	Concept 1788 1795	dientes
 T1058	Action 1774 1783	enderezar
-R1044	subject Arg1:T1058 Arg2:T1057
+R1044	target Arg1:T1058 Arg2:T1057
 R1045	target Arg1:T1058 Arg2:T1052
 R1046	target Arg1:T1058 Arg2:T1056
-R1047	in-context Arg1:T1054 Arg2:T1058
 R1048	subject Arg1:T1053 Arg2:T1051
 R1049	target Arg1:T1053 Arg2:T1054
 T1059	Concept 1955 1962	riñones
@@ -839,3 +838,9 @@ A14	Uncertain T40
 *	same-as T1042 T1040
 T6	Concept 1385 1389	piel
 R39	in-place Arg1:T1043 Arg2:T6	
+A15	Emphasized T1049
+R207	subject Arg1:T1058 Arg2:T1054	
+R208	arg Arg1:T1056 Arg2:T1052	
+A16	Uncertain T1058
+T10	Concept 1752 1762	ortodoncia
+R209	in-context Arg1:T1054 Arg2:T10	
