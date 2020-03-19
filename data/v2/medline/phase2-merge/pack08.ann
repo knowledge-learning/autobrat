@@ -322,14 +322,12 @@ R155	is-a Arg1:T163 Arg2:T167
 A25	Emphasized T168
 A26	Uncertain T168
 R154	in-context Arg1:T163 Arg2:T168
-T169	Concept 4350 4355	Altas
-T170	Concept 4356 4361	dosis
-R156	in-context Arg1:T170 Arg2:T169
+T170	Action 4356 4361	dosis
 T171	Predicate 4365 4372	algunas
 T172	Concept 4373 4382	vitaminas
 T173	Concept 4400 4409	problemas
 R157	domain Arg1:T171 Arg2:T172
-R158	in-context Arg1:T170 Arg2:T171
+R158	target Arg1:T170 Arg2:T171
 R159	causes Arg1:T170 Arg2:T173
 T174	Predicate 4476 4483	niveles
 T175	Concept 4487 4497	colesterol
@@ -368,18 +366,7 @@ R172	causes Arg1:T190 Arg2:T188
 T191	Action 4948 4962	inmunizaciones
 T192	Concept 4982 4987	fácil
 T193	Concept 4996 5004	riesgosa
-T194	Concept 5016 5022	inmune
-T195	Predicate 4971 4977	manera
-T196	Action 5008 5015	hacerse
-R173	target Arg1:T196 Arg2:T194
-T197	Predicate 4990 4995	menos
-T198	Predicate 4978 4981	más
-R174	in-context Arg1:T198 Arg2:T192
-R175	in-context Arg1:T197 Arg2:T193
-R176	domain Arg1:T198 Arg2:T195
-R177	domain Arg1:T197 Arg2:T195
-R178	is-a Arg1:T191 Arg2:T195
-R179	subject Arg1:T196 Arg2:T195
+T194	Action 5016 5022	inmune
 T199	Concept 5114 5119	bebés
 T200	Action 5126 5135	vacunarse
 T201	Concept 5146 5151	niños
@@ -658,7 +645,7 @@ T1152	Action 4066 4076	desaparece
 T1153	Predicate 4077 4084	después
 T1154	Concept 4093 4097	días
 T1155	Action 4130 4136	buscar
-T1156	Concept 4140 4146	origen
+T1156	Action 4140 4146	origen
 T1157	Predicate 3944 3948	cada
 T1158	Concept 3949 3954	padre
 R1129	arg Arg1:T1157 Arg2:T1158
@@ -674,14 +661,11 @@ T1160	Action 4265 4272	mejorar
 T1161	Action 4275 4283	empeorar
 T1162	Concept 4291 4297	tiempo
 T1163	Concept 4320 4330	enfermedad
-T1164	Concept 4334 4339	larga
 T1165	Concept 4340 4348	duración
 R1136	subject Arg1:T1160 Arg2:T1159
 R1137	subject Arg1:T1161 Arg2:T1159
 A1015	Uncertain T1160
 A1016	Uncertain T1161
-R1139	in-context Arg1:T1165 Arg2:T1164
-R1140	in-context Arg1:T1163 Arg2:T1165
 R1141	is-a Arg1:T1159 Arg2:T1163
 T1166	Concept 4411 4416	Altas
 T1167	Concept 4417 4422	dosis
@@ -699,7 +683,6 @@ T1173	Action 4566 4574	aumentar
 T1174	Concept 4582 4586	edad
 R1146	arg Arg1:T1170 Arg2:T1172
 R1147	target Arg1:T1173 Arg2:T1170
-R1148	in-context Arg1:T1173 Arg2:T1174
 T1175	Concept 4653 4659	comida
 T1176	Concept 4677 4686	proteínas
 T1177	Concept 4688 4701	carbohidratos
@@ -766,8 +749,8 @@ R1073	causes Arg1:T1072 Arg2:T1077
 R1087	subject Arg1:T1095 Arg2:T1091
 R1083	in-time Arg1:T1095 Arg2:T1090
 A1024	Uncertain T1090
-R1084	in-context Arg1:T1160 Arg2:T1162
-R1138	in-context Arg1:T1161 Arg2:T1162
+R1084	in-time Arg1:T1160 Arg2:T1162
+R1138	in-time Arg1:T1161 Arg2:T1162
 R1173	is-a Arg1:T1184 Arg2:T1198
 R1176	is-a Arg1:T1184 Arg2:T1199
 T206	Concept 27 32	meses
@@ -833,4 +816,13 @@ T123	Concept 3907 3912	genes
 R214	domain Arg1:T1148 Arg2:T123	
 R215	in-context Arg1:T123 Arg2:T1149	
 R216	domain Arg1:T1157 Arg2:T123	
-R217	in-context Arg1:T1156 Arg2:T1151	
+R217	target Arg1:T1156 Arg2:T1151	
+R218	has-property Arg1:T1159 Arg2:T1165	
+A34	Emphasized T1165
+A35	Emphasized T170
+R156	causes Arg1:T1174 Arg2:T1173	
+R173	in-context Arg1:T194 Arg2:T193	
+A36	Diminished T193
+R174	in-context Arg1:T194 Arg2:T192	
+A37	Emphasized T192
+R175	is-a Arg1:T191 Arg2:T194	
