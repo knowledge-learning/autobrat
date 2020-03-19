@@ -387,30 +387,20 @@ T214	Concept 5304 5313	violencia
 T215	Concept 5316 5324	deportes
 R186	in-context Arg1:T212 Arg2:T213
 R187	target Arg1:T209 Arg2:T210
-T216	Predicate 5439 5445	riesgo
+T216	Concept 5439 5445	riesgo
 T217	Concept 5460 5469	bebedores
 T218	Concept 5470 5482	empedernidos
 T219	Concept 5486 5493	alcohol
 T220	Concept 5494 5500	obesos
 R195	in-context Arg1:T217 Arg2:T218
-R196	has-property Arg1:T217 Arg2:T220
 R197	in-context Arg1:T217 Arg2:T219
 T221	Concept 5502 5509	mujeres
-T222	Concept 5449 5454	mayor
-R198	in-context Arg1:T216 Arg2:T222
-R199	in-context Arg1:T216 Arg2:T217
-T223	Predicate 5439 5445	riesgo
-R200	in-context Arg1:T223 Arg2:T222
-R201	in-context Arg1:T223 Arg2:T221
 T224	Action 5520 5526	tienen
 T225	Predicate 5512 5519	quienes
 T226	Concept 5535 5545;5546 5555	mutaciones genéticas
 T227	Predicate 5527 5534	ciertas
 R202	subject Arg1:T224 Arg2:T225
 R203	target Arg1:T224 Arg2:T227
-T228	Predicate 5439 5445	riesgo
-R204	in-context Arg1:T228 Arg2:T222
-R205	in-context Arg1:T228 Arg2:T224
 R206	arg Arg1:T227 Arg2:T226
 T1001	Predicate 837 839	65
 T1002	Predicate 842 844	75
@@ -845,3 +835,8 @@ R188	causes Arg1:T211 Arg2:T209
 R190	causes Arg1:T212 Arg2:T209	
 R191	causes Arg1:T214 Arg2:T209	
 R192	causes Arg1:T215 Arg2:T209	
+A17	Emphasized T216
+R193	has-property Arg1:T217 Arg2:T216	
+R194	has-property Arg1:T220 Arg2:T216	
+R196	has-property Arg1:T221 Arg2:T216	
+R198	has-property Arg1:T224 Arg2:T216	
