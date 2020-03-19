@@ -131,24 +131,22 @@ T73	Predicate 1900 1904	cada
 T74	Predicate 1905 1909	lado
 R63	domain Arg1:T73 Arg2:T74
 T75	Concept 1916 1923	columna
-R64	arg Arg1:T74 Arg2:T75
+R64	domain Arg1:T74 Arg2:T75
 T76	Predicate 1929 1935	arriba
 T77	Concept 1942 1949	cintura
-R65	arg Arg1:T76 Arg2:T77
+R65	domain Arg1:T76 Arg2:T77
 T78	Concept 2102 2109	islotes
-T79	Concept 2110 2123	trasplantadas
+T79	Action 2110 2123	trasplantadas
 T80	Concept 2087 2094	células
 R68	in-place Arg1:T80 Arg2:T78
-R69	in-context Arg1:T80 Arg2:T79
 T81	Action 2131 2140	continuar
 A5	Uncertain T81
 T82	Action 2144 2151	trabajo
 T83	Concept 2159 2166	células
-T84	Concept 2167 2177	destruidas
-R70	in-context Arg1:T83 Arg2:T84
-R71	subject Arg1:T81 Arg2:T80
+T84	Action 2167 2177	destruidas
+R71	subject Arg1:T81 Arg2:T79
 R72	target Arg1:T81 Arg2:T82
-R73	subject Arg1:T82 Arg2:T83
+R73	subject Arg1:T82 Arg2:T84
 T85	Concept 2291 2297;2298 2302	médula ósea
 T86	Concept 2309 2315	tejido
 T87	Concept 2316 2325	esponjoso
@@ -848,3 +846,5 @@ T230	Action 1889 1897	ubicados
 R66	subject Arg1:T230 Arg2:T67	
 R67	in-place Arg1:T230 Arg2:T73	
 R210	in-place Arg1:T230 Arg2:T76	
+R69	subject Arg1:T79 Arg2:T80	
+R70	target Arg1:T84 Arg2:T83	
