@@ -5,10 +5,9 @@ T4	Concept 9 16	lugares
 R1	in-context Arg1:T1 Arg2:T2
 R2	in-context Arg1:T4 Arg2:T3
 T5	Concept 41 45	casa
-R3	part-of Arg1:T4 Arg2:T5
-R4	part-of Arg1:T1 Arg2:T5
+R3	in-place Arg1:T4 Arg2:T5
+R4	in-place Arg1:T1 Arg2:T5
 T6	Concept 68 74	hongos
-A1	Emphasized T6
 R5	causes Arg1:T4 Arg2:T6
 R6	causes Arg1:T1 Arg2:T6
 T7	Action 155 164	inserción
@@ -117,22 +116,14 @@ T58	Concept 1504 1509;1510 1517	seres humanos
 T59	Concept 1534 1544	parvovirus
 T60	Concept 1566 1572	perros
 T61	Concept 1579 1584	gatos
-R52	subject Arg1:T57 Arg2:T56
+R52	subject Arg1:T57 Arg2:T214
 R53	target Arg1:T57 Arg2:T58
 T62	Action 1490 1497	infecta
 T63	Concept 1504 1509;1510 1517	seres humanos
 A7	Negated T63
 A8	Negated T62
-R54	subject Arg1:T62 Arg2:T56
+R54	subject Arg1:T62 Arg2:T214
 R55	target Arg1:T62 Arg2:T63
-T64	Action 1556 1561	tener
-A9	Uncertain T64
-R56	subject Arg1:T64 Arg2:T60
-R57	target Arg1:T64 Arg2:T59
-T65	Action 1556 1561	tener
-R58	subject Arg1:T65 Arg2:T61
-R59	target Arg1:T65 Arg2:T59
-A10	Uncertain T65
 T66	Concept 1717 1722;1723 1731	clima invernal
 T67	Concept 1700 1712	inclemencias
 R60	in-context Arg1:T67 Arg2:T66
@@ -169,9 +160,9 @@ R74	in-context Arg1:T83 Arg2:T84
 T85	Concept 2147 2151	ojos
 T86	Concept 2156 2165	separados
 A11	Emphasized T86
-R75	has-property Arg1:T85 Arg2:T86
+R75	in-context Arg1:T85 Arg2:T86
 T87	Concept 2168 2177	estrechos
-R76	has-property Arg1:T85 Arg2:T87
+R76	in-context Arg1:T85 Arg2:T87
 T88	Concept 2179 2188	problemas
 T89	Concept 2192 2203	crecimiento
 R77	in-context Arg1:T88 Arg2:T89
@@ -181,33 +172,25 @@ R78	in-context Arg1:T90 Arg2:T91
 R79	is-a Arg1:T85 Arg2:T83
 R80	is-a Arg1:T88 Arg2:T83
 R81	is-a Arg1:T90 Arg2:T83
-R73	causes Arg1:T81 Arg2:T83
-R82	in-place Arg1:T83 Arg2:T80
 R83	in-context Arg1:T80 Arg2:T81
 T92	Concept 2410 2420	cicatrices
 T93	Concept 2436 2443	gruesas
 T94	Predicate 2432 2435	más
-R84	domain Arg1:T94 Arg2:T92
-R85	in-context Arg1:T94 Arg2:T93
+R85	arg Arg1:T94 Arg2:T93
 T95	Predicate 2454 2457	más
-T96	Predicate 2493 2498	resto
-T97	Concept 2505 2509	piel
-R86	arg Arg1:T96 Arg2:T97
-R87	arg Arg1:T94 Arg2:T96
+T96	Concept 2505 2509	piel
+R87	domain Arg1:T94 Arg2:T96
 T98	Concept 2458 2465	rosadas
 T99	Concept 2467 2472	rojas
 T100	Concept 2475 2485	brillantes
 T101	Predicate 2454 2457	más
 T102	Predicate 2454 2457	más
-R88	in-context Arg1:T95 Arg2:T98
-R89	arg Arg1:T95 Arg2:T96
-R90	in-context Arg1:T102 Arg2:T99
-R91	arg Arg1:T102 Arg2:T96
-R92	in-context Arg1:T101 Arg2:T100
-R93	arg Arg1:T101 Arg2:T96
-R94	domain Arg1:T101 Arg2:T92
-R95	domain Arg1:T102 Arg2:T92
-R96	domain Arg1:T95 Arg2:T92
+R88	arg Arg1:T95 Arg2:T98
+R89	domain Arg1:T95 Arg2:T96
+R90	arg Arg1:T102 Arg2:T99
+R91	domain Arg1:T102 Arg2:T96
+R92	arg Arg1:T101 Arg2:T100
+R93	domain Arg1:T101 Arg2:T96
 T103	Concept 2619 2624	grasa
 T104	Concept 2631 2635	tipo
 T105	Concept 2639 2648	nutriente
@@ -260,14 +243,9 @@ T129	Concept 3318 3321	ano
 T130	Predicate 3327 3332	parte
 T131	Concept 3333 3341	inferior
 T132	Concept 3346 3351	recto
-R118	in-context Arg1:T130 Arg2:T131
-R119	part-of Arg1:T130 Arg2:T132
+R118	arg Arg1:T130 Arg2:T131
+R119	domain Arg1:T130 Arg2:T132
 R120	arg Arg1:T128 Arg2:T129
-R121	in-place Arg1:T127 Arg2:T128
-T133	Concept 3293 3303	inflamadas
-R122	in-place Arg1:T133 Arg2:T130
-R123	in-context Arg1:T125 Arg2:T133
-R124	is-a Arg1:T124 Arg2:T125
 T134	Concept 3454 3463	proteínas
 T135	Action 3464 3470	mueven
 T136	Concept 3471 3480	moléculas
@@ -329,7 +307,7 @@ R152	subject Arg1:T160 Arg2:T150
 R153	target Arg1:T160 Arg2:T152
 R154	target Arg1:T159 Arg2:T152
 T158	Concept 3941 3953	fenilalanina
-T162	Predicate 3970 3974;3975 3980	casi todos
+T162	Predicate 3975 3980	todos
 T161	Concept 3985 3994	alimentos
 R155	domain Arg1:T162 Arg2:T161
 R156	part-of Arg1:T158 Arg2:T162
@@ -361,7 +339,6 @@ T175	Concept 4339 4345	órgano
 T176	Predicate 4350 4355	forma
 T177	Concept 4359 4363	pera
 R168	arg Arg1:T176 Arg2:T177
-R169	in-context Arg1:T175 Arg2:T176
 T178	Predicate 4372 4376	bajo
 T179	Concept 4380 4386	hígado
 R170	arg Arg1:T178 Arg2:T179
@@ -390,16 +367,15 @@ R180	subject Arg1:T190 Arg2:T189
 R181	target Arg1:T190 Arg2:T191
 T192	Concept 4845 4851	sangre
 T193	Action 4854 4861	agregan
-T194	Concept 4802 4814	tratamientos
-R182	subject Arg1:T193 Arg2:T194
-R183	in-context Arg1:T190 Arg2:T192
+R182	subject Arg1:T193 Arg2:T189
+R183	in-place Arg1:T190 Arg2:T192
 T195	Concept 4862 4873	anticuerpos
 T196	Concept 4874 4879	sanos
 T197	Concept 4883 4889	sangre
 T198	Concept 4890 4896	donada
 R184	in-context Arg1:T195 Arg2:T196
 R185	in-context Arg1:T197 Arg2:T198
-R186	in-context Arg1:T195 Arg2:T197
+R186	in-place Arg1:T195 Arg2:T197
 R187	target Arg1:T193 Arg2:T195
 T199	Concept 5013 5027	histoplasmosis
 T200	Concept 5040 5044	leve
@@ -428,8 +404,8 @@ T213	Predicate 5330 5335	casos
 R195	arg Arg1:T213 Arg2:T208
 R196	domain Arg1:T212 Arg2:T213
 R197	has-property Arg1:T212 Arg2:T209
-R198	subject Arg1:T210 Arg2:T212
-R199	target Arg1:T210 Arg2:T211
+R198	target Arg1:T210 Arg2:T212
+R199	in-place Arg1:T210 Arg2:T211
 T1001	Concept 85 92	lugares
 T1002	Concept 93 100	mojados
 T1003	Concept 103 110	húmedos
@@ -465,9 +441,9 @@ T1017	Action 463 469	quitar
 T1018	Concept 473 481	prepucio
 T1019	Concept 486 490	piel
 T1020	Action 495 500	cubre
-T1021	Concept 504 509	punta
+T1021	Predicate 504 509	punta
 T1022	Concept 514 518	pene
-R1014	part-of Arg1:T1021 Arg2:T1022
+R1014	domain Arg1:T1021 Arg2:T1022
 R1015	target Arg1:T1020 Arg2:T1021
 R1016	subject Arg1:T1020 Arg2:T1019
 *	same-as T1018 T1020
@@ -488,7 +464,6 @@ T1030	Concept 718 730	infertilidad
 A1004	Emphasized T1029
 R1023	arg Arg1:T1029 Arg2:T1030
 R1024	causes Arg1:T1027 Arg2:T1029
-R1025	in-context Arg1:T1023 Arg2:T1027
 T1028	Concept 850 857	corazón
 T1031	Action 858 862	late
 T1032	Action 864 870	bombea
@@ -512,11 +487,9 @@ T1040	Action 1131 1142	dislocación
 T1041	Concept 1146 1152	hombro
 T1042	Concept 1155 1161	rótula
 T1043	Action 1131 1142	dislocación
-T1044	Action 1172 1178	vuelva
+T1044	Action 1181 1191	dislocarse
 A1006	Uncertain T1044
-T1045	Action 1181 1191	dislocarse
 T1046	Concept 1196 1204	adelante
-R1034	target Arg1:T1044 Arg2:T1045
 R1035	in-time Arg1:T1044 Arg2:T1046
 R1036	target Arg1:T1040 Arg2:T1041
 R1037	target Arg1:T1043 Arg2:T1042
@@ -528,13 +501,12 @@ T1050	Concept 1386 1393	cirugía
 T1051	Action 1413 1419	usados
 T1052	Concept 1423 1428	niños
 T1053	Concept 1435 1443;1444 1454	arterias coronarias
-T1054	Concept 1461 1474	comprometidas
-R1040	has-property Arg1:T1053 Arg2:T1054
-R1041	in-context Arg1:T1052 Arg2:T1053
+T1054	Action 1461 1474	comprometidas
+R1041	in-context Arg1:T1052 Arg2:T1054
 R1042	target Arg1:T1051 Arg2:T1050
 R1043	in-context Arg1:T1048 Arg2:T1049
 R1044	target Arg1:T1051 Arg2:T1048
-R1045	in-context Arg1:T1051 Arg2:T1052
+R1045	in-place Arg1:T1051 Arg2:T1052
 T1055	Concept 1589 1594	virus
 T1056	Action 1600 1607	infecta
 T1057	Concept 1614 1619;1620 1627	seres humanos
@@ -689,31 +661,22 @@ R1107	in-place Arg1:T1122 Arg2:T1127
 T1130	Concept 3600 3609	proteínas
 T1131	Action 3610 3616	mueven
 T1132	Concept 3617 3626	moléculas
-T1133	Concept 3633 3638	lugar
-T1134	Reference 3641 3645	otro
-R1108	is-a Arg1:T1134 Arg2:T1133
 T1135	Action 3647 3657	construyen
 T1136	Concept 3658 3669	estructuras
 T1137	Action 3671 3682	descomponen
 T1138	Concept 3683 3690	toxinas
 T1139	Action 3693 3701	realizan
 T1140	Predicate 3708 3713	tipos
-T1141	Concept 3717 3723	tareas
+T1141	Concept 3717 3723;3724 3726;3727 3740	tareas de mantenimiento
 R1109	domain Arg1:T1140 Arg2:T1141
-T1142	Concept 3727 3740	mantenimiento
-R1110	in-context Arg1:T1140 Arg2:T1142
 R1111	target Arg1:T1131 Arg2:T1132
 R1112	subject Arg1:T1131 Arg2:T1130
-R1113	in-context Arg1:T1131 Arg2:T1133
-R1114	in-context Arg1:T1131 Arg2:T1134
 R1115	subject Arg1:T1135 Arg2:T1130
 R1116	target Arg1:T1135 Arg2:T1136
 R1117	subject Arg1:T1137 Arg2:T1130
 R1118	target Arg1:T1137 Arg2:T1138
 R1119	subject Arg1:T1139 Arg2:T1130
-T1143	Reference 3702 3707	otros
-R1120	is-a Arg1:T1143 Arg2:T1140
-R1121	target Arg1:T1139 Arg2:T1143
+R1121	target Arg1:T1139 Arg2:T1141
 T1144	Concept 3844 3851	hombres
 T1145	Action 3859 3867	contraer
 A1018	Uncertain T1145
@@ -740,17 +703,13 @@ T1155	Concept 4098 4107;4108 4113	hematomas óseos
 T1156	Concept 4126 4132	serios
 A1020	Emphasized T1156
 R1130	has-property Arg1:T1155 Arg2:T1156
-T1157	Concept 4227 4236	proveedor
-T1158	Predicate 4240 4248	cuidados
-T1159	Concept 4252 4257	salud
-R1131	arg Arg1:T1158 Arg2:T1159
-R1132	in-context Arg1:T1157 Arg2:T1158
+T1157	Concept 4227 4236;4237 4239;4240 4248;4249 4251	proveedor de cuidados de
 T1160	Action 4271 4282	diagnostica
 T1161	Concept 4289 4297	verrugas
 T1162	Action 4301 4312	examinarlas
 R1133	subject Arg1:T1160 Arg2:T1157
-R1134	target Arg1:T1160 Arg2:T1161
-R1135	target Arg1:T1162 Arg2:T1161
+R1134	target Arg1:T1160 Arg2:T64
+R1135	target Arg1:T1162 Arg2:T64
 R1136	in-context Arg1:T1160 Arg2:T1162
 T1163	Concept 4391 4399;4400 4406	vesícula biliar
 T1164	Concept 4413 4419	órgano
@@ -774,13 +733,11 @@ T1174	Concept 4626 4636;4637 4640;4641 4649;4650 4660;4661 4666	trastornos del e
 *	same-as T1172 T1174
 R1144	target Arg1:T1170 Arg2:T1171
 R1145	causes Arg1:T1170 Arg2:T1172
-T1175	Concept 4730 4735	soplo
-T1176	Concept 4740 4747	corazón
+T1175	Concept 4730 4735;4736 4739;4740 4747	soplo del corazón
 T1177	Action 4754 4764	escucharse
 A1021	Uncertain T1177
 T1178	Concept 4772 4784	estetoscopio
 R1146	target Arg1:T1177 Arg2:T1175
-R1147	in-context Arg1:T1175 Arg2:T1176
 R1148	in-context Arg1:T1177 Arg2:T1178
 T1179	Action 4898 4905	Existen
 T1180	Concept 4914 4926	tratamientos
@@ -837,3 +794,46 @@ R1169	in-context Arg1:T1206 Arg2:T1201
 R1170	has-property Arg1:T1206 Arg2:T1203
 R1171	target Arg1:T1204 Arg2:T1206
 R1172	in-place Arg1:T1204 Arg2:T1205
+A1	Emphasized T6
+R200	entails Arg1:T1029 Arg2:T1023	
+R201	target Arg1:T1027 Arg2:T1023	
+A18	Uncertain T1051
+R202	target Arg1:T1054 Arg2:T1053	
+T214	Reference 1476 1478	El
+R203	is-a Arg1:T214 Arg2:T56	
+T215	Action 1522 1524	es
+A19	Negated T215
+R204	subject Arg1:T215 Arg2:T214	
+R58	target Arg1:T215 Arg2:T59	
+R56	in-place Arg1:T59 Arg2:T60	
+R57	in-place Arg1:T59 Arg2:T61	
+R59	is-a Arg1:T1086 Arg2:T1080	
+R205	is-a Arg1:T1088 Arg2:T1080	
+R73	has-property Arg1:T80 Arg2:T83	
+R82	has-property Arg1:T80 Arg2:T85	
+R206	has-property Arg1:T80 Arg2:T88	
+R207	has-property Arg1:T80 Arg2:T90	
+R84	part-of Arg1:T92 Arg2:T94	
+R94	part-of Arg1:T92 Arg2:T95	
+R95	part-of Arg1:T92 Arg2:T102	
+R96	part-of Arg1:T92 Arg2:T101	
+R86	is-a Arg1:T1104 Arg2:T1103	
+R208	is-a Arg1:T1105 Arg2:T1103	
+R209	is-a Arg1:T1106 Arg2:T1103	
+R210	is-a Arg1:T1108 Arg2:T1103	
+R211	is-a Arg1:T119 Arg2:T120	
+R212	is-a Arg1:T118 Arg2:T120	
+R213	is-a Arg1:T117 Arg2:T120	
+*	same-as T124 T125
+R121	in-place Arg1:T125 Arg2:T128	
+R122	in-place Arg1:T125 Arg2:T130	
+R124	is-a Arg1:T1131 Arg2:T1140	
+R214	is-a Arg1:T1135 Arg2:T1140	
+R215	is-a Arg1:T1137 Arg2:T1140	
+A9	Uncertain T162
+T64	Reference 4283 4288	estas
+R123	is-a Arg1:T64 Arg2:T1161	
+A10	Uncertain T1160
+R169	has-property Arg1:T174 Arg2:T176	
+A20	Uncertain T1192
+A21	Uncertain T1193
