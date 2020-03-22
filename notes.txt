@@ -11,3 +11,4 @@
 - negar las relaciones que existen same-as, etc., 
 - magnitudes y valores de cuantificación
 - los predicados son una mierda
+- está basado, inspirado, sigue las instrucciones de ...
