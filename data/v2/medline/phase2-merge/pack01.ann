@@ -62,6 +62,7 @@ R28	has-property Arg1:T38 Arg2:T37
 *	same-as T33 T34
 T41	Concept 1224 1228	peso
 T42	Concept 1246 1256	importante
+A2	Emphasized T37
 A3	Emphasized T42
 T39	Action 1093 1104	propagación
 R26	target Arg1:T39 Arg2:T40
@@ -96,7 +97,7 @@ R42	is-a Arg1:T58 Arg2:T55
 R43	is-a Arg1:T59 Arg2:T55
 R44	is-a Arg1:T60 Arg2:T55
 R45	is-a Arg1:T61 Arg2:T55
-T62	Action 1769 1777	descanso
+T62	Predicate 1769 1777	descanso
 T63	Concept 1785 1795	importante
 A5	Emphasized T63
 T64	Action 1804 1809	ayuda
@@ -105,7 +106,8 @@ T66	Action 1823 1828	sanar
 R46	subject Arg1:T66 Arg2:T65
 R47	target Arg1:T66 Arg2:T65
 R48	target Arg1:T64 Arg2:T66
-R50	subject Arg1:T64 Arg2:T62
+R49	has-property Arg1:T62 Arg2:T63
+R50	target Arg1:T64 Arg2:T62
 T67	Concept 1937 1947	colesterol
 T68	Action 1914 1921	afectar
 A6	Uncertain T68
@@ -156,14 +158,15 @@ T109	Concept 2875 2887	enfermedades
 T107	Concept 2901 2909	diabetes
 T108	Concept 2938 2945	persona
 T110	Concept 2918 2930	enfermedades
-T111	Action 2810 2820	trastornos
-R71	target Arg1:T111 Arg2:T104
+T111	Predicate 2810 2820	trastornos
+R71	arg Arg1:T111 Arg2:T104
+R72	subject Arg1:T105 Arg2:T111
 R73	target Arg1:T105 Arg2:T106
 R78	subject Arg1:T71 Arg2:T70
 R79	target Arg1:T71 Arg2:T70
-R80	part-of Arg1:T72 Arg2:T73
+R80	part-of Arg1:T72 Arg2:T70
 T73	Predicate 2004 2011	Algunas
-R81	domain Arg1:T73 Arg2:T71
+R81	domain Arg1:T73 Arg2:T70
 T112	Concept 3109 3120	coronavirus
 T113	Predicate 3101 3108	algunos
 R82	domain Arg1:T113 Arg2:T112
@@ -224,7 +227,9 @@ R38	is-a Arg1:T52 Arg2:T140
 R108	subject Arg1:T140 Arg2:T53
 R109	target Arg1:T140 Arg2:T53
 R34	target Arg1:T46 Arg2:T48
+A4	Negated T51
 R36	arg Arg1:T50 Arg2:T51
+R110	arg Arg1:T50 Arg2:T48
 R105	subject Arg1:T68 Arg2:T139
 R111	target Arg1:T77 Arg2:T74
 R112	in-place Arg1:T77 Arg2:T75
@@ -239,6 +244,7 @@ T94	Concept 2528 2539	normalmente
 R61	in-context Arg1:T93 Arg2:T94
 R66	target Arg1:T97 Arg2:T98
 R13	has-property Arg1:T100 Arg2:T102
+A15	Uncertain T105
 T99	Concept 2892 2899	corazón
 R69	in-context Arg1:T109 Arg2:T99
 R70	arg Arg1:T106 Arg2:T109
@@ -539,12 +545,3 @@ R1120	arg Arg1:T1143 Arg2:T1081
 R1121	subject Arg1:T1087 Arg2:T1085
 R1062	in-context Arg1:T1121 Arg2:T1119
 R1054	is-a Arg1:T1133 Arg2:T1127
-R101	in-context Arg1:T48 Arg2:T50	
-R110	arg Arg1:T51 Arg2:T128	
-T128	Action 1335 1342	bombear
-A2	Negated T48
-R117	subject Arg1:T128 Arg2:T47	
-R118	target Arg1:T128 Arg2:T49	
-R119	entails Arg1:T64 Arg2:T62	
-R49	has-property Arg1:T62 Arg2:T63	
-R72	causes Arg1:T111 Arg2:T105	

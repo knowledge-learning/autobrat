@@ -38,9 +38,7 @@ T28	Concept 498 504;505 507;508 514	examen de sangre
 R21	is-a Arg1:T28 Arg2:T26	
 T30	Concept 565 571;572 574;575 581	factor de riesgo
 T31	Concept 588 598;599 607;608 618	enfermedad arterial periférica
-T32	Concept 555 564	principal
 T33	Action 625 630	fumar
-R22	has-property Arg1:T30 Arg2:T32	
 R23	in-context Arg1:T30 Arg2:T31	
 R24	is-a Arg1:T33 Arg2:T30	
 T34	Concept 636 643;651 653;654 657	cuadros de tos
@@ -85,7 +83,6 @@ T61	Concept 1078 1086	personas
 T62	Predicate 1042 1047	entre
 R46	arg Arg1:T62 Arg2:T59	
 R47	arg Arg1:T62 Arg2:T60	
-R48	domain Arg1:T62 Arg2:T61	
 R49	subject Arg1:T56 Arg2:T58	
 R50	target Arg1:T56 Arg2:T62	
 T63	Predicate 1095 1099;1100 1109	bajo contenido
@@ -105,7 +102,7 @@ T71	Predicate 1197 1200	200
 R54	arg Arg1:T70 Arg2:T71	
 T72	Action 1221 1226	decir
 T73	Concept 1231 1239	palabras
-T74	Predicate 1243 1249;1250 1260	manera incorrecta
+T74	Predicate 1250 1260	incorrecta
 T75	Concept 1270 1281	incapacidad
 T76	Action 1293 1299	hablar
 T77	Action 1302 1310	entender
@@ -135,7 +132,6 @@ A6	Uncertain T82
 T83	Action 1324 1332	ligadura
 T84	Concept 1336 1343	trompas
 R27	target Arg1:T83 Arg2:T84	
-R31	subject Arg1:T82 Arg2:T83	
 R60	target Arg1:T82 Arg2:T83	
 T85	Predicate 1379 1386	Algunas
 T86	Concept 1387 1395	personas
@@ -188,7 +184,6 @@ R81	domain Arg1:T108 Arg2:T107
 R82	in-context Arg1:T103 Arg2:T105	
 R83	in-context Arg1:T103 Arg2:T106	
 R84	subject Arg1:T103 Arg2:T107	
-R85	target Arg1:T103 Arg2:T107	
 *	same-as T104 T103
 T109	Concept 1718 1726	personas
 T112	Concept 1731 1733;1734 1743	Rh positivas
@@ -271,7 +266,6 @@ R116	part-of Arg1:T150 Arg2:T148
 R117	part-of Arg1:T152 Arg2:T148	
 T147	Concept 2497 2507;2508 2514	disfunción sexual
 T154	Concept 2518 2523	común
-T155	Concept 2467 2476	problemas
 T156	Action 2546 2551	duran
 T157	Concept 2631 2642	profesional
 T158	Concept 2649 2654	salud
@@ -287,23 +281,14 @@ T163	Concept 2580 2588	angustia
 R122	target Arg1:T162 Arg2:T163	
 T164	Concept 2592 2597	usted
 R123	in-context Arg1:T162 Arg2:T164	
-T165	Action 2572 2579	generan
-R124	target Arg1:T165 Arg2:T163	
 T166	Concept 2606 2612	pareja
-R125	in-context Arg1:T165 Arg2:T166	
 T167	Action 2619 2625	acudir
 R126	target Arg1:T167 Arg2:T157	
 T168	Concept 2467 2476	problemas
-R127	in-context Arg1:T155 Arg2:T147	
 R128	in-context Arg1:T168 Arg2:T147	
 T169	Predicate 2477 2479;2480 2483;2484 2486;2487 2493	de vez en cuando
-R129	in-time Arg1:T155 Arg2:T169	
-R130	has-property Arg1:T155 Arg2:T154	
 R131	subject Arg1:T156 Arg2:T168	
 R132	subject Arg1:T162 Arg2:T168	
-R133	subject Arg1:T165 Arg2:T168	
-R134	causes Arg1:T165 Arg2:T167	
-R135	causes Arg1:T162 Arg2:T167	
 R136	causes Arg1:T156 Arg2:T167	
 T170	Concept 2661 2666	signo
 T171	Concept 2673 2679;2680 2689;2690 2701	ataque isquémico transitorio
@@ -317,8 +302,6 @@ R140	is-a Arg1:T171 Arg2:T173
 T175	Concept 2752 2761;2762 2771	deterioro cognitivo
 T176	Concept 2772 2776	leve
 R141	in-context Arg1:T175 Arg2:T176	
-T177	Concept 2844 2854	importante
-A12	Emphasized T177
 T178	Predicate 2791 2796	señal
 T179	Concept 2797 2805	temprana
 R142	in-context Arg1:T178 Arg2:T179	
@@ -327,7 +310,6 @@ R143	arg Arg1:T178 Arg2:T180
 A13	Uncertain T178
 R144	is-a Arg1:T175 Arg2:T178	
 T181	Action 2855 2858	ver
-R145	has-property Arg1:T181 Arg2:T177	
 T182	Concept 2864 2873	proveedor
 T183	Concept 2877 2885;2886 2888;2889 2894	cuidados de salud
 T185	Concept 2907 2912	meses
@@ -347,7 +329,6 @@ R151	arg Arg1:T184 Arg2:T188
 R152	causes Arg1:T1 Arg2:T184	
 R6	domain Arg1:T22 Arg2:T20	
 R15	in-context Arg1:T28 Arg2:T27	
-A14	Emphasized T30
 T10	Predicate 683 697	frecuentemente
 R19	domain Arg1:T10 Arg2:T38	
 R20	domain Arg1:T10 Arg2:T39	
@@ -356,3 +337,14 @@ R154	arg Arg1:T40 Arg2:T41
 R41	domain Arg1:T54 Arg2:T55	
 R42	arg Arg1:T54 Arg2:T57	
 R44	target Arg1:T68 Arg2:T70	
+R48	domain Arg1:T59 Arg2:T61	
+R155	domain Arg1:T60 Arg2:T61	
+R145	in-time Arg1:T181 Arg2:T187	
+R124	in-context Arg1:T162 Arg2:T166	
+R125	has-property Arg1:T168 Arg2:T154	
+R127	in-time Arg1:T168 Arg2:T169	
+T29	Predicate 1370 1377	siempre
+A1	Negated T29
+R31	in-time Arg1:T82 Arg2:T29	
+R85	target Arg1:T72 Arg2:T73	
+R129	in-context Arg1:T72 Arg2:T74	

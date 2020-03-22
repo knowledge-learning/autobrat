@@ -19,21 +19,22 @@ R7	target Arg1:T9 Arg2:T10
 R8	in-place Arg1:T9 Arg2:T8
 T11	Concept 247 252	mujer
 T12	Concept 258 268	embarazada
-R9	in-context Arg1:T11 Arg2:T12
-R10	in-time Arg1:T9 Arg2:T11
+R9	has-property Arg1:T11 Arg2:T12
+R10	in-context Arg1:T9 Arg2:T11
 T13	Concept 366 373	médicos
 T14	Concept 379 386	pruebas
 T15	Action 374 378	usan
 R11	subject Arg1:T15 Arg2:T13
-R12	target Arg1:T15 Arg2:T16
+R12	target Arg1:T15 Arg2:T14
 T16	Action 391 399	examinan
 R13	subject Arg1:T16 Arg2:T14
 T17	Concept 403 406	ano
 R14	target Arg1:T16 Arg2:T17
-T18	Action 497 508	tratamiento
+T18	Concept 497 508	tratamiento
 T21	Action 541 549	extirpar
 T22	Concept 553 558	tumor
 R16	target Arg1:T21 Arg2:T22
+R17	subject Arg1:T21 Arg2:T18
 T23	Concept 640 647	cirugía
 T24	Concept 649 661	radioterapia
 T25	Concept 663 676	quimioterapia
@@ -47,7 +48,7 @@ T28	Concept 785 791	lesión
 T29	Concept 797 807	enfermedad
 T30	Concept 814 821	cirugía
 T31	Concept 822 827	seria
-R23	in-context Arg1:T30 Arg2:T31
+R23	has-property Arg1:T30 Arg2:T31
 T32	Predicate 770 777	Después
 T35	Action 832 844	recuperación
 T36	Concept 855 860	lenta
@@ -58,9 +59,10 @@ A3	Emphasized T40
 T41	Concept 976 986	lentamente
 R33	subject Arg1:T40 Arg2:T39
 R34	target Arg1:T40 Arg2:T39
-R35	has-property Arg1:T40 Arg2:T41
+R35	in-context Arg1:T40 Arg2:T41
 T42	Concept 1025 1034	hepatitis
 T43	Concept 1058 1064	hígado
+R25	in-context Arg1:T35 Arg2:T36
 T33	Predicate 770 777	Después
 T34	Predicate 770 777	Después
 R24	arg Arg1:T32 Arg2:T28
@@ -75,7 +77,7 @@ T44	Concept 1114 1121	oxiuros
 T45	Action 1125 1133	propagan
 T46	Concept 1138 1149	rápidamente
 A5	Emphasized T46
-R31	has-property Arg1:T45 Arg2:T46
+R31	in-context Arg1:T45 Arg2:T46
 R32	subject Arg1:T45 Arg2:T44
 R37	target Arg1:T45 Arg2:T44
 T47	Concept 1196 1202	piojos
@@ -89,7 +91,7 @@ T51	Concept 1309 1314	tumor
 R40	target Arg1:T50 Arg2:T51
 A7	Uncertain T50
 T52	Concept 1274 1284	frecuencia
-R41	in-time Arg1:T50 Arg2:T52
+R41	in-context Arg1:T50 Arg2:T52
 T53	Concept 1366 1378	tratamientos
 T54	Concept 1388 1394	cremas
 T55	Concept 1396 1405	medicinas
@@ -108,6 +110,8 @@ R47	is-a Arg1:T60 Arg2:T57
 R48	is-a Arg1:T61 Arg2:T57
 T62	Action 1668 1673	Tomar
 T63	Concept 1680 1684	agua
+T64	Predicate 1674 1679	mucha
+R49	domain Arg1:T64 Arg2:T63
 T65	Concept 1717 1725	estómago
 T66	Action 1707 1713	llenar
 A8	Uncertain T66
@@ -118,8 +122,11 @@ T68	Predicate 1688 1691;1692 1696;1697 1700	una sola vez
 R52	target Arg1:T62 Arg2:T63
 R53	in-context Arg1:T62 Arg2:T68
 T69	Action 1825 1828	uso
-T70	Concept 1841 1854	preservativos
+T70	Concept 1841 1854;1855 1857;1858 1863	preservativos de látex
 T71	Action 1864 1873	disminuye
+T72	Concept 1874 1885	enormemente
+A9	Emphasized T72
+R54	in-context Arg1:T71 Arg2:T72
 R55	causes Arg1:T69 Arg2:T71
 R56	target Arg1:T69 Arg2:T70
 T73	Predicate 1909 1915	riesgo
@@ -136,7 +143,8 @@ R61	target Arg1:T77 Arg2:T73
 R62	causes Arg1:T69 Arg2:T77
 R63	target Arg1:T71 Arg2:T73
 T78	Concept 2093 2103	resultados
-T79	Concept 2108 2117	anormales
+T79	Predicate 2108 2117	anormales
+R64	domain Arg1:T79 Arg2:T78
 T80	Concept 2122 2128	doctor
 T81	Action 2135 2145	recomendar
 A11	Uncertain T81
@@ -145,6 +153,7 @@ T83	Concept 2169 2176	biopsia
 R65	is-a Arg1:T83 Arg2:T82
 R66	entails Arg1:T78 Arg2:T81
 R67	subject Arg1:T81 Arg2:T80
+R68	target Arg1:T81 Arg2:T82
 T84	Action 2279 2284	fumar
 A12	Negated T84
 T85	Action 2297 2304	consumo
@@ -157,8 +166,18 @@ R70	subject Arg1:T87 Arg2:T84
 R71	subject Arg1:T87 Arg2:T85
 T88	Concept 2400 2410	embarazada
 T89	Concept 2415 2422	sífilis
+T90	Action 2429 2435	causar
 T91	Concept 2436 2444;2445 2455	defectos congénitos
 T92	Concept 2458 2465	abortos
+R72	subject Arg1:T90 Arg2:T89
+R73	target Arg1:T90 Arg2:T91
+T93	Action 2429 2435	causar
+A15	Uncertain T90
+A16	Uncertain T93
+R74	subject Arg1:T93 Arg2:T89
+R75	target Arg1:T93 Arg2:T92
+R76	in-context Arg1:T93 Arg2:T88
+R77	in-context Arg1:T90 Arg2:T88
 T94	Concept 2546 2553	lunares
 T95	Concept 2562 2569	comunes
 A17	Emphasized T95
@@ -167,7 +186,10 @@ T96	Concept 2603 2610	malaria
 T97	Concept 2618 2628	enfermedad
 T98	Concept 2629 2634	grave
 R80	in-context Arg1:T97 Arg2:T98
+T99	Action 2635 2642	causada
 T100	Concept 2650 2658	parásito
+R81	subject Arg1:T100 Arg2:T99
+R82	target Arg1:T99 Arg2:T96
 T101	Concept 2723 2731	insulina
 T102	Concept 2739 2746	hormona
 T103	Concept 2762 2769	glucosa
@@ -180,10 +202,15 @@ T108	Action 2751 2756	ayuda
 R84	subject Arg1:T108 Arg2:T101
 R85	target Arg1:T108 Arg2:T104
 R86	subject Arg1:T104 Arg2:T103
-R87	in-place Arg1:T104 Arg2:T105
+R87	target Arg1:T104 Arg2:T105
 R88	subject Arg1:T107 Arg2:T103
+R91	arg Arg1:T104 Arg2:T107
 T109	Concept 2911 2924	tricomoniasis
+T110	Action 2939 2945	causar
 T111	Concept 2946 2955	vaginitis
+R92	subject Arg1:T110 Arg2:T109
+R93	target Arg1:T110 Arg2:T111
+A18	Uncertain T110
 T112	Concept 3016 3023	benigno
 T113	Concept 3028 3037	canceroso
 T114	Concept 3041 3048	maligno
@@ -194,6 +221,7 @@ T116	Concept 3121 3129	nicotina
 T117	Concept 3137 3142	droga
 T118	Concept 3153 3161	adictiva
 A19	Emphasized T118
+R94	has-property Arg1:T117 Arg2:T118
 R95	is-a Arg1:T116 Arg2:T117
 T119	Action 3166 3175	dificulta
 R96	subject Arg1:T119 Arg2:T116
@@ -211,8 +239,9 @@ R100	target Arg1:T123 Arg2:T122
 T125	Concept 3389 3397	síndrome
 T126	Concept 3408 3415	difícil
 T127	Action 3419 3431	diagnosticar
-R101	has-property Arg1:T127 Arg2:T126
-R102	target Arg1:T127 Arg2:T64
+A22	Uncertain T127
+R101	in-context Arg1:T127 Arg2:T126
+R102	target Arg1:T127 Arg2:T125
 T128	Action 3480 3485	Bajar
 T129	Concept 3489 3493	peso
 T130	Action 3495 3502	ingerir
@@ -222,8 +251,9 @@ T133	Action 3525 3535	mantenerse
 T134	Concept 3536 3542	activo
 T135	Action 3548 3553	fumar
 A23	Negated T135
-T136	Action 3570 3577	mejorar
+T136	Action 3561 3567	ayudar
 A24	Uncertain T136
+T137	Action 3570 3577	mejorar
 T138	Concept 3581 3591;3592 3600	enfermedad vascular
 R104	target Arg1:T128 Arg2:T129
 R106	in-context Arg1:T133 Arg2:T134
@@ -231,6 +261,8 @@ R107	subject Arg1:T136 Arg2:T135
 R108	subject Arg1:T136 Arg2:T133
 R109	subject Arg1:T136 Arg2:T130
 R110	subject Arg1:T136 Arg2:T128
+R111	target Arg1:T136 Arg2:T137
+R112	target Arg1:T137 Arg2:T138
 T139	Concept 3727 3733	médico
 T140	Action 3740 3748	realizar
 T141	Concept 3749 3756	pruebas
@@ -238,7 +270,7 @@ T142	Action 3761 3769	detecten
 A25	Uncertain T140
 T144	Concept 3783 3791	arritmia
 R113	subject Arg1:T140 Arg2:T139
-R114	target Arg1:T140 Arg2:T142
+R114	target Arg1:T140 Arg2:T141
 R115	subject Arg1:T142 Arg2:T141
 T145	Reference 3862 3867	Estos
 T146	Concept 3877 3883	calcio
@@ -258,21 +290,25 @@ R124	is-a Arg1:T152 Arg2:T145
 R79	is-a Arg1:T96 Arg2:T97
 R105	target Arg1:T130 Arg2:T131
 R89	target Arg1:T107 Arg2:T106
-R90	target Arg1:T107 Arg2:T105
+R90	arg Arg1:T107 Arg2:T105
 R103	in-context Arg1:T131 Arg2:T132
 R1	in-context Arg1:T1 Arg2:T2
+R125	in-context Arg1:T37 Arg2:T36
+A26	Emphasized T21
 T19	Action 412 426	diagnosticarlo
 T20	Action 1042 1053	inflamación
 R15	subject Arg1:T20 Arg2:T43
 R22	target Arg1:T20 Arg2:T43
 R36	is-a Arg1:T42 Arg2:T20
-R116	target Arg1:T142 Arg2:T90
+R116	target Arg1:T142 Arg2:T144
 A4	Negated T113
 T1001	Concept 55 63	animales
 T1002	Concept 64 72	salvajes
 T1003	Action 80 84	huir
+A1001	Uncertain T1003
 T1004	Concept 92 100	personas
 R1002	subject Arg1:T1003 Arg2:T1001
+R1004	in-context Arg1:T1003 Arg2:T1004
 T1005	Concept 144 152	hormonas
 T1006	Concept 157 167;168 176	mensajeros químicos
 R1005	is-a Arg1:T1005 Arg2:T1006
@@ -285,7 +321,7 @@ R1007	target Arg1:T1009 Arg2:T1010
 R1008	in-place Arg1:T1009 Arg2:T1008
 T1011	Concept 339 344	mujer
 T1012	Concept 350 360	embarazada
-R1009	in-context Arg1:T1011 Arg2:T1012
+R1009	has-property Arg1:T1011 Arg2:T1012
 R1010	in-context Arg1:T1009 Arg2:T1011
 T1013	Concept 432 439	médicos
 T1014	Concept 445 452	pruebas
@@ -318,7 +354,7 @@ T1039	Concept 991 996	tumor
 T1040	Action 1003 1009	crecer
 T1041	Concept 1010 1020	lentamente
 R1033	subject Arg1:T1040 Arg2:T1039
-R1035	has-property Arg1:T1040 Arg2:T1041
+R1035	in-context Arg1:T1040 Arg2:T1041
 T1042	Concept 1069 1078	hepatitis
 T1043	Concept 1102 1108	hígado
 R1025	in-context Arg1:T1035 Arg2:T1036
@@ -336,7 +372,7 @@ T1044	Concept 1155 1162	oxiuros
 T1045	Action 1166 1174	propagan
 T1046	Concept 1179 1190	rápidamente
 A1005	Emphasized T1046
-R1031	has-property Arg1:T1045 Arg2:T1046
+R1031	in-context Arg1:T1045 Arg2:T1046
 R1037	target Arg1:T1045 Arg2:T1044
 T1047	Concept 1235 1241	piojos
 T1048	Action 1245 1255	transmiten
@@ -348,6 +384,7 @@ T1050	Action 1343 1351	extirpar
 T1051	Concept 1355 1360	tumor
 R1040	target Arg1:T1050 Arg2:T1051
 A1007	Uncertain T1050
+T1052	Predicate 1316 1319;1320 1330	Con frecuencia
 T1053	Concept 1425 1437	tratamientos
 T1054	Concept 1447 1453	cremas
 T1055	Concept 1455 1464	medicinas
@@ -457,7 +494,7 @@ R1085	target Arg1:T1108 Arg2:T1104
 R1086	subject Arg1:T1104 Arg2:T1103
 R1087	target Arg1:T1104 Arg2:T1105
 R1088	subject Arg1:T1107 Arg2:T1103
-R1091	arg Arg1:T1104 Arg2:T1107
+R1091	causes Arg1:T1104 Arg2:T1107
 T1109	Concept 2960 2973	tricomoniasis
 T1110	Action 2988 2994	causar
 T1111	Concept 2995 3004	vaginitis
@@ -486,7 +523,7 @@ R1098	target Arg1:T1120 Arg2:T1121
 T1122	Concept 3342 3350	porfiria
 T1123	Action 3372 3384	diagnosticar
 T1124	Concept 3361 3368	difícil
-R1099	has-property Arg1:T1123 Arg2:T1124
+R1099	in-context Arg1:T1123 Arg2:T1124
 R1100	target Arg1:T1123 Arg2:T1122
 T1125	Concept 3436 3444	síndrome
 T1126	Concept 3455 3462	difícil
@@ -541,7 +578,7 @@ R1124	is-a Arg1:T1152 Arg2:T1145
 R1079	is-a Arg1:T1096 Arg2:T1097
 R1105	target Arg1:T1130 Arg2:T1131
 R1089	target Arg1:T1107 Arg2:T1106
-R1090	arg Arg1:T1107 Arg2:T1105
+R1090	in-context Arg1:T1107 Arg2:T1105
 R1103	in-context Arg1:T1131 Arg2:T1132
 R1001	in-context Arg1:T1001 Arg2:T1002
 R1125	in-context Arg1:T1037 Arg2:T1036
@@ -570,6 +607,8 @@ A1028	Uncertain T1024
 A1029	Uncertain T1025
 A1030	Uncertain T1026
 R1128	in-context Arg1:T1038 Arg2:T1036
+R1015	domain Arg1:T1052 Arg2:T1050
+R1032	domain Arg1:T1068 Arg2:T1064
 R1034	target Arg1:T1066 Arg2:T1065
 R1051	causes Arg1:T1066 Arg2:T1067
 R1041	arg Arg1:T1072 Arg2:T1073
@@ -581,37 +620,3 @@ R1130	in-context Arg1:T1155 Arg2:T1114
 A1008	Uncertain T1124
 A1021	Uncertain T1126
 R1131	causes Arg1:T1141 Arg2:T1142
-R117	causes Arg1:T1004 Arg2:T1003	
-R126	target Arg1:T19 Arg2:T17	
-R127	entails Arg1:T19 Arg2:T15	
-R128	subject Arg1:T19 Arg2:T13	
-R17	target Arg1:T18 Arg2:T22	
-R129	entails Arg1:T18 Arg2:T21	
-A26	Uncertain T21
-A27	Uncertain T27
-R25	has-property Arg1:T35 Arg2:T36	
-R125	has-property Arg1:T37 Arg2:T36	
-R130	has-property Arg1:T38 Arg2:T36	
-R131	is-a Arg1:T1060 Arg2:T1061	
-R132	is-a Arg1:T1059 Arg2:T1061	
-R133	is-a Arg1:T1058 Arg2:T1061	
-A9	Emphasized T71
-T72	Concept 1858 1863	látex
-R54	in-context Arg1:T70 Arg2:T72	
-A28	Emphasized T62
-R49	in-context Arg1:T78 Arg2:T79	
-R64	target Arg1:T81 Arg2:T83	
-R68	target Arg1:T81 Arg2:T82	
-R72	causes Arg1:T89 Arg2:T91	
-R73	causes Arg1:T89 Arg2:T92	
-R74	in-time Arg1:T89 Arg2:T88	
-R75	causes Arg1:T100 Arg2:T96	
-R76	entails Arg1:T104 Arg2:T107	
-R77	causes Arg1:T109 Arg2:T111	
-R81	has-property Arg1:T116 Arg2:T118	
-T64	Reference 3386 3388	El
-R82	is-a Arg1:T64 Arg2:T125	
-A15	Uncertain T126
-R91	target Arg1:T136 Arg2:T138	
-T90	Action 3773 3779	padece
-R92	target Arg1:T90 Arg2:T144	

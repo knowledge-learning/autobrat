@@ -8,7 +8,7 @@ T6	Concept 56 61	larga
 R2	arg Arg1:T5 Arg2:T6	
 R3	in-context Arg1:T3 Arg2:T4	
 R4	is-a Arg1:T1 Arg2:T3	
-R5	domain Arg1:T3 Arg2:T5	
+R5	in-context Arg1:T3 Arg2:T5	
 T7	Concept 114 122	elevados
 T8	Concept 125 136	disminuidos
 T10	Concept 162 171	trastorno
@@ -23,8 +23,6 @@ R11	arg Arg1:T14 Arg2:T13
 R12	in-context Arg1:T14 Arg2:T8	
 R13	causes Arg1:T10 Arg2:T12	
 R14	causes Arg1:T10 Arg2:T14	
-A1	Emphasized T7
-A2	Emphasized T8
 T9	Concept 186 192	planes
 T15	Concept 196 210	administración
 T16	Concept 214 221	seguros
@@ -44,7 +42,6 @@ T23	Action 295 303	asistida
 T24	Concept 308 313;314 319	rayos láser
 R19	subject Arg1:T23 Arg2:T24	
 R20	target Arg1:T23 Arg2:T22	
-*	same-as T21 T23
 T25	Concept 340 347	comunes
 A3	Emphasized T25
 R21	has-property Arg1:T21 Arg2:T25	
@@ -56,7 +53,6 @@ T29	Action 420 426	revisa
 T30	Action 428 437	supervisa
 T31	Action 440 447	aprueba
 T32	Concept 462 469;470 478	ensayos clínicos
-A4	Emphasized T32
 R22	subject Arg1:T29 Arg2:T26	
 R23	subject Arg1:T30 Arg2:T26	
 R24	subject Arg1:T31 Arg2:T26	
@@ -143,10 +139,9 @@ R60	target Arg1:T75 Arg2:T73
 T76	Concept 2147 2159	traumatismos
 T77	Predicate 1179 1185	encima
 T78	Predicate 1167 1172	antes
-R62	in-context Arg1:T78 Arg2:T74	
-T79	Concept 1140 1146;1147 1156	número sistólico
-R64	in-context Arg1:T77 Arg2:T74	
-R61	in-place Arg1:T75 Arg2:T78	
+R62	arg Arg1:T78 Arg2:T74	
+R64	arg Arg1:T77 Arg2:T74	
+R61	in-context Arg1:T75 Arg2:T78	
 T80	Concept 1214 1221	muestra
 T81	Concept 1225 1232;1233 1238	materia fecal
 R63	in-context Arg1:T80 Arg2:T81	
@@ -231,7 +226,6 @@ T123	Predicate 1911 1914	300
 R99	domain Arg1:T123 Arg2:T122	
 T124	Concept 1924 1931	diarias
 R101	subject Arg1:T121 Arg2:T165	
-A11	Emphasized T120
 T125	Predicate 1965 1969	seis
 T126	Concept 1970 1975	meses
 T127	Concept 1979 1987	embarazo
@@ -325,3 +319,7 @@ T166	Predicate 2132 2137	común
 R92	in-context Arg1:T76 Arg2:T166	
 T167	Concept 2122 2127	causa
 R143	domain Arg1:T166 Arg2:T167	
+R144	is-a Arg1:T21 Arg2:T23	
+R145	in-context Arg1:T75 Arg2:T77	
+T79	Action 1806 1814	contraer
+R146	target Arg1:T79 Arg2:T115	

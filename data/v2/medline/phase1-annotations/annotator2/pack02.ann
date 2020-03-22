@@ -190,7 +190,7 @@ R85	target Arg1:T108 Arg2:T104
 R86	subject Arg1:T104 Arg2:T103	
 R87	target Arg1:T104 Arg2:T105	
 R88	subject Arg1:T107 Arg2:T103	
-R91	arg Arg1:T104 Arg2:T107	
+R91	causes Arg1:T104 Arg2:T107	
 T109	Concept 1457 1470	tricomoniasis
 T110	Action 1485 1491	causar
 T111	Concept 1492 1501	vaginitis
@@ -274,7 +274,7 @@ R124	is-a Arg1:T152 Arg2:T145
 R79	is-a Arg1:T96 Arg2:T97	
 R105	target Arg1:T130 Arg2:T131	
 R89	target Arg1:T107 Arg2:T106	
-R90	arg Arg1:T107 Arg2:T105	
+R90	in-context Arg1:T107 Arg2:T105	
 R103	in-context Arg1:T131 Arg2:T132	
 R1	in-context Arg1:T1 Arg2:T2	
 R125	in-context Arg1:T37 Arg2:T36	

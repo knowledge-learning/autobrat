@@ -9,3 +9,5 @@
 - duración no es lo mismo que ocurre en un instante de tiempo.
 - oraciones explícitas donde el conocimiento sea un statement.
 - negar las relaciones que existen same-as, etc., 
+- magnitudes y valores de cuantificación
+- los predicados son una mierda
