@@ -77,8 +77,7 @@ R42	target Arg1:T53 Arg2:T52
 T54	Concept 1686 1692	cuerpo
 T55	Action 1717 1725	producir
 T56	Concept 1733 1740	células
-T57	Predicate 1741 1746	sanas
-R43	domain Arg1:T57 Arg2:T56
+T57	Concept 1741 1746	sanas
 T58	Concept 1895 1903;1904 1909	glóbulos rojos
 T59	Action 1914 1924	destruidos
 R44	target Arg1:T59 Arg2:T58
@@ -103,20 +102,12 @@ T70	Concept 2287 2292	VHH-8
 *	same-as T70 T69
 R52	causes Arg1:T68 Arg2:T66
 R53	subject Arg1:T68 Arg2:T69
-T67	Action 2400 2411	convertirse
-A6	Uncertain T67
 T71	Concept 2415 2423;2424 2426;2427 2432	síndrome de shock
 T72	Concept 2437 2443	dengue
 T73	Concept 2454 2462	sangrado
 T74	Concept 2463 2469	masivo
-T75	Action 2448 2453	causa
 T76	Concept 2472 2477	shock
 R54	in-context Arg1:T73 Arg2:T74
-R55	subject Arg1:T75 Arg2:T72
-R56	target Arg1:T75 Arg2:T73
-R58	target Arg1:T67 Arg2:T71
-R57	target Arg1:T75 Arg2:T76
-R59	causes Arg1:T75 Arg2:T67
 T77	Concept 2575 2584;2585 2588;2589 2597;2598 2608;2609 2614	trastorno del espectro alcohólico fetal
 T78	Action 2615 2619	dura
 R60	subject Arg1:T77 Arg2:T78
@@ -269,15 +260,13 @@ R132	arg Arg1:T159 Arg2:T160
 R133	target Arg1:T157 Arg2:T159
 R134	subject Arg1:T157 Arg2:T156
 R135	causes Arg1:T157 Arg2:T154
-T161	Predicate 1702 1713	oportunidad
 T162	Predicate 1651 1656	entre
 R136	arg Arg1:T162 Arg2:T51
 R138	subject Arg1:T55 Arg2:T54
 R139	target Arg1:T55 Arg2:T56
 A11	Uncertain T50
 R40	in-time Arg1:T50 Arg2:T162
-R137	in-context Arg1:T55 Arg2:T161
-R140	causes Arg1:T50 Arg2:T55
+R140	target Arg1:T50 Arg2:T55
 A12	Emphasized T10
 R6	in-place Arg1:T18 Arg2:T19
 R14	target Arg1:T20 Arg2:T21
@@ -399,11 +388,11 @@ R1046	target Arg1:T1060 Arg2:T1058
 R1047	in-time Arg1:T1059 Arg2:T1061
 R1048	arg Arg1:T1061 Arg2:T1060
 R1049	causes Arg1:T1059 Arg2:T1052
-T1064	Concept 2132 2137;2138 2140;2145 2149	salud de uñas
+T1064	Concept 2132 2137	salud
 T1063	Action 2163 2172	indicador
 A1005	Uncertain T1063
 R1050	subject Arg1:T1063 Arg2:T1064
-T1065	Concept 2179 2185;2186 2193;2194 2196;2197 2202	estado general de salud
+T1065	Concept 2179 2185;2194 2196;2197 2202	estado de salud
 R1051	target Arg1:T1063 Arg2:T1065
 T1066	Concept 2298 2305;2306 2308;2309 2315	sarcoma de Kaposi
 T1069	Concept 2351 2356;2357 2360;2361 2367;2368 2374;2375 2376	virus del herpes humano 8
@@ -617,3 +606,11 @@ T167	Reference 1290 1292	La
 R145	is-a Arg1:T167 Arg2:T42	
 R39	is-a Arg1:T167 Arg2:T43	
 R38	in-context Arg1:T43 Arg2:T46	
+R43	in-context Arg1:T56 Arg2:T57	
+T44	Concept 2186 2193	general
+R137	in-context Arg1:T1065 Arg2:T44	
+T161	Concept 2145 2149	uñas
+R142	in-place Arg1:T1064 Arg2:T161	
+R58	causes Arg1:T72 Arg2:T71	
+R55	causes Arg1:T71 Arg2:T73	
+R56	causes Arg1:T71 Arg2:T76	
