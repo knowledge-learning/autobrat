@@ -188,8 +188,6 @@ R108	target Arg1:T129 Arg2:T128
 T132	Concept 4373 4381;4382 4390	historia familiar
 T133	Concept 4397 4403;4404 4406;4407 4413	factor de riesgo
 T135	Concept 4414 4424	importante
-A10	Emphasized T135
-R109	has-property Arg1:T133 Arg2:T135
 R110	is-a Arg1:T132 Arg2:T133
 T134	Concept 4430 4439	problemas
 T136	Concept 4448 4461;4462 4470	insuficiencia cardiaca
@@ -200,10 +198,6 @@ R111	is-a Arg1:T136 Arg2:T134
 R112	is-a Arg1:T137 Arg2:T134
 R113	is-a Arg1:T138 Arg2:T134
 R114	is-a Arg1:T139 Arg2:T134
-R115	in-context Arg1:T133 Arg2:T136
-R116	in-context Arg1:T133 Arg2:T137
-R117	in-context Arg1:T133 Arg2:T138
-R118	in-context Arg1:T133 Arg2:T139
 T140	Concept 4658 4672;4673 4675;4676 4682	sobrevivientes de cáncer
 T141	Action 4689 4698	someterse
 T142	Action 4701 4712	seguimiento
@@ -442,13 +436,12 @@ T1122	Concept 4029 4035	cabeza
 T1123	Concept 4038 4044	cuello
 R1100	in-place Arg1:T1121 Arg2:T1122
 R1101	in-place Arg1:T1121 Arg2:T1123
-T1124	Predicate 4211 4222	deficiencia
+T1124	Action 4211 4222	deficiencia
 T1125	Concept 4226 4233;4234 4237;4238 4260	glucosa -6- fosfato-deshidrogenasa
-R1102	arg Arg1:T1124 Arg2:T1125
+R1102	target Arg1:T1124 Arg2:T1125
 T1127	Concept 4293 4299	G-6-PD
-*	same-as T1125 T1127
 T1128	Concept 4308 4318;4319 4330	enfermedad hereditaria
-T1130	Predicate 4341 4353	generalmente
+T1130	Concept 4341 4353	generalmente
 T1131	Concept 4361 4368	varones
 R1106	is-a Arg1:T1124 Arg2:T1128
 T1132	Concept 4512 4520;4521 4529	historia familiar
@@ -469,9 +462,8 @@ R1115	in-context Arg1:T1133 Arg2:T1136
 R1116	in-context Arg1:T1133 Arg2:T1137
 R1117	in-context Arg1:T1133 Arg2:T1138
 R1118	in-context Arg1:T1133 Arg2:T1139
-T1140	Concept 4724 4738;4739 4741;4742 4748	sobrevivientes de cáncer
+T1140	Action 4724 4738	sobrevivientes
 T1142	Action 4767 4778	seguimiento
-T1143	Predicate 4749 4754	deben
 T1144	Concept 4829 4834;4835 4836	grupo A
 T1145	Concept 4839 4844;4845 4846	grupo B
 T1146	Concept 4822 4827	tipos
@@ -557,11 +549,8 @@ R1058	arg Arg1:T1090 Arg2:T1092
 R1060	arg Arg1:T1090 Arg2:T1093
 R1061	domain Arg1:T1103 Arg2:T1101
 R1063	causes Arg1:T1118 Arg2:T1114
-R1069	arg Arg1:T1130 Arg2:T1131
-R1070	in-context Arg1:T1128 Arg2:T1130
 A1004	Emphasized T1133
-R1071	arg Arg1:T1143 Arg2:T1142
-R1072	entails Arg1:T1140 Arg2:T1143
+R1072	entails Arg1:T1140 Arg2:T1142
 R1073	target Arg1:T1142 Arg2:T1140
 T79	Concept 248 254	exceso
 R4	in-context Arg1:T7 Arg2:T79	
@@ -610,3 +599,15 @@ R70	in-context Arg1:T81 Arg2:T1102
 R71	has-property Arg1:T1103 Arg2:T81	
 T83	Concept 3868 3876	bacteria
 R72	is-a Arg1:T1118 Arg2:T83	
+T89	Action 4278 4289	deficiencia
+*	same-as T1124 T89
+R73	target Arg1:T89 Arg2:T1127	
+R74	in-context Arg1:T1131 Arg2:T1124	
+R75	has-property Arg1:T1131 Arg2:T1130	
+R76	has-property Arg1:T132 Arg2:T135	
+R78	in-context Arg1:T135 Arg2:T136	
+R109	in-context Arg1:T135 Arg2:T137	
+R115	in-context Arg1:T135 Arg2:T138	
+R116	in-context Arg1:T135 Arg2:T139	
+T90	Concept 4742 4748	cáncer
+R117	target Arg1:T1140 Arg2:T90	
