@@ -170,13 +170,6 @@ T95	Concept 2319 2325	tabaco
 T96	Concept 2307 2314	cafeína
 T97	Action 2346 2354	empeorar
 R79	subject Arg1:T97 Arg2:T94
-R80	target Arg1:T97 Arg2:T93
-T98	Action 2346 2354	empeorar
-T99	Action 2346 2354	empeorar
-R81	subject Arg1:T98 Arg2:T95
-R82	target Arg1:T98 Arg2:T93
-R83	subject Arg1:T99 Arg2:T96
-R84	target Arg1:T99 Arg2:T93
 T100	Action 2449 2457	necesite
 A13	Uncertain T100
 T101	Concept 2462 2467	dieta
@@ -186,10 +179,9 @@ T105	Concept 2505 2512	potasio
 T106	Action 2517 2524	consume
 T104	Predicate 2493 2501	cantidad
 R86	arg Arg1:T104 Arg2:T105
-R87	target Arg1:T106 Arg2:T105
-R88	target Arg1:T103 Arg2:T104
+R87	target Arg1:T106 Arg2:T104
+R88	target Arg1:T103 Arg2:T106
 R89	target Arg1:T100 Arg2:T101
-R90	arg Arg1:T100 Arg2:T103
 T107	Concept 2632 2639	cirugía
 T108	Action 2646 2652	cerrar
 T110	Concept 2656 2661	labio
@@ -199,23 +191,18 @@ R92	target Arg1:T108 Arg2:T110
 R93	target Arg1:T108 Arg2:T111
 T112	Concept 2737 2742	virus
 T113	Concept 2746 2756	contagioso
-R95	has-property Arg1:T112 Arg2:T113
 T114	Action 2765 2776	diseminarse
 T115	Concept 2780 2787	persona
 T116	Concept 2790 2797	persona
 A14	Uncertain T114
-R96	subject Arg1:T112 Arg2:T114
-R97	target Arg1:T114 Arg2:T112
 T117	Action 2867 2874	consumo
 T118	Concept 2878 2884	tabaco
 T119	Concept 2890 2897	alcohol
 T120	Action 2898 2905	aumenta
-T121	Predicate 2909 2915	riesgo
+T121	Concept 2909 2915	riesgo
 T122	Action 2867 2874	consumo
 R98	target Arg1:T117 Arg2:T118
 R99	target Arg1:T122 Arg2:T119
-R100	causes Arg1:T122 Arg2:T120
-R101	causes Arg1:T117 Arg2:T120
 R102	target Arg1:T120 Arg2:T121
 T123	Concept 2973 2982	urticaria
 T124	Concept 2990 2995	común
@@ -267,7 +254,7 @@ T147	Concept 3488 3494	médico
 T148	Concept 3513 3523	enfermedad
 R122	subject Arg1:T145 Arg2:T147
 R123	target Arg1:T145 Arg2:T148
-R125	target Arg1:T146 Arg2:T147
+R125	target Arg1:T146 Arg2:T145
 A20	Uncertain T146
 T143	Action 3452 3460	análisis
 T144	Concept 3464 3470	sangre
@@ -279,10 +266,9 @@ T151	Concept 3654 3663	adenoides
 T152	Action 3641 3649	extirpar
 R127	subject Arg1:T152 Arg2:T150
 R128	target Arg1:T152 Arg2:T151
-T153	Action 2788 2789	a
-R130	target Arg1:T153 Arg2:T115
-R131	target Arg1:T153 Arg2:T116
-R132	in-context Arg1:T114 Arg2:T153
+T153	Predicate 2788 2789	a
+R131	arg Arg1:T153 Arg2:T116
+R132	in-place Arg1:T114 Arg2:T153
 R85	in-context Arg1:T101 Arg2:T102
 T83	Action 2088 2093	tiene
 R71	target Arg1:T83 Arg2:T84
@@ -298,7 +284,6 @@ R135	in-context Arg1:T4 Arg2:T2
 A21	Uncertain T65
 R50	in-context Arg1:T63 Arg2:T64
 A22	Emphasized T58
-A23	Emphasized T108
 T1001	Concept 51 59	gérmenes
 T1004	Action 63 71	propagan
 R1002	target Arg1:T1004 Arg2:T1001
@@ -531,10 +516,8 @@ R1115	target Arg1:T1131 Arg2:T1136
 R1116	target Arg1:T1131 Arg2:T1137
 R1117	target Arg1:T1131 Arg2:T1138
 R1118	target Arg1:T1131 Arg2:T1139
-T1140	Predicate 3408 3413	veces
 T1141	Concept 3425 3429	bazo
 T1142	Action 3436 3446	inflamarse
-R1119	in-time Arg1:T1142 Arg2:T1140
 R1121	target Arg1:T1142 Arg2:T1141
 T1145	Action 3574 3586	diagnosticar
 T1146	Action 3555 3561	ayudar
@@ -558,8 +541,6 @@ R1085	in-context Arg1:T1101 Arg2:T1102
 T1083	Action 2146 2151	tiene
 R1071	target Arg1:T1083 Arg2:T1084
 R1072	target Arg1:T1082 Arg2:T1083
-T1154	Predicate 3400 3407	Algunas
-R1133	domain Arg1:T1154 Arg2:T1140
 R1004	in-context Arg1:T1008 Arg2:T1009
 R1006	in-context Arg1:T1006 Arg2:T1007
 A1021	Uncertain T1065
@@ -604,3 +585,13 @@ R49	target Arg1:T156 Arg2:T66
 R136	target Arg1:T156 Arg2:T70	
 R57	has-property Arg1:T156 Arg2:T69	
 R58	entails Arg1:T77 Arg2:T79	
+R68	target Arg1:T97 Arg2:T93	
+R80	entails Arg1:T103 Arg2:T100	
+A5	Uncertain T108
+T98	Reference 2734 2736	El
+R81	is-a Arg1:T98 Arg2:T112	
+R82	has-property Arg1:T98 Arg2:T113	
+R83	subject Arg1:T114 Arg2:T98	
+R84	in-context Arg1:T114 Arg2:T115	
+R90	subject Arg1:T120 Arg2:T122	
+R95	subject Arg1:T120 Arg2:T117	
