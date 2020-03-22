@@ -12,3 +12,4 @@
 - magnitudes y valores de cuantificación
 - los predicados son una mierda
 - está basado, inspirado, sigue las instrucciones de ...
+- decir la probabilidad de que algo ocurra es alta o baja

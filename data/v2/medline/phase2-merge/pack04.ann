@@ -114,43 +114,24 @@ R60	subject Arg1:T77 Arg2:T78
 R61	target Arg1:T78 Arg2:T77
 T80	Concept 2628 2632	vida
 R63	in-time Arg1:T78 Arg2:T80
-T81	Predicate 2700 2708	variedad
 T82	Concept 2712 2721	problemas
-R64	arg Arg1:T81 Arg2:T82
-T83	Action 2728 2734	causar
-A7	Uncertain T83
-T84	Predicate 2739 2749	alteración
+T84	Action 2739 2749	alteración
 T85	Concept 2756 2762	marcha
-R65	arg Arg1:T84 Arg2:T85
 T87	Concept 2777 2786	problemas
 T88	Action 2792 2799	caminar
 R66	in-context Arg1:T88 Arg2:T87
-R68	target Arg1:T83 Arg2:T84
-R69	causes Arg1:T83 Arg2:T88
 T86	Concept 2910 2921	infecciones
-T89	Action 2922 2929	ocurren
-R70	subject Arg1:T89 Arg2:T86
-R71	target Arg1:T89 Arg2:T86
-T90	Predicate 2930 2934	casi
-T91	Concept 2935 2942	siempre
-R72	domain Arg1:T90 Arg2:T91
-R73	in-context Arg1:T89 Arg2:T91
 T92	Concept 2946 2954	invierno
 T93	Concept 2960 2969	primavera
 T94	Action 2922 2929	ocurren
-R74	target Arg1:T94 Arg2:T86
-R75	subject Arg1:T94 Arg2:T86
-R76	in-context Arg1:T94 Arg2:T91
 R77	in-time Arg1:T94 Arg2:T92
-R78	in-time Arg1:T89 Arg2:T93
 T95	Action 3042 3049	conocen
 A8	Negated T95
 T96	Predicate 3054 3060	causas
 T97	Concept 3065 3074;3075 3078;3079 3087;3088 3095	trastorno del espectro autista
 R79	arg Arg1:T96 Arg2:T97
 R80	target Arg1:T95 Arg2:T96
-T99	Action 3168 3174	examen
-A9	Negated T99
+T99	Concept 3168 3174	examen
 T98	Concept 3278 3286	personas
 T102	Concept 3316 3325;3326 3329;3330 3336;3337 3339;3340 3345	trastorno del estado de ánimo
 T101	Predicate 3287 3294	mayores
@@ -283,7 +264,7 @@ T49	Concept 1322 1334	alimentación
 R37	in-context Arg1:T43 Arg2:T49
 T163	Concept 1357 1370	investigación
 R143	in-context Arg1:T45 Arg2:T163
-T100	Concept 3178 3189;3190 3200	diagnóstico específico
+T100	Concept 3178 3189	diagnóstico
 R81	in-context Arg1:T99 Arg2:T100
 T164	Concept 3278 3286	personas
 R85	in-context Arg1:T164 Arg2:T102
@@ -296,7 +277,6 @@ R86	in-place Arg1:T111 Arg2:T108
 R87	in-place Arg1:T111 Arg2:T109
 R88	in-place Arg1:T111 Arg2:T110
 R91	in-context Arg1:T156 Arg2:T155
-R67	subject Arg1:T83 Arg2:T81
 R62	subject Arg1:T6 Arg2:T2
 T1001	Concept 108 111;112 114;115 122;123 134	gen de células falciformes
 T1002	Concept 108 111	gen
@@ -432,7 +412,7 @@ R1080	target Arg1:T1095 Arg2:T1096
 T1099	Concept 3212 3218	examen
 A1009	Negated T1099
 T1098	Concept 3379 3387	personas
-T1102	Concept 3417 3426;3427 3430;3431 3437;3438 3440;3441 3446	trastorno del estado de ánimo
+T1102	Concept 3431 3437;3438 3440;3441 3446	estado de ánimo
 T1101	Predicate 3388 3395	mayores
 R1082	domain Arg1:T1101 Arg2:T1098
 T1103	Predicate 3364 3367;3368 3370;3371 3375;3376 3378	una de cada 10
@@ -445,7 +425,7 @@ T1109	Concept 3645 3651;3652 3654;3655 3658;3659 3664	palmas de las manos
 T1110	Concept 3671 3678;3679 3681;3682 3685;3686 3690	plantas de los pies
 T1111	Action 3581 3586	crece
 T1112	Predicate 3598 3608	superficie
-R1089	arg Arg1:T1112 Arg2:T1107
+R1089	domain Arg1:T1112 Arg2:T1107
 R1092	subject Arg1:T1111 Arg2:T1105
 R1094	in-place Arg1:T1111 Arg2:T1112
 T1114	Concept 3798 3808;3809 3812;3813 3820;3821 3823;3824 3828	enfermedad por arañazo de gato
@@ -453,7 +433,7 @@ T1115	Concept 3830 3833	EAG
 *	same-as T1115 T1114
 T1116	Concept 3842 3852	enfermedad
 R1095	is-a Arg1:T1114 Arg2:T1116
-T1118	Concept 3868 3876;3877 3887;3888 3896	bacteria Bartonella henselae
+T1118	Concept 3877 3887;3888 3896	Bartonella henselae
 T1119	Concept 3975 3981;3982 3984;3985 3987;3988 3996;3997 4004	cáncer de la glándula salival
 T1120	Predicate 4011 4015	tipo
 T1121	Concept 4019 4025	cáncer
@@ -575,8 +555,7 @@ R1056	causes Arg1:T1084 Arg2:T1088
 R1057	in-time Arg1:T1086 Arg2:T1090
 R1058	arg Arg1:T1090 Arg2:T1092
 R1060	arg Arg1:T1090 Arg2:T1093
-R1061	arg Arg1:T1103 Arg2:T1101
-R1062	has-property Arg1:T1102 Arg2:T1103
+R1061	domain Arg1:T1103 Arg2:T1101
 R1063	causes Arg1:T1118 Arg2:T1114
 R1069	arg Arg1:T1130 Arg2:T1131
 R1070	in-context Arg1:T1128 Arg2:T1130
@@ -614,3 +593,20 @@ R142	in-place Arg1:T1064 Arg2:T161
 R58	causes Arg1:T72 Arg2:T71	
 R55	causes Arg1:T71 Arg2:T73	
 R56	causes Arg1:T71 Arg2:T76	
+R57	target Arg1:T84 Arg2:T85	
+A1	Emphasized T82
+R59	causes Arg1:T82 Arg2:T84	
+R64	causes Arg1:T84 Arg2:T88	
+A6	Emphasized T94
+R65	subject Arg1:T94 Arg2:T86	
+R67	in-place Arg1:T94 Arg2:T93	
+T67	Concept 3190 3200	específico
+R68	in-context Arg1:T99 Arg2:T67	
+T75	Action 3161 3164	hay
+A7	Negated T75
+R69	target Arg1:T75 Arg2:T99	
+T81	Concept 3417 3426	trastorno
+R70	in-context Arg1:T81 Arg2:T1102	
+R71	has-property Arg1:T1103 Arg2:T81	
+T83	Concept 3868 3876	bacteria
+R72	is-a Arg1:T1118 Arg2:T83	
