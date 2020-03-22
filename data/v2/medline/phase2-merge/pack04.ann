@@ -216,13 +216,12 @@ T148	Concept 4859 4865;4866 4868;4869 4877;4878 4885	examen de medicina nuclear
 T150	Concept 4892 4903;4904 4906;4910 4918	gammagrafía de tiroides
 R125	arg Arg1:T147 Arg2:T148
 R126	is-a Arg1:T150 Arg2:T147
-T149	Predicate 4992 4995;4996 4998	Más de
+T149	Predicate 4992 4995	Más
 T151	Concept 4999 5004;5005 5013;5014 5015;5016 5021	cinco millones y medio
 T152	Concept 5025 5040	estadounidenses
 R127	arg Arg1:T149 Arg2:T151
 R128	domain Arg1:T149 Arg2:T152
 T153	Concept 5051 5064;5065 5070	incontinencia fecal
-R129	has-property Arg1:T152 Arg2:T153
 T154	Reference 5152 5156	Esto
 T155	Concept 5173 5183	diferentes
 T156	Concept 5184 5191	tejidos
@@ -611,3 +610,4 @@ R115	in-context Arg1:T135 Arg2:T138
 R116	in-context Arg1:T135 Arg2:T139	
 T90	Concept 4742 4748	cáncer
 R117	target Arg1:T1140 Arg2:T90	
+R118	has-property Arg1:T149 Arg2:T153	
