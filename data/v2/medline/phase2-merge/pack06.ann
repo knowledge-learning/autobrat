@@ -6,9 +6,7 @@ T4	Concept 43 50	severos
 T5	Concept 62 70	duración
 T6	Concept 56 61	larga
 R2	in-context Arg1:T5 Arg2:T6
-R3	in-context Arg1:T3 Arg2:T4
 R4	is-a Arg1:T1 Arg2:T3
-R5	in-context Arg1:T3 Arg2:T5
 T7	Concept 186 194	elevados
 T8	Concept 197 208	disminuidos
 T10	Concept 234 243	trastorno
@@ -21,21 +19,11 @@ R10	in-context Arg1:T12 Arg2:T7
 T14	Predicate 151 158	niveles
 R11	arg Arg1:T14 Arg2:T13
 R12	in-context Arg1:T14 Arg2:T8
-R13	causes Arg1:T10 Arg2:T12
-R14	causes Arg1:T10 Arg2:T14
 A1	Emphasized T7
 A2	Emphasized T8
-T9	Concept 368 374	planes
-T15	Concept 378 392	administración
-T16	Concept 396 403	seguros
-R6	in-context Arg1:T9 Arg2:T15
-R7	in-context Arg1:T15 Arg2:T16
-T17	Concept 407 412	salud
-R15	in-context Arg1:T16 Arg2:T17
-T18	Concept 428 434	seguro
+T9	Concept 368 374;375 377;378 392;393 395;396 403	planes de administración de seguros
+T18	Concept 428 434;435 437;438 443	seguro de salud
 T19	Predicate 420 424	tipo
-T20	Concept 438 443	salud
-R16	in-context Arg1:T18 Arg2:T20
 R17	arg Arg1:T19 Arg2:T18
 R18	is-a Arg1:T9 Arg2:T19
 T21	Concept 526 531	LASIK
@@ -65,7 +53,7 @@ R26	target Arg1:T30 Arg2:T32
 R27	target Arg1:T29 Arg2:T32
 T33	Concept 963 969	angina
 T34	Concept 976 983	síntoma
-T35	Concept 990 1000;1001 1003;1008 1016;1017 1027	enfermedad de arterias coronarias
+T35	Concept 1001 1003;1004 1007;1008 1016;1017 1027;990 1000	de las arterias coronarias enfermedad
 R28	in-context Arg1:T34 Arg2:T35
 R29	is-a Arg1:T33 Arg2:T34
 T36	Concept 1032 1042	enfermedad
@@ -73,13 +61,11 @@ T37	Concept 1043 1051	cardiaca
 T38	Concept 1056 1061	común
 R30	in-context Arg1:T36 Arg2:T37
 R31	is-a Arg1:T35 Arg2:T36
-R32	has-property Arg1:T35 Arg2:T38
-A5	Emphasized T38
 T39	Predicate 1182 1183;1184 1186;1187 1191;1192 1197	1 de cada 5.000
 T40	Concept 1198 1206	personas
 R33	domain Arg1:T39 Arg2:T40
 T41	Concept 1213 1216	EDS
-R34	in-context Arg1:T39 Arg2:T41
+R34	has-property Arg1:T39 Arg2:T41
 T42	Concept 1294 1302;1303 1311	cálculos biliares
 T43	Concept 1384 1395	chikungunya
 T44	Concept 1399 1405	África
@@ -104,15 +90,13 @@ R43	in-place Arg1:T53 Arg2:T49
 R44	in-place Arg1:T53 Arg2:T51
 R45	in-place Arg1:T53 Arg2:T50
 T54	Concept 1629 1637;1638 1640;1641 1647	síndrome de Marfan
-T55	Concept 1670 1678	problema
+T55	Action 1670 1678	problema
 T56	Concept 1686 1689;1690 1692;1693 1695;1696 1705	gen de la fibrilina
-R46	in-context Arg1:T55 Arg2:T56
+R46	target Arg1:T55 Arg2:T56
 R47	causes Arg1:T55 Arg2:T54
 T57	Concept 1791 1800;1801 1803;1804 1810	trastorno de pánico
-T58	Concept 1825 1834	trastorno
-T59	Concept 1838 1846	ansiedad
-R48	in-context Arg1:T58 Arg2:T59
-R49	is-a Arg1:T57 Arg2:T58
+T58	Concept 1825 1834;1835 1837;1838 1846	trastorno de ansiedad
+R49	is-a Arg1:T57 Arg2:T20
 T60	Concept 1912 1921;1922 1930	conmoción cerebral
 T61	Predicate 1937 1941	tipo
 T62	Concept 1945 1951	lesión
@@ -133,9 +117,7 @@ R55	arg Arg1:T69 Arg2:T70
 T71	Predicate 2124 2129	forma
 T72	Concept 2133 2137	pera
 R56	arg Arg1:T71 Arg2:T72
-R57	has-property Arg1:T68 Arg2:T71
 R58	is-a Arg1:T67 Arg2:T68
-R59	in-place Arg1:T67 Arg2:T69
 T73	Concept 2261 2267;2268 2277	número sistólico
 T74	Concept 2313 2318;2319 2329	cifra diastólica
 T75	Action 2281 2287	coloca
@@ -149,34 +131,26 @@ R64	in-context Arg1:T77 Arg2:T74
 R61	in-place Arg1:T75 Arg2:T78
 T80	Predicate 2424 2431	muestra
 T81	Concept 2435 2442;2443 2448	materia fecal
-R63	arg Arg1:T80 Arg2:T81
+R63	domain Arg1:T80 Arg2:T81
 T82	Action 2455 2469	diagnosticarla
 A6	Uncertain T82
 R65	subject Arg1:T82 Arg2:T80
 T83	Concept 2528 2535	centros
 T84	Action 2545 2554	aparentar
 T85	Concept 2566 2571	hogar
-A7	Emphasized T85
 R66	subject Arg1:T84 Arg2:T83
 R67	target Arg1:T84 Arg2:T85
 T86	Action 2628 2633	caída
 T87	Concept 2634 2640	brusca
 R68	in-context Arg1:T86 Arg2:T87
 T88	Concept 2647 2654;2655 2663	presión arterial
-R69	subject Arg1:T86 Arg2:T88
 R70	target Arg1:T86 Arg2:T88
-T89	Concept 2711 2718	mareado
+T89	Action 2711 2718	mareado
 T90	Action 2672 2684	deshidratado
 R71	causes Arg1:T90 Arg2:T89
 R72	causes Arg1:T86 Arg2:T89
-T91	Concept 2819 2825	cáncer
-T92	Concept 2832 2839;2840 2845	cavidad nasal
-R73	in-place Arg1:T91 Arg2:T92
-T93	Concept 2855 2860;2861 2872	senos paranasales
+T91	Concept 2819 2825;2826 2828;2829 2831;2832 2839;2840 2845;2846 2847;2848 2850;2851 2854;2855 2860;2861 2872	cáncer de la cavidad nasal y de los senos paranasales
 T94	Concept 2879 2884	común
-T95	Concept 2819 2825	cáncer
-R74	in-place Arg1:T95 Arg2:T93
-R75	has-property Arg1:T95 Arg2:T94
 A8	Negated T94
 R76	has-property Arg1:T91 Arg2:T94
 T96	Action 2976 2984	asociada
@@ -184,7 +158,7 @@ T98	Concept 2992 3001;3002 3004;3005 3011;3012 3025	trastorno de estrés postrau
 R77	target Arg1:T96 Arg2:T98
 T97	Concept 3111 3118;3119 3128	columna vertebral
 T99	Concept 3133 3137	feto
-R78	part-of Arg1:T97 Arg2:T99
+R78	in-place Arg1:T97 Arg2:T99
 T100	Action 3144 3150	cierra
 A9	Negated T100
 T101	Concept 3151 3164	completamente
@@ -197,7 +171,7 @@ R81	in-time Arg1:T100 Arg2:T102
 R82	subject Arg1:T100 Arg2:T97
 T105	Action 3098 3104	Ocurre
 R83	entails Arg1:T100 Arg2:T105
-R84	in-context Arg1:T103 Arg2:T104
+R84	in-time Arg1:T103 Arg2:T104
 T106	Concept 3306 3316	prematuros
 T107	Concept 3359 3365;3366 3368;3369 3377;3378 3388	unidad de cuidados intensivos
 T108	Concept 3389 3397	neonatal
@@ -214,8 +188,6 @@ T113	Action 3534 3540	vuelve
 T114	Action 3522 3531	estancada
 T115	Concept 3567 3576;3577 3585	infección urinaria
 R90	subject Arg1:T113 Arg2:T112
-R91	target Arg1:T113 Arg2:T112
-R92	subject Arg1:T114 Arg2:T112
 R93	target Arg1:T114 Arg2:T112
 R94	causes Arg1:T113 Arg2:T115
 R95	causes Arg1:T114 Arg2:T115
@@ -224,7 +196,7 @@ T117	Concept 3706 3712	ataque
 R96	is-a Arg1:T116 Arg2:T117
 T118	Action 3684 3688	sabe
 T119	Predicate 3692 3697	causa
-R97	in-context Arg1:T119 Arg2:T116
+R97	arg Arg1:T119 Arg2:T116
 A10	Negated T118
 R98	target Arg1:T118 Arg2:T119
 T120	Concept 3768 3775	mujeres
@@ -238,7 +210,7 @@ A11	Emphasized T120
 T125	Predicate 3840 3844	seis
 T126	Concept 3845 3850	meses
 T127	Concept 3854 3862	embarazo
-R102	in-context Arg1:T126 Arg2:T127
+R102	in-time Arg1:T126 Arg2:T127
 R103	domain Arg1:T125 Arg2:T126
 T128	Concept 3832 3839	últimos
 R104	in-context Arg1:T125 Arg2:T128
@@ -259,7 +231,7 @@ T135	Predicate 3807 3810	más
 R100	target Arg1:T121 Arg2:T135
 R112	in-time Arg1:T121 Arg2:T125
 R113	arg Arg1:T135 Arg2:T123
-R114	arg Arg1:T135 Arg2:T131
+R114	domain Arg1:T135 Arg2:T131
 T136	Concept 4092 4097	atrás
 R115	in-context Arg1:T134 Arg2:T136
 T137	Action 4130 4140	resbalarse
@@ -267,8 +239,7 @@ T138	Concept 4147 4152	hielo
 R116	in-place Arg1:T137 Arg2:T138
 R117	is-a Arg1:T137 Arg2:T134
 R118	is-a Arg1:T138 Arg2:T132
-R119	causes Arg1:T134 Arg2:T76
-A12	Emphasized T134
+R119	causes Arg1:T134 Arg2:T92
 T139	Concept 4325 4331	médico
 T140	Action 4349 4357	análisis
 T141	Concept 4361 4367	sangre
@@ -277,7 +248,6 @@ T143	Concept 4383 4390	aliento
 T144	Action 4396 4404	análisis
 T145	Concept 4408 4413	heces
 T146	Action 4419 4427	detectar
-T147	Concept 4435 4444	problemas
 T148	Concept 4459 4471	intolerancia
 T149	Concept 4477 4484	lactosa
 R120	in-context Arg1:T148 Arg2:T149
@@ -290,7 +260,6 @@ R123	subject Arg1:T142 Arg2:T139
 R124	target Arg1:T142 Arg2:T143
 R125	subject Arg1:T144 Arg2:T139
 R126	target Arg1:T144 Arg2:T145
-R127	causes Arg1:T148 Arg2:T147
 R128	target Arg1:T146 Arg2:T148
 R129	subject Arg1:T146 Arg2:T140
 T150	Action 4419 4427	detectar
@@ -300,12 +269,12 @@ R131	subject Arg1:T150 Arg2:T144
 R132	target Arg1:T151 Arg2:T148
 R133	target Arg1:T150 Arg2:T148
 T152	Concept 4653 4660;4661 4663;4664 4672	cuidado de hospicio
-T153	Concept 4695 4700	final
+T153	Predicate 4695 4700	final
 T154	Concept 4707 4711	vida
-R134	in-context Arg1:T153 Arg2:T154
+R134	domain Arg1:T153 Arg2:T154
 T155	Action 4679 4686	cuidado
 *	same-as T152 T155
-R135	in-context Arg1:T155 Arg2:T153
+R135	in-time Arg1:T155 Arg2:T153
 T156	Concept 4779 4787	diabetes
 T157	Predicate 4812 4818	riesgo
 T158	Concept 4822 4832	enfermedad
@@ -313,13 +282,12 @@ T159	Concept 4833 4841	cardíaca
 R136	in-context Arg1:T158 Arg2:T159
 R137	arg Arg1:T157 Arg2:T158
 R138	causes Arg1:T156 Arg2:T157
-T160	Concept 4914 4925	infecciones
+T160	Action 4914 4925	infecciones
 T161	Concept 4926 4937	bacterianas
-R139	in-context Arg1:T160 Arg2:T161
+R139	subject Arg1:T160 Arg2:T161
 T162	Concept 4946 4956;4957 4971	faringitis estreptocócica
 T163	Concept 4994 5005	amigdalitis
-R140	causes Arg1:T162 Arg2:T163
-R141	is-a Arg1:T162 Arg2:T161
+R141	is-a Arg1:T162 Arg2:T160
 T1001	Concept 76 86	trastornos
 T1002	Concept 90 100	desarrollo
 R1001	in-context Arg1:T1001 Arg2:T1002
@@ -463,7 +431,6 @@ T1077	Predicate 2389 2395	encima
 T1078	Predicate 2377 2382	antes
 R1062	arg Arg1:T1078 Arg2:T1074
 R1064	arg Arg1:T1077 Arg2:T1074
-R1061	in-context Arg1:T1075 Arg2:T1078
 T1080	Concept 2475 2482	muestra
 T1081	Concept 2486 2493;2494 2499	materia fecal
 R1063	in-context Arg1:T1080 Arg2:T1081
@@ -642,6 +609,40 @@ R1092	in-context Arg1:T1076 Arg2:T1166
 T1167	Concept 4283 4288	causa
 R1143	domain Arg1:T1166 Arg2:T1167
 R1144	is-a Arg1:T1021 Arg2:T1023
-R1145	in-context Arg1:T1075 Arg2:T1077
+R1145	in-place Arg1:T1075 Arg2:T1077
 T1079	Action 3645 3653	contraer
 R1146	target Arg1:T1079 Arg2:T1115
+R3	has-property Arg1:T1 Arg2:T4	
+R5	has-property Arg1:T1 Arg2:T5	
+R13	entails Arg1:T12 Arg2:T10	
+R14	entails Arg1:T14 Arg2:T10	
+T15	Predicate 1052 1055	más
+R6	domain Arg1:T15 Arg2:T36	
+R7	arg Arg1:T15 Arg2:T38	
+*	same-as T35 T15
+T16	Action 1282 1289	causada
+R15	subject Arg1:T16 Arg2:T42	
+T17	Concept 1270 1271;1272 1278	A menudo
+R16	in-time Arg1:T16 Arg2:T17	
+T20	Predicate 1817 1821	tipo
+R32	domain Arg1:T20 Arg2:T58	
+R48	has-property Arg1:T67 Arg2:T71	
+R57	in-place Arg1:T68 Arg2:T69	
+T59	Action 2370 2376	coloca
+R59	target Arg1:T1075 Arg2:T1073	
+R142	in-place Arg1:T59 Arg2:T1078	
+A5	Emphasized T84
+A7	Uncertain T96
+R69	subject Arg1:T129 Arg2:T120	
+T92	Reference 4179 4184	estos
+R73	is-a Arg1:T92 Arg2:T76	
+T93	Predicate 4166 4169	más
+T95	Predicate 4160 4165	causa
+R74	domain Arg1:T93 Arg2:T95	
+T164	Concept 4170 4175	común
+R75	arg Arg1:T93 Arg2:T164	
+R91	arg Arg1:T95 Arg2:T92	
+*	same-as T134 T93
+T147	Concept 4435 4444	problemas
+R92	causes Arg1:T148 Arg2:T147	
+R127	causes Arg1:T162 Arg2:T163	

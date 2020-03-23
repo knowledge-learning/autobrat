@@ -392,10 +392,8 @@ T1019	Concept 530 536	cáncer
 T1020	Predicate 537 540	más
 T1021	Concept 541 546	común
 R1016	arg Arg1:T1020 Arg2:T1021
-R1017	in-context Arg1:T1019 Arg2:T1020
 T1022	Concept 554 559	niños
 T1023	Concept 566 574	leucemia
-R1019	is-a Arg1:T1023 Arg2:T1019
 T1024	Concept 635 643	animales
 T1025	Concept 647 653	granja
 R1020	in-context Arg1:T1024 Arg2:T1025
@@ -832,3 +830,6 @@ R150	in-time Arg1:T1218 Arg2:T1216
 R151	in-time Arg1:T1218 Arg2:T1214	
 R190	causes Arg1:T1218 Arg2:T1221	
 R191	causes Arg1:T1218 Arg2:T1222	
+R192	domain Arg1:T1020 Arg2:T1019	
+*	same-as T1023 T1020
+R193	is-a Arg1:T1023 Arg2:T1019	
