@@ -1,16 +1,16 @@
 T1	Concept 38 45;46 54	terapia genética
 T2	Concept 63 75	experimental
-T3	Concept 158 163	madre
+T3	Concept 158 163;164 173	madre subrogada
 T4	Concept 203 210;211 213;214 222	vientre de alquiler
 *	same-as T3 T4
 T5	Concept 231 236	mujer
 T6	Action 247 257	embarazada
 T7	Concept 277 283	hombre
 T8	Concept 290 296	pareja
-R2	part-of Arg1:T7 Arg2:T8
+R2	in-context Arg1:T7 Arg2:T8
 T9	Concept 265 272	esperma
-R5	part-of Arg1:T9 Arg2:T7
-T10	Concept 164 173;174 185	subrogada tradicional
+R5	in-place Arg1:T9 Arg2:T7
+T10	Concept 174 185	tradicional
 R6	in-context Arg1:T3 Arg2:T10
 T11	Concept 445 449	daño
 T12	Concept 450 455	renal
@@ -19,7 +19,7 @@ T13	Action 456 466	ocasionado
 T14	Concept 474 482	diabetes
 R10	subject Arg1:T13 Arg2:T14
 T15	Concept 495 505;506 515	nefropatía diabética
-T16	Concept 595 605;609 628	enfermedad Charcot-Marie-Tooth
+T16	Concept 595 605;606 608;609 628	enfermedad de Charcot-Marie-Tooth
 T17	Concept 630 633	CMT
 *	same-as T16 T17
 T18	Predicate 667 672	grupo
@@ -32,24 +32,20 @@ T22	Action 856 864	dependen
 T23	Predicate 869 873	área
 T24	Concept 878 885	cerebro
 T25	Concept 886 892	dañada
-R13	arg Arg1:T23 Arg2:T24
+R13	domain Arg1:T23 Arg2:T24
 R15	subject Arg1:T22 Arg2:T20
-R18	entails Arg1:T21 Arg2:T20
 T26	Concept 969 973	test
 T27	Concept 1002 1010;1011 1021;1022 1032	antígeno prostático específico
 T28	Action 980 986	examen
 T29	Concept 990 996	sangre
-R19	target Arg1:T28 Arg2:T29
-R20	arg Arg1:T28 Arg2:T27
+R19	in-place Arg1:T28 Arg2:T29
+R20	target Arg1:T28 Arg2:T27
 R21	is-a Arg1:T28 Arg2:T26
 T30	Concept 1117 1123;1124 1126;1127 1133	factor de riesgo
 T31	Concept 1140 1150;1151 1159;1160 1170	enfermedad arterial periférica
-T32	Concept 1107 1116	principal
+T32	Predicate 1107 1116	principal
 T33	Action 1177 1182	fumar
-R22	has-property Arg1:T30 Arg2:T32
-R23	in-context Arg1:T30 Arg2:T31
-R24	is-a Arg1:T33 Arg2:T30
-T34	Concept 1268 1275;1286 1289	cuadros tos
+T34	Concept 1268 1275;1283 1285;1286 1289	cuadros de tos
 T38	Concept 1337 1344	resfrío
 T39	Concept 1351 1356	gripe
 R28	causes Arg1:T38 Arg2:T34
@@ -62,15 +58,11 @@ T41	Concept 1496 1504	personas
 T42	Predicate 1508 1519	ascendencia
 T43	Concept 1520 1528	italiana
 T44	Concept 1530 1536	griega
-T45	Concept 1538 1541;1542 1547;1548 1555	del Medio Oriente
+T45	Concept 1542 1547;1548 1555	Medio Oriente
 T46	Concept 1575 1583	africana
-T47	Concept 1557 1560;1561 1564;1565 1567;1568 1572	del sur de Asia
+T47	Predicate 1561 1564	sur
 R32	domain Arg1:T42 Arg2:T41
 R33	arg Arg1:T42 Arg2:T43
-R34	arg Arg1:T42 Arg2:T44
-R35	arg Arg1:T42 Arg2:T45
-R36	arg Arg1:T42 Arg2:T47
-R37	arg Arg1:T42 Arg2:T46
 T48	Concept 1746 1755;1756 1765;1766 1770	deterioro cognitivo leve
 T49	Concept 1721 1729	problema
 R38	is-a Arg1:T48 Arg2:T49
@@ -99,16 +91,14 @@ R47	arg Arg1:T62 Arg2:T60
 R48	domain Arg1:T62 Arg2:T61
 R49	subject Arg1:T56 Arg2:T58
 R50	target Arg1:T56 Arg2:T61
-T63	Predicate 2183 2187;2188 2197	bajo contenido
 T64	Concept 2201 2210	alquitrán
 T65	Concept 2213 2222;2223 2225;2226 2232	productos de tabaco
 T66	Concept 2237 2245	aditivos
 A2	Negated T66
-R51	has-property Arg1:T65 Arg2:T66
+R51	in-context Arg1:T65 Arg2:T66
 T67	Concept 2253 2260	seguros
 A3	Negated T67
 R52	has-property Arg1:T65 Arg2:T67
-R53	arg Arg1:T63 Arg2:T64
 T68	Action 2364 2371	Existen
 T69	Concept 2383 2388	tipos
 T70	Predicate 2372 2375;2376 2378	más de
@@ -137,10 +127,8 @@ R3	subject Arg1:T6 Arg2:T9
 R7	is-a Arg1:T3 Arg2:T6
 T35	Concept 1276 1282	agudos
 R25	in-context Arg1:T34 Arg2:T35
-A4	Emphasized T38
-A5	Emphasized T39
 R16	target Arg1:T22 Arg2:T23
-R14	in-context Arg1:T23 Arg2:T25
+R14	arg Arg1:T23 Arg2:T25
 R17	in-context Arg1:T36 Arg2:T42
 T37	Action 2416 2422	Varían
 R26	in-context Arg1:T37 Arg2:T80
@@ -154,39 +142,23 @@ R60	target Arg1:T82 Arg2:T83
 T85	Predicate 2758 2765	Algunas
 T86	Concept 2766 2774	personas
 R61	domain Arg1:T85 Arg2:T86
-T87	Concept 2790 2796;2797 2799;2800 2807	ataque de vértigo
+T87	Action 2790 2796;2797 2799;2800 2807	ataque de vértigo
 T88	Predicate 2811 2814;2815 2817;2818 2824	vez en cuando
-R62	in-time Arg1:T87 Arg2:T88
-T89	Predicate 2787 2789	un
-R63	domain Arg1:T89 Arg2:T87
-T90	Concept 2766 2774	personas
-T91	Concept 2790 2796;2797 2799;2800 2807	ataque de vértigo
 T92	Predicate 2882 2888	varios
 T93	Predicate 2889 2893	días
 R65	domain Arg1:T92 Arg2:T93
-R66	has-property Arg1:T64 Arg2:T67
 T94	Concept 2858 2872	frecuentemente
-A7	Emphasized T94
-R67	in-context Arg1:T91 Arg2:T94
-R68	in-context Arg1:T90 Arg2:T91
-R64	in-time Arg1:T91 Arg2:T92
-R69	in-context Arg1:T85 Arg2:T87
 T95	Concept 697 706	genéticos
 T96	Concept 687 696	nerviosos
 R70	in-context Arg1:T19 Arg2:T96
 R71	in-context Arg1:T19 Arg2:T95
-T97	Predicate 3034 3040	muchas
 T98	Concept 3041 3049	personas
-R72	domain Arg1:T97 Arg2:T98
 T99	Action 3054 3064	avergüenza
-T100	Action 3065 3071;3079 3081	hablar de
+T100	Action 3065 3071	hablar
 T101	Concept 3082 3091	problemas
 T102	Concept 3093 3101	rectales
 R73	in-context Arg1:T101 Arg2:T102
-R74	subject Arg1:T99 Arg2:T97
-R75	target Arg1:T99 Arg2:T97
-R76	in-context Arg1:T99 Arg2:T100
-R77	subject Arg1:T100 Arg2:T97
+R75	target Arg1:T99 Arg2:T98
 R78	target Arg1:T100 Arg2:T101
 T104	Concept 3177 3185;3186 3188;3189 3195;3196 3202;3203 3211	síndrome de muerte súbita infantil
 T103	Action 3219 3225	muerte
@@ -201,8 +173,7 @@ R80	arg Arg1:T108 Arg2:T110
 R81	domain Arg1:T108 Arg2:T107
 R82	in-context Arg1:T103 Arg2:T105
 R83	in-context Arg1:T103 Arg2:T106
-R84	subject Arg1:T103 Arg2:T107
-R85	target Arg1:T103 Arg2:T107
+R85	target Arg1:T103 Arg2:T108
 *	same-as T104 T103
 T109	Concept 3418 3426	personas
 T112	Concept 3431 3433;3434 3443	Rh positivas
@@ -223,18 +194,10 @@ R89	in-context Arg1:T116 Arg2:T118
 R90	has-property Arg1:T116 Arg2:T119
 R91	is-a Arg1:T114 Arg2:T116
 T120	Concept 3783 3789	cuerpo
-T121	Action 3766 3772	Ocurre
-T122	Concept 3839 3848	infección
+T122	Action 3839 3848	infección
 T123	Concept 3849 3859	bacteriana
-R92	in-context Arg1:T122 Arg2:T123
+R92	subject Arg1:T122 Arg2:T123
 T126	Concept 3800 3810	abrumadora
-T124	Action 3811 3820;3833 3834	respuesta a
-R93	subject Arg1:T124 Arg2:T120
-T125	Concept 3821 3832	inmunitaria
-R94	in-context Arg1:T124 Arg2:T126
-R95	in-context Arg1:T124 Arg2:T125
-R96	target Arg1:T124 Arg2:T122
-R97	causes Arg1:T124 Arg2:T121
 T127	Concept 3969 3977;3978 3980;3981 3986;3987 3995;3996 4004	síndrome de dolor regional complejo
 T128	Predicate 3959 3964	causa
 R98	arg Arg1:T128 Arg2:T127
@@ -246,11 +209,10 @@ T131	Concept 4116 4126;4127 4139;4140 4147	enfermedad inflamatoria pélvica
 R100	causes Arg1:T130 Arg2:T131
 T132	Concept 4175 4183	embarazo
 T133	Concept 4186 4198	infertilidad
-T134	Concept 4159 4168	problemas
-R101	in-context Arg1:T134 Arg2:T132
-R102	in-context Arg1:T134 Arg2:T133
+T134	Action 4159 4168	problemas
+R101	target Arg1:T134 Arg2:T132
 R103	causes Arg1:T131 Arg2:T134
-T135	Predicate 4318 4321;4325 4329;4330 4332	Uno cada 10
+T135	Predicate 4318 4321;4322 4324;4325 4329;4330 4332	Uno de cada 10
 T136	Concept 4333 4339;4340 4347	recién nacidos
 T137	Concept 4355 4362;4363 4369	Estados Unidos
 T138	Concept 4373 4382	prematuro
@@ -273,14 +235,13 @@ R111	in-context Arg1:T144 Arg2:T146
 R112	is-a Arg1:T143 Arg2:T144
 T148	Action 4736 4742	examen
 T149	Concept 4746 4752	sangre
-R113	in-context Arg1:T148 Arg2:T149
+R113	target Arg1:T148 Arg2:T149
 T150	Action 4795 4803	análisis
 T151	Concept 4807 4813	sangre
-R114	in-context Arg1:T150 Arg2:T151
+R114	target Arg1:T150 Arg2:T151
 T152	Action 4765 4772	pruebas
 T153	Concept 4776 4783;4784 4792	función hepática
-R115	in-context Arg1:T152 Arg2:T153
-A11	Emphasized T148
+R115	target Arg1:T152 Arg2:T153
 R116	part-of Arg1:T150 Arg2:T148
 R117	part-of Arg1:T152 Arg2:T148
 T147	Concept 4958 4968;4969 4975	disfunción sexual
@@ -321,13 +282,8 @@ R135	causes Arg1:T162 Arg2:T167
 R136	causes Arg1:T156 Arg2:T167
 T170	Concept 5317 5322	signo
 T171	Concept 5329 5335;5336 5345;5346 5357	ataque isquémico transitorio
-T172	Concept 5363 5367	mini
-T173	Concept 5368 5377	accidente
-T174	Concept 5378 5393	cerebrovascular
-R137	in-context Arg1:T173 Arg2:T172
-R138	in-context Arg1:T173 Arg2:T174
+T173	Concept 5363 5367;5368 5377;5378 5393	mini accidente cerebrovascular
 R139	is-a Arg1:T171 Arg2:T170
-R140	is-a Arg1:T171 Arg2:T173
 T175	Concept 5492 5501;5502 5511	deterioro cognitivo
 T176	Concept 5512 5516	leve
 R141	in-context Arg1:T175 Arg2:T176
@@ -351,7 +307,7 @@ T187	Predicate 5635 5639	cada
 R147	arg Arg1:T187 Arg2:T186
 R148	in-context Arg1:T182 Arg2:T183
 R149	target Arg1:T181 Arg2:T182
-R150	causes Arg1:T175 Arg2:T181
+R150	entails Arg1:T175 Arg2:T181
 T1001	Concept 115 122;123 131	terapia genética
 T1002	Concept 140 152	experimental
 T1003	Concept 302 307;308 317;318 329	madre subrogada tradicional
@@ -420,15 +376,10 @@ T1048	Concept 1878 1887;1888 1897;1898 1902	deterioro cognitivo leve
 T1049	Concept 1853 1861	problema
 R1038	is-a Arg1:T1048 Arg2:T1049
 T1051	Concept 1955 1963	personas
-T1052	Concept 1976 1980	edad
-T1053	Predicate 1970 1975	misma
-R1039	domain Arg1:T1053 Arg2:T1051
-R1040	arg Arg1:T1053 Arg2:T1052
 T1054	Predicate 1910 1913	más
 T1055	Concept 1914 1923;1924 1926;1927 1934	problemas de memoria
 T1057	Concept 1943 1951	normales
 R1043	causes Arg1:T1048 Arg2:T1054
-R1045	in-context Arg1:T1054 Arg2:T1051
 T1058	Concept 2094 2102;2085 2093	genético problema
 T1056	Action 2107 2113	afecta
 T1059	Predicate 2136 2139;2140 2142;2143 2149	una en 15,000
@@ -451,22 +402,19 @@ R1052	has-property Arg1:T1065 Arg2:T1067
 R1053	arg Arg1:T1063 Arg2:T1064
 T1068	Action 2390 2397	Existen
 T1069	Concept 2409 2414	tipos
-T1070	Predicate 2398 2401;2402 2404	más de
-T1071	Predicate 2405 2408	200
+T1070	Predicate 2398 2401	más
+T1071	Concept 2405 2408	200
 R1054	arg Arg1:T1070 Arg2:T1071
 T1072	Action 2542 2547	decir
 T1073	Concept 2552 2560	palabras
-T1074	Predicate 2571 2581	incorrecta
+T1074	Concept 2571 2581	incorrecta
 T1075	Concept 2591 2602	incapacidad
 T1076	Action 2614 2620	hablar
 T1077	Action 2623 2631	entender
 T1078	Concept 2635 2640	habla
 R1055	target Arg1:T1077 Arg2:T1078
 T1079	Concept 2603 2608	total
-R1056	has-property Arg1:T1075 Arg2:T1079
-T1080	Predicate 2536 2541	desde
-R1057	arg Arg1:T1080 Arg2:T1072
-R1058	arg Arg1:T1080 Arg2:T1075
+R1056	in-context Arg1:T1075 Arg2:T1079
 R1009	target Arg1:T1013 Arg2:T1011
 *	same-as T1013 T1015
 R1004	subject Arg1:T1006 Arg2:T1005
@@ -479,8 +427,6 @@ A1005	Emphasized T1039
 R1016	arg Arg1:T1022 Arg2:T1023
 R1014	in-context Arg1:T1023 Arg2:T1025
 R1017	in-context Arg1:T1036 Arg2:T1042
-T1037	Action 2529 2535	Varían
-R1026	in-context Arg1:T1037 Arg2:T1080
 T1082	Action 2729 2739	revertirse
 A1006	Uncertain T1082
 T1083	Action 2703 2711	ligadura
@@ -555,7 +501,6 @@ T1119	Concept 3759 3764	común
 A1009	Diminished T1119
 R1088	in-context Arg1:T1116 Arg2:T1117
 R1089	in-context Arg1:T1116 Arg2:T1118
-R1090	has-property Arg1:T1116 Arg2:T1119
 R1091	is-a Arg1:T1114 Arg2:T1116
 T1120	Concept 3878 3884	cuerpo
 T1121	Action 3861 3867	Ocurre
@@ -621,29 +566,24 @@ R1117	part-of Arg1:T1152 Arg2:T1148
 T1147	Concept 5153 5163;5164 5170	disfunción sexual
 T1154	Concept 5174 5179	común
 T1156	Action 5202 5207	duran
-T1157	Concept 5287 5298	profesional
-T1158	Concept 5305 5310	salud
-R1118	in-context Arg1:T1157 Arg2:T1158
+T1157	Concept 5287 5298;5299 5301;5302 5304;5305 5310	profesional de la salud
 T1159	Concept 5220 5225	meses
 T1160	Predicate 5215 5219	unos
 R1119	domain Arg1:T1160 Arg2:T1159
 T1161	Predicate 5208 5211	más
 R1120	arg Arg1:T1161 Arg2:T1160
 R1121	in-time Arg1:T1156 Arg2:T1161
-T1162	Action 5228 5235	generan
-T1163	Concept 5236 5244	angustia
-R1122	target Arg1:T1162 Arg2:T1163
+T1162	Action 5236 5244	angustia
 T1164	Concept 5248 5253	usted
-R1123	in-context Arg1:T1162 Arg2:T1164
+R1123	target Arg1:T1162 Arg2:T1164
 T1166	Concept 5262 5268	pareja
 T1167	Action 5275 5281	acudir
 R1126	target Arg1:T1167 Arg2:T1157
 T1168	Concept 5123 5132	problemas
-R1128	in-context Arg1:T1168 Arg2:T1147
 T1169	Predicate 5133 5135;5136 5139;5140 5142;5143 5149	de vez en cuando
-R1131	subject Arg1:T1156 Arg2:T1168
-R1132	subject Arg1:T1162 Arg2:T1168
-R1136	causes Arg1:T1156 Arg2:T1167
+R1131	subject Arg1:T1156 Arg2:T1147
+R1132	subject Arg1:T1162 Arg2:T1147
+R1136	entails Arg1:T1156 Arg2:T1167
 T1170	Concept 5401 5406	signo
 T1171	Concept 5413 5419;5420 5429;5430 5441	ataque isquémico transitorio
 T1172	Concept 5447 5451	mini
@@ -674,13 +614,8 @@ R1147	arg Arg1:T1187 Arg2:T1186
 R1148	in-context Arg1:T1182 Arg2:T1183
 R1149	target Arg1:T1181 Arg2:T1182
 R1150	causes Arg1:T1175 Arg2:T1181
-R1001	has-property Arg1:T1001 Arg2:T1081
-T1081	Predicate 133 136	aún
-R1059	arg Arg1:T1081 Arg2:T1002
-T1184	Predicate 92 96	gran
+R1001	has-property Arg1:T1001 Arg2:T1002
 T1188	Concept 97 106	esperanza
-R1151	arg Arg1:T1184 Arg2:T1188
-R1152	causes Arg1:T1001 Arg2:T1184
 R1006	domain Arg1:T1022 Arg2:T1020
 R1015	in-context Arg1:T1028 Arg2:T1027
 T1010	Predicate 1409 1423	frecuentemente
@@ -688,17 +623,75 @@ R1019	domain Arg1:T1010 Arg2:T1038
 R1020	domain Arg1:T1010 Arg2:T1039
 R1153	arg Arg1:T1010 Arg2:T1034
 R1154	arg Arg1:T1040 Arg2:T1041
-R1041	domain Arg1:T1054 Arg2:T1055
-R1042	arg Arg1:T1054 Arg2:T1057
-R1044	target Arg1:T1068 Arg2:T1070
+R1044	subject Arg1:T1068 Arg2:T1070
 R1048	domain Arg1:T1059 Arg2:T1061
 R1155	domain Arg1:T1060 Arg2:T1061
 R1145	in-time Arg1:T1181 Arg2:T1187
-R1124	in-context Arg1:T1162 Arg2:T1166
-R1125	has-property Arg1:T1168 Arg2:T1154
-R1127	in-time Arg1:T1168 Arg2:T1169
-T1029	Predicate 2749 2756	siempre
+R1124	target Arg1:T1162 Arg2:T1166
+T1029	Concept 2749 2756	siempre
 A1001	Negated T1029
 R1031	in-time Arg1:T1082 Arg2:T1029
 R1085	target Arg1:T1072 Arg2:T1073
 R1129	in-context Arg1:T1072 Arg2:T1074
+A14	Emphasized T1188
+R151	entails Arg1:T1001 Arg2:T1188	
+R152	in-context Arg1:T20 Arg2:T21	
+R18	domain Arg1:T32 Arg2:T30	
+*	same-as T33 T32
+R22	arg Arg1:T32 Arg2:T31	
+T184	Concept 1568 1572	Asia
+R23	domain Arg1:T47 Arg2:T184	
+T188	Predicate 1508 1519	ascendencia
+T189	Predicate 1508 1519	ascendencia
+T190	Predicate 1508 1519	ascendencia
+R24	domain Arg1:T190 Arg2:T41	
+R34	domain Arg1:T189 Arg2:T41	
+R35	domain Arg1:T188 Arg2:T41	
+R36	arg Arg1:T190 Arg2:T44	
+R37	arg Arg1:T189 Arg2:T45	
+R153	arg Arg1:T188 Arg2:T47	
+T191	Predicate 1508 1519	ascendencia
+R154	domain Arg1:T191 Arg2:T41	
+R155	arg Arg1:T191 Arg2:T46	
+R156	in-context Arg1:T36 Arg2:T191	
+R157	in-context Arg1:T36 Arg2:T188	
+R158	in-context Arg1:T36 Arg2:T189	
+R159	in-context Arg1:T36 Arg2:T190	
+R160	in-place Arg1:T1055 Arg2:T1051	
+R161	in-context Arg1:T1055 Arg2:T1057	
+T192	Concept 1914 1923;1924 1926;1927 1934	problemas de memoria
+R162	in-place Arg1:T192 Arg2:T1051	
+R163	domain Arg1:T1054 Arg2:T192	
+R164	arg Arg1:T1054 Arg2:T1055	
+T193	Reference 2176 2179	Los
+R165	in-context Arg1:T193 Arg2:T64	
+R66	has-property Arg1:T193 Arg2:T67	
+A4	Diminished T64
+R53	domain Arg1:T1070 Arg2:T1069	
+R166	in-context Arg1:T1076 Arg2:T1075	
+R167	in-context Arg1:T1077 Arg2:T1075	
+R168	subject Arg1:T87 Arg2:T85	
+R62	in-time Arg1:T87 Arg2:T88	
+T63	Predicate 2827 2832	otras
+R63	domain Arg1:T63 Arg2:T86	
+T89	Action 2790 2796;2797 2799;2800 2807	ataque de vértigo
+R64	subject Arg1:T89 Arg2:T63	
+R67	in-context Arg1:T89 Arg2:T94	
+R68	in-time Arg1:T89 Arg2:T92	
+A5	Emphasized T98
+R72	subject Arg1:T99 Arg2:T100	
+R69	has-property Arg1:T1114 Arg2:T1119	
+T90	Action 3811 3820;3821 3832	respuesta inmunitaria
+R74	subject Arg1:T90 Arg2:T120	
+R76	in-context Arg1:T90 Arg2:T126	
+R77	target Arg1:T90 Arg2:T122	
+T91	Action 3766 3772	Ocurre
+R84	in-time Arg1:T91 Arg2:T90	
+R93	causes Arg1:T131 Arg2:T133	
+R94	is-a Arg1:T1147 Arg2:T1168	
+T97	Concept 5153 5163;5164 5170	disfunción sexual
+R95	in-time Arg1:T97 Arg2:T1169	
+R96	has-property Arg1:T97 Arg2:T1154	
+R97	entails Arg1:T1162 Arg2:T1167	
+*	same-as T171 T173
+R102	in-time Arg1:T181 Arg2:T187	
