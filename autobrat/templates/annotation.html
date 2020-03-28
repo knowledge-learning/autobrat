@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto BRAT</title>
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app" class="p-4 w-full h-screen">
+        <a @click="navigate('previous')" class="py-2 px-4 bg-gray-300 hover:bg-gray-200 text-gray-900 font-bold rounded" href="#">Previous pack</a>
+        <a @click="navigate('next')" class="py-2 px-4 bg-blue-500 hover:bg-blue-400 text-white font-bold rounded" href="#">Next pack</a>
+        <iframe id="frame" class="mt-4 pointer-events-auto" style="width: 71%; height: 600px;" :src="currentUrl" frameborder="0"></iframe>
+    </div>
+</body>
+
+<style>
+    #frame {
+        -ms-zoom: 1.4;
+        -moz-transform: scale(1.4);
+        -moz-transform-origin: 0 0;
+        -o-transform: scale(1.4);
+        -o-transform-origin: 0 0;
+        -webkit-transform: scale(1.4);
+        -webkit-transform-origin: 0 0;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script>
+var App = new Vue({
+    el: "#app",
+    data: {
+        currentPack: "readme"
+    },
+    computed: {
+        currentUrl() {
+            return  "http://localhost:8080/#/SAT+R/autobrat/cord19/" + this.currentPack
+        }
+    },
+    methods: {
+        navigate(direction) {
+            fetch("navigate?current_pack=" + this.currentPack + "&direction=" + direction, {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                method: 'post'
+            })
+            .then(r => r.json())
+            .then(r => {
+                if (r.next_pack) {
+                    this.currentPack = r.next_pack;
+                }
+                else {
+                    console.error(r);
+                }
+            })
+            .catch(error => {
+                console.error(error);
+            });
+        }
+    }
+})
+</script>
+</html>
