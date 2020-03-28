@@ -61,3 +61,13 @@ Often an statement is only true if some conditions apply. For these cases, we ca
 ![](img9.png)
 
 The sentence is not simply saying that COVID-19 is dangerous per-se, but rather that it is dangerous specifically in the context of patients with a compromised inmune system. We annotate the concept of patients with a compromised inmune system as those patients that have something (`has-part`) called "immune system" which has the property called "compromised". Then we say that COVID-19, when _conditioned_ to the existence of this concept of patients-with-compromised-immune-system, then it has the property of being "dangerous".
+
+We use `in-time` when that condition is specifically a time frame (e.g., "... during pregnancy, this disease ...") and `in-place` when conditioned specifically to a location (e.g., "... the disease behavior in China was estimated ...").
+
+## Attributes
+
+Four attributes can be attached to any concept or action: **emphasized**, **diminished**, **negated**, and **uncertain**. We use these attributes when some other words indicate these ideas, to avoid annotating filler words such as "great", "might be", "not", "never", but still capture the correct meaning. Here is a somewhat contrived example.
+
+![](img10.png)
+
+The "?" in asymptomatic expresses that it is not always true that this property holds, but only in some cases, hence, it is uncertaing. The "?" in "develop" indicates that it is not always true that all patients perform this action. The "++" in "dangerous" indicates that this concept is emphasized, so we don't need to annotate the word "very". Notice also how in this example we do not annotate "others", but rather directly connect "develop" with the real subject, i.e., the patients.

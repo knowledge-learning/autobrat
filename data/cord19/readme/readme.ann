@@ -73,3 +73,15 @@ R30	has-part Arg1:T40 Arg2:T42
 R31	has-property Arg1:T42 Arg2:T41	
 R32	has-property Arg1:T38 Arg2:T39	
 R33	in-context Arg1:T38 Arg2:T40	
+T43	Concept 659 667	patients
+T44	Concept 677 689	asymptomatic
+A1	Uncertain T44
+T45	Action 709 716	develop
+T46	Concept 722 731	dangerous
+T47	Concept 732 740	symptoms
+A2	Emphasized T46
+R34	has-property Arg1:T47 Arg2:T46	
+R35	target Arg1:T45 Arg2:T47	
+R36	subject Arg1:T45 Arg2:T43	
+A3	Uncertain T45
+R37	has-property Arg1:T43 Arg2:T44	

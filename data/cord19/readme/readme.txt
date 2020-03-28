@@ -16,4 +16,6 @@ An acute respiratory disease called COVID-19 is caused by the infection in human
 
 COVID-19 is dangerous in patients with a compromised inmune system
 
+Some patients might be asymptomatic, while others will develop very dangerous symptoms
+
 ...
