@@ -8,6 +8,8 @@ Your mission, should you choose to accept it, is to manually annotate sentences 
 
 ![](img1.png)
 
+## Concepts and actions
+
 The most important elements to annotate are concepts and actions. A concept can be either a single word ("humans") or multiple words ("respiratory disease") that represent a well-defined concept in this domain, e.g., a body part, a scientific term, a disease or a class of diseases, a medical tool, etc. Things like determinants, articles, etc., that are only important for grammatical reasons but don't carry a semantic meaning on their own are not considered concepts. 
 
 An action, on the other hand, is a word (or multiple words) that represents a process, and event, or some sort of transformation that some entities (concepts) can perform on some other entities. The concepts that perform an action are called "subjects", and the one that receive the direct or indirect consequences of the action are called "targets". An action often appears in textual form as a verb, like in this example, but it can also appear as a noun, in examples we will see later on.
@@ -17,6 +19,8 @@ Often the best way to approach a sentence like the one before is to try and dete
 ![](img2.png)
 
 Both "SARS-CoV-2" and "humans" are concepts that are relevant in the medical domain, that is, not filler words, determinants, etc., but actual medical entities important for transmiting the meaning of the sentence. Likewise, "infects" is an action, not just because it is a verb, but rather for the fact that "to infect" is also an important concept in the medical domain, it expresses a process that can happen, and can be clearly associated with an entity that provokes it and an entity that receives the effect.
+
+## Semantic relations
 
 The remaining part of the sentence is a subordinate idea, but before going there, we can finish with the main fragment. The other relevant piece of knowledge that is being stated is the fact that "SARS-CoV-2 is a coronavirus". Now this is the case of a pattern that is so common and so important, that instead of trying to annotated "is" as an action (which would be wrong) we instead use a specific semantic relation to represent that:
 
@@ -36,6 +40,8 @@ Notice that in this case there is no explicit "is a" but we can still infer it f
 
 ![](img6.png)
 
+## Causality
+
 To finish this sentence, we need to link the first part with the second part. Syntactically, the link is established by the word "causing". However, this is another case in which such a concept is so important that we have a custom relation for that, named "causes". We use this relation whenever we find in a sentence a direct causal statement, e.g, A causes B, A provokes B, B is caused by A, and similar. In this specific sentence, what causes the COVID-19 disease (as stated by the sentence) is not the virus itself, but the action of infecting the body. Hence, the annotation goes like this:
 
 ![](img7.png)
@@ -45,3 +51,13 @@ Take a time to look at the annotations, forget about the actual words that appea
 As an example, here is a completely different rewrite of the same sentence that is, nevertheless, semantically identical, and thus annotated in the same way:
 
 ![](img8.png)
+
+Now we will quickly go over a few more examples to quickly illustrate the remaining details of the annotation model.
+
+## Contextual relations
+
+Often an statement is only true if some conditions apply. For these cases, we can use the relations `in-context`, `in-place` and `in-time`, to express that we are talking about some concept or action but only within a specific context. As an example take the following sentence.
+
+![](img9.png)
+
+The sentence is not simply saying that COVID-19 is dangerous per-se, but rather that it is dangerous specifically in the context of patients with a compromised inmune system. We annotate the concept of patients with a compromised inmune system as those patients that have something (`has-part`) called "immune system" which has the property called "compromised". Then we say that COVID-19, when _conditioned_ to the existence of this concept of patients-with-compromised-immune-system, then it has the property of being "dangerous".

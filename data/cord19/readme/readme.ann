@@ -64,3 +64,12 @@ R26	is-a Arg1:T33 Arg2:T32
 R27	subject Arg1:T34 Arg2:T37	
 R28	is-a Arg1:T37 Arg2:T36	
 R29	causes Arg1:T34 Arg2:T33	
+T38	Concept 586 594	COVID-19
+T39	Concept 598 607	dangerous
+T40	Concept 611 619	patients
+T41	Concept 627 638	compromised
+T42	Concept 639 652	inmune system
+R30	has-part Arg1:T40 Arg2:T42	
+R31	has-property Arg1:T42 Arg2:T41	
+R32	has-property Arg1:T38 Arg2:T39	
+R33	in-context Arg1:T38 Arg2:T40	

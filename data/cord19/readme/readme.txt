@@ -14,4 +14,6 @@ SARS-CoV-2 is a coronavirus that infects humans, causing COVID-19, an acute resp
 
 An acute respiratory disease called COVID-19 is caused by the infection in humans with a coronavirus denominated SARS-CoV-2
 
+COVID-19 is dangerous in patients with a compromised inmune system
+
 ...
