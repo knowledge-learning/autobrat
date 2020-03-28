@@ -161,7 +161,7 @@ R12	target Arg1:T15 Arg2:T14
 R13	subject Arg1:T16 Arg2:T14
 R14	target Arg1:T16 Arg2:T17
 R16	target Arg1:T21 Arg2:T22
-R17	subject Arg1:T21 Arg2:T18
+R17	is-a Arg1:T21 Arg2:T18
 R18	target Arg1:T27 Arg2:T23
 R19	target Arg1:T27 Arg2:T24
 R20	target Arg1:T27 Arg2:T25
@@ -301,3 +301,4 @@ R1032	domain Arg1:T1068 Arg2:T1064
 R1034	target Arg1:T1066 Arg2:T1065
 R1051	causes Arg1:T1066 Arg2:T1067
 A1008	Uncertain T1124
+R1	entails Arg1:T16 Arg2:T19	

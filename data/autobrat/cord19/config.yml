@@ -1,0 +1,6 @@
+index:
+    readme: readme/readme.md
+
+corpus:
+    path: corpus/corpus_covid19.txt
+    shuffle: true

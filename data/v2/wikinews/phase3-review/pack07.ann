@@ -460,7 +460,7 @@ R294	arg Arg1:T305 Arg2:T303
 R309	in-context Arg1:T305 Arg2:T304
 R310	arg Arg1:T302 Arg2:T305
 R1001	arg Arg1:T1013 Arg2:T1007
-R1002	in-context Arg1:T1007 Arg2:T1008
+R1002	target Arg1:T1007 Arg2:T1008
 R1003	subject Arg1:T1002 Arg2:T1001
 R1004	target Arg1:T1002 Arg2:T1003
 R1005	target Arg1:T1003 Arg2:T1004
@@ -639,3 +639,6 @@ R335	in-context Arg1:T1312 Arg2:T1313
 A18	Emphasized T1313
 R336	in-time Arg1:T1312 Arg2:T1309
 R337	target Arg1:T1324 Arg2:T1320
+T1	Reference 97 99	su
+*	same-as T1 T1001
+R1	part-of Arg1:T1008 Arg2:T1	

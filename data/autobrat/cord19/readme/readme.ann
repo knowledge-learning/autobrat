@@ -1,0 +1,66 @@
+T1	Concept 0 10	SARS-CoV-2
+T2	Concept 16 27	coronavirus
+T3	Action 33 40	infects
+T4	Concept 41 47	humans
+T5	Concept 57 65	COVID-19
+T6	Concept 70 75	acute
+T7	Concept 76 95	respiratory disease
+R1	is-a Arg1:T5 Arg2:T7	
+R2	has-property Arg1:T5 Arg2:T6	
+R3	causes Arg1:T3 Arg2:T5	
+R4	target Arg1:T3 Arg2:T4	
+R5	subject Arg1:T3 Arg2:T1	
+R6	is-a Arg1:T1 Arg2:T2	
+T8	Concept 97 107	SARS-CoV-2
+T9	Action 130 137	infects
+T10	Concept 138 144	humans
+R7	target Arg1:T9 Arg2:T10	
+R8	subject Arg1:T9 Arg2:T8	
+T11	Concept 152 162	SARS-CoV-2
+T12	Action 185 192	infects
+T13	Concept 193 199	humans
+R9	target Arg1:T12 Arg2:T13	
+R10	subject Arg1:T12 Arg2:T11	
+T14	Concept 168 179	coronavirus
+R11	is-a Arg1:T11 Arg2:T14	
+T15	Concept 207 217	SARS-CoV-2
+T16	Concept 221 232	coronavirus
+R12	is-a Arg1:T15 Arg2:T16	
+T17	Action 234 241	infects
+T18	Concept 242 248	humans
+R13	subject Arg1:T17 Arg2:T15	
+R14	target Arg1:T17 Arg2:T18	
+T19	Concept 270 278	COVID-19
+T20	Concept 289 308	respiratory disease
+R15	is-a Arg1:T19 Arg2:T20	
+T21	Concept 324 332	COVID-19
+T22	Concept 343 362	respiratory disease
+T23	Concept 337 342	acute
+R16	is-a Arg1:T21 Arg2:T22	
+R17	has-property Arg1:T21 Arg2:T23	
+T24	Concept 364 374	SARS-CoV-2
+T25	Concept 380 391	coronavirus
+T26	Action 397 404	infects
+T27	Concept 405 411	humans
+T28	Concept 421 429	COVID-19
+T29	Concept 440 459	respiratory disease
+T30	Concept 434 439	acute
+R18	has-property Arg1:T28 Arg2:T30	
+R19	is-a Arg1:T28 Arg2:T29	
+R20	causes Arg1:T26 Arg2:T28	
+R21	target Arg1:T26 Arg2:T27	
+R22	subject Arg1:T26 Arg2:T24	
+R23	is-a Arg1:T24 Arg2:T25	
+T31	Concept 464 469	acute
+T32	Concept 470 489	respiratory disease
+T33	Concept 497 505	COVID-19
+T34	Action 523 532	infection
+T35	Concept 536 542	humans
+T36	Concept 550 561	coronavirus
+T37	Concept 574 584	SARS-CoV-2
+R24	target Arg1:T34 Arg2:T35	
+R25	has-property Arg1:T33 Arg2:T31	
+R26	is-a Arg1:T33 Arg2:T32	
+R27	subject Arg1:T34 Arg2:T37	
+R28	is-a Arg1:T37 Arg2:T36	
+R29	causes Arg1:T34 Arg2:T33	

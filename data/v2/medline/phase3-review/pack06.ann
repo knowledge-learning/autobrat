@@ -321,3 +321,5 @@ R91	arg Arg1:T95 Arg2:T92
 *	same-as T134 T93
 R92	causes Arg1:T148 Arg2:T147
 R127	causes Arg1:T162 Arg2:T163
+T73	Concept 1016 1019	dos
+R60	arg Arg1:T66 Arg2:T73	

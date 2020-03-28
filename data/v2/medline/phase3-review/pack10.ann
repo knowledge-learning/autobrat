@@ -1,6 +1,6 @@
 T1	Concept 3 13	tendinitis
 T2	Concept 18 22	codo
-T3	Concept 30 36;37 46	lesión deportiva
+T3	Concept 30 36	lesión
 T5	Action 67 72	jugar
 T6	Action 67 72	jugar
 T7	Concept 73 78	tenis
@@ -93,7 +93,7 @@ T137	Concept 1922 1925	tos
 T138	Concept 1926 1930	seca
 T139	Predicate 1936 1941	señal
 T140	Concept 1942 1950	temprana
-T141	Concept 1954 1962;1963 1970	artritis juvenil
+T141	Concept 1954 1962	artritis
 T142	Action 1981 1987	cojear
 T143	Concept 1996 2003	mañanas
 T148	Concept 2062 2070	garganta
@@ -400,3 +400,9 @@ R191	causes Arg1:T1218 Arg2:T1222
 R192	domain Arg1:T1020 Arg2:T1019
 *	same-as T1023 T1020
 R193	is-a Arg1:T1023 Arg2:T1019
+T9	Concept 37 46	deportiva
+R8	in-context Arg1:T3 Arg2:T9	
+R9	target Arg1:T90 Arg2:T86	
+T10	Concept 1963 1970	juvenil
+R10	domain Arg1:T139 Arg2:T10	
+R11	in-context Arg1:T141 Arg2:T10	

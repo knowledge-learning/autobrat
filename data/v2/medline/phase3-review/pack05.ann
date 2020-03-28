@@ -346,3 +346,4 @@ R96	has-property Arg1:T97 Arg2:T1154
 R97	entails Arg1:T1162 Arg2:T1167
 *	same-as T171 T173
 R102	in-time Arg1:T181 Arg2:T187
+T1	Concept 1467 1474	ataques

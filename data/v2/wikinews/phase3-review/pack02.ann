@@ -571,7 +571,6 @@ R251	domain Arg1:T1070 Arg2:T1068
 R80	in-place Arg1:T71 Arg2:T78
 *	same-as T76 T79
 R79	arg Arg1:T1088 Arg2:T1087
-*	same-as T1091 T1092
 R254	in-context Arg1:T1137 Arg2:T1145
 R255	causes Arg1:T1144 Arg2:T1137
 R101	subject Arg1:T104 Arg2:T105
@@ -632,3 +631,4 @@ R298	is-a Arg1:T277 Arg2:T267
 R299	target Arg1:T263 Arg2:T271
 R1	target Arg1:T1002 Arg2:T1001	
 R2	in-context Arg1:T1002 Arg2:T1003	
+R3	in-context Arg1:T1091 Arg2:T1092	

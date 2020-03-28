@@ -235,7 +235,7 @@ T1246	Concept 3149 3155	Iguala
 T1247	Concept 3158 3164	Cocula
 T1248	Concept 3170 3177	fuerzas
 T1249	Concept 3178 3187	federales
-T1250	Action 3201 3208	control
+T1250	Action 3188 3197;3198 3200;3201 3208	asumieron el control
 T1252	Concept 3212 3218;3219 3226;3227 3229;3230 3239	Ciudad Apaxtla de Castrejón
 T1253	Concept 3241 3251;3252 3254;3255 3262	Buenavista de Cuéllar
 T1254	Concept 3264 3271;3272 3278;3279 3281;3282 3286	General Canuto A. Neri
@@ -620,3 +620,4 @@ R339	in-time Arg1:T1314 Arg2:T1315
 R340	causes Arg1:T1314 Arg2:T1318
 R341	causes Arg1:T1314 Arg2:T1325
 R342	causes Arg1:T1314 Arg2:T1310
+A1	Emphasized T220

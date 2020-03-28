@@ -163,6 +163,7 @@ R23	arg Arg1:T30 Arg2:T31
 R25	target Arg1:T32 Arg2:T33
 R28	has-property Arg1:T38 Arg2:T37
 *	same-as T33 T34
+A2	Emphasized T37
 A3	Emphasized T42
 R26	target Arg1:T39 Arg2:T40
 R29	subject Arg1:T39 Arg2:T43
@@ -267,5 +268,3 @@ R1057	arg Arg1:T1078 Arg2:T1088
 R1058	in-place Arg1:T1087 Arg2:T1078
 R1066	target Arg1:T1097 Arg2:T1098
 R1121	subject Arg1:T1087 Arg2:T1085
-R56	domain Arg1:T44 Arg2:T43	
-A2	Negated T48

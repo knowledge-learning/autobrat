@@ -10,7 +10,7 @@ T10	Concept 195 201;202 210	tejido escamoso
 T12	Action 179 184	forma
 T13	Action 236 246	trasplante
 T14	Concept 250 256	hígado
-T15	Predicate 266 268;269 272;273 279	25 por ciento
+T15	Concept 266 268;269 272;273 279	25 por ciento
 T16	Concept 287 292	niños
 T17	Concept 300 308	síntomas
 T18	Concept 322 332	habitantes
@@ -162,7 +162,6 @@ R2	is-a Arg1:T7 Arg2:T4
 R5	is-a Arg1:T8 Arg2:T4
 R8	target Arg1:T12 Arg2:T10
 R9	target Arg1:T13 Arg2:T14
-R12	domain Arg1:T15 Arg2:T16
 R17	subject Arg1:T20 Arg2:T18
 R18	domain Arg1:T21 Arg2:T22
 R19	in-time Arg1:T20 Arg2:T24
@@ -263,7 +262,6 @@ R1073	target Arg1:T1142 Arg2:T1140
 R4	in-context Arg1:T7 Arg2:T79
 R11	entails Arg1:T12 Arg2:T13
 A17	Uncertain T13
-R7	has-property Arg1:T15 Arg2:T17
 R10	in-context Arg1:T17 Arg2:T11
 R13	arg Arg1:T21 Arg2:T106
 R99	is-a Arg1:T113 Arg2:T26
@@ -304,3 +302,7 @@ R115	in-context Arg1:T135 Arg2:T138
 R116	in-context Arg1:T135 Arg2:T139
 R117	target Arg1:T1140 Arg2:T90
 R118	has-property Arg1:T149 Arg2:T153
+T33	Predicate 258 262	Sólo
+R12	arg Arg1:T33 Arg2:T15	
+R28	domain Arg1:T33 Arg2:T16	
+R7	has-property Arg1:T33 Arg2:T17	
