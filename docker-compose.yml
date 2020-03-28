@@ -4,7 +4,7 @@ services:
   brat:
     image: "cord19/satr:latest"
     build: ./build
-    container_name: "brat"
+    container_name: "cord19-brat"
     ports:
       - "8080:80"
     volumes:
