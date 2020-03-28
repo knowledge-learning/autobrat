@@ -1,0 +1,5 @@
+Lower respiratory tract infections (LRTI) are a leading reason for hospitalization and mortality in hematopoietic cellular transplant (HCT) recipients
+Diagnosis of LRTI in HCT recipients is particularly challenging due to high rates of noninfectious inflammatory conditions such as graft versus host disease (GVHD) that can drive pulmonary inflammation, induce fever and mimic infection
+Metagenomic next-generation sequencing (mNGS) inherently offers enhanced diagnostic capabilities by providing a culture-independent, comprehensive measurement of the microbial composition of clinical samples
+This technology permits the simultaneous detection of bacterial, viral and fungal pathogens without introducing bias associated with fixed-target PCR or serologic
+However, a proportion of patients showed multi-organ damage and dysfunction

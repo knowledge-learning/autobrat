@@ -1,0 +1,5 @@
+Previously, microarray approaches proved useful for broadening the scope of pathogens detectable in a single LRTI assay
+ACE2+ cholangiocytes are preserved in human liver ductal organoid cultures
+Some microarrays have even incorporated conserved sequences from all known viruses, allowing detection of novel viral strains
+Our results suggest that simultaneous mNGS detection of respiratory pathogens, the host's immunologic response and the airway microbiome may provide complementary data that could inform the clinical significance of a detected pathogen
+The dominant symptoms of coronavirus disease 2019 (COVID-19) are fever and cough

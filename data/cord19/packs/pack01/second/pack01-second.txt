@@ -1,0 +1,5 @@
+Furthermore, in transplant patients, concern for GVHD may compel clinicians to initiate empiric immunosuppressive agents that could inadvertently exacerbate disease in the presence of an unrecognized infection
+By capturing both microbial and human RNA, mNGS also permits simultaneous transcriptional profiling of the host immunologic response, which can provide complementary insight regarding the presence and type of infection
+In some situations, empiric regimens may lack activity against an underlying microbe, leading to treatment failure, disease progression, and consequent adverse outcomes
+In this proof of concept study, we demonstrate that mNGS can simultaneously detect pathogens and the host response in HCT patients with acute respiratory illnesses
+Of note, liver damage is emerging as a co-existed symptom reported in patients with COVID-19
