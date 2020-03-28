@@ -8,4 +8,19 @@ Your mission, should you choose to accept it, is to manually annotate sentences 
 
 ![](docs/img1.png)
 
+## Participate!
+
 If you want to participate, [read the full instructions here](docs/instructions.md) and join our [Telegram group](https://t.me/cord19).
+
+## Contributors
+
+This a list of everyone currently involved and what they are doing.
+
+| **Pack** | **Side** | **Status**  | **Annotator** |
+|----------|----------|-------------|---------------|
+|      1   | A        | In progress | @Estevanell   |
+|      1   | B        | In progress | @nasobuco     |
+|      2   | A        |             |               |
+|      2   | B        |             |               |
+|      3   | A        |             |               |
+|      3   | B        |             |               |
