@@ -16,11 +16,7 @@ If you want to participate, [read the full instructions here](docs/instructions.
 
 This a list of everyone currently involved and what they are doing.
 
-| **Pack** | **Side** | **Status**  | **Annotator** |
-|----------|----------|-------------|---------------|
-|      1   | A        | In progress | @Estevanell   |
-|      1   | B        | In progress | @nasobuco     |
-|      2   | A        |             |               |
-|      2   | B        |             |               |
-|      3   | A        |             |               |
-|      3   | B        |             |               |
+| **Pack** | **Side** | **Status**  | **Annotator** | **Link** |
+|----------|----------|-------------|---------------|----------|
+|      1   | A        | In progress | @Estevanell   | [🔗](http://ssh.apiad.net:8080/#/cord19/packs/pack01/first/pack01-first) |
+|      1   | B        | In progress | @nasobuco     | [🔗](http://ssh.apiad.net:8080/#/cord19/packs/pack01/second/pack01-second) |
