@@ -209,7 +209,7 @@ T1046	Action 590 597	aseguró
 T1047	Concept 605 608	PPD
 T1048	Concept 612 618	pasado
 T1050	Action 647 655	renuncia
-T1052	Concept 656 665	la mañana
+T1052	Concept 659 665	mañana
 T1053	Concept 673 676	día
 T1054	Reference 669 672	ese
 T1085	Concept 1159 1169	Inglaterra
@@ -317,7 +317,7 @@ R17	target Arg1:T20 Arg2:T21
 R19	is-a Arg1:T25 Arg2:T26
 R20	target Arg1:T24 Arg2:T25
 R22	in-time Arg1:T24 Arg2:T27
-R24	domain Arg1:T11 Arg2:T12
+R24	in-context Arg1:T11 Arg2:T12
 R25	subject Arg1:T13 Arg2:T11
 R26	subject Arg1:T20 Arg2:T11
 R27	in-context Arg1:T21 Arg2:T22
@@ -334,7 +334,7 @@ R23	in-time Arg1:T27 Arg2:T29
 R57	in-context Arg1:T74 Arg2:T75
 R58	is-a Arg1:T76 Arg2:T74
 R59	domain Arg1:T77 Arg2:T78
-R64	subject Arg1:T62 Arg2:T63
+R64	in-context Arg1:T62 Arg2:T63
 R65	in-context Arg1:T66 Arg2:T67
 R66	target Arg1:T68 Arg2:T69
 R67	target Arg1:T71 Arg2:T72
@@ -620,8 +620,5 @@ R267	has-property Arg1:T296 Arg2:T297
 R269	in-place Arg1:T299 Arg2:T300
 R275	in-context Arg1:T276 Arg2:T310
 R321	is-a Arg1:T276 Arg2:T309
-T1	Predicate 678 685	Algunas
-R1	domain Arg1:T1 Arg2:T50	
 A3	Emphasized T1086
-R2	in-place Arg1:T1135 Arg2:T1138	
-T2	Predicate 2224 2231	Durante
+R1	has-property Arg1:T1135 Arg2:T1138	

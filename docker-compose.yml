@@ -6,6 +6,6 @@ services:
     build: ./build
     container_name: "brat"
     ports:
-      - "8080:80"
+      - "8081:80"
     volumes:
       - "./data:/bratdata/SAT+R"

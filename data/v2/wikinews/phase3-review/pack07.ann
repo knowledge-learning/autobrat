@@ -639,6 +639,4 @@ R335	in-context Arg1:T1312 Arg2:T1313
 A18	Emphasized T1313
 R336	in-time Arg1:T1312 Arg2:T1309
 R337	target Arg1:T1324 Arg2:T1320
-T1	Reference 97 99	su
-*	same-as T1 T1001
-R1	part-of Arg1:T1008 Arg2:T1	
+R1	in-place Arg1:T1008 Arg2:T1001	

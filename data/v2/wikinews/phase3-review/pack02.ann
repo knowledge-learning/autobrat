@@ -631,4 +631,4 @@ R298	is-a Arg1:T277 Arg2:T267
 R299	target Arg1:T263 Arg2:T271
 R1	target Arg1:T1002 Arg2:T1001	
 R2	in-context Arg1:T1002 Arg2:T1003	
-R3	in-context Arg1:T1091 Arg2:T1092	
+*	same-as T1091 T1092

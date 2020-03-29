@@ -228,7 +228,7 @@ T1043	Concept 642 652	organismos
 T1044	Concept 653 665	humanitarios
 T1046	Concept 480 488	ciudades
 T1047	Concept 493 498	mundo
-T1048	Action 669 679	unieron al
+T1048	Action 669 676	unieron
 T1049	Concept 680 687	llamado
 T1050	Concept 692 695;696 701	Dow Jones
 T1051	Action 702 706	cayó
@@ -521,7 +521,7 @@ R1005	subject Arg1:T1002 Arg2:T1003
 R1006	subject Arg1:T1002 Arg2:T1006
 R1007	target Arg1:T1002 Arg2:T1001
 R1008	subject Arg1:T1023 Arg2:T1024
-R1009	part-of Arg1:T1021 Arg2:T1022
+R1009	in-place Arg1:T1021 Arg2:T1022
 R1010	target Arg1:T1023 Arg2:T1021
 R1011	target Arg1:T1019 Arg2:T1021
 R1012	in-time Arg1:T1019 Arg2:T1020
