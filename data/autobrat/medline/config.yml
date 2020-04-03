@@ -1,0 +1,6 @@
+index:
+    readme: readme.md
+
+corpus: 
+    path: "corpus/raw.txt"
+    shuffle: true

@@ -1,10 +1,14 @@
+import uuid
 import os
 import random
 import markdown
 import jinja2
 import yaml
-from pathlib import Path
+import shutil
 
+from pathlib import Path
+from functools import lru_cache
+from typing import Optional
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -12,69 +16,70 @@ from fastapi.exceptions import HTTPException
 
 app = FastAPI()
 
-app.mount("/static", StaticFiles(directory=Path(__file__).absolute().parent.parent / "data" / "autobrat"), name='static')
+app.mount("/static", StaticFiles(directory="/data"), name="static")
 
 
+@lru_cache()
 def load_corpus(corpus):
     config = load_config(corpus)
-    corpus_path = config['corpus'].get('path', 'corpus/pool.txt')
+    corpus_path = config["corpus"]["path"]
     pool = []
 
-    with open(Path(__file__).absolute().parent.parent / "data" / "autobrat" / corpus / corpus_path) as fp:
+    with open(Path("/data") / corpus / corpus_path) as fp:
         for line in fp:
             pool.append(line.strip())
 
-    if config['corpus'].get('shuffle', True):
+    if config["corpus"].get("shuffle", True):
         random.shuffle(pool)
 
     return pool
 
 
 def load_config(corpus):
-    path = Path(__file__).absolute().parent.parent / "data" / "autobrat" / corpus
-    
+    path = Path("/data") / corpus
+
     with open(path / "config.yml") as fp:
         return yaml.load(fp.read())
 
 
 def read_file(corpus, path):
-    with open(Path(__file__).absolute().parent.parent / "data" / "autobrat" / corpus / path) as fp:
+    with open(Path("/data") / corpus / path) as fp:
         return fp.read()
 
 
 @app.get("/{corpus}", response_class=HTMLResponse)
 def index(corpus: str):
     config = load_config(corpus)
-    readme = read_file(corpus, config['index']['readme'])
+    readme = read_file(corpus, config["index"]["readme"])
 
-    with open(Path(__file__).parent / "templates" / "index.html") as fp:
+    with open("/code/templates/index.html") as fp:
         template = jinja2.Template(fp.read())
 
     return HTMLResponse(template.render(readme=markdown.markdown(readme)))
 
 
-@app.post("/navigate")
-def navigate(current_pack: int, direction:str='next'):
-    if direction == 'next':
-        next_pack = current_pack + 1
-    elif direction == 'previous':
-        next_pack = current_pack - 1
+@app.get("/{corpus}/annotate", response_class=HTMLResponse)
+def annotate(corpus: str):
+    with open("/code/templates/annotation.html") as fp:
+        template = jinja2.Template(fp.read())
 
-    if next_pack <= 0:
-        raise HTTPException(400, "Cannot navigate back pass zero.")
-
-    if next_pack > current_pack:
-        check_pack(current_pack)
-
-    ensure_pack(next_pack)
-
-    return {
-        'next_pack': next_pack
-    }
+    return HTMLResponse(template.render(corpus=corpus))
 
 
-def check_pack(pack): 
-    pack_path = Path(__file__).absolute().parent.parent / "data" / "autobrat" / "packs" / (str(pack) + ".ann")
+@app.post("/{corpus}/pack/new")
+def new_pack(corpus: str):
+    return {"next_pack": ensure_pack(corpus)}
+
+
+@app.post("/{corpus}/pack/submit")
+def submit_pack(corpus: str, pack: str):
+    check_pack(corpus, pack) 
+    return {"next_pack": ensure_pack(corpus)}
+
+
+def check_pack(corpus, pack):
+    pack_path = Path("/data") / corpus / "packs" / "open" / (pack + ".ann")
+    text_path = pack_path.with_suffix(".txt")
 
     if not pack_path.exists():
         raise HTTPException(400, "The current pack doesn't exists.")
@@ -84,19 +89,27 @@ def check_pack(pack):
             break
         else:
             raise HTTPException(400, "The current pack doesn't have any annotation.")
-            
 
-def ensure_pack(pack):
-    pack_path = Path(__file__).absolute().parent.parent / "data" / "autobrat" / "packs" / (str(pack) + ".txt")
+    shutil.move(pack_path, pack_path.parent.parent / "submitted" / pack_path.name)
+    shutil.move(text_path, text_path.parent.parent / "submitted" / text_path.name)
+
+
+def ensure_pack(corpus):
+    config = load_config(corpus)
+    pack = str(uuid.uuid4())
+    pack_path = Path("/data") / corpus / "packs" / "open" / (pack + ".txt")
     ann_path = pack_path.with_suffix(".ann")
 
-    if not pack_path.exists():
-        with open(pack_path, "w") as fp:
-            for i in range(5):
-                fp.write(POOL.pop() + "\n")
+    raw = load_corpus(corpus)
 
-        with open(ann_path, "w") as fp:
-            pass
+    with open(pack_path, "w") as fp:
+        for i in range(5):
+            fp.write(raw.pop() + "\n")
 
-        os.chmod(str(pack_path), 0o777)
-        os.chmod(ann_path, 0o777)    
+    with open(ann_path, "w") as fp:
+        pass
+
+    os.chmod(str(pack_path), 0o777)
+    os.chmod(ann_path, 0o777)
+
+    return pack

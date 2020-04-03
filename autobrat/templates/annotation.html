@@ -9,9 +9,9 @@
 </head>
 <body>
     <div id="app" class="p-4 w-full h-screen">
-        <a @click="navigate('previous')" class="py-2 px-4 bg-gray-300 hover:bg-gray-200 text-gray-900 font-bold rounded" href="#">Previous pack</a>
-        <a @click="navigate('next')" class="py-2 px-4 bg-blue-500 hover:bg-blue-400 text-white font-bold rounded" href="#">Next pack</a>
-        <iframe id="frame" class="mt-4 pointer-events-auto" style="width: 71%; height: 600px;" :src="currentUrl" frameborder="0"></iframe>
+        <a @click="new_pack()" class="py-2 px-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded" href="#">New pack</a>
+        <a @click="submit_pack()" class="py-2 px-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded" href="#">Submit pack</a>
+        <iframe v-if="currentPack" id="frame" class="mt-4 pointer-events-auto" style="width: 71%; height: 600px;" :src="currentUrl" frameborder="0"></iframe>
     </div>
 </body>
 
@@ -33,16 +33,17 @@
 var App = new Vue({
     el: "#app",
     data: {
-        currentPack: "readme"
+        currentPack: null,
+        corpus: "{{ corpus }}"
     },
     computed: {
         currentUrl() {
-            return  "http://localhost:8080/#/SAT+R/autobrat/cord19/" + this.currentPack
+            return  "http://localhost:8081/#/SAT+R/autobrat/{{ corpus }}/packs/open/" + this.currentPack
         }
     },
     methods: {
-        navigate(direction) {
-            fetch("navigate?current_pack=" + this.currentPack + "&direction=" + direction, {
+        post(url) {
+            fetch(url, {
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -60,6 +61,12 @@ var App = new Vue({
             .catch(error => {
                 console.error(error);
             });
+        },
+        new_pack() {
+            this.post("/{{ corpus }}/pack/new")
+        },
+        submit_pack() {
+            this.post("/{{ corpus }}/pack/submit?pack=" + this.currentPack)
         }
     }
 })

@@ -3,9 +3,25 @@ version: "3"
 services:
   brat:
     image: "matcomuh/satr:latest"
-    build: ./build
-    container_name: "brat"
+    build:
+      context: ./build
+      dockerfile: brat.dockerfile
+    container_name: "autobrat-brat"
     ports:
       - "8081:80"
     volumes:
       - "./data:/bratdata/SAT+R"
+
+  autobrat:
+    image: "matcomuh/autobrat:latest"
+    build:
+      context: ./build
+      dockerfile: autobrat.dockerfile
+    container_name: autobrat-web
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./data/autobrat:/data"
+      - "./autobrat:/code"
+    working_dir: "/code"
+    command: ["uvicorn", "--host", "0.0.0.0", "--reload", "app:app"]
