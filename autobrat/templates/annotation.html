@@ -10,26 +10,90 @@
 </head>
 
 <body>
-    <div id="app" class="p-4 w-9/12 mx-auto">
-        <a @click="new_pack()" class="py-2 px-4 mr-2 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded"
-            href="#">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                viewBox="0 0 24 24" class="w-6 h-6 inline">
-                <path
-                    d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
-                </path>
-            </svg>
-            New pack
-        </a>
-        <a @click="submit_pack()" class="py-2 px-4 bg-green-600 hover:bg-green-500 text-white font-bold rounded"
-            href="#">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                viewBox="0 0 24 24" class="w-6 h-6 inline">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            Submit pack</a>
-        <iframe v-if="currentPack" id="frame" class="mt-4 pointer-events-auto" style="width: 71%; height: 600px;"
-            :src="currentUrl" frameborder="0"></iframe>
+    <div id="app" class="p-4 w-9/12 mx-auto flex flex-row">
+        <div class="flex flex-col w-1/4 pr-2">
+            <a v-if="!currentPack" @click="new_pack()"
+                class="w-full py-2 px-4 mb-2 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded" href="#">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewBox="0 0 24 24" class="w-6 h-6 inline">
+                    <path
+                        d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                    </path>
+                </svg>
+                Start a new pack
+            </a>
+            <a v-if="currentPack" @click="submit_pack()"
+                class="w-full py-2 px-4 mb-2 bg-green-600 hover:bg-green-500 text-white font-bold rounded" href="#">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewBox="0 0 24 24" class="w-6 h-6 inline">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Submit this pack
+            </a>
+            <a v-if="currentPack" @click=""
+                class="w-full py-2 px-4 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold rounded" href="#">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewBox="0 0 24 24" class="w-6 h-6 inline">
+                    <path
+                        d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z">
+                    </path>
+                </svg>
+                Pre-annotate entities
+            </a>
+            <a v-if="currentPack" @click=""
+                class="w-full py-2 px-4 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold rounded" href="#">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewBox="0 0 24 24" class="w-6 h-6 inline">
+                    <path
+                        d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z">
+                    </path>
+                </svg>
+                Pre-annotate relations
+            </a>
+            <a v-if="currentPack" @click=""
+                class="w-full py-2 px-4 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold rounded" href="#">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewBox="0 0 24 24" class="w-6 h-6 inline">
+                    <path
+                        d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z">
+                    </path>
+                </svg>
+                Pre-annotate all
+            </a>            
+            <a v-if="currentPack" @click=""
+                class="w-full py-2 px-4 mb-2 bg-red-100 hover:bg-red-200 text-red-800 font-bold rounded" href="#">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewBox="0 0 24 24" class="w-6 h-6 inline">
+                    <path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Clear relations
+            </a>
+            <a v-if="currentPack" @click=""
+                class="w-full py-2 px-4 mb-2 bg-red-100 hover:bg-red-200 text-red-800 font-bold rounded" href="#">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewBox="0 0 24 24" class="w-6 h-6 inline">
+                    <path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Clear all
+            </a>
+            <a v-if="currentPack" @click=""
+                class="w-full py-2 px-4 mb-2 bg-red-100 hover:bg-red-200 text-red-800 font-bold rounded" href="#">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewBox="0 0 24 24" class="w-6 h-6 inline">
+                    <path
+                        d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636">
+                    </path>
+                </svg>
+                Skip this pack
+            </a>
+        </div>
+        <div class="w-3/4">
+            <iframe v-if="currentPack" id="frame" class="pointer-events-auto" style="width: 71%; height: 600px;"
+                :src="currentUrl" frameborder="0"></iframe>
+            <p v-else class="text-gray-900 text-xl bg-gray-200 rounded p-2">
+                Click on the <span>New pack</span> button to begin annotating.
+            </p>
+        </div>
     </div>
 </body>
 
@@ -51,7 +115,7 @@
     var App = new Vue({
         el: "#app",
         data: {
-            currentPack: null,
+            currentPack: "57ac541a-ca2c-4a5e-a20e-be19e0a9e56d",
             corpus: "{{ corpus }}"
         },
         computed: {

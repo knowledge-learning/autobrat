@@ -14,8 +14,6 @@ from autobrat.data import load_training_entities, load_corpus
 class Model:
     def __init__(self, corpus):
         self.corpus = corpus
-        # self.lines = ["Hola a todos como están", "muchas gracias por venir"]
-        # self.clases = [["O", "O", "C", "O", "A"], ["O", "O", "O", "A"]]
 
     def train(self):
         #vectotorizer
