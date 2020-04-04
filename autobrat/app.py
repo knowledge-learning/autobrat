@@ -14,37 +14,12 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.exceptions import HTTPException
 
+from autobrat.data import load_config, load_corpus, read_file
+from autobrat.classifier import Model
+
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="/data"), name="static")
-
-
-@lru_cache()
-def load_corpus(corpus):
-    config = load_config(corpus)
-    corpus_path = config["corpus"]["path"]
-    pool = []
-
-    with open(Path("/data") / corpus / corpus_path) as fp:
-        for line in fp:
-            pool.append(line.strip())
-
-    if config["corpus"].get("shuffle", True):
-        random.shuffle(pool)
-
-    return pool
-
-
-def load_config(corpus):
-    path = Path("/data") / corpus
-
-    with open(path / "config.yml") as fp:
-        return yaml.load(fp.read())
-
-
-def read_file(corpus, path):
-    with open(Path("/data") / corpus / path) as fp:
-        return fp.read()
 
 
 @app.get("/{corpus}", response_class=HTMLResponse)
@@ -78,7 +53,7 @@ def submit_pack(corpus: str, pack: str):
 
 
 def check_pack(corpus, pack):
-    pack_path = Path("/data") / corpus / "packs" / "open" / (pack + ".ann")
+    pack_path = Path("/data") / corpus / "packs" / "open" / pack / "pack.ann"
     text_path = pack_path.with_suffix(".txt")
 
     if not pack_path.exists():
@@ -90,26 +65,30 @@ def check_pack(corpus, pack):
         else:
             raise HTTPException(400, "The current pack doesn't have any annotation.")
 
-    shutil.move(pack_path, pack_path.parent.parent / "submitted" / pack_path.name)
-    shutil.move(text_path, text_path.parent.parent / "submitted" / text_path.name)
+    shutil.move(pack_path, Path("/data") / corpus / "packs" / "submitted" / (pack + ".ann"))
+    shutil.move(text_path, Path("/data") / corpus / "packs" / "submitted" / (pack + ".txt"))
+    shutil.rmtree(pack_path.parent)
 
 
 def ensure_pack(corpus):
     config = load_config(corpus)
     pack = str(uuid.uuid4())
-    pack_path = Path("/data") / corpus / "packs" / "open" / (pack + ".txt")
+    pack_path = Path("/data") / corpus / "packs" / "open" / pack / "pack.txt"
     ann_path = pack_path.with_suffix(".ann")
+    os.makedirs(pack_path.parent)
 
-    raw = load_corpus(corpus)
+    model = Model(corpus)
+    model.train()
 
     with open(pack_path, "w") as fp:
-        for i in range(5):
-            fp.write(raw.pop() + "\n")
+        for score, doc in model.suggest():
+            fp.write(doc.text + "\n")
 
     with open(ann_path, "w") as fp:
         pass
 
-    os.chmod(str(pack_path), 0o777)
+    os.chmod(pack_path.parent, 0o777)
+    os.chmod(pack_path, 0o777)
     os.chmod(ann_path, 0o777)
 
     return pack

@@ -3,66 +3,90 @@ from pathlib import Path
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 
+import tqdm
 import spacy
 import numpy as np
 
-#Load datasets
+from scripts.utils import Collection
+from autobrat.data import load_training_entities, load_corpus
 
-##load training set
-#X_training_set = []
-#y_training_set = []
-#with open(Path(__file__).parent.parent / "data" / "autobrat" / "result") as fp:
-#    training_set = fp.read()
 
-##load pool selection set
-#X_pool_set = []
-#with open(Path(__file__).parent.parent / "data" / "autobrat" / "corpus") as fp:
-#    lines = fp.readlines()
+class Model:
+    def __init__(self, corpus):
+        self.corpus = corpus
+        # self.lines = ["Hola a todos como están", "muchas gracias por venir"]
+        # self.clases = [["O", "O", "C", "O", "A"], ["O", "O", "O", "A"]]
 
-lines = ["Hola a todos como están", "muchas gracias por venir"]
-clases = [["O", "O", "C", "O", "A"], ["O", "O", "O", "A"]]
+    def train(self):
+        #vectotorizer
+        lines, classes = load_training_entities(self.corpus, "Concept")
 
-#vectotorizer
-nlp = spacy.load('es')
+        list_vector_word = []
+        self.words = []
+        self.list_sentences = []
 
-list_vector_word = []
-words = []
-list_sentences = []
+        for doc in lines:
+            self.list_sentences.append(doc)
+            for token in doc:
+                self.words.append(token.text)
+                list_vector_word.append(token.vector)
 
-for original_sentence in lines:
-    doc = nlp(original_sentence)
-    list_sentences.append(doc)
-    for token in doc:
-        words.append(token.text)
-        list_vector_word.append(token.vector)
+        X_training_set = np.vstack(list_vector_word)
+        y_training_set = sum(classes, [])
 
-X_training_set = np.vstack(list_vector_word)
-y_training_set = sum(clases, [])
+        #Train classifier
+        self.classifier = SVC(decision_function_shape='ovo')
+        self.classifier.fit(X_training_set, y_training_set)
 
-#Train classifier
-classifier = SVC(decision_function_shape='ovo')
-classifier.fit(X_training_set, y_training_set)
+    def relevant_sentence(self, sentence):
+        relevant = 0
+        
+        for i in sentence:
+            relevant += self.relevant_words[i.text]
 
-#metric
-weigth = classifier.decision_function(X_training_set)
+        return relevant/len(sentence)
 
-#relevancia por palabra
-relevant_words = { w:f for w,f in zip(words, weigth) }
+    def suggest(self, count=5):
+        nlp = spacy.load('es')
 
-#calcular la relevancia para cada oración
-#teniendo en cuenta la relevancia de cada una de las palabras entre el total de palabras
-def relevant_sentence (sentence):
-    relevant = 0
-    for i in sentence:
-        relevant += relevant_words[i.text]
-    return relevant/len(sentence)
+        #procesar corpus de oraciones sin clasificar (vectorizarlas)
+        s_list_vector_word = []
+        s_words = []
+        s_list_sentences = []
 
-relevance = []
-for s in list_sentences:
-    rel = relevant_sentence(s)
-    relevance.append(rel)
+        select_lines = load_corpus(self.corpus)
 
-print(relevance)
+        for s_sentence in select_lines:
+            s_doc = nlp(s_sentence)
+            s_list_sentences.append(s_doc)
+            for s_token in s_doc:
+                s_words.append(s_token.text)
+                s_list_vector_word.append(s_token.vector)
+        
+        X_pool_set = np.vstack(s_list_vector_word)
 
-sorted_relevant_sentences = sorted( zip(relevance,list_sentences), key=lambda x: x[0])
-print(sorted_relevant_sentences)
+        #metric
+        weigth = self.classifier.decision_function(X_pool_set)
+        self.relevant_words = { w:f.max() for w,f in zip(self.words, weigth) }
+
+        #relevancia por palabra
+        #la seguridad de la clase más problable
+
+        #calcular la relevancia para cada oración
+        #teniendo en cuenta la relevancia de cada una de las palabras entre el total de palabras
+        #o sea la oración que tiene la mínima confianza en la clase más probable
+        relevance = []
+
+        for s in self.list_sentences:
+            rel = self.relevant_sentence(s)
+            relevance.append(rel)
+
+        sorted_relevant_sentences = sorted( zip(relevance, self.list_sentences), key=lambda x: x[0])
+        return sorted_relevant_sentences[:5]
+        
+
+if __name__ == "__main__":
+    model = Model("medline")
+    model.train()
+
+    print(model.suggest(5))

@@ -470,6 +470,7 @@ class Collection:
 
         for s in sentences:
             s.sort()
+            
         return self
 
 

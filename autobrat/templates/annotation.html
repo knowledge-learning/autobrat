@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,28 @@
 
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <div id="app" class="p-4 w-full h-screen">
-        <a @click="new_pack()" class="py-2 px-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded" href="#">New pack</a>
-        <a @click="submit_pack()" class="py-2 px-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded" href="#">Submit pack</a>
-        <iframe v-if="currentPack" id="frame" class="mt-4 pointer-events-auto" style="width: 71%; height: 600px;" :src="currentUrl" frameborder="0"></iframe>
+    <div id="app" class="p-4 w-9/12 mx-auto">
+        <a @click="new_pack()" class="py-2 px-4 mr-2 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded"
+            href="#">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                viewBox="0 0 24 24" class="w-6 h-6 inline">
+                <path
+                    d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                </path>
+            </svg>
+            New pack
+        </a>
+        <a @click="submit_pack()" class="py-2 px-4 bg-green-600 hover:bg-green-500 text-white font-bold rounded"
+            href="#">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                viewBox="0 0 24 24" class="w-6 h-6 inline">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            Submit pack</a>
+        <iframe v-if="currentPack" id="frame" class="mt-4 pointer-events-auto" style="width: 71%; height: 600px;"
+            :src="currentUrl" frameborder="0"></iframe>
     </div>
 </body>
 
@@ -30,45 +48,46 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 <script>
-var App = new Vue({
-    el: "#app",
-    data: {
-        currentPack: null,
-        corpus: "{{ corpus }}"
-    },
-    computed: {
-        currentUrl() {
-            return  "http://localhost:8081/#/SAT+R/autobrat/{{ corpus }}/packs/open/" + this.currentPack
-        }
-    },
-    methods: {
-        post(url) {
-            fetch(url, {
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                method: 'post'
-            })
-            .then(r => r.json())
-            .then(r => {
-                if (r.next_pack) {
-                    this.currentPack = r.next_pack;
-                }
-                else {
-                    console.error(r);
-                }
-            })
-            .catch(error => {
-                console.error(error);
-            });
+    var App = new Vue({
+        el: "#app",
+        data: {
+            currentPack: null,
+            corpus: "{{ corpus }}"
         },
-        new_pack() {
-            this.post("/{{ corpus }}/pack/new")
+        computed: {
+            currentUrl() {
+                return "http://localhost:8081/#/SAT+R/autobrat/{{ corpus }}/packs/open/" + this.currentPack + "/pack"
+            }
         },
-        submit_pack() {
-            this.post("/{{ corpus }}/pack/submit?pack=" + this.currentPack)
+        methods: {
+            post(url) {
+                fetch(url, {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    method: 'post'
+                })
+                    .then(r => r.json())
+                    .then(r => {
+                        if (r.next_pack) {
+                            this.currentPack = r.next_pack;
+                        }
+                        else {
+                            console.error(r);
+                        }
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
+            },
+            new_pack() {
+                this.post("/{{ corpus }}/pack/new")
+            },
+            submit_pack() {
+                this.post("/{{ corpus }}/pack/submit?pack=" + this.currentPack)
+            }
         }
-    }
-})
+    })
 </script>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,22 @@
 
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 <body>
     <div id="readme" class="w-6/12 m-auto py-10">
         {{ readme }}
+
+        <div>
+            <a class="py-2 px-4 bg-green-600 hover:bg-green-500 text-white text-xl font-bold rounded" href="/{{ corpus }}/annotate">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewBox="0 0 24 24" class="w-6 h-6 inline">
+                    <path
+                        d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
+                    </path>
+                </svg>
+                Start annotating
+            </a>
+        </div>
     </div>
 </body>
 
@@ -18,8 +32,10 @@
         font-size: 2em;
         margin-bottom: 0.5em;
     }
+
     #readme p {
         margin-bottom: 1.5em;
     }
 </style>
+
 </html>

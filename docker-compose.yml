@@ -23,5 +23,7 @@ services:
     volumes:
       - "./data/autobrat:/data"
       - "./autobrat:/code"
+      - "./scripts:/usr/local/lib/python3.6/site-packages/scripts"
+      - "./autobrat:/usr/local/lib/python3.6/site-packages/autobrat"
     working_dir: "/code"
     command: ["uvicorn", "--host", "0.0.0.0", "--reload", "app:app"]
