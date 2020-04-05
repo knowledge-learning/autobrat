@@ -63,6 +63,8 @@ def new_pack(corpus: str):
 @app.post("/{corpus}/pack/submit")
 def submit_pack(corpus: str, pack: str):
     check_pack(corpus, pack)
+    get_model(corpus).train_async()
+    
     return {"next_pack": ensure_pack(corpus)}
 
 

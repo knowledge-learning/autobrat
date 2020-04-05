@@ -65,7 +65,22 @@ class Model:
         classifier = SVC(decision_function_shape='ovo')
         classifier.fit(X_training_set, y_training_set)
 
+        if self.lock.locked():
+            self.lock.release()
+
+        logger.info("Training finished")
+
         self.classifier = classifier
+
+    def train_async(self):
+        if self.lock.locked():
+            logger.warning("Training in process, skipping this batch.")
+            return False
+
+        thread = Thread(target=self.train)
+        thread.start()
+
+        return True
 
     def relevant_sentence(self, sentence, relevant_words):
         relevant = 0
