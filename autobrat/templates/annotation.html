@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <div id="app" class="p-4 w-full mx-auto flex flex-row relative">
-        <div class="flex flex-col w-100 pr-2">
+    <div id="app" class="w-full mx-auto flex flex-row relative">
+        <div class="flex flex-col w-100 p-4">
             <a v-if="!currentPack" @click="new_pack()"
                 class="w-full py-2 px-4 mb-2 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded" href="#">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -87,8 +87,8 @@
                 Skip this pack
             </a>
         </div>
-        <div class="w-full">
-            <iframe v-if="currentPack" id="frame" class="pointer-events-auto" style="width: 71%; height: 600px;"
+        <div class="w-full h-screen">
+            <iframe v-if="currentPack" id="frame" class="pointer-events-auto" style="width: 62.5%; height: 62.5%;"
                 :src="currentUrl" frameborder="0"></iframe>
             <p v-else class="text-gray-900 text-xl bg-gray-200 rounded p-2">
                 Click on the <span>New pack</span> button to begin annotating.
@@ -99,12 +99,12 @@
 
 <style>
     #frame {
-        -ms-zoom: 1.4;
-        -moz-transform: scale(1.4);
+        -ms-zoom: 1.6;
+        -moz-transform: scale(1.6);
         -moz-transform-origin: 0 0;
-        -o-transform: scale(1.4);
+        -o-transform: scale(1.6);
         -o-transform-origin: 0 0;
-        -webkit-transform: scale(1.4);
+        -webkit-transform: scale(1.6);
         -webkit-transform-origin: 0 0;
     }
 

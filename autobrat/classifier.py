@@ -59,7 +59,7 @@ class Model:
         X_training_set = np.vstack(list_vector_word)
         y_training_set = sum(classes, [])
 
-        logger.info("Training")
+        logger.info(f"Training in {len(X_training_set)} examples")
 
         #Train classifier
         classifier = SVC(decision_function_shape='ovo')
