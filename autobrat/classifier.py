@@ -15,7 +15,7 @@ import numpy as np
 import pickle
 
 from scripts.utils import Collection
-from autobrat.data import load_training_entities, load_corpus
+from autobrat.data import load_training_entities, load_corpus, save_corpus
 
 
 logger = logging.getLogger("autobrat.classifier")
@@ -147,8 +147,11 @@ class Model:
             relevance.append(rel)
 
         sorted_relevant_sentences = sorted(zip(relevance, self.unused_sentences), key=lambda x: x[0])
-        return sorted_relevant_sentences[:5]
-        
+
+        self.unused_sentences = [t[1] for t in sorted_relevant_sentences[count:]]
+        save_corpus(self.corpus, self.unused_sentences)
+
+        return sorted_relevant_sentences[:count]
 
 # def _train_and_save(model: Model):
 #     model.lock.acquire()

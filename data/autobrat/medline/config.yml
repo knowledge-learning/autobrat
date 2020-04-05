@@ -3,4 +3,3 @@ index:
 
 corpus: 
     path: "corpus/raw.txt"
-    shuffle: true

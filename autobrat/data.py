@@ -36,7 +36,6 @@ def load_training_entities(corpus, entity_type):
     return sentences, to_biluov(sentences, entities)
 
 
-@lru_cache()
 def load_corpus(corpus):
     config = load_config(corpus)
     corpus_path = config["corpus"]["path"]
@@ -46,10 +45,17 @@ def load_corpus(corpus):
         for line in fp:
             pool.append(line.strip())
 
-    if config["corpus"].get("shuffle", True):
-        random.shuffle(pool)
-
     return pool
+
+
+def save_corpus(corpus, sentences):
+    config = load_config(corpus)
+    corpus_path = config["corpus"]["path"]
+    pool = []
+
+    with open(Path("/data") / corpus / corpus_path, "w") as fp:
+        for line in sentences:
+            fp.write(str(line) + "\n")
 
 
 def load_config(corpus):
