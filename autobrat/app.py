@@ -19,15 +19,13 @@ from fastapi.exceptions import HTTPException
 from autobrat.data import load_config, load_corpus, read_file
 from autobrat.classifier import Model
 
-logging.basicConfig()
-
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="/data"), name="static")
 app.models = {}
 
 
-def get_model(corpus):
+def get_model(corpus: str) -> Model:
     if corpus not in app.models:
         model = Model(corpus)
         model.train()
@@ -53,6 +51,30 @@ def annotate(corpus: str, pack: str = None):
         template = jinja2.Template(fp.read())
 
     return HTMLResponse(template.render(corpus=corpus, pack=pack or ""))
+
+
+@app.post("/{corpus}/task/annotate/entities")
+def task_annotate_entities(corpus: str, pack: str):
+    model = get_model(corpus)
+    text_path = Path("/data") / corpus / "packs" / "open" / pack / "pack.txt"
+
+    with open(text_path) as fp:
+        sentences = [s.strip("\n") for s in fp.readlines()]
+
+    collection = model.predict(sentences)
+    collection.dump(text_path, skip_empty_sentences=False)
+
+    return {"reload": True}
+
+
+@app.post("/{corpus}/task/clear/all")
+def task_annotate_entities(corpus: str, pack: str):
+    ann_path = Path("/data") / corpus / "packs" / "open" / pack / "pack.ann"
+
+    with open(ann_path, "w") as fp:
+        pass
+
+    return {"reload": True}
 
 
 @app.post("/{corpus}/pack/new")

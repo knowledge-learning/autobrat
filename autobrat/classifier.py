@@ -15,7 +15,7 @@ import numpy as np
 import pickle
 
 from scripts.utils import Collection
-from autobrat.data import load_training_entities, load_corpus, save_corpus
+from autobrat.data import load_training_entities, load_corpus, save_corpus, make_sentence
 
 
 logger = logging.getLogger("autobrat.classifier")
@@ -42,7 +42,7 @@ class Model:
 
         #vectorizer
         logger.info("Loading training set")
-        lines, classes = load_training_entities(self.corpus, "Concept")
+        lines, classes = load_training_entities(self.corpus)
 
         list_vector_word = []
         words = []
@@ -70,6 +70,7 @@ class Model:
 
         logger.info("Training finished")
 
+        self.classes = set(y_training_set)
         self.classifier = classifier
 
     def train_async(self):
@@ -121,9 +122,9 @@ class Model:
             for t in s:
                 cl = p_word_class[t.text]
                 cl_s.append(cl)
-            result.append(cl_s)
+            result.append(make_sentence(s, cl_s, self.classes))
 
-        return result
+        return Collection(sentences=result)
 
     def suggest(self, count=5):
         self.warmup()
@@ -168,36 +169,12 @@ class Model:
 
         return sorted_relevant_sentences[:count]
 
-# def _train_and_save(model: Model):
-#     model.lock.acquire()
-#     model.train()
 
-#     name = f"model-{uuid.uuid4()}.pickle"
-#     fname = Path("/data") / model.corpus / name
+def test_predict():
+    model = Model("medline")
+    model.train()
 
-#     with open(fname, "wb") as fp:
-#         pickle.Pickler(fp).dump(model)  
-
-#     os.rename(fname, fname.with_name("model.pickle"))
-
-#     model.lock.release()
-
-
-# def train_and_save(corpus, sync=False):
-#     model = Model(corpus)
-
-#     p = Thread(target=_train_and_save, args=(model,))
-#     p.start()
-    
-#     if sync:
-#         p.join()
-
-#     return p
-
-
-# def load_model(corpus):
-#     with open(Path("/data") / corpus / "model.pickle", "rb") as fp:
-#         return pickle.Unpickler(fp).load()
+    return model.predict(["El niño cuando tiene asma se enferma"])
 
 
 if __name__ == "__main__":

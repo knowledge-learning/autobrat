@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <div id="app" class="p-4 w-9/12 mx-auto flex flex-row">
-        <div class="flex flex-col w-1/4 pr-2">
+    <div id="app" class="p-4 w-full mx-auto flex flex-row relative">
+        <div class="flex flex-col w-100 pr-2">
             <a v-if="!currentPack" @click="new_pack()"
                 class="w-full py-2 px-4 mb-2 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded" href="#">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -30,7 +30,7 @@
                 </svg>
                 Submit this pack
             </a>
-            <a v-if="currentPack" @click=""
+            <a v-if="currentPack" @click="annotate_entities()"
                 class="w-full py-2 px-4 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold rounded" href="#">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     viewBox="0 0 24 24" class="w-6 h-6 inline">
@@ -68,7 +68,7 @@
                 </svg>
                 Clear relations
             </a>
-            <a v-if="currentPack" @click=""
+            <a v-if="currentPack" @click="clear_all()"
                 class="w-full py-2 px-4 mb-2 bg-red-100 hover:bg-red-200 text-red-800 font-bold rounded" href="#">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     viewBox="0 0 24 24" class="w-6 h-6 inline">
@@ -76,7 +76,7 @@
                 </svg>
                 Clear all
             </a>
-            <a v-if="currentPack" @click=""
+            <a v-if="currentPack" @click="skip_pack()"
                 class="w-full py-2 px-4 mb-2 bg-red-100 hover:bg-red-200 text-red-800 font-bold rounded" href="#">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     viewBox="0 0 24 24" class="w-6 h-6 inline">
@@ -87,7 +87,7 @@
                 Skip this pack
             </a>
         </div>
-        <div class="w-3/4">
+        <div class="w-full">
             <iframe v-if="currentPack" id="frame" class="pointer-events-auto" style="width: 71%; height: 600px;"
                 :src="currentUrl" frameborder="0"></iframe>
             <p v-else class="text-gray-900 text-xl bg-gray-200 rounded p-2">
@@ -106,6 +106,10 @@
         -o-transform-origin: 0 0;
         -webkit-transform: scale(1.4);
         -webkit-transform-origin: 0 0;
+    }
+
+    .w-100 {
+        width: 30rem;
     }
 </style>
 
@@ -137,6 +141,9 @@
                             this.currentPack = r.next_pack;
                             window.location.search = "?pack=" + r.next_pack;
                         }
+                        else if (r.reload) {
+                            window.location.reload();
+                        }
                         else {
                             console.error(r);
                             alert(r['detail']);
@@ -149,8 +156,17 @@
             new_pack() {
                 this.post("/{{ corpus }}/pack/new")
             },
+            skip_pack() {
+                this.post("/{{ corpus }}/pack/new")
+            },
             submit_pack() {
                 this.post("/{{ corpus }}/pack/submit?pack=" + this.currentPack)
+            },
+            annotate_entities() {
+                this.post("/{{ corpus }}/task/annotate/entities?pack=" + this.currentPack)
+            },
+            clear_all() {
+                this.post("/{{ corpus }}/task/clear/all?pack=" + this.currentPack)
             }
         }
     })

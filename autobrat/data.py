@@ -5,10 +5,13 @@ import numpy as np
 import spacy
 import random
 import yaml
+import logging
+
+logger = logging.getLogger("autobrat.data")
 
 from functools import lru_cache
 from pathlib import Path
-from scripts.utils import Collection
+from scripts.utils import Collection, Sentence, Keyphrase
 
 # Remember to split tokens that contain whitespaces (len(t.text.split()) > 1)
 # when writting output (when reading it is not necessary).
@@ -25,15 +28,26 @@ def load_training_data(corpus):
     return collection
 
 
-def load_training_entities(corpus, entity_type):
+def load_training_entities(corpus):
     nlp = spacy.load('es')
 
     collection = load_training_data(corpus)
 
+    entity_types = set(keyphrase.label for sentence in collection.sentences for keyphrase in sentence.keyphrases)
     sentences = [nlp(s.text) for s in collection.sentences]
-    entities = [[p.spans for p in s.keyphrases if p.label == entity_type] for s in collection.sentences]
 
-    return sentences, to_biluov(sentences, entities)
+    mapping = [['O'] * len(s) for s in sentences]
+
+    for entity_type in sorted(entity_types):
+        entities = [[p.spans for p in s.keyphrases if p.label == entity_type] for s in collection.sentences]
+        bilouv = to_biluov(sentences, entities)
+
+        for accum, tags in zip(mapping, bilouv):
+            for i, (previous_tag, new_tag) in enumerate(zip(accum, tags)):
+                if previous_tag == 'O' and new_tag != 'O':
+                    accum[i] = f"{new_tag}_{entity_type}"
+
+    return sentences, mapping
 
 
 def load_corpus(corpus):
@@ -127,6 +141,32 @@ def select_tag(matches):
         return matches[0][1]
     tags = [tag for _, tag in matches]
     return "U" if ("U" in tags and not "B" in tags and not "L" in tags) else "V"
+
+
+def make_sentence(doc, bilouv, labels):
+    sentence = Sentence(doc.text)
+
+    logger.debug(f"[make_sentence]: doc.text={doc.text}")
+    logger.debug(f"[make_sentence]: bilouv={bilouv}")
+
+    labels = set(l[2:] for l in labels if l != 'O')
+    
+    for label in labels:
+        specific_bilouv = []
+
+        for tag in bilouv:
+            if tag.endswith(label):
+                tag = tag[0]
+                specific_bilouv.append(tag[0])
+            else:
+                specific_bilouv.append('O')
+
+        logger.debug(f"[make_sentence]: label={label} specific_bilouv={specific_bilouv}")
+
+        spans = from_biluov(specific_bilouv, doc, spans=True)
+        sentence.keyphrases.extend(Keyphrase(sentence, label, i, sp) for i,sp in enumerate(spans))
+
+    return sentence
 
 
 def from_biluov(biluov, sentence, *, spans=False, drop_remaining=[]):
