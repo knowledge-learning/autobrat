@@ -115,7 +115,7 @@
     var App = new Vue({
         el: "#app",
         data: {
-            currentPack: null,
+            currentPack: "{{ pack }}",
             corpus: "{{ corpus }}"
         },
         computed: {
@@ -135,6 +135,7 @@
                     .then(r => {
                         if (r.next_pack) {
                             this.currentPack = r.next_pack;
+                            window.location.search = "?pack=" + r.next_pack;
                         }
                         else {
                             console.error(r);

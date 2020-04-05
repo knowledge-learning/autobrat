@@ -48,11 +48,11 @@ def index(corpus: str):
 
 
 @app.get("/{corpus}/annotate", response_class=HTMLResponse)
-def annotate(corpus: str):
+def annotate(corpus: str, pack: str = None):
     with open("/code/templates/annotation.html") as fp:
         template = jinja2.Template(fp.read())
 
-    return HTMLResponse(template.render(corpus=corpus))
+    return HTMLResponse(template.render(corpus=corpus, pack=pack or ""))
 
 
 @app.post("/{corpus}/pack/new")
@@ -64,7 +64,7 @@ def new_pack(corpus: str):
 def submit_pack(corpus: str, pack: str):
     check_pack(corpus, pack)
     get_model(corpus).train_async()
-    
+
     return {"next_pack": ensure_pack(corpus)}
 
 
