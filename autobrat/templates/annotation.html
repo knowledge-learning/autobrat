@@ -115,7 +115,7 @@
     var App = new Vue({
         el: "#app",
         data: {
-            currentPack: "57ac541a-ca2c-4a5e-a20e-be19e0a9e56d",
+            currentPack: null,
             corpus: "{{ corpus }}"
         },
         computed: {
@@ -138,6 +138,7 @@
                         }
                         else {
                             console.error(r);
+                            alert(r['detail']);
                         }
                     })
                     .catch(error => {

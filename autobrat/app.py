@@ -5,6 +5,8 @@ import markdown
 import jinja2
 import yaml
 import shutil
+import collections
+import logging
 
 from pathlib import Path
 from functools import lru_cache
@@ -17,9 +19,21 @@ from fastapi.exceptions import HTTPException
 from autobrat.data import load_config, load_corpus, read_file
 from autobrat.classifier import Model
 
+logging.basicConfig()
+
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="/data"), name="static")
+app.models = {}
+
+
+def get_model(corpus):
+    if corpus not in app.models:
+        model = Model(corpus)
+        model.train()
+        app.models[corpus] = model
+
+    return app.models[corpus]
 
 
 @app.get("/{corpus}", response_class=HTMLResponse)
@@ -30,7 +44,7 @@ def index(corpus: str):
     with open("/code/templates/index.html") as fp:
         template = jinja2.Template(fp.read())
 
-    return HTMLResponse(template.render(readme=markdown.markdown(readme)))
+    return HTMLResponse(template.render(readme=markdown.markdown(readme), corpus=corpus))
 
 
 @app.get("/{corpus}/annotate", response_class=HTMLResponse)
@@ -48,7 +62,7 @@ def new_pack(corpus: str):
 
 @app.post("/{corpus}/pack/submit")
 def submit_pack(corpus: str, pack: str):
-    check_pack(corpus, pack) 
+    check_pack(corpus, pack)
     return {"next_pack": ensure_pack(corpus)}
 
 
@@ -77,8 +91,7 @@ def ensure_pack(corpus):
     ann_path = pack_path.with_suffix(".ann")
     os.makedirs(pack_path.parent)
 
-    model = Model(corpus)
-    model.train()
+    model = get_model(corpus)
 
     with open(pack_path, "w") as fp:
         for score, doc in model.suggest():
