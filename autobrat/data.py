@@ -17,6 +17,10 @@ from scripts.utils import Collection, Sentence, Keyphrase
 # when writting output (when reading it is not necessary).
 
 
+def spacy_model(language):
+    return spacy.load(language)
+
+
 def load_training_data(corpus):
     packs = Path("/data") / corpus / "packs/submitted/"
 
@@ -29,7 +33,7 @@ def load_training_data(corpus):
 
 
 def load_training_entities(corpus):
-    nlp = spacy.load('es')
+    nlp = spacy_model('es')
     collection = load_training_data(corpus)
 
     entity_types = set(keyphrase.label for sentence in collection.sentences for keyphrase in sentence.keyphrases)
@@ -50,7 +54,7 @@ def load_training_entities(corpus):
 
 
 def load_training_relations(corpus, negative_sampling=1.0):
-    nlp = spacy.load('es')
+    nlp = spacy_model('es')
     collection = load_training_data(corpus)
 
     word_pairs = []
