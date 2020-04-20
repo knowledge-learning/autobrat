@@ -40,7 +40,7 @@
                 </svg>
                 Pre-annotate entities
             </a>
-            <a v-if="currentPack" @click=""
+            <a v-if="currentPack" @click="annotate_relations()"
                 class="w-full py-2 px-4 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold rounded" href="#">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     viewBox="0 0 24 24" class="w-6 h-6 inline">
@@ -50,7 +50,7 @@
                 </svg>
                 Pre-annotate relations
             </a>
-            <a v-if="currentPack" @click=""
+            <a v-if="currentPack" @click="annotate_all()"
                 class="w-full py-2 px-4 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold rounded" href="#">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     viewBox="0 0 24 24" class="w-6 h-6 inline">
@@ -60,7 +60,7 @@
                 </svg>
                 Pre-annotate all
             </a>            
-            <a v-if="currentPack" @click=""
+            <a v-if="currentPack" @click="clear_relations()"
                 class="w-full py-2 px-4 mb-2 bg-red-100 hover:bg-red-200 text-red-800 font-bold rounded" href="#">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     viewBox="0 0 24 24" class="w-6 h-6 inline">
@@ -165,8 +165,17 @@
             annotate_entities() {
                 this.post("/{{ corpus }}/task/annotate/entities?pack=" + this.currentPack)
             },
+            annotate_relations() {
+                this.post("/{{ corpus }}/task/annotate/relations?pack=" + this.currentPack)
+            },
+            annotate_all() {
+                this.post("/{{ corpus }}/task/annotate/all?pack=" + this.currentPack)
+            },
             clear_all() {
                 this.post("/{{ corpus }}/task/clear/all?pack=" + this.currentPack)
+            },
+            clear_relations() {
+                this.post("/{{ corpus }}/task/clear/relations?pack=" + this.currentPack)
             }
         }
     })

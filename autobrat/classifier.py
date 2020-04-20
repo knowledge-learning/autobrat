@@ -91,14 +91,22 @@ class Model:
 
         return relevant / len(sentence)
 
-    def predict(self, sentences):
+    def predict_entities(self, sentences):
         """Predice para cada palabra su etiqueta
         """
         self.warmup()
         collection = self.entity_classifier.predict_entities(sentences)
-        collection = self.relation_classifier.predict_relations(collection)
-
         return collection
+
+    def predict_relations(self, collection):
+        """Predice para cada oración todas las relaciones
+        """
+        self.warmup()
+        collection = self.relation_classifier.predict_relations(collection)
+        return collection
+
+    def predict(self, sentences):
+        return self.predict_relations(self.predict_entities(sentences))
 
     def suggest(self, count=5):
         """Devuelve las k oraciones más relevantes
@@ -196,7 +204,6 @@ class ClassifierEntity:
             result.append(sentence)
 
         return Collection(sentences=result)
-
 
     def train_entities(self, lines, classes):
         list_vector_word = []

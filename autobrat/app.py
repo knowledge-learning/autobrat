@@ -18,6 +18,7 @@ from fastapi.exceptions import HTTPException
 
 from autobrat.data import load_config, load_corpus, read_file
 from autobrat.classifier import Model
+from scripts.utils import Collection
 
 app = FastAPI()
 
@@ -61,6 +62,32 @@ def task_annotate_entities(corpus: str, pack: str):
     with open(text_path) as fp:
         sentences = [s.strip("\n") for s in fp.readlines()]
 
+    collection = model.predict_entities(sentences)
+    collection.dump(text_path, skip_empty_sentences=False)
+
+    return {"reload": True}
+
+
+@app.post("/{corpus}/task/annotate/relations")
+def task_annotate_relations(corpus: str, pack: str):
+    model = get_model(corpus)
+    text_path = Path("/data") / corpus / "packs" / "open" / pack / "pack.txt"
+
+    collection = Collection().load(text_path)
+    collection = model.predict_relations(collection)
+    collection.dump(text_path, skip_empty_sentences=False)
+
+    return {"reload": True}
+
+
+@app.post("/{corpus}/task/annotate/all")
+def task_annotate_all(corpus: str, pack: str):
+    model = get_model(corpus)
+    text_path = Path("/data") / corpus / "packs" / "open" / pack / "pack.txt"
+
+    with open(text_path) as fp:
+        sentences = [s.strip("\n") for s in fp.readlines()]
+
     collection = model.predict(sentences)
     collection.dump(text_path, skip_empty_sentences=False)
 
@@ -68,11 +95,26 @@ def task_annotate_entities(corpus: str, pack: str):
 
 
 @app.post("/{corpus}/task/clear/all")
-def task_annotate_entities(corpus: str, pack: str):
+def task_clear_all(corpus: str, pack: str):
     ann_path = Path("/data") / corpus / "packs" / "open" / pack / "pack.ann"
 
     with open(ann_path, "w") as fp:
         pass
+
+    return {"reload": True}
+
+
+@app.post("/{corpus}/task/clear/relations")
+def task_clear_all(corpus: str, pack: str):
+    path = Path("/data") / corpus / "packs" / "open" / pack / "pack.txt"
+
+    collection = Collection()
+    collection.load(path)
+
+    for sentence in collection.sentences:
+        sentence.relations = []
+
+    collection.dump(path)
 
     return {"reload": True}
 
