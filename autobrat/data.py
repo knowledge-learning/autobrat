@@ -30,7 +30,6 @@ def load_training_data(corpus):
 
 def load_training_entities(corpus):
     nlp = spacy.load('es')
-
     collection = load_training_data(corpus)
 
     entity_types = set(keyphrase.label for sentence in collection.sentences for keyphrase in sentence.keyphrases)
@@ -48,6 +47,57 @@ def load_training_entities(corpus):
                     accum[i] = f"{new_tag}_{entity_type}"
 
     return sentences, mapping
+
+
+def load_training_relations(corpus, negative_sampling=1.0):
+    nlp = spacy.load('es')
+    collection = load_training_data(corpus)
+
+    word_pairs = []
+    relations = []
+
+    for sentence in collection.sentences:
+        tokens = nlp(sentence.text)
+        for relation in sentence.relations:
+            k1 = relation.from_phrase
+            k2 = relation.to_phrase
+
+            word_pairs.append(_extract_keyphrases_features(tokens, k1, k2))
+            relations.append(relation.label)
+
+        for k1 in sentence.keyphrases:
+            for k2 in sentence.keyphrases:
+                if not sentence.find_relations(k1, k2) and random.uniform(0, 1) < negative_sampling:
+                    word_pairs.append(_extract_keyphrases_features(tokens, k1, k2))
+                    relations.append("")        
+
+    return word_pairs, relations
+            
+
+def _extract_keyphrases_features(tokens, k1: Keyphrase, k2: Keyphrase):
+    tokens_k1 = _find_tokens_by_spans(tokens, k1.spans)
+    tokens_k2 = _find_tokens_by_spans(tokens, k2.spans)
+
+    vectors_k1 = [token.vector for token in tokens_k1]
+    vectors_k2 = [token.vector for token in tokens_k2]
+    zero = np.zeros_like(vectors_k1[0])
+
+    vector_k1 = sum(vectors_k1, zero)
+    vector_k2 = sum(vectors_k2, zero)
+
+    return np.hstack((vector_k1, vector_k2))
+    
+
+def _find_tokens_by_spans(tokenized_sentence, keyphrase_spans):
+    tokens = []
+
+    for token in tokenized_sentence:
+        for begin, end in keyphrase_spans:
+            if token.idx >= begin and token.idx + len(token) <= end:
+                tokens.append(token)
+                break
+
+    return tokens
 
 
 def load_corpus(corpus):
@@ -143,7 +193,7 @@ def select_tag(matches):
     return "U" if ("U" in tags and not "B" in tags and not "L" in tags) else "V"
 
 
-def make_sentence(doc, bilouv, labels):
+def make_sentence(doc, bilouv, labels) -> Sentence:
     sentence = Sentence(doc.text)
 
     logger.debug(f"[make_sentence]: doc.text={doc.text}")

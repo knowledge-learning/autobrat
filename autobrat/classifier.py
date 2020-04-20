@@ -14,8 +14,15 @@ import spacy
 import numpy as np
 import pickle
 
-from scripts.utils import Collection
-from autobrat.data import load_training_entities, load_corpus, save_corpus, make_sentence
+from scripts.utils import Collection, Keyphrase, Relation, Sentence
+from autobrat.data import (
+    load_training_entities,
+    load_corpus,
+    save_corpus,
+    make_sentence,
+    load_training_relations,
+    _extract_keyphrases_features,
+)
 
 
 logger = logging.getLogger("autobrat.classifier")
@@ -24,7 +31,7 @@ logger = logging.getLogger("autobrat.classifier")
 class Model:
     def __init__(self, corpus):
         self.corpus = corpus
-        self.nlp = None    
+        self.nlp = None
         self.lock = Lock()
 
     def warmup(self):
@@ -32,7 +39,7 @@ class Model:
             return
 
         logger.info("Creating spacy model")
-        self.nlp = spacy.load('es')
+        self.nlp = spacy.load("es")
 
         logger.info("Loading unused corpora")
         self.unused_sentences = [self.nlp(s) for s in load_corpus(self.corpus)]
@@ -40,8 +47,17 @@ class Model:
     def train(self):
         self.warmup()
 
-        #vectorizer
-        logger.info("Loading training set")
+        self.train_entities()
+        self.train_relations()
+
+        if self.lock.locked():
+            self.lock.release()
+
+        logger.info("Training finished")
+
+    def train_entities(self):
+        # vectorizer
+        logger.info("Loading entities training set")
         lines, classes = load_training_entities(self.corpus)
 
         list_vector_word = []
@@ -61,17 +77,27 @@ class Model:
 
         logger.info(f"Training in {len(X_training_set)} examples")
 
-        #Train classifier
-        classifier = SVC(decision_function_shape='ovo')
+        # Train classifier
+        classifier = SVC(decision_function_shape="ovo")
         classifier.fit(X_training_set, y_training_set)
-
-        if self.lock.locked():
-            self.lock.release()
-
-        logger.info("Training finished")
 
         self.classes = set(y_training_set)
         self.classifier = classifier
+
+    def train_relations(self):
+        """Entrena el clasificador de relaciones con un par de palabras y 
+        la relación correspondiente entre ellas, incluyendo la relación NONE.
+        """
+        logger.info("Loading relations training set")
+
+        word_pairs, relations = load_training_relations(self.corpus, negative_sampling=0.1)
+        self.classes_rel = set(relations)
+
+        logger.info(f"Training in {len(word_pairs)} relation pairs")
+
+        # Train classifier
+        self.classifier_rel = SVC(decision_function_shape="ovo")
+        self.classifier_rel.fit(word_pairs, relations)
 
     def train_async(self):
         if self.lock.locked():
@@ -85,13 +111,15 @@ class Model:
 
     def relevant_sentence(self, sentence, relevant_words):
         relevant = 0
-        
+
         for i in sentence:
             relevant += relevant_words[i.text]
 
-        return relevant/len(sentence)
+        return relevant / len(sentence)
 
     def predict(self, sentences):
+        """Predice para cada palabra su etiqueta
+        """
         self.warmup()
 
         p_list_vector_word = []
@@ -107,29 +135,60 @@ class Model:
             for p_token in p_doc:
                 p_words.append(p_token.text)
                 p_list_vector_word.append(p_token.vector)
-        
-        #calcula la predicción para cada palabra
+
+        # calcula la predicción para cada palabra
         X_test_set = np.vstack(p_list_vector_word)
         y_test_estimated = self.classifier.predict(X_test_set)
-        
-        for i,w in enumerate(p_words):
+
+        for i, w in enumerate(p_words):
             p_word_class[w] = y_test_estimated[i]
 
-        #crear la lista de prediciones para cada oración
+        # crear la lista de prediciones para cada oración
         result = []
         for s in p_list_sentences:
             cl_s = []
             for t in s:
                 cl = p_word_class[t.text]
                 cl_s.append(cl)
-            result.append(make_sentence(s, cl_s, self.classes))
+
+            # construir una oración de Brat transformando las predicciones
+            # en formato BILOV (que es lo que está en `cl_s`) a objetos Keyphrase
+            sentence = make_sentence(s, cl_s, self.classes)
+            sentence.fix_ids()
+            tokens = self.nlp(sentence.text)
+            
+            # predecir la relación más probable para cada par de palabras
+            for k1 in sentence.keyphrases:
+
+                for k2 in sentence.keyphrases:
+                    if k1 == k2:
+                        continue
+
+                    # k1 y k2 son Keyphrases, convertir a features
+                    vector_pair = _extract_keyphrases_features(tokens, k1, k2)
+                    relation_label = self.predict_relations(vector_pair)
+
+                    if relation_label:
+                        sentence.relations.append(Relation(sentence, k1.id, k2.id, relation_label))
+                    
+                    print(k1, k2, relation_label)
+
+            result.append(sentence)
 
         return Collection(sentences=result)
 
+    def predict_relations(self, vector_pair):
+        """Predice para cada par de palabras la relación.
+        """
+        y_test_rel = self.classifier_rel.predict(vector_pair.reshape(1,-1))
+        return y_test_rel[0]
+
     def suggest(self, count=5):
+        """Devuelve las k oraciones más relevantes
+        """
         self.warmup()
 
-        #procesar corpus de oraciones sin clasificar (vectorizarlas)
+        # procesar corpus de oraciones sin clasificar (vectorizarlas)
         s_list_vector_word = []
         s_words = []
 
@@ -139,21 +198,21 @@ class Model:
             for s_token in s_doc:
                 s_words.append(s_token.text)
                 s_list_vector_word.append(s_token.vector)
-        
+
         X_pool_set = np.vstack(s_list_vector_word)
 
         logger.info("Predicting suggestion score")
 
-        #metric
+        # metric
         weigth = self.classifier.decision_function(X_pool_set)
-        relevant_words = { w:f.max() for w,f in zip(s_words, weigth) }
+        relevant_words = {w: f.max() for w, f in zip(s_words, weigth)}
 
-        #relevancia por palabra
-        #la seguridad de la clase más problable
+        # relevancia por palabra
+        # la seguridad de la clase más problable
 
-        #calcular la relevancia para cada oración
-        #teniendo en cuenta la relevancia de cada una de las palabras entre el total de palabras
-        #o sea la oración que tiene la mínima confianza en la clase más probable
+        # calcular la relevancia para cada oración
+        # teniendo en cuenta la relevancia de cada una de las palabras entre el total de palabras
+        # o sea la oración que tiene la mínima confianza en la clase más probable
         relevance = []
 
         logger.info("Selecting suggestion sentences")
@@ -162,7 +221,9 @@ class Model:
             rel = self.relevant_sentence(s, relevant_words)
             relevance.append(rel)
 
-        sorted_relevant_sentences = sorted(zip(relevance, self.unused_sentences), key=lambda x: x[0])
+        sorted_relevant_sentences = sorted(
+            zip(relevance, self.unused_sentences), key=lambda x: x[0]
+        )
 
         self.unused_sentences = [t[1] for t in sorted_relevant_sentences[count:]]
         save_corpus(self.corpus, self.unused_sentences)
