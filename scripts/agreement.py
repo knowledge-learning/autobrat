@@ -7,14 +7,18 @@ from typing import List
 from scripts.score import (
     CORRECT_A,
     CORRECT_B,
+    CORRECT_C,
     INCORRECT_A,
     MISSING_A,
     MISSING_B,
+    MISSING_C,
     PARTIAL_A,
     SPURIOUS_A,
     SPURIOUS_B,
+    SPURIOUS_C,
     align,
     compare_text,
+    match_attributes,
     match_keyphrases,
     match_relations,
     normalize,
@@ -80,8 +84,15 @@ def relations_agreement(data):
     return c_score / n if n else 1.0
 
 
+def attributes_agreement(data):
+    c_score = len(data[CORRECT_C])
+    n = sum(len(data[x]) for x in [CORRECT_C, MISSING_C, SPURIOUS_C])
+    # print(c_score, len(data[MISSING_C]), len(data[SPURIOUS_C]))
+    return c_score / n if n else 1.0
+
+
 def agreement(data):
-    c_score = len(data[CORRECT_A]) + len(data[CORRECT_B])
+    c_score = len(data[CORRECT_A]) + len(data[CORRECT_B]) + len(data[CORRECT_C])
     p_score = sum(partial_score(a, b) for a, b in data[PARTIAL_A].items())
     n = sum(len(ann) for ann in data.values())
     # print(c_score, p_score, len(data[PARTIAL_A]), len(data[MISSING_A]),
@@ -94,6 +105,7 @@ def compute_metrics(data):
     return {
         "concepts_agreement": concepts_agreement(data),
         "relations_agreement": relations_agreement(data),
+        "attributes_agreement": attributes_agreement(data),
         "agreement": agreement(data),
     }
 
@@ -209,12 +221,25 @@ def main(gold_dir: Path, submit_dir: Path, propagate_error=True):
     relations = sorted(
         set(x.label for s in gold_collection.sentences for x in s.relations)
     )
+    attributes = sorted(
+        set(
+            x.label
+            for s in gold_collection.sentences
+            for k in s.keyphrases
+            for x in k.attributes
+        )
+    )
 
     history = {}
 
     for labels, select in zip(
-        [keyphrases, relations, ["Global"]],
-        [Collection.filter_keyphrase, Collection.filter_relation, lambda x, y: x],
+        [keyphrases, relations, attributes, ["Global"]],
+        [
+            Collection.filter_keyphrase,
+            Collection.filter_relation,
+            Collection.filter_attribute,
+            lambda x, y: x,
+        ],
     ):
         for label in labels:
             gold = select(gold_collection, [label, "same-as"])
@@ -233,6 +258,11 @@ def main(gold_dir: Path, submit_dir: Path, propagate_error=True):
                 propagate_error=propagate_error,
             )
             data.update(dataB)
+
+            dataC = match_attributes(
+                gold, submit, data, propagate_error=propagate_error
+            )
+            data.update(dataC)
 
             history[label] = data
             metrics = compute_metrics(data)
