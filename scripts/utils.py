@@ -98,6 +98,9 @@ class Keyphrase:
             )
         )
 
+    def find_attributes(self, label) -> Attribute:
+        return [attr for attr in self.attributes if attr.label == label]
+
 
 class Relation:
     def __init__(self, sentence, origin, destination, label):
