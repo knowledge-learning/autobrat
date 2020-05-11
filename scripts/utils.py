@@ -98,7 +98,7 @@ class Keyphrase:
             )
         )
 
-    def find_attributes(self, label) -> Attribute:
+    def find_attributes(self, label) -> "Attribute":
         return [attr for attr in self.attributes if attr.label == label]
 
 
@@ -359,17 +359,42 @@ class Collection:
         for s in self.sentences:
             next_id = s.fix_ids(next_id)
 
-    def filter(
-        self, keyphrase=(lambda k: True), relation=(lambda r: True)
-    ) -> "Collection":
+    def filter(self, keyphrase=None, relation=None, attribute=None,) -> "Collection":
         sentences = []
         for sentence in self.sentences:
             s = Sentence(sentence.text)
-            s.keyphrases = [k.clone(s) for k in sentence.keyphrases if keyphrase(k)]
+
+            # keyphrases
+            s.keyphrases = [
+                k.clone(s)
+                for k in sentence.keyphrases
+                if keyphrase is None or keyphrase(k)
+            ]
+
+            # attributes
+            if attribute is not None:
+                for k in s.keyphrases:
+                    k.attributes = [
+                        a for a in k.attributes if attribute is None or attribute(a)
+                    ]
+                s.keyphrases = [k for k in s.keyphrases if k.attributes]
+
+            # relations
             s.relations = [
                 r.clone(s)
                 for r in sentence.relations
-                if keyphrase(r.from_phrase) and keyphrase(r.to_phrase) and relation(r)
+                if (relation is None or relation(r))
+                and (
+                    keyphrase is None
+                    or (keyphrase(r.from_phrase) and keyphrase(r.to_phrase))
+                )
+                and (
+                    attribute is None
+                    or (
+                        any(attribute(a) for a in r.from_phrase.attributes)
+                        and any(attribute(a) for a in r.to_phrase.attributes)
+                    )
+                )
             ]
             sentences.append(s)
         return Collection(sentences)
@@ -379,6 +404,9 @@ class Collection:
 
     def filter_relation(self, labels) -> "Collection":
         return self.filter(relation=lambda r: r.label in labels)
+
+    def filter_attribute(self, labels) -> "Collection":
+        return self.filter(attribute=lambda a: a.label in labels)
 
     def find_first_match(self, text) -> Sentence:
         matches = self.find_matches(text)
