@@ -1,6 +1,8 @@
 import argparse
+import warnings
 from collections import OrderedDict
 from pathlib import Path
+from typing import List
 
 from scripts.score import (
     CORRECT_A,
@@ -14,7 +16,7 @@ from scripts.score import (
     match_keyphrases,
     match_relations,
 )
-from scripts.utils import Collection, DisjointSet
+from scripts.utils import Collection, DisjointSet, Sentence
 
 
 def partial_score(keyphrase1, keyphrase2):
@@ -125,16 +127,62 @@ def load_corpus(anns_path: Path, clean=True) -> Collection:
     return collection
 
 
+def normalize(s: str):
+    return "".join(c.lower() for c in s if c.isalnum())
+
+
+def compare_text(s1: str, s2: str):
+    return normalize(s1) == normalize(s2)
+
+
+def align(gold_sentences: List[Sentence], submit_sentences: List[Sentence]):
+    gold_sentences: List[Sentence] = list(gold_sentences)
+    submit_sentences: List[Sentence] = list(submit_sentences)
+
+    while gold_sentences and submit_sentences:
+        gold = gold_sentences[0]
+        submit = submit_sentences[0]
+
+        # si las oraciones coinciden, devolver ambas normalmente
+        if compare_text(gold.text, submit.text):
+            gold_sentences.pop(0)
+            submit_sentences.pop(0)
+            yield (gold, submit)
+            continue
+
+        # las oraciones no coinciden, asumiremos que en submit falta esta oración
+        # generamos una oración sin anotar con el mismo text del gold
+        submit = Sentence(gold.text)
+        gold_sentences.pop(0)
+
+        warnings.warn("Match not found for gold sentence: %r" % gold.text)
+        yield (gold, submit)
+
+    while gold_sentences:
+        # todas estas oraciones faltan por anotar
+        gold = gold_sentences.pop(0)
+        warnings.warn(
+            "Match not found for gold sentence (submission ended): %r" % gold.text
+        )
+        yield (gold, Sentence(gold.text))
+
+    while submit_sentences:
+        submit = submit_sentences.pop(0)
+        warnings.warn(
+            "Spurious submission sentence not considered (gold ended): %r" % submit.text
+        )
+
+
 def coordinate(gold, submit):
     i = 0
     while i < min(len(gold), len(submit)):
-        if gold.sentences[i].text == submit.sentences[i].text:
+        if compare_text(gold.sentences[i].text, submit.sentences[i].text):
             i += 1
             continue
-        if gold.sentences[i + 1].text == submit.sentences[i].text:
+        if compare_text(gold.sentences[i + 1].text, submit.sentences[i].text):
             print("Dropped:", gold.sentences[i].text)
             del gold.sentences[i]
-        elif gold.sentences[i].text == submit.sentences[i + 1].text:
+        elif compare_text(gold.sentences[i].text, submit.sentences[i + 1].text):
             print("Dropped:", submit.sentences[i].text)
             del submit.sentences[i]
         else:
@@ -149,7 +197,9 @@ def coordinate(gold, submit):
 
 
 def unstable_coordinating(gold: Collection, submit: Collection):
-    texts = {s.text for s in gold.sentences} & {s.text for s in submit.sentences}
+    texts = {normalize(s.text) for s in gold.sentences} & {
+        normalize(s.text) for s in submit.sentences
+    }
     copy = texts.copy()
 
     print(len(gold))
@@ -157,7 +207,7 @@ def unstable_coordinating(gold: Collection, submit: Collection):
 
     gold_sentences = []
     for s in gold.sentences:
-        if s.text in texts:
+        if normalize(s.text) in texts:
             gold_sentences.append(s)
             texts.remove(s.text)
         else:
@@ -168,7 +218,7 @@ def unstable_coordinating(gold: Collection, submit: Collection):
 
     submit_sentences = []
     for s in submit.sentences:
-        if s.text in texts:
+        if normalize(s.text) in texts:
             submit_sentences.append(s)
             texts.remove(s.text)
         else:
@@ -181,11 +231,18 @@ def unstable_coordinating(gold: Collection, submit: Collection):
     print(len(submit))
 
 
+def stable_coordinating(gold: Collection, submit: Collection):
+    gold.sentences, submit.sentences = zip(*align(gold.sentences, submit.sentences))
+    print(len(gold))
+    print(len(submit))
+
+
 def main(gold_dir: Path, submit_dir: Path, propagate_error=True):
     gold_collection = load_corpus(gold_dir)
     submit_collection = load_corpus(submit_dir)
-    coordinate(gold_collection, submit_collection)
+    # coordinate(gold_collection, submit_collection)
     # unstable_coordinating(gold_collection, submit_collection)
+    stable_coordinating(gold_collection, submit_collection)
 
     keyphrases = sorted(
         set(x.label for s in gold_collection.sentences for x in s.keyphrases)
