@@ -13,8 +13,11 @@ from scripts.score import (
     PARTIAL_A,
     SPURIOUS_A,
     SPURIOUS_B,
+    align,
+    compare_text,
     match_keyphrases,
     match_relations,
+    normalize,
 )
 from scripts.utils import Collection, DisjointSet, Sentence
 
@@ -125,52 +128,6 @@ def load_corpus(anns_path: Path, clean=True) -> Collection:
             assert not dups
 
     return collection
-
-
-def normalize(s: str):
-    return "".join(c.lower() for c in s if c.isalnum())
-
-
-def compare_text(s1: str, s2: str):
-    return normalize(s1) == normalize(s2)
-
-
-def align(gold_sentences: List[Sentence], submit_sentences: List[Sentence]):
-    gold_sentences: List[Sentence] = list(gold_sentences)
-    submit_sentences: List[Sentence] = list(submit_sentences)
-
-    while gold_sentences and submit_sentences:
-        gold = gold_sentences[0]
-        submit = submit_sentences[0]
-
-        # si las oraciones coinciden, devolver ambas normalmente
-        if compare_text(gold.text, submit.text):
-            gold_sentences.pop(0)
-            submit_sentences.pop(0)
-            yield (gold, submit)
-            continue
-
-        # las oraciones no coinciden, asumiremos que en submit falta esta oración
-        # generamos una oración sin anotar con el mismo text del gold
-        submit = Sentence(gold.text)
-        gold_sentences.pop(0)
-
-        warnings.warn("Match not found for gold sentence: %r" % gold.text)
-        yield (gold, submit)
-
-    while gold_sentences:
-        # todas estas oraciones faltan por anotar
-        gold = gold_sentences.pop(0)
-        warnings.warn(
-            "Match not found for gold sentence (submission ended): %r" % gold.text
-        )
-        yield (gold, Sentence(gold.text))
-
-    while submit_sentences:
-        submit = submit_sentences.pop(0)
-        warnings.warn(
-            "Spurious submission sentence not considered (gold ended): %r" % submit.text
-        )
 
 
 def coordinate(gold, submit):
