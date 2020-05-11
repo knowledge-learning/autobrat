@@ -4,7 +4,7 @@ import argparse
 import warnings
 from collections import OrderedDict
 from pathlib import Path
-from typing import List
+from typing import List, Tuple
 
 from scripts.utils import Collection, DisjointSet, Sentence
 
@@ -17,6 +17,10 @@ MISSING_A = "missing_A"
 CORRECT_B = "correct_B"
 SPURIOUS_B = "spurious_B"
 MISSING_B = "missing_B"
+
+CORRECT_C = "correct_C"
+SPURIOUS_C = "spurious_C"
+MISSING_C = "missing_C"
 
 SAME_AS = "same-as"
 
@@ -140,7 +144,9 @@ def compare_text(s1: str, s2: str):
     return normalize(s1) == normalize(s2)
 
 
-def align(gold_sentences: List[Sentence], submit_sentences: List[Sentence]):
+def align(
+    gold_sentences: List[Sentence], submit_sentences: List[Sentence]
+) -> Tuple[Sentence, Sentence]:
     gold_sentences: List[Sentence] = list(gold_sentences)
     submit_sentences: List[Sentence] = list(submit_sentences)
 
@@ -159,19 +165,23 @@ def align(gold_sentences: List[Sentence], submit_sentences: List[Sentence]):
         # generamos una oración sin anotar con el mismo text del gold
         submit = Sentence(gold.text)
         gold_sentences.pop(0)
-    
+
         warnings.warn("Match not found for gold sentence: %r" % gold.text)
         yield (gold, submit)
 
     while gold_sentences:
         # todas estas oraciones faltan por anotar
         gold = gold_sentences.pop(0)
-        warnings.warn("Match not found for gold sentence (submission ended): %r" % gold.text)
+        warnings.warn(
+            "Match not found for gold sentence (submission ended): %r" % gold.text
+        )
         yield (gold, Sentence(gold.text))
 
     while submit_sentences:
         submit = submit_sentences.pop(0)
-        warnings.warn("Spurious submission sentence not considered (gold ended): %r" % submit.text)
+        warnings.warn(
+            "Spurious submission sentence not considered (gold ended): %r" % submit.text
+        )
 
 
 def match_relations(gold, submit, data, skip_same_as=False, propagate_error=True):
@@ -295,7 +305,55 @@ def map_keyphrase(keyphrase, data):
     return None
 
 
-def compute_metrics(data, skipA=False, skipB=False):
+def subtaskC(gold, submit, data, verbose=False):
+    return match_attributes(gold, submit, data)
+
+
+def match_attributes(gold: Collection, submit: Collection, data, propagate_error=True):
+    correct = {}
+    spurious = []
+    missing = []
+
+    correct_keyphrases = [data[CORRECT_A], data[INCORRECT_A], data[PARTIAL_A]]
+
+    for mapper in correct_keyphrases:
+        for gold_kp, submit_kp in mapper.items():
+
+            gold_attributes = gold_kp.attributes[:]
+            submit_attributes = submit_kp.attributes[:]
+
+            # correct
+            for g_attr in gold_attributes[:]:
+                for s_attr in submit_attributes[:]:
+                    if s_attr.label == g_attr.label:
+                        correct[g_attr] = s_attr
+                        gold_attributes.remove(g_attr)
+                        submit_attributes.remove(s_attr)
+                        break
+
+            # spurious
+            spurious.extend(submit_attributes)
+
+            # missing
+            missing.extend(gold_attributes)
+
+    if propagate_error:
+        # spurious
+        spurious_keyphrases = data[SPURIOUS_A]
+        spurious.extend(attr for kp in spurious_keyphrases for attr in kp.attributes)
+
+        # missing
+        missing_keyphrases = data[MISSING_A]
+        missing.extend(attr for kp in missing_keyphrases for attr in kp.attributes)
+
+    return {
+        CORRECT_C: correct,
+        SPURIOUS_C: spurious,
+        MISSING_C: missing,
+    }
+
+
+def compute_metrics(data, skipA=False, skipB=False, skipC=True):
     correct = 0
     partial = 0
     incorrect = 0
@@ -314,18 +372,23 @@ def compute_metrics(data, skipA=False, skipB=False):
         missing += len(data[MISSING_B])
         spurious += len(data[SPURIOUS_B])
 
+    if not skipC:
+        correct += len(data[CORRECT_C])
+        missing += len(data[MISSING_C])
+        spurious += len(data[SPURIOUS_C])
+
     recall_num = correct + 0.5 * partial
     recall_den = correct + partial + incorrect + missing
-    recall = recall_num / recall_den if recall_den > 0 else 0.
+    recall = recall_num / recall_den if recall_den > 0 else 0.0
 
     precision_num = correct + 0.5 * partial
     precision_den = correct + partial + incorrect + spurious
-    precision = precision_num / precision_den if precision_den > 0 else 0.
+    precision = precision_num / precision_den if precision_den > 0 else 0.0
 
     f1_num = 2 * recall * precision
     f1_den = recall + precision
 
-    f1 = f1_num / f1_den if f1_den > 0 else 0.
+    f1 = f1_num / f1_den if f1_den > 0 else 0.0
 
     return {"recall": recall, "precision": precision, "f1": f1}
 
@@ -345,7 +408,7 @@ def find_relation(origin, destination, label, target_relations, target_equivalen
     return None
 
 
-def main(gold_input, submit_input, skip_A, skip_B, verbose):
+def main(gold_input, submit_input, skip_A, skip_B, verbose, skip_C=True):
     gold = Collection()
     gold.load(gold_input)
 
@@ -364,9 +427,14 @@ def main(gold_input, submit_input, skip_A, skip_B, verbose):
         data.update(dataB)
         report(dataB, verbose)
 
+    if not skip_C:
+        dataC = subtaskC(gold, submit, data, verbose)
+        data.update(dataC)
+        report(dataC, verbose)
+
     print("-" * 20)
 
-    metrics = compute_metrics(data, skip_A, skip_B)
+    metrics = compute_metrics(data, skip_A, skip_B, skip_C)
 
     for key, value in metrics.items():
         print("{0}: {1:0.4}".format(key, value))
