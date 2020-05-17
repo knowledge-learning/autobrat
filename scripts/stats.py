@@ -1,8 +1,25 @@
 # coding: utf8
 
+from collections import defaultdict
 from pathlib import Path
 
 from scripts.agreement import load_corpus
+from scripts.utils import Collection, CollectionV1Handler, CollectionV2Handler
+
+
+def count_labels(path: Path, handler=None):
+    counter = defaultdict(int)
+    corpus = handler.load_dir(Collection(), path) if handler else load_corpus(path)
+
+    for sentence in corpus.sentences:
+        for kp in sentence.keyphrases:
+            counter[kp.label] += 1
+            for attr in kp.attributes:
+                counter[attr.label] += 1
+        for rel in sentence.relations:
+            counter[rel.label] += 1
+
+    return counter
 
 
 def count_complex_entities(path: Path):

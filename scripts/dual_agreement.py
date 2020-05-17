@@ -6,12 +6,15 @@ from scripts.agreement import main as agreement_main
 from scripts.score import (
     CORRECT_A,
     CORRECT_B,
+    CORRECT_C,
     INCORRECT_A,
     MISSING_A,
     MISSING_B,
+    MISSING_C,
     PARTIAL_A,
     SPURIOUS_A,
     SPURIOUS_B,
+    SPURIOUS_C,
 )
 
 
@@ -73,8 +76,15 @@ def relations_agreement(data):
     return c_score, n  # c_score / n if n else 1.0
 
 
+def attributes_agreement(data):
+    c_score = len(data[CORRECT_C])
+    n = sum(len(data[x]) for x in [CORRECT_C, MISSING_C, SPURIOUS_C])
+    # print(c_score, len(data[MISSING_B]), len(data[SPURIOUS_B]))
+    return c_score, n  # c_score / n if n else 1.0
+
+
 def agreement(data):
-    c_score = len(data[CORRECT_A]) + len(data[CORRECT_B])
+    c_score = len(data[CORRECT_A]) + len(data[CORRECT_B]) + len(data[CORRECT_C])
     p_score = sum(partial_score(a, b) for a, b in data[PARTIAL_A].items())
     n = sum(len(ann) for ann in data.values())
     # print(c_score, p_score, len(data[PARTIAL_A]), len(data[MISSING_A]),
@@ -90,6 +100,9 @@ def compute_metrics(data1, data2):
     c_score11, n11 = relations_agreement(data1)
     c_score22, n22 = relations_agreement(data2)
 
+    c_score1111, n1111 = attributes_agreement(data1)
+    c_score2222, n2222 = attributes_agreement(data2)
+
     c_score111, p_score111, n111 = agreement(data1)
     c_score222, p_score222, n222 = agreement(data2)
 
@@ -97,6 +110,9 @@ def compute_metrics(data1, data2):
         "concepts_agreement": (c_score1 + p_score1 + c_score2 + p_score2) / (n1 + n2),
         "relations_agreement": (c_score11 + c_score22) / (n11 + n22)
         if n11 + n22
+        else 1.0,
+        "attributes_agreemet": (c_score1111 + c_score2222) / (n1111 + n2222)
+        if n1111 + n2222
         else 1.0,
         "agreement": (c_score111 + p_score111 + c_score222 + p_score222)
         / (n111 + n222),
