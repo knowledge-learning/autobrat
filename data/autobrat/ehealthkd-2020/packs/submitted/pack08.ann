@@ -1,0 +1,421 @@
+T1	Concept 10 18	personas
+T3	Predicate 43 50	mayores
+T4	Predicate 36 40	edad
+T6	Action 57 66	vacunarse
+T7	Predicate 67 71	cada
+T8	Concept 72 81	temporada
+T9	Concept 92 97	gripe
+T10	Concept 102 108	herpes
+T11	Action 122 130	aparecer
+T12	Predicate 131 136	fuera
+T13	Concept 143 147	boca
+T14	Concept 157 163	labios
+T15	Predicate 167 176	alrededor
+T16	Action 122 130	aparecer
+T17	Action 122 130	aparecer
+T18	Action 181 192	tratamiento
+T19	Concept 197 202	dolor
+T20	Concept 206 211	pecho
+T21	Action 212 221	dependerá
+T22	Action 228 233	causa
+T23	Concept 238 243	dolor
+T29	Action 327 335	sentirse
+T30	Concept 336 344	aturdido
+T31	Action 350 358	sentirse
+T32	Concept 359 363	bien
+T33	Predicate 368 374	varios
+T34	Concept 375 379	días
+T35	Concept 382 389	semanas
+T36	Predicate 368 374	varios
+T37	Predicate 390 397	después
+T38	Concept 404 410	lesión
+T39	Action 350 358	sentirse
+T40	Action 327 335	sentirse
+T41	Concept 416 424	personas
+T42	Concept 425 432	mayores
+T43	Concept 438 445	jóvenes
+T44	Concept 416 424	personas
+T45	Concept 463 473	enfermedad
+T46	Concept 474 481	crónica
+T47	Concept 492 498	riesgo
+T49	Concept 416 424	personas
+T50	Action 530 536	drenar
+T51	Concept 541 549	ampollas
+T52	Predicate 557 563	riesgo
+T53	Action 567 576	infección
+T100	Predicate 1127 1133	varios
+T101	Concept 1134 1138	años
+T102	Concept 1152 1159	células
+T103	Concept 1160 1168	normales
+T104	Concept 1173 1179;1180 1187	cuello uterino
+T105	Action 1191 1201	conviertan
+T106	Concept 1205 1212	células
+T107	Concept 1213 1223	cancerosas
+T108	Concept 1253 1263	daltonismo
+T109	Concept 1267 1275	genético
+T110	Concept 1284 1291	mujeres
+T112	Action 1328 1336	detectar
+T113	Concept 1297 1304;1305 1307;1308 1320	pruebas de Papanicolaou
+T114	Concept 1337 1344	cambios
+T115	Concept 1351 1357;1358 1365	cuello uterino
+T116	Action 1377 1388	convertirse
+T117	Concept 1392 1398	cáncer
+T118	Concept 1403 1409	vejiga
+T119	Action 1413 1420	expande
+T120	Action 1433 1438	llena
+T122	Action 1473 1478	vacía
+T124	Action 1453 1460	pequeña
+T144	Action 1831 1842	eliminación
+T145	Concept 1871 1882	flatulencia
+T146	Concept 1856 1861	recto
+T147	Predicate 1843 1844;1845 1851	a través
+T170	Action 2181 2186	dosis
+T171	Predicate 2190 2197	algunas
+T172	Concept 2198 2207	vitaminas
+T173	Concept 2225 2234	problemas
+T178	Concept 2297 2303	comida
+T179	Concept 2321 2330	proteínas
+T180	Concept 2332 2345	carbohidratos
+T181	Concept 2348 2354	grasas
+T182	Action 2370 2376	prueba
+T183	Concept 2377 2385	estándar
+T184	Concept 2394 2400	cáncer
+T185	Concept 2404 2412	próstata
+T191	Action 2476 2490	inmunizaciones
+T192	Concept 2510 2515	fácil
+T193	Concept 2524 2532	riesgosa
+T194	Action 2544 2550	inmune
+T1025	Concept 255 266	medicamento
+T1026	Action 283 289	tratar
+T1027	Concept 294 305	infecciones
+T1028	Concept 310 319	Norovirus
+T1048	Action 591 596	dolor
+T1049	Predicate 603 608	parte
+T1050	Concept 609 613	baja
+T1051	Concept 618 625	abdomen
+T1052	Concept 627 633	fiebre
+T1053	Concept 635 644	secreción
+T1054	Concept 645 652	vaginal
+T1055	Concept 661 665	olor
+T1056	Concept 657 660	mal
+T1057	Concept 667 677	hemorragia
+T1058	Concept 678 687	irregular
+T1059	Action 690 695	dolor
+T1060	Action 708 718;719 727	relaciones sexuales
+T1062	Action 733 739	orinar
+T1064	Reference 578 583	Otras
+T1065	Concept 745 756	analgésicos
+T1066	Concept 761 769	potentes
+T1067	Concept 778 786	opioides
+T1068	Predicate 757 760	más
+T1069	Concept 791 802	tratamiento
+T1070	Concept 810 815	niños
+T1071	Action 827 836	diferente
+T1073	Concept 859 866	adultos
+T1072	Action 887 893	fallan
+T1074	Concept 879 886	riñones
+T1075	Concept 911 922	tratamiento
+T1077	Action 928 937	sustituir
+T1078	Concept 941 948	trabajo
+T1076	Concept 974 988	hipotiroidismo
+T1080	Concept 996 1001	común
+T1081	Concept 1009 1016	mujeres
+T1082	Concept 1025 1033	personas
+T1083	Action 1044 1053	problemas
+T1084	Concept 1060 1068	tiroides
+T1085	Concept 1078 1086	personas
+T1086	Predicate 1087 1094	mayores
+T1087	Concept 1098 1100;1101 1105	60 años
+T1088	Predicate 992 995	más
+T1114	Concept 1487 1499	medicamentos
+T1117	Concept 1504 1510	receta
+T1118	Action 1517 1524	alivian
+T1119	Concept 1528 1533	dolor
+T1120	Action 1551 1560	indicarle
+T1121	Concept 1538 1544	médico
+T1122	Concept 1570 1576	fuerte
+T1124	Predicate 1566 1569	más
+T1125	Concept 1586 1593	agentes
+T1126	Concept 1594 1605	infecciosos
+T1127	Concept 1615 1618	VIH
+T1128	Action 1627 1637	sobrevivir
+T1129	Concept 1644 1650	sangre
+T1130	Action 1653 1661	infectar
+T1131	Concept 1667 1674	persona
+T1132	Action 1684 1694	recibiendo
+T1133	Concept 1698 1709	transfusión
+T1134	Concept 1719 1727	material
+T1135	Action 1711 1718	Incluye
+T1136	Reference 1749 1751	ti
+T1138	Concept 1765 1771	padres
+T1140	Concept 1786 1791	salud
+T1141	Concept 1797 1806	seguridad
+T1142	Concept 1814 1826	adolescentes
+T1145	Concept 1888 1896	personas
+T1146	Concept 1904 1914	enfermedad
+T1147	Action 1915 1920	nacen
+T1148	Predicate 1925 1928	dos
+T1149	Concept 1938 1945	células
+T1150	Concept 1946 1957	falciformes
+T1151	Concept 1984 1991	diarrea
+T1152	Action 1992 2002	desaparece
+T1153	Predicate 2003 2010	después
+T1154	Concept 2019 2023	días
+T1155	Action 2056 2062	buscar
+T1156	Action 2066 2072	origen
+T1157	Predicate 1966 1970	cada
+T1158	Concept 1971 1976	padre
+T1159	Concept 2077 2083	eccema
+T1160	Action 2090 2097	mejorar
+T1161	Action 2100 2108	empeorar
+T1162	Concept 2116 2122	tiempo
+T1163	Concept 2145 2155	enfermedad
+T1165	Concept 2165 2173	duración
+T1170	Predicate 2240 2247	niveles
+T1172	Concept 2251 2261	colesterol
+T1173	Action 2272 2280	aumentar
+T1174	Concept 2288 2292	edad
+T1137	Predicate 1773 1779	acerca
+T1183	Concept 2418 2426	resfríos
+T1185	Concept 2444 2450	fiebre
+T1186	Concept 2453 2460	dolores
+T1187	Concept 2464 2470	cabeza
+T1191	Concept 2562 2567	bebés
+T1192	Action 2574 2583	vacunarse
+T1193	Concept 2594 2599	niños
+T1194	Concept 2600 2607	mayores
+T1195	Concept 2614 2621	adultos
+T1197	Action 2574 2583	vacunarse
+T206	Concept 27 32	meses
+T2	Predicate 22 26	seis
+T207	Predicate 36 40	edad
+T5	Action 82 88	contra
+T208	Concept 109 115	labial
+T48	Concept 791 802	tratamiento
+T111	Predicate 1578 1585	Algunos
+T121	Reference 1901 1903	la
+T123	Concept 1929 1934	genes
+R5	domain Arg1:T7 Arg2:T8
+R6	in-time Arg1:T6 Arg2:T7
+A2	Uncertain T11
+R10	arg Arg1:T12 Arg2:T13
+R11	in-place Arg1:T11 Arg2:T12
+R12	arg Arg1:T15 Arg2:T14
+A4	Uncertain T16
+A6	Uncertain T17
+R13	in-place Arg1:T17 Arg2:T14
+R14	in-place Arg1:T16 Arg2:T15
+R15	subject Arg1:T16 Arg2:T10
+R16	subject Arg1:T17 Arg2:T10
+R17	subject Arg1:T11 Arg2:T10
+R18	in-place Arg1:T19 Arg2:T20
+R19	target Arg1:T18 Arg2:T19
+R20	subject Arg1:T21 Arg2:T18
+R21	target Arg1:T22 Arg2:T23
+R22	target Arg1:T21 Arg2:T22
+A8	Uncertain T29
+R27	in-context Arg1:T29 Arg2:T30
+A9	Uncertain T31
+A10	Negated T31
+R28	in-context Arg1:T31 Arg2:T32
+R29	domain Arg1:T33 Arg2:T34
+R30	domain Arg1:T36 Arg2:T35
+R31	arg Arg1:T37 Arg2:T38
+R32	in-time Arg1:T29 Arg2:T36
+R33	in-time Arg1:T31 Arg2:T36
+A11	Negated T39
+A12	Uncertain T39
+A13	Uncertain T40
+R34	in-context Arg1:T40 Arg2:T30
+R35	in-time Arg1:T40 Arg2:T33
+R36	in-context Arg1:T39 Arg2:T32
+R37	in-time Arg1:T39 Arg2:T33
+R38	in-time Arg1:T31 Arg2:T37
+R39	in-time Arg1:T39 Arg2:T37
+R40	in-time Arg1:T29 Arg2:T37
+R41	in-time Arg1:T40 Arg2:T37
+R42	in-context Arg1:T41 Arg2:T42
+A14	Emphasized T43
+R43	in-context Arg1:T44 Arg2:T43
+R44	in-context Arg1:T45 Arg2:T46
+R46	in-context Arg1:T49 Arg2:T45
+R47	arg Arg1:T52 Arg2:T53
+R48	target Arg1:T50 Arg2:T51
+R50	has-property Arg1:T49 Arg2:T47
+R51	has-property Arg1:T44 Arg2:T47
+R52	has-property Arg1:T41 Arg2:T47
+R92	domain Arg1:T100 Arg2:T101
+R93	in-context Arg1:T102 Arg2:T103
+R94	in-place Arg1:T102 Arg2:T104
+R95	in-context Arg1:T106 Arg2:T107
+R96	subject Arg1:T105 Arg2:T102
+R97	target Arg1:T105 Arg2:T106
+R98	in-time Arg1:T105 Arg2:T100
+A17	Emphasized T109
+R99	has-property Arg1:T108 Arg2:T109
+R101	subject Arg1:T112 Arg2:T113
+R102	in-place Arg1:T114 Arg2:T115
+A18	Uncertain T116
+R104	subject Arg1:T116 Arg2:T114
+R105	target Arg1:T116 Arg2:T117
+R103	target Arg1:T112 Arg2:T116
+R106	in-place Arg1:T113 Arg2:T110
+R107	subject Arg1:T119 Arg2:T118
+*	same-as T145 T144
+R131	arg Arg1:T147 Arg2:T146
+R132	in-place Arg1:T144 Arg2:T147
+R157	domain Arg1:T171 Arg2:T172
+R158	target Arg1:T170 Arg2:T171
+R159	causes Arg1:T170 Arg2:T173
+R164	part-of Arg1:T179 Arg2:T178
+R165	part-of Arg1:T180 Arg2:T178
+R166	part-of Arg1:T181 Arg2:T178
+R167	in-context Arg1:T182 Arg2:T183
+R168	in-context Arg1:T184 Arg2:T185
+A28	Negated T182
+R169	target Arg1:T182 Arg2:T184
+A1001	Negated T1025
+R1026	subject Arg1:T1026 Arg2:T1025
+R1027	target Arg1:T1026 Arg2:T1027
+R1028	in-context Arg1:T1027 Arg2:T1028
+R1047	domain Arg1:T1049 Arg2:T1051
+R1048	arg Arg1:T1049 Arg2:T1050
+R1050	in-place Arg1:T1048 Arg2:T1049
+R1054	in-context Arg1:T1053 Arg2:T1054
+R1055	in-context Arg1:T1055 Arg2:T1056
+R1057	in-context Arg1:T1057 Arg2:T1058
+R1056	in-context Arg1:T1053 Arg2:T1055
+R1062	domain Arg1:T1068 Arg2:T1065
+R1063	arg Arg1:T1068 Arg2:T1066
+R1065	in-place Arg1:T1069 Arg2:T1070
+R1066	subject Arg1:T1071 Arg2:T1069
+R1067	subject Arg1:T1071 Arg2:T48
+R1068	subject Arg1:T1072 Arg2:T1074
+R1069	subject Arg1:T1077 Arg2:T1075
+R1072	target Arg1:T1077 Arg2:T1078
+R1074	domain Arg1:T1086 Arg2:T1085
+R1075	arg Arg1:T1086 Arg2:T1087
+R1076	arg Arg1:T1088 Arg2:T1080
+R1077	has-property Arg1:T1076 Arg2:T1088
+R1078	in-place Arg1:T1088 Arg2:T1081
+R1079	in-place Arg1:T1088 Arg2:T1083
+R1081	in-place Arg1:T1083 Arg2:T1084
+R1082	in-place Arg1:T1088 Arg2:T1086
+A1009	Negated T1117
+R1106	arg Arg1:T1124 Arg2:T1122
+A1010	Uncertain T1120
+R1107	in-context Arg1:T1114 Arg2:T1117
+A1011	Negated T1118
+R1108	subject Arg1:T1118 Arg2:T1114
+R1109	target Arg1:T1118 Arg2:T1119
+R1110	subject Arg1:T1120 Arg2:T1121
+R1111	target Arg1:T1120 Arg2:T1124
+R1112	entails Arg1:T1114 Arg2:T1120
+R1113	in-context Arg1:T1125 Arg2:T1126
+R1114	is-a Arg1:T1127 Arg2:T1125
+A1012	Uncertain T1128
+R1115	subject Arg1:T1128 Arg2:T1127
+R1116	in-place Arg1:T1128 Arg2:T1129
+R1117	subject Arg1:T1130 Arg2:T1127
+R1118	subject Arg1:T1132 Arg2:T1131
+R1119	target Arg1:T1132 Arg2:T1133
+R1120	target Arg1:T1130 Arg2:T1132
+R1121	target Arg1:T1135 Arg2:T1134
+A1013	Negated T1138
+R1124	in-context Arg1:T1145 Arg2:T121
+R1125	in-context Arg1:T1149 Arg2:T1150
+R1126	subject Arg1:T1147 Arg2:T1145
+R1127	in-context Arg1:T1147 Arg2:T1148
+R1129	arg Arg1:T1157 Arg2:T1158
+R1130	in-context Arg1:T1148 Arg2:T1157
+R1131	subject Arg1:T1152 Arg2:T1151
+R1132	in-time Arg1:T1152 Arg2:T1153
+R1133	arg Arg1:T1153 Arg2:T1154
+R1134	target Arg1:T1155 Arg2:T1156
+R1135	entails Arg1:T1152 Arg2:T1155
+A1014	Negated T1155
+R1136	subject Arg1:T1160 Arg2:T1159
+R1137	subject Arg1:T1161 Arg2:T1159
+A1015	Uncertain T1160
+A1016	Uncertain T1161
+R1141	is-a Arg1:T1159 Arg2:T1163
+R1146	arg Arg1:T1170 Arg2:T1172
+R1147	target Arg1:T1173 Arg2:T1170
+R1122	in-context Arg1:T1135 Arg2:T1136
+R1153	in-context Arg1:T1135 Arg2:T1138
+R1154	domain Arg1:T1137 Arg2:T1135
+R1155	arg Arg1:T1137 Arg2:T1140
+R1156	arg Arg1:T1137 Arg2:T1141
+R1157	in-context Arg1:T1141 Arg2:T1142
+R1160	in-place Arg1:T1186 Arg2:T1187
+R1161	causes Arg1:T1183 Arg2:T1185
+A1019	Diminished T1185
+A1020	Diminished T1186
+R1162	causes Arg1:T1183 Arg2:T1186
+R1163	target Arg1:T1192 Arg2:T1191
+R1164	in-context Arg1:T1193 Arg2:T1194
+A1021	Uncertain T1197
+R1165	target Arg1:T1197 Arg2:T1193
+R1166	target Arg1:T1197 Arg2:T1195
+A1023	Uncertain T1071
+R1073	causes Arg1:T1072 Arg2:T1077
+R1084	in-time Arg1:T1160 Arg2:T1162
+R1138	in-time Arg1:T1161 Arg2:T1162
+R2	domain Arg1:T2 Arg2:T206
+R3	arg Arg1:T4 Arg2:T2
+R8	arg Arg1:T3 Arg2:T2
+R1	domain Arg1:T207 Arg2:T1
+R4	arg Arg1:T207 Arg2:T3
+R7	domain Arg1:T4 Arg2:T1
+R184	target Arg1:T6 Arg2:T4
+R185	target Arg1:T6 Arg2:T207
+R9	subject Arg1:T5 Arg2:T6
+R186	target Arg1:T5 Arg2:T9
+R187	in-context Arg1:T10 Arg2:T208
+R194	causes Arg1:T38 Arg2:T31
+R195	causes Arg1:T38 Arg2:T39
+R196	causes Arg1:T38 Arg2:T29
+R197	causes Arg1:T38 Arg2:T40
+A1	Emphasized T47
+R49	target Arg1:T53 Arg2:T51
+A3	Negated T50
+R45	in-context Arg1:T50 Arg2:T52
+R198	subject Arg1:T1060 Arg2:T1064
+R199	subject Arg1:T1062 Arg2:T1064
+R201	target Arg1:T1059 Arg2:T1064
+R203	target Arg1:T1059 Arg2:T1064
+R204	has-property Arg1:T1064 Arg2:T1052
+R205	has-property Arg1:T1064 Arg2:T1053
+R206	has-property Arg1:T1064 Arg2:T1057
+R207	target Arg1:T1048 Arg2:T1064
+R200	in-time Arg1:T1059 Arg2:T1060
+R202	in-time Arg1:T1059 Arg2:T1062
+*	same-as T1067 T1068
+R208	in-place Arg1:T48 Arg2:T1073
+R209	in-place Arg1:T1078 Arg2:T1074
+R210	target Arg1:T1083 Arg2:T1082
+A5	Uncertain T105
+A15	Uncertain T112
+R100	target Arg1:T120 Arg2:T118
+R108	subject Arg1:T124 Arg2:T118
+R109	target Arg1:T122 Arg2:T118
+R110	entails Arg1:T119 Arg2:T120
+R111	entails Arg1:T124 Arg2:T122
+R112	domain Arg1:T1124 Arg2:T1114
+R113	domain Arg1:T111 Arg2:T1125
+R211	subject Arg1:T1128 Arg2:T111
+R212	subject Arg1:T1130 Arg2:T111
+R213	is-a Arg1:T121 Arg2:T1146
+R214	domain Arg1:T1148 Arg2:T123
+R215	in-context Arg1:T123 Arg2:T1149
+R216	domain Arg1:T1157 Arg2:T123
+R217	target Arg1:T1156 Arg2:T1151
+R218	has-property Arg1:T1159 Arg2:T1165
+A34	Emphasized T1165
+A35	Emphasized T170
+R156	causes Arg1:T1174 Arg2:T1173
+R173	in-context Arg1:T194 Arg2:T193
+A36	Diminished T193
+R174	in-context Arg1:T194 Arg2:T192
+A37	Emphasized T192
+R175	is-a Arg1:T191 Arg2:T194

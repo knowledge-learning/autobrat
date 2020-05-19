@@ -16,29 +16,13 @@
 24 de enero: los CDC confirmaron un segundo caso en una mujer de 60 años que vivía en Chicago.
 25 de enero: Los CDC confirmaron un tercer caso en el Condado de Orange, California.
 25 de febrero: Se confirmaron seis casos entre ciudadanos estadounidenses en cuarentena en la Base Conjunta San Antonio-Lackland.
-26 a 24 °C o inferior: aquí la muerte normalmente ocurre por alteraciones cardiorrespiratorias, no obstante, algunos pacientes han sobrevivido estando aparentemente muertos a temperaturas inferiores a 14 °C.
 26 de enero: los casos cuarto y quinto, también viajeros de Wuhan, fueron confirmados en el condado de Los Ángeles, California, y el condado de Maricopa, Arizona.
 26 de febrero: Se confirmó un caso de origen desconocido en un residente del condado de Solano, California.
-28 °C (urgencia): alteraciones graves de corazón, pueden acompañarse de apnea e incluso de aparentar o estar muerto.
 28 de febrero: se confirmó un segundo caso de origen desconocido en una mujer adulta mayor en el condado de Santa Clara, California.
 29 de enero: El Departamento de Estado de los Estados Unidos evacuó a 195 de sus empleados, sus familias y otros ciudadanos estadounidenses de la provincia de Hubei a bordo de un vuelo fletado a la Base de la Reserva Aérea March en California.
 29 de febrero: la primera muerte por coronavirus en los Estados Unidos se informó en EvergreenHealth en Kirkland, Washington.
 30 de enero: Los CDC confirmaron el sexto caso en un hombre de unos 60 años que vivía en Chicago.
-31 °C: existe coma, es muy extraño que esté consciente.
 31 de enero: Los CDC confirmaron el séptimo caso en un hombre en el condado de Santa Clara, California, que había viajado recientemente a Wuhan.
-32 °C (hipotermia moderada): alucinaciones, delirio, gran confusión, muy adormilado pudiendo llegar incluso al coma.
-33 °C: confusión moderada, adormecimiento, arreflexia, progresiva pérdida de temblor, bradicardia, disnea.
-34 °C (hipotermia): se llama hipotermia cuando la temperatura es menor a 35 °C.
-35 °C: temperatura levemente baja aunque considerado dentro del límite del normal.
-37 °C (febrícula): temperatura superior a 37 °C pero inferior a 38 °C, durante 24 horas
-38 °C (fiebre): se presenta sudor acompañado de rubor, con taquicardias y disnea.
-39 °C (fiebre moderada): la sensación de calor y la debilidad aumentan.
-40 °C (urgencia): mareos, vértigos, debilidad, deshidratación, náuseas, vómitos, cefalea y sudor profundo.
-41 °C: todo lo anterior más acentuado; también puede existir confusión, alucinaciones, delirios y somnolencia.
-42 °C: además de lo anterior, el sujeto puede tener palidez o rubor.
-43 °C: normalmente aquí se sucede la muerte o deja como secuelas diversos daños cerebrales, se acompaña de convulsiones continuas y choque.
-44 °C: en la mayoría de los casos la muerte se sucede a los 43 °C de temperatura, no obstante, hay algunos casos de gente que ha alcanzado los 44 °C de temperatura.
-45 °C: muy pocas personas han sobrevivido a los 45 °C de temperatura, ya que normalmente la muerte suele producirse entre los 42 y 44 °C.
 5 de febrero: Los CDC y el Departamento de Servicios de Salud de Wisconsin confirmaron el duodécimo caso en Madison, Wisconsin.
 6 de febrero: Dos vuelos de evacuación partieron de la provincia de Hubei con más de 300 pasajeros.
 a 11:00 p.m.
@@ -47,10 +31,8 @@ A 15 de abril de 2003 la OMS reconoció 3.235 casos divulgados y 154 fallecidos.
 A altas concentraciones in vitro también inhibe la transcriptasa inversa del VIH.
 A diferencia de los animales, las plantas no poseen células con capacidad fagocítica y la respuesta inmunitaria de la mayoría de las plantas comprende mensajeros químicos sistémicos que se distribuyen por toda la planta.
 A fecha de 22 de marzo de 2020, en España hay 28 603 casos confirmados, de los cuales 2575 han sido dados de alta y 1756 han fallecido de acuerdo con las autoridades, siendo la mayoría de fallecidos personas mayores de 65 años.
-A finales de abril de 2003 unas 500 personas se encontraban en cuarentena en Pekín y la provincia de Anhui.
 A finales de abril, importantes revelaciones emergieron a la luz pública, cuando el gobierno chino admitió haber comunicado un menor número de casos que el realmente existente, debido a los problemas inherentes al sistema de sanidad.
-A finales de enero, el Ministerio de Salud de Rusia identificó tres medicamentos para adultos que podrían ayudar a tratar la enfermedad.
-A finales de enero, la Comisión Nacional de Salud de China publicó una guía de manejo de las crisis psicológicas, en la que propugnaba la intervención de las personas afectadas, contactos cercanos, los encerrados en sus hogares, los familiares y amigos de los pacientes, personal sanitario y el público general que lo requiriera.
+hogares, los familiares y amigos de los pacientes, personal sanitario y el público general que lo requiriera.
 A finales de la década de 1960 y principios de la década de 1970, John David y Barry Bloom descubrieron el Factor Inhibidor de Migración de los Macrófagos (MIF) y una nueva clase de sustancias secretadas por los linfocitos.
 A finales del mes de enero de 2020, unos investigadores chinos expresaron su interés por comenzar ensayos clínicos con remdesivir, cloroquina y lopinavir / ritonavir, unos fármacos que parecieron inhibir el virus de forma efectiva en cultivos celulares en experimentos preliminares.
 A fines de enero de 2020, los investigadores médicos chinos expresaron su intención de comenzar las pruebas clínicas con remdesivir, cloroquina y lopinavir / ritonavir, todo lo cual parecía tener efectos inhibitorios bastante buenos en SARS-CoV-2 a nivel celular en la investigación exploratoria.
@@ -1254,8 +1236,6 @@ Una semana después, un hombre italiano repatriado de regreso a Italia desde la 
 Una sustancia corporal que, por lo regular, abarca un área específica y es liberada en la circulación general ; y en consecuencia, se encuentra escondida en el sistema inmunitario.
 Una tercera estrategia son las vacunas de ácido nucleico (vacunas de ADN o ARN, una técnica novedosa para crear una vacuna).
 Una vez el virus se encuentra en una persona puede transmitirse a otra.
-Una vez que se abre la glotis, la combinación de una gran diferencia de presiones entre las vías respiratorias y la atmósfera junto con este estrechamiento traqueal produce flujos a través de la tráquea cuya velocidad se aproxima a la del sonido.
-Universal Pictures anunció que rompería la theatrical window (la mayoría de las cadenas de cine principales requieren que las películas sean exclusivas de los cines durante 74 días) y permita el alquiler digital de varias películas de Universal que aún se encuentran en los cines, así como el lanzamiento simultáneo de Trolls World Tour.
 Uno de los casos fue un ciudadano estadounidense evacuado en un vuelo fletado por el Departamento de Estado de los Estados Unidos, mientras que los otros cinco casos habían sido evacuados del crucero Diamond Princess.
 Uno de los nuevos casos es de un contacto conocido de un paciente británico que contrajo el COVID-19 en Francia.
 Uno de los vuelos transportaba a 60 canadienses que desembarcaron en una escala en Vancouver, mientras que los pasajeros restantes llegaron a la Estación Aérea del Cuerpo de Marines de Miramar, cerca de San Diego.
@@ -1268,8 +1248,3 @@ Varios minoristas, en particular las tiendas de comestibles, redujeron sus horar
 Varios periódicos semanales alternativos en las áreas metropolitanas afectadas, incluido The Stranger en Seattle y Austin Chronicle, han anunciado despidos y campañas de financiación debido a la pérdida de ingresos.
 Venecia tomó el liderazgo en medidas sanitarias para controlar la propagación de plagas, habiendo nombrado a tres guardianes de la salud pública en los primeros años de la peste negra (1348).
 Vir Biotechnology está evaluando si los anticuerpos monoclonales (mAbs) previamente identificados son efectivos contra el virus.
-Vir Biotechnology, con sede en San Francisco, está evaluando la efectividad contra el virus de los anticuerpos monoclonales (mAbs) previamente identificados.
-Walmart anunció el 14 de marzo que las ubicaciones que normalmente abren las 24 horas en su lugar operarían de 6:00 a.m.
-Wuhan está en el oriente de la llanura de Jianghan, en la confluencia del río Yangtsé y su afluente más grande, el río Han.
-Y cuando la dieta no aporta bastantes hidratos de carbono se produce una tendencia a la acidosis.
-Y si aumenta más aún, se observa que se retienen fácilmente en el líquido intersticial.

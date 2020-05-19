@@ -14,6 +14,8 @@ import spacy
 import numpy as np
 import pickle
 
+from sklearn_crfsuite import CRF
+
 from scripts.utils import Collection, Keyphrase, Relation, Sentence
 from autobrat.data import (
     load_training_entities,
@@ -30,25 +32,15 @@ logger = logging.getLogger("autobrat.classifier")
 
 
 class Model:
-    def __init__(self, corpus):
+    def __init__(self, corpus: Collection, callback=None):
         self.corpus = corpus
         self.lock = Lock()
-        self.unused_sentences = None
+        self.callback = callback
 
-        self.entity_classifier = ClassifierEntity()
-        self.relation_classifier = ClassifierRelation()
-
-    def warmup(self):
-        if self.unused_sentences is not None:
-            return
-
-        nlp = spacy_model('es')
-        logger.info("Loading unused corpora")
-        self.unused_sentences = [nlp(s) for s in load_corpus(self.corpus)]
+        self.entity_classifier = ClassifierEntity(callback)
+        self.relation_classifier = ClassifierRelation(callback)
 
     def train(self):
-        self.warmup()
-
         self.train_entities()
         self.train_relations()
 
@@ -94,24 +86,23 @@ class Model:
     def predict_entities(self, sentences):
         """Predice para cada palabra su etiqueta
         """
-        self.warmup()
         collection = self.entity_classifier.predict_entities(sentences)
         return collection
 
     def predict_relations(self, collection):
         """Predice para cada oración todas las relaciones
         """
-        self.warmup()
         collection = self.relation_classifier.predict_relations(collection)
         return collection
 
     def predict(self, sentences):
         return self.predict_relations(self.predict_entities(sentences))
 
-    def suggest(self, count=5):
+    def suggest(self, pool, count=5):
         """Devuelve las k oraciones más relevantes
         """
-        self.warmup()
+        nlp = spacy_model('es')
+        unused_sentences = [nlp(s) for s in pool]
 
         # procesar corpus de oraciones sin clasificar (vectorizarlas)
         s_list_vector_word = []
@@ -119,7 +110,7 @@ class Model:
 
         logger.info("Preparing suggestion pool")
 
-        for s_doc in self.unused_sentences:
+        for s_doc in unused_sentences:
             for s_token in s_doc:
                 s_words.append(s_token.text)
                 s_list_vector_word.append(s_token.vector)
@@ -129,7 +120,7 @@ class Model:
         logger.info("Predicting suggestion score")
 
         # metric
-        weigth = self.classifier.decision_function(X_pool_set)
+        weigth = self.entity_classifier.classifier.decision_function(X_pool_set)
         relevant_words = {w: f.max() for w, f in zip(s_words, weigth)}
 
         # relevancia por palabra
@@ -142,16 +133,16 @@ class Model:
 
         logger.info("Selecting suggestion sentences")
 
-        for s in self.unused_sentences:
+        for s in unused_sentences:
             rel = self.relevant_sentence(s, relevant_words)
             relevance.append(rel)
 
         sorted_relevant_sentences = sorted(
-            zip(relevance, self.unused_sentences), key=lambda x: x[0]
+            zip(relevance, unused_sentences), key=lambda x: x[0]
         )
 
-        self.unused_sentences = [t[1] for t in sorted_relevant_sentences[count:]]
-        save_corpus(self.corpus, self.unused_sentences)
+        # self.unused_sentences = [t[1] for t in sorted_relevant_sentences[count:]]
+        # save_corpus(self.corpus, self.unused_sentences)
 
         return sorted_relevant_sentences[:count]
 
@@ -162,72 +153,72 @@ class ClassifierEntity:
     Puede ser entrenado con una lista de entidades en formato BILOUV
     y usado para predecir en una lista de oraciones vacías.
     """
-    def __init__(self):
-        pass
+    def __init__(self, callback=None):
+        self.callback = callback
 
     def predict_entities(self, sentences):
-        p_list_vector_word = []
-        p_words = []
-        p_word_class = {}
-        p_list_sentences = []
+        if isinstance(sentences[0], Sentence):
+            sentences = [s.text for s in sentences]
 
-        p_lines = sentences
+        result = []
         nlp = spacy_model('es')
 
-        for p_sentence in p_lines:
-            p_doc = nlp(p_sentence)
-            p_list_sentences.append(p_doc)
-            for p_token in p_doc:
-                p_words.append(p_token.text)
-                p_list_vector_word.append(p_token.vector)
+        for i, sentence in enumerate(sentences):
+            if self.callback:
+                self.callback(msg="Processing sentence", current=i, total=len(sentences))
 
-        # calcula la predicción para cada palabra
-        X_test_set = np.vstack(p_list_vector_word)
-        y_test_estimated = self.classifier.predict(X_test_set)
-
-        for i, w in enumerate(p_words):
-            p_word_class[w] = y_test_estimated[i]
-
-        # crear la lista de prediciones para cada oración
-        result = []
-        for s in p_list_sentences:
-            cl_s = []
-            for t in s:
-                cl = p_word_class[t.text]
-                cl_s.append(cl)
-
-            # construir una oración de Brat transformando las predicciones
-            # en formato BILOV (que es lo que está en `cl_s`) a objetos Keyphrase
-            sentence = make_sentence(s, cl_s, self.classes)
+            doc, xs = self.feature_sentence(sentence)
+            ys = self.classifier.predict_single(xs)
+            sentence = make_sentence(doc, ys, self.classes)
             sentence.fix_ids()
-            
+
             result.append(sentence)
 
         return Collection(sentences=result)
 
-    def train_entities(self, lines, classes):
-        list_vector_word = []
-        words = []
-        list_sentences = []
+    def feature_sentence(self, sentence):
+        nlp = spacy_model('es')
 
+        doc = nlp(sentence)
+        xs = []
+
+        for token in doc:
+            xs.append(self.word_features(token))
+
+        return doc, xs
+
+    def word_features(self, word):
+        features = dict(
+            text = word.text,
+            pos = word.pos_,
+            tag = word.tag_,
+        )
+
+        return features
+
+    def train_entities(self, lines, classes):
         logger.info("Preparing training set")
 
-        for doc in lines:
-            list_sentences.append(doc)
-            for token in doc:
-                words.append(token.text)
-                list_vector_word.append(token.vector)
+        X_training_set = []
+        y_training_set = classes
 
-        X_training_set = np.vstack(list_vector_word)
-        y_training_set = sum(classes, [])
+        for i, doc in enumerate(lines):
+            xs = []
+            for token in doc:
+                xs.append(self.word_features(token))
+
+            if self.callback:
+                self.callback(msg="Processing sentence", current=i, total=len(lines))
+
+            X_training_set.append(xs)
 
         logger.info(f"Training in {len(X_training_set)} examples")
 
         # Train classifier
-        classifier = SVC(decision_function_shape="ovo")
+        classifier = CRF()
         classifier.fit(X_training_set, y_training_set)
 
-        self.classes = set(y_training_set)
+        self.classes = set(sum(y_training_set, []))
         self.classifier = classifier
 
 
@@ -237,8 +228,8 @@ class ClassifierRelation:
     Puede ser entrenado con una lista de pares de palabras -> relación,
     y usado para predecir en una lista de oraciones `Sentence`.
     """
-    def __init__(self):
-        pass
+    def __init__(self, callback=None):
+        self.callback = callback
 
     def predict_relations(self, collection:Collection):
         nlp = spacy_model('es')

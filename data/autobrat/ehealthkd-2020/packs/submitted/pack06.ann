@@ -1,0 +1,325 @@
+T1	Concept 4 14	trastornos
+T2	Concept 18 28	desarrollo
+T3	Concept 33 42	problemas
+T4	Concept 43 50	severos
+T5	Concept 62 70	duración
+T6	Concept 56 61	larga
+T7	Concept 114 122	elevados
+T8	Concept 125 136	disminuidos
+T10	Concept 162 171	trastorno
+T11	Concept 172 180	hormonal
+T12	Predicate 79 86	niveles
+T13	Concept 87 97	hormonales
+T14	Predicate 79 86	niveles
+T9	Concept 186 192;193 195;196 210;211 213;214 221	planes de administración de seguros
+T18	Concept 246 252;253 255;256 261	seguro de salud
+T19	Predicate 238 242	tipo
+T21	Concept 263 268	LASIK
+T22	Concept 271 286;287 289;290 294	queratomileusis in situ
+T23	Action 295 303	asistida
+T24	Concept 308 313;314 319	rayos láser
+T25	Concept 340 347	comunes
+T26	Concept 352 359;360 373;374 376;377 385	Consejo Institucional de Revisión
+T27	Concept 387 400;401 407;408 413	Institutional Review Board
+T28	Concept 415 418	IRB
+T29	Action 420 426	revisa
+T30	Action 428 437	supervisa
+T31	Action 440 447	aprueba
+T32	Concept 462 469;470 478	ensayos clínicos
+T33	Concept 483 489	angina
+T34	Concept 496 503	síntoma
+T35	Concept 521 523;524 527;528 536;537 547;510 520	de las arterias coronarias enfermedad
+T36	Concept 552 562	enfermedad
+T37	Concept 563 571	cardiaca
+T38	Concept 576 581	común
+T39	Predicate 599 600;601 603;604 608;609 614	1 de cada 5.000
+T40	Concept 615 623	personas
+T41	Concept 630 633	EDS
+T42	Concept 659 667;668 676	cálculos biliares
+T43	Concept 706 717	chikungunya
+T44	Concept 721 727	África
+T45	Concept 729 733	Asia
+T46	Concept 735 741	Europa
+T47	Concept 755 761	Índico
+T48	Concept 764 772	Pacífico
+T49	Concept 777 783	Caribe
+T50	Concept 786 793;794 801	América Central
+T51	Concept 786 793;804 807;808 811	América del Sur
+T52	Concept 747 754	océanos
+T53	Action 695 701	brotes
+T54	Concept 816 824;825 827;828 834	síndrome de Marfan
+T55	Action 857 865	problema
+T56	Concept 873 876;877 879;880 882;883 892	gen de la fibrilina
+T57	Concept 897 906;907 909;910 916	trastorno de pánico
+T58	Concept 931 940;941 943;944 952	trastorno de ansiedad
+T60	Concept 958 967;968 976	conmoción cerebral
+T61	Predicate 983 987	tipo
+T62	Concept 991 997	lesión
+T63	Concept 998 1006	cerebral
+T64	Concept 1027 1032	agudo
+T65	Concept 1035 1042	crónico
+T66	Predicate 1020 1025	tipos
+T67	Concept 1047 1055;1056 1062	vesícula biliar
+T68	Concept 1069 1075	órgano
+T69	Predicate 1102 1108	debajo
+T70	Concept 1113 1119	hígado
+T71	Predicate 1080 1085	forma
+T72	Concept 1089 1093	pera
+T76	Concept 2147 2159	traumatismos
+T80	Predicate 1214 1221	muestra
+T81	Concept 1225 1232;1233 1238	materia fecal
+T82	Action 1245 1259	diagnosticarla
+T83	Concept 1267 1274	centros
+T84	Action 1284 1293	aparentar
+T85	Concept 1305 1310	hogar
+T86	Action 1316 1321	caída
+T87	Concept 1322 1328	brusca
+T88	Concept 1335 1342;1343 1351	presión arterial
+T89	Action 1399 1406	mareado
+T90	Action 1360 1372	deshidratado
+T91	Concept 1411 1417;1418 1420;1421 1423;1424 1431;1432 1437;1438 1439;1440 1442;1443 1446;1447 1452;1453 1464	cáncer de la cavidad nasal y de los senos paranasales
+T94	Concept 1471 1476	común
+T96	Action 1498 1506	asociada
+T98	Concept 1514 1523;1524 1526;1527 1533;1534 1547	trastorno de estrés postraumático
+T97	Concept 1562 1569;1570 1579	columna vertebral
+T99	Concept 1584 1588	feto
+T100	Action 1595 1601	cierra
+T101	Concept 1602 1615	completamente
+T102	Predicate 1627 1633	primer
+T103	Concept 1634 1637	mes
+T104	Concept 1641 1649	embarazo
+T105	Action 1549 1555	Ocurre
+T106	Concept 1655 1665	prematuros
+T107	Concept 1708 1714;1715 1717;1718 1726;1727 1737	unidad de cuidados intensivos
+T108	Concept 1738 1746	neonatal
+T109	Action 1666 1675	necesitan
+T110	Concept 1676 1684;1685 1691	atención médica
+T111	Concept 1692 1700	especial
+T112	Concept 1762 1767	orina
+T113	Action 1786 1792	vuelve
+T114	Action 1774 1783	estancada
+T115	Concept 1819 1828;1829 1837	infección urinaria
+T116	Reference 1862 1866	este
+T117	Concept 1867 1873	ataque
+T118	Action 1845 1849	sabe
+T119	Predicate 1853 1858	causa
+T120	Concept 1893 1900	mujeres
+T121	Action 1901 1910	necesitan
+T122	Concept 1915 1923	calorías
+T123	Predicate 1911 1914	300
+T124	Concept 1924 1931	diarias
+T125	Predicate 1965 1969	seis
+T126	Concept 1970 1975	meses
+T127	Concept 1979 1987	embarazo
+T128	Concept 1957 1964	últimos
+T129	Action 2025 2036	embarazadas
+T130	Predicate 2010 2015	antes
+T131	Action 2000 2009	requerían
+T132	Concept 2070 2080	superficie
+T133	Concept 2081 2085	dura
+T134	Action 2042 2047	caída
+T135	Predicate 1932 1935	más
+T136	Concept 2054 2059	atrás
+T137	Action 2092 2102	resbalarse
+T138	Concept 2109 2114	hielo
+T139	Concept 2164 2170	médico
+T140	Action 2188 2196	análisis
+T141	Concept 2200 2206	sangre
+T142	Action 2212 2218	prueba
+T143	Concept 2222 2229	aliento
+T144	Action 2235 2243	análisis
+T145	Concept 2247 2252	heces
+T146	Action 2258 2266	detectar
+T148	Concept 2298 2310	intolerancia
+T149	Concept 2316 2323	lactosa
+T150	Action 2258 2266	detectar
+T151	Action 2258 2266	detectar
+T152	Concept 2328 2335;2336 2338;2339 2347	cuidado de hospicio
+T153	Predicate 2370 2375	final
+T154	Concept 2382 2386	vida
+T155	Action 2354 2361	cuidado
+T156	Concept 2391 2399	diabetes
+T157	Predicate 2424 2430	riesgo
+T158	Concept 2434 2444	enfermedad
+T159	Concept 2445 2453	cardíaca
+T160	Action 2459 2470	infecciones
+T161	Concept 2471 2482	bacterianas
+T162	Concept 2491 2501;2502 2516	faringitis estreptocócica
+T163	Concept 2539 2550	amigdalitis
+T1073	Concept 1140 1146;1147 1156	número sistólico
+T1074	Concept 1192 1197;1198 1208	cifra diastólica
+T1075	Action 1160 1166	coloca
+T1077	Predicate 1179 1185	encima
+T1078	Predicate 1167 1172	antes
+T15	Predicate 572 575	más
+T16	Action 647 654	causada
+T17	Concept 635 636;637 643	A menudo
+T20	Predicate 923 927	tipo
+T59	Action 1160 1166	coloca
+T92	Reference 2141 2146	estos
+T93	Predicate 2128 2131	más
+T95	Predicate 2122 2127	causa
+T164	Concept 2132 2137	común
+T147	Concept 2274 2283	problemas
+R1	in-context Arg1:T1 Arg2:T2
+R2	in-context Arg1:T5 Arg2:T6
+R4	is-a Arg1:T1 Arg2:T3
+R8	in-context Arg1:T10 Arg2:T11
+R9	arg Arg1:T12 Arg2:T13
+R10	in-context Arg1:T12 Arg2:T7
+R11	arg Arg1:T14 Arg2:T13
+R12	in-context Arg1:T14 Arg2:T8
+A1	Emphasized T7
+A2	Emphasized T8
+R17	arg Arg1:T19 Arg2:T18
+R18	is-a Arg1:T9 Arg2:T19
+R19	subject Arg1:T23 Arg2:T24
+R20	target Arg1:T23 Arg2:T22
+*	same-as T21 T23
+A3	Emphasized T25
+R21	has-property Arg1:T21 Arg2:T25
+*	same-as T26 T27 T28
+A4	Emphasized T32
+R22	subject Arg1:T29 Arg2:T26
+R23	subject Arg1:T30 Arg2:T26
+R24	subject Arg1:T31 Arg2:T26
+R25	target Arg1:T31 Arg2:T32
+R26	target Arg1:T30 Arg2:T32
+R27	target Arg1:T29 Arg2:T32
+R28	in-context Arg1:T34 Arg2:T35
+R29	is-a Arg1:T33 Arg2:T34
+R30	in-context Arg1:T36 Arg2:T37
+R31	is-a Arg1:T35 Arg2:T36
+R33	domain Arg1:T39 Arg2:T40
+R34	has-property Arg1:T39 Arg2:T41
+R35	is-a Arg1:T47 Arg2:T52
+R36	is-a Arg1:T48 Arg2:T52
+R37	subject Arg1:T53 Arg2:T43
+R38	in-place Arg1:T53 Arg2:T44
+R39	in-place Arg1:T53 Arg2:T45
+R40	in-place Arg1:T53 Arg2:T46
+R41	in-place Arg1:T53 Arg2:T47
+R42	in-place Arg1:T53 Arg2:T48
+R43	in-place Arg1:T53 Arg2:T49
+R44	in-place Arg1:T53 Arg2:T51
+R45	in-place Arg1:T53 Arg2:T50
+R46	target Arg1:T55 Arg2:T56
+R47	causes Arg1:T55 Arg2:T54
+R49	is-a Arg1:T57 Arg2:T20
+R50	in-context Arg1:T62 Arg2:T63
+R51	arg Arg1:T61 Arg2:T62
+R52	is-a Arg1:T60 Arg2:T61
+R53	is-a Arg1:T64 Arg2:T66
+R54	is-a Arg1:T65 Arg2:T66
+R55	arg Arg1:T69 Arg2:T70
+R56	arg Arg1:T71 Arg2:T72
+R58	is-a Arg1:T67 Arg2:T68
+R63	domain Arg1:T80 Arg2:T81
+A6	Uncertain T82
+R65	subject Arg1:T82 Arg2:T80
+R66	subject Arg1:T84 Arg2:T83
+R67	target Arg1:T84 Arg2:T85
+R68	in-context Arg1:T86 Arg2:T87
+R70	target Arg1:T86 Arg2:T88
+R71	causes Arg1:T90 Arg2:T89
+R72	causes Arg1:T86 Arg2:T89
+A8	Negated T94
+R76	has-property Arg1:T91 Arg2:T94
+R77	target Arg1:T96 Arg2:T98
+R78	in-place Arg1:T97 Arg2:T99
+A9	Negated T100
+R79	in-context Arg1:T100 Arg2:T101
+R80	arg Arg1:T102 Arg2:T103
+R81	in-time Arg1:T100 Arg2:T102
+R82	subject Arg1:T100 Arg2:T97
+R83	entails Arg1:T100 Arg2:T105
+R84	in-time Arg1:T103 Arg2:T104
+R85	in-context Arg1:T107 Arg2:T108
+R86	subject Arg1:T109 Arg2:T106
+R87	in-context Arg1:T110 Arg2:T111
+R88	target Arg1:T109 Arg2:T110
+R89	in-place Arg1:T109 Arg2:T107
+R90	subject Arg1:T113 Arg2:T112
+R93	target Arg1:T114 Arg2:T112
+R94	causes Arg1:T113 Arg2:T115
+R95	causes Arg1:T114 Arg2:T115
+R96	is-a Arg1:T116 Arg2:T117
+R97	arg Arg1:T119 Arg2:T116
+A10	Negated T118
+R98	target Arg1:T118 Arg2:T119
+R99	domain Arg1:T123 Arg2:T122
+R101	subject Arg1:T121 Arg2:T120
+A11	Emphasized T120
+R102	in-time Arg1:T126 Arg2:T127
+R103	domain Arg1:T125 Arg2:T126
+R104	in-context Arg1:T125 Arg2:T128
+R105	in-time Arg1:T122 Arg2:T124
+R106	arg Arg1:T130 Arg2:T129
+R107	in-time Arg1:T131 Arg2:T130
+R108	subject Arg1:T131 Arg2:T120
+R109	target Arg1:T131 Arg2:T122
+R110	in-context Arg1:T132 Arg2:T133
+R111	in-place Arg1:T134 Arg2:T132
+R100	target Arg1:T121 Arg2:T135
+R112	in-time Arg1:T121 Arg2:T125
+R113	arg Arg1:T135 Arg2:T123
+R114	domain Arg1:T135 Arg2:T131
+R115	in-context Arg1:T134 Arg2:T136
+R116	in-place Arg1:T137 Arg2:T138
+R117	is-a Arg1:T137 Arg2:T134
+R118	is-a Arg1:T138 Arg2:T132
+R119	causes Arg1:T134 Arg2:T92
+R120	in-context Arg1:T148 Arg2:T149
+A13	Uncertain T140
+A14	Uncertain T142
+A15	Uncertain T144
+R121	subject Arg1:T140 Arg2:T139
+R122	target Arg1:T140 Arg2:T141
+R123	subject Arg1:T142 Arg2:T139
+R124	target Arg1:T142 Arg2:T143
+R125	subject Arg1:T144 Arg2:T139
+R126	target Arg1:T144 Arg2:T145
+R128	target Arg1:T146 Arg2:T148
+R129	subject Arg1:T146 Arg2:T140
+R130	subject Arg1:T151 Arg2:T142
+R131	subject Arg1:T150 Arg2:T144
+R132	target Arg1:T151 Arg2:T148
+R133	target Arg1:T150 Arg2:T148
+R134	domain Arg1:T153 Arg2:T154
+*	same-as T152 T155
+R135	in-time Arg1:T155 Arg2:T153
+R136	in-context Arg1:T158 Arg2:T159
+R137	arg Arg1:T157 Arg2:T158
+R138	causes Arg1:T156 Arg2:T157
+R139	subject Arg1:T160 Arg2:T161
+R141	is-a Arg1:T162 Arg2:T160
+R1060	target Arg1:T1075 Arg2:T1073
+R1062	arg Arg1:T1078 Arg2:T1074
+R1064	arg Arg1:T1077 Arg2:T1074
+R1145	in-place Arg1:T1075 Arg2:T1077
+R3	has-property Arg1:T1 Arg2:T4
+R5	has-property Arg1:T1 Arg2:T5
+R13	entails Arg1:T12 Arg2:T10
+R14	entails Arg1:T14 Arg2:T10
+R6	domain Arg1:T15 Arg2:T36
+R7	arg Arg1:T15 Arg2:T38
+*	same-as T35 T15
+R15	subject Arg1:T16 Arg2:T42
+R16	in-time Arg1:T16 Arg2:T17
+R32	domain Arg1:T20 Arg2:T58
+R48	has-property Arg1:T67 Arg2:T71
+R57	in-place Arg1:T68 Arg2:T69
+R59	target Arg1:T1075 Arg2:T1073
+R142	in-place Arg1:T59 Arg2:T1078
+A5	Emphasized T84
+A7	Uncertain T96
+R69	subject Arg1:T129 Arg2:T120
+R73	is-a Arg1:T92 Arg2:T76
+R74	domain Arg1:T93 Arg2:T95
+R75	arg Arg1:T93 Arg2:T164
+R91	arg Arg1:T95 Arg2:T92
+*	same-as T134 T93
+R92	causes Arg1:T148 Arg2:T147
+R127	causes Arg1:T162 Arg2:T163
+T73	Concept 1016 1019	dos
+R60	arg Arg1:T66 Arg2:T73	

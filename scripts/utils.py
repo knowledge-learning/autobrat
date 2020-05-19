@@ -6,7 +6,7 @@ import re
 import warnings
 from collections import defaultdict
 from pathlib import Path
-from typing import List
+from typing import List, Union
 
 from scripts.tools import (
     AnnFile,
@@ -275,6 +275,12 @@ class Collection:
 
     def clone(self) -> "Collection":
         return Collection([s.clone() for s in self.sentences])
+
+    def __getitem__(self, subscript) -> Union["Collection", Sentence]:
+        if isinstance(subscript, slice):
+            return Collection([s.clone() for s in self.sentences[subscript]])
+
+        return self.sentences[subscript]
 
     def __len__(self):
         return len(self.sentences)

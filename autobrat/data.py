@@ -21,7 +21,7 @@ def spacy_model(language):
     return spacy.load(language)
 
 
-def load_training_data(corpus):
+def load_training_data(corpus) -> Collection:
     packs = Path("/data") / corpus / "packs/submitted/"
 
     collection = Collection()
@@ -32,9 +32,9 @@ def load_training_data(corpus):
     return collection
 
 
-def load_training_entities(corpus):
+def load_training_entities(collection: Collection):
     nlp = spacy_model('es')
-    collection = load_training_data(corpus)
+    # collection = load_training_data(corpus)
 
     entity_types = set(keyphrase.label for sentence in collection.sentences for keyphrase in sentence.keyphrases)
     sentences = [nlp(s.text) for s in collection.sentences]
@@ -53,9 +53,9 @@ def load_training_entities(corpus):
     return sentences, mapping
 
 
-def load_training_relations(corpus, negative_sampling=1.0):
+def load_training_relations(collection: Collection, negative_sampling=1.0):
     nlp = spacy_model('es')
-    collection = load_training_data(corpus)
+    # collection = load_training_data(corpus)
 
     word_pairs = []
     relations = []
@@ -255,7 +255,7 @@ def from_biluov(biluov, sentence, *, spans=False, drop_remaining=[]):
                 i, (tag, word) = next(one_shot)
                 while tag in ("O", "I"):
                     if tag == "I":
-                        on_build.append(word)
+                        on_build.append((word, i))
                     i, (tag, word) = next(one_shot)
 
                 if tag == "L":

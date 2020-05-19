@@ -22,8 +22,24 @@ services:
       - "8000:8000"
     volumes:
       - "./data/autobrat:/data"
-      - "./autobrat:/code"
+      - "./autobrat:/autobrat"
       - "./scripts:/usr/local/lib/python3.6/site-packages/scripts"
       - "./autobrat:/usr/local/lib/python3.6/site-packages/autobrat"
-    working_dir: "/code"
+    working_dir: "/autobrat"
     command: ["uvicorn", "--host", "0.0.0.0", "--reload", "--log-level", "debug", "app:app"]
+
+  dashboard:
+    image: matcomuh/streamlit:latest
+    build:
+      context: ./build
+      dockerfile: streamlit.dockerfile
+    container_name: autobrat-dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      - "./data/autobrat:/data"
+      - "./autobrat:/autobrat"
+      - "./scripts:/usr/local/lib/python3.6/site-packages/scripts"
+      - "./autobrat:/usr/local/lib/python3.6/site-packages/autobrat"
+    working_dir: "/autobrat"
+    command: ["streamlit", "run", "dashboard.py"]
