@@ -1,20 +1,29 @@
 import argparse
+import warnings
 from collections import OrderedDict
 from pathlib import Path
+from typing import List
 
 from scripts.score import (
     CORRECT_A,
     CORRECT_B,
+    CORRECT_C,
     INCORRECT_A,
     MISSING_A,
     MISSING_B,
+    MISSING_C,
     PARTIAL_A,
     SPURIOUS_A,
     SPURIOUS_B,
+    SPURIOUS_C,
+    align,
+    compare_text,
+    match_attributes,
     match_keyphrases,
     match_relations,
+    normalize,
 )
-from scripts.utils import Collection, DisjointSet
+from scripts.utils import Collection, DisjointSet, Sentence
 
 
 def partial_score(keyphrase1, keyphrase2):
@@ -75,8 +84,15 @@ def relations_agreement(data):
     return c_score / n if n else 1.0
 
 
+def attributes_agreement(data):
+    c_score = len(data[CORRECT_C])
+    n = sum(len(data[x]) for x in [CORRECT_C, MISSING_C, SPURIOUS_C])
+    # print(c_score, len(data[MISSING_C]), len(data[SPURIOUS_C]))
+    return c_score / n if n else 1.0
+
+
 def agreement(data):
-    c_score = len(data[CORRECT_A]) + len(data[CORRECT_B])
+    c_score = len(data[CORRECT_A]) + len(data[CORRECT_B]) + len(data[CORRECT_C])
     p_score = sum(partial_score(a, b) for a, b in data[PARTIAL_A].items())
     n = sum(len(ann) for ann in data.values())
     # print(c_score, p_score, len(data[PARTIAL_A]), len(data[MISSING_A]),
@@ -89,6 +105,7 @@ def compute_metrics(data):
     return {
         "concepts_agreement": concepts_agreement(data),
         "relations_agreement": relations_agreement(data),
+        "attributes_agreement": attributes_agreement(data),
         "agreement": agreement(data),
     }
 
@@ -128,13 +145,13 @@ def load_corpus(anns_path: Path, clean=True) -> Collection:
 def coordinate(gold, submit):
     i = 0
     while i < min(len(gold), len(submit)):
-        if gold.sentences[i].text == submit.sentences[i].text:
+        if compare_text(gold.sentences[i].text, submit.sentences[i].text):
             i += 1
             continue
-        if gold.sentences[i + 1].text == submit.sentences[i].text:
+        if compare_text(gold.sentences[i + 1].text, submit.sentences[i].text):
             print("Dropped:", gold.sentences[i].text)
             del gold.sentences[i]
-        elif gold.sentences[i].text == submit.sentences[i + 1].text:
+        elif compare_text(gold.sentences[i].text, submit.sentences[i + 1].text):
             print("Dropped:", submit.sentences[i].text)
             del submit.sentences[i]
         else:
@@ -149,7 +166,9 @@ def coordinate(gold, submit):
 
 
 def unstable_coordinating(gold: Collection, submit: Collection):
-    texts = {s.text for s in gold.sentences} & {s.text for s in submit.sentences}
+    texts = {normalize(s.text) for s in gold.sentences} & {
+        normalize(s.text) for s in submit.sentences
+    }
     copy = texts.copy()
 
     print(len(gold))
@@ -157,9 +176,10 @@ def unstable_coordinating(gold: Collection, submit: Collection):
 
     gold_sentences = []
     for s in gold.sentences:
-        if s.text in texts:
+        s_text = normalize(s.text)
+        if s_text in texts:
             gold_sentences.append(s)
-            texts.remove(s.text)
+            texts.remove(s_text)
         else:
             print("Dropped from gold:", s.text)
 
@@ -168,9 +188,10 @@ def unstable_coordinating(gold: Collection, submit: Collection):
 
     submit_sentences = []
     for s in submit.sentences:
-        if s.text in texts:
+        s_text = normalize(s.text)
+        if s_text in texts:
             submit_sentences.append(s)
-            texts.remove(s.text)
+            texts.remove(s_text)
         else:
             print("Dropped from submit:", s.text)
 
@@ -181,11 +202,18 @@ def unstable_coordinating(gold: Collection, submit: Collection):
     print(len(submit))
 
 
+def stable_coordinating(gold: Collection, submit: Collection):
+    gold.sentences, submit.sentences = zip(*align(gold.sentences, submit.sentences))
+    print(len(gold))
+    print(len(submit))
+
+
 def main(gold_dir: Path, submit_dir: Path, propagate_error=True):
     gold_collection = load_corpus(gold_dir)
     submit_collection = load_corpus(submit_dir)
     coordinate(gold_collection, submit_collection)
     # unstable_coordinating(gold_collection, submit_collection)
+    # stable_coordinating(gold_collection, submit_collection)
 
     keyphrases = sorted(
         set(x.label for s in gold_collection.sentences for x in s.keyphrases)
@@ -193,12 +221,25 @@ def main(gold_dir: Path, submit_dir: Path, propagate_error=True):
     relations = sorted(
         set(x.label for s in gold_collection.sentences for x in s.relations)
     )
+    attributes = sorted(
+        set(
+            x.label
+            for s in gold_collection.sentences
+            for k in s.keyphrases
+            for x in k.attributes
+        )
+    )
 
     history = {}
 
     for labels, select in zip(
-        [keyphrases, relations, ["Global"]],
-        [Collection.filter_keyphrase, Collection.filter_relation, lambda x, y: x],
+        [keyphrases, relations, attributes, ["Global"]],
+        [
+            Collection.filter_keyphrase,
+            Collection.filter_relation,
+            Collection.filter_attribute,
+            lambda x, y: x,
+        ],
     ):
         for label in labels:
             gold = select(gold_collection, [label, "same-as"])
@@ -217,6 +258,11 @@ def main(gold_dir: Path, submit_dir: Path, propagate_error=True):
                 propagate_error=propagate_error,
             )
             data.update(dataB)
+
+            dataC = match_attributes(
+                gold, submit, data, propagate_error=propagate_error
+            )
+            data.update(dataC)
 
             history[label] = data
             metrics = compute_metrics(data)
