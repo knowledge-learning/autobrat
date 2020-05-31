@@ -16,7 +16,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.exceptions import HTTPException
 
-from autobrat.data import load_config, load_corpus, read_file
+from autobrat.data import load_config, load_corpus, read_file, load_training_data
 from autobrat.classifier import Model
 from scripts.utils import Collection
 
@@ -28,7 +28,8 @@ app.models = {}
 
 def get_model(corpus: str) -> Model:
     if corpus not in app.models:
-        model = Model(corpus)
+        collection = load_training_data(corpus)
+        model = Model(collection)
         model.train()
         app.models[corpus] = model
 
@@ -40,7 +41,7 @@ def index(corpus: str):
     config = load_config(corpus)
     readme = read_file(corpus, config["index"]["readme"])
 
-    with open("/code/templates/index.html") as fp:
+    with open("/autobrat/templates/index.html") as fp:
         template = jinja2.Template(fp.read())
 
     return HTMLResponse(template.render(readme=markdown.markdown(readme), corpus=corpus))
@@ -48,7 +49,7 @@ def index(corpus: str):
 
 @app.get("/{corpus}/annotate", response_class=HTMLResponse)
 def annotate(corpus: str, pack: str = None):
-    with open("/code/templates/annotation.html") as fp:
+    with open("/autobrat/templates/annotation.html") as fp:
         template = jinja2.Template(fp.read())
 
     return HTMLResponse(template.render(corpus=corpus, pack=pack or ""))
@@ -158,10 +159,11 @@ def ensure_pack(corpus):
     os.makedirs(pack_path.parent)
 
     model = get_model(corpus)
+    pool = load_corpus(corpus)
 
     with open(pack_path, "w") as fp:
-        for score, doc in model.suggest():
-            fp.write(doc.text + "\n")
+        for sentence in model.suggest(pool):
+            fp.write(sentence + "\n")
 
     with open(ann_path, "w") as fp:
         pass

@@ -17,8 +17,14 @@ from scripts.utils import Collection, Sentence, Keyphrase
 # when writting output (when reading it is not necessary).
 
 
+MODELS = {}
+
+
 def spacy_model(language):
-    return spacy.load(language)
+    if language not in MODELS:
+        MODELS[language] = spacy.load(language)
+
+    return MODELS[language]
 
 
 def load_training_data(corpus) -> Collection:
