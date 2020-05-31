@@ -1,6 +1,5 @@
 # start from a base ubuntu image
 FROM ubuntu
-LABEL author="Alejandro Piad <alepiad@gmail.com>"
 
 # set users cfg file
 ARG USERS_CFG=users.json
